@@ -1,0 +1,1010 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          21
+        ]
+      ],
+      "date-time": "2024-07-21T13:14:33Z",
+      "timestamp": 1721567673951
+    },
+    "reference-count": 81,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2019-02-01T00:00:00Z",
+          "timestamp": 1548979200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2019-02-01T00:00:00Z",
+          "timestamp": 1548979200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2019-02-01T00:00:00Z",
+          "timestamp": 1548979200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2019-02-01T00:00:00Z",
+          "timestamp": 1548979200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2019-02-01T00:00:00Z",
+          "timestamp": 1548979200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2019-02-01T00:00:00Z",
+          "timestamp": 1548979200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2019-02-01T00:00:00Z",
+          "timestamp": 1548979200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Information and Software Technology"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          2
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.infsof.2018.10.001",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          4
+        ]
+      ],
+      "date-time": "2018-10-04T17:37:37Z",
+      "timestamp": 1538674657000
+    },
+    "page": "142-160",
+    "update-policy": "http://dx.doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 65,
+    "special_numbering": "C",
+    "title": [
+      "Automatically identifying code features for software defect prediction: Using AST N-grams"
+    ],
+    "prefix": "10.1016",
+    "volume": "106",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0003-1890-3390",
+        "authenticated-orcid": false,
+        "given": "Thomas",
+        "family": "Shippey",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "David",
+        "family": "Bowes",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Tracy",
+        "family": "Hall",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0001",
+        "series-title": "Reverse Engineering (WCRE), 2012 19th Working Conference on",
+        "first-page": "235",
+        "article-title": "Can lexicon bad smells improve fault prediction?",
+        "author": "Abebe",
+        "year": "2012"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0002",
+        "series-title": "Proceedings of the 22Nd ACM SIGSOFT International Symposium on Foundations of Software Engineering",
+        "first-page": "472",
+        "article-title": "Mining idioms from source code",
+        "author": "Allamanis",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0003",
+        "series-title": "Proceedings of the 2006 ACM/IEEE international symposium on Empirical software engineering",
+        "first-page": "8",
+        "article-title": "Predicting fault-prone components in a java legacy system",
+        "author": "Arisholm",
+        "year": "2006"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.infsof.2018.10.001_bib0004",
+        "doi-asserted-by": "crossref",
+        "first-page": "2",
+        "DOI": "10.1016/j.jss.2009.06.055",
+        "article-title": "A systematic and comprehensive investigation of methods to build and evaluate fault prediction models",
+        "volume": "83",
+        "author": "Arisholm",
+        "year": "2010",
+        "journal-title": "J. Syst. Softw."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0005",
+        "series-title": "Proceedings of the International Conference on Software Maintenance (ICSM) - ERA Track",
+        "first-page": "1",
+        "article-title": "Physical and conceptual identifier dispersion: Measures and relation to fault proneness",
+        "author": "Arnaoudova",
+        "year": "2010"
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.infsof.2018.10.001_bib0006",
+        "doi-asserted-by": "crossref",
+        "first-page": "751",
+        "DOI": "10.1109/32.544352",
+        "article-title": "A validation of object-oriented design metrics as quality indicators",
+        "volume": "22",
+        "author": "Basili",
+        "year": "1996",
+        "journal-title": "Software Engineering, IEEE Transactions on"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0007",
+        "series-title": "ICSM",
+        "article-title": "Clone detection using abstract syntax trees",
+        "author": "Baxter",
+        "year": "1998"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0008",
+        "series-title": "Proceedings of the 2006 International Symposium on Software Testing and Analysis",
+        "first-page": "61",
+        "article-title": "Looking for bugs in all the right places",
+        "author": "Bell",
+        "year": "2006"
+      },
+      {
+        "issue": "11",
+        "key": "10.1016/j.infsof.2018.10.001_bib0009",
+        "doi-asserted-by": "crossref",
+        "first-page": "1793",
+        "DOI": "10.1016/j.jss.2009.06.036",
+        "article-title": "Increasing diversity: natural language measures for software fault prediction",
+        "volume": "82",
+        "author": "Binkley",
+        "year": "2009",
+        "journal-title": "J. Syst. Softw."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0010",
+        "series-title": "Proceedings of the 7th joint meeting of the European software engineering conference and the ACM SIGSOFT symposium on The foundations of software engineering",
+        "first-page": "121",
+        "article-title": "Fair and balanced?: bias in bug-fix datasets",
+        "author": "Bird",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0011",
+        "series-title": "Software Reliability Engineering, 2009. ISSRE\u201909. 20th International Symposium on",
+        "first-page": "109",
+        "article-title": "Putting it all together: Using socio-technical networks to predict failures",
+        "author": "Bird",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0012",
+        "series-title": "Proceedings of the 25th International Symposium on Software Testing and Analysis",
+        "first-page": "330",
+        "article-title": "Mutation-aware fault prediction",
+        "author": "Bowes",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0013",
+        "series-title": "Reverse Engineering, 2009. WCRE \u201909. 16th Working Conference on",
+        "first-page": "31",
+        "article-title": "Relating identifier naming flaws and code quality: An empirical study",
+        "author": "Butler",
+        "year": "2009"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.infsof.2018.10.001_bib0014",
+        "first-page": "1269",
+        "article-title": "A method of estimating comparative rates from clinical data. applications to cancer of the lung, breast, and cervix",
+        "volume": "11",
+        "author": "Cornfield",
+        "year": "1951",
+        "journal-title": "J. Natl. Cancer Inst."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0015",
+        "series-title": "Empirical Software Engineering and Measurement, 2009. ESEM 2009. 3rd International Symposium on",
+        "first-page": "460",
+        "article-title": "Towards logistic regression models for predicting fault-prone code across software projects",
+        "author": "Cruz",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0016",
+        "series-title": "Software Engineering, 2003. Proceedings. 25th International Conference on",
+        "first-page": "408",
+        "article-title": "Hipikat: recommending pertinent software development artifacts",
+        "author": "Cubranic",
+        "year": "2003"
+      },
+      {
+        "issue": "7",
+        "key": "10.1016/j.infsof.2018.10.001_bib0017",
+        "doi-asserted-by": "crossref",
+        "first-page": "641",
+        "DOI": "10.1109/TSE.2016.2616306",
+        "article-title": "A framework for evaluating the results of the szz approach for identifying bug-introducing changes",
+        "volume": "43",
+        "author": "da Costa",
+        "year": "2017",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0018",
+        "series-title": "Reverse Engineering, 2009. WCRE\u201909. 16th Working Conference on",
+        "first-page": "135",
+        "article-title": "On the relationship between change coupling and software defects",
+        "author": "D\u2019Ambros",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0019",
+        "series-title": "Mining Software Repositories (MSR), 2010 7th IEEE Working Conference on",
+        "first-page": "31",
+        "article-title": "An extensive comparison of bug prediction approaches",
+        "author": "D\u2019Ambros",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0020",
+        "series-title": "Workshop on Evaluation Methods for Machine Learning in conjunction with ICML",
+        "article-title": "On the appropriateness of statistical tests in machine learning",
+        "author": "Dem\u0161ar",
+        "year": "2008"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0021",
+        "series-title": "Proceedings of the 27th Annual ACM Symposium on Applied Computing",
+        "first-page": "1251",
+        "article-title": "An analysis of anti-micro-patterns effects on fault-proneness in large java systems",
+        "author": "Destefanis",
+        "year": "2012"
+      },
+      {
+        "issue": "8",
+        "key": "10.1016/j.infsof.2018.10.001_bib0022",
+        "doi-asserted-by": "crossref",
+        "first-page": "797",
+        "DOI": "10.1109/32.879815",
+        "article-title": "Quantitative analysis of faults and failures in a complex software system",
+        "volume": "26",
+        "author": "Fenton",
+        "year": "2000",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0023",
+        "series-title": "Software Metrics: A Rigorous and Practical Approach",
+        "author": "Fenton",
+        "year": "1998"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_sbref0024",
+        "series-title": "Proceedings of the International Conference on Software Maintenance",
+        "article-title": "Populating a release history database from version control and bug tracking systems",
+        "author": "Fischer",
+        "year": "2003"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0025",
+        "series-title": "Refactoring: Improving the Design of Existing Code",
+        "author": "Fowler",
+        "year": "1999"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0026",
+        "series-title": "Proceedings of the ACM-IEEE International Symposium on Empirical Software Engineering and Measurement",
+        "first-page": "171",
+        "article-title": "Method-level bug prediction",
+        "author": "Giger",
+        "year": "2012"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0027",
+        "series-title": "ACM SIGPLAN Notices",
+        "first-page": "97",
+        "article-title": "Micro patterns in java code",
+        "volume": "40",
+        "author": "Gil",
+        "year": "2005"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_sbref0028",
+        "series-title": "Proceeding of the 33rd International Conference on Software Engineering",
+        "first-page": "311",
+        "article-title": "Frequency and risks of changes to clones",
+        "author": "G\u00f6de",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0029",
+        "series-title": "Evaluation Assessment in Software Engineering (EASE 2011), 15th Annual Conference on",
+        "first-page": "96",
+        "article-title": "The misuse of the nasa metrics data program data sets for automated software defect prediction",
+        "author": "Gray",
+        "year": "2011"
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.infsof.2018.10.001_sbref0030",
+        "doi-asserted-by": "crossref",
+        "first-page": "897",
+        "DOI": "10.1109/TSE.2005.112",
+        "article-title": "Empirical validation of object-oriented metrics on open source software for fault prediction",
+        "volume": "31",
+        "author": "Gyimothy",
+        "year": "2005",
+        "journal-title": "Softw. Eng., IEEE Trans."
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.infsof.2018.10.001_bib0031",
+        "doi-asserted-by": "crossref",
+        "first-page": "1276",
+        "DOI": "10.1109/TSE.2011.103",
+        "article-title": "A systematic literature review on fault prediction performance in software engineering",
+        "volume": "38",
+        "author": "Hall",
+        "year": "2012",
+        "journal-title": "Softw. Eng., IEEE Trans."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0032",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1145/2629648",
+        "article-title": "Some code smells have a significant but small effect on faults",
+        "author": "Hall",
+        "year": "2014",
+        "journal-title": "ACM Trans. Softw. Eng. Methodol. (TOSEM)"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0033",
+        "series-title": "Proceedings of the 31st International Conference on Software Engineering",
+        "first-page": "78",
+        "article-title": "Predicting faults using the complexity of code changes",
+        "author": "Hassan",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0034",
+        "series-title": "Software Engineering (ICSE), 2012 34th International Conference on",
+        "first-page": "200",
+        "article-title": "Bug prediction based on fine-grained module histories",
+        "author": "Hata",
+        "year": "2012"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0035",
+        "first-page": "1",
+        "article-title": "IEEE Standard classification for software anomalies",
+        "author": "IEEE",
+        "year": "2010",
+        "journal-title": "IEEE Std 1044\u20132009 (Revision of IEEE Std 1044\u20131993)"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0036",
+        "series-title": "ICSE",
+        "article-title": "Do code clones matter?",
+        "author": "Juergens",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0037",
+        "doi-asserted-by": "crossref",
+        "first-page": "654",
+        "DOI": "10.1109/TSE.2002.1019480",
+        "article-title": "Ccfinder: a multilinguistic token-based code clone detection system for large scale source code",
+        "volume": "28",
+        "author": "Kamiya",
+        "year": "2002",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.infsof.2018.10.001_bib0038",
+        "doi-asserted-by": "crossref",
+        "first-page": "229",
+        "DOI": "10.1023/B:EMSE.0000027781.18360.9b",
+        "article-title": "Comparative assessment of software quality classification techniques: an empirical case study",
+        "volume": "9",
+        "author": "Khoshgoftaar",
+        "year": "2004",
+        "journal-title": "Empirical Softw. Engg."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0039",
+        "series-title": "Tools with Artificial Intelligence (ICTAI), 2010 22nd IEEE International Conference on",
+        "first-page": "137",
+        "article-title": "Attribute selection and imbalanced data: Problems in software defect prediction",
+        "volume": "1",
+        "author": "Khoshgoftaar",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0040",
+        "series-title": "Proceedings of the 21st IEEE/ACM International Conference on Automated Software Engineering",
+        "first-page": "81",
+        "article-title": "Automatic identification of bug-introducing changes",
+        "author": "Kim",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0041",
+        "series-title": "Software Engineering, 2007. ICSE 2007. 29th International Conference on",
+        "first-page": "489",
+        "article-title": "Predicting faults from cached history",
+        "author": "Kim",
+        "year": "2007"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0042",
+        "series-title": "Software Engineering (ICSE), 2011 33rd International Conference on",
+        "first-page": "481",
+        "article-title": "Dealing with noise in defect prediction",
+        "author": "Kim",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0043",
+        "series-title": "SCAM",
+        "first-page": "57",
+        "article-title": "Is cloned code more stable than non-cloned code?",
+        "author": "Krinke",
+        "year": "2008"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.infsof.2018.10.001_bib0044",
+        "doi-asserted-by": "crossref",
+        "first-page": "308",
+        "DOI": "10.1109/TSE.1976.233837",
+        "article-title": "A complexity measure",
+        "volume": "2",
+        "author": "McCabe",
+        "year": "1976",
+        "journal-title": "Softw. Eng., IEEE Trans."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0045",
+        "series-title": "The 15th CREST Open Workshop",
+        "article-title": "On the evaluation of defect prediction models",
+        "author": "Mende",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0046",
+        "series-title": "Proceedings of the 5th International Conference on Predictor Models in Software Engineering",
+        "first-page": "7",
+        "article-title": "Revisiting the evaluation of defect prediction models",
+        "author": "Mende",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0047",
+        "series-title": "Software Maintenance and Reengineering (CSMR), 2010 14th European Conference on",
+        "first-page": "107",
+        "article-title": "Effort-aware defect prediction models",
+        "author": "Mende",
+        "year": "2010"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.infsof.2018.10.001_bib0048",
+        "doi-asserted-by": "crossref",
+        "first-page": "2",
+        "DOI": "10.1109/TSE.2007.256941",
+        "article-title": "Data mining static code attributes to learn defect predictors",
+        "volume": "33",
+        "author": "Menzies",
+        "year": "2007",
+        "journal-title": "Softw. Eng., IEEE Trans."
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.infsof.2018.10.001_bib0049",
+        "doi-asserted-by": "crossref",
+        "first-page": "822",
+        "DOI": "10.1109/TSE.2012.83",
+        "article-title": "Local versus global lessons for defect prediction and effort estimation",
+        "volume": "39",
+        "author": "Menzies",
+        "year": "2013",
+        "journal-title": "Softw. Eng., IEEE Trans."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_sbref0050",
+        "series-title": "Proceedings of the Fourth International Workshop on Mining Software Repositories",
+        "article-title": "Spam filter based approach for finding fault-prone software modules",
+        "author": "Mizuno",
+        "year": "2007"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0051",
+        "series-title": "Software Engineering, 2005. ICSE 2005. Proceedings. 27th International Conference on",
+        "first-page": "284",
+        "article-title": "Use of relative code churn measures to predict system defect density",
+        "author": "Nagappan",
+        "year": "2005"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0052",
+        "series-title": "Software Reliability Engineering (ISSRE), 2010 IEEE 21st International Symposium on",
+        "first-page": "309",
+        "article-title": "Change bursts as defect predictors",
+        "author": "Nagappan",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0053",
+        "series-title": "Automated Software Engineering (ASE), 2013 IEEE/ACM 28th International Conference on",
+        "first-page": "180",
+        "article-title": "A study of repetitiveness of code changes in software evolution",
+        "author": "Nguyen",
+        "year": "2013"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0054",
+        "series-title": "25th International Conference on Software Analysis, Evolution and Reengineering, SANER 2018, Campobasso, Italy, March 20\u201323, 2018",
+        "first-page": "592",
+        "article-title": "Re-evaluating method-level bug prediction",
+        "author": "Pascarella",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0055",
+        "series-title": "Technical Report",
+        "article-title": "Deep Learning to Find Bugs",
+        "author": "Pradel",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0056",
+        "series-title": "Proc. 7th IEEE Working Conf. Mining Software Repositories (MSR)",
+        "first-page": "72",
+        "article-title": "Clones: What is that smell?",
+        "author": "Rahman",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0057",
+        "series-title": "Proceedings of the 2008 international working conference on Mining software repositories",
+        "first-page": "35",
+        "article-title": "On the relation of refactorings and software defect prediction",
+        "author": "Ratzinger",
+        "year": "2008"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0058",
+        "series-title": "In Reliable Software Technologies, Ada Europe 2006 (LNCS 4006",
+        "first-page": "71",
+        "article-title": "Bauhaus\u2013 a tool suite for program analysis and reverse engineering",
+        "author": "Raza",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0059",
+        "series-title": "annual meeting of the Florida Association of Institutional Research",
+        "first-page": "1",
+        "article-title": "Appropriate statistics for ordinal level data: Should we really be using t-test and cohen?sd for evaluating group differences on the nsse and other surveys",
+        "author": "Romano",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0060",
+        "series-title": "annual meeting of the Southern Association for Institutional Research",
+        "article-title": "Exploring methods for evaluating group differences on the nsse and other surveys: Are the t-test and cohen\u2019s d indices the most appropriate choices",
+        "author": "Romano",
+        "year": "2006"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0061",
+        "article-title": "A survey on software clone detection research",
+        "volume": "115",
+        "author": "Roy",
+        "year": "2007",
+        "journal-title": "School of Computing TR, Queen\u2019s University"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0062",
+        "doi-asserted-by": "crossref",
+        "first-page": "470",
+        "DOI": "10.1016/j.scico.2009.02.007",
+        "article-title": "Comparison and evaluation of code clone detection techniques and tools: a qualitative approach",
+        "volume": "74",
+        "author": "Roy",
+        "year": "2009",
+        "journal-title": "Sci. Comput. Program."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0063",
+        "series-title": "ICML",
+        "first-page": "379",
+        "article-title": "Feature engineering for text classification",
+        "volume": "99",
+        "author": "Scott",
+        "year": "1999"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_sbref0064",
+        "series-title": "Reverse Engineering (WCRE), 2010 17th Working Conference on",
+        "first-page": "13",
+        "article-title": "Studying the impact of clones on software defects",
+        "author": "Selim",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0065",
+        "series-title": "Proceedings of the 10th ACM/IEEE International Symposium on Empirical Software Engineering and Measurement, ESEM 2016, Ciudad Real, Spain, September 8\u20139, 2016",
+        "first-page": "12:1",
+        "article-title": "So you need more method level datasets for your software defect prediction?: Voil\u00e0!",
+        "author": "Shippey",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0066",
+        "series-title": "Automated Software Engineering, 2009. ASE \u201909. 24th IEEE/ACM International Conference on",
+        "first-page": "600",
+        "article-title": "Reducing features to improve bug prediction",
+        "author": "Shivaji",
+        "year": "2009"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.infsof.2018.10.001_bib0067",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1145/1082983.1083147",
+        "article-title": "When do changes induce fixes?",
+        "volume": "30",
+        "author": "\u015aliwerski",
+        "year": "2005",
+        "journal-title": "SIGSOFT Softw. Eng. Notes"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.infsof.2018.10.001_bib0068",
+        "doi-asserted-by": "crossref",
+        "first-page": "356",
+        "DOI": "10.1109/TSE.2010.90",
+        "article-title": "A general software defect-proneness prediction framework",
+        "volume": "37",
+        "author": "Song",
+        "year": "2011",
+        "journal-title": "Softw. Eng., IEEE Trans."
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.infsof.2018.10.001_bib0069",
+        "doi-asserted-by": "crossref",
+        "first-page": "540",
+        "DOI": "10.1007/s10664-008-9103-7",
+        "article-title": "On the relative value of cross-company and within-company data for defect prediction",
+        "volume": "14",
+        "author": "Turhan",
+        "year": "2009",
+        "journal-title": "Empirical Softw. Eng."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0070",
+        "series-title": "In SCAM",
+        "first-page": "128",
+        "article-title": "Clone detection in source code by frequent itemset techniques",
+        "author": "Wahler",
+        "year": "2004"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0071",
+        "series-title": "Proceedings of the 38th International Conference on Software Engineering",
+        "first-page": "297",
+        "article-title": "Automatically learning semantic features for defect prediction",
+        "author": "Wang",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0072",
+        "series-title": "Proceedings of the 6th joint meeting of the European software engineering conference and the ACM SIGSOFT symposium on The foundations of software engineering",
+        "first-page": "35",
+        "article-title": "Detecting object usage anomalies",
+        "author": "Wasylkowski",
+        "year": "2007"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.infsof.2018.10.001_bib0073",
+        "doi-asserted-by": "crossref",
+        "first-page": "277",
+        "DOI": "10.1007/s10664-009-9111-2",
+        "article-title": "Comparing the effectiveness of several modeling methods for fault prediction",
+        "volume": "15",
+        "author": "Weyuker",
+        "year": "2010",
+        "journal-title": "Empirical Softw. Eng."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0074",
+        "series-title": "DEFECTS",
+        "first-page": "32",
+        "article-title": "Szz revisited: verifying when changes induce fixes",
+        "author": "Williams",
+        "year": "2008"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0075",
+        "series-title": "PROMISE",
+        "article-title": "Failure is a four-letter word: a parody in empirical research",
+        "author": "Zeller",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0076",
+        "series-title": "Software Maintenance, 2009. ICSM 2009. IEEE International Conference on",
+        "first-page": "274",
+        "article-title": "An investigation of the relationships between lines of code and defects",
+        "author": "Zhang",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0077",
+        "article-title": "Code bad smells: a review of current knowledge",
+        "volume": "23",
+        "author": "Zhang",
+        "year": "2011",
+        "journal-title": "J. Soft. Maint. Evol."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.infsof.2018.10.001_sbref0078",
+        "doi-asserted-by": "crossref",
+        "first-page": "660",
+        "DOI": "10.1016/j.jss.2009.11.704",
+        "article-title": "On the ability of complexity metrics to predict fault-prone classes in object-oriented systems",
+        "volume": "83",
+        "author": "Zhou",
+        "year": "2010",
+        "journal-title": "J. Syst. Softw."
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0079",
+        "series-title": "Proceedings of the Third International Workshop on Predictor Models in Software Engineering",
+        "article-title": "Predicting defects for eclipse",
+        "author": "Zimmermann",
+        "year": "2007"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0080",
+        "series-title": "Proceedings of the 7th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on The Foundations of Software Engineering",
+        "first-page": "91",
+        "article-title": "Cross-project defect prediction: A large scale experiment on data vs. domain vs. process",
+        "author": "Zimmermann",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.infsof.2018.10.001_bib0081",
+        "series-title": "Software Complexity: Measures and Methods",
+        "author": "Zuse",
+        "year": "1990"
+      }
+    ],
+    "container-title": [
+      "Information and Software Technology"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0950584918302052?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0950584918302052?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          2
+        ]
+      ],
+      "date-time": "2024-06-02T00:26:46Z",
+      "timestamp": 1717288006000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0950584918302052"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          2
+        ]
+      ]
+    },
+    "references-count": 81,
+    "alternative-id": [
+      "S0950584918302052"
+    ],
+    "URL": "http://dx.doi.org/10.1016/j.infsof.2018.10.001",
+    "relation": {},
+    "ISSN": [
+      "0950-5849"
+    ],
+    "issn-type": [
+      {
+        "value": "0950-5849",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          2
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Automatically identifying code features for software defect prediction: Using AST N-grams",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Information and Software Technology",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.infsof.2018.10.001",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "\u00a9 2018 Elsevier B.V. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

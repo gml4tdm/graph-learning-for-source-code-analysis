@@ -1,0 +1,770 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          20
+        ]
+      ],
+      "date-time": "2024-07-20T05:58:49Z",
+      "timestamp": 1721455129915
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 113,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2016,
+              8,
+              25
+            ]
+          ],
+          "date-time": "2016-08-25T00:00:00Z",
+          "timestamp": 1472083200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          8,
+          25
+        ]
+      ]
+    },
+    "DOI": "10.1145/2970276.2970326",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2016,
+          8,
+          26
+        ]
+      ],
+      "date-time": "2016-08-26T12:40:09Z",
+      "timestamp": 1472215209000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 350,
+    "title": [
+      "Deep learning code fragments for code clone detection"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Martin",
+        "family": "White",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "College of William and Mary, USA"
+          }
+        ]
+      },
+      {
+        "given": "Michele",
+        "family": "Tufano",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of William and Mary, USA"
+          }
+        ]
+      },
+      {
+        "given": "Christopher",
+        "family": "Vendome",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of William and Mary, USA"
+          }
+        ]
+      },
+      {
+        "given": "Denys",
+        "family": "Poshyvanyk",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of William and Mary, USA"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2016,
+          8,
+          25
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/1018434.1021568"
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1882291.1882315"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "unstructured": "I. Baxter A. Yahin L. Moura M. Sant\u2019Anna and L. Bier. Clone detection using abstract syntax trees. ICSM\u201998.   I. Baxter A. Yahin L. Moura M. Sant\u2019Anna and L. Bier. Clone detection using abstract syntax trees. ICSM\u201998."
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "unstructured": "A. Monden D. Nakae T. Kamiya S. Sato and K. Matsumoto. Software quality analysis by code clones in industrial legacy software. METRICS\u201902.   A. Monden D. Nakae T. Kamiya S. Sato and K. Matsumoto. Software quality analysis by code clones in industrial legacy software. METRICS\u201902."
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2006.28"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-008-9076-6"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-011-9195-3"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1081706.1081737"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "unstructured": "D. Cai and M. Kim. An empirical study of long-lived code clones. FASE/ETAPS\u201911.   D. Cai and M. Kim. An empirical study of long-lived code clones. FASE/ETAPS\u201911."
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "volume-title": "A survey on software clone detection research. Technical report",
+        "author": "Roy C.",
+        "year": "2007",
+        "unstructured": "C. Roy and J. Cordy . A survey on software clone detection research. Technical report , Queen\u2019s University , 2007 . C. Roy and J. Cordy. A survey on software clone detection research. Technical report, Queen\u2019s University, 2007."
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "volume-title": "The development of a software clone detector. IJAST, 1(3/4)",
+        "author": "Davey N.",
+        "year": "1995",
+        "unstructured": "N. Davey , P. Barson , S. Field , R. Frank , and D. Tansley . The development of a software clone detector. IJAST, 1(3/4) , 1995 . N. Davey, P. Barson, S. Field, R. Frank, and D. Tansley. The development of a software clone detector. IJAST, 1(3/4), 1995."
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "unstructured": "J. Bailey and E. Burd. Evaluating clone detection tools for use during preventative maintenance. SCAM\u201902.   J. Bailey and E. Burd. Evaluating clone detection tools for use during preventative maintenance. SCAM\u201902."
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "volume-title": "Dagstuhl Seminar Proceedings",
+        "author": "Walenstein A.",
+        "year": "2007",
+        "unstructured": "A. Walenstein and A. Lakhotia . The software similarity problem in malware analysis . Dagstuhl Seminar Proceedings , 2007 . A. Walenstein and A. Lakhotia. The software similarity problem in malware analysis. Dagstuhl Seminar Proceedings, 2007."
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "unstructured": "B. Baker. On finding duplication and near-duplication in large software systems. WCRE\u201995.   B. Baker. On finding duplication and near-duplication in large software systems. WCRE\u201995."
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SCAM.2010.19"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1287624.1287634"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "unstructured": "Lucia D. Lo L. Jiang and A. Budi. Active refinement of clone anomaly reports. ICSE\u201912.   Lucia D. Lo L. Jiang and A. Budi. Active refinement of clone anomaly reports. ICSE\u201912."
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2351676.2351701"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2420950.2421004"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2610384.2610394"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635926"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.scico.2009.02.007"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "unstructured": "B. Caprile and P. Tonella. Nomen est omen: Analyzing the language of function identifiers. WCRE\u201999.   B. Caprile and P. Tonella. Nomen est omen: Analyzing the language of function identifiers. WCRE\u201999."
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "unstructured": "A. Marcus and J. Maletic. Identification of high-level concept clones in source code. ASE\u201901.   A. Marcus and J. Maletic. Identification of high-level concept clones in source code. ASE\u201901."
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WPC.2005.14"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2006.51"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "volume-title": "Unsupervised feature learning and deep learning: A review and new perspectives. CoRR, abs/1206.5538",
+        "author": "Bengio Y.",
+        "year": "2012",
+        "unstructured": "Y. Bengio , A. Courville , and P. Vincent . Unsupervised feature learning and deep learning: A review and new perspectives. CoRR, abs/1206.5538 , 2012 . Y. Bengio, A. Courville, and P. Vincent. Unsupervised feature learning and deep learning: A review and new perspectives. CoRR, abs/1206.5538, 2012."
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "volume-title": "Deep learning. Nature, 521(7553)",
+        "author": "LeCun Y.",
+        "year": "2015",
+        "unstructured": "Y. LeCun , Y. Bengio , and G. Hinton . Deep learning. Nature, 521(7553) , 2015 . Y. LeCun, Y. Bengio, and G. Hinton. Deep learning. Nature, 521(7553), 2015."
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2015.7332459"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "unstructured": "K. Hotta J. Yang Y. Higo and S. Kusumoto. How accurate is coarse-grained clone detection?: Comparison with fine-grained detectors. IWSC\u201914.  K. Hotta J. Yang Y. Higo and S. Kusumoto. How accurate is coarse-grained clone detection?: Comparison with fine-grained detectors. IWSC\u201914."
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "unstructured": "J. Johnson. Identifying redundancy in source code using fingerprints. CASCON\u201993.   J. Johnson. Identifying redundancy in source code using fingerprints. CASCON\u201993."
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "unstructured": "J. Johnson. Visualizing textual redundancy in legacy source. CASCON\u201994.   J. Johnson. Visualizing textual redundancy in legacy source. CASCON\u201994."
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "unstructured": "J. Johnson. Substring matching for clone detection and change tracking. ICSM\u201994.   J. Johnson. Substring matching for clone detection and change tracking. ICSM\u201994."
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "unstructured": "S. Ducasse M. Rieger and S. Demeyer. A language independent approach for detecting duplicated code. ICSM\u201999.   S. Ducasse M. Rieger and S. Demeyer. A language independent approach for detecting duplicated code. ICSM\u201999."
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "volume-title": "Computer Science and Statistics",
+        "author": "Baker B.",
+        "year": "1992",
+        "unstructured": "B. Baker . A program for identifying duplicated code . In Computer Science and Statistics , 1992 . B. Baker. A program for identifying duplicated code. In Computer Science and Statistics, 1992."
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1006/jcss.1996.0003"
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2002.1019480"
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/spe.4380210706"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WCRE.2006.18"
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.30"
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "unstructured": "A. Gionis P. Indyk and R. Motwani. Similarity search in high dimensions via hashing. VLDB\u201999.   A. Gionis P. Indyk and R. Motwani. Similarity search in high dimensions via hashing. VLDB\u201999."
+      },
+      {
+        "key": "e_1_3_2_1_43_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1368088.1368132"
+      },
+      {
+        "key": "e_1_3_2_1_44_1",
+        "unstructured": "R. Komondoor and S. Horwitz. Using slicing to identify duplication in source code. SAS\u201901.   R. Komondoor and S. Horwitz. Using slicing to identify duplication in source code. SAS\u201901."
+      },
+      {
+        "key": "e_1_3_2_1_45_1",
+        "unstructured": "J. Krinke. Identifying similar code with program dependence graphs. WCRE\u201901.   J. Krinke. Identifying similar code with program dependence graphs. WCRE\u201901."
+      },
+      {
+        "key": "e_1_3_2_1_46_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1150402.1150522"
+      },
+      {
+        "key": "e_1_3_2_1_47_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568286"
+      },
+      {
+        "key": "e_1_3_2_1_48_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/24039.24041"
+      },
+      {
+        "key": "e_1_3_2_1_49_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MCI.2010.938364"
+      },
+      {
+        "key": "e_1_3_2_1_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-00593-0_31"
+      },
+      {
+        "key": "e_1_3_2_1_51_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2009.5070528"
+      },
+      {
+        "key": "e_1_3_2_1_52_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2011.90"
+      },
+      {
+        "key": "e_1_3_2_1_53_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1882291.1882317"
+      },
+      {
+        "key": "e_1_3_2_1_54_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1985793.1985835"
+      },
+      {
+        "key": "e_1_3_2_1_55_1",
+        "unstructured": "F. Hermans B. Sedee M. Pinzger and A. van Deursen. Data clone detection and visualization in spreadsheets. ICSE\u201913.   F. Hermans B. Sedee M. Pinzger and A. van Deursen. Data clone detection and visualization in spreadsheets. ICSE\u201913."
+      },
+      {
+        "key": "e_1_3_2_1_56_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1572272.1572283"
+      },
+      {
+        "key": "e_1_3_2_1_57_1",
+        "volume-title": "Speech and Language Processing. 2 ed",
+        "author": "Jurafsky D.",
+        "year": "2009",
+        "unstructured": "D. Jurafsky and J. Martin . Speech and Language Processing. 2 ed ., 2009 . D. Jurafsky and J. Martin. Speech and Language Processing. 2 ed., 2009."
+      },
+      {
+        "key": "e_1_3_2_1_58_1",
+        "unstructured": "A. Hindle E. Barr Z. Su M. Gabel and P. Devanbu. On the naturalness of software. ICSE\u201912.   A. Hindle E. Barr Z. Su M. Gabel and P. Devanbu. On the naturalness of software. ICSE\u201912."
+      },
+      {
+        "key": "e_1_3_2_1_59_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635875"
+      },
+      {
+        "key": "e_1_3_2_1_60_1",
+        "unstructured": "C. Franks Z. Tu P. Devanbu and V. Hellendoorn. Cacheca: A cache language model based code suggestion tool. ICSE\u201915.   C. Franks Z. Tu P. Devanbu and V. Hellendoorn. Cacheca: A cache language model based code suggestion tool. ICSE\u201915."
+      },
+      {
+        "key": "e_1_3_2_1_61_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICST.2013.11"
+      },
+      {
+        "key": "e_1_3_2_1_62_1",
+        "unstructured": "D. Movshovitz-Attias and W. Cohen. Natural language models for predicting programming comments. ACL\u201913.  D. Movshovitz-Attias and W. Cohen. Natural language models for predicting programming comments. ACL\u201913."
+      },
+      {
+        "key": "e_1_3_2_1_63_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2597073.2597102"
+      },
+      {
+        "key": "e_1_3_2_1_64_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568242"
+      },
+      {
+        "key": "e_1_3_2_1_65_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635883"
+      },
+      {
+        "key": "e_1_3_2_1_66_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2491411.2494584"
+      },
+      {
+        "key": "e_1_3_2_1_67_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2591062.2591072"
+      },
+      {
+        "key": "e_1_3_2_1_68_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2642937.2643010"
+      },
+      {
+        "key": "e_1_3_2_1_69_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2594291.2594321"
+      },
+      {
+        "key": "e_1_3_2_1_70_1",
+        "unstructured": "V. Hellendoorn P. Devanbu and A. Bacchelli. Will they like this? evaluating code contributions with language models. MSR\u201915.   V. Hellendoorn P. Devanbu and A. Bacchelli. Will they like this? evaluating code contributions with language models. MSR\u201915."
+      },
+      {
+        "key": "e_1_3_2_1_71_1",
+        "volume-title": "\u201cnaturalness",
+        "author": "Ray B.",
+        "year": "2015",
+        "unstructured": "B. Ray , V. Hellendoorn , Z. Tu , C. Nguyen , S. Godhane , A. Bacchelli , and P. Devanbu . On the \u201cnaturalness \u201d of buggy code. CoRR , abs/1506.01159, 2015 . B. Ray, V. Hellendoorn, Z. Tu, C. Nguyen, S. Godhane, A. Bacchelli, and P. Devanbu. On the \u201cnaturalness\u201d of buggy code. CoRR, abs/1506.01159, 2015."
+      },
+      {
+        "key": "e_1_3_2_1_72_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2786805.2786849"
+      },
+      {
+        "key": "e_1_3_2_1_73_1",
+        "volume-title": "Two decades of statistical language modeling: Where do we go from here? 88(8)",
+        "author": "Rosenfeld R.",
+        "year": "2000",
+        "unstructured": "R. Rosenfeld . Two decades of statistical language modeling: Where do we go from here? 88(8) , 2000 . R. Rosenfeld. Two decades of statistical language modeling: Where do we go from here? 88(8), 2000."
+      },
+      {
+        "key": "e_1_3_2_1_74_1",
+        "unstructured": "A. Mnih and Y. Teh. A fast and simple algorithm for training neural probabilistic language models. ICML\u201912.  A. Mnih and Y. Teh. A fast and simple algorithm for training neural probabilistic language models. ICML\u201912."
+      },
+      {
+        "key": "e_1_3_2_1_75_1",
+        "volume-title": "A neural probabilistic language model. JMLR, 3",
+        "author": "Bengio Y.",
+        "year": "2003",
+        "unstructured": "Y. Bengio , R. Ducharme , P. Vincent , and C. Janvin . A neural probabilistic language model. JMLR, 3 , 2003 . Y. Bengio, R. Ducharme, P. Vincent, and C. Janvin. A neural probabilistic language model. JMLR, 3, 2003."
+      },
+      {
+        "key": "e_1_3_2_1_76_1",
+        "unstructured": "F. Morin and Y. Bengio. Hierarchical probabilistic neural network language model. AISTATS\u201905.  F. Morin and Y. Bengio. Hierarchical probabilistic neural network language model. AISTATS\u201905."
+      },
+      {
+        "key": "e_1_3_2_1_77_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/1220575.1220601"
+      },
+      {
+        "key": "e_1_3_2_1_78_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1561/2200000006"
+      },
+      {
+        "key": "e_1_3_2_1_79_1",
+        "unstructured": "T. Mikolov M. Karafi\u00e1t L. Burget J. \u02c7 Cernock\u00b4 y and S. Khudanpur. Recurrent neural network based language model. INTERSPEECH\u201910.  T. Mikolov M. Karafi\u00e1t L. Burget J. \u02c7 Cernock\u00b4 y and S. Khudanpur. Recurrent neural network based language model. INTERSPEECH\u201910."
+      },
+      {
+        "key": "e_1_3_2_1_80_1",
+        "unstructured": "T. Mikolov S. Kombrink A. Deoras L. Burget and J. Cernock\u00b4 y. Rnnlm - recurrent neural network language modeling toolkit. ASRU\u201911.  T. Mikolov S. Kombrink A. Deoras L. Burget and J. Cernock\u00b4 y. Rnnlm - recurrent neural network language modeling toolkit. ASRU\u201911."
+      },
+      {
+        "key": "e_1_3_2_1_81_1",
+        "unstructured": "T. Mikolov S. Kombrink L. Burget J. Cernock\u00b4 y and S. Khudanpur. Extensions of recurrent neural network language model. ICASSP\u201911.  T. Mikolov S. Kombrink L. Burget J. Cernock\u00b4 y and S. Khudanpur. Extensions of recurrent neural network language model. ICASSP\u201911."
+      },
+      {
+        "key": "e_1_3_2_1_82_1",
+        "unstructured": "T. Mikolov A. Deoras D. Povey L. Burget and J. Cernock\u00b4 y. Strategies for training large scale neural network language models. ASRU\u201911.  T. Mikolov A. Deoras D. Povey L. Burget and J. Cernock\u00b4 y. Strategies for training large scale neural network language models. ASRU\u201911."
+      },
+      {
+        "key": "e_1_3_2_1_84_1",
+        "unstructured": "M. White C. Vendome M. Linares-V\u00e1squez and D. Poshyvanyk. Toward deep learning software repositories. MSR\u201915.   M. White C. Vendome M. Linares-V\u00e1squez and D. Poshyvanyk. Toward deep learning software repositories. MSR\u201915."
+      },
+      {
+        "key": "e_1_3_2_1_85_1",
+        "unstructured": "C. Goller and A. K\u00fcchler. Learning task-dependent distributed representations by backpropagation through structure. ICNN\u201996.  C. Goller and A. K\u00fcchler. Learning task-dependent distributed representations by backpropagation through structure. ICNN\u201996."
+      },
+      {
+        "key": "e_1_3_2_1_86_1",
+        "unstructured": "R. Socher J. Pennington E. Huang A. Ng and C. Manning. Semi-supervised recursive autoencoders for predicting sentiment distributions. EMNLP\u201911.   R. Socher J. Pennington E. Huang A. Ng and C. Manning. Semi-supervised recursive autoencoders for predicting sentiment distributions. EMNLP\u201911."
+      },
+      {
+        "key": "e_1_3_2_1_87_1",
+        "unstructured": "R. Socher A. Perelygin J. Wu J. Chuang C. Manning A. Ng and C. Potts. Recursive deep models for semantic compositionality over a sentiment treebank. EMNLP\u201913.  R. Socher A. Perelygin J. Wu J. Chuang C. Manning A. Ng and C. Potts. Recursive deep models for semantic compositionality over a sentiment treebank. EMNLP\u201913."
+      },
+      {
+        "key": "e_1_3_2_1_88_1",
+        "volume-title": "cs.CL/0108006",
+        "author": "Goodman J.",
+        "year": "2001",
+        "unstructured": "J. Goodman . Classes for fast maximum entropy training. CoRR , cs.CL/0108006 , 2001 . J. Goodman. Classes for fast maximum entropy training. CoRR, cs.CL/0108006, 2001."
+      },
+      {
+        "key": "e_1_3_2_1_89_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1273496.1273577"
+      },
+      {
+        "key": "e_1_3_2_1_90_1",
+        "first-page": "1",
+        "author": "Shi Y.",
+        "year": "2013",
+        "unstructured": "Y. Shi , W. Zhang , J. Liu , and M. Johnson . Rnn language model with word clustering and class-based output layer. EURASIP , 1 , 2013 . Y. Shi, W. Zhang, J. Liu, and M. Johnson. Rnn language model with word clustering and class-based output layer. EURASIP, 1, 2013.",
+        "journal-title": "EURASIP"
+      },
+      {
+        "key": "e_1_3_2_1_91_1",
+        "volume-title": "abs/1206.5533",
+        "author": "Bengio Y.",
+        "year": "2012",
+        "unstructured": "Y. Bengio . Practical recommendations for gradient-based training of deep architectures. CoRR , abs/1206.5533 , 2012 . Y. Bengio. Practical recommendations for gradient-based training of deep architectures. CoRR, abs/1206.5533, 2012."
+      },
+      {
+        "key": "e_1_3_2_1_92_1",
+        "unstructured": "I. Sutskever J. Martens and G. Hinton. Generating text with recurrent neural networks. ICML\u201911.  I. Sutskever J. Martens and G. Hinton. Generating text with recurrent neural networks. ICML\u201911."
+      },
+      {
+        "key": "e_1_3_2_1_93_1",
+        "unstructured": "I. Sutskever J. Martens G. Dahl and G. Hinton. On the importance of initialization and momentum in deep learning. ICML\u201913.  I. Sutskever J. Martens G. Dahl and G. Hinton. On the importance of initialization and momentum in deep learning. ICML\u201913."
+      },
+      {
+        "key": "e_1_3_2_1_94_1",
+        "unstructured": "M. Hermans and B. Schrauwen. Training and analysing deep recurrent neural networks. NIPS\u201913.  M. Hermans and B. Schrauwen. Training and analysing deep recurrent neural networks. NIPS\u201913."
+      },
+      {
+        "key": "e_1_3_2_1_95_1",
+        "volume-title": "How to construct deep recurrent neural networks. CoRR, abs/1312.6026",
+        "author": "Pascanu R.",
+        "year": "2013",
+        "unstructured": "R. Pascanu , C. Gulcehre , K. Cho , and Y. Bengio . How to construct deep recurrent neural networks. CoRR, abs/1312.6026 , 2013 . R. Pascanu, C. Gulcehre, K. Cho, and Y. Bengio. How to construct deep recurrent neural networks. CoRR, abs/1312.6026, 2013."
+      },
+      {
+        "key": "e_1_3_2_1_96_1",
+        "unstructured": "C. Bishop. Pattern Recognition Machine Learning. 2006.   C. Bishop. Pattern Recognition Machine Learning. 2006."
+      },
+      {
+        "key": "e_1_3_2_1_97_1",
+        "volume-title": "Backpropagation through time: what it does and how to do it. 78(10)",
+        "author": "Werbos P.",
+        "year": "1990",
+        "unstructured": "P. Werbos . Backpropagation through time: what it does and how to do it. 78(10) , 1990 . P. Werbos. Backpropagation through time: what it does and how to do it. 78(10), 1990."
+      },
+      {
+        "key": "e_1_3_2_1_98_1",
+        "volume-title": "Compilers: Principles, Techniques, and Tools. 2 ed",
+        "author": "Aho A.",
+        "year": "2006",
+        "unstructured": "A. Aho , M. Lam , R. Sethi , and J. Ullman . Compilers: Principles, Techniques, and Tools. 2 ed ., 2006 . A. Aho, M. Lam, R. Sethi, and J. Ullman. Compilers: Principles, Techniques, and Tools. 2 ed., 2006."
+      },
+      {
+        "key": "e_1_3_2_1_99_1",
+        "volume-title": "Introduction to Algorithms. 3 ed",
+        "author": "Cormen T.",
+        "year": "2009",
+        "unstructured": "T. Cormen , C. Leiserson , R. Rivest , and C. Stein . Introduction to Algorithms. 3 ed ., 2009 . T. Cormen, C. Leiserson, R. Rivest, and C. Stein. Introduction to Algorithms. 3 ed., 2009."
+      },
+      {
+        "key": "e_1_3_2_1_100_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "S. Deerwester S. Dumais G. Furnas T. Landauer and R. Harshman. Indexing by latent semantic analysis. JASIS 41(6).  S. Deerwester S. Dumais G. Furnas T. Landauer and R. Harshman. Indexing by latent semantic analysis. JASIS 41(6).",
+        "DOI": "10.1002/(SICI)1097-4571(199009)41:6<391::AID-ASI1>3.0.CO;2-9"
+      },
+      {
+        "key": "e_1_3_2_1_101_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/330775"
+      },
+      {
+        "key": "e_1_3_2_1_102_1",
+        "unstructured": "A. Walenstein N. Jyoti J. Li Y. Yang and A. Lakhotia. Problems creating task-relevant clone detection reference data. WCRE\u201903.   A. Walenstein N. Jyoti J. Li Y. Yang and A. Lakhotia. Problems creating task-relevant clone detection reference data. WCRE\u201903."
+      },
+      {
+        "key": "e_1_3_2_1_103_1",
+        "volume-title": "Dagstuhl Seminar Proceedings",
+        "author": "Koschke R.",
+        "year": "2007",
+        "unstructured": "R. Koschke . Survey of research on software clones . Dagstuhl Seminar Proceedings , 2007 . R. Koschke. Survey of research on software clones. Dagstuhl Seminar Proceedings, 2007."
+      },
+      {
+        "key": "e_1_3_2_1_104_1",
+        "unstructured": "R. Koschke. Frontiers of software clone management. FoSM\u201908.  R. Koschke. Frontiers of software clone management. FoSM\u201908."
+      },
+      {
+        "key": "e_1_3_2_1_105_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1985404.1985416"
+      },
+      {
+        "key": "e_1_3_2_1_106_1",
+        "unstructured": "D. Chatterji J. Carver and N. Kraft. Claims and beliefs about code clones: Do we agree as a community?: A survey. IWSC\u201912.   D. Chatterji J. Carver and N. Kraft. Claims and beliefs about code clones: Do we agree as a community?: A survey. IWSC\u201912."
+      },
+      {
+        "key": "e_1_3_2_1_107_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2491411.2491420"
+      },
+      {
+        "key": "e_1_3_2_1_108_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSME.2014.77"
+      },
+      {
+        "key": "e_1_3_2_1_109_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-008-9102-8"
+      },
+      {
+        "key": "e_1_3_2_1_110_1",
+        "unstructured": "Y. Sasaki T. Yamamoto Y. Hayase and K. Inoue. Finding file clones in freebsd ports collection. MSR\u201910.  Y. Sasaki T. Yamamoto Y. Hayase and K. Inoue. Finding file clones in freebsd ports collection. MSR\u201910."
+      },
+      {
+        "key": "e_1_3_2_1_111_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2011.6080795"
+      },
+      {
+        "key": "e_1_3_2_1_112_1",
+        "unstructured": "https://sites.google.com/site/deeplearningclone/.  https://sites.google.com/site/deeplearningclone/."
+      },
+      {
+        "key": "e_1_3_2_1_113_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ijar.2008.11.006"
+      },
+      {
+        "key": "e_1_3_2_1_114_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-0-387-84858-7"
+      },
+      {
+        "key": "e_1_3_2_1_115_1",
+        "unstructured": "A. Krizhevsky and G. Hinton. Using very deep autoencoders for content-based image retrieval. ESANN\u201911.  A. Krizhevsky and G. Hinton. Using very deep autoencoders for content-based image retrieval. ESANN\u201911."
+      }
+    ],
+    "event": {
+      "name": "ASE'16: ACM/IEEE International Conference on Automated Software Engineering",
+      "location": "Singapore Singapore",
+      "acronym": "ASE'16",
+      "sponsor": [
+        "SIGAI ACM Special Interest Group on Artificial Intelligence",
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE-CS Computer Society"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 31st IEEE/ACM International Conference on Automated Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/2970276.2970326",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          19
+        ]
+      ],
+      "date-time": "2023-01-19T00:14:11Z",
+      "timestamp": 1674087251000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/2970276.2970326"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          8,
+          25
+        ]
+      ]
+    },
+    "references-count": 113,
+    "alternative-id": [
+      "10.1145/2970276.2970326",
+      "10.1145/2970276"
+    ],
+    "URL": "http://dx.doi.org/10.1145/2970276.2970326",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2016,
+          8,
+          25
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2016-08-25",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

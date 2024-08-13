@@ -1,0 +1,533 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T06:01:46Z",
+      "timestamp": 1721368906560
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 57,
+    "publisher": "ACM",
+    "funder": [
+      {
+        "name": "Special Project on Innovative Methods",
+        "award": [
+          "2020IM020100"
+        ]
+      },
+      {
+        "name": "Natural Science Foundation of Shandong Province, China",
+        "award": [
+          "ZR2021MF059, ZR2019MF071"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61602286, 61976127"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          16
+        ]
+      ]
+    },
+    "DOI": "10.1145/3524610.3527907",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          10,
+          20
+        ]
+      ],
+      "date-time": "2022-10-20T15:19:30Z",
+      "timestamp": 1666279170000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 15,
+    "title": [
+      "M2TS"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Yuexiu",
+        "family": "Gao",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Shandong Normal University, Jinan, China"
+          }
+        ]
+      },
+      {
+        "given": "Chen",
+        "family": "Lyu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Shandong Normal University, Jinan, China"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          10,
+          20
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1147/sj.282.0294"
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2017.2734091"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/VLHCC.2004.47"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2006.116"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1134285.1134355"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2013.6613829"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2015.2465386"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1925805.1925815"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BFb0052526"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2015.7081848"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2013.6693113"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2015.2442238"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568247"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1858996.1859006"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "first-page": "223",
+        "volume-title": "Supporting program comprehension with source code summarization. In 2010 acm/ieee 32nd international conference on software engineering",
+        "author": "Haiduc Sonia",
+        "year": "2010",
+        "unstructured": "Sonia Haiduc , Jairo Aponte , and Andrian Marcus . Supporting program comprehension with source code summarization. In 2010 acm/ieee 32nd international conference on software engineering , volume 2 , pages 223 -- 226 . IEEE , 2010 . Sonia Haiduc, Jairo Aponte, and Andrian Marcus. Supporting program comprehension with source code summarization. In 2010 acm/ieee 32nd international conference on software engineering, volume 2, pages 223--226. IEEE, 2010."
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WCRE.2010.13"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3304889.3304975"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v34i05.6290"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3324884.3416578"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "volume-title": "Exploiting method names to improve code summarization: A deliberation multi-task learning approach. arXiv preprint arXiv:2103.11448",
+        "author": "Xie Rui",
+        "year": "2021",
+        "unstructured": "Rui Xie , Wei Ye , Jinan Sun , and Shikun Zhang . Exploiting method names to improve code summarization: A deliberation multi-task learning approach. arXiv preprint arXiv:2103.11448 , 2021 . Rui Xie, Wei Ye, Jinan Sun, and Shikun Zhang. Exploiting method names to improve code summarization: A deliberation multi-task learning approach. arXiv preprint arXiv:2103.11448, 2021."
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3238206"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3196321.3196334"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-019-09730-9"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00087"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "volume-title": "code2seq: Generating sequences from structured representations of code. arXiv preprint arXiv:1808.01400",
+        "author": "Alon Uri",
+        "year": "2018",
+        "unstructured": "Uri Alon , Shaked Brody , Omer Levy , and Eran Yahav . code2seq: Generating sequences from structured representations of code. arXiv preprint arXiv:1808.01400 , 2018 . Uri Alon, Shaked Brody, Omer Levy, and Eran Yahav. code2seq: Generating sequences from structured representations of code. arXiv preprint arXiv:1808.01400, 2018."
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "unstructured": "Kyunghyun Cho Bart Van Merri\u00ebnboer Caglar Gulcehre Dzmitry Bahdanau Fethi Bougares Holger Schwenk and Yoshua Bengio. Learning phrase representations using rnn encoder-decoder for statistical machine translation. arXiv preprint arXiv:1406.1078 2014.  Kyunghyun Cho Bart Van Merri\u00ebnboer Caglar Gulcehre Dzmitry Bahdanau Fethi Bougares Holger Schwenk and Yoshua Bengio. Learning phrase representations using rnn encoder-decoder for statistical machine translation. arXiv preprint arXiv:1406.1078 2014."
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "first-page": "5998",
+        "volume-title": "Advances in neural information processing systems",
+        "author": "Vaswani Ashish",
+        "year": "2017",
+        "unstructured": "Ashish Vaswani , Noam Shazeer , Niki Parmar , Jakob Uszkoreit , Llion Jones , Aidan N Gomez , \u0141ukasz Kaiser , and Illia Polosukhin . Attention is all you need . In Advances in neural information processing systems , pages 5998 -- 6008 , 2017 . Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, \u0141ukasz Kaiser, and Illia Polosukhin. Attention is all you need. In Advances in neural information processing systems, pages 5998--6008, 2017."
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "volume-title": "A transformer-based approach for source code summarization. arXiv preprint arXiv:2005.00653",
+        "author": "Ahmad Wasi Uddin",
+        "year": "2020",
+        "unstructured": "Wasi Uddin Ahmad , Saikat Chakraborty , Baishakhi Ray , and Kai-Wei Chang . A transformer-based approach for source code summarization. arXiv preprint arXiv:2005.00653 , 2020 . Wasi Uddin Ahmad, Saikat Chakraborty, Baishakhi Ray, and Kai-Wei Chang. A transformer-based approach for source code summarization. arXiv preprint arXiv:2005.00653, 2020."
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3387904.3389268"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3377811.3380383"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "volume-title": "A multi-modal transformer-based code summarization approach for smart contracts. arXiv preprint arXiv:2103.07164",
+        "author": "Yang Zhen",
+        "year": "2021",
+        "unstructured": "Zhen Yang , Jacky Keung , Xiao Yu , Xiaodong Gu , Zhengyuan Wei , Xiaoxue Ma , and Miao Zhang . A multi-modal transformer-based code summarization approach for smart contracts. arXiv preprint arXiv:2103.07164 , 2021 . Zhen Yang, Jacky Keung, Xiao Yu, Xiaodong Gu, Zhengyuan Wei, Xiaoxue Ma, and Miao Zhang. A multi-modal transformer-based code summarization approach for smart contracts. arXiv preprint arXiv:2103.07164, 2021."
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00086"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "volume-title": "Recommendations for datasets for source code summarization. arXiv preprint arXiv:1904.02660",
+        "author": "LeClair Alexander",
+        "year": "2019",
+        "unstructured": "Alexander LeClair and Collin McMillan . Recommendations for datasets for source code summarization. arXiv preprint arXiv:1904.02660 , 2019 . Alexander LeClair and Collin McMillan. Recommendations for datasets for source code summarization. arXiv preprint arXiv:1904.02660, 2019."
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "volume-title": "Graph2seq: Graph to sequence learning with attention-based neural networks. arXiv preprint arXiv:1804.00823",
+        "author": "Xu Kun",
+        "year": "2018",
+        "unstructured": "Kun Xu , Lingfei Wu , Zhiguo Wang , Yansong Feng , Michael Witbrock , and Vadim Sheinin . Graph2seq: Graph to sequence learning with attention-based neural networks. arXiv preprint arXiv:1804.00823 , 2018 . Kun Xu, Lingfei Wu, Zhiguo Wang, Yansong Feng, Michael Witbrock, and Vadim Sheinin. Graph2seq: Graph to sequence learning with attention-based neural networks. arXiv preprint arXiv:1804.00823, 2018."
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "volume-title": "Lun Yiu Nie, and Xin Xia. Code structure guided transformer for source code summarization. arXiv preprint arXiv:2104.09340",
+        "author": "Gao Shuzheng",
+        "year": "2021",
+        "unstructured": "Shuzheng Gao , Cuiyun Gao , Yulan He , Jichuan Zeng , Lun Yiu Nie, and Xin Xia. Code structure guided transformer for source code summarization. arXiv preprint arXiv:2104.09340 , 2021 . Shuzheng Gao, Cuiyun Gao, Yulan He, Jichuan Zeng, Lun Yiu Nie, and Xin Xia. Code structure guided transformer for source code summarization. arXiv preprint arXiv:2104.09340, 2021."
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "first-page": "34",
+        "article-title": "Integrating tree path in transformer for code representation",
+        "author": "Peng Han",
+        "year": "2021",
+        "unstructured": "Han Peng , Ge Li , Wenhan Wang , Yunfei Zhao , and Zhi Jin . Integrating tree path in transformer for code representation . Advances in Neural Information Processing Systems , 34 , 2021 . Han Peng, Ge Li, Wenhan Wang, Yunfei Zhao, and Zhi Jin. Integrating tree path in transformer for code representation. Advances in Neural Information Processing Systems, 34, 2021.",
+        "journal-title": "Advances in Neural Information Processing Systems"
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "volume-title": "Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907",
+        "author": "Kipf Thomas N",
+        "year": "2016",
+        "unstructured": "Thomas N Kipf and Max Welling . Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907 , 2016 . Thomas N Kipf and Max Welling. Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907, 2016."
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "volume-title": "Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805",
+        "author": "Devlin Jacob",
+        "year": "2018",
+        "unstructured": "Jacob Devlin , Ming-Wei Chang , Kenton Lee , and Kristina Toutanova . Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805 , 2018 . Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805, 2018."
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "volume-title": "M2tr: Multi-modal multi-scale transformers for deepfake detection. arXiv preprint arXiv:2104.09770",
+        "author": "Wang Junke",
+        "year": "2021",
+        "unstructured": "Junke Wang , Zuxuan Wu , Jingjing Chen , and Yu-Gang Jiang . M2tr: Multi-modal multi-scale transformers for deepfake detection. arXiv preprint arXiv:2104.09770 , 2021 . Junke Wang, Zuxuan Wu, Jingjing Chen, and Yu-Gang Jiang. M2tr: Multi-modal multi-scale transformers for deepfake detection. arXiv preprint arXiv:2104.09770, 2021."
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v34i05.6430"
+      },
+      {
+        "key": "e_1_3_2_1_43_1",
+        "volume-title": "A parallel corpus of python functions and documentation strings for automated code documentation and code generation. arXiv preprint arXiv:1707.02275",
+        "author": "Miceli Barone Antonio Valerio",
+        "year": "2017",
+        "unstructured": "Antonio Valerio Miceli Barone and Rico Sennrich . A parallel corpus of python functions and documentation strings for automated code documentation and code generation. arXiv preprint arXiv:1707.02275 , 2017 . Antonio Valerio Miceli Barone and Rico Sennrich. A parallel corpus of python functions and documentation strings for automated code documentation and code generation. arXiv preprint arXiv:1707.02275, 2017."
+      },
+      {
+        "key": "e_1_3_2_1_44_1",
+        "first-page": "400",
+        "volume-title": "A stochastic approximation method. The annals of mathematical statistics",
+        "author": "Robbins Herbert",
+        "year": "1951",
+        "unstructured": "Herbert Robbins and Sutton Monro . A stochastic approximation method. The annals of mathematical statistics , pages 400 -- 407 , 1951 . Herbert Robbins and Sutton Monro. A stochastic approximation method. The annals of mathematical statistics, pages 400--407, 1951."
+      },
+      {
+        "key": "e_1_3_2_1_45_1",
+        "first-page": "311",
+        "volume-title": "Proceedings of the 40th annual meeting of the Association for Computational Linguistics",
+        "author": "Papineni Kishore",
+        "year": "2002",
+        "unstructured": "Kishore Papineni , Salim Roukos , Todd Ward , and Wei-Jing Zhu . Bleu : a method for automatic evaluation of machine translation . In Proceedings of the 40th annual meeting of the Association for Computational Linguistics , pages 311 -- 318 , 2002 . Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. Bleu: a method for automatic evaluation of machine translation. In Proceedings of the 40th annual meeting of the Association for Computational Linguistics, pages 311--318, 2002."
+      },
+      {
+        "key": "e_1_3_2_1_46_1",
+        "first-page": "74",
+        "volume-title": "Text summarization branches out",
+        "author": "Lin Chin-Yew",
+        "year": "2004",
+        "unstructured": "Chin-Yew Lin . Rouge: A package for automatic evaluation of summaries . In Text summarization branches out , pages 74 -- 81 , 2004 . Chin-Yew Lin. Rouge: A package for automatic evaluation of summaries. In Text summarization branches out, pages 74--81, 2004."
+      },
+      {
+        "key": "e_1_3_2_1_47_1",
+        "first-page": "65",
+        "volume-title": "Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization",
+        "author": "Banerjee Satanjeev",
+        "year": "2005",
+        "unstructured": "Satanjeev Banerjee and Alon Lavie . Meteor : An automatic metric for mt evaluation with improved correlation with human judgments . In Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization , pages 65 -- 72 , 2005 . Satanjeev Banerjee and Alon Lavie. Meteor: An automatic metric for mt evaluation with improved correlation with human judgments. In Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization, pages 65--72, 2005."
+      },
+      {
+        "key": "e_1_3_2_1_48_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7299087"
+      },
+      {
+        "key": "e_1_3_2_1_49_1",
+        "volume-title": "Cocosum: Contextual code summarization with multi-relational graph neural network. arXiv preprint arXiv:2107.01933",
+        "author": "Wang Yanlin",
+        "year": "2021",
+        "unstructured": "Yanlin Wang , Ensheng Shi , Lun Du , Xiaodi Yang , Yuxuan Hu , Shi Han , Hongyu Zhang , and Dongmei Zhang . Cocosum: Contextual code summarization with multi-relational graph neural network. arXiv preprint arXiv:2107.01933 , 2021 . Yanlin Wang, Ensheng Shi, Lun Du, Xiaodi Yang, Yuxuan Hu, Shi Han, Hongyu Zhang, and Dongmei Zhang. Cocosum: Contextual code summarization with multi-relational graph neural network. arXiv preprint arXiv:2107.01933, 2021."
+      },
+      {
+        "key": "e_1_3_2_1_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2902362"
+      },
+      {
+        "key": "e_1_3_2_1_51_1",
+        "volume-title": "Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics",
+        "volume": "40",
+        "author": "Movshovitz-Attias Dana",
+        "year": "2013",
+        "unstructured": "Dana Movshovitz-Attias and William Cohen . Natural language models for predicting programming comments . In Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics Volume 2: Short Papers), pages 35-- 40 , 2013 . Dana Movshovitz-Attias and William Cohen. Natural language models for predicting programming comments. In Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics Volume 2: Short Papers), pages 35--40, 2013."
+      },
+      {
+        "key": "e_1_3_2_1_52_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IJCNN.2019.8851751"
+      },
+      {
+        "key": "e_1_3_2_1_53_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3015812.3016002"
+      },
+      {
+        "key": "e_1_3_2_1_54_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2597008.2597149"
+      },
+      {
+        "key": "e_1_3_2_1_55_1",
+        "article-title": "Reinforcement-learning-guided source code summarization via hierarchical attention",
+        "author": "Wang Wenhua",
+        "year": "2020",
+        "unstructured": "Wenhua Wang , Yuqun Zhang , Yulei Sui , Yao Wan , Zhou Zhao , Jian Wu , Philip Yu , and Guandong Xu . Reinforcement-learning-guided source code summarization via hierarchical attention . IEEE Transactions on software Engineering , 2020 . Wenhua Wang, Yuqun Zhang, Yulei Sui, Yao Wan, Zhou Zhao, Jian Wu, Philip Yu, and Guandong Xu. Reinforcement-learning-guided source code summarization via hierarchical attention. IEEE Transactions on software Engineering, 2020.",
+        "journal-title": "IEEE Transactions on software Engineering"
+      },
+      {
+        "key": "e_1_3_2_1_56_1",
+        "volume-title": "Language-agnostic representation learning of source code from structure and context. arXiv preprint arXiv:2103.11318",
+        "author": "Z\u00fcgner Daniel",
+        "year": "2021",
+        "unstructured": "Daniel Z\u00fcgner , Tobias Kirschstein , Michele Catasta , Jure Leskovec , and Stephan G\u00fcnnemann . Language-agnostic representation learning of source code from structure and context. arXiv preprint arXiv:2103.11318 , 2021 . Daniel Z\u00fcgner, Tobias Kirschstein, Michele Catasta, Jure Leskovec, and Stephan G\u00fcnnemann. Language-agnostic representation learning of source code from structure and context. arXiv preprint arXiv:2103.11318, 2021."
+      },
+      {
+        "key": "e_1_3_2_1_57_1",
+        "volume-title": "et al. Codebert: A pre-trained model for programming and natural languages. arXiv preprint arXiv:2002.08155",
+        "author": "Feng Zhangyin",
+        "year": "2020",
+        "unstructured": "Zhangyin Feng , Daya Guo , Duyu Tang , Nan Duan , Xiaocheng Feng , Ming Gong , Linjun Shou , Bing Qin , Ting Liu , Daxin Jiang , et al. Codebert: A pre-trained model for programming and natural languages. arXiv preprint arXiv:2002.08155 , 2020 . Zhangyin Feng, Daya Guo, Duyu Tang, Nan Duan, Xiaocheng Feng, Ming Gong, Linjun Shou, Bing Qin, Ting Liu, Daxin Jiang, et al. Codebert: A pre-trained model for programming and natural languages. arXiv preprint arXiv:2002.08155, 2020."
+      }
+    ],
+    "event": {
+      "name": "ICPC '22: 30th International Conference on Program Comprehension",
+      "location": "Virtual Event",
+      "acronym": "ICPC '22",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE CS"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3524610.3527907",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          16
+        ]
+      ],
+      "date-time": "2023-05-16T10:41:42Z",
+      "timestamp": 1684233702000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3524610.3527907"
+      }
+    },
+    "subtitle": [
+      "multi-scale multi-modal approach based on transformer for source code summarization"
+    ],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          16
+        ]
+      ]
+    },
+    "references-count": 57,
+    "alternative-id": [
+      "10.1145/3524610.3527907",
+      "10.1145/3524610"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3524610.3527907",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          16
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2022-10-20",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,673 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          5
+        ]
+      ],
+      "date-time": "2024-07-05T09:47:18Z",
+      "timestamp": 1720172838034
+    },
+    "reference-count": 38,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2021-09-01T00:00:00Z",
+          "timestamp": 1630454400000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2021-09-01T00:00:00Z",
+          "timestamp": 1630454400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2021-09-01T00:00:00Z",
+          "timestamp": 1630454400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2021-09-01T00:00:00Z",
+          "timestamp": 1630454400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2021-09-01T00:00:00Z",
+          "timestamp": 1630454400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              9,
+              1
+            ]
+          ],
+          "date-time": "2021-09-01T00:00:00Z",
+          "timestamp": 1630454400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100004853",
+        "name": "The Chinese University of Hong Kong",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "DOI": "10.13039/501100010877",
+        "name": "Science, Technology and Innovation Commission of Shenzhen Municipality",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "ZX20210035"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100000923",
+        "name": "Australian Research Council",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DP200102940"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001771",
+        "name": "The University of Newcastle",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "62002084"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100003472",
+        "name": "Harbin Institute of Technology",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "DOI": "10.13039/501100002920",
+        "name": "Research Grants Council, University Grants Committee",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "CUHK 14210717"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Neural Networks"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.neunet.2021.04.019",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          4,
+          26
+        ]
+      ],
+      "date-time": "2021-04-26T16:38:04Z",
+      "timestamp": 1619455084000
+    },
+    "page": "385-394",
+    "update-policy": "http://dx.doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 21,
+    "special_numbering": "C",
+    "title": [
+      "CRaDLe: Deep code retrieval based on semantic Dependency Learning"
+    ],
+    "prefix": "10.1016",
+    "volume": "141",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0003-3503-8845",
+        "authenticated-orcid": false,
+        "given": "Wenchao",
+        "family": "Gu",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0002-9897-4086",
+        "authenticated-orcid": false,
+        "given": "Zongjie",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Cuiyun",
+        "family": "Gao",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Chaozheng",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0002-3063-9425",
+        "authenticated-orcid": false,
+        "given": "Hongyu",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Zenglin",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Michael R.",
+        "family": "Lyu",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b1",
+        "series-title": "Proceedings of the 16th international conference on mining software repositories",
+        "first-page": "1",
+        "article-title": "SCOR: source code retrieval with semantics and order",
+        "author": "Akbar",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b2",
+        "series-title": "6th international conference on learning representations, ICLR 2018, Vancouver, BC, Canada, April 30 - May 3, 2018, conference track proceedings",
+        "article-title": "Learning to represent programs with graphs",
+        "author": "Allamanis",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b3",
+        "series-title": "7th international conference on learning representations",
+        "article-title": "Code2seq: Generating sequences from structured representations of code",
+        "author": "Alon",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b4",
+        "series-title": "Proceedings of the 27th international conference on human factors in computing systems",
+        "first-page": "1589",
+        "article-title": "Two studies of opportunistic programming: interleaving web foraging, learning, and writing code",
+        "author": "Brandt",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b5",
+        "series-title": "Proceedings of the ACM joint meeting on european software engineering conference and symposium on the foundations of software engineering",
+        "first-page": "964",
+        "article-title": "When deep learning met code search",
+        "author": "Cambronero",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b6",
+        "series-title": "20th ACM SIGSOFT symposium on the foundations of software engineering",
+        "first-page": "10",
+        "article-title": "Searching connected API subgraph via text phrases",
+        "author": "Chan",
+        "year": "2012"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b7",
+        "series-title": "Proceedings of SSST@EMNLP 2014, eighth workshop on syntax, semantics and structure in statistical translation, Doha, Qatar, 25 October 2014",
+        "first-page": "103",
+        "article-title": "On the properties of neural machine translation: Encoder-decoder approaches",
+        "author": "Cho",
+        "year": "2014"
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.neunet.2021.04.019_b8",
+        "doi-asserted-by": "crossref",
+        "first-page": "453",
+        "DOI": "10.1023/A:1006569829653",
+        "article-title": "Application of spreading activation techniques in information retrieval",
+        "volume": "11",
+        "author": "Crestani",
+        "year": "1997",
+        "journal-title": "Artificial Intelligence Review"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.neunet.2021.04.019_b9",
+        "doi-asserted-by": "crossref",
+        "first-page": "319",
+        "DOI": "10.1145/24039.24041",
+        "article-title": "The program dependence graph and its use in optimization",
+        "volume": "9",
+        "author": "Ferrante",
+        "year": "1987",
+        "journal-title": "ACM Transactions on Programming Languages and Systems"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b10",
+        "series-title": "Deep learning (Vol. 1)",
+        "author": "Goodfellow",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b11",
+        "series-title": "Proceedings of the 40th international conference on software engineering",
+        "first-page": "933",
+        "article-title": "Deep code search",
+        "author": "Gu",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b12",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Henderson, T. A. D., & Podgurski, A. (2016). Sampling code clones from program dependence graphs with GRAPLE. In Proceedings of the 2nd international workshop on software analytics (pp. 47\u201353).",
+        "DOI": "10.1145/2989238.2989241"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b13",
+        "series-title": "Codesearchnet challenge: Evaluating the state of semantic code search",
+        "author": "Husain",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b14",
+        "series-title": "Proceedings of the 54th annual meeting of the association for computational linguistics, ACL 2016, August 7-12, 2016, Berlin, Germany, Volume 1: Long papers",
+        "article-title": "Summarizing source code using a neural attention model",
+        "author": "Iyer",
+        "year": "2016"
+      },
+      {
+        "issue": "7",
+        "key": "10.1016/j.neunet.2021.04.019_b15",
+        "doi-asserted-by": "crossref",
+        "first-page": "654",
+        "DOI": "10.1109/TSE.2002.1019480",
+        "article-title": "Ccfinder: A multilinguistic token-based code clone detection system for large scale source code",
+        "volume": "28",
+        "author": "Kamiya",
+        "year": "2002",
+        "journal-title": "IEEE Transactions on Software Engineering"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b16",
+        "series-title": "Proceedings of the 2014 conference on empirical methods in natural language processing, EMNLP 2014, October 25-29, 2014, Doha, Qatar, a meeting of SIGDAT, a special interest group of the ACL",
+        "first-page": "1746",
+        "article-title": "Convolutional neural networks for sentence classification",
+        "author": "Kim",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b17",
+        "unstructured": "Kingma, D. P., & Ba, J. (2015). Adam: A method for stochastic optimization. Y. Bengio, Y. LeCun (Eds.), 3rd international conference on learning representations, ICLR 2015, San Diego, CA, USA, May 7-9, 2015, conference track proceedings."
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b18",
+        "series-title": "Artificial intelligence and statistics",
+        "first-page": "464",
+        "article-title": "Generalizing pooling functions in convolutional neural networks: Mixed, gated, and tree",
+        "author": "Lee",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b19",
+        "doi-asserted-by": "crossref",
+        "first-page": "188",
+        "DOI": "10.1016/j.neunet.2020.04.028",
+        "article-title": "Fast haar transforms for graph neural networks",
+        "volume": "128",
+        "author": "Li",
+        "year": "2020",
+        "journal-title": "Neural Networks"
+      },
+      {
+        "issue": "OOPSLA",
+        "key": "10.1016/j.neunet.2021.04.019_b20",
+        "first-page": "162:1",
+        "article-title": "Improving bug detection via context-based code representation learning and attention-based neural networks",
+        "author": "Li",
+        "year": "2019",
+        "journal-title": "Proceedings of ACM Programming Languages"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b21",
+        "series-title": "5th international conference on learning representations, ICLR 2017, Toulon, France, April 24-26, 2017, conference track proceedings",
+        "article-title": "A structured self-attentive sentence embedding",
+        "author": "Lin",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b22",
+        "series-title": "Proceedings of the 3rd ACM SIGPLAN international workshop on machine learning and programming languages",
+        "first-page": "29",
+        "article-title": "Neural query expansion for code search",
+        "author": "Liu",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b23",
+        "series-title": "22nd IEEE international conference on software analysis, evolution, and reengineering",
+        "first-page": "545",
+        "article-title": "Query expansion via wordnet for effective code search",
+        "author": "Lu",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b24",
+        "series-title": "30th IEEE/ACM international conference on automated software engineering",
+        "first-page": "260",
+        "article-title": "Codehow: Effective code search based on API understanding and extended boolean model (e)",
+        "author": "Lv",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b25",
+        "series-title": "Proceedings of the 33rd international conference on software engineering",
+        "first-page": "111",
+        "article-title": "Portfolio: finding relevant functions and their usage",
+        "author": "McMillan",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b26",
+        "series-title": "Proceedings of the thirtieth AAAI conference on artificial intelligence",
+        "first-page": "1287",
+        "article-title": "Convolutional neural networks over tree structures for programming language processing",
+        "author": "Mou",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b27",
+        "series-title": "11th working conference on mining software repositories, MSR 2014, Proceedings, May 31 - June 1, 2014, Hyderabad, India",
+        "first-page": "102",
+        "article-title": "Mining stackoverflow to turn the IDE into a self-confident programming prompter",
+        "author": "Ponzanelli",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b28",
+        "series-title": "PYPL popularity of programming language",
+        "author": "PYPL",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b29",
+        "series-title": "Proceedings of the 2nd ACM SIGPLAN international workshop on machine learning and programming languages,",
+        "first-page": "31",
+        "article-title": "Retrieval on source code: a neural code search",
+        "author": "Sachdev",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b30",
+        "series-title": "Proceedings of the 6th international conference on aspect-oriented software development",
+        "first-page": "212",
+        "article-title": "Using natural language program analysis to locate and understand action-oriented concerns",
+        "volume": "208",
+        "author": "Shepherd",
+        "year": "2007"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.neunet.2021.04.019_b31",
+        "doi-asserted-by": "crossref",
+        "first-page": "582",
+        "DOI": "10.1007/s10664-012-9230-z",
+        "article-title": "On using machine learning to automatically classify software applications into domain categories",
+        "volume": "19",
+        "author": "V\u00e1squez",
+        "year": "2014",
+        "journal-title": "Empirical Software Engineering"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b32",
+        "series-title": "Advances in neural information processing systems 30: Annual conference on neural information processing systems 2017",
+        "first-page": "5998",
+        "article-title": "Attention is all you need",
+        "author": "Vaswani",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b33",
+        "series-title": "34th IEEE/ACM international conference on automated software engineering",
+        "first-page": "13",
+        "article-title": "Multi-modal attention network learning for semantic source code retrieval",
+        "author": "Wan",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b34",
+        "series-title": "Proceedings of the 37th international conference on machine learning, ICML 2020, 13-18 July 2020, virtual event",
+        "first-page": "9952",
+        "article-title": "Haar graph pooling",
+        "volume": "119",
+        "author": "Wang",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b35",
+        "series-title": "The 50th annual meeting of the association for computational linguistics, proceedings of the conference, July 8-14, 2012, Jeju Island, Korea - Volume 2: Short papers",
+        "first-page": "90",
+        "article-title": "Baselines and bigrams: Simple, good sentiment and topic classification",
+        "author": "Wang",
+        "year": "2012"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b36",
+        "series-title": "The world wide web conference",
+        "first-page": "2203",
+        "article-title": "Coacor: Code annotation for code retrieval with reinforcement learning",
+        "author": "Yao",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b37",
+        "series-title": "Proceedings of the 55th annual meeting of the association for computational linguistics, ACL 2017, Vancouver, Canada, July 30 - August 4, Volume 1: Long papers",
+        "first-page": "440",
+        "article-title": "A syntactic neural model for general-purpose code generation",
+        "author": "Yin",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.neunet.2021.04.019_b38",
+        "series-title": "Proceedings of the 41st international conference on software engineering",
+        "first-page": "783",
+        "article-title": "A novel neural source code representation based on abstract syntax tree",
+        "author": "Zhang",
+        "year": "2019"
+      }
+    ],
+    "container-title": [
+      "Neural Networks"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0893608021001568?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0893608021001568?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          3,
+          5
+        ]
+      ],
+      "date-time": "2023-03-05T11:15:45Z",
+      "timestamp": 1678014945000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0893608021001568"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          9
+        ]
+      ]
+    },
+    "references-count": 38,
+    "alternative-id": [
+      "S0893608021001568"
+    ],
+    "URL": "http://dx.doi.org/10.1016/j.neunet.2021.04.019",
+    "relation": {},
+    "ISSN": [
+      "0893-6080"
+    ],
+    "issn-type": [
+      {
+        "value": "0893-6080",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          9
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "CRaDLe: Deep code retrieval based on semantic Dependency Learning",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Neural Networks",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.neunet.2021.04.019",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "\u00a9 2021 Elsevier Ltd. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

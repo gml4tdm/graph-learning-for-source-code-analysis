@@ -1,0 +1,432 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ],
+      "date-time": "2024-07-15T00:54:58Z",
+      "timestamp": 1721004898930
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 40,
+    "publisher": "ACM",
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          13
+        ]
+      ]
+    },
+    "DOI": "10.1145/3387904.3389261",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          12
+        ]
+      ],
+      "date-time": "2020-09-12T20:04:38Z",
+      "timestamp": 1599941078000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 45,
+    "title": [
+      "A Self-Attentional Neural Architecture for Code Completion with Multi-Task Learning"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Fang",
+        "family": "Liu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education and Institute of Software, EECS, Peking University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Ge",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education and Institute of Software, EECS, Peking University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Bolin",
+        "family": "Wei",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education and Institute of Software, EECS, Peking University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Xin",
+        "family": "Xia",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Monash University, Australia"
+          }
+        ]
+      },
+      {
+        "given": "Zhiyi",
+        "family": "Fu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education and Institute of Software, EECS, Peking University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Zhi",
+        "family": "Jin",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Key Laboratory of High Confidence Software Technologies (Peking University), Ministry of Education and Institute of Software, EECS, Peking University, Beijing, China"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          12
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "volume-title": "Tensorflow: A system for large-scale machine learning. In 12th { USENIX} Symposium on Operating Systems Design and Implementation ({OSDI} 16). 265--283.",
+        "author": "Abadi Mart\u00edn",
+        "year": "2016",
+        "unstructured": "Mart\u00edn Abadi , Paul Barham , Jianmin Chen , Zhifeng Chen , Andy Davis , Jeffrey Dean , Matthieu Devin , Sanjay Ghemawat , Geoffrey Irving , Michael Isard , 2016 . Tensorflow: A system for large-scale machine learning. In 12th { USENIX} Symposium on Operating Systems Design and Implementation ({OSDI} 16). 265--283. Mart\u00edn Abadi, Paul Barham, Jianmin Chen, Zhifeng Chen, Andy Davis, Jeffrey Dean, Matthieu Devin, Sanjay Ghemawat, Geoffrey Irving, Michael Isard, et al. 2016. Tensorflow: A system for large-scale machine learning. In 12th { USENIX} Symposium on Operating Systems Design and Implementation ({OSDI} 16). 265--283."
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "unstructured": "Dzmitry Bahdanau Kyunghyun Cho and Yoshua Bengio. 2015. Neural Machine Translation by Jointly Learning to Align and Translate. (2015).  Dzmitry Bahdanau Kyunghyun Cho and Yoshua Bengio. 2015. Neural Machine Translation by Jointly Learning to Align and Translate. (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "volume-title": "Learning Python Code Suggestion with a Sparse Pointer Network. CoRR abs/1611.08307",
+        "author": "Bhoopchand Avishkar",
+        "year": "2016",
+        "unstructured": "Avishkar Bhoopchand , Tim Rockt\u00e4schel , Earl T. Barr , and Sebastian Riedel . 2016. Learning Python Code Suggestion with a Sparse Pointer Network. CoRR abs/1611.08307 ( 2016 ). arXiv:1611.08307 http://arxiv.org/abs/1611.08307 Avishkar Bhoopchand, Tim Rockt\u00e4schel, Earl T. Barr, and Sebastian Riedel. 2016. Learning Python Code Suggestion with a Sparse Pointer Network. CoRR abs/1611.08307 (2016). arXiv:1611.08307 http://arxiv.org/abs/1611.08307"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1595696.1595728"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1007379606734"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "unstructured": "Kyunghyun Cho Bart van Merrienboer Dzmitry Bahdanau and Yoshua Bengio. 2014. On the Properties of Neural Machine Translation: Encoder-Decoder Approaches. (2014) 103--111.  Kyunghyun Cho Bart van Merrienboer Dzmitry Bahdanau and Yoshua Bengio. 2014. On the Properties of Neural Machine Translation: Encoder-Decoder Approaches. (2014) 103--111."
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2950290.2950339"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P19-1285"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICASSP.2013.6639344"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "volume-title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. CoRR abs/1810.04805",
+        "author": "Devlin Jacob",
+        "year": "2018",
+        "unstructured": "Jacob Devlin , Ming-Wei Chang , Kenton Lee , and Kristina Toutanova . 2018 . BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. CoRR abs/1810.04805 (2018). arXiv:1810.04805 http://arxiv.org/abs/1810.04805 Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2018. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. CoRR abs/1810.04805 (2018). arXiv:1810.04805 http://arxiv.org/abs/1810.04805"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Daxiang Dong Hua Wu Wei He Dianhai Yu and Haifeng Wang. 2015. Multi-Task Learning for Multiple Language Translation. In Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing of the Asian Federation of Natural Language Processing ACL 2015 July 26-31 2015 Beijing China Volume 1: Long Papers. The Association for Computer Linguistics 1723--1732.  Daxiang Dong Hua Wu Wei He Dianhai Yu and Haifeng Wang. 2015. Multi-Task Learning for Multiple Language Translation. In Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing of the Asian Federation of Natural Language Processing ACL 2015 July 26-31 2015 Beijing China Volume 1: Long Papers. The Association for Computer Linguistics 1723--1732.",
+        "DOI": "10.3115/v1/P15-1166"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P18-1064"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "volume-title": "Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering, ESEC/FSE 2017",
+        "author": "Vincent",
+        "year": "2017",
+        "unstructured": "Vincent J. Hellendoorn and Premkumar T. Devanbu. 2017. Are deep neural networks the best choice for modeling source code? . In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering, ESEC/FSE 2017 , Paderborn, Germany , September 4-8, 2017 . ACM, 763--773. Vincent J. Hellendoorn and Premkumar T. Devanbu. 2017. Are deep neural networks the best choice for modeling source code?. In Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering, ESEC/FSE 2017, Paderborn, Germany, September 4-8, 2017. ACM, 763--773."
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "volume-title": "34th International Conference on Software Engineering, ICSE 2012",
+        "author": "Hindle Abram",
+        "year": "2012",
+        "unstructured": "Abram Hindle , Earl T. Barr , Zhendong Su , Mark Gabel , and Premkumar T. Devanbu . 2012. On the naturalness of software . In 34th International Conference on Software Engineering, ICSE 2012 , June 2-9, 2012 , Zurich, Switzerland. IEEE Computer Society, 837--847. Abram Hindle, Earl T. Barr, Zhendong Su, Mark Gabel, and Premkumar T. Devanbu. 2012. On the naturalness of software. In 34th International Conference on Software Engineering, ICSE 2012, June 2-9, 2012, Zurich, Switzerland. IEEE Computer Society, 837--847."
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1808920.1808926"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3304889.3304975"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D17-1223"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Urvashi Khandelwal He He Peng Qi and Dan Jurafsky. 2018. Sharp Nearby Fuzzy Far Away: How Neural Language Models Use Context. (2018) 284--294.  Urvashi Khandelwal He He Peng Qi and Dan Jurafsky. 2018. Sharp Nearby Fuzzy Far Away: How Neural Language Models Use Context. (2018) 284--294.",
+        "DOI": "10.18653/v1/P18-1027"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "volume-title": "Kingma and Jimmy Ba",
+        "author": "Diederik",
+        "year": "2015",
+        "unstructured": "Diederik P. Kingma and Jimmy Ba . 2015 . Adam : A Method for Stochastic Optimization. In 3rd International Conference on Learning Representations, ICLR 2015, San Diego, CA, USA, May 7-9, 2015, Conference Track Proceedings, Yoshua Bengio and Yann LeCun (Eds .). Diederik P. Kingma and Jimmy Ba. 2015. Adam: A Method for Stochastic Optimization. In 3rd International Conference on Learning Representations, ICLR 2015, San Diego, CA, USA, May 7-9, 2015, Conference Track Proceedings, Yoshua Bengio and Yann LeCun (Eds.)."
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2018/578"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P18-1074"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "unstructured": "Chang Liu Xin Wang Richard Shin Joseph E Gonzalez and Dawn Song. 2016. Neural Code Completion. (2016).  Chang Liu Xin Wang Richard Shin Joseph E Gonzalez and Dawn Song. 2016. Neural Code Completion. (2016)."
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/N15-1092"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "volume-title": "Learning Multiple Tasks with Deep Relationship Networks. CoRR abs/1506.02117",
+        "author": "Long Mingsheng",
+        "year": "2015",
+        "unstructured": "Mingsheng Long and Jianmin Wang . 2015. Learning Multiple Tasks with Deep Relationship Networks. CoRR abs/1506.02117 ( 2015 ). arXiv:1506.02117 http://arxiv.org/abs/1506.02117 Mingsheng Long and Jianmin Wang. 2015. Learning Multiple Tasks with Deep Relationship Networks. CoRR abs/1506.02117 (2015). arXiv:1506.02117 http://arxiv.org/abs/1506.02117"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "volume-title": "Fully-Adaptive Feature Sharing in Multi-Task Networks with Applications in Person Attribute Classification. In 2017 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2017",
+        "author": "Lu Yongxi",
+        "year": "2017",
+        "unstructured": "Yongxi Lu , Abhishek Kumar , Shuangfei Zhai , Yu Cheng , Tara Javidi , and Rog\u00e9rio Schmidt Feris . 2017 . Fully-Adaptive Feature Sharing in Multi-Task Networks with Applications in Person Attribute Classification. In 2017 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2017 , Honolulu, HI, USA , July 21-26, 2017. IEEE Computer Society, 1131--1140. Yongxi Lu, Abhishek Kumar, Shuangfei Zhai, Yu Cheng, Tara Javidi, and Rog\u00e9rio Schmidt Feris. 2017. Fully-Adaptive Feature Sharing in Multi-Task Networks with Applications in Person Attribute Classification. In 2017 IEEE Conference on Computer Vision and Pattern Recognition, CVPR 2017, Honolulu, HI, USA, July 21-26, 2017. IEEE Computer Society, 1131--1140."
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "unstructured": "Minh-Thang Luong Quoc V. Le Ilya Sutskever Oriol Vinyals and Lukasz Kaiser. 2016. Multi-task Sequence to Sequence Learning. (2016).  Minh-Thang Luong Quoc V. Le Ilya Sutskever Oriol Vinyals and Lukasz Kaiser. 2016. Multi-task Sequence to Sequence Learning. (2016)."
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.11144/Javeriana.upsy10-2.cdcp"
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3015812.3016002"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "volume-title": "Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering, ESEC/FSE'13",
+        "author": "Nguyen Tung Thanh",
+        "year": "2013",
+        "unstructured": "Tung Thanh Nguyen , Anh Tuan Nguyen , Hoan Anh Nguyen , and Tien N. Nguyen . 2013. A statistical semantic language model for source code . In Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering, ESEC/FSE'13 , Saint Petersburg, Russian Federation , August 18-26, 2013 . ACM, 532--542. Tung Thanh Nguyen, Anh Tuan Nguyen, Hoan Anh Nguyen, and Tien N. Nguyen. 2013. A statistical semantic language model for source code. In Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering, ESEC/FSE'13, Saint Petersburg, Russian Federation, August 18-26, 2013. ACM, 532--542."
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/W17-2612"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2983990.2984041"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2008.42"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "volume-title": "An Overview of Multi-Task Learning in Deep Neural Networks. CoRR abs/1706.05098",
+        "author": "Ruder Sebastian",
+        "year": "2017",
+        "unstructured": "Sebastian Ruder . 2017. An Overview of Multi-Task Learning in Deep Neural Networks. CoRR abs/1706.05098 ( 2017 ). arXiv:1706.05098 http://arxiv.org/abs/1706.05098 Sebastian Ruder. 2017. An Overview of Multi-Task Learning in Deep Neural Networks. CoRR abs/1706.05098 (2017). arXiv:1706.05098 http://arxiv.org/abs/1706.05098"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/78.650093"
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "volume-title": "Proceedings of the 22nd ACM SIGSOFT International Symposium on Foundations of Software Engineering, (FSE-22)",
+        "author": "Tu Zhaopeng",
+        "year": "2014",
+        "unstructured": "Zhaopeng Tu , Zhendong Su , and Premkumar T. Devanbu . 2014. On the localness of software . In Proceedings of the 22nd ACM SIGSOFT International Symposium on Foundations of Software Engineering, (FSE-22) , Hong Kong, China , November 16-22, 2014 . ACM, 269--280. Zhaopeng Tu, Zhendong Su, and Premkumar T. Devanbu. 2014. On the localness of software. In Proceedings of the 22nd ACM SIGSOFT International Symposium on Foundations of Software Engineering, (FSE-22), Hong Kong, China, November 16-22, 2014. ACM, 269--280."
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "unstructured": "Ashish Vaswani Noam Shazeer Niki Parmar Jakob Uszkoreit Llion Jones Aidan N Gomez \u0141ukasz Kaiser and Illia Polosukhin. 2017. Attention is all you need. In Advances in neural information processing systems. 5998--6008.  Ashish Vaswani Noam Shazeer Niki Parmar Jakob Uszkoreit Llion Jones Aidan N Gomez \u0141ukasz Kaiser and Illia Polosukhin. 2017. Attention is all you need. In Advances in neural information processing systems. 5998--6008."
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "volume-title": "Toward Deep Learning Software Repositories. In 12th IEEE/ACM Working Conference on Mining Software Repositories, MSR 2015",
+        "author": "White Martin",
+        "year": "2015",
+        "unstructured": "Martin White , Christopher Vendome , Mario Linares V\u00e1squez , and Denys Poshyvanyk . 2015 . Toward Deep Learning Software Repositories. In 12th IEEE/ACM Working Conference on Mining Software Repositories, MSR 2015 , Florence, Italy , May 16-17, 2015. IEEE Computer Society, 334--345. Martin White, Christopher Vendome, Mario Linares V\u00e1squez, and Denys Poshyvanyk. 2015. Toward Deep Learning Software Repositories. In 12th IEEE/ACM Working Conference on Mining Software Repositories, MSR 2015, Florence, Italy, May 16-17, 2015. IEEE Computer Society, 334--345."
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "volume-title": "Individual comparisons by ranking methods. Biometrics bulletin 1, 6",
+        "author": "Wilcoxon Frank",
+        "year": "1945",
+        "unstructured": "Frank Wilcoxon . 1945. Individual comparisons by ranking methods. Biometrics bulletin 1, 6 ( 1945 ), 80--83. Frank Wilcoxon. 1945. Individual comparisons by ranking methods. Biometrics bulletin 1, 6 (1945), 80--83."
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P18-2104"
+      }
+    ],
+    "event": {
+      "name": "ICPC '20: 28th International Conference on Program Comprehension",
+      "location": "Seoul Republic of Korea",
+      "acronym": "ICPC '20",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE CS"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 28th International Conference on Program Comprehension"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3387904.3389261",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          7
+        ]
+      ],
+      "date-time": "2023-01-07T09:06:34Z",
+      "timestamp": 1673082394000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3387904.3389261"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          13
+        ]
+      ]
+    },
+    "references-count": 40,
+    "alternative-id": [
+      "10.1145/3387904.3389261",
+      "10.1145/3387904"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3387904.3389261",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          13
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2020-09-12",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

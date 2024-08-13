@@ -1,0 +1,562 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T07:10:52Z",
+      "timestamp": 1721373052702
+    },
+    "reference-count": 56,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "3",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              6,
+              18
+            ]
+          ],
+          "date-time": "2019-06-18T00:00:00Z",
+          "timestamp": 1560816000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              6,
+              18
+            ]
+          ],
+          "date-time": "2019-06-18T00:00:00Z",
+          "timestamp": 1560816000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Empir Software Eng"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          5
+        ]
+      ]
+    },
+    "DOI": "10.1007/s10664-019-09730-9",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          6,
+          18
+        ]
+      ],
+      "date-time": "2019-06-18T05:31:16Z",
+      "timestamp": 1560835876000
+    },
+    "page": "2179-2217",
+    "update-policy": "http://dx.doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 153,
+    "title": [
+      "Deep code comment generation with hybrid lexical and syntactical information"
+    ],
+    "prefix": "10.1007",
+    "volume": "25",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0003-0093-3292",
+        "authenticated-orcid": false,
+        "given": "Xing",
+        "family": "Hu",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Ge",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Xin",
+        "family": "Xia",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "David",
+        "family": "Lo",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Zhi",
+        "family": "Jin",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2019,
+          6,
+          18
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "9730_CR1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Allamanis M, Barr ET, Bird C, Sutton C (2014) Learning natural coding conventions. In: Proceedings of the 22nd ACM SIGSOFT international symposium on foundations of software engineering. ACM, pp 281\u2013293",
+        "DOI": "10.1145/2635868.2635883"
+      },
+      {
+        "key": "9730_CR2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Allamanis M, Barr ET, Bird C, Sutton C (2015a) Suggesting accurate method and class names. In: Proceedings of the 2015 10th joint meeting on foundations of software engineering. ACM, pp 38\u201349",
+        "DOI": "10.1145/2786805.2786849"
+      },
+      {
+        "key": "9730_CR3",
+        "unstructured": "Allamanis M, Tarlow D, Gordon A, Wei Y (2015b) Bimodal modelling of source code and natural language. In: International conference on machine learning, pp 2123\u20132132"
+      },
+      {
+        "key": "9730_CR4",
+        "unstructured": "Allamanis M, Peng H, Sutton C (2016) A convolutional attention network for extreme summarization of source code. In: International conference on machine learning, pp 2091\u20132100"
+      },
+      {
+        "key": "9730_CR5",
+        "unstructured": "Allamanis M, Barr ET, Devanbu P, Sutton C (2017) A survey of machine learning for big code and naturalness. arXiv: 170906182"
+      },
+      {
+        "key": "9730_CR6",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Amann S, Nadi S, Nguyen HA, Nguyen TN, Mezini M (2016) Mubench: a benchmark for api-misuse detectors. In: 2016 IEEE/ACM 13Th working conference on mining software repositories, MSR. IEEE, pp 464\u2013467",
+        "DOI": "10.1145/2901739.2903506"
+      },
+      {
+        "key": "9730_CR7",
+        "unstructured": "Bahdanau D, Cho K, Bengio Y (2014) Neural machine translation by jointly learning to align and translate. Comp Sci"
+      },
+      {
+        "key": "9730_CR8",
+        "unstructured": "Broy M, Dei\u00dfenb\u00f6ck F, Pizka M (2005) A holistic approach to software quality at work. In: Proc. 3rd world congress for software quality (3WCSQ)"
+      },
+      {
+        "key": "9730_CR9",
+        "unstructured": "Buse RP, Weimer WR (2010) Automatically documenting program changes. In: Proceedings of the IEEE/ACM international conference on Automated software engineering. ACM, pp 33\u201342"
+      },
+      {
+        "key": "9730_CR10",
+        "unstructured": "Chelba C, Bikel D, Shugrina M, Nguyen P, Kumar S (2012) Large scale language modeling in automatic speech recognition. arXiv: 12108440"
+      },
+      {
+        "key": "9730_CR11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen B, Cherry C (2014) A systematic comparison of smoothing techniques for sentence-level bleu. In: Proceedings of the ninth workshop on statistical machine translation, pp 362\u2013367",
+        "DOI": "10.3115/v1/W14-3346"
+      },
+      {
+        "key": "9730_CR12",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen Q, Zhou M (2018) A neural framework for retrieval and summarization of source code. In: Proceedings of the 33rd ACM/IEEE international conference on automated software engineering. ACM, pp 826\u2013831",
+        "DOI": "10.1145/3238147.3240471"
+      },
+      {
+        "key": "9730_CR13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cho K, Van Merri\u00ebnboer B, Gulcehre C, Bahdanau D, Bougares F, Schwenk H, Bengio Y (2014) Learning phrase representations using rnn encoder-decoder for statistical machine translation. arXiv: 14061078",
+        "DOI": "10.3115/v1/D14-1179"
+      },
+      {
+        "key": "9730_CR14",
+        "unstructured": "Chung J, Gulcehre C, Cho K, Bengio Y (2014) Empirical evaluation of gated recurrent neural networks on sequence modeling. arXiv: 14123555"
+      },
+      {
+        "key": "9730_CR15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Denkowski M, Lavie A (2014) Meteor universal: language specific translation evaluation for any target language. In: Proceedings of the ninth workshop on statistical machine translation, pp 376\u2013380",
+        "DOI": "10.3115/v1/W14-3348"
+      },
+      {
+        "key": "9730_CR16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Eddy BP, Robinson JA, Kraft NA, Carver JC (2013) Evaluating source code summarization techniques: replication and expansion. In: 2013 IEEE 21st international conference on program comprehension (ICPC). IEEE, pp 13\u201322",
+        "DOI": "10.1109/ICPC.2013.6613829"
+      },
+      {
+        "key": "9730_CR17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gu X, Zhang H, Zhang D, Kim S (2016) Deep api learning. In: Proceedings of the 2016 24th ACM SIGSOFT international symposium on foundations of software engineering. ACM, pp 631\u2013642",
+        "DOI": "10.1145/2950290.2950334"
+      },
+      {
+        "key": "9730_CR18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gu X, Zhang H, Zhang D, Kim S (2017) Deepam: migrate apis with multi-modal sequence to sequence learning. arXiv: 170407734",
+        "DOI": "10.24963/ijcai.2017/514"
+      },
+      {
+        "key": "9730_CR19",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Haiduc S, Aponte J, Marcus A (2010a) Supporting program comprehension with source code summarization. In: Proceedings of the 32nd ACM/IEEE international conference on software engineering, vol 2. ACM, pp 223\u2013226",
+        "DOI": "10.1145/1810295.1810335"
+      },
+      {
+        "key": "9730_CR20",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Haiduc S, Aponte J, Moreno L, Marcus A (2010b) On the use of automated text summarization techniques for summarizing source code. In: 2010 17th working conference on reverse engineering (WCRE). IEEE, pp 35\u201344",
+        "DOI": "10.1109/WCRE.2010.13"
+      },
+      {
+        "key": "9730_CR21",
+        "unstructured": "Hellendoorn VJ, Devanbu P (2017) Are deep neural networks the best choice for modeling source code?. In: Proceedings of the 2017 11th joint meeting on foundations of software engineering. ACM, pp 763\u2013773"
+      },
+      {
+        "key": "9730_CR22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hindle A, Barr ET, Su Z, Gabel M, Devanbu P (2012) On the naturalness of software. In: 2012 34th international conference on software engineering (ICSE). IEEE, pp 837\u2013847",
+        "DOI": "10.1109/ICSE.2012.6227135"
+      },
+      {
+        "issue": "8",
+        "key": "9730_CR23",
+        "doi-asserted-by": "publisher",
+        "first-page": "1735",
+        "DOI": "10.1162/neco.1997.9.8.1735",
+        "volume": "9",
+        "author": "S Hochreiter",
+        "year": "1997",
+        "unstructured": "Hochreiter S, Schmidhuber J (1997) Long short-term memory. Neural Comput 9(8):1735\u20131780",
+        "journal-title": "Neural Comput"
+      },
+      {
+        "key": "9730_CR24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hu X, Li G, Xia X, Lo D, Jin Z (2018a) Deep code comment generation. In: Proceedings of the 26th conference on program comprehension. ACM, pp 200\u2013210",
+        "DOI": "10.1145/3196321.3196334"
+      },
+      {
+        "key": "9730_CR25",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hu X, Li G, Xia X, Lo D, Lu S, Jin Z (2018b) Summarizing source code with transferred api knowledge. In: IJCAI, pp 2269\u20132275",
+        "DOI": "10.24963/ijcai.2018/314"
+      },
+      {
+        "key": "9730_CR26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Iyer S, Konstas I, Cheung A, Zettlemoyer L (2016) Summarizing source code using a neural attention model. In: ACL (1)",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "9730_CR27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Jiang S, Armaly A, McMillan C (2017) Automatically generating commit messages from diffs using neural machine translation. In: Proceedings of the 32nd IEEE/ACM international conference on automated software engineering. IEEE Press, pp 135\u2013146",
+        "DOI": "10.1109/ASE.2017.8115626"
+      },
+      {
+        "key": "9730_CR28",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Klein G, Kim Y, Deng Y, Senellart J, Rush AM (2017) Opennmt: open-source toolkit for neural machine translation. arXiv: 170102810",
+        "DOI": "10.18653/v1/P17-4012"
+      },
+      {
+        "key": "9730_CR29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Koehn P (2004) Pharaoh: a beam search decoder for phrase-based statistical machine translation models. In: Conference of the association for machine translation in the Americas. Springer, pp 115\u2013124",
+        "DOI": "10.1007/978-3-540-30194-3_13"
+      },
+      {
+        "key": "9730_CR30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Leitner P, Bezemer CP (2017) An exploratory study of the state of practice of performance testing in java-based open source projects. In: Proceedings of the 8th ACM/SPEC on international conference on performance engineering. ACM, pp 373\u2013384",
+        "DOI": "10.1145/3030207.3030213"
+      },
+      {
+        "key": "9730_CR31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liu Z, Xia X, Hassan AE, Lo D, Xing Z, Wang X (2018) Neural-machine-translation-based commit message generation: how far are we?. In: Proceedings of the 33rd ACM/IEEE international conference on automated software engineering. ACM, pp 373\u2013384",
+        "DOI": "10.1145/3238147.3238190"
+      },
+      {
+        "key": "9730_CR32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Loyola P, Marrese-Taylor E, Matsuo Y (2017) A neural architecture for generating natural language descriptions from source code changes. arXiv: 170404856",
+        "DOI": "10.18653/v1/P17-2045"
+      },
+      {
+        "key": "9730_CR33",
+        "unstructured": "McBurney PW, McMillan C (2014) Automatic documentation generation via source code summarization of method context. In: Proceedings of the 22nd international conference on program comprehension. ACM, pp 279\u2013290"
+      },
+      {
+        "key": "9730_CR34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Moreno L, Aponte J, Sridhara G, Marcus A, Pollock L, Vijay-Shanker K (2013) Automatic generation of natural language summaries for java classes. In: 2013 IEEE 21st international conference on program comprehension (ICPC). IEEE, pp 23\u201332",
+        "DOI": "10.1109/ICPC.2013.6613830"
+      },
+      {
+        "key": "9730_CR35",
+        "unstructured": "Mou L, Men R, Li G, Zhang L, Jin Z (2015) On end-to-end program generation from user intention by deep neural networks. arXiv: 151007211"
+      },
+      {
+        "key": "9730_CR36",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mou L, Li G, Zhang L, Wang T, Jin Z (2016) Convolutional neural networks over tree structures for programming language processing. In: AAAI, vol 2, p 4",
+        "DOI": "10.1609/aaai.v30i1.10139"
+      },
+      {
+        "key": "9730_CR37",
+        "unstructured": "Movshovitz-Attias D, Cohen WW (2013) Natural language models for predicting programming comments"
+      },
+      {
+        "key": "9730_CR38",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nguyen TD, Nguyen AT, Nguyen TN (2016) Mapping api elements for code migration with vector representations. In: 2016 IEEE/ACM 38Th international conference on software engineering companion, ICSE-C, IEEE, pp 756\u2013758",
+        "DOI": "10.1145/2889160.2892661"
+      },
+      {
+        "key": "9730_CR39",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nguyen TT, Nguyen AT, Nguyen HA, Nguyen TN (2013) A statistical semantic language model for source code. In: Proceedings of the 2013 9th joint meeting on foundations of software engineering. ACM, pp 532\u2013542",
+        "DOI": "10.1145/2491411.2491458"
+      },
+      {
+        "key": "9730_CR40",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Oda Y, Fudaba H, Neubig G, Hata H, Sakti S, Toda T, Nakamura S (2015) Learning to generate pseudo-code from source code using statistical machine translation (t). In: 2015 30th IEEE/ACM international conference on automated software engineering (ASE). IEEE, pp 574\u2013584",
+        "DOI": "10.1109/ASE.2015.36"
+      },
+      {
+        "key": "9730_CR41",
+        "unstructured": "Papineni K, Roukos S, Ward T, Zhu WJ (2002) Bleu: a method for automatic evaluation of machine translation. In: Proceedings of the 40th annual meeting on association for computational linguistics. Association for Computational Linguistics, pp 311\u2013318"
+      },
+      {
+        "key": "9730_CR42",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ray B, Hellendoorn V, Godhane S, Tu Z, Bacchelli A, Devanbu P (2016) On the naturalness of buggy code. In: Proceedings of the 38th international conference on software engineering. ACM, pp 428\u2013 439",
+        "DOI": "10.1145/2884781.2884848"
+      },
+      {
+        "key": "9730_CR43",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Raychev V, Vechev M, Krause A (2015) Predicting program properties from big code. In: ACM SIGPLAN Notices, vol 50. ACM, pp 111\u2013124",
+        "DOI": "10.1145/2775051.2677009"
+      },
+      {
+        "key": "9730_CR44",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sridhara G, Hill E, Muppaneni D, Pollock L, Vijay-Shanker K (2010) Towards automatically generating summary comments for java methods. In: Proceedings of the IEEE/ACM international conference on automated software engineering. ACM, pp 43\u201352",
+        "DOI": "10.1145/1858996.1859006"
+      },
+      {
+        "key": "9730_CR45",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sridhara G, Pollock L, Vijay-Shanker K (2011) Automatically detecting and describing high level actions within methods. In: Proceedings of the 33rd international conference on software engineering. ACM, pp 101\u2013110",
+        "DOI": "10.1145/1985793.1985808"
+      },
+      {
+        "key": "9730_CR46",
+        "unstructured": "Sutskever I, Vinyals O, Le QV (2014) Sequence to sequence learning with neural networks. In: Advances in neural information processing systems, pp 3104\u20133112"
+      },
+      {
+        "issue": "09n10",
+        "key": "9730_CR47",
+        "doi-asserted-by": "publisher",
+        "first-page": "1399",
+        "DOI": "10.1142/S0218194016400106",
+        "volume": "26",
+        "author": "J Svajlenko",
+        "year": "2016",
+        "unstructured": "Svajlenko J, Roy C K (2016) A machine learning based approach for evaluating clone detection tools for a generalized and accurate precision. Int J Softw Eng Knowl Eng 26(09n10):1399\u20131429",
+        "journal-title": "Int J Softw Eng Knowl Eng"
+      },
+      {
+        "key": "9730_CR48",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wang S, Liu T, Tan L (2016) Automatically learning semantic features for defect prediction. In: Proceedings of the 38th international conference on software engineering. ACM, pp 297\u2013308",
+        "DOI": "10.1145/2884781.2884804"
+      },
+      {
+        "key": "9730_CR49",
+        "doi-asserted-by": "crossref",
+        "unstructured": "White M, Tufano M, Vendome C, Poshyvanyk D (2016) Deep learning code fragments for code clone detection. In: Proceedings of the 31st IEEE/ACM international conference on automated software engineering. ACM, pp 87\u201398",
+        "DOI": "10.1145/2970276.2970326"
+      },
+      {
+        "key": "9730_CR50",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wong E, Yang J, Tan L (2013) Autocomment: mining question and answer sites for automatic comment generation. In: Proceedings of the 28th IEEE/ACM international conference on automated software engineering. IEEE Press, pp 562\u2013567",
+        "DOI": "10.1109/ASE.2013.6693113"
+      },
+      {
+        "key": "9730_CR51",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wong E, Liu T, Tan L (2015) Clocom: mining existing source code for automatic comment generation. In: 2015 IEEE 22nd international conference on software analysis, evolution and reengineering (SANER). IEEE, pp 380\u2013389",
+        "DOI": "10.1109/SANER.2015.7081848"
+      },
+      {
+        "key": "9730_CR52",
+        "unstructured": "Wu Y, Schuster M, Chen Z, Le QV, Norouzi M, Macherey W, Krikun M, Cao Y, Gao Q, Macherey K et al (2016) Google\u2019s neural machine translation system: Bridging the gap between human and machine translation. arXiv: 160908144"
+      },
+      {
+        "key": "9730_CR53",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xia X, Bao L, Lo D, Xing Z, Hassan A E, Li S (2017) Measuring program comprehension: a large-scale field study with professionals. IEEE Trans. Softw. Eng.",
+        "DOI": "10.1145/3180155.3182538"
+      },
+      {
+        "key": "9730_CR54",
+        "unstructured": "Yin J, Jiang X, Lu Z, Shang L, Li H, Li X (2015) Neural generative question answering. arXiv: 151201337"
+      },
+      {
+        "key": "9730_CR55",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yin P, Neubig G (2017) A syntactic neural model for general-purpose code generation. arXiv: 170401696",
+        "DOI": "10.18653/v1/P17-1041"
+      },
+      {
+        "key": "9730_CR56",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang S, Zhang C, Ernst MD (2011) Automated documentation inference to explain failed tests. In: Proceedings of the 2011 26th IEEE/ACM international conference on automated software engineering. IEEE Computer Society, pp 63\u201372",
+        "DOI": "10.1109/ASE.2011.6100145"
+      }
+    ],
+    "container-title": [
+      "Empirical Software Engineering"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/s10664-019-09730-9.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/article/10.1007/s10664-019-09730-9/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/s10664-019-09730-9.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          9,
+          21
+        ]
+      ],
+      "date-time": "2022-09-21T00:18:24Z",
+      "timestamp": 1663719504000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://link.springer.com/10.1007/s10664-019-09730-9"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          6,
+          18
+        ]
+      ]
+    },
+    "references-count": 56,
+    "journal-issue": {
+      "issue": "3",
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            5
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "9730"
+    ],
+    "URL": "http://dx.doi.org/10.1007/s10664-019-09730-9",
+    "relation": {},
+    "ISSN": [
+      "1382-3256",
+      "1573-7616"
+    ],
+    "issn-type": [
+      {
+        "value": "1382-3256",
+        "type": "print"
+      },
+      {
+        "value": "1573-7616",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          6,
+          18
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "18 June 2019",
+        "order": 1,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      }
+    ]
+  }
+}

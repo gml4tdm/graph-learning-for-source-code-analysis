@@ -1,0 +1,550 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T05:57:57Z",
+      "timestamp": 1721368677444
+    },
+    "reference-count": 54,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "62002084"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100010877",
+        "name": "Shenzhen Science and Technology Innovation Commission",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "JCYJ20200109113403826"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1109/saner53432.2022.00013",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          21
+        ]
+      ],
+      "date-time": "2022-07-21T19:36:45Z",
+      "timestamp": 1658432205000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 10,
+    "title": [
+      "Source Code Summarization with Structural Relative Position Guided Transformer"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Zi",
+        "family": "Gong",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Harbin Institute of Technology (Shenzhen),Department of Computer Science and Technology,Shenzhen,China"
+          }
+        ]
+      },
+      {
+        "given": "Cuiyun",
+        "family": "Gao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Harbin Institute of Technology (Shenzhen),Department of Computer Science and Technology,Shenzhen,China"
+          }
+        ]
+      },
+      {
+        "given": "Yasheng",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Huawei Technologies,Noah&#x0027;s Ark Lab,Shenzhen,China"
+          }
+        ]
+      },
+      {
+        "given": "Wenchao",
+        "family": "Gu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "The Chinese University of Hong Kong,Department of Computer Science and Engineering,Hong Kong,China"
+          }
+        ]
+      },
+      {
+        "given": "Yun",
+        "family": "Peng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "The Chinese University of Hong Kong,Department of Computer Science and Engineering,Hong Kong,China"
+          }
+        ]
+      },
+      {
+        "given": "Zenglin",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Harbin Institute of Technology (Shenzhen),Department of Computer Science and Technology,Shenzhen,China"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3180167"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2019.00012"
+      },
+      {
+        "key": "ref3",
+        "article-title": "Codesearchnet challenge: Evaluating the state of semantic code search",
+        "author": "Husain",
+        "year": "2019",
+        "journal-title": "arXiv preprint"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3196398.3196431"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3236024.3236068"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2019.2918202"
+      },
+      {
+        "key": "ref7",
+        "article-title": "code2seq: Generating sequences from structured representations of code",
+        "volume-title": "International Conference on Learning Representations",
+        "author": "Alon",
+        "year": "2018"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2021.nlp4prog-1.1"
+      },
+      {
+        "key": "ref9",
+        "article-title": "Code summarization with structure-induced transformer",
+        "author": "Wu",
+        "year": "2020",
+        "journal-title": "arXiv preprint"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2021.naacl-main.211"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2020.acl-main.538"
+      },
+      {
+        "key": "ref12",
+        "first-page": "245",
+        "article-title": "Structural language models of code",
+        "volume-title": "International Conference on Machine Learning",
+        "author": "Alon"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2017.2734091"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3338906.3342494"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WCRE.2010.13"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2013.6613829"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2015.7081848"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/D14-1179"
+      },
+      {
+        "key": "ref19",
+        "article-title": "Neural machine translation by jointly learning to align and translate",
+        "author": "Bahdanau",
+        "year": "2014",
+        "journal-title": "arXiv preprint"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2017.8115626"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P17-2045"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v32i1.11963"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3196321.3196334"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IJCNN.2019.8851751"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2020.acl-main.449"
+      },
+      {
+        "key": "ref27",
+        "first-page": "5998",
+        "article-title": "Attention is all you need",
+        "volume-title": "Advances in neural information processing systems",
+        "author": "Vaswani",
+        "year": "2017"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P17-1099"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/N18-2074"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1078"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3238206"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2018/314"
+      },
+      {
+        "key": "ref33",
+        "article-title": "Code generation as a dual task of code summarization",
+        "author": "Wei",
+        "year": "2019",
+        "journal-title": "arXiv preprint"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/1073083.1073135"
+      },
+      {
+        "key": "ref35",
+        "first-page": "74",
+        "article-title": "Rouge: A package for automatic evaluation of summaries",
+        "author": "Lin",
+        "year": "2004",
+        "journal-title": "Text summarization branches out"
+      },
+      {
+        "key": "ref36",
+        "first-page": "65",
+        "article-title": "Meteor: An automatic metric for mt evaluation with improved correlation with human judgments",
+        "volume-title": "Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization",
+        "author": "Banerjee",
+        "year": "2005"
+      },
+      {
+        "key": "ref37",
+        "article-title": "A parallel corpus of python functions and documentation strings for automated code documentation and code generation",
+        "author": "Barone",
+        "year": "2017",
+        "journal-title": "arXiv preprint"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/367766.368168"
+      },
+      {
+        "key": "ref39",
+        "article-title": "Adam: A method for stochastic optimization",
+        "author": "Kingma",
+        "year": "2014",
+        "journal-title": "arXiv preprint"
+      },
+      {
+        "issue": "1",
+        "key": "ref40",
+        "first-page": "1929",
+        "article-title": "Dropout: a simple way to prevent neural networks from overfitting",
+        "volume": "15",
+        "author": "Srivastava",
+        "year": "2014",
+        "journal-title": "The journal of machine learning research"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2012.6240488"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568247"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2020.acl-main.168"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00087"
+      },
+      {
+        "key": "ref45",
+        "article-title": "Automatic code summarization via multi-dimensional semantic fusing in gnn",
+        "author": "Liu",
+        "year": "2020",
+        "journal-title": "arXiv preprint"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3387904.3389268"
+      },
+      {
+        "key": "ref47",
+        "article-title": "Retrieval-augmented generation for code summarization via hybrid gnn",
+        "volume-title": "International Conference on Learning Representations",
+        "author": "Liu",
+        "year": "2020"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3377811.3380383"
+      },
+      {
+        "key": "ref49",
+        "article-title": "Language modelling for source code with transformer-xl",
+        "author": "Dowdell",
+        "year": "2020",
+        "journal-title": "arXiv preprint"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2020.findings-emnlp.139"
+      },
+      {
+        "key": "ref51",
+        "article-title": "Graphcodebert: Pre-training code representations with data flow",
+        "author": "Guo",
+        "year": "2020",
+        "journal-title": "arXiv preprint"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3324884.3416578"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3366423.3380295"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC52881.2021.00026"
+      }
+    ],
+    "event": {
+      "name": "2022 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)",
+      "location": "Honolulu, HI, USA",
+      "start": {
+        "date-parts": [
+          [
+            2022,
+            3,
+            15
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2022,
+            3,
+            18
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2022 IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/9825713/9825693/09825804.pdf?arnumber=9825804",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          24
+        ]
+      ],
+      "date-time": "2024-01-24T01:53:58Z",
+      "timestamp": 1706061238000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9825804/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "references-count": 54,
+    "URL": "http://dx.doi.org/10.1109/saner53432.2022.00013",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    }
+  }
+}

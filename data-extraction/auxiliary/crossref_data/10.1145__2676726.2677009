@@ -1,0 +1,372 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ],
+      "date-time": "2024-07-15T00:23:44Z",
+      "timestamp": 1721003024265
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 29,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2015,
+              1,
+              14
+            ]
+          ],
+          "date-time": "2015-01-14T00:00:00Z",
+          "timestamp": 1421193600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2015,
+          1,
+          14
+        ]
+      ]
+    },
+    "DOI": "10.1145/2676726.2677009",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2014,
+          12,
+          19
+        ]
+      ],
+      "date-time": "2014-12-19T13:51:05Z",
+      "timestamp": 1418997065000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 160,
+    "title": [
+      "Predicting Program Properties from \"Big Code\""
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Veselin",
+        "family": "Raychev",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "ETH Zurich, Zurich, Switzerland"
+          }
+        ]
+      },
+      {
+        "given": "Martin",
+        "family": "Vechev",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "ETH Zurich, Zurich, Switzerland"
+          }
+        ]
+      },
+      {
+        "given": "Andreas",
+        "family": "Krause",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "ETH Zurich, Zurich, Switzerland"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2015,
+          1,
+          14
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_2_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2487085.2487127"
+      },
+      {
+        "key": "e_1_3_2_2_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-74958-5_5"
+      },
+      {
+        "key": "e_1_3_2_2_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1993316.1993524"
+      },
+      {
+        "key": "e_1_3_2_2_4_1",
+        "first-page": "3",
+        "article-title": "On the Statistical Analysis of Dirty Pictures",
+        "volume": "48",
+        "author": "BESAG J",
+        "year": "1986",
+        "unstructured": "BESAG , J . On the Statistical Analysis of Dirty Pictures . Journal of the Royal Statistical Society. Series B (Methodol.) 48 , 3 ( 1986 ), 259--302. BESAG, J. On the Statistical Analysis of Dirty Pictures. Journal of the Royal Statistical Society. Series B (Methodol.) 48, 3 (1986), 259--302.",
+        "journal-title": "Journal of the Royal Statistical Society. Series B (Methodol.)"
+      },
+      {
+        "key": "e_1_3_2_2_5_1",
+        "volume-title": "Text Mining: Classification, Clustering, and Applications.",
+        "author": "BLEI D.",
+        "year": "2009",
+        "unstructured": "BLEI , D. , AND LAFFERTY , J. Topic models . In Text Mining: Classification, Clustering, and Applications. 2009 . BLEI, D., AND LAFFERTY, J. Topic models. In Text Mining: Classification, Clustering, and Applications. 2009."
+      },
+      {
+        "key": "e_1_3_2_2_6_1",
+        "unstructured": "Closure compiler. https://developers.google.com/closure/compiler/.  Closure compiler. https://developers.google.com/closure/compiler/."
+      },
+      {
+        "key": "e_1_3_2_2_7_1",
+        "unstructured": "Mining big code to improve software reliability and construction. http://www.darpa.mil/NewsEvents/Releases/2014/03/06a.aspx.  Mining big code to improve software reliability and construction. http://www.darpa.mil/NewsEvents/Releases/2014/03/06a.aspx."
+      },
+      {
+        "key": "e_1_3_2_2_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1390156.1390195"
+      },
+      {
+        "key": "e_1_3_2_2_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1190216.1190258"
+      },
+      {
+        "key": "e_1_3_2_2_10_1",
+        "volume-title": "CVPR '04",
+        "author": "HE X.",
+        "unstructured": "HE , X. , ZEMEL , R. S. , AND CARREIRA-PERPI\u00d1\u00c1N , M. A. Multi-scale conditional random fields for image labeling . CVPR '04 . HE, X., ZEMEL, R. S., AND CARREIRA-PERPI\u00d1\u00c1N, M. A. Multi-scale conditional random fields for image labeling. CVPR '04."
+      },
+      {
+        "key": "e_1_3_2_2_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-03237-0_17"
+      },
+      {
+        "key": "e_1_3_2_2_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2013.175"
+      },
+      {
+        "key": "e_1_3_2_2_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2661136.2661148"
+      },
+      {
+        "key": "e_1_3_2_2_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/1795555"
+      },
+      {
+        "key": "e_1_3_2_2_15_1",
+        "volume-title": "IJCAI'07",
+        "author": "KREMENEK T.",
+        "unstructured": "KREMENEK , T. , NG , A. Y. , AND ENGLER , D. A factor graph model for software bug finding . IJCAI'07 . KREMENEK, T., NG, A. Y., AND ENGLER, D. A factor graph model for software bug finding. IJCAI'07."
+      },
+      {
+        "key": "e_1_3_2_2_16_1",
+        "first-page": "161",
+        "volume-title": "OSDI'06",
+        "author": "KREMENEK T.",
+        "unstructured": "KREMENEK , T. , TWOHEY , P. , BACK , G. , NG , A. , AND ENGLER , D. From uncertainty to belief: Inferring the specification within . OSDI'06 , USENIX Association , pp. 161 -- 176 . KREMENEK, T., TWOHEY, P., BACK, G., NG, A., AND ENGLER, D. From uncertainty to belief: Inferring the specification within. OSDI'06, USENIX Association, pp. 161--176."
+      },
+      {
+        "key": "e_1_3_2_2_17_1",
+        "first-page": "282",
+        "volume-title": "ICML '01",
+        "author": "LAFFERTY J. D.",
+        "unstructured": "LAFFERTY , J. D. , MCCALLUM , A. , AND PEREIRA , F. C. N. Conditional random fields: Probabilistic models for segmenting and labeling sequence data . ICML '01 , pp. 282 -- 289 . LAFFERTY, J. D., MCCALLUM, A., AND PEREIRA, F. C. N. Conditional random fields: Probabilistic models for segmenting and labeling sequence data. ICML '01, pp. 282--289."
+      },
+      {
+        "key": "e_1_3_2_2_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1542476.1542485"
+      },
+      {
+        "key": "e_1_3_2_2_19_1",
+        "unstructured": "MADDISON C. J. AND TARLOW D. Structured generative models of natural source code.  MADDISON C. J. AND TARLOW D. Structured generative models of natural source code."
+      },
+      {
+        "key": "e_1_3_2_2_20_1",
+        "volume-title": "Machine learning: a probabilistic perspective",
+        "author": "MURPHY K. P.",
+        "year": "2012",
+        "unstructured": "MURPHY , K. P. Machine learning: a probabilistic perspective . Cambridge, MA , 2012 . MURPHY, K. P. Machine learning: a probabilistic perspective. Cambridge, MA, 2012."
+      },
+      {
+        "key": "e_1_3_2_2_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/860435.860479"
+      },
+      {
+        "key": "e_1_3_2_2_22_1",
+        "first-page": "1097",
+        "volume-title": "NIPS",
+        "author": "QUATTONI A.",
+        "year": "2004",
+        "unstructured": "QUATTONI , A. , COLLINS , M. , AND DARRELL , T. Conditional random fields for object recognition . In NIPS ( 2004 ), pp. 1097 -- 1104 . QUATTONI, A., COLLINS, M., AND DARRELL, T. Conditional random fields for object recognition. In NIPS (2004), pp. 1097--1104."
+      },
+      {
+        "key": "e_1_3_2_2_23_1",
+        "first-page": "380",
+        "volume-title": "AISTATS",
+        "author": "RATLIFF N. D.",
+        "year": "2007",
+        "unstructured": "RATLIFF , N. D. , BAGNELL , J. A. , AND ZINKEVICH , M. (approximate) subgradient methods for structured prediction . In AISTATS ( 2007 ), pp. 380 -- 387 . RATLIFF, N. D., BAGNELL, J. A., AND ZINKEVICH, M. (approximate) subgradient methods for structured prediction. In AISTATS (2007), pp. 380--387."
+      },
+      {
+        "key": "e_1_3_2_2_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2594291.2594321"
+      },
+      {
+        "key": "e_1_3_2_2_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/237721.237727"
+      },
+      {
+        "key": "e_1_3_2_2_26_1",
+        "volume-title": "NIPS",
+        "author": "TASKAR B.",
+        "year": "2003",
+        "unstructured": "TASKAR , B. , GUESTRIN , C. , AND KOLLER , D. Max-margin markov networks . In NIPS ( 2003 ). TASKAR, B., GUESTRIN, C., AND KOLLER, D. Max-margin markov networks. In NIPS (2003)."
+      },
+      {
+        "key": "e_1_3_2_2_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/1046920.1088722"
+      },
+      {
+        "key": "e_1_3_2_2_28_1",
+        "unstructured": "Typescript language. http://www.typescriptlang.org/.  Typescript language. http://www.typescriptlang.org/."
+      },
+      {
+        "key": "e_1_3_2_2_29_1",
+        "first-page": "2595",
+        "volume-title": "NIPS",
+        "author": "ZINKEVICH M.",
+        "year": "2010",
+        "unstructured": "ZINKEVICH , M. , WEIMER , M. , LI , L. , AND SMOLA , A. J. Parallelized stochastic gradient descent . In NIPS ( 2010 ), pp. 2595 -- 2603 . ZINKEVICH, M., WEIMER, M., LI, L., AND SMOLA, A. J. Parallelized stochastic gradient descent. In NIPS (2010), pp. 2595--2603."
+      }
+    ],
+    "event": {
+      "name": "POPL '15: The 42nd Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages",
+      "location": "Mumbai India",
+      "acronym": "POPL '15",
+      "sponsor": [
+        "SIGPLAN ACM Special Interest Group on Programming Languages",
+        "SIGACT ACM Special Interest Group on Algorithms and Computation Theory"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 42nd Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/2676726.2677009",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          9,
+          4
+        ]
+      ],
+      "date-time": "2023-09-04T19:25:00Z",
+      "timestamp": 1693855500000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/2676726.2677009"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          1,
+          14
+        ]
+      ]
+    },
+    "references-count": 29,
+    "alternative-id": [
+      "10.1145/2676726.2677009",
+      "10.1145/2676726"
+    ],
+    "URL": "http://dx.doi.org/10.1145/2676726.2677009",
+    "relation": {
+      "is-identical-to": [
+        {
+          "id-type": "doi",
+          "id": "10.1145/2775051.2677009",
+          "asserted-by": "object"
+        }
+      ]
+    },
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2015,
+          1,
+          14
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2015-01-14",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

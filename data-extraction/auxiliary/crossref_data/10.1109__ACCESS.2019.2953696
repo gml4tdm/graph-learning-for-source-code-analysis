@@ -1,0 +1,403 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          13
+        ]
+      ],
+      "date-time": "2024-07-13T08:30:47Z",
+      "timestamp": 1720859447444
+    },
+    "reference-count": 38,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2019-01-01T00:00:00Z",
+          "timestamp": 1546300800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61370103"
+        ]
+      },
+      {
+        "name": "Guangdong Province Application Major Fund",
+        "award": [
+          "2015B010131013"
+        ]
+      },
+      {
+        "name": "Guangzhou Produce and Research Fund",
+        "award": [
+          "201902020004"
+        ]
+      },
+      {
+        "name": "Zhongshan Collaborative Innovation Center Project",
+        "award": [
+          "2018C1009"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Access"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "DOI": "10.1109/access.2019.2953696",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          11,
+          15
+        ]
+      ],
+      "date-time": "2019-11-15T21:03:51Z",
+      "timestamp": 1573851831000
+    },
+    "page": "170844-170853",
+    "source": "Crossref",
+    "is-referenced-by-count": 23,
+    "title": [
+      "An Abstract Syntax Tree Encoding Method for Cross-Project Defect Prediction"
+    ],
+    "prefix": "10.1109",
+    "volume": "7",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0002-4437-3015",
+        "authenticated-orcid": false,
+        "given": "Ziyi",
+        "family": "Cai",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0001-6372-7088",
+        "authenticated-orcid": false,
+        "given": "Lu",
+        "family": "Lu",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0001-7152-108X",
+        "authenticated-orcid": false,
+        "given": "Shaojian",
+        "family": "Qiu",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2016.2584050"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1868328.1868342"
+      },
+      {
+        "key": "ref32",
+        "article-title": "Adam: A method for stochastic optimization",
+        "author": "kingma",
+        "year": "2014",
+        "journal-title": "arXiv 1412 6980"
+      },
+      {
+        "key": "ref31",
+        "year": "2019",
+        "journal-title": "An end-to-end open source machine learning platform"
+      },
+      {
+        "key": "ref30",
+        "year": "2019",
+        "journal-title": "Keras The Python deep learning library"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/evco.2009.17.3.275"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2016.2543218"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2016.2597849"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/bioinformatics/btl242"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/QSIC.2012.19"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3022671.2984041"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2007.07.040"
+      },
+      {
+        "key": "ref13",
+        "first-page": "318",
+        "article-title": "Software defect prediction via convolutional neural network",
+        "author": "jian",
+        "year": "2017",
+        "journal-title": "Proc IEEE Int Conf Softw Qual Rel Secur"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2018.2877612"
+      },
+      {
+        "key": "ref15",
+        "first-page": "195",
+        "article-title": "Cross-project and within-project semi-supervised software defect prediction problems study using a unified solution",
+        "author": "wu",
+        "year": "2017",
+        "journal-title": "Proc IEEE/ACM 39th Int Conf Softw Eng Companion (ICSE-C)"
+      },
+      {
+        "key": "ref16",
+        "first-page": "4574",
+        "article-title": "Latent attention for if-then program synthesis",
+        "author": "liu",
+        "year": "2016",
+        "journal-title": "Proc Adv Neural Inf Process Syst"
+      },
+      {
+        "key": "ref17",
+        "article-title": "DeepCoder: Learning to write programs",
+        "author": "balog",
+        "year": "2016",
+        "journal-title": "arXiv 1611 01989"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1595696.1595713"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884804"
+      },
+      {
+        "key": "ref28",
+        "first-page": "246",
+        "article-title": "Hierarchical probabilistic neural network language model",
+        "volume": "5",
+        "author": "morin",
+        "year": "2005",
+        "journal-title": "AISTATS"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.66"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/3-540-44938-8_13"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0218001419590377"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.295895"
+      },
+      {
+        "key": "ref29",
+        "year": "2019",
+        "journal-title": "Javalang Pure Python Java Parser and Tools"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.689404"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.1976.233837"
+      },
+      {
+        "key": "ref7",
+        "author": "halstead",
+        "year": "1978",
+        "journal-title": "Elements of Software Science"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IESYS.2017.8233558"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISSRE.2003.1251044"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.4018/IJOSSP.2018010101"
+      },
+      {
+        "key": "ref20",
+        "article-title": "A deep tree-based model for software defect prediction",
+        "author": "dam",
+        "year": "2018",
+        "journal-title": "arXiv 1802 00921"
+      },
+      {
+        "key": "ref22",
+        "first-page": "3111",
+        "article-title": "Distributed representations of words and phrases and their compositionality",
+        "author": "mikolov",
+        "year": "2013",
+        "journal-title": "Proc Adv Neural Inf Process Syst"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ESEM.2013.20"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606584"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2011.09.007"
+      },
+      {
+        "key": "ref26",
+        "article-title": "Efficient estimation of word representations in vector space",
+        "author": "mikolov",
+        "year": "2013",
+        "journal-title": "arXiv 1301 3781 [cs]"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNN.2010.2091281"
+      }
+    ],
+    "container-title": [
+      "IEEE Access"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/6287639/8600701/08901993.pdf?arnumber=8901993",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2022-01-12T16:31:38Z",
+      "timestamp": 1642005098000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8901993/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "references-count": 38,
+    "URL": "http://dx.doi.org/10.1109/access.2019.2953696",
+    "relation": {},
+    "ISSN": [
+      "2169-3536"
+    ],
+    "issn-type": [
+      {
+        "value": "2169-3536",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    }
+  }
+}

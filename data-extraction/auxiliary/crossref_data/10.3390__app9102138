@@ -1,0 +1,666 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          18
+        ]
+      ],
+      "date-time": "2024-07-18T16:40:10Z",
+      "timestamp": 1721320810416
+    },
+    "reference-count": 64,
+    "publisher": "MDPI AG",
+    "issue": "10",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              24
+            ]
+          ],
+          "date-time": "2019-05-24T00:00:00Z",
+          "timestamp": 1558656000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Applied Sciences"
+    ],
+    "abstract": "<jats:p>To improve software reliability, software defect prediction is used to find software bugs and prioritize testing efforts. Recently, some researchers introduced deep learning models, such as the deep belief network (DBN) and the state-of-the-art convolutional neural network (CNN), and used automatically generated features extracted from abstract syntax trees (ASTs) and deep learning models to improve defect prediction performance. However, the research on the CNN model failed to reveal clear conclusions due to its limited dataset size, insufficiently repeated experiments, and outdated baseline selection. To solve these problems, we built the PROMISE Source Code (PSC) dataset to enlarge the original dataset in the CNN research, which we named the Simplified PROMISE Source Code (SPSC) dataset. Then, we proposed an improved CNN model for within-project defect prediction (WPDP) and compared our results to existing CNN results and an empirical study. Our experiment was based on a 30-repetition holdout validation and a 10 * 10 cross-validation. Experimental results showed that our improved CNN model was comparable to the existing CNN model, and it outperformed the state-of-the-art machine learning models significantly for WPDP. Furthermore, we defined hyperparameter instability and examined the threat and opportunity it presents for deep learning models on defect prediction.</jats:p>",
+    "DOI": "10.3390/app9102138",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          5,
+          24
+        ]
+      ],
+      "date-time": "2019-05-24T15:20:46Z",
+      "timestamp": 1558711246000
+    },
+    "page": "2138",
+    "source": "Crossref",
+    "is-referenced-by-count": 70,
+    "title": [
+      "An Improved CNN Model for Within-Project Software Defect Prediction"
+    ],
+    "prefix": "10.3390",
+    "volume": "9",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0002-4955-7761",
+        "authenticated-orcid": false,
+        "given": "Cong",
+        "family": "Pan",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "The Key Laboratory on Reliability and Environmental Engineering Technology, Beihang University, Beijing 100191, China"
+          },
+          {
+            "name": "School of Reliability and System Engineering, Beihang University, Beijing 100191, China"
+          }
+        ]
+      },
+      {
+        "given": "Minyan",
+        "family": "Lu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "The Key Laboratory on Reliability and Environmental Engineering Technology, Beihang University, Beijing 100191, China"
+          },
+          {
+            "name": "School of Reliability and System Engineering, Beihang University, Beijing 100191, China"
+          }
+        ]
+      },
+      {
+        "given": "Biao",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "The Key Laboratory on Reliability and Environmental Engineering Technology, Beihang University, Beijing 100191, China"
+          },
+          {
+            "name": "School of Reliability and System Engineering, Beihang University, Beijing 100191, China"
+          }
+        ]
+      },
+      {
+        "given": "Houleng",
+        "family": "Gao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "The Key Laboratory on Reliability and Environmental Engineering Technology, Beihang University, Beijing 100191, China"
+          },
+          {
+            "name": "School of Reliability and System Engineering, Beihang University, Beijing 100191, China"
+          }
+        ]
+      }
+    ],
+    "member": "1968",
+    "published-online": {
+      "date-parts": [
+        [
+          2019,
+          5,
+          24
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "375",
+        "DOI": "10.1007/s10515-010-0069-5",
+        "article-title": "Defect prediction from static code features: Current results, limitations, new approaches",
+        "volume": "17",
+        "author": "Menzies",
+        "year": "2010",
+        "journal-title": "Autom. Softw. Eng."
+      },
+      {
+        "key": "ref_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Moser, R., Pedrycz, W., and Succi, G. (2008, January 15). A comparative analysis of the efficiency of change metrics and static code attributes for defect prediction. Proceedings of the 30th International Conference on Software Engineering, Leipzig, Germany.",
+        "DOI": "10.1145/1368088.1368114"
+      },
+      {
+        "key": "ref_3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tan, M., Tan, L., Dara, S., and Mayeux, C. (2015, January 16\u201324). Online Defect Prediction for Imbalanced Data. Proceedings of the 2015 IEEE/ACM 37th IEEE International Conference on Software Engineering (ICSE), Florence, Italy.",
+        "DOI": "10.1109/ICSE.2015.139"
+      },
+      {
+        "key": "ref_4",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nam, J., Pan, S.J., and Kim, S. (2013, January 18\u201326). Transfer defect learning. Proceedings of the International Conference of Software Engineering, San Francisco, CA, USA.",
+        "DOI": "10.1109/ICSE.2013.6606584"
+      },
+      {
+        "key": "ref_5",
+        "unstructured": "Nam, J. (2014). Survey on Software Defect Prediction. [Ph.D. Thesis, The Hong Kong University of Science and Technology]."
+      },
+      {
+        "key": "ref_6",
+        "unstructured": "Lyu, M.R. (1996). Handbook of Software Reliability Engineering, IEEE Computer Society Press."
+      },
+      {
+        "key": "ref_7",
+        "unstructured": "Halstead, M.H. (1977). Elements of Software Science, Elsevier Science Inc."
+      },
+      {
+        "key": "ref_8",
+        "doi-asserted-by": "crossref",
+        "first-page": "308",
+        "DOI": "10.1109/TSE.1976.233837",
+        "article-title": "A Complexity Measure",
+        "volume": "SE-2",
+        "author": "McCabe",
+        "year": "1976",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "ref_9",
+        "doi-asserted-by": "crossref",
+        "first-page": "476",
+        "DOI": "10.1109/32.295895",
+        "article-title": "A Metrics Suite for Object Oriented Design",
+        "volume": "20",
+        "author": "Chidamber",
+        "year": "1994",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "ref_10",
+        "doi-asserted-by": "crossref",
+        "first-page": "491",
+        "DOI": "10.1109/32.689404",
+        "article-title": "An evaluation of the MOOD set of object-oriented software metrics",
+        "volume": "24",
+        "author": "Harrison",
+        "year": "1998",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "ref_11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Jiang, T., Tan, L., and Kim, S. (2013, January 11\u201315). Personalized defect prediction. Proceedings of the Automated Software Engineering, Silicon Valley, CA, USA.",
+        "DOI": "10.1109/ASE.2013.6693087"
+      },
+      {
+        "key": "ref_12",
+        "doi-asserted-by": "crossref",
+        "first-page": "897",
+        "DOI": "10.1109/TSE.2005.112",
+        "article-title": "Empirical validation of object-oriented metrics on open source software for fault prediction",
+        "volume": "31",
+        "author": "Gyimothy",
+        "year": "2005",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "ref_13",
+        "doi-asserted-by": "crossref",
+        "first-page": "771",
+        "DOI": "10.1109/TSE.2006.102",
+        "article-title": "Empirical Analysis of Object-Oriented Design Metrics for Predicting High and Low Severity Faults",
+        "volume": "32",
+        "author": "Zhou",
+        "year": "2006",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "ref_14",
+        "doi-asserted-by": "crossref",
+        "first-page": "485",
+        "DOI": "10.1109/TSE.2008.35",
+        "article-title": "Benchmarking Classification Models for Software Defect Prediction: A Proposed Framework and Novel Findings",
+        "volume": "34",
+        "author": "Lessmann",
+        "year": "2008",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "ref_15",
+        "doi-asserted-by": "crossref",
+        "first-page": "2",
+        "DOI": "10.1109/TSE.2007.256941",
+        "article-title": "Data Mining Static Code Attributes to Learn Defect Predictors",
+        "volume": "33",
+        "author": "Greenwald",
+        "year": "2007",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "ref_16",
+        "unstructured": "Jing, X.Y., Ying, S., Wu, S.S., and Liu, J. (June, January 31). Dictionary learning based software defect prediction. Proceedings of the 36th International Conference on Software Engineering, Hyderabad, India."
+      },
+      {
+        "key": "ref_17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hindle, A., Barr, E.T., Su, Z., Gabel, M., and Devanbu, P. (2012, January 2\u20139). On the naturalness of software. Proceedings of the 2012 34th International Conference on Software Engineering (ICSE), Zurich, Switzerland.",
+        "DOI": "10.1109/ICSE.2012.6227135"
+      },
+      {
+        "key": "ref_18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nguyen, A.T., and Nguyen, T.N. (2015, January 16\u201324). Graph-based statistical language model for code. Proceedings of the 2015 IEEE/ACM 37th IEEE International Conference on Software Engineering, Florence, Italy.",
+        "DOI": "10.1109/ICSE.2015.336"
+      },
+      {
+        "key": "ref_19",
+        "doi-asserted-by": "crossref",
+        "first-page": "142",
+        "DOI": "10.1016/j.infsof.2018.10.001",
+        "article-title": "Automatically identifying code features for software defect prediction: Using AST N-grams",
+        "volume": "106",
+        "author": "Shippey",
+        "year": "2018",
+        "journal-title": "Inf. Softw. Technol."
+      },
+      {
+        "key": "ref_20",
+        "doi-asserted-by": "crossref",
+        "unstructured": "White, M., Vendome, C., Linares-Vasquez, M., and Poshyvanyk, D. (2015, January 16\u201317). Toward Deep Learning Software Repositories. Proceedings of the 2015 IEEE/ACM 12th Working Conference on Mining Software Repositories (MSR), Florence, Italy.",
+        "DOI": "10.1109/MSR.2015.38"
+      },
+      {
+        "key": "ref_21",
+        "doi-asserted-by": "crossref",
+        "first-page": "58",
+        "DOI": "10.1016/j.infsof.2018.03.003",
+        "article-title": "Machine translation-based bug localization technique for bridging lexical gap",
+        "volume": "99",
+        "author": "Xiao",
+        "year": "2018",
+        "journal-title": "Inf. Softw. Technol."
+      },
+      {
+        "key": "ref_22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tu, Z., Su, Z., and Devanbu, P. (2014, January 16\u201321). On the localness of software. Proceedings of the 22nd ACM SIGSOFT International Symposium on Foundations of Software Engineering, Hong Kong, China.",
+        "DOI": "10.1145/2635868.2635875"
+      },
+      {
+        "key": "ref_23",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wang, S., Liu, T., and Tan, L. (2016, January 14\u201322). Automatically learning semantic features for defect prediction. Proceedings of the 38th International Conference on Software, Austin, TX, USA.",
+        "DOI": "10.1145/2884781.2884804"
+      },
+      {
+        "key": "ref_24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, J., He, P., Zhu, J., and Lyu, M.R. (2017, January 25\u201329). Software Defect Prediction via Convolutional Neural Network. Proceedings of the 2017 IEEE International Conference on Software Quality, Reliability and Security (QRS), Prague, Czech Republic.",
+        "DOI": "10.1109/QRS.2017.42"
+      },
+      {
+        "key": "ref_25",
+        "unstructured": "Krizhevsky, A., Sutskever, I., and Hinton, G.E. (2012, January 3\u20138). Imagenet classification with deep convolutional neural networks. Proceedings of the Advances in Neural Information Processing Systems, Lake Tahoe, NV, USA."
+      },
+      {
+        "key": "ref_26",
+        "doi-asserted-by": "crossref",
+        "first-page": "436",
+        "DOI": "10.1038/nature14539",
+        "article-title": "Deep learning",
+        "volume": "521",
+        "author": "Goodfellow",
+        "year": "2015",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "ref_27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Arcuri, A., and Briand, L. (2011, January 21\u201328). A practical guide for using statistical tests to assess randomized algorithms in software engineering. Proceedings of the 2011 33rd International Conference on Software Engineering (ICSE), Honolulu, HI, USA.",
+        "DOI": "10.1145/1985793.1985795"
+      },
+      {
+        "key": "ref_28",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1109/TSE.2016.2584050",
+        "article-title": "An Empirical Comparison of Model Validation Techniques for Defect Prediction Models",
+        "volume": "43",
+        "author": "Hassan",
+        "year": "2017",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "ref_29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, Z., P\u00e9ters, F., Menzies, T., and Yang, Y. (2013, January 10\u201311). Learning from Open-Source Projects: An Empirical Study on Defect Prediction. Proceedings of the 2013 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM), Baltimore, MD, USA.",
+        "DOI": "10.1109/ESEM.2013.20"
+      },
+      {
+        "key": "ref_30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Jureczko, M., and Madeyski, L. (2010, January 12\u201313). Towards identifying software project clusters with regard to defect prediction. Proceedings of the 6th International Conference on Predictive, Timi\u015foara, Romania.",
+        "DOI": "10.1145/1868328.1868342"
+      },
+      {
+        "key": "ref_31",
+        "unstructured": "Herbold, S., Trautsch, A., and Grabowski, J. (2018). Correction of A Comparative Study to Benchmark Cross-project Defect Prediction Approaches. IEEE Trans. Softw. Eng., 1."
+      },
+      {
+        "key": "ref_32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Abdel-Hamid, O., Mohamed, A.-R., Jiang, H., and Penn, G. (2012, January 25\u201330). Applying Convolutional Neural Networks concepts to hybrid NN-HMM model for speech recognition. Proceedings of the 2012 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Kyoto, Japan.",
+        "DOI": "10.1109/ICASSP.2012.6288864"
+      },
+      {
+        "key": "ref_33",
+        "doi-asserted-by": "crossref",
+        "first-page": "2278",
+        "DOI": "10.1109/5.726791",
+        "article-title": "Gradient-based learning applied to document recognition",
+        "volume": "86",
+        "author": "LeCun",
+        "year": "1998",
+        "journal-title": "Proc. IEEE"
+      },
+      {
+        "key": "ref_34",
+        "unstructured": "Zhang, X., Zhao, J., and LeCun, Y. (2015, January 7\u201412). Character-level Convolutional Networks for Text Classification. Proceedings of the Advances in Neural Information Processing Systems, Montreal, QC, Canada."
+      },
+      {
+        "key": "ref_35",
+        "first-page": "1091",
+        "article-title": "Sparse activity and sparse connectivity in supervised learning",
+        "volume": "14",
+        "author": "Thom",
+        "year": "2013",
+        "journal-title": "J. Mach. Learn. Res."
+      },
+      {
+        "key": "ref_36",
+        "unstructured": "Rong, X. (2019, January 24). word2vec Parameter Learning Explained. Available online: https://arxiv.org/abs/1411.2738."
+      },
+      {
+        "key": "ref_37",
+        "first-page": "1929",
+        "article-title": "Dropout: A simple way to prevent neural networks from overfitting",
+        "volume": "15",
+        "author": "Srivastava",
+        "year": "2014",
+        "journal-title": "J. Mach. Learn. Res."
+      },
+      {
+        "key": "ref_38",
+        "unstructured": "Peng, H., Mou, L., Li, G., Liu, Y., Zhang, L., and Jin, Z. (2015, January 7\u201411). Building Program Vector Representations for Deep Learning. Proceedings of the Image Analysis and Processing\u2014ICIAP 2015, Genoa, Italy."
+      },
+      {
+        "key": "ref_39",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Zhang, X., Ren, S., and Sun, J. (2015, January 11). Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification. Proceedings of the 2015 IEEE International Conference on Computer Vision (ICCV), Araucano Park, Chile.",
+        "DOI": "10.1109/ICCV.2015.123"
+      },
+      {
+        "key": "ref_40",
+        "unstructured": "Glorot, X., and Bengio, Y. (2010, January 13\u201315). Understanding the difficulty of training deep feedforward neural networks. Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics, Sardinia, Italy."
+      },
+      {
+        "key": "ref_41",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bottou, L. (2010). Large-Scale Machine Learning with Stochastic Gradient Descent. Proceedings of the COMPSTAT\u20192010, Springer.",
+        "DOI": "10.1007/978-3-7908-2604-3_16"
+      },
+      {
+        "key": "ref_42",
+        "unstructured": "Kingma, D.P., and Ba, J. (2019, February 25). Adam: A Method for Stochastic Optimization. Available online: https://arxiv.org/abs/1412.6980."
+      },
+      {
+        "key": "ref_43",
+        "doi-asserted-by": "crossref",
+        "unstructured": "D\u2019Ambros, M., Lanza, M., and Robbes, R. (2010, January 2\u20133). An extensive comparison of bug prediction approaches. Proceedings of the 2010 7th IEEE Working Conference on Mining Software Repositories (MSR 2010), Cape Town, South Africa.",
+        "DOI": "10.1109/MSR.2010.5463279"
+      },
+      {
+        "key": "ref_44",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zimmermann, T., Nagappan, N., Gall, H., Giger, E., and Murphy, B. (2009, January 24\u201328). Cross-project defect prediction: A large scale experiment on data vs. domain vs. process. Proceedings of the 7th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering, Amsterdam, The Netherlands.",
+        "DOI": "10.1145/1595696.1595713"
+      },
+      {
+        "key": "ref_45",
+        "doi-asserted-by": "crossref",
+        "first-page": "1208",
+        "DOI": "10.1109/TSE.2013.11",
+        "article-title": "Data Quality: Some Comments on the NASA Software Defect Datasets",
+        "volume": "39",
+        "author": "Shepperd",
+        "year": "2013",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "ref_46",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Herzig, K., Just, S., Rau, A., and Zeller, A. (2013, January 4\u20137). Predicting defects using change genealogies. Proceedings of the 2013 IEEE 24th International Symposium on Software Reliability Engineering (ISSRE), Pasadena, CA, USA.",
+        "DOI": "10.1109/ISSRE.2013.6698911"
+      },
+      {
+        "key": "ref_47",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wu, R., Zhang, H., Kim, S., and Cheung, S.C. (2011, January 5\u20139). Relink: Recovering links between bugs and changes. Proceedings of the 19th ACM SIGSOFT Symposium and the 13th European Conference on Foundations of Software Engineering, Szeged, Hungary.",
+        "DOI": "10.1145/2025113.2025120"
+      },
+      {
+        "key": "ref_48",
+        "doi-asserted-by": "crossref",
+        "first-page": "675",
+        "DOI": "10.1080/01621459.1937.10503522",
+        "article-title": "The Use of Ranks to Avoid the Assumption of Normality Implicit in the Analysis of Variance",
+        "volume": "32",
+        "author": "Friedman",
+        "year": "1937",
+        "journal-title": "J. Am. Stat. Assoc."
+      },
+      {
+        "key": "ref_49",
+        "first-page": "65",
+        "article-title": "A simple sequentially rejective multiple test procedure",
+        "volume": "6",
+        "author": "Holm",
+        "year": "1979",
+        "journal-title": "Scand. J. Stat."
+      },
+      {
+        "key": "ref_50",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yang, X., Lo, D., Xia, X., Zhang, Y., and Sun, J. (2015, January 3\u20135). Deep Learning for Just-in-Time Defect Prediction. Proceedings of the 2015 IEEE International Conference on Software Quality, Reliability and Security (QRS), Vancouver, BC, Canada.",
+        "DOI": "10.1109/QRS.2015.14"
+      },
+      {
+        "key": "ref_51",
+        "doi-asserted-by": "crossref",
+        "first-page": "94",
+        "DOI": "10.1016/j.infsof.2017.11.008",
+        "article-title": "Software defect prediction using stacked denoising autoencoders and two-stage ensemble learning",
+        "volume": "96",
+        "author": "Tong",
+        "year": "2018",
+        "journal-title": "Inf. Softw. Technol."
+      },
+      {
+        "key": "ref_52",
+        "first-page": "2105",
+        "article-title": "Using Cross-Entropy Value of Code for Better Defect Prediction",
+        "volume": "14",
+        "author": "Zhang",
+        "year": "2018",
+        "journal-title": "Int. J. Perform. Eng."
+      },
+      {
+        "key": "ref_53",
+        "unstructured": "Dam, H.K., Pham, T., Ng, S.W., Tran, T., Grundy, J., Ghose, A., and Kim, C.J. (2019, January 24). A Deep Tree-Based Model for Software Defect Prediction. Available online: https://arxiv.org/abs/1802.00921."
+      },
+      {
+        "key": "ref_54",
+        "unstructured": "Phan, A.V., Nguyen, L.M., and Bui, L.T. (2017, January 6\u20138). Convolutional neural networks over control flow graphs for software defect prediction. Proceedings of the 2017 IEEE 29th International Conference on Tools with Artificial Intelligence (ICTAI), Boston, MA, USA."
+      },
+      {
+        "key": "ref_55",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Phan, A.V., and Nguyen, L.M. (2017, January 15\u201317). Convolutional neural networks on assembly code for predicting software defects. Proceedings of the 2017 21st Asia Pacific Symposium on Intelligent and Evolutionary Systems (IES), Hanoi, Vietnam.",
+        "DOI": "10.1109/IESYS.2017.8233558"
+      },
+      {
+        "key": "ref_56",
+        "unstructured": "Cheng, J., Guo, J., and Cleland-Huang, J. (2017, January 20\u201328). Semantically Enhanced Software Traceability Using Deep Learning Techniques. Proceedings of the 2017 IEEE/ACM 39th International Conference on Software Engineering (ICSE), Buenos Aires, Argentina."
+      },
+      {
+        "key": "ref_57",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, L., Feng, H., Zhuang, W., Meng, N., and Ryder, B. (2017, January 17\u201324). CCLearner: A Deep Learning-Based Clone Detection Approach. Proceedings of the IEEE International Conference on Software Maintenance and Evolution (ICSME), Shangai, China.",
+        "DOI": "10.1109/ICSME.2017.46"
+      },
+      {
+        "key": "ref_58",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lam, A.N., Nguyen, A.T., Nguyen, H.A., and Nguyen, T.N. (2017, January 22\u201323). Bug localization with combination of deep learning and information retrieval. Proceedings of the 2017 IEEE/ACM 25th International Conference on Program Comprehension (ICPC), Buenos Aires, Argentina.",
+        "DOI": "10.1109/ICPC.2017.24"
+      },
+      {
+        "key": "ref_59",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1145/3276517",
+        "article-title": "DeepBugs: A learning approach to name-based bug detection",
+        "volume": "2",
+        "author": "Pradel",
+        "year": "2018",
+        "journal-title": "Proc. ACM Program. Lang."
+      },
+      {
+        "key": "ref_60",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Reyes, J., Ramirez, D., and Paciello, J. (2016, January 15\u201317). Automatic Classification of Source Code Archives by Programming Language: A Deep Learning Approach. Proceedings of the International Conference on Computational Science and Computational Intelligence (CSCI), Las Vegas, NV, USA.",
+        "DOI": "10.1109/CSCI.2016.0103"
+      },
+      {
+        "key": "ref_61",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zekany, S., Rings, D., Harada, N., Laurenzano, M.A., Tang, L., and Mars, J. (2016, January 15\u201319). CrystalBall: Statically analyzing runtime behavior via deep sequence learning. Proceedings of the 2016 49th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO), Taipei, Taiwan.",
+        "DOI": "10.1109/MICRO.2016.7783727"
+      },
+      {
+        "key": "ref_62",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Corley, C.S., Damevski, K., and Kraft, N.A. (October, January 29). Exploring the use of deep learning for feature location. Proceedings of the 2015 IEEE International Conference on Software Maintenance and Evolution (ICSME), Bremen, Germany.",
+        "DOI": "10.1109/ICSM.2015.7332513"
+      },
+      {
+        "key": "ref_63",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pang, Y., Xue, X., and Wang, H. (2017, January 2\u20134). Predicting Vulnerable Software Components through Deep Neural Network. Proceedings of the 2017 International Conference on Deep Learning Technologies, Chengdu China.",
+        "DOI": "10.1145/3094243.3094245"
+      },
+      {
+        "key": "ref_64",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bandara, U., and Wijayarathna, G. (2013, January 3\u20137). Deep Neural Networks for Source Code Author Identification. Proceedings of the 20th International Conference, Daegu, Korea.",
+        "DOI": "10.1007/978-3-642-42042-9_46"
+      }
+    ],
+    "container-title": [
+      "Applied Sciences"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.mdpi.com/2076-3417/9/10/2138/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          18
+        ]
+      ],
+      "date-time": "2024-07-18T16:26:56Z",
+      "timestamp": 1721320016000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.mdpi.com/2076-3417/9/10/2138"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          5,
+          24
+        ]
+      ]
+    },
+    "references-count": 64,
+    "journal-issue": {
+      "issue": "10",
+      "published-online": {
+        "date-parts": [
+          [
+            2019,
+            5
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "app9102138"
+    ],
+    "URL": "http://dx.doi.org/10.3390/app9102138",
+    "relation": {},
+    "ISSN": [
+      "2076-3417"
+    ],
+    "issn-type": [
+      {
+        "value": "2076-3417",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          5,
+          24
+        ]
+      ]
+    }
+  }
+}

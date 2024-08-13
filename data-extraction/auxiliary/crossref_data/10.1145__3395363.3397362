@@ -1,0 +1,442 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T06:29:05Z",
+      "timestamp": 1721370545082
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 42,
+    "publisher": "ACM",
+    "funder": [
+      {
+        "DOI": "10.13039/501100012659",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61932012, 61802171"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100012226",
+        "name": "Fundamental Research Funds for the Central Universities",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "14380021"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          18
+        ]
+      ]
+    },
+    "DOI": "10.1145/3395363.3397362",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          13
+        ]
+      ],
+      "date-time": "2020-07-13T21:44:18Z",
+      "timestamp": 1594676658000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 75,
+    "title": [
+      "Functional code clone detection with syntax and semantics fusion learning"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Chunrong",
+        "family": "Fang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Nanjing University, China"
+          }
+        ]
+      },
+      {
+        "given": "Zixi",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Nanjing University, China"
+          }
+        ]
+      },
+      {
+        "given": "Yangyang",
+        "family": "Shi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Nanjing University, China"
+          }
+        ]
+      },
+      {
+        "given": "Jeff",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Texas A&amp;M University, USA"
+          }
+        ]
+      },
+      {
+        "given": "Qingkai",
+        "family": "Shi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Hong Kong University of Science and Technology, China"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          18
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/832303.836911"
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WCRE.2000.891457"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.70725"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/3-540-44898-5_23"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2939672.2939754"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "volume-title": "Proceedings of the 27th International Conference on Software Engineering. IEEE, 117-125",
+        "author": "Holmes Reid",
+        "year": "2005"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1109/TCYB.2013.2272642",
+        "article-title": "Joint embedding learning and sparse regression: A framework for unsupervised feature selection",
+        "volume": "44",
+        "author": "Hou Chenping",
+        "year": "2014",
+        "journal-title": "IEEE Transactions on Cybernetics"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "volume-title": "Semantical equivalence of the control flow graph and the program dependence graph. arXiv preprint arXiv",
+        "author": "Ito Sohei",
+        "year": "1803"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.30"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1287624.1287634"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nal Kalchbrenner Edward Grefenstette and Phil Blunsom. 2014. A convolutional neural network for modelling sentences. arXiv preprint arXiv:1404.2188 ( 2014 ).  Nal Kalchbrenner Edward Grefenstette and Phil Blunsom. 2014. A convolutional neural network for modelling sentences. arXiv preprint arXiv:1404.2188 ( 2014 ).",
+        "DOI": "10.3115/v1/P14-1062"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568292"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "volume-title": "Adam: A method for stochastic optimization. arXiv preprint arXiv:1412.6980 ( 2014 ).",
+        "author": "Kingma Diederik P",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/3-540-47764-0_3"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WCRE.2001.957835"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Omer Levy Yoav Goldberg and Ido Dagan. 2015. Improving distributional similarity with lessons learned from word embeddings. Transactions of the Association for Computational Linguistics 3 ( 2015 ) 211-225.  Omer Levy Yoav Goldberg and Ido Dagan. 2015. Improving distributional similarity with lessons learned from word embeddings. Transactions of the Association for Computational Linguistics 3 ( 2015 ) 211-225.",
+        "DOI": "10.1162/tacl_a_00134"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "volume-title": "Proceedings of the 6th Symposium on Operating Systems Design & Implementation. USENIX, 289-302",
+        "author": "Li Zhenmin",
+        "year": "2004"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1150402.1150522"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "volume-title": "Proceedings of the C++ Workshop. 345-360",
+        "author": "Liu Xing",
+        "year": "1987"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "volume-title": "Proceedings of the 37th International Conference on Software Engineering. IEEE, 392-402",
+        "author": "Meng Na",
+        "year": "2015"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "unstructured": "Tomas Mikolov Kai Chen Greg Corrado and Jefrey Dean. 2013. Eficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781 ( 2013 ).  Tomas Mikolov Kai Chen Greg Corrado and Jefrey Dean. 2013. Eficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781 ( 2013 )."
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "volume-title": "Proceedings of the 30th AAAI Conference on Artificial Intelligence.",
+        "author": "Mou Lili",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "unstructured": "Annamalai Narayanan Mahinthan Chandramohan Rajasekar Venkatesan Lihui Chen Yang Liu and Shantanu Jaiswal. 2017. graph2vec: Learning distributed representations of graphs. arXiv preprint arXiv:1707.05005 ( 2017 ).  Annamalai Narayanan Mahinthan Chandramohan Rajasekar Venkatesan Lihui Chen Yang Liu and Shantanu Jaiswal. 2017. graph2vec: Learning distributed representations of graphs. arXiv preprint arXiv:1707.05005 ( 2017 )."
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Manziba Akanda Nishi and Kostadin Damevski. 2018. Scalable code clone detection and search based on adaptive prefix filtering. Journal of Systems and Software 137 ( 2018 ) 130-142.  Manziba Akanda Nishi and Kostadin Damevski. 2018. Scalable code clone detection and search based on adaptive prefix filtering. Journal of Systems and Software 137 ( 2018 ) 130-142.",
+        "DOI": "10.1016/j.jss.2017.11.039"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2939672.2939751"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/520033.858251"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MSR.2019.00078"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dhavleesh Rattan Rajesh Bhatia and Maninder Singh. 2013. Software clone detection: A systematic review. Information and Software Technology 55 7 ( 2013 ) 1165-1199.  Dhavleesh Rattan Rajesh Bhatia and Maninder Singh. 2013. Software clone detection: A systematic review. Information and Software Technology 55 7 ( 2013 ) 1165-1199.",
+        "DOI": "10.1016/j.infsof.2013.01.008"
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2008.41"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884877"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICMLA.2016.0185"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Daniel Svozil Vladimir Kvasnicka and Jiri Pospichal. 1997. Introduction to multilayer feed-forward neural networks. Chemometrics and Intelligent Laboratory Systems 39 1 ( 1997 ) 43-62.  Daniel Svozil Vladimir Kvasnicka and Jiri Pospichal. 1997. Introduction to multilayer feed-forward neural networks. Chemometrics and Intelligent Laboratory Systems 39 1 ( 1997 ) 43-62.",
+        "DOI": "10.1016/S0169-7439(97)00061-0"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2015.2448531"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2017.14"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3196398.3196431"
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tim A Wagner Vance Maverick Susan L Graham and Michael A Harrison. 1994. Accurate static estimators for program optimization. ACM Sigplan Notices 29 6 ( 1994 ) 85-96.  Tim A Wagner Vance Maverick Susan L Graham and Michael A Harrison. 1994. Accurate static estimators for program optimization. ACM Sigplan Notices 29 6 ( 1994 ) 85-96.",
+        "DOI": "10.1145/773473.178251"
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2939672.2939753"
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/423"
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2009.5070536"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970326"
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00086"
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3236024.3236068"
+      }
+    ],
+    "event": {
+      "name": "ISSTA '20: 29th ACM SIGSOFT International Symposium on Software Testing and Analysis",
+      "location": "Virtual Event USA",
+      "acronym": "ISSTA '20",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 29th ACM SIGSOFT International Symposium on Software Testing and Analysis"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3395363.3397362",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          10
+        ]
+      ],
+      "date-time": "2023-01-10T09:49:28Z",
+      "timestamp": 1673344168000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3395363.3397362"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          18
+        ]
+      ]
+    },
+    "references-count": 42,
+    "alternative-id": [
+      "10.1145/3395363.3397362",
+      "10.1145/3395363"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3395363.3397362",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          18
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2020-07-18",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

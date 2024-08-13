@@ -1,0 +1,525 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T05:51:22Z",
+      "timestamp": 1721368282959
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 53,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              3
+            ]
+          ],
+          "date-time": "2018-09-03T00:00:00Z",
+          "timestamp": 1535932800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1145/3238147.3238206",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          20
+        ]
+      ],
+      "date-time": "2018-08-20T20:04:36Z",
+      "timestamp": 1534795476000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 221,
+    "title": [
+      "Improving automatic source code summarization via deep reinforcement learning"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Yao",
+        "family": "Wan",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Zhejiang University, China"
+          }
+        ]
+      },
+      {
+        "given": "Zhou",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Zhejiang University, China"
+          }
+        ]
+      },
+      {
+        "given": "Min",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Chinese Academy of Sciences, China"
+          }
+        ]
+      },
+      {
+        "given": "Guandong",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Technology Sydney, Australia"
+          }
+        ]
+      },
+      {
+        "given": "Haochao",
+        "family": "Ying",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Zhejiang University, China"
+          }
+        ]
+      },
+      {
+        "given": "Jian",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Zhejiang University, China"
+          }
+        ]
+      },
+      {
+        "given": "Philip S.",
+        "family": "Yu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Illinois at Chicago, USA"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "first-page": "9",
+        "article-title": "Compilers, Principles",
+        "volume": "7",
+        "author": "Aho A. V",
+        "year": "1986",
+        "unstructured": "A. V Aho , R. Sethi , and J. D Ullman . 1986 . Compilers, Principles , Techniques. Addison Wesley 7 , 8 (1986), 9 . A. V Aho, R. Sethi, and J. D Ullman. 1986. Compilers, Principles, Techniques. Addison Wesley 7, 8 (1986), 9.",
+        "journal-title": "Techniques. Addison Wesley"
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "volume-title": "International Conference on Machine Learning. 2091\u20132100",
+        "author": "Allamanis M.",
+        "unstructured": "M. Allamanis , H. Peng , and C. Sutton . 2016. A convolutional attention network for extreme summarization of source code . In International Conference on Machine Learning. 2091\u20132100 . M. Allamanis, H. Peng, and C. Sutton. 2016. A convolutional attention network for extreme summarization of source code. In International Conference on Machine Learning. 2091\u20132100."
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "volume-title": "International Conference on Machine Learning. 2123\u20132132",
+        "author": "Allamanis M.",
+        "unstructured": "M. Allamanis , D. Tarlow , A. Gordon , and Y. Wei . 2015. Bimodal modelling of source code and natural language . In International Conference on Machine Learning. 2123\u20132132 . M. Allamanis, D. Tarlow, A. Gordon, and Y. Wei. 2015. Bimodal modelling of source code and natural language. In International Conference on Machine Learning. 2123\u20132132."
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "unstructured": "D. Bahdanau K. Cho and Y. Bengio. 2014. Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473 (2014).  D. Bahdanau K. Cho and Y. Bengio. 2014. Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473 (2014)."
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "volume-title": "Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization",
+        "volume": "29",
+        "author": "Banerjee S.",
+        "unstructured": "S. Banerjee and A. Lavie . 2005. METEOR: An automatic metric for MT evaluation with improved correlation with human judgments . In Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization , Vol. 29 . 65\u201372. S. Banerjee and A. Lavie. 2005. METEOR: An automatic metric for MT evaluation with improved correlation with human judgments. In Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization, Vol. 29. 65\u201372."
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "unstructured": "A. V. M. Barone and R. Sennrich. 2017. A parallel corpus of Python functions and documentation strings for automated code documentation and code generation. arXiv preprint arXiv:1707.02275 (2017).  A. V. M. Barone and R. Sennrich. 2017. A parallel corpus of Python functions and documentation strings for automated code documentation and code generation. arXiv preprint arXiv:1707.02275 (2017)."
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "volume-title": "Software Maintenance, 1998. Proceedings., International Conference on. IEEE, 368\u2013377",
+        "author": "Baxter I. D.",
+        "unstructured": "I. D. Baxter , A. Yahin , L. Moura , M. Sant\u2019Anna , and L. Bier . 1998. Clone detection using abstract syntax trees . In Software Maintenance, 1998. Proceedings., International Conference on. IEEE, 368\u2013377 . I. D. Baxter, A. Yahin, L. Moura, M. Sant\u2019Anna, and L. Bier. 1998. Clone detection using abstract syntax trees. In Software Maintenance, 1998. Proceedings., International Conference on. IEEE, 368\u2013377."
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "unstructured": "H. K. Dam T. Tran and T. Pham. 2016. A deep language model for software code. arXiv preprint arXiv:1608.02715 (2016).  H. K. Dam T. Tran and T. Pham. 2016. A deep language model for software code. arXiv preprint arXiv:1608.02715 (2016)."
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1085313.1085331"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "first-page": "2121",
+        "article-title": "Adaptive subgradient methods for online learning and stochastic optimization",
+        "author": "Duchi J.",
+        "year": "2011",
+        "unstructured": "J. Duchi , E. Hazan , and Y. Singer . 2011 . Adaptive subgradient methods for online learning and stochastic optimization . Journal of Machine Learning Research 12 , Jul (2011), 2121 \u2013 2159 . J. Duchi, E. Hazan, and Y. Singer. 2011. Adaptive subgradient methods for online learning and stochastic optimization. Journal of Machine Learning Research 12, Jul (2011), 2121\u20132159.",
+        "journal-title": "Journal of Machine Learning Research 12"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "A. Eriguchi K. Hashimoto and Y. Tsuruoka. 2016. Tree-to-sequence attentional neural machine translation. arXiv preprint arXiv:1603.06075 (2016).  A. Eriguchi K. Hashimoto and Y. Tsuruoka. 2016. Tree-to-sequence attentional neural machine translation. arXiv preprint arXiv:1603.06075 (2016).",
+        "DOI": "10.18653/v1/P16-1078"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2950290.2950334"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "unstructured": "T. Haije B. O. K. Intelligentie E. Gavves and H. Heuer. 2016. Automatic Comment Generation using a Neural Translation Model. (2016).  T. Haije B. O. K. Intelligentie E. Gavves and H. Heuer. 2016. Automatic Comment Generation using a Neural Translation Model. (2016)."
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "S. Iyer I. Konstas A. Cheung and L. Zettlemoyer. 2016. Summarizing Source Code using a Neural Attention Model.. In ACL (1).  S. Iyer I. Konstas A. Cheung and L. Zettlemoyer. 2016. Summarizing Source Code using a Neural Attention Model.. In ACL (1).",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/B:LIDA.0000048322.42751.ca"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "unstructured": "Y. Keneshloo T. Shi C. K Reddy and N. Ramakrishnan. 2018. Deep Reinforcement Learning For Sequence to Sequence Models. arXiv preprint arXiv:1805.09461 (2018).  Y. Keneshloo T. Shi C. K Reddy and N. Ramakrishnan. 2018. Deep Reinforcement Learning For Sequence to Sequence Models. arXiv preprint arXiv:1805.09461 (2018)."
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M. Kilickaya A. Erdem N. Ikizler-Cinbis and E. Erdem. 2016. Re-evaluating automatic metrics for image captioning. arXiv preprint arXiv:1612.07600 (2016).  M. Kilickaya A. Erdem N. Ikizler-Cinbis and E. Erdem. 2016. Re-evaluating automatic metrics for image captioning. arXiv preprint arXiv:1612.07600 (2016).",
+        "DOI": "10.18653/v1/E17-1019"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "unstructured": "V. R. Konda and J. N. Tsitsiklis. 2000. Actor-critic algorithms. In Advances in neural information processing systems. 1008\u20131014.   V. R. Konda and J. N. Tsitsiklis. 2000. Actor-critic algorithms. In Advances in neural information processing systems. 1008\u20131014."
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "J. Li W. Monroe A. Ritter M. Galley J. Gao and D. Jurafsky. 2016. Deep reinforcement learning for dialogue generation. arXiv preprint arXiv:1606.01541 (2016).  J. Li W. Monroe A. Ritter M. Galley J. Gao and D. Jurafsky. 2016. Deep reinforcement learning for dialogue generation. arXiv preprint arXiv:1606.01541 (2016).",
+        "DOI": "10.18653/v1/D16-1127"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "unstructured": "Y. Li D. Tarlow M. Brockschmidt and R. Zemel. 2015. Gated graph sequence neural networks. arXiv preprint arXiv:1511.05493 (2015).  Y. Li D. Tarlow M. Brockschmidt and R. Zemel. 2015. Gated graph sequence neural networks. arXiv preprint arXiv:1511.05493 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "unstructured": "B. P. Lientz and E. B. Swanson. 1980. Software maintenance management. (1980).   B. P. Lientz and E. B. Swanson. 1980. Software maintenance management. (1980)."
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "volume-title": "Rouge: A package for automatic evaluation of summaries. Text Summarization Branches Out",
+        "author": "Lin C. Y.",
+        "year": "2004",
+        "unstructured": "C. Y. Lin . 2004 . Rouge: A package for automatic evaluation of summaries. Text Summarization Branches Out (2004). C. Y. Lin. 2004. Rouge: A package for automatic evaluation of summaries. Text Summarization Branches Out (2004)."
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "volume-title": "F. Wang, and P. Blunsom.",
+        "author": "Ling W.",
+        "year": "2016",
+        "unstructured": "W. Ling , E. Grefenstette , K. M. Hermann , T. Ko\u010disk ` y, A. Senior , F. Wang, and P. Blunsom. 2016 . Latent predictor networks for code generation. arXiv preprint arXiv:1603.06744 (2016). W. Ling, E. Grefenstette, K. M. Hermann, T. Ko\u010disk`y, A. Senior, F. Wang, and P. Blunsom. 2016. Latent predictor networks for code generation. arXiv preprint arXiv:1603.06744 (2016)."
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "volume-title": "International Conference on Machine Learning. 649\u2013657",
+        "author": "Maddison C.",
+        "unstructured": "C. Maddison and D. Tarlow . 2014. Structured generative models of natural source code . In International Conference on Machine Learning. 649\u2013657 . C. Maddison and D. Tarlow. 2014. Structured generative models of natural source code. In International Conference on Machine Learning. 649\u2013657."
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "unstructured": "R. C Martin. 2009. Clean code: a handbook of agile software craftsmanship. Pearson Education.   R. C Martin. 2009. Clean code: a handbook of agile software craftsmanship. Pearson Education."
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "unstructured": "A. Mnih and Y. W. Teh. 2012. A fast and simple algorithm for training neural probabilistic language models. arXiv preprint arXiv:1206.6426 (2012).   A. Mnih and Y. W. Teh. 2012. A fast and simple algorithm for training neural probabilistic language models. arXiv preprint arXiv:1206.6426 (2012)."
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "V. Mnih K. Kavukcuoglu D. Silver A. A. Rusu J. Veness M. G. Bellemare A. Graves M. Riedmiller A. K. Fidjeland G. Ostrovski etal 2015. Human-level control through deep reinforcement learning. Nature 518 7540 (2015) 529\u2013533.  V. Mnih K. Kavukcuoglu D. Silver A. A. Rusu J. Veness M. G. Bellemare A. Graves M. Riedmiller A. K. Fidjeland G. Ostrovski et al. 2015. Human-level control through deep reinforcement learning. Nature 518 7540 (2015) 529\u2013533.",
+        "DOI": "10.1038/nature14236"
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "first-page": "4",
+        "article-title": "Convolutional Neural Networks over Tree Structures for Programming Language Processing",
+        "volume": "2",
+        "author": "Mou L.",
+        "year": "2016",
+        "unstructured": "L. Mou , G. Li , L. Zhang , T. Wang , and Z. Jin . 2016 . Convolutional Neural Networks over Tree Structures for Programming Language Processing .. In AAAI , Vol. 2. 4 . L. Mou, G. Li, L. Zhang, T. Wang, and Z. Jin. 2016. Convolutional Neural Networks over Tree Structures for Programming Language Processing.. In AAAI, Vol. 2. 4.",
+        "journal-title": "AAAI"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "unstructured": "D. Movshovitz-Attias and W. W. Cohen. 2013. Natural language models for predicting programming comments. (2013).  D. Movshovitz-Attias and W. W. Cohen. 2013. Natural language models for predicting programming comments. (2013)."
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE-C.2017.118"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSC.2016.2560165"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "volume-title": "Automated Software Engineering (ASE), 2015 30th IEEE/ACM International Conference on. IEEE, 574\u2013584",
+        "author": "Oda Y.",
+        "unstructured": "Y. Oda , H. Fudaba , G. Neubig , H. Hata , S. Sakti , T. Toda , and S. Nakamura . 2015. Learning to generate pseudo-code from source code using statistical machine translation (t) . In Automated Software Engineering (ASE), 2015 30th IEEE/ACM International Conference on. IEEE, 574\u2013584 . Y. Oda, H. Fudaba, G. Neubig, H. Hata, S. Sakti, T. Toda, and S. Nakamura. 2015. Learning to generate pseudo-code from source code using statistical machine translation (t). In Automated Software Engineering (ASE), 2015 30th IEEE/ACM International Conference on. IEEE, 574\u2013584."
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/1073083.1073135"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "unstructured": "E. Parisotto A. Mohamed R. Singh L. Li D. Zhou and P. Kohli. 2016. Neurosymbolic program synthesis. arXiv preprint arXiv:1611.01855 (2016).  E. Parisotto A. Mohamed R. Singh L. Li D. Zhou and P. Kohli. 2016. Neurosymbolic program synthesis. arXiv preprint arXiv:1611.01855 (2016)."
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "unstructured": "C. Piech J. Huang A. Nguyen M. Phulsuksombati M. Sahami and L. Guibas. 2015. Learning program embeddings to propagate feedback on student code. arXiv preprint arXiv:1505.05969 (2015).   C. Piech J. Huang A. Nguyen M. Phulsuksombati M. Sahami and L. Guibas. 2015. Learning program embeddings to propagate feedback on student code. arXiv preprint arXiv:1505.05969 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "unstructured": "M. Ranzato S. Chopra M. Auli and W. Zaremba. 2015. Sequence level training with recurrent neural networks. arXiv preprint arXiv:1511.06732 (2015).  M. Ranzato S. Chopra M. Auli and W. Zaremba. 2015. Sequence level training with recurrent neural networks. arXiv preprint arXiv:1511.06732 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "volume-title": "Deep Reinforcement Learning-Based Image Captioning with Embedding Reward. In Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference on. IEEE, 1151\u20131159",
+        "author": "Ren Z.",
+        "unstructured": "Z. Ren , X. Wang , N. Zhang , X. Lv , and L. J. Li . 2017 . Deep Reinforcement Learning-Based Image Captioning with Embedding Reward. In Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference on. IEEE, 1151\u20131159 . Z. Ren, X. Wang, N. Zhang, X. Lv, and L. J. Li. 2017. Deep Reinforcement Learning-Based Image Captioning with Embedding Reward. In Computer Vision and Pattern Recognition (CVPR), 2017 IEEE Conference on. IEEE, 1151\u20131159."
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/5.880083"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "unstructured": "J. Schulman P. Moritz S. Levine M. Jordan and P. Abbeel. 2015. Highdimensional continuous control using generalized advantage estimation. arXiv preprint arXiv:1506.02438 (2015).  J. Schulman P. Moritz S. Levine M. Jordan and P. Abbeel. 2015. Highdimensional continuous control using generalized advantage estimation. arXiv preprint arXiv:1506.02438 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "volume-title": "J. Schrittwieser, I. Antonoglou, V. Panneershelvam, M. Lanctot, and S. Dieleman.",
+        "author": "Silver D.",
+        "year": "2016",
+        "unstructured": "D. Silver , A. Huang , C. J. Maddison , A. Guez , L. Sifre , G. Van Den Driessche , J. Schrittwieser, I. Antonoglou, V. Panneershelvam, M. Lanctot, and S. Dieleman. 2016 . Mastering the game of Go with deep neural networks and tree search. Nature 529, 7587 (2016), 484\u2013489. D. Silver, A. Huang, C. J. Maddison, A. Guez, L. Sifre, G. Van Den Driessche, J. Schrittwieser, I. Antonoglou, V. Panneershelvam, M. Lanctot, and S. Dieleman. 2016. Mastering the game of Go with deep neural networks and tree search. Nature 529, 7587 (2016), 484\u2013489."
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1858996.1859006"
+      },
+      {
+        "key": "e_1_3_2_1_43_1",
+        "unstructured": "I. Sutskever O. Vinyals and Q. V. Le. 2014. Sequence to sequence learning with neural networks. In Advances in neural information processing systems. 3104\u2013 3112.   I. Sutskever O. Vinyals and Q. V. Le. 2014. Sequence to sequence learning with neural networks. In Advances in neural information processing systems. 3104\u2013 3112."
+      },
+      {
+        "key": "e_1_3_2_1_44_1",
+        "volume-title": "Introduction to reinforcement learning",
+        "author": "Sutton R. S",
+        "unstructured": "R. S Sutton and A. G Barto . 1998. Introduction to reinforcement learning . Vol. 135 . MIT press Cambridge . R. S Sutton and A. G Barto. 1998. Introduction to reinforcement learning. Vol. 135. MIT press Cambridge."
+      },
+      {
+        "key": "e_1_3_2_1_45_1",
+        "unstructured": "R. S Sutton D. A McAllester S. P Singh and Y. Mansour. 2000. Policy gradient methods for reinforcement learning with function approximation. In Advances in neural information processing systems. 1057\u20131063.   R. S Sutton D. A McAllester S. P Singh and Y. Mansour. 2000. Policy gradient methods for reinforcement learning with function approximation. In Advances in neural information processing systems. 1057\u20131063."
+      },
+      {
+        "key": "e_1_3_2_1_46_1",
+        "unstructured": "K. S. Tai R. Socher and C. D. Manning. 2015. Improved semantic representations from tree-structured long short-term memory networks. arXiv preprint arXiv:1503.00075 (2015).  K. S. Tai R. Socher and C. D. Manning. 2015. Improved semantic representations from tree-structured long short-term memory networks. arXiv preprint arXiv:1503.00075 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_47_1",
+        "volume-title": "Proceedings of the IEEE conference on computer vision and pattern recognition. 4566\u20134575",
+        "author": "Vedantam R.",
+        "unstructured": "R. Vedantam , C. Lawrence Zitnick , and D. Parikh . 2015. Cider: Consensus-based image description evaluation . In Proceedings of the IEEE conference on computer vision and pattern recognition. 4566\u20134575 . R. Vedantam, C. Lawrence Zitnick, and D. Parikh. 2015. Cider: Consensus-based image description evaluation. In Proceedings of the IEEE conference on computer vision and pattern recognition. 4566\u20134575."
+      },
+      {
+        "key": "e_1_3_2_1_48_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF00992698"
+      },
+      {
+        "key": "e_1_3_2_1_49_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "H. H. Wei and M. Li. 2017. Supervised Deep Features for Software Functional Clone Detection by Exploiting Lexical and Syntactical Information in Source Code. (2017).  H. H. Wei and M. Li. 2017. Supervised Deep Features for Software Functional Clone Detection by Exploiting Lexical and Syntactical Information in Source Code. (2017).",
+        "DOI": "10.24963/ijcai.2017/423"
+      },
+      {
+        "key": "e_1_3_2_1_50_1",
+        "volume-title": "Reinforcement Learning",
+        "author": "Williams R. J",
+        "unstructured": "R. J Williams . 1992. Simple statistical gradient-following algorithms for connectionist reinforcement learning . In Reinforcement Learning . Springer , 5\u201332. R. J Williams. 1992. Simple statistical gradient-following algorithms for connectionist reinforcement learning. In Reinforcement Learning. Springer, 5\u201332."
+      },
+      {
+        "key": "e_1_3_2_1_51_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2901739.2901767"
+      },
+      {
+        "key": "e_1_3_2_1_52_1",
+        "volume-title": "Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing. 584\u2013594",
+        "author": "Zhang X.",
+        "unstructured": "X. Zhang and M. Lapata . 2017. Sentence Simplification with Deep Reinforcement Learning . In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing. 584\u2013594 . X. Zhang and M. Lapata. 2017. Sentence Simplification with Deep Reinforcement Learning. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing. 584\u2013594."
+      },
+      {
+        "key": "e_1_3_2_1_53_1",
+        "volume-title": "Robotics and Automation (ICRA), 2017 IEEE International Conference on. IEEE, 3357\u20133364",
+        "author": "Zhu Y.",
+        "unstructured": "Y. Zhu , R. Mottaghi , E. Kolve , J. J. Lim , A Gupta , L. Fei-Fei , and A. Farhadi . 2017. Target-driven visual navigation in indoor scenes using deep reinforcement learning . In Robotics and Automation (ICRA), 2017 IEEE International Conference on. IEEE, 3357\u20133364 . Y. Zhu, R. Mottaghi, E. Kolve, J. J. Lim, A Gupta, L. Fei-Fei, and A. Farhadi. 2017. Target-driven visual navigation in indoor scenes using deep reinforcement learning. In Robotics and Automation (ICRA), 2017 IEEE International Conference on. IEEE, 3357\u20133364."
+      }
+    ],
+    "event": {
+      "name": "ASE '18: 33rd ACM/IEEE International Conference on Automated Software Engineering",
+      "location": "Montpellier France",
+      "acronym": "ASE '18",
+      "sponsor": [
+        "SIGAI ACM Special Interest Group on Artificial Intelligence",
+        "CNRS Centre National De La Rechercue Scientifique",
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE-CS Computer Society"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3238147.3238206",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          19
+        ]
+      ],
+      "date-time": "2023-01-19T00:58:24Z",
+      "timestamp": 1674089904000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3238147.3238206"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "references-count": 53,
+    "alternative-id": [
+      "10.1145/3238147.3238206",
+      "10.1145/3238147"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3238147.3238206",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2018-09-03",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,642 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          25
+        ]
+      ],
+      "date-time": "2024-05-25T20:29:17Z",
+      "timestamp": 1716668957510
+    },
+    "reference-count": 87,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2019-01-01T00:00:00Z",
+          "timestamp": 1546300800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Access"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "DOI": "10.1109/access.2019.2916615",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          5,
+          15
+        ]
+      ],
+      "date-time": "2019-05-15T20:13:08Z",
+      "timestamp": 1557951188000
+    },
+    "page": "63066-63080",
+    "source": "Crossref",
+    "is-referenced-by-count": 22,
+    "title": [
+      "Using Tri-Relation Networks for Effective Software Fault-Proneness Prediction"
+    ],
+    "prefix": "10.1109",
+    "volume": "7",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0001-9874-0338",
+        "authenticated-orcid": false,
+        "given": "Yihao",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Institute of Software Technology, Graz University of Technology, Graz, Austria"
+          }
+        ]
+      },
+      {
+        "given": "W. Eric",
+        "family": "Wong",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Shanghai Business School, Shanghai, China"
+          }
+        ]
+      },
+      {
+        "given": "Shou-Yu",
+        "family": "Lee",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science, The University of Texas at Dallas, Richardson, TX, USA"
+          }
+        ]
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0002-0462-2283",
+        "authenticated-orcid": false,
+        "given": "Franz",
+        "family": "Wotawa",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Institute of Software Technology, Graz University of Technology, Graz, Austria"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref73",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-009-9111-2"
+      },
+      {
+        "key": "ref72",
+        "year": "2017",
+        "journal-title": "WEKA"
+      },
+      {
+        "key": "ref71",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511815478"
+      },
+      {
+        "key": "ref70",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TR.2013.2259203"
+      },
+      {
+        "key": "ref76",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TR.2011.2172031"
+      },
+      {
+        "key": "ref77",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSMCC.2011.2118751"
+      },
+      {
+        "key": "ref74",
+        "doi-asserted-by": "crossref",
+        "first-page": "188",
+        "DOI": "10.1016/j.jss.2009.09.037",
+        "article-title": "A family of code coverage-based heuristics for effective fault localization",
+        "volume": "83",
+        "author": "wong",
+        "year": "2010",
+        "journal-title": "J Syst Softw"
+      },
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1137983.1138012"
+      },
+      {
+        "key": "ref75",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TR.2013.2285319"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ins.2010.11.028"
+      },
+      {
+        "key": "ref78",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2004.02.029"
+      },
+      {
+        "key": "ref79",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/METRIC.1999.809740"
+      },
+      {
+        "key": "ref33",
+        "year": "2017",
+        "journal-title": "JIRA"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1370788.1370793"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISSRE.2007.24"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/0-387-34226-5_32"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/24.537016"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11219-006-7597-z"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TR.2002.804488"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/52.476287"
+      },
+      {
+        "key": "ref60",
+        "author": "ott",
+        "year": "1993",
+        "journal-title": "An Introduction to Statistical Methods and Data Analysis"
+      },
+      {
+        "key": "ref62",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2009.5070505"
+      },
+      {
+        "key": "ref61",
+        "year": "2018",
+        "journal-title": "Redis"
+      },
+      {
+        "key": "ref63",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2010.81"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2005.112"
+      },
+      {
+        "key": "ref64",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606747"
+      },
+      {
+        "key": "ref27",
+        "first-page": "417",
+        "article-title": "Robust prediction of fault-proneness by random forests",
+        "author": "guo",
+        "year": "2004",
+        "journal-title": "Proc 15th Int Symp Softw Rel Eng"
+      },
+      {
+        "key": "ref65",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2307/1412159"
+      },
+      {
+        "key": "ref66",
+        "article-title": "The economic impacts of inadequate infrastructure for software testing",
+        "author": "tassey",
+        "year": "2002"
+      },
+      {
+        "key": "ref29",
+        "article-title": "Introduction to social network methods",
+        "author": "hanneman",
+        "year": "2005"
+      },
+      {
+        "key": "ref67",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2004.05.001"
+      },
+      {
+        "key": "ref68",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1540438.1540446"
+      },
+      {
+        "key": "ref69",
+        "year": "2018",
+        "journal-title": "Understanding"
+      },
+      {
+        "key": "ref2",
+        "year": "2017",
+        "journal-title": "Apache Flume"
+      },
+      {
+        "key": "ref1",
+        "year": "2017",
+        "journal-title": "Apache Camel"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2007.07.040"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0378-8733(78)90021-7"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606748"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5210/fm.v8i4.1041"
+      },
+      {
+        "key": "ref23",
+        "year": "2017",
+        "journal-title": "Gedit"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2007.05.035"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2372251.2372285"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2010.5609560"
+      },
+      {
+        "key": "ref51",
+        "first-page": "1",
+        "article-title": "A SLOC counting standard",
+        "author": "nguyen",
+        "year": "2007",
+        "journal-title": "Proc 22nd Int Forum COCOMO Syst /Softw Cost Modeling"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1453101.1453105"
+      },
+      {
+        "key": "ref58",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1868328.1868357"
+      },
+      {
+        "key": "ref57",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-008-9082-8"
+      },
+      {
+        "key": "ref56",
+        "first-page": "56",
+        "article-title": "Predicting fault-prone software module using data mining technique and fuzzy logic",
+        "volume": "2",
+        "author": "pandey",
+        "year": "2010",
+        "journal-title": "Int J of Computer and Communication Technology"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2020390.2020406"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2005.49"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.553637"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1083142.1083163"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0164-1212(99)00102-8"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISSRE.2009.17"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSA.2015.27"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2025113.2025119"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1086/228631"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/b106453"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.eswa.2010.08.022"
+      },
+      {
+        "key": "ref82",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2017.06.069"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1414004.1414008"
+      },
+      {
+        "key": "ref81",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/1097-024X(20001125)30:14<1587::AID-SPE352>3.0.CO;2-1"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2009.42"
+      },
+      {
+        "key": "ref84",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1141277.1141687"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.295895"
+      },
+      {
+        "key": "ref83",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1066677.1067014"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/581339.581371"
+      },
+      {
+        "key": "ref80",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2016.2521368"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1159733.1159738"
+      },
+      {
+        "key": "ref3",
+        "year": "2017",
+        "journal-title": "Apache Tika"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1294948.1294953"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICECCS.2005.26"
+      },
+      {
+        "key": "ref85",
+        "first-page": "1",
+        "article-title": "A topological analysis of the open souce software development community",
+        "author": "xu",
+        "year": "2005",
+        "journal-title": "Proc 38th Annu Hawaii Int Conf Syst Sci"
+      },
+      {
+        "key": "ref8",
+        "article-title": "UCINET for windows: Software for social network analysis",
+        "author": "borgatti",
+        "year": "2002"
+      },
+      {
+        "key": "ref86",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2991/ijcis.2017.10.1.43"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IJCNN.2007.4371415"
+      },
+      {
+        "key": "ref49",
+        "year": "2017",
+        "journal-title": "Nginx"
+      },
+      {
+        "key": "ref87",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1368088.1368161"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.815329"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1453101.1453106"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.1976.233837"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1368088.1368160"
+      },
+      {
+        "key": "ref47",
+        "first-page": "284",
+        "article-title": "Use of relative code churn measures to predict system defect density",
+        "author": "nagappan",
+        "year": "2005",
+        "journal-title": "Proc 27th Int l Conf Software Eng"
+      },
+      {
+        "key": "ref42",
+        "article-title": "Applying social network analysis to software fault-proneness prediction",
+        "author": "li",
+        "year": "2017"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2008.35"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2365324.2365335"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.4304/jsw.9.3.697-704"
+      }
+    ],
+    "container-title": [
+      "IEEE Access"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/6287639/8600701/08715360.pdf?arnumber=8715360",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          9,
+          8
+        ]
+      ],
+      "date-time": "2022-09-08T19:43:41Z",
+      "timestamp": 1662666221000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8715360/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "references-count": 87,
+    "URL": "http://dx.doi.org/10.1109/access.2019.2916615",
+    "relation": {},
+    "ISSN": [
+      "2169-3536"
+    ],
+    "issn-type": [
+      {
+        "value": "2169-3536",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    }
+  }
+}

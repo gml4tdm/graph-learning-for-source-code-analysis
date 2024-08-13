@@ -1,0 +1,394 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ],
+      "date-time": "2024-07-15T00:55:23Z",
+      "timestamp": 1721004923274
+    },
+    "reference-count": 30,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2019-07-01T00:00:00Z",
+          "timestamp": 1561939200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2019-07-01T00:00:00Z",
+          "timestamp": 1561939200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2019-07-01T00:00:00Z",
+          "timestamp": 1561939200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          7
+        ]
+      ]
+    },
+    "DOI": "10.1109/ijcnn.2019.8851751",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          10,
+          1
+        ]
+      ],
+      "date-time": "2019-10-01T03:44:32Z",
+      "timestamp": 1569901472000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 44,
+    "title": [
+      "Automatic Source Code Summarization with Extended Tree-LSTM"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Yusuke",
+        "family": "Shido",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Yasuaki",
+        "family": "Kobayashi",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Akihiro",
+        "family": "Yamamoto",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Atsushi",
+        "family": "Miyamoto",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Tadayuki",
+        "family": "Matsumura",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref30",
+        "article-title": "Rouge: A package for automatic evaluation of summaries",
+        "author": "lin",
+        "year": "2004",
+        "journal-title": "Workshop on Text Summarization Branches Out"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1078"
+      },
+      {
+        "key": "ref11",
+        "article-title": "Lstm neural networks for language modeling",
+        "author": "sundermeyer",
+        "year": "2012",
+        "journal-title": "Proc of ISCA"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2597008.2597149"
+      },
+      {
+        "key": "ref13",
+        "first-page": "35",
+        "article-title": "Natural Language Models for Predicting Programming Comments",
+        "volume": "2",
+        "author": "movshovitz-attias",
+        "year": "2013",
+        "journal-title": "Proc of ACL"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2015.36"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/423"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-66402-6_6"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/78.650093"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/D14-1179"
+      },
+      {
+        "key": "ref19",
+        "first-page": "3104",
+        "article-title": "Sequence to sequence learning with neural networks",
+        "volume": "2",
+        "author": "sutskever",
+        "year": "2014",
+        "journal-title": "Proc of NIPS"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/1626355.1626389"
+      },
+      {
+        "key": "ref4",
+        "first-page": "1287",
+        "article-title": "Convolutional neural networks over tree structures for programming language processing",
+        "author": "mou",
+        "year": "2016",
+        "journal-title": "Proc Of AAAI"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2015.7299087"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3196321.3196334"
+      },
+      {
+        "key": "ref6",
+        "article-title": "code2vec: Learning distributed representations of code",
+        "author": "alon",
+        "year": "2018",
+        "journal-title": "arXiv preprint arXiv 1803 09473"
+      },
+      {
+        "key": "ref29",
+        "first-page": "944",
+        "article-title": "Automatic evaluation of translation quality for distant language pairs",
+        "author": "isozaki",
+        "year": "2010",
+        "journal-title": "Proc of EMNLP"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970326"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3238206"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/P15-1150"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3182538"
+      },
+      {
+        "key": "ref20",
+        "article-title": "Neural machine translation by jointly learning to align and translate",
+        "author": "bahdanau",
+        "year": "2015",
+        "journal-title": "ICLRE"
+      },
+      {
+        "key": "ref22",
+        "first-page": "5998",
+        "article-title": "Attention is all you need",
+        "author": "vaswani",
+        "year": "2017",
+        "journal-title": "Proc of NIPS"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D15-1166"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "ref23",
+        "article-title": "Adam: A method for stochastic optimization",
+        "author": "kingma",
+        "year": "2015",
+        "journal-title": "ICLRE"
+      },
+      {
+        "key": "ref26",
+        "first-page": "311",
+        "article-title": "Bleu: A method for automatic evaluation of machine translation",
+        "author": "papineni",
+        "year": "2002",
+        "journal-title": "Proc of ACL"
+      },
+      {
+        "key": "ref25",
+        "first-page": "1929",
+        "article-title": "Dropout: a simple way to prevent neural networks from overfitting",
+        "volume": "15",
+        "author": "srivastava",
+        "year": "2014",
+        "journal-title": "JMLR"
+      }
+    ],
+    "event": {
+      "name": "2019 International Joint Conference on Neural Networks (IJCNN)",
+      "location": "Budapest, Hungary",
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            7,
+            14
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2019,
+            7,
+            19
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2019 International Joint Conference on Neural Networks (IJCNN)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/8840768/8851681/08851751.pdf?arnumber=8851751",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          17
+        ]
+      ],
+      "date-time": "2022-07-17T21:49:57Z",
+      "timestamp": 1658094597000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8851751/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          7
+        ]
+      ]
+    },
+    "references-count": 30,
+    "URL": "http://dx.doi.org/10.1109/ijcnn.2019.8851751",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          7
+        ]
+      ]
+    }
+  }
+}

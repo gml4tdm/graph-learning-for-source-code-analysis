@@ -1,0 +1,539 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          4
+        ]
+      ],
+      "date-time": "2024-07-04T13:18:14Z",
+      "timestamp": 1720099094660
+    },
+    "reference-count": 45,
+    "publisher": "Wiley",
+    "issue": "12",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              9,
+              24
+            ]
+          ],
+          "date-time": "2020-09-24T00:00:00Z",
+          "timestamp": 1600905600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61702334",
+          "61772200"
+        ]
+      },
+      {
+        "DOI": "10.13039/100007219",
+        "name": "Natural Science Foundation of Shanghai",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "17ZR1406900",
+          "17ZR1429700"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "onlinelibrary.wiley.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Softw Pract Exp"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          12
+        ]
+      ]
+    },
+    "abstract": "<jats:title>Summary</jats:title><jats:p>Natural language summaries of source codes are important during software development and maintenance. Recently, deep learning based models have achieved good performance on the task of automatic code summarization, which encode token sequence or abstract syntax tree (AST) of code with neural networks. However, there has been little work on the efficient combination of lexical and syntactical information of code for better summarization quality. In this paper, we propose two general and effective approaches to leveraging both types of information: a convolutional neural network that aims to better extract vector representation of AST node for downstream models; and a Switch Network that learns an adaptive weight vector to combine different code representations for summary generation. We integrate these approaches into a comprehensive code summarization model, which includes a sequential encoder for token sequence of code and a tree based encoder for its AST. We evaluate our model on a large Java dataset. The experimental results show that our model outperforms several state\u2010of\u2010the\u2010art models on various metrics, and the proposed approaches contribute a lot to the improvements.</jats:p>",
+    "DOI": "10.1002/spe.2893",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          24
+        ]
+      ],
+      "date-time": "2020-09-24T18:42:34Z",
+      "timestamp": 1600972954000
+    },
+    "page": "2313-2336",
+    "update-policy": "http://dx.doi.org/10.1002/crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 9,
+    "title": [
+      "Effective approaches to combining lexical and syntactical information for code summarization"
+    ],
+    "prefix": "10.1002",
+    "volume": "50",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0002-8267-8178",
+        "authenticated-orcid": false,
+        "given": "Ziyi",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science and Engineering East China University of Science and Technology  Shanghai China"
+          }
+        ]
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0002-1899-1135",
+        "authenticated-orcid": false,
+        "given": "Huiqun",
+        "family": "Yu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science and Engineering East China University of Science and Technology  Shanghai China"
+          },
+          {
+            "name": "Shanghai Engineering Research Center of Smart Energy  Shanghai China"
+          }
+        ]
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0002-2702-0242",
+        "authenticated-orcid": false,
+        "given": "Guisheng",
+        "family": "Fan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Computer Science and Engineering East China University of Science and Technology  Shanghai China"
+          }
+        ]
+      }
+    ],
+    "member": "311",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          24
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_11_2_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "SridharaG HillE MuppaneniD PollockL Vijay\u2010ShankerK. Towards automatically generating summary comments for Java methods. Paper presented at: Proceedings of 25th IEEE/ACM international conference on Automated software engineering;2010; Antwerp Belgium.",
+        "DOI": "10.1145/1858996.1859006"
+      },
+      {
+        "key": "e_1_2_11_3_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "HaiducS AponteJ MorenoL MarcusA. On the use of automated text summarization techniques for summarizing source code. Paper presented at: 17th Working Conference on Reverse Engineering (WCRE);2010; Beverly MA.",
+        "DOI": "10.1109/WCRE.2010.13"
+      },
+      {
+        "key": "e_1_2_11_4_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "IyerS KonstasI CheungA ZettlemoyerL. Summarizing source code using a neural attention model. Paper presented at: Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics;2016; Berlin Germany.",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "e_1_2_11_5_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "ChenQ ZhouM. A neural framework for retrieval and summarization of source code. Paper presented at: Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering;2018; Montpellier France.",
+        "DOI": "10.1145/3238147.3240471"
+      },
+      {
+        "key": "e_1_2_11_6_1",
+        "volume-title": "Advances in Neural Information Processing Systems 27",
+        "author": "Sutskever I",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_11_7_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "ChoK Van Merri\u00a8enboerB GulcehreC BahdanauD BougaresF SchwenkH BengioY. Learning phrase representations using rnn encoder\u2010decoder for statistical machine translation. Paper presented at: Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing;2014; Doha Qatar.",
+        "DOI": "10.3115/v1/D14-1179"
+      },
+      {
+        "key": "e_1_2_11_8_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "LuongM\u2010T PhamH ManningCD. Effective approaches to attention\u2010based neural machine translation. Paper presented at: Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing;2015; Lisbon Portugal.",
+        "DOI": "10.18653/v1/D15-1166"
+      },
+      {
+        "key": "e_1_2_11_9_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "HuX LiG XiaX LoD LuS JinZ. Summarizing source code with transferred api knowledge. Paper presented at: Proceedings of the Twenty\u2010Seventh International Joint Conference on Artificial Intelligence;2018; Stockholm Sweden.",
+        "DOI": "10.24963/ijcai.2018/314"
+      },
+      {
+        "key": "e_1_2_11_10_1",
+        "volume-title": "Advances in Neural Information Processing Systems",
+        "author": "Wei B",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_2_11_11_1",
+        "unstructured": "AllamanisM PengH SuttonC. A convolutional attention network for extreme summarization of source code. Paper presented at: International Conference on Machine Learning;2016;Newyork NY."
+      },
+      {
+        "key": "e_1_2_11_12_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "WanY ZhaoZ YangM XuG YingH WuJ YuPS. Improving automatic source code summarization via deep reinforcement learning. Paper presented at: Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering;2018;Montpellier France.",
+        "DOI": "10.1145/3238147.3238206"
+      },
+      {
+        "key": "e_1_2_11_13_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "LiangY ZhuKQ. Automatic generation of text descriptive comments for code blocks. Paper presented at: Proceedings of the Thirty\u2010Second AAAI Conference on Artificial Intelligence;2018;New Orleans LO.",
+        "DOI": "10.1609/aaai.v32i1.11963"
+      },
+      {
+        "key": "e_1_2_11_14_1",
+        "unstructured": "FernandesP AllamanisM BrockschmidtM. Structured neural summarization. Paper presented at: 7th International Conference on Learning Representations; 2019; New Orleans LA."
+      },
+      {
+        "key": "e_1_2_11_15_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "HuX LiG XiaX LoD JinZ. Deep code comment generation. Paper presented at: Proceedings of the 26th Conference on Program Comprehension; 2018; Gothenburg Sweden.",
+        "DOI": "10.1145/3196321.3196334"
+      },
+      {
+        "key": "e_1_2_11_16_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "LeClairA JiangS McMillanC. A neural model for generating natural language summaries of program subroutines. Paper presented at: Proceedings of the 41st International Conference on Software Engineering; 2019; Montreal QC.",
+        "DOI": "10.1109/ICSE.2019.00087"
+      },
+      {
+        "issue": "4",
+        "key": "e_1_2_11_17_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "781",
+        "DOI": "10.1109/TNN.2003.813831",
+        "article-title": "An improved algorithm for learning long\u2010term dependency problems in adaptive processing of data structures",
+        "volume": "14",
+        "author": "Cho S\u2010Y",
+        "year": "2003",
+        "journal-title": "IEEE Trans Neural Netw"
+      },
+      {
+        "issue": "3",
+        "key": "e_1_2_11_18_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "2179",
+        "DOI": "10.1007/s10664-019-09730-9",
+        "article-title": "Deep code comment generation with hybrid lexical and syntactical information",
+        "volume": "25",
+        "author": "Hu X",
+        "year": "2019",
+        "journal-title": "Empirical Softw Eng"
+      },
+      {
+        "key": "e_1_2_11_19_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "TaiKS SocherR ManningCD. Improved semantic representations from tree structured long short\u2010term memory networks. Paper presented at: Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics; 2015; Beijing China.",
+        "DOI": "10.3115/v1/P15-1150"
+      },
+      {
+        "key": "e_1_2_11_20_1",
+        "unstructured": "VaswaniA ShazeerN ParmarN et al. Attention is all you need. Neural Information Processing Systems Foundation Inc. Long Beach CA;2017."
+      },
+      {
+        "key": "e_1_2_11_21_1",
+        "unstructured": "AlonU BrodyS LevyO YahavE. code2seq: Generating sequences from structured representations of code. Paper presented at: 7th International Conference on Learning Representations; 2019; New Orleans LA."
+      },
+      {
+        "key": "e_1_2_11_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "e_1_2_11_23_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "ChoK Van Merri\u00ebnboerB BahdanauD BengioY. On the properties of neural machine translation: Encoder\u2010decoder approaches. Paper presented at: Proceedings of SSST@EMNLP 2014; 2014; Doha Qatar.",
+        "DOI": "10.3115/v1/W14-4012"
+      },
+      {
+        "key": "e_1_2_11_24_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "WeiH LiM. Supervised deep features for software functional clone detection by exploiting lexical and syntactical information in source code. Paper presented at: Proceedings of the 26th International Joint Conference on Artificial Intelligence; 2017; Melbourne Australia.",
+        "DOI": "10.24963/ijcai.2017/423"
+      },
+      {
+        "key": "e_1_2_11_25_1",
+        "unstructured": "NairV HintonGE. Rectified linear units improve restricted boltzmann machines. Paper presented at: Proceedings of the 27th International Conference on Machine Learning; 2010; Haifa Israel."
+      },
+      {
+        "key": "e_1_2_11_26_1",
+        "unstructured": "GlorotX BengioY. Understanding the difficulty of training deep feedforward neural networks. Paper presented at: Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics; 2010; Sardinia Italy."
+      },
+      {
+        "key": "e_1_2_11_27_1",
+        "unstructured": "IusemAN Jofr\u00e9A OliveiraRI ThompsonP. Adam: a method for stochastic optimization. Paper presented at: 3rd International Conference on Learning Representations; 2015; San Diego CA."
+      },
+      {
+        "issue": "1",
+        "key": "e_1_2_11_28_1",
+        "first-page": "1929",
+        "article-title": "Dropout: a simple way to prevent neural networks from overfitting",
+        "volume": "15",
+        "author": "Srivastava N",
+        "year": "2014",
+        "journal-title": "J Mach Learn Res"
+      },
+      {
+        "key": "e_1_2_11_29_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "PapineniK RoukosS WardT ZhuW\u2010J. BLEU: a method for automatic evaluation of machine translation. Paper presented at: Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics; 2002; Philadelphia PA.",
+        "DOI": "10.3115/1073083.1073135"
+      },
+      {
+        "key": "e_1_2_11_30_1",
+        "unstructured": "WuY SchusterM Zhifeng ChenQV LeMN MachereyW KrikunM et al.. Google's neural machine translation system: bridging the gap between human and machine translation; 2016.arXiv:1609.08144."
+      },
+      {
+        "key": "e_1_2_11_31_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "EriguchiA HashimotoK TsuruokaK. Tree\u2010to\u2010sequence attentional neural machine translation. Paper presented at: Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics; 2016; Berlin Germany.",
+        "DOI": "10.18653/v1/P16-1078"
+      },
+      {
+        "key": "e_1_2_11_32_1",
+        "unstructured": "LinC\u2010Y. Rouge: a package for automatic evaluation of summaries. Paper presented at: Proceedings of the Workshop on text summarization branches out; 2004."
+      },
+      {
+        "key": "e_1_2_11_33_1",
+        "unstructured": "BanerjeeS LavieA. Meteor: an automatic metric for mt evaluation with improved correlation with human judgments. Paper presented at: Proceedings of the Workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization; 2005; Ann Arbor MI."
+      },
+      {
+        "key": "e_1_2_11_34_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "ChenB CherryC. A systematic comparison of smoothing techniques for sentence\u2010level bleu. Paper presented at: Proceedings of the Ninth Workshop on Statistical Machine Translation; 2014; Baltimore MD.",
+        "DOI": "10.3115/v1/W14-3346"
+      },
+      {
+        "key": "e_1_2_11_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2015.2465386"
+      },
+      {
+        "key": "e_1_2_11_36_1",
+        "unstructured": "Movshovitz\u2010AttiasD CohenWW. Natural language models for predicting programming comments. Paper presented at: Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics (Vol. 2: Short Papers); 2013; Sofia Bulgaria."
+      },
+      {
+        "key": "e_1_2_11_37_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "MorenoL AponteJ SridharaG MarcusA PollockL Vijay\u2010ShankerK. Automatic generation of natural language summaries for Java classes. Paper presented at: IEEE 21st International Conference on Program Comprehension; 2013; San Francisco CA",
+        "DOI": "10.1109/ICPC.2013.6613830"
+      },
+      {
+        "key": "e_1_2_11_38_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "HaiducS AponteJ MarcusA. Supporting program comprehension with source code summarization. Paper presented at: Proceedings of the 32nd ACM/IEEE International Conference on Software Engineering\u2010Vol. 2; 2010; Cape Town South Africa.",
+        "DOI": "10.1145/1810295.1810335"
+      },
+      {
+        "key": "e_1_2_11_39_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "WongE LiuT ClocomLT. Mining existing source code for automatic comment generation. Paper presented at: Software Analysis Evolution and Reengineering (SANER) 2015 IEEE 22nd International Conference on; 2015; Montreal QC.",
+        "DOI": "10.1109/SANER.2015.7081848"
+      },
+      {
+        "key": "e_1_2_11_40_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "WongE YangJ TanL. Autocomment: mining question and answer sites for automatic comment generation. Paper presented at: Proceedings of the 28th IEEE/ACM International Conference on Automated Software Engineering; 2013; Silicon Valley CA.",
+        "DOI": "10.1109/ASE.2013.6693113"
+      },
+      {
+        "key": "e_1_2_11_41_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "RaychevV VechevMT YahavE. Code completion with statistical language models. Paper presented at: ACM SIGPLAN Conference on Programming Language Design and Implementation; 2014; Edinburgh UK.",
+        "DOI": "10.1145/2594291.2594321"
+      },
+      {
+        "key": "e_1_2_11_42_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "GuX ZhangH KimS. Deep code search. Paper presented at: Proceedings of the 40th International Conference on Software Engineering; 2018; Gothenburg Sweden.",
+        "DOI": "10.1145/3180155.3180167"
+      },
+      {
+        "key": "e_1_2_11_43_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "MouL LiG ZhangL WangT JinZ. Convolutional neural networks over tree structures for programming language processing. Paper presented at: Proceedings of the Thirtieth AAAI Conference on Artificial Intelligence; 2016; Phoenix AZ.",
+        "DOI": "10.1609/aaai.v30i1.10139"
+      },
+      {
+        "key": "e_1_2_11_44_1",
+        "unstructured": "AllamanisM BrockschmidtM KhademiM. Learning to represent programs with graphs. Paper presented at: 6th International Conference on Learning Representations; 2018; Vancouver BC."
+      },
+      {
+        "key": "e_1_2_11_45_1",
+        "unstructured": "ChenX LiuC SongD. Tree\u2010to\u2010tree neural networks for program translation. Paper presented at: Workshop Track of the 6th International Conference on Learning Representations; 2018; Vancouver BC."
+      },
+      {
+        "key": "e_1_2_11_46_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "ZhangJ WangX ZhangH SunH WangK LiuX. A novel neural source code representation based on abstract syntax tree. Paper presented at: Proceedings of the 41st International Conference on Software Engineering; 2019; Montreal QC.",
+        "DOI": "10.1109/ICSE.2019.00086"
+      }
+    ],
+    "container-title": [
+      "Software: Practice and Experience"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/spe.2893",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/spe.2893",
+        "content-type": "application/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/spe.2893",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          9,
+          4
+        ]
+      ],
+      "date-time": "2023-09-04T15:06:37Z",
+      "timestamp": 1693839997000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://onlinelibrary.wiley.com/doi/10.1002/spe.2893"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          24
+        ]
+      ]
+    },
+    "references-count": 45,
+    "journal-issue": {
+      "issue": "12",
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            12
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1002/spe.2893"
+    ],
+    "URL": "http://dx.doi.org/10.1002/spe.2893",
+    "archive": [
+      "Portico"
+    ],
+    "relation": {},
+    "ISSN": [
+      "0038-0644",
+      "1097-024X"
+    ],
+    "issn-type": [
+      {
+        "value": "0038-0644",
+        "type": "print"
+      },
+      {
+        "value": "1097-024X",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          24
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2020-03-29",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2020-08-07",
+        "order": 1,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2020-09-24",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          16
+        ]
+      ],
+      "date-time": "2024-07-16T01:39:18Z",
+      "timestamp": 1721093958507
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 57,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              10,
+              26
+            ]
+          ],
+          "date-time": "2018-10-26T00:00:00Z",
+          "timestamp": 1540512000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Texas A&M University"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          26
+        ]
+      ]
+    },
+    "DOI": "10.1145/3236024.3236068",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          29
+        ]
+      ],
+      "date-time": "2018-10-29T12:06:00Z",
+      "timestamp": 1540814760000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 165,
+    "title": [
+      "DeepSim: deep learning code functional similarity"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Gang",
+        "family": "Zhao",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Texas A&amp;M University, USA"
+          }
+        ]
+      },
+      {
+        "given": "Jeff",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Texas A&amp;M University, USA"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          26
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "unstructured": "2006. T.J. Watson Libraries for Analysis (WALA). http://wala.sourceforge.net/ wiki/index.php/Main_Page/. Accessed: 2016-09-02. 2016. Google Code Jam. https://code.google.com/codejam/contests.html. Accessed: 2016-10-08. 2016. TensorFlow: An open-source software library for Machine Intelligence. https://www.tensorflow.org/. Accessed: 2017-08-02. 2017. Deckard Github repo. https://github.com/skyhover/Deckard. Accessed: May/2017.  2006. T.J. Watson Libraries for Analysis (WALA). http://wala.sourceforge.net/ wiki/index.php/Main_Page/. Accessed: 2016-09-02. 2016. Google Code Jam. https://code.google.com/codejam/contests.html. Accessed: 2016-10-08. 2016. TensorFlow: An open-source software library for Machine Intelligence. https://www.tensorflow.org/. Accessed: 2017-08-02. 2017. Deckard Github repo. https://github.com/skyhover/Deckard. Accessed: May/2017."
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "unstructured": "Dzmitry Bahdanau Kyunghyun Cho and Yoshua Bengio. 2014. Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473 (2014).  Dzmitry Bahdanau Kyunghyun Cho and Yoshua Bengio. 2014. Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473 (2014)."
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "unstructured": "Brenda S Baker. 1993. A program for identifying duplicated code. Computing Science and Statistics (1993) 49\u201349.  Brenda S Baker. 1993. A program for identifying duplicated code. Computing Science and Statistics (1993) 49\u201349."
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1006/jcss.1996.0003"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "volume-title": "Deepcoder: Learning to write programs. arXiv preprint arXiv:1611.01989",
+        "author": "Balog Matej",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635898"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/850947.853341"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "first-page": "1137",
+        "article-title": "A neural probabilistic language model",
+        "author": "Bengio Yoshua",
+        "year": "2003",
+        "journal-title": "Journal of Machine Learning Research 3"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "volume-title": "Proc. Int. Workshop on Application of Neural Networks to Telecommunications. 273\u2013287",
+        "author": "Carter S",
+        "year": "1993"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568286"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "unstructured": "Djork-Arn\u00e9 Clevert Thomas Unterthiner and Sepp Hochreiter. 2015. Fast and accurate deep network learning by exponential linear units (elus). arXiv preprint arXiv:1511.07289 (2015).  Djork-Arn\u00e9 Clevert Thomas Unterthiner and Sepp Hochreiter. 2015. Fast and accurate deep network learning by exponential linear units (elus). arXiv preprint arXiv:1511.07289 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-33167-1_3"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CSMR.2012.38"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1368088.1368132"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1882291.1882315"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "unstructured": "Awni Hannun Carl Case Jared Casper Bryan Catanzaro Greg Diamos Erich Elsen Ryan Prenger Sanjeev Satheesh Shubho Sengupta Adam Coates etal 2014. Deep speech: Scaling up end-to-end speech recognition. arXiv preprint arXiv:1412.5567 (2014).  Awni Hannun Carl Case Jared Casper Bryan Catanzaro Greg Diamos Erich Elsen Ryan Prenger Sanjeev Satheesh Shubho Sengupta Adam Coates et al. 2014. Deep speech: Scaling up end-to-end speech recognition. arXiv preprint arXiv:1412.5567 (2014)."
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "volume-title": "IASTED Conf. on Software Engineering and Applications. 222\u2013229",
+        "author": "Higo Yoshiki",
+        "year": "2004"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Geoffrey E Hinton and Ruslan R Salakhutdinov. 2006. Reducing the dimensionality of data with neural networks. Science 313 5786 (2006) 504\u2013507.  Geoffrey E Hinton and Ruslan R Salakhutdinov. 2006. Reducing the dimensionality of data with neural networks. Science 313 5786 (2006) 504\u2013507.",
+        "DOI": "10.1126/science.1127647"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1062455.1062491"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/70405.70408"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2010.5609665"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.30"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1287624.1287634"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2002.1019480"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2015.60"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568292"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "volume-title": "Adam: A method for stochastic optimization. arXiv preprint arXiv:1412.6980",
+        "author": "Kingma Diederik",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/832308.837142"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-31424-7_54"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "unstructured": "Yann LeCun Yoshua Bengio etal 1995. Convolutional networks for images speech and time series. The handbook of brain theory and neural networks 3361 10 (1995) 1995.   Yann LeCun Yoshua Bengio et al. 1995. Convolutional networks for images speech and time series. The handbook of brain theory and neural networks 3361 10 (1995) 1995."
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSME.2017.46"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "first-page": "289",
+        "article-title": "CP-Miner: A Tool for Finding Copy-paste and Related Bugs in Operating System Code",
+        "volume": "4",
+        "author": "Li Zhenmin",
+        "year": "2004",
+        "journal-title": "OSDI"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1150402.1150522"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "unstructured": "Flemming Nielson Hanne R Nielson and Chris Hankin. 2015. Principles of program analysis. Springer.   Flemming Nielson Hanne R Nielson and Chris Hankin. 2015. Principles of program analysis. Springer."
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gabriele Paolacci Jesse Chandler and Panagiotis G Ipeirotis. 2010. Running experiments on amazon mechanical turk. (2010).  Gabriele Paolacci Jesse Chandler and Panagiotis G Ipeirotis. 2010. Running experiments on amazon mechanical turk. (2010).",
+        "DOI": "10.1017/S1930297500002205"
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2714064.2660245"
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2009.5070525"
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "first-page": "64",
+        "article-title": "A survey on software clone detection research",
+        "volume": "541",
+        "author": "Roy Chanchal Kumar",
+        "year": "2007",
+        "journal-title": "Queen\u00e2\u0102\u0179s School of Computing TR"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2008.41"
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.scico.2009.02.007"
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "unstructured": "David E Rumelhart Geoffrey E Hinton Ronald J Williams etal 1988. Learning representations by back-propagating errors. Cognitive modeling 5 3 (1988) 1.  David E Rumelhart Geoffrey E Hinton Ronald J Williams et al. 1988. Learning representations by back-propagating errors. Cognitive modeling 5 3 (1988) 1."
+      },
+      {
+        "key": "e_1_3_2_1_43_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/smr.1707"
+      },
+      {
+        "key": "e_1_3_2_1_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884877"
+      },
+      {
+        "key": "e_1_3_2_1_45_1",
+        "volume-title": "Recognizing Functions in Binaries with Neural Network. In USENIX Security Symposium. 611\u2013626",
+        "author": "Richard Shin Eui Chul",
+        "year": "2015"
+      },
+      {
+        "key": "e_1_3_2_1_46_1",
+        "volume-title": "Proceedings of the 28th international conference on machine learning (ICML-11)",
+        "author": "Socher Richard",
+        "year": "2011"
+      },
+      {
+        "key": "e_1_3_2_1_47_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2581377"
+      },
+      {
+        "key": "e_1_3_2_1_48_1",
+        "volume-title": "Program Comprehension (ICPC), 2016 IEEE 24th International Conference on. IEEE, 1\u201310",
+        "author": "Su Fang-Hsiang",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_3_2_1_49_1",
+        "volume-title": "Code Relatives: Detecting Similar Software Behavior.",
+        "author": "Harvey Kenneth",
+        "year": "2015"
+      },
+      {
+        "key": "e_1_3_2_1_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSME.2014.77"
+      },
+      {
+        "key": "e_1_3_2_1_51_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2662708.2662714"
+      },
+      {
+        "key": "e_1_3_2_1_52_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1390156.1390294"
+      },
+      {
+        "key": "e_1_3_2_1_53_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.7717/peerj-cs.49"
+      },
+      {
+        "key": "e_1_3_2_1_54_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3172077.3172312"
+      },
+      {
+        "key": "e_1_3_2_1_55_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970326"
+      },
+      {
+        "key": "e_1_3_2_1_56_1",
+        "unstructured": "Yonghui Wu Mike Schuster Zhifeng Chen Quoc V Le Mohammad Norouzi Wolfgang Macherey Maxim Krikun Yuan Cao Qin Gao Klaus Macherey etal 2016. Google\u2019s neural machine translation system: Bridging the gap between human and machine translation. arXiv preprint arXiv:1609.08144 (2016).  Yonghui Wu Mike Schuster Zhifeng Chen Quoc V Le Mohammad Norouzi Wolfgang Macherey Maxim Krikun Yuan Cao Qin Gao Klaus Macherey et al. 2016. Google\u2019s neural machine translation system: Bridging the gap between human and machine translation. arXiv preprint arXiv:1609.08144 (2016)."
+      },
+      {
+        "key": "e_1_3_2_1_57_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-014-9316-x"
+      }
+    ],
+    "event": {
+      "name": "ESEC/FSE '18: 26th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
+      "location": "Lake Buena Vista FL USA",
+      "acronym": "ESEC/FSE '18",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 2018 26th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3236024.3236068",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          8
+        ]
+      ],
+      "date-time": "2023-01-08T22:04:46Z",
+      "timestamp": 1673215486000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3236024.3236068"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          26
+        ]
+      ]
+    },
+    "references-count": 57,
+    "alternative-id": [
+      "10.1145/3236024.3236068",
+      "10.1145/3236024"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3236024.3236068",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          26
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2018-10-26",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

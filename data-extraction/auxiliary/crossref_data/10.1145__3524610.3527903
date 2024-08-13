@@ -1,0 +1,487 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T06:00:28Z",
+      "timestamp": 1721368828201
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 48,
+    "publisher": "ACM",
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61977026,62072185"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          16
+        ]
+      ]
+    },
+    "DOI": "10.1145/3524610.3527903",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          10,
+          20
+        ]
+      ],
+      "date-time": "2022-10-20T15:19:30Z",
+      "timestamp": 1666279170000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 14,
+    "title": [
+      "GypSum"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Yu",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "East China Normal University, Shanghai, China"
+          }
+        ]
+      },
+      {
+        "given": "Yu",
+        "family": "Dong",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "East China Normal University, Shanghai, China"
+          }
+        ]
+      },
+      {
+        "given": "Xuesong",
+        "family": "Lu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "East China Normal University, Shanghai, China"
+          }
+        ]
+      },
+      {
+        "given": "Aoying",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "East China Normal University, Shanghai, China"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          10,
+          20
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2020.acl-main.449"
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2786805.2786849"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "volume-title": "International Conference on Learning Representations.",
+        "author": "Allamanis Miltiadis",
+        "year": "2018",
+        "unstructured": "Miltiadis Allamanis , Marc Brockschmidt , and Mahmoud Khademi . 2018 . Learning to Represent Programs with Graphs . In International Conference on Learning Representations. Miltiadis Allamanis, Marc Brockschmidt, and Mahmoud Khademi. 2018. Learning to Represent Programs with Graphs. In International Conference on Learning Representations."
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "volume-title": "International Conference on Learning Representations.",
+        "author": "Alon Uri",
+        "year": "2019",
+        "unstructured": "Uri Alon , Omer Levy , and Eran Yahav . 2019 . code2seq: Generating Sequences from Structured Representations of Code . In International Conference on Learning Representations. Uri Alon, Omer Levy, and Eran Yahav. 2019. code2seq: Generating Sequences from Structured Representations of Code. In International Conference on Learning Representations."
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3296979.3192412"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3290353"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "volume-title": "3rd International Conference on Learning Representations, ICLR",
+        "author": "Bahdanau Dzmitry",
+        "year": "2015",
+        "unstructured": "Dzmitry Bahdanau , Kyung Hyun Cho , and Yoshua Bengio . 2015 . Neural machine translation by jointly learning to align and translate . In 3rd International Conference on Learning Representations, ICLR 2015. Dzmitry Bahdanau, Kyung Hyun Cho, and Yoshua Bengio. 2015. Neural machine translation by jointly learning to align and translate. In 3rd International Conference on Learning Representations, ICLR 2015."
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "volume-title": "Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization. 65--72",
+        "author": "Banerjee Satanjeev",
+        "year": "2005",
+        "unstructured": "Satanjeev Banerjee and Alon Lavie . 2005 . METEOR: An automatic metric for MT evaluation with improved correlation with human judgments . In Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization. 65--72 . Satanjeev Banerjee and Alon Lavie. 2005. METEOR: An automatic metric for MT evaluation with improved correlation with human judgments. In Proceedings of the acl workshop on intrinsic and extrinsic evaluation measures for machine translation and/or summarization. 65--72."
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "volume-title": "Generative code modeling with graphs. arXiv preprint arXiv:1805.08490",
+        "author": "Brockschmidt Marc",
+        "year": "2018",
+        "unstructured": "Marc Brockschmidt , Miltiadis Allamanis , Alexander L Gaunt , and Oleksandr Polozov . 2018. Generative code modeling with graphs. arXiv preprint arXiv:1805.08490 ( 2018 ). Marc Brockschmidt, Miltiadis Allamanis, Alexander L Gaunt, and Oleksandr Polozov. 2018. Generative code modeling with graphs. arXiv preprint arXiv:1805.08490 (2018)."
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2021.findings-emnlp.214"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2021.findings-acl.251"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "volume-title": "International Conference on Learning Representations.",
+        "author": "Clark Kevin",
+        "year": "2019",
+        "unstructured": "Kevin Clark , Minh-Thang Luong , Quoc V Le , and Christopher D Manning . 2019 . ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators . In International Conference on Learning Representations. Kevin Clark, Minh-Thang Luong, Quoc V Le, and Christopher D Manning. 2019. ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators. In International Conference on Learning Representations."
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "volume-title": "International Conference on Machine Learning. PMLR, 1475--1485",
+        "author": "Cvitkovic Milan",
+        "year": "2019",
+        "unstructured": "Milan Cvitkovic , Badal Singh , and Animashree Anandkumar . 2019 . Open vocabulary learning on source code with a graph-structured cache . In International Conference on Machine Learning. PMLR, 1475--1485 . Milan Cvitkovic, Badal Singh, and Animashree Anandkumar. 2019. Open vocabulary learning on source code with a graph-structured cache. In International Conference on Machine Learning. PMLR, 1475--1485."
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1085313.1085331"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "volume-title": "Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "volume": "1",
+        "author": "Devlin Jacob",
+        "year": "2019",
+        "unstructured": "Jacob Devlin , Ming-Wei Chang , Kenton Lee , and Kristina Toutanova . 2019 . BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding . In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies , Volume 1 (Long and Short Papers). 4171--4186. Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers). 4171--4186."
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1078"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2020.findings-emnlp.139"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "volume-title": "Lun Yiu Nie, and Xin Xia",
+        "author": "Gao Shuzheng",
+        "year": "2021",
+        "unstructured": "Shuzheng Gao , Cuiyun Gao , Yulan He , Jichuan Zeng , Lun Yiu Nie, and Xin Xia . 2021 . Code Structure Guided Transformer for Source Code Summarization . arXiv preprint arXiv:2104.09340 (2021). Shuzheng Gao, Cuiyun Gao, Yulan He, Jichuan Zeng, Lun Yiu Nie, and Xin Xia. 2021. Code Structure Guided Transformer for Source Code Summarization. arXiv preprint arXiv:2104.09340 (2021)."
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3379597.3387449"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2337223.2337322"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3196321.3196334"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2018/314"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "volume-title": "International Conference on Learning Representations",
+        "author": "Kingma Diederik P",
+        "year": "2015",
+        "unstructured": "Diederik P Kingma and Jimmy Ba . 2015 . Adam: A method for stochastic optimization . International Conference on Learning Representations (2015). Diederik P Kingma and Jimmy Ba. 2015. Adam: A method for stochastic optimization. International Conference on Learning Representations (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3387904.3389268"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00087"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "volume-title": "Gated graph sequence neural networks. arXiv preprint arXiv:1511.05493",
+        "author": "Li Yujia",
+        "year": "2015",
+        "unstructured": "Yujia Li , Daniel Tarlow , Marc Brockschmidt , and Richard Zemel . 2015. Gated graph sequence neural networks. arXiv preprint arXiv:1511.05493 ( 2015 ). Yujia Li, Daniel Tarlow, Marc Brockschmidt, and Richard Zemel. 2015. Gated graph sequence neural networks. arXiv preprint arXiv:1511.05493 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "volume-title": "ROUGE: A Package for Automatic Evaluation of Summaries. In Text Summarization Branches Out",
+        "author": "Lin Chin-Yew",
+        "year": "2004",
+        "unstructured": "Chin-Yew Lin . 2004 . ROUGE: A Package for Automatic Evaluation of Summaries. In Text Summarization Branches Out . Association for Computational Linguistics , Barcelona, Spain , 74--81. Chin-Yew Lin. 2004. ROUGE: A Package for Automatic Evaluation of Summaries. In Text Summarization Branches Out. Association for Computational Linguistics, Barcelona, Spain, 74--81."
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "volume-title": "Roberta: A robustly optimized bert pretraining approach. arXiv preprint arXiv:1907.11692",
+        "author": "Liu Yinhan",
+        "year": "2019",
+        "unstructured": "Yinhan Liu , Myle Ott , Naman Goyal , Jingfei Du , Mandar Joshi , Danqi Chen , Omer Levy , Mike Lewis , Luke Zettlemoyer , and Veselin Stoyanov . 2019 . Roberta: A robustly optimized bert pretraining approach. arXiv preprint arXiv:1907.11692 (2019). Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, and Veselin Stoyanov. 2019. Roberta: A robustly optimized bert pretraining approach. arXiv preprint arXiv:1907.11692 (2019)."
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "volume-title": "Proceedings of the 40th annual meeting of the Association for Computational Linguistics. 311--318",
+        "author": "Papineni Kishore",
+        "year": "2002",
+        "unstructured": "Kishore Papineni , Salim Roukos , Todd Ward , and Wei-Jing Zhu . 2002 . BLEU: a method for automatic evaluation of machine translation . In Proceedings of the 40th annual meeting of the Association for Computational Linguistics. 311--318 . Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. 2002. BLEU: a method for automatic evaluation of machine translation. In Proceedings of the 40th annual meeting of the Association for Computational Linguistics. 311--318."
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "unstructured": "Alec Radford Karthik Narasimhan Tim Salimans and Ilya Sutskever. 2018. Improving Language Understanding by Generative Pre-Training. (2018).  Alec Radford Karthik Narasimhan Tim Salimans and Ilya Sutskever. 2018. Improving Language Understanding by Generative Pre-Training. (2018)."
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "first-page": "1",
+        "article-title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+        "volume": "21",
+        "author": "Raffel Colin",
+        "year": "2020",
+        "unstructured": "Colin Raffel , Noam Shazeer , Adam Roberts , Katherine Lee , Sharan Narang , Michael Matena , Yanqi Zhou , Wei Li , and Peter J Liu . 2020 . Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer . Journal of Machine Learning Research 21 (2020), 1 -- 67 . Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter J Liu. 2020. Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer. Journal of Machine Learning Research 21 (2020), 1--67.",
+        "journal-title": "Journal of Machine Learning Research"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2775051.2677009"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "volume-title": "Inferring javascript types using graph neural networks. arXiv preprint arXiv:1905.06707",
+        "author": "Schrouff Jessica",
+        "year": "2019",
+        "unstructured": "Jessica Schrouff , Kai Wohlfahrt , Bruno Marnette , and Liam Atkinson . 2019. Inferring javascript types using graph neural networks. arXiv preprint arXiv:1905.06707 ( 2019 ). Jessica Schrouff, Kai Wohlfahrt, Bruno Marnette, and Liam Atkinson. 2019. Inferring javascript types using graph neural networks. arXiv preprint arXiv:1905.06707 (2019)."
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2021.emnlp-main.332"
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IJCNN.2019.8851751"
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "first-page": "3104",
+        "article-title": "Sequence to Sequence Learning with Neural Networks",
+        "volume": "27",
+        "author": "Sutskever Ilya",
+        "year": "2014",
+        "unstructured": "Ilya Sutskever , Oriol Vinyals , and Quoc V Le . 2014 . Sequence to Sequence Learning with Neural Networks . Advances in Neural Information Processing Systems 27 (2014), 3104 -- 3112 . Ilya Sutskever, Oriol Vinyals, and Quoc V Le. 2014. Sequence to Sequence Learning with Neural Networks. Advances in Neural Information Processing Systems 27 (2014), 3104--3112.",
+        "journal-title": "Advances in Neural Information Processing Systems"
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "volume-title": "Attention is all you need. Advances in neural information processing systems 30",
+        "author": "Vaswani Ashish",
+        "year": "2017",
+        "unstructured": "Ashish Vaswani , Noam Shazeer , Niki Parmar , Jakob Uszkoreit , Llion Jones , Aidan N Gomez , \u0141ukasz Kaiser , and Illia Polosukhin . 2017. Attention is all you need. Advances in neural information processing systems 30 ( 2017 ), 5998--6008. Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N Gomez, \u0141ukasz Kaiser, and Illia Polosukhin. 2017. Attention is all you need. Advances in neural information processing systems 30 (2017), 5998--6008."
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "volume-title": "Graph Attention Networks. In International Conference on Learning Representations.",
+        "author": "Veli\u010dkovi\u0107 Petar",
+        "year": "2018",
+        "unstructured": "Petar Veli\u010dkovi\u0107 , Guillem Cucurull , Arantxa Casanova , Adriana Romero , Pietro Li\u00f2 , and Yoshua Bengio . 2018 . Graph Attention Networks. In International Conference on Learning Representations. Petar Veli\u010dkovi\u0107, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Li\u00f2, and Yoshua Bengio. 2018. Graph Attention Networks. In International Conference on Learning Representations."
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3238206"
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2021.emnlp-main.685"
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "volume-title": "Advances in Neural Information Processing Systems",
+        "author": "Wei Bolin",
+        "year": "2019",
+        "unstructured": "Bolin Wei , Ge Li , Xin Xia , Zhiyi Fu , and Zhi Jin . 2019. Code generation as a dual task of code summarization . In Advances in Neural Information Processing Systems 2019 . Neural Information Processing Systems (NIPS) . Bolin Wei, Ge Li, Xin Xia, Zhiyi Fu, and Zhi Jin. 2019. Code generation as a dual task of code summarization. In Advances in Neural Information Processing Systems 2019. Neural Information Processing Systems (NIPS)."
+      },
+      {
+        "key": "e_1_3_2_1_43_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3324884.3416578"
+      },
+      {
+        "key": "e_1_3_2_1_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2021.findings-acl.93"
+      },
+      {
+        "key": "e_1_3_2_1_45_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2017.2734091"
+      },
+      {
+        "key": "e_1_3_2_1_46_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE51524.2021.9678546"
+      },
+      {
+        "key": "e_1_3_2_1_47_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3377811.3380383"
+      },
+      {
+        "key": "e_1_3_2_1_48_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00086"
+      }
+    ],
+    "event": {
+      "name": "ICPC '22: 30th International Conference on Program Comprehension",
+      "location": "Virtual Event",
+      "acronym": "ICPC '22",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE CS"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3524610.3527903",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          16
+        ]
+      ],
+      "date-time": "2023-05-16T10:43:39Z",
+      "timestamp": 1684233819000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3524610.3527903"
+      }
+    },
+    "subtitle": [
+      "learning hybrid representations for code summarization"
+    ],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          16
+        ]
+      ]
+    },
+    "references-count": 48,
+    "alternative-id": [
+      "10.1145/3524610.3527903",
+      "10.1145/3524610"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3524610.3527903",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          16
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2022-10-20",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

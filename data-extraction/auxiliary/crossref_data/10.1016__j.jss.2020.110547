@@ -1,0 +1,538 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          5
+        ]
+      ],
+      "date-time": "2024-07-05T07:45:23Z",
+      "timestamp": 1720165523837
+    },
+    "reference-count": 39,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2020-06-01T00:00:00Z",
+          "timestamp": 1590969600000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100013290",
+        "name": "National Key R&D Program",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2018YFB1003904"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61832009"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61620106007",
+          "61751210"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Journal of Systems and Software"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          6
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.jss.2020.110547",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          2,
+          12
+        ]
+      ],
+      "date-time": "2020-02-12T10:48:37Z",
+      "timestamp": 1581504517000
+    },
+    "page": "110547",
+    "update-policy": "http://dx.doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 16,
+    "special_numbering": "C",
+    "title": [
+      "Modeling programs hierarchically with stack-augmented LSTM"
+    ],
+    "prefix": "10.1016",
+    "volume": "164",
+    "author": [
+      {
+        "given": "Fang",
+        "family": "Liu",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Lu",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Zhi",
+        "family": "Jin",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0001",
+        "unstructured": "Allamanis, M., Brockschmidt, M., Khademi, M., 2017. Learning to represent programs with graphs. arXiv:1711.00740."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0002",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Alon, U., Zilberstein, M., Levy, O., Yahav, E., 2018. A general path-based representation for predicting program properties. arXiv:1803.09544.",
+        "DOI": "10.1145/3192366.3192412"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_sbref0001",
+        "doi-asserted-by": "crossref",
+        "first-page": "40",
+        "DOI": "10.1145/3290353",
+        "article-title": "code2vec: Learning distributed representations of code",
+        "volume": "3",
+        "author": "Alon",
+        "year": "2019",
+        "journal-title": "Proc. ACM Program Lang."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0004",
+        "unstructured": "Bahdanau, D., Cho, K., Bengio, Y., 2014. Neural machine translation by jointly learning to align and translate. arXiv:1409.0473."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0005",
+        "series-title": "Proceedings of the acl Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation and/or Summarization",
+        "first-page": "65",
+        "article-title": "Meteor: An automatic metric for mt evaluation with improved correlation with human judgments",
+        "author": "Banerjee",
+        "year": "2005"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jss.2020.110547_bib0006",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1561/2200000006",
+        "article-title": "Learning deep architectures for AI",
+        "volume": "2",
+        "author": "Bengio",
+        "year": "2009",
+        "journal-title": "Found. Trends Mach. Learn."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0007",
+        "unstructured": "Bhoopchand, A., Rockt\u00e4schel, T., Barr, E., Riedel, S., 2016. Learning python code suggestion with a sparse pointer network. arXiv:1611.08307."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0008",
+        "series-title": "International Conference on Machine Learning",
+        "first-page": "2933",
+        "article-title": "Phog: probabilistic model for code",
+        "author": "Bielik",
+        "year": "2016"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.jss.2020.110547_bib0009",
+        "first-page": "79",
+        "article-title": "A statistical approach to machine translation",
+        "volume": "16",
+        "author": "Brown",
+        "year": "1990",
+        "journal-title": "Comput. Linguist."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0010",
+        "series-title": "Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "first-page": "93",
+        "article-title": "Abstractive sentence summarization with attentive recurrent neural networks",
+        "author": "Chopra",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0011",
+        "unstructured": "Cvitkovic, M., Singh, B., Anandkumar, A., 2018. Open vocabulary learning on source code with a graph-structured cache. arXiv:1810.08305."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0012",
+        "series-title": "Neural turing machines",
+        "author": "Graves",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0013",
+        "series-title": "Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering",
+        "first-page": "763",
+        "article-title": "Are deep neural networks the best choice for modeling source code?",
+        "author": "Hellendoorn",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0014",
+        "series-title": "Software Engineering (ICSE), 2012 34th International Conference on",
+        "first-page": "837",
+        "article-title": "On the naturalness of software",
+        "author": "Hindle",
+        "year": "2012"
+      },
+      {
+        "issue": "8",
+        "key": "10.1016/j.jss.2020.110547_bib0015",
+        "doi-asserted-by": "crossref",
+        "first-page": "1735",
+        "DOI": "10.1162/neco.1997.9.8.1735",
+        "article-title": "Long short-term memory",
+        "volume": "9",
+        "author": "Hochreiter",
+        "year": "1997",
+        "journal-title": "Neural Comput."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0016",
+        "series-title": "Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence, IJCAI 2018, July 13\u201319, 2018, Stockholm, Sweden.",
+        "first-page": "2269",
+        "article-title": "Summarizing source code with transferred API knowledge",
+        "author": "Hu",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0017",
+        "series-title": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+        "first-page": "2073",
+        "article-title": "Summarizing source code using a neural attention model",
+        "volume": "1",
+        "author": "Iyer",
+        "year": "2016"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.jss.2020.110547_bib0018",
+        "doi-asserted-by": "crossref",
+        "first-page": "250",
+        "DOI": "10.1109/TIT.1975.1055384",
+        "article-title": "Design of a linguistic statistical decoder for the recognition of continuous speech",
+        "volume": "21",
+        "author": "Jelinek",
+        "year": "1975",
+        "journal-title": "IEEE Trans. Inf. Theory"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0019",
+        "series-title": "Advances in Neural Information Processing Systems",
+        "first-page": "190",
+        "article-title": "Inferring algorithmic patterns with stack-augmented recurrent nets",
+        "author": "Joulin",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0020",
+        "unstructured": "Karampatsis, R.-M., Sutton, C., 2019. Maybe deep neural networks are the best choice for modeling source code. arXiv:1903.05734."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0021",
+        "series-title": "International Conference on Machine Learning",
+        "first-page": "1378",
+        "article-title": "Ask me anything: dynamic memory networks for natural language processing",
+        "author": "Kumar",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0022",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, J., Galley, M., Brockett, C., Gao, J., Dolan, B., 2015. A diversity-promoting objective function for neural conversation models. arXiv:1510.03055.",
+        "DOI": "10.18653/v1/N16-1014"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0023",
+        "series-title": "Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence, IJCAI 2018, July 13\u201319, 2018, Stockholm, Sweden.",
+        "first-page": "4159",
+        "article-title": "Code completion with neural attention and pointer networks",
+        "author": "Li",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0024",
+        "unstructured": "Liu, C., Wang, X., Shin, R., Gonzalez, J. E., Song, D., 2016. Neural code completion."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0025",
+        "series-title": "Eleventh Annual Conference of the International Speech Communication Association",
+        "article-title": "Recurrent neural network based language model",
+        "author": "Mikolov",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0026",
+        "series-title": "AAAI",
+        "first-page": "4",
+        "article-title": "Convolutional neural networks over tree structures for programming language processing.",
+        "volume": "2",
+        "author": "Mou",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0027",
+        "series-title": "Proceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering",
+        "first-page": "532",
+        "article-title": "A statistical semantic language model for source code",
+        "author": "Nguyen",
+        "year": "2013"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.jss.2020.110547_bib0028",
+        "doi-asserted-by": "crossref",
+        "first-page": "237",
+        "DOI": "10.1006/ijhc.2000.0410",
+        "article-title": "Studying the language and structure in non-programmers\u2019 solutions to programming problems",
+        "volume": "54",
+        "author": "Pane",
+        "year": "2001",
+        "journal-title": "Int. J. Hum. Comput. Stud."
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0029",
+        "series-title": "Proceedings of the 40th Annual Meeting on Association for Computational Linguistics",
+        "first-page": "311",
+        "article-title": "Bleu: a method for automatic evaluation of machine translation",
+        "author": "Papineni",
+        "year": "2002"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0030",
+        "series-title": "International Conference on Knowledge Science, Engineering and Management",
+        "first-page": "547",
+        "article-title": "Building program vector representations for deep learning",
+        "author": "Peng",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0031",
+        "series-title": "ACM SIGPLAN Notices",
+        "first-page": "731",
+        "article-title": "Probabilistic model for code with decision trees",
+        "volume": "51",
+        "author": "Raychev",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0032",
+        "series-title": "ACM SIGPLAN Notices",
+        "first-page": "761",
+        "article-title": "Learning programs from noisy data",
+        "volume": "51",
+        "author": "Raychev",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0033",
+        "series-title": "ACM SIGPLAN Notices",
+        "first-page": "111",
+        "article-title": "Predicting program properties from big code",
+        "volume": "50",
+        "author": "Raychev",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0034",
+        "series-title": "Acm Sigplan Notices",
+        "first-page": "419",
+        "article-title": "Code completion with statistical language models",
+        "volume": "49",
+        "author": "Raychev",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0035",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tai, K. S., Socher, R., Manning, C. D., 2015. Improved semantic representations from tree-structured long short-term memory networks. arXiv:1503.00075.",
+        "DOI": "10.3115/v1/P15-1150"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0036",
+        "series-title": "Proceedings of the 22nd ACM SIGSOFT International Symposium on Foundations of Software Engineering",
+        "first-page": "269",
+        "article-title": "On the localness of software",
+        "author": "Tu",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0037",
+        "series-title": "Advances in neural information processing systems",
+        "first-page": "5998",
+        "article-title": "Attention is all you need",
+        "author": "Vaswani",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0038",
+        "series-title": "Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering",
+        "first-page": "397",
+        "article-title": "Improving automatic source code summarization via deep reinforcement learning",
+        "author": "Wan",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.jss.2020.110547_bib0039",
+        "series-title": "Proceedings of the 26th International Joint Conference on Artificial Intelligence",
+        "first-page": "3034",
+        "article-title": "Supervised deep features for software functional clone detection by exploiting lexical and syntactical information in source code",
+        "author": "Wei",
+        "year": "2017"
+      }
+    ],
+    "container-title": [
+      "Journal of Systems and Software"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0164121220300297?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0164121220300297?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2020,
+          6,
+          13
+        ]
+      ],
+      "date-time": "2020-06-13T21:27:10Z",
+      "timestamp": 1592083630000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0164121220300297"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          6
+        ]
+      ]
+    },
+    "references-count": 39,
+    "alternative-id": [
+      "S0164121220300297"
+    ],
+    "URL": "http://dx.doi.org/10.1016/j.jss.2020.110547",
+    "relation": {},
+    "ISSN": [
+      "0164-1212"
+    ],
+    "issn-type": [
+      {
+        "value": "0164-1212",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          6
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Modeling programs hierarchically with stack-augmented LSTM",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Journal of Systems and Software",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.jss.2020.110547",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "\u00a9 2020 Elsevier Inc. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "110547"
+  }
+}

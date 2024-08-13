@@ -1,0 +1,158 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T05:58:56Z",
+      "timestamp": 1721368736769
+    },
+    "publisher-location": "Stroudsburg, PA, USA",
+    "reference-count": 0,
+    "publisher": "Association for Computational Linguistics",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "DOI": "10.18653/v1/2021.emnlp-main.332",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          12,
+          17
+        ]
+      ],
+      "date-time": "2021-12-17T03:56:42Z",
+      "timestamp": 1639713402000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 17,
+    "title": [
+      "CAST: Enhancing Code Summarization with Hierarchical Splitting and Reconstruction of Abstract Syntax Trees"
+    ],
+    "prefix": "10.18653",
+    "author": [
+      {
+        "given": "Ensheng",
+        "family": "Shi",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Yanlin",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Lun",
+        "family": "Du",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Hongyu",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Shi",
+        "family": "Han",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Dongmei",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Hongbin",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "1643",
+    "event": {
+      "name": "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+      "location": "Online and Punta Cana, Dominican Republic",
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            11
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2021,
+            11
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing"
+    ],
+    "original-title": [],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          12,
+          17
+        ]
+      ],
+      "date-time": "2021-12-17T03:59:23Z",
+      "timestamp": 1639713563000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://aclanthology.org/2021.emnlp-main.332"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "references-count": 0,
+    "URL": "http://dx.doi.org/10.18653/v1/2021.emnlp-main.332",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    }
+  }
+}

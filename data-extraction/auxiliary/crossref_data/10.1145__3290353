@@ -1,0 +1,616 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          21
+        ]
+      ],
+      "date-time": "2024-07-21T17:05:53Z",
+      "timestamp": 1721581553432
+    },
+    "reference-count": 73,
+    "publisher": "Association for Computing Machinery (ACM)",
+    "issue": "POPL",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              1,
+              2
+            ]
+          ],
+          "date-time": "2019-01-02T00:00:00Z",
+          "timestamp": 1546387200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Proc. ACM Program. Lang."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          1,
+          2
+        ]
+      ]
+    },
+    "abstract": "<jats:p>We present a neural model for representing snippets of code as continuous distributed vectors (``code embeddings''). The main idea is to represent a code snippet as a single fixed-length code vector, which can be used to predict semantic properties of the snippet. To this end, code is first decomposed to a collection of paths in its abstract syntax tree. Then, the network learns the atomic representation of each path while simultaneously learning how to aggregate a set of them.</jats:p>\n          <jats:p>We demonstrate the effectiveness of our approach by using it to predict a method's name from the vector representation of its body. We evaluate our approach by training a model on a dataset of 12M methods. We show that code vectors trained on this dataset can predict method names from files that were unobserved during training. Furthermore, we show that our model learns useful method name vectors that capture semantic similarities, combinations, and analogies.</jats:p>\n          <jats:p>A comparison of our approach to previous techniques over the same dataset shows an improvement of more than 75%, making it the first to successfully predict method names based on a large, cross-project corpus. Our trained model, visualizations and vector similarities are available as an interactive online demo at http://code2vec.org. The code, data and trained models are available at https://github.com/tech-srl/code2vec.</jats:p>",
+    "DOI": "10.1145/3290353",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          1,
+          4
+        ]
+      ],
+      "date-time": "2019-01-04T13:33:51Z",
+      "timestamp": 1546608831000
+    },
+    "page": "1-29",
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 644,
+    "title": [
+      "code2vec: learning distributed representations of code"
+    ],
+    "prefix": "10.1145",
+    "volume": "3",
+    "author": [
+      {
+        "given": "Uri",
+        "family": "Alon",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Technion, Israel"
+          }
+        ]
+      },
+      {
+        "given": "Meital",
+        "family": "Zilberstein",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Technion, Israel"
+          }
+        ]
+      },
+      {
+        "given": "Omer",
+        "family": "Levy",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Facebook AI Research, USA"
+          }
+        ]
+      },
+      {
+        "given": "Eran",
+        "family": "Yahav",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Technion, Israel"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2019,
+          1,
+          2
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_2_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635883"
+      },
+      {
+        "key": "e_1_2_2_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2786805.2786849"
+      },
+      {
+        "key": "e_1_2_2_3_1",
+        "volume-title": "A Survey of Machine Learning for Big Code and Naturalness. arXiv preprint arXiv:1709.06182",
+        "author": "Allamanis Miltiadis",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_2_4_1",
+        "unstructured": "Miltiadis Allamanis Marc Brockschmidt and Mahmoud Khademi. 2018. Learning to Represent Programs with Graphs. In ICLR .  Miltiadis Allamanis Marc Brockschmidt and Mahmoud Khademi. 2018. Learning to Represent Programs with Graphs. In ICLR ."
+      },
+      {
+        "key": "e_1_2_2_5_1",
+        "volume-title": "Proceedings of the 33nd International Conference on Machine Learning, ICML 2016",
+        "author": "Allamanis Miltiadis",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_2_2_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2487085.2487127"
+      },
+      {
+        "key": "e_1_2_2_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635901"
+      },
+      {
+        "key": "e_1_2_2_8_1",
+        "volume-title": "Proceedings of the 32nd International Conference on International Conference on Machine Learning -",
+        "volume": "37",
+        "author": "Allamanis Miltiadis",
+        "year": "2015"
+      },
+      {
+        "key": "e_1_2_2_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3192366.3192412"
+      },
+      {
+        "key": "e_1_2_2_10_1",
+        "volume-title": "Reps",
+        "author": "Amodio Matthew",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_2_11_1",
+        "volume-title": "Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics . 177\u2013184",
+        "author": "Thierry"
+      },
+      {
+        "key": "e_1_2_2_12_1",
+        "volume-title": "Multiple object recognition with visual attention. arXiv preprint arXiv:1412.7755",
+        "author": "Ba Jimmy",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_2_13_1",
+        "volume-title": "Neural Machine Translation by Jointly Learning to Align and Translate. CoRR abs/1409.0473",
+        "author": "Bahdanau Dzmitry",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_2_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICASSP.2016.7472618"
+      },
+      {
+        "key": "e_1_2_2_15_1",
+        "volume-title": "A Neural Probabilistic Language Model. J. Mach. Learn. Res. 3 (March",
+        "author": "Bengio Yoshua",
+        "year": "2003"
+      },
+      {
+        "key": "e_1_2_2_16_1",
+        "volume-title": "Proceedings of the 33nd International Conference on Machine Learning, ICML 2016",
+        "author": "Bielik Pavol",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_2_2_17_1",
+        "volume-title": "11th Conference of the European Chapter of the Association for Computational Linguistics.",
+        "author": "Callison-Burch Chris",
+        "year": "2006"
+      },
+      {
+        "key": "e_1_2_2_18_1",
+        "unstructured": "Jan K Chorowski Dzmitry Bahdanau Dmitriy Serdyuk Kyunghyun Cho and Yoshua Bengio. 2015. Attention-based models for speech recognition. In Advances in Neural Information Processing Systems. 577\u2013585.   Jan K Chorowski Dzmitry Bahdanau Dmitriy Serdyuk Kyunghyun Cho and Yoshua Bengio. 2015. Attention-based models for speech recognition. In Advances in Neural Information Processing Systems. 577\u2013585."
+      },
+      {
+        "key": "e_1_2_2_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1390156.1390177"
+      },
+      {
+        "key": "e_1_2_2_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2908080.2908126"
+      },
+      {
+        "key": "e_1_2_2_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3062341.3062387"
+      },
+      {
+        "key": "e_1_2_2_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2594291.2594343"
+      },
+      {
+        "key": "e_1_2_2_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/(SICI)1097-4571(199009)41:6<391::AID-ASI1>3.0.CO;2-9"
+      },
+      {
+        "key": "e_1_2_2_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3236024.3236059"
+      },
+      {
+        "key": "e_1_2_2_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/P15-1030"
+      },
+      {
+        "key": "e_1_2_2_26_1",
+        "volume-title": "A Synopsis of Linguistic Theory",
+        "author": "Firth J.R.",
+        "year": "1930"
+      },
+      {
+        "key": "e_1_2_2_27_1",
+        "volume-title": "Refactoring: Improving the Design of Existing Code",
+        "author": "Fowler Martin",
+        "year": "1999"
+      },
+      {
+        "key": "e_1_2_2_28_1",
+        "volume-title": "Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics . 249\u2013256",
+        "author": "Glorot Xavier",
+        "year": "2010"
+      },
+      {
+        "key": "e_1_2_2_29_1",
+        "volume-title": "Proceedings of the 28th International Conference on Machine Learning (ICML-11)",
+        "author": "Glorot Xavier",
+        "year": "2011"
+      },
+      {
+        "key": "e_1_2_2_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2814270.2814295"
+      },
+      {
+        "key": "e_1_2_2_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/00437956.1954.11659520"
+      },
+      {
+        "key": "e_1_2_2_32_1",
+        "volume-title": "Proceedings of the 28th International Conference on Neural Information Processing Systems -",
+        "volume": "1",
+        "author": "Hermann Karl Moritz",
+        "year": "2015"
+      },
+      {
+        "key": "e_1_2_2_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2337223.2337322"
+      },
+      {
+        "key": "e_1_2_2_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-03013-0_14"
+      },
+      {
+        "key": "e_1_2_2_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "e_1_2_2_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2837614.2837674"
+      },
+      {
+        "key": "e_1_2_2_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3173162.3173202"
+      },
+      {
+        "key": "e_1_2_2_38_1",
+        "volume-title": "Adam: A method for stochastic optimization. arXiv preprint arXiv:1412.6980",
+        "author": "Kingma Diederik",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_2_39_1",
+        "volume-title": "Proceedings of the 31st International Conference on Machine Learning (ICML-14) , Tony Jebara and Eric P. Xing (Eds.). JMLR Workshop and Conference Proceedings, 1188\u20131196",
+        "author": "Le Quoc",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_2_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/W14-1618"
+      },
+      {
+        "key": "e_1_2_2_41_1",
+        "volume-title": "Advances in Neural Information Processing Systems 27: Annual Conference on Neural Information Processing Systems 2014",
+        "author": "Levy Omer",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_2_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/K17-1034"
+      },
+      {
+        "key": "e_1_2_2_43_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3133908"
+      },
+      {
+        "key": "e_1_2_2_44_1",
+        "volume-title": "Data-Driven Program Completion. CoRR abs/1705.09042",
+        "author": "Lu Yanxin",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_2_45_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D15-1166"
+      },
+      {
+        "key": "e_1_2_2_46_1",
+        "volume-title": "Proceedings of the 31st International Conference on International Conference on Machine Learning -",
+        "volume": "32",
+        "author": "Chris"
+      },
+      {
+        "key": "e_1_2_2_47_1",
+        "volume-title": "Efficient Estimation of Word Representations in Vector Space. CoRR abs/1301.3781",
+        "author": "Mikolov Tomas",
+        "year": "2013"
+      },
+      {
+        "key": "e_1_2_2_48_1",
+        "volume-title": "Proceedings of the 26th International Conference on Neural Information Processing Systems (NIPS\u201913)",
+        "author": "Mikolov Tomas",
+        "year": "2013"
+      },
+      {
+        "key": "e_1_2_2_49_1",
+        "unstructured": "Tomas Mikolov Wen-tau Yih and Geoffrey Zweig. 2013c. Linguistic regularities in continuous space word representations.  Tomas Mikolov Wen-tau Yih and Geoffrey Zweig. 2013c. Linguistic regularities in continuous space word representations."
+      },
+      {
+        "key": "e_1_2_2_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2384616.2384689"
+      },
+      {
+        "key": "e_1_2_2_51_1",
+        "volume-title": "Proceedings of the 27th International Conference on Neural Information Processing Systems (NIPS\u201914)",
+        "author": "Mnih Volodymyr",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_2_52_1",
+        "unstructured": "Dana Movshovitz-Attias and William W Cohen. 2013. Natural language models for predicting programming comments. (2013).  Dana Movshovitz-Attias and William W Cohen. 2013. Natural language models for predicting programming comments. (2013)."
+      },
+      {
+        "key": "e_1_2_2_53_1",
+        "volume-title": "Bayesian Sketch Learning for Program Synthesis. CoRR abs/1703.05698",
+        "author": "Murali Vijayaraghavan",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_2_2_54_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2491411.2491458"
+      },
+      {
+        "key": "e_1_2_2_55_1",
+        "volume-title": "Manning",
+        "author": "Pennington Jeffrey",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_2_2_56_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2983990.2984041"
+      },
+      {
+        "key": "e_1_2_2_57_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2837614.2837671"
+      },
+      {
+        "key": "e_1_2_2_58_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2676726.2677009"
+      },
+      {
+        "key": "e_1_2_2_59_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2594291.2594321"
+      },
+      {
+        "key": "e_1_2_2_60_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1010091220143"
+      },
+      {
+        "key": "e_1_2_2_61_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4757-6594-6_14"
+      },
+      {
+        "key": "e_1_2_2_62_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/361219.361220"
+      },
+      {
+        "key": "e_1_2_2_63_1",
+        "volume-title": "Bidirectional attention flow for machine comprehension. arXiv preprint arXiv:1611.01603",
+        "author": "Seo Minjoon",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_2_2_64_1",
+        "volume-title": "Proceedings of the 26th International Conference on Machine Learning (ICML).",
+        "author": "Socher Richard"
+      },
+      {
+        "key": "e_1_2_2_65_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2627435.2670313"
+      },
+      {
+        "key": "e_1_2_2_66_1",
+        "article-title": "Multi-label classification: An overview",
+        "volume": "3",
+        "author": "Tsoumakas Grigorios",
+        "year": "2006",
+        "journal-title": "International Journal of Data Warehousing and Mining"
+      },
+      {
+        "key": "e_1_2_2_67_1",
+        "volume-title": "Proceedings of the 48th Annual Meeting of the Association for Computational Linguistics (ACL \u201910)",
+        "author": "Turian Joseph",
+        "year": "2010"
+      },
+      {
+        "key": "e_1_2_2_68_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/coli.2006.32.3.379"
+      },
+      {
+        "key": "e_1_2_2_69_1",
+        "unstructured": "Ashish Vaswani Noam Shazeer Niki Parmar Jakob Uszkoreit Llion Jones Aidan N Gomez \u0141ukasz Kaiser and Illia Polosukhin. 2017. Attention is all you need. In Advances in Neural Information Processing Systems. 6000\u20136010.   Ashish Vaswani Noam Shazeer Niki Parmar Jakob Uszkoreit Llion Jones Aidan N Gomez \u0141ukasz Kaiser and Illia Polosukhin. 2017. Attention is all you need. In Advances in Neural Information Processing Systems. 6000\u20136010."
+      },
+      {
+        "key": "e_1_2_2_70_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1561/2500000028"
+      },
+      {
+        "key": "e_1_2_2_71_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2820518.2820559"
+      },
+      {
+        "key": "e_1_2_2_72_1",
+        "volume-title": "International Conference on Machine Learning . 2048\u20132057",
+        "author": "Xu Kelvin",
+        "year": "2015"
+      },
+      {
+        "key": "e_1_2_2_73_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2986012.2986013"
+      }
+    ],
+    "container-title": [
+      "Proceedings of the ACM on Programming Languages"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3290353",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          1
+        ]
+      ],
+      "date-time": "2023-01-01T08:32:00Z",
+      "timestamp": 1672561920000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3290353"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          1,
+          2
+        ]
+      ]
+    },
+    "references-count": 73,
+    "journal-issue": {
+      "issue": "POPL",
+      "published-print": {
+        "date-parts": [
+          [
+            2019,
+            1,
+            2
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1145/3290353"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3290353",
+    "relation": {},
+    "ISSN": [
+      "2475-1421"
+    ],
+    "issn-type": [
+      {
+        "value": "2475-1421",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          1,
+          2
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2019-01-02",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

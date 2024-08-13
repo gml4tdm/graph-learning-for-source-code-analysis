@@ -1,0 +1,576 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ],
+      "date-time": "2024-07-15T00:51:43Z",
+      "timestamp": 1721004703456
+    },
+    "reference-count": 50,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2021-04-01T00:00:00Z",
+          "timestamp": 1617235200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Information Sciences"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          4
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.ins.2020.11.053",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          12,
+          16
+        ]
+      ],
+      "date-time": "2020-12-16T01:25:29Z",
+      "timestamp": 1608081929000
+    },
+    "page": "189-207",
+    "update-policy": "http://dx.doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 18,
+    "special_numbering": "C",
+    "title": [
+      "Neural software vulnerability analysis using rich intermediate graph representations of programs"
+    ],
+    "prefix": "10.1016",
+    "volume": "553",
+    "author": [
+      {
+        "given": "Seyed Mohammad",
+        "family": "Ghaffarian",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Hamid Reza",
+        "family": "Shahriari",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0005",
+        "doi-asserted-by": "crossref",
+        "unstructured": "C. Aggarwal, Data preparation, in: Data Mining: The Textbook, Chapter 17, Springer, 2015, pp. 557\u2013587.",
+        "DOI": "10.1007/978-3-319-14142-8_17"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0010",
+        "unstructured": "A. Aho, M. Lam, R. Sethi, J. Ullman, Compilers: Principles, Techniques, and Tools, second ed., Addison-Wesley, 2006"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0015",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M. Allamanis, E. Barr, P. Devanbu, C. Sutton, A survey of machine learning for big code and naturalness, ACM Comput. Surveys (CSUR) 51 (4) (2018) 81:1\u201381:37.",
+        "DOI": "10.1145/3212695"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0020",
+        "series-title": "Proceedings of the 6th International Conference on Learning Representations (ICLR)",
+        "article-title": "Learning to represent programs with graphs",
+        "author": "Allamanis",
+        "year": "2018"
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.ins.2020.11.053_b0025",
+        "doi-asserted-by": "crossref",
+        "first-page": "22",
+        "DOI": "10.1109/MS.2008.130",
+        "article-title": "Using static analysis to find bugs",
+        "volume": "25",
+        "author": "Ayewah",
+        "year": "2008",
+        "journal-title": "IEEE Software"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0030",
+        "unstructured": "P. Battaglia, J. Hamrick, V. Bapst, A. Sanchez-Gonzalez, V. F. Zambaldi, M. Malinowski, A. Tacchetti, D. Raposo, A. Santoro, R. Faulkner, et al., Relational Inductive Biases, Deep Learning, and Graph Networks. Computing Research Repository (CoRR); arXiv:1806.01261, 2018."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0035",
+        "series-title": "Proceedings of the 7th International Conference on Learning Representations (ICLR)",
+        "article-title": "Generative code modeling with graphs",
+        "author": "Brockschmidt",
+        "year": "2019"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.ins.2020.11.053_b0040",
+        "doi-asserted-by": "crossref",
+        "first-page": "18",
+        "DOI": "10.1109/MSP.2017.2693418",
+        "article-title": "Geometric deep learning: going beyond Euclidean data",
+        "volume": "34",
+        "author": "Bronstein",
+        "year": "2017",
+        "journal-title": "IEEE Signal Process. Mag."
+      },
+      {
+        "issue": "5",
+        "key": "10.1016/j.ins.2020.11.053_b0045",
+        "doi-asserted-by": "crossref",
+        "first-page": "579",
+        "DOI": "10.1109/TSE.2008.24",
+        "article-title": "Discovering neglected conditions in software by mining dependence graphs",
+        "volume": "34",
+        "author": "Chang",
+        "year": "2008",
+        "journal-title": "IEEE Trans. Software Eng."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0050",
+        "series-title": "Proceedings of the 18th International Symposium on Software Testing and Analysis (ISSTA)",
+        "first-page": "141",
+        "article-title": "Identifying bug signatures using discriminative graph mining",
+        "author": "Cheng",
+        "year": "2009"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0055",
+        "series-title": "Proceedings of the 33rd Conference on Neural Information Processing Systems (NIPS)",
+        "first-page": "15387",
+        "article-title": "Understanding the representation power of graph neural networks in learning graph topology",
+        "author": "Dehmamy",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0060",
+        "doi-asserted-by": "crossref",
+        "unstructured": "F. Eichinger, K. Bohm. Software-bug localization with graph mining, in: Managing and Mining Graph Data, 2010, pp. 515\u2013546.",
+        "DOI": "10.1007/978-1-4419-6045-0_17"
+      },
+      {
+        "issue": "01",
+        "key": "10.1016/j.ins.2020.11.053_b0065",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1142/S0218001414500013",
+        "article-title": "Graph matching and learning in pattern recognition in the last 10 years",
+        "volume": "28",
+        "author": "Foggia",
+        "year": "2014",
+        "journal-title": "Int. J. Pattern Recogn. Artif. Intell."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0070",
+        "unstructured": "S.M. Ghaffarian, H.R. Shahriari, Software vulnerability analysis and discovery using machine learning and data mining techniques: a survey, ACM Comput. Surveys (CSUR) 50 (4) (2017) 56:1\u201356:36"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0075",
+        "series-title": "Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering (ASE)",
+        "first-page": "317",
+        "article-title": "How many of all bugs do we find? A study of static bug detectors",
+        "author": "Habib",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0080",
+        "unstructured": "A. Habib, M. Pradel, Neural Bug Finding: A Study of Opportunities and Challenges. Computing Research Repository (CoRR); arXiv:1906.00307, 2019."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0085",
+        "doi-asserted-by": "crossref",
+        "unstructured": "C. Herley, P. van Oorschot, SoK: science, security and the elusive goal of security as a scientific pursuit, in: Proceedings of the 38th IEEE Symposium on Security and Privacy (SP), IEEE Computer Society, 2017, pp. 99\u2013120.",
+        "DOI": "10.1109/SP.2017.38"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0090",
+        "doi-asserted-by": "crossref",
+        "unstructured": "S. Horwitz, T. Reps, The use of program dependence graphs in software engineering, in: Proceedings of the 14th International Conference on Software Engineering ICSE, ACM Press, 1992, pp. 392\u2013411.",
+        "DOI": "10.1145/143062.143156"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0095",
+        "series-title": "Proceedings of the ACM Conference on Cloud Computing Security Workshop (CCSW)",
+        "first-page": "69",
+        "article-title": "AppMine: behavioral analytics for web application vulnerability detection",
+        "author": "Jana",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0100",
+        "series-title": "Proceedings of the 5th International Conference on Learning Representations (ICLR)",
+        "article-title": "Semi-supervised classification with graph convolutional networks",
+        "author": "Kipf",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0105",
+        "unstructured": "A. Krizhevsky, I. Sutskever, G. Hinton, ImageNet classification with deep convolutional neural networks, in: Proceedings of the 25th International Conference on Neural Information Processing Systems (NIPS), Curran Associates Inc., 2012, pp. 1097\u20131105."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.ins.2020.11.053_b0110",
+        "doi-asserted-by": "crossref",
+        "first-page": "323",
+        "DOI": "10.1145/161494.161501",
+        "article-title": "Undecidability of static analysis",
+        "volume": "1",
+        "author": "Landi",
+        "year": "1992",
+        "journal-title": "ACM Lett. Program. Lang. Syst. (LOPLAS)"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0115",
+        "series-title": "Proceedings of the 31st International Conference on Machine Learning (ICML)",
+        "first-page": "1188",
+        "article-title": "Distributed representations of sentences and documents",
+        "author": "Le",
+        "year": "2014"
+      },
+      {
+        "issue": "7553",
+        "key": "10.1016/j.ins.2020.11.053_b0120",
+        "doi-asserted-by": "crossref",
+        "first-page": "436",
+        "DOI": "10.1038/nature14539",
+        "article-title": "Deep learning",
+        "volume": "521",
+        "author": "LeCun",
+        "year": "2015",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0125",
+        "series-title": "Proceedings of the 4th International Conference on Learning Representations (ICLR)",
+        "article-title": "Gated graph sequence neural networks",
+        "author": "Li",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0130",
+        "doi-asserted-by": "crossref",
+        "first-page": "103184",
+        "DOI": "10.1109/ACCESS.2019.2930578",
+        "article-title": "A comparative study of deep learning-based vulnerability detection system",
+        "volume": "7",
+        "author": "Li",
+        "year": "2019",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0135",
+        "unstructured": "Z. Li, D. Zou, S. Xu, H. Jin, Y. Zhu, Z. Chen, S. Wang, J. Wang, SySeVR: A Framework for Using Deep Learning to Detect Software Vulnerabilities. Computing Research Repository (CoRR); arXiv:1807.06756, 2019."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0140",
+        "series-title": "Proceedings of the 25th Annual Network and Distributed System Security Symposium (NDSS)",
+        "article-title": "VulDeePecker: a deep learning-based system for vulnerability detection",
+        "author": "Li",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0145",
+        "doi-asserted-by": "crossref",
+        "first-page": "116309",
+        "DOI": "10.1109/ACCESS.2019.2936948",
+        "article-title": "Deep learning with customized abstract syntax tree for bug localization",
+        "volume": "7",
+        "author": "Liang",
+        "year": "2019",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.ins.2020.11.053_b0150",
+        "doi-asserted-by": "crossref",
+        "first-page": "253",
+        "DOI": "10.1007/s10044-012-0284-8",
+        "article-title": "The graph matching problem",
+        "volume": "16",
+        "author": "Livi",
+        "year": "2013",
+        "journal-title": "Pattern Anal. Appl."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0155",
+        "series-title": "Introduction to Information Retrieval",
+        "author": "Manning",
+        "year": "2008"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0160",
+        "series-title": "Proceedings of the 27th Annual Conference on Neural Information Processing Systems (NIPS)",
+        "first-page": "3111",
+        "article-title": "Distributed representations of words and phrases and their compositionality",
+        "author": "Mikolov",
+        "year": "2013"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0165",
+        "series-title": "Proceedings of the 13th AAAI Conference on Artificial Intelligence",
+        "first-page": "1287",
+        "article-title": "Convolutional neural networks over tree structures for programming language processing",
+        "author": "Mou",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0170",
+        "series-title": "Principles of Program Analysis",
+        "author": "Nielson",
+        "year": "1999"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0175",
+        "series-title": "Proceedings of the International Conference on Computational Science and its Applications (ICCSA)",
+        "first-page": "610",
+        "article-title": "Software fault localization via mining execution graphs",
+        "author": "Parsa",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0180",
+        "doi-asserted-by": "crossref",
+        "unstructured": "M. Pradel, K. Sen, DeepBugs: a learning approach to name-based bug detection, in: Proceedings of the Conference on Object Oriented Programming, Systems, Languages, and Applications (OOPSLA), 2018, pp. 147:1\u2013147:25.",
+        "DOI": "10.1145/3276517"
+      },
+      {
+        "issue": "11",
+        "key": "10.1016/j.ins.2020.11.053_b0185",
+        "doi-asserted-by": "crossref",
+        "first-page": "701",
+        "DOI": "10.1016/S0950-5849(98)00093-7",
+        "article-title": "Program analysis via graph reachability",
+        "volume": "40",
+        "author": "Reps",
+        "year": "1998",
+        "journal-title": "Inf. Software Technol."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0190",
+        "doi-asserted-by": "crossref",
+        "unstructured": "T. Reps, S. Horwitz, S. Sagiv, Precise interprocedural dataflow analysis via graph reachability. in: 22nd ACM Symposium on Principles of Programming Languages POPL, ACM Press, 1995, pp. 49\u201361.",
+        "DOI": "10.1145/199448.199462"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.ins.2020.11.053_b0195",
+        "doi-asserted-by": "crossref",
+        "first-page": "61",
+        "DOI": "10.1109/TNN.2008.2005605",
+        "article-title": "The graph neural network model",
+        "volume": "20",
+        "author": "Scarselli",
+        "year": "2009",
+        "journal-title": "IEEE Trans. Neural Networks"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.ins.2020.11.053_b0200",
+        "doi-asserted-by": "crossref",
+        "first-page": "11",
+        "DOI": "10.1145/2187671.2187673",
+        "article-title": "Mitigating program security vulnerabilities: approaches and challenges",
+        "volume": "44",
+        "author": "Shahriar",
+        "year": "2012",
+        "journal-title": "ACM Comput. Surveys (CSUR)"
+      },
+      {
+        "issue": "7587",
+        "key": "10.1016/j.ins.2020.11.053_b0205",
+        "doi-asserted-by": "crossref",
+        "first-page": "484",
+        "DOI": "10.1038/nature16961",
+        "article-title": "Mastering the game of go with deep neural networks and tree search",
+        "volume": "529",
+        "author": "Silver",
+        "year": "2016",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0210",
+        "unstructured": "I. Sutskever, O. Vinyals, Q. Le, Sequence to sequence learning with neural networks, in: Proceedings of the 27th International Conference on Neural Information Processing Systems (NIPS), MIT Press, 2014, pp. 3104\u20133112."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0215",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Y. Taigman, M. Yang, M. Ranzato, L. Wolf, DeepFace: closing the gap to human-level performance in face verification, in: Proceedings of the 2014 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), IEEE Computer Society, 2014, pp. 1701\u20131708.",
+        "DOI": "10.1109/CVPR.2014.220"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0220",
+        "series-title": "Proceedings of the 6th International Conference on Learning Representations (ICLR)",
+        "article-title": "Graph attention networks",
+        "author": "Velickovic",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0225",
+        "unstructured": "Z. Wu, S. Pan, F. Chen, G. Long, C. Zhang, P. Yu, A Comprehensive Survey on Graph Neural Networks. Computing Research Repository (CoRR); arXiv:1901.00596, 2019."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0230",
+        "series-title": "Proceedings of the 7th International Conference on Learning Representations (ICLR)",
+        "article-title": "How powerful are graph neural networks?",
+        "author": "Xu",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0235",
+        "series-title": "Proceedings of the 30th International Conference on Computer Aided Verification (CAV)",
+        "first-page": "27",
+        "article-title": "From programs to interpretable deep models and back",
+        "author": "Yahav",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0240",
+        "unstructured": "F. Yamaguchi, Pattern-Based Vulnerability Discovery. PhD thesis, Georg-August-University of Gottingen, Germany, 2015."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0245",
+        "unstructured": "J. Zhou, G. Cui, Z. Zhang, C. Yang, Z. Liu, M. Sun, Graph Neural Networks: A Review of Methods and Applications. Computing Research Repository (CoRR); arXiv:1812.08434, 2018."
+      },
+      {
+        "key": "10.1016/j.ins.2020.11.053_b0250",
+        "unstructured": "D. Zou, S. Wang, S. Xu, Z. Li, H. Jin, \u03bc VulDeePecker: A Deep Learning-Based System for Multiclass Vulnerability Detection. Computing Research Repository (CoRR); arXiv:2001.02334, 2020."
+      }
+    ],
+    "container-title": [
+      "Information Sciences"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0020025520311579?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0020025520311579?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          15
+        ]
+      ],
+      "date-time": "2021-01-15T01:20:55Z",
+      "timestamp": 1610673655000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0020025520311579"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          4
+        ]
+      ]
+    },
+    "references-count": 50,
+    "alternative-id": [
+      "S0020025520311579"
+    ],
+    "URL": "http://dx.doi.org/10.1016/j.ins.2020.11.053",
+    "relation": {},
+    "ISSN": [
+      "0020-0255"
+    ],
+    "issn-type": [
+      {
+        "value": "0020-0255",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          4
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Neural software vulnerability analysis using rich intermediate graph representations of programs",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Information Sciences",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.ins.2020.11.053",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "\u00a9 2020 Elsevier Inc. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ]
+  }
+}

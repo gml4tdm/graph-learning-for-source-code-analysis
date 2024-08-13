@@ -1,0 +1,403 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          21
+        ]
+      ],
+      "date-time": "2024-07-21T05:17:52Z",
+      "timestamp": 1721539072309
+    },
+    "reference-count": 38,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2020-01-01T00:00:00Z",
+          "timestamp": 1577836800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100004410",
+        "name": "Scientific and Technological Research Council of Turkey through the 1515 Frontier Research and Development Laboratories Support Program",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "5169902"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Access"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "DOI": "10.1109/access.2020.3016774",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          8,
+          14
+        ]
+      ],
+      "date-time": "2020-08-14T20:25:07Z",
+      "timestamp": 1597436707000
+    },
+    "page": "150672-150684",
+    "source": "Crossref",
+    "is-referenced-by-count": 45,
+    "title": [
+      "Vulnerability Prediction From Source Code Using Machine Learning"
+    ],
+    "prefix": "10.1109",
+    "volume": "8",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0002-8613-4071",
+        "authenticated-orcid": false,
+        "given": "Zeki",
+        "family": "Bilgin",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Mehmet Akif",
+        "family": "Ersoy",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0002-7908-1469",
+        "authenticated-orcid": false,
+        "given": "Elif Ustundag",
+        "family": "Soykan",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0001-8985-4974",
+        "authenticated-orcid": false,
+        "given": "Emrah",
+        "family": "Tomur",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0003-2069-7506",
+        "authenticated-orcid": false,
+        "given": "Pinar",
+        "family": "Comak",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0001-8878-9904",
+        "authenticated-orcid": false,
+        "given": "Leyli",
+        "family": "Karacay",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MSR.2019.00013"
+      },
+      {
+        "key": "ref33",
+        "year": "2020",
+        "journal-title": "Algodaily&#x2014;Algorithm for Encoding M-Ary Tree to Binary Tree"
+      },
+      {
+        "key": "ref32",
+        "year": "2020",
+        "journal-title": "Pycparser&#x2014;Parser for the C Language"
+      },
+      {
+        "key": "ref31",
+        "author": "cormen",
+        "year": "2009",
+        "journal-title": "Introduction to Algorithms"
+      },
+      {
+        "key": "ref30",
+        "author": "chess",
+        "year": "2007",
+        "journal-title": "Secure Programming with Static Analysis"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.1979.4766926"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9781107298019"
+      },
+      {
+        "key": "ref35",
+        "author": "abadi",
+        "year": "2015",
+        "journal-title": "TensorFlow Large-Scale Machine Learning on Heterogeneous Systems"
+      },
+      {
+        "key": "ref34",
+        "first-page": "2825",
+        "article-title": "Scikit-learn: Machine learning in Python",
+        "volume": "12",
+        "author": "pedregosa",
+        "year": "2011",
+        "journal-title": "J Mach Learn Res"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PIMRCW.2019.8880846"
+      },
+      {
+        "key": "ref11",
+        "article-title": "Artificial intelligence&#x2014;A European perspective",
+        "author": "craglia",
+        "year": "2018"
+      },
+      {
+        "key": "ref12",
+        "article-title": "Code2seq: Generating sequences from structured representations of code",
+        "author": "alon",
+        "year": "2018",
+        "journal-title": "arXiv 1808 01400"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3310273.3321560"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00086"
+      },
+      {
+        "key": "ref15",
+        "first-page": "10197",
+        "article-title": "Devign: Effective vulnerability identification by learning comprehensive program semantics via graph neural networks",
+        "author": "zhou",
+        "year": "2019",
+        "journal-title": "Proc Adv Neural Inf Process Syst"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICMLA.2018.00120"
+      },
+      {
+        "key": "ref17",
+        "year": "2020",
+        "journal-title": "Debian&#x2014;The Universal Operating System"
+      },
+      {
+        "key": "ref18",
+        "year": "2020",
+        "journal-title": "Github&#x2014;Distributed Version Control Software"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.6028/NIST.TN.1995"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3338906.3338941"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.6028/NIST.SP.500-326"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MSR.2019.00015"
+      },
+      {
+        "key": "ref3",
+        "article-title": "Information security",
+        "author": "ross",
+        "year": "2012"
+      },
+      {
+        "key": "ref6",
+        "article-title": "Evaluating vulnerability prediction models",
+        "author": "jimenez",
+        "year": "2018"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TFUZZ.2019.2958558"
+      },
+      {
+        "key": "ref5",
+        "author": "dowd",
+        "year": "2006",
+        "journal-title": "The Art of Software Security Assessment Identifying and Preventing Software Vulnerabilities"
+      },
+      {
+        "key": "ref8",
+        "article-title": "Systems and methods for combining static and dynamic code analysis",
+        "author": "mccorkendale",
+        "year": "2014"
+      },
+      {
+        "key": "ref7",
+        "article-title": "A review of machine learning in software vulnerability research",
+        "author": "abraham",
+        "year": "2017"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2010.81"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/GCWkshps45667.2019.9024520"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.70712"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3290353"
+      },
+      {
+        "key": "ref22",
+        "first-page": "1",
+        "article-title": "The beauty and the beast: Vulnerabilities in red hat&#x2019;s packages",
+        "author": "neuhaus",
+        "year": "2009",
+        "journal-title": "Proc USENIX Annu Tech Conf"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1315245.1315311"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180445.3180453"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635880"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227135"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISSRE.2014.32"
+      }
+    ],
+    "container-title": [
+      "IEEE Access"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/6287639/8948470/09167194.pdf?arnumber=9167194",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2022-01-12T15:56:46Z",
+      "timestamp": 1642003006000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9167194/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "references-count": 38,
+    "URL": "http://dx.doi.org/10.1109/access.2020.3016774",
+    "relation": {},
+    "ISSN": [
+      "2169-3536"
+    ],
+    "issn-type": [
+      {
+        "value": "2169-3536",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    }
+  }
+}

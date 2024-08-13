@@ -1,0 +1,386 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          28
+        ]
+      ],
+      "date-time": "2024-05-28T18:56:55Z",
+      "timestamp": 1716922615602
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 35,
+    "publisher": "ACM",
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          13
+        ]
+      ]
+    },
+    "DOI": "10.1145/3387904.3389281",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          12
+        ]
+      ],
+      "date-time": "2020-09-12T20:04:38Z",
+      "timestamp": 1599941078000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 26,
+    "title": [
+      "Exploiting Code Knowledge Graph for Bug Localization via Bi-directional Attention"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Jinglei",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "National Engineering Research Center for Software Engineering, Peking University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Rui",
+        "family": "Xie",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "National Engineering Research Center for Software Engineering, Peking University, Beijing, China and School of Software and Microelectronics, Peking University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Wei",
+        "family": "Ye",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "National Engineering Research Center for Software Engineering, Peking University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Yuhan",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "National Engineering Research Center for Software Engineering, Peking University, Beijing, China and School of Software and Microelectronics, Peking University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Shikun",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "National Engineering Research Center for Software Engineering, Peking University, Beijing, China"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          9,
+          12
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "volume-title": "Proceedings of the Testing: Academic and Industrial Conference Practice and Research Techniques - MUTATION (TAICPART-MUTATION '07)",
+        "author": "Abreu Rui"
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "volume-title": "Advances in Neural Information Processing Systems 26: 27th Annual Conference on Neural Information Processing Systems",
+        "author": "Bordes Antoine",
+        "year": "2013"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2009.5306315"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/265"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "volume-title": "Proceedings of the Twenty-Fifth International Joint Conference on Artificial Intelligence, IJCAI 2016",
+        "author": "Huo Xuan",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "unstructured": "Guoliang Ji Shizhu He Liheng Xu Kang Liu and Jun Zhao. 2015. Knowledge Graph Embedding via Dynamic Mapping Matrix. In Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing of the Asian Federation of Natural Language Processing ACL 2015 July 26-31 2015 Beijing China Volume 1: Long Papers. 687--696. https://www.aclweb.org/anthology/P15-1067/  Guoliang Ji Shizhu He Liheng Xu Kang Liu and Jun Zhao. 2015. Knowledge Graph Embedding via Dynamic Mapping Matrix. In Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing of the Asian Federation of Natural Language Processing ACL 2015 July 26-31 2015 Beijing China Volume 1: Long Papers. 687--696. https://www.aclweb.org/anthology/P15-1067/"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/N15-1011"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "volume-title": "20th IEEE/ACM International Conference on Automated Software Engineering (ASE 2005)",
+        "author": "James",
+        "year": "2005"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "volume-title": "Proceedings of the 25th International Conference on Program Comprehension, ICPC 2017",
+        "author": "Lam An Ngoc",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2019.2936948"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2886521.2886624"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11390-017-1718-y"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2019.2940557"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2010.04.002"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "volume-title": "Introduction to information retrieval",
+        "author": "Manning Christopher D.",
+        "year": "1809"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "volume-title": "Advances in Neural Information Processing Systems 26: 27th Annual Conference on Neural Information Processing Systems 2013. Proceedings of a meeting held",
+        "author": "Mikolov Tomas",
+        "year": "2013"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSME.2014.37"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "volume-title": "TBCNN: A Tree-Based Convolutional Neural Network for Programming Language Processing. CoRR abs/1409.5718",
+        "author": "Mou Lili",
+        "year": "2014"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2747013.2747133"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3345629.3345632"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "volume-title": "Proceedings of the 38th International Conference on Software Engineering, ICSE 2016",
+        "author": "Ray Baishakhi",
+        "year": "2016"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "volume-title": "Marcos Lordello Chaim, Higor Amario de Souza, and Fabio Kon.",
+        "author": "Ribeiro Henrique Lemos",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2019.2894976"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/smr.1801"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2893873.2894046"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "volume-title": "Improving Bug Localization with Character-Level Convolutional Neural Network and Recurrent Neural Network. In 25th Asia-Pacific Software Engineering Conference, APSEC 2018",
+        "author": "Xiao Yan",
+        "year": "2018"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2018.08.002"
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/APSEC.2017.40"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "volume-title": "DeepLink: A Code Knowledge Graph Based Deep Learning Approach for Issue-Commit Link Recovery. In 26th IEEE International Conference on Software Analysis, Evolution and Reengineering, SANER 2019",
+        "author": "Xie Rui",
+        "year": "2019"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635874"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "volume-title": "Bug Localization Based on Code Change Histories and Bug Reports. In 2015 Asia-Pacific Software Engineering Conference, APSEC 2015",
+        "author": "Youm Klaus Changsun",
+        "year": "2015"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2016.11.002"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mengshi Zhang Xia Li Lingming Zhang and Sarfraz Khurshid. 2017. Boosting spectrum-based fault localization using PageRank. In ISSTA. ACM 261--272.  Mengshi Zhang Xia Li Lingming Zhang and Sarfraz Khurshid. 2017. Boosting spectrum-based fault localization using PageRank. In ISSTA. ACM 261--272.",
+        "DOI": "10.1145/3092703.3092731"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227210"
+      }
+    ],
+    "event": {
+      "name": "ICPC '20: 28th International Conference on Program Comprehension",
+      "location": "Seoul Republic of Korea",
+      "acronym": "ICPC '20",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE CS"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 28th International Conference on Program Comprehension"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3387904.3389281",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          7
+        ]
+      ],
+      "date-time": "2023-01-07T09:11:12Z",
+      "timestamp": 1673082672000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3387904.3389281"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          13
+        ]
+      ]
+    },
+    "references-count": 35,
+    "alternative-id": [
+      "10.1145/3387904.3389281",
+      "10.1145/3387904"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3387904.3389281",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          13
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2020-09-12",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

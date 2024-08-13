@@ -1,0 +1,770 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T05:55:45Z",
+      "timestamp": 1721368545194
+    },
+    "reference-count": 98,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "4",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2022-04-01T00:00:00Z",
+          "timestamp": 1648771200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2022-04-01T00:00:00Z",
+          "timestamp": 1648771200000
+        },
+        "content-version": "am",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2022-04-01T00:00:00Z",
+          "timestamp": 1648771200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              1
+            ]
+          ],
+          "date-time": "2022-04-01T00:00:00Z",
+          "timestamp": 1648771200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000001",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "CCF1845893",
+          "CCF 1822965",
+          "CNS 1842456"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IIEEE Trans. Software Eng."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1109/tse.2020.3020502",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          8,
+          31
+        ]
+      ],
+      "date-time": "2020-08-31T21:22:13Z",
+      "timestamp": 1598908933000
+    },
+    "page": "1385-1399",
+    "source": "Crossref",
+    "is-referenced-by-count": 43,
+    "title": [
+      "CODIT: Code Editing With Tree-Based Neural Models"
+    ],
+    "prefix": "10.1109",
+    "volume": "48",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0002-6889-7171",
+        "authenticated-orcid": false,
+        "given": "Saikat",
+        "family": "Chakraborty",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0003-3224-6876",
+        "authenticated-orcid": false,
+        "given": "Yangruibo",
+        "family": "Ding",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0002-5819-9900",
+        "authenticated-orcid": false,
+        "given": "Miltiadis",
+        "family": "Allamanis",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0003-3406-5235",
+        "authenticated-orcid": false,
+        "given": "Baishakhi",
+        "family": "Ray",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1806799.1806847"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2013.6693078"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MSR.2015.11"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2591062.2591114"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635898"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2013.6693095"
+      },
+      {
+        "key": "ref7",
+        "article-title": "Visual studio (https://visualstudio.microsoft.com)"
+      },
+      {
+        "key": "ref8",
+        "article-title": "Eclipse IDE (https://www.eclipse.org)",
+        "author": "Foundation"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1932682.1869486"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1449955.1449788"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2666356.2594321"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2351676.2351753"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1357010.1352618"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2950290.2950333"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227191"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2544173.2509544"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227192"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2015.58"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00021"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1993316.1993537"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2017.44"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606596"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2004.52"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2005.72"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.20"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3212695"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3240732"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2019.2940179"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3379597.3387491"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MSR.2017.24"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227135"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635875"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3106237.3106290"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P18-1221"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/E17-1083"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF01692511"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIT.1956.1056813"
+      },
+      {
+        "key": "ref38",
+        "volume-title": "Introduction to Automata Theory, Languages, and Computation",
+        "author": "Hopcroft",
+        "year": "2008"
+      },
+      {
+        "key": "ref39",
+        "first-page": "7",
+        "article-title": "Neural machine translation by jointly learning to align and translate",
+        "author": "Bahdanau"
+      },
+      {
+        "key": "ref40",
+        "first-page": "2091",
+        "article-title": "A convolutional attention network for extreme summarization of source code",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "author": "Allamanis"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P17-4012"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2642937.2642982"
+      },
+      {
+        "key": "ref43",
+        "article-title": "Speech understanding systems: A summary of results of the five-year research effort",
+        "volume": "17",
+        "author": "Reddy",
+        "year": "1977"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2610384.2628055"
+      },
+      {
+        "key": "ref46",
+        "first-page": "200",
+        "article-title": "Deep code comment generation",
+        "volume-title": "Proc. IEEE/ACM 26th Int. Conf. Program Comprehension",
+        "author": "Hu"
+      },
+      {
+        "key": "ref47",
+        "article-title": "Equivalence of dataflow graphs via rewrite rules using a graph-to-sequence neural model",
+        "author": "Kommrusch",
+        "year": "2020"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884877"
+      },
+      {
+        "key": "ref49",
+        "article-title": "code2seq: Generating sequences from structured representations of code",
+        "author": "Alon",
+        "year": "2018"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0022-0000(80)90002-1"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAIC.PART.2007.13"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2017.8115675"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3213846.3213871"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2771783.2771791"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606626"
+      },
+      {
+        "key": "ref56",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00020"
+      },
+      {
+        "key": "ref57",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884848"
+      },
+      {
+        "key": "ref58",
+        "first-page": "708",
+        "article-title": "Bugram: Bug detection with n-gram language models",
+        "volume-title": "Proc. 31st IEEE/ACM Int. Conf. Autom. Softw. Eng.",
+        "author": "Wang"
+      },
+      {
+        "key": "ref59",
+        "article-title": "Learning to represent programs with graphs",
+        "author": "Allamanis",
+        "year": "2017"
+      },
+      {
+        "key": "ref60",
+        "first-page": "87",
+        "article-title": "Deep learning code fragments for code clone detection",
+        "volume-title": "Proc. 31st IEEE/ACM Int. Conf. Autom. Softw. Eng.",
+        "author": "White"
+      },
+      {
+        "key": "ref61",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3180167"
+      },
+      {
+        "key": "ref62",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P17-1041"
+      },
+      {
+        "key": "ref63",
+        "first-page": "649",
+        "article-title": "Structured generative models of natural source code",
+        "volume-title": "Proc. Int. Conf. Mach. Learn.",
+        "author": "Maddison"
+      },
+      {
+        "key": "ref64",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2015.336"
+      },
+      {
+        "key": "ref65",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3290353"
+      },
+      {
+        "key": "ref66",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2661136.2661148"
+      },
+      {
+        "key": "ref67",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2015.74"
+      },
+      {
+        "key": "ref68",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2642937.2643010"
+      },
+      {
+        "key": "ref69",
+        "first-page": "2547",
+        "article-title": "Tree-to-tree neural networks for program translation",
+        "author": "Chen",
+        "year": "2018"
+      },
+      {
+        "key": "ref70",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v31i1.10742"
+      },
+      {
+        "key": "ref71",
+        "first-page": "6563",
+        "article-title": "Code generation as a dual task of code summarization",
+        "volume-title": "Proc. Int. Conf. Neural Inf. Process. Syst.",
+        "author": "Wei"
+      },
+      {
+        "key": "ref72",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2020.acl-main.449"
+      },
+      {
+        "key": "ref73",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2019/552"
+      },
+      {
+        "key": "ref74",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3238190"
+      },
+      {
+        "key": "ref75",
+        "article-title": "Neural program search: Solving programming tasks from description and examples",
+        "author": "Polosukhin",
+        "year": "2018"
+      },
+      {
+        "key": "ref76",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635901"
+      },
+      {
+        "key": "ref77",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2018.2832048"
+      },
+      {
+        "key": "ref78",
+        "article-title": "Generative code modeling with graphs",
+        "author": "Brockschmidt",
+        "year": "2018"
+      },
+      {
+        "key": "ref79",
+        "article-title": "Learning to represent edits",
+        "author": "Yin",
+        "year": "2018"
+      },
+      {
+        "key": "ref80",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3387940.3392181"
+      },
+      {
+        "key": "ref81",
+        "article-title": "Hoppity: Learning graph transformations to detect and fix bugs in programs",
+        "volume-title": "Proc. Int. Conf. Learn. Representations",
+        "author": "Dinella"
+      },
+      {
+        "key": "ref82",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568258"
+      },
+      {
+        "key": "ref83",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227211"
+      },
+      {
+        "key": "ref84",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2714064.2660217"
+      },
+      {
+        "key": "ref85",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2384616.2384626"
+      },
+      {
+        "key": "ref86",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2011.104"
+      },
+      {
+        "key": "ref87",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2786805.2786811"
+      },
+      {
+        "key": "ref88",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3180233"
+      },
+      {
+        "key": "ref89",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606623"
+      },
+      {
+        "key": "ref90",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884807"
+      },
+      {
+        "key": "ref91",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CEC.2008.4630793"
+      },
+      {
+        "key": "ref92",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2016.76"
+      },
+      {
+        "key": "ref93",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1240624.1240715"
+      },
+      {
+        "key": "ref94",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-87875-9_13"
+      },
+      {
+        "key": "ref95",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3106237.3106300"
+      },
+      {
+        "key": "ref96",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1753326.1753478"
+      },
+      {
+        "key": "ref97",
+        "article-title": "Neural sketch learning for conditional program generation",
+        "author": "Murali",
+        "year": "2017"
+      },
+      {
+        "key": "ref98",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4615-2205-8"
+      },
+      {
+        "key": "ref99",
+        "article-title": "ENCORE: Ensemble learning using convolution neural machine translation for automatic program repair",
+        "author": "Lutellier",
+        "year": "2019"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://ieeexplore.ieee.org/ielam/32/9758085/9181462-aam.pdf",
+        "content-type": "application/pdf",
+        "content-version": "am",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/32/9758085/09181462.pdf?arnumber=9181462",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          9
+        ]
+      ],
+      "date-time": "2024-01-09T23:34:39Z",
+      "timestamp": 1704843279000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9181462/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          1
+        ]
+      ]
+    },
+    "references-count": 98,
+    "journal-issue": {
+      "issue": "4"
+    },
+    "URL": "http://dx.doi.org/10.1109/tse.2020.3020502",
+    "relation": {},
+    "ISSN": [
+      "0098-5589",
+      "1939-3520",
+      "2326-3881"
+    ],
+    "issn-type": [
+      {
+        "value": "0098-5589",
+        "type": "print"
+      },
+      {
+        "value": "1939-3520",
+        "type": "electronic"
+      },
+      {
+        "value": "2326-3881",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          1
+        ]
+      ]
+    }
+  }
+}

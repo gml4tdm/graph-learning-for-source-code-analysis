@@ -1,0 +1,419 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          18
+        ]
+      ],
+      "date-time": "2024-07-18T01:30:35Z",
+      "timestamp": 1721266235795
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 40,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              10,
+              26
+            ]
+          ],
+          "date-time": "2019-10-26T00:00:00Z",
+          "timestamp": 1572048000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 365,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000001",
+        "name": "NSF",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "CCF-1464439"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          26
+        ]
+      ]
+    },
+    "DOI": "10.1145/3236024.3236059",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          29
+        ]
+      ],
+      "date-time": "2018-10-29T12:06:00Z",
+      "timestamp": 1540814760000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 42,
+    "title": [
+      "Path-based function embedding and its application to error-handling specification mining"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Daniel",
+        "family": "DeFreez",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of California at Davis, USA"
+          }
+        ]
+      },
+      {
+        "given": "Aditya V.",
+        "family": "Thakur",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of California at Davis, USA"
+          }
+        ]
+      },
+      {
+        "given": "Cindy",
+        "family": "Rubio-Gonz\u00e1lez",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of California at Davis, USA"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          26
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-00593-0_25"
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3192366.3192412"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10791-008-9066-8"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "unstructured": "Christian Borgelt. 2016. Eclat/LCM - Frequent Item Set Mining. http://www. borgelt.net/eclat.html. (2016). Accessed: 2016-04-29.  Christian Borgelt. 2016. Eclat/LCM - Frequent Item Set Mining. http://www. borgelt.net/eclat.html. (2016). Accessed: 2016-04-29."
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1390630.1390664"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/502034.502041"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "unstructured": "502041  502041"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1368088.1368132"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "unstructured": "1368132  1368132"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-00768-2_26"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "unstructured": "Geoffrey E Hinton James L Mcclelland and David E Rumelhart. 1986. Distributed representations Parallel distributed processing: explorations in the microstructure of cognition vol. 1: foundations. (1986).   Geoffrey E Hinton James L Mcclelland and David E Rumelhart. 1986. Distributed representations Parallel distributed processing: explorations in the microstructure of cognition vol. 1: foundations. (1986)."
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/B:LIDA.0000048322.42751.ca"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "volume-title": "8th International Symposium, SAS 2001, Paris, France, July 16-18, 2001, Proceedings (Lecture Notes in Computer Science), Patrick Cousot (Ed.)",
+        "volume": "2126",
+        "author": "Komondoor Raghavan",
+        "year": "2001",
+        "unstructured": "Raghavan Komondoor and Susan Horwitz . 2001 . Using Slicing to Identify Duplication in Source Code. In Static Analysis , 8th International Symposium, SAS 2001, Paris, France, July 16-18, 2001, Proceedings (Lecture Notes in Computer Science), Patrick Cousot (Ed.) , Vol. 2126 . Springer, 40\u201356. Raghavan Komondoor and Susan Horwitz. 2001. Using Slicing to Identify Duplication in Source Code. In Static Analysis, 8th International Symposium, SAS 2001, Paris, France, July 16-18, 2001, Proceedings (Lecture Notes in Computer Science), Patrick Cousot (Ed.), Vol. 2126. Springer, 40\u201356."
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "volume-title": "2nd IEEE / ACM International Symposium on Code Generation and Optimization (CGO 2004)",
+        "author": "Lattner Chris",
+        "year": "2004",
+        "unstructured": "Chris Lattner and Vikram S. Adve . 2004. LLVM: A Compilation Framework for Lifelong Program Analysis &amp; Transformation . In 2nd IEEE / ACM International Symposium on Code Generation and Optimization (CGO 2004) , 20-24 March 2004 , San Jose, CA, USA. IEEE Computer Society, 75\u201388. Chris Lattner and Vikram S. Adve. 2004. LLVM: A Compilation Framework for Lifelong Program Analysis &amp; Transformation. In 2nd IEEE / ACM International Symposium on Code Generation and Optimization (CGO 2004), 20-24 March 2004, San Jose, CA, USA. IEEE Computer Society, 75\u201388."
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "volume-title": "An Empirical Evaluation of doc2vec with Practical Insights into Document Embedding Generation. CoRR abs/1607.05368",
+        "author": "Lau Jey Han",
+        "year": "2016",
+        "unstructured": "Jey Han Lau and Timothy Baldwin . 2016. An Empirical Evaluation of doc2vec with Practical Insights into Document Embedding Generation. CoRR abs/1607.05368 ( 2016 ). arXiv: 1607.05368 http://arxiv.org/abs/1607.05368 Jey Han Lau and Timothy Baldwin. 2016. An Empirical Evaluation of doc2vec with Practical Insights into Document Embedding Generation. CoRR abs/1607.05368 (2016). arXiv: 1607.05368 http://arxiv.org/abs/1607.05368"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MS.2003.1241364"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0164-1212(87)90032-X"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2622669"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "first-page": "2579",
+        "article-title": "Visualizing data using t-SNE",
+        "author": "van der Maaten Laurens",
+        "year": "2008",
+        "unstructured": "Laurens van der Maaten and Geoffrey Hinton . 2008 . Visualizing data using t-SNE . Journal of Machine Learning Research 9 , Nov (2008), 2579 \u2013 2605 . Laurens van der Maaten and Geoffrey Hinton. 2008. Visualizing data using t-SNE. Journal of Machine Learning Research 9, Nov (2008), 2579\u20132605.",
+        "journal-title": "Journal of Machine Learning Research 9"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "unstructured": "Roy A Maxion and Rachel R Roberts. 2004. Proper use of ROC curves in Intrusion/Anomaly Detection.  Roy A Maxion and Rachel R Roberts. 2004. Proper use of ROC curves in Intrusion/Anomaly Detection."
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "unstructured": "Tomas Mikolov Kai Chen Greg S. Corrado and Jeffrey Dean. 2013. Efficient Estimation of Word Representations in Vector Space. (2013). http://arxiv.org/ abs/1301.3781  Tomas Mikolov Kai Chen Greg S. Corrado and Jeffrey Dean. 2013. Efficient Estimation of Word Representations in Vector Space. (2013). http://arxiv.org/ abs/1301.3781"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2815400.2815422"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2017.47"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "unstructured": "47  47"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "volume-title": "Manning",
+        "author": "Pennington Jeffrey",
+        "year": "2014",
+        "unstructured": "Jeffrey Pennington , Richard Socher , and Christopher D . Manning . 2014 . Glove : Global Vectors for Word Representation. In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, EMNLP 2014, October 25-29, 2014, Doha, Qatar, A meeting of SIGDAT, a Special Interest Group of the ACL, Alessandro Moschitti, Bo Pang, and Walter Daelemans (Eds.). ACL, 1532\u20131543. http://aclweb.org/anthology/D/D14/D14-1162.pdf Jeffrey Pennington, Richard Socher, and Christopher D. Manning. 2014. Glove: Global Vectors for Word Representation. In Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, EMNLP 2014, October 25-29, 2014, Doha, Qatar, A meeting of SIGDAT, a Special Interest Group of the ACL, Alessandro Moschitti, Bo Pang, and Walter Daelemans (Eds.). ACL, 1532\u20131543. http://aclweb.org/anthology/D/D14/D14-1162.pdf"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2623330.2623732"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "unstructured": "Michael Pradel and Koushik Sen. 2018. Deep Learning to Find Bugs. (2018). To appear in Conference on Object-oriented Programming Systems Languages and Applications OOPSLA.  Michael Pradel and Koushik Sen. 2018. Deep Learning to Find Bugs. (2018). To appear in Conference on Object-oriented Programming Systems Languages and Applications OOPSLA."
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "volume-title": "Proceedings of the LREC 2010 Workshop on New Challenges for NLP Frameworks. ELRA, Valletta, Malta, 45\u201350",
+        "author": "\u0158eh\u016f\u0159ek Radim",
+        "year": "2010",
+        "unstructured": "Radim \u0158eh\u016f\u0159ek and Petr Sojka . 2010 . Software Framework for Topic Modelling with Large Corpora . In Proceedings of the LREC 2010 Workshop on New Challenges for NLP Frameworks. ELRA, Valletta, Malta, 45\u201350 . http://is.muni.cz/publication/ 884893/en. Radim \u0158eh\u016f\u0159ek and Petr Sojka. 2010. Software Framework for Topic Modelling with Large Corpora. In Proceedings of the LREC 2010 Workshop on New Challenges for NLP Frameworks. ELRA, Valletta, Malta, 45\u201350. http://is.muni.cz/publication/ 884893/en."
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.scico.2005.02.009"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1542476.1542506"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1806672.1806687"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "unstructured": "1806687  1806687"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2001420.2001434"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/DSN.2013.6575307"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/872757.872770"
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2009.5070548"
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "volume-title": "Dynamic Neural Program Embedding for Program Repair. In International Conference on Learning Representations (ICLR\u201918)",
+        "author": "Wang Ke",
+        "year": "2018",
+        "unstructured": "Ke Wang , Rishabh Singh , and Zhendong Su . 2018 . Dynamic Neural Program Embedding for Program Repair. In International Conference on Learning Representations (ICLR\u201918) . Ke Wang, Rishabh Singh, and Zhendong Su. 2018. Dynamic Neural Program Embedding for Program Repair. In International Conference on Learning Representations (ICLR\u201918)."
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1028976.1029011"
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "unstructured": "1029011  1029011"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-31980-1_30"
+      }
+    ],
+    "event": {
+      "name": "ESEC/FSE '18: 26th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
+      "location": "Lake Buena Vista FL USA",
+      "acronym": "ESEC/FSE '18",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 2018 26th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3236024.3236059",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3236024.3236059",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          8
+        ]
+      ],
+      "date-time": "2023-01-08T22:09:14Z",
+      "timestamp": 1673215754000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3236024.3236059"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          26
+        ]
+      ]
+    },
+    "references-count": 40,
+    "alternative-id": [
+      "10.1145/3236024.3236059",
+      "10.1145/3236024"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3236024.3236059",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          26
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2018-10-26",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,595 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          20
+        ]
+      ],
+      "date-time": "2024-07-20T08:21:31Z",
+      "timestamp": 1721463691201
+    },
+    "reference-count": 66,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2019-05-01T00:00:00Z",
+          "timestamp": 1556668800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2019-05-01T00:00:00Z",
+          "timestamp": 1556668800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2019-05-01T00:00:00Z",
+          "timestamp": 1556668800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          5
+        ]
+      ]
+    },
+    "DOI": "10.1109/icse.2019.00086",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          8,
+          27
+        ]
+      ],
+      "date-time": "2019-08-27T01:10:51Z",
+      "timestamp": 1566868251000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 350,
+    "title": [
+      "A Novel Neural Source Code Representation Based on Abstract Syntax Tree"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Jian",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Xu",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Hongyu",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Hailong",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Kaixuan",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Xudong",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2642937.2642982"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2009.5070536"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884848"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227135"
+      },
+      {
+        "key": "ref31",
+        "article-title": "Recurrent neural network based language model",
+        "author": "mikolov",
+        "year": "2010",
+        "journal-title": "Eleventh Annual Conference of the International Speech Communication Association"
+      },
+      {
+        "key": "ref30",
+        "author": "gosling",
+        "year": "2014",
+        "journal-title": "The java language specification java se 8 edition"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.295894"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "crossref",
+        "first-page": "368",
+        "DOI": "10.1109/ICSM.1998.738528",
+        "article-title": "Clone detection using abstract syntax trees",
+        "author": "baxter",
+        "year": "1998",
+        "journal-title": "Software Maintenance 1998 Proceedings International Conference on"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D15-1167"
+      },
+      {
+        "key": "ref34",
+        "author": "bahdanau",
+        "year": "2014",
+        "journal-title": "Neural machine translation by jointly learning to align and translate"
+      },
+      {
+        "key": "ref60",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884804"
+      },
+      {
+        "key": "ref62",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3236024.3236068"
+      },
+      {
+        "key": "ref61",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3276517"
+      },
+      {
+        "key": "ref63",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2015.73"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/567532.567556"
+      },
+      {
+        "key": "ref64",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970357"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/3-540-12925-1_33"
+      },
+      {
+        "key": "ref65",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2017.9"
+      },
+      {
+        "key": "ref66",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3180167"
+      },
+      {
+        "key": "ref29",
+        "article-title": "Llvms analysis and transform passes",
+        "year": "0"
+      },
+      {
+        "key": "ref2",
+        "first-page": "4",
+        "article-title": "Convolutional neural networks over tree structures for programming language processing",
+        "volume": "2",
+        "author": "mou",
+        "year": "2016",
+        "journal-title": "AAAI"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2007.03.004"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0218488598000094"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNN.2003.813831"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/W16-1610"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2939672.2939751"
+      },
+      {
+        "key": "ref23",
+        "first-page": "1604",
+        "article-title": "Long short-term memory over recursive structures",
+        "volume": "37",
+        "author": "zhu",
+        "year": "2015",
+        "journal-title": "Proceedings of the 32Nd International Conference on International Conference on Machine Learning"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3196398.3196431"
+      },
+      {
+        "key": "ref25",
+        "article-title": "Learning to represent programs with graphs",
+        "author": "allamanis",
+        "year": "2018",
+        "journal-title": "International Conference on Learning Representations"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/D14-1181"
+      },
+      {
+        "key": "ref51",
+        "author": "zaremba",
+        "year": "2014",
+        "journal-title": "Learning to execute"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2786805.2786849"
+      },
+      {
+        "key": "ref58",
+        "doi-asserted-by": "crossref",
+        "first-page": "419",
+        "DOI": "10.1145/2666356.2594321",
+        "article-title": "Code completion with statistical language models",
+        "volume": "49",
+        "author": "raychev",
+        "year": "2014",
+        "journal-title": "ACM SIGPLAN Notices"
+      },
+      {
+        "key": "ref57",
+        "author": "allamanis",
+        "year": "2017",
+        "journal-title": "A survey of machine learning for big code and naturalness"
+      },
+      {
+        "key": "ref56",
+        "first-page": "103",
+        "article-title": "Supporting program comprehension using semantic and structural information",
+        "author": "maletic",
+        "year": "2001",
+        "journal-title": "Proceedings of the 23rd International Conference on Software Engineering"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.30"
+      },
+      {
+        "key": "ref54",
+        "first-page": "64",
+        "article-title": "A survey on software clone detection research",
+        "volume": "541",
+        "author": "roy",
+        "year": "2007",
+        "journal-title": "Queens School of Computing TR"
+      },
+      {
+        "key": "ref53",
+        "author": "li",
+        "year": "2015",
+        "journal-title": "Gated graph sequence neural networks"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/265"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2017.8115626"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227210"
+      },
+      {
+        "key": "ref40",
+        "first-page": "129",
+        "article-title": "Parsing natural scenes and natural language with recursive neural networks",
+        "author": "socher",
+        "year": "2011",
+        "journal-title": "Proceedings of the 28th International Conference on Machine Learning (ICML-11)"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/(SICI)1097-4571(199009)41:6<391::AID-ASI1>3.0.CO;2-9"
+      },
+      {
+        "key": "ref13",
+        "first-page": "993",
+        "article-title": "Latent dirichlet allocation",
+        "volume": "3",
+        "author": "blei",
+        "year": "2003",
+        "journal-title": "Journal of Machine Learning Research"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-008-9089-1"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2009.5306318"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2012.6240488"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606598"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1006/ijhc.2000.0410"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/72.279181"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884877"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2002.1019480"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/423"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970326"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2016.2584050"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-011-9173-9"
+      },
+      {
+        "key": "ref49",
+        "first-page": "1",
+        "article-title": "Understanding semi-structured merge conflict characteristics in open-source java projects",
+        "author": "accioly",
+        "year": "2017",
+        "journal-title": "Empirical Software Engineering"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1810295.1810335"
+      },
+      {
+        "key": "ref46",
+        "author": "kingma",
+        "year": "2014",
+        "journal-title": "Adam A method for stochastic optimization"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-012-9230-z"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2745802.2745821"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSME.2014.77"
+      },
+      {
+        "key": "ref42",
+        "first-page": "3111",
+        "article-title": "Distributed representations of words and phrases and their compositionality",
+        "author": "mikolov",
+        "year": "2013",
+        "journal-title": "Advances in neural information processing systems"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/P15-1150"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2005.06.044"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2950290.2950334"
+      }
+    ],
+    "event": {
+      "name": "2019 IEEE/ACM 41st International Conference on Software Engineering (ICSE)",
+      "location": "Montreal, QC, Canada",
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            5,
+            25
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2019,
+            5,
+            31
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2019 IEEE/ACM 41st International Conference on Software Engineering (ICSE)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/8790403/8811891/08812062.pdf?arnumber=8812062",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2022-07-19T20:19:41Z",
+      "timestamp": 1658261981000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8812062/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          5
+        ]
+      ]
+    },
+    "references-count": 66,
+    "URL": "http://dx.doi.org/10.1109/icse.2019.00086",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          5
+        ]
+      ]
+    }
+  }
+}

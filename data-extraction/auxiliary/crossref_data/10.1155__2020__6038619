@@ -1,0 +1,384 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          20
+        ]
+      ],
+      "date-time": "2024-07-20T07:52:33Z",
+      "timestamp": 1721461953417
+    },
+    "reference-count": 28,
+    "publisher": "Hindawi Limited",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              4,
+              6
+            ]
+          ],
+          "date-time": "2020-04-06T00:00:00Z",
+          "timestamp": 1586131200000
+        },
+        "content-version": "unspecified",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100012166",
+        "name": "National Key Research and Development Program of China",
+        "doi-asserted-by": "crossref",
+        "award": [
+          "2018YFB1003801",
+          "61902114",
+          "Q20171008",
+          "HBAM201901"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Mathematical Problems in Engineering"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          6
+        ]
+      ]
+    },
+    "abstract": "<jats:p>Research on software defect prediction has achieved great success at modeling predictors. To build more accurate predictors, a number of hand-crafted features are proposed, such as static code features, process features, and social network features. Few models, however, consider the semantic and structural features of programs. Understanding the context information of source code files could explain a lot about the cause of defects in software. In this paper, we leverage representation learning for semantic and structural features generation. Specifically, we first extract token vectors of code files based on the Abstract Syntax Trees (ASTs) and then feed the token vectors into Convolutional Neural Network (CNN) to automatically learn semantic features. Meanwhile, we also construct a complex network model based on the dependencies between code files, namely, software network (SN). After that, to learn the structural features, we apply the network embedding method to the resulting SN. Finally, we build a novel software defect prediction model based on the learned semantic and structural features (SDP-S2S). We evaluated our method on 6 projects collected from public PROMISE repositories. The results suggest that the contribution of structural features extracted from software network is prominent, and when combined with semantic features, the results seem to be better. In addition, compared with the traditional hand-crafted features, the <jats:italic>F</jats:italic>-measure values of SDP-S2S are generally increased, with a maximum growth rate of 99.5%. We also explore the parameter sensitivity in the learning process of semantic and structural features and provide guidance for the optimization of predictors.</jats:p>",
+    "DOI": "10.1155/2020/6038619",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          6
+        ]
+      ],
+      "date-time": "2020-04-06T23:30:53Z",
+      "timestamp": 1586215853000
+    },
+    "page": "1-13",
+    "source": "Crossref",
+    "is-referenced-by-count": 13,
+    "title": [
+      "An Approach to Semantic and Structural Features Learning for Software Defect Prediction"
+    ],
+    "prefix": "10.1155",
+    "volume": "2020",
+    "author": [
+      {
+        "given": "Shi",
+        "family": "Meilong",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Information Engineering, Hubei University, Wuhan 430062, China"
+          }
+        ]
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0002-0378-0300",
+        "authenticated-orcid": true,
+        "given": "Peng",
+        "family": "He",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Information Engineering, Hubei University, Wuhan 430062, China"
+          },
+          {
+            "name": "Hubei Key Laboratory of Applied Mathematics, Hubei University, Wuhan 430062, China"
+          }
+        ]
+      },
+      {
+        "given": "Haitao",
+        "family": "Xiao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Information Engineering, Hubei University, Wuhan 430062, China"
+          }
+        ]
+      },
+      {
+        "given": "Huixin",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Information Engineering, Hubei University, Wuhan 430062, China"
+          }
+        ]
+      },
+      {
+        "given": "Cheng",
+        "family": "Zeng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Information Engineering, Hubei University, Wuhan 430062, China"
+          }
+        ]
+      }
+    ],
+    "member": "98",
+    "reference": [
+      {
+        "key": "1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2014.11.006"
+      },
+      {
+        "key": "7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1155/2017/7809047"
+      },
+      {
+        "key": "10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11424-011-0319-z"
+      },
+      {
+        "issue": "2",
+        "key": "11",
+        "first-page": "257",
+        "volume": "46",
+        "year": "2018",
+        "journal-title": "Acta Electronica Sinica"
+      },
+      {
+        "key": "12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1155/2013/869356"
+      },
+      {
+        "key": "13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TBDATA.2018.2850013"
+      },
+      {
+        "key": "14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2013.02.009"
+      },
+      {
+        "key": "15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/tse.1976.233837"
+      },
+      {
+        "key": "16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.295895"
+      },
+      {
+        "key": "17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.979986"
+      },
+      {
+        "key": "21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/tse.2017.2720603"
+      },
+      {
+        "key": "25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-008-9072-x"
+      },
+      {
+        "key": "26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.asoc.2017.05.043"
+      },
+      {
+        "key": "28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10515-019-00259-1"
+      },
+      {
+        "key": "29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-008-9103-7"
+      },
+      {
+        "issue": "3",
+        "key": "34",
+        "first-page": "115",
+        "volume": "2",
+        "year": "2013",
+        "journal-title": "International Journal of ACM Jordan"
+      },
+      {
+        "key": "40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s13369-017-2588-x"
+      },
+      {
+        "key": "41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.4028/www.scientific.net/amm.44-47.3548"
+      },
+      {
+        "key": "42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11390-010-9398-x"
+      },
+      {
+        "key": "43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10586-017-1353-y"
+      },
+      {
+        "issue": "1",
+        "key": "44",
+        "first-page": "20",
+        "volume": "44",
+        "year": "2014",
+        "journal-title": "Science China"
+      },
+      {
+        "key": "45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11334-017-0302-5"
+      },
+      {
+        "key": "46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2019.2946357"
+      },
+      {
+        "key": "47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.future.2017.09.039"
+      },
+      {
+        "key": "48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.future.2017.10.006"
+      },
+      {
+        "key": "49",
+        "year": "2016"
+      },
+      {
+        "issue": "2",
+        "key": "51",
+        "first-page": "1",
+        "volume-title": "ImageNet classification with deep convolutional neural networks",
+        "volume": "25",
+        "year": "2012"
+      },
+      {
+        "key": "53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/tsmcc.2011.2161285"
+      }
+    ],
+    "container-title": [
+      "Mathematical Problems in Engineering"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://downloads.hindawi.com/journals/mpe/2020/6038619.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://downloads.hindawi.com/journals/mpe/2020/6038619.xml",
+        "content-type": "application/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://downloads.hindawi.com/journals/mpe/2020/6038619.pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          6
+        ]
+      ],
+      "date-time": "2020-04-06T23:31:06Z",
+      "timestamp": 1586215866000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.hindawi.com/journals/mpe/2020/6038619/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          6
+        ]
+      ]
+    },
+    "references-count": 28,
+    "alternative-id": [
+      "6038619",
+      "6038619"
+    ],
+    "URL": "http://dx.doi.org/10.1155/2020/6038619",
+    "relation": {},
+    "ISSN": [
+      "1024-123X",
+      "1563-5147"
+    ],
+    "issn-type": [
+      {
+        "value": "1024-123X",
+        "type": "print"
+      },
+      {
+        "value": "1563-5147",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          4,
+          6
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T06:00:33Z",
+      "timestamp": 1721368833015
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 45,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              7,
+              5
+            ]
+          ],
+          "date-time": "2022-07-05T00:00:00Z",
+          "timestamp": 1656979200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 45,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000001",
+        "name": "National Science Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "CNS-2120386; CCF-1723215; CCF-1723432; CNS-1723198; CCF-1518897; CNS-1513263"
+        ]
+      },
+      {
+        "DOI": "10.13039/100009226",
+        "name": "National Security Agency",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "NCAE-C-002-2021"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          21
+        ]
+      ]
+    },
+    "DOI": "10.1145/3510003.3510177",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          5
+        ]
+      ],
+      "date-time": "2022-07-05T22:42:59Z",
+      "timestamp": 1657060979000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 25,
+    "title": [
+      "DEAR"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Yi",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "New Jersey Inst. of Technology"
+          }
+        ]
+      },
+      {
+        "given": "Shaohua",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "New Jersey Inst. of Technology"
+          }
+        ]
+      },
+      {
+        "given": "Tien N.",
+        "family": "Nguyen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Texas at Dallas"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          5
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "unstructured": "2019. The Defects4J Data Set. https://github.com/rjust/defects4j"
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "unstructured": "2021. DEAR: A Novel Deep Learning-based Approach for Automated Program Repair. https://github.com/AutomatedProgramRepair-2021/dear-auto-fix"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PRDC.2006.18"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "volume-title": "TreeCaps: Tree-Based Capsule Networks for Source Code Processing. Proceedings of the AAAI Conference on Artificial Intelligence 35",
+        "author": "Bui Nghi D. Q.",
+        "year": "2021",
+        "unstructured": "Nghi D. Q. Bui, Yijun Yu, and Lingxiao Jiang. 2021. TreeCaps: Tree-Based Capsule Networks for Source Code Processing. Proceedings of the AAAI Conference on Artificial Intelligence 35, 1 (May 2021), 30--38. https://ojs.aaai.org/index.php/AAAI/article/view/16074"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2020.3020502"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2019.2940179"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/D14-1179"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/N19-1423"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227211"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2011.104"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v31i1.10742"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "volume-title": "Learning to generate corrective patches using neural machine translation. arXiv preprint arXiv:1812.07170",
+        "author": "Hata Hideaki",
+        "year": "2018",
+        "unstructured": "Hideaki Hata, Emad Shihab, and Graham Neubig. 2018. Learning to generate corrective patches using neural machine translation. arXiv preprint arXiv:1812.07170 (2018)."
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3213846.3213871"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE43902.2021.00107"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606626"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-019-09780-z"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2016.76"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3377811.3380345"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2019.8667970"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3293882.3330577"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3106237.3106253"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2837614.2837617"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3395363.3397369"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2931037.2948705"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884807"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00089"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606623"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1806799.1806847"
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "volume-title": "Manning",
+        "author": "Pennington Jeffrey",
+        "year": "2014",
+        "unstructured": "Jeffrey Pennington, Richard Socher, and Christopher D. Manning. 2014. GloVe: Global Vectors for Word Representation. In Empirical Methods in Natural Language Processing (EMNLP). 1532--1543. http://www.aclweb.org/anthology/D14-1162"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568254"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "unstructured": "Alec Radford Karthik Narasimhan Tim Salimans and Ilya Sutskever. 2018. Improving language understanding by generative pre-training. (2018)."
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2393596.2393659"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2017.8115675"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00020"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "volume-title": "Get to the point: Summarization with pointer-generator networks. arXiv preprint arXiv:1704.04368",
+        "author": "Liu Peter J",
+        "year": "2017",
+        "unstructured": "Abigail See, Peter J Liu, and Christopher D Manning. 2017. Get to the point: Summarization with pointer-generator networks. arXiv preprint arXiv:1704.04368 (2017)."
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/P15-1150"
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3180243"
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00021"
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3240732"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3180233"
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2019.8668043"
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970326"
+      },
+      {
+        "key": "e_1_3_2_1_43_1",
+        "volume-title": "Proceedings of the 32nd IEEE/ACM International Conference on Automated Software Engineering (Urbana-Champaign, IL, USA) (ASE'17)",
+        "author": "Xin Qi",
+        "unstructured": "Qi Xin and Steven P. Reiss. 2017. Leveraging Syntax-Related Code for Automated Program Repair. In Proceedings of the 32nd IEEE/ACM International Conference on Automated Software Engineering (Urbana-Champaign, IL, USA) (ASE'17). IEEE Press, 660--670."
+      },
+      {
+        "key": "e_1_3_2_1_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2018.2874648"
+      },
+      {
+        "key": "e_1_3_2_1_45_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.244"
+      }
+    ],
+    "event": {
+      "name": "ICSE '22: 44th International Conference on Software Engineering",
+      "location": "Pittsburgh Pennsylvania",
+      "acronym": "ICSE '22",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE CS"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 44th International Conference on Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3510003.3510177",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3510003.3510177",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          14
+        ]
+      ],
+      "date-time": "2024-07-14T23:34:17Z",
+      "timestamp": 1721000057000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3510003.3510177"
+      }
+    },
+    "subtitle": [
+      "a novel deep learning-based approach for automated program repair"
+    ],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          21
+        ]
+      ]
+    },
+    "references-count": 45,
+    "alternative-id": [
+      "10.1145/3510003.3510177",
+      "10.1145/3510003"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3510003.3510177",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          21
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2022-07-05",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,371 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          4,
+          4
+        ]
+      ],
+      "date-time": "2024-04-04T01:35:53Z",
+      "timestamp": 1712194553338
+    },
+    "reference-count": 21,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2021-10-01T00:00:00Z",
+          "timestamp": 1633046400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2021-10-01T00:00:00Z",
+          "timestamp": 1633046400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2021-10-01T00:00:00Z",
+          "timestamp": 1633046400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100012166",
+        "name": "National Key Research and Development Program of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2019QY1406"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          10
+        ]
+      ]
+    },
+    "DOI": "10.1109/dsc53577.2021.00060",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          4,
+          11
+        ]
+      ],
+      "date-time": "2022-04-11T21:17:39Z",
+      "timestamp": 1649711859000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 3,
+    "title": [
+      "GraphEye: A Novel Solution for Detecting Vulnerable Functions Based on Graph Attention Network"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Li",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Information and Communication Engineering, University of Electronic Science and Technology of China,Chengdu,China"
+          }
+        ]
+      },
+      {
+        "given": "Minhuan",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "National Key Laboratory of Science and Technology on Information System Security,Beijing,China"
+          }
+        ]
+      },
+      {
+        "given": "Yujun",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Engineering, University of Electronic Science and Technology of China,Chengdu,China"
+          }
+        ]
+      },
+      {
+        "given": "Yuanping",
+        "family": "Nie",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "National Key Laboratory of Science and Technology on Information System Security,Beijing,China"
+          }
+        ]
+      },
+      {
+        "given": "Jin",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "National Key Laboratory of Science and Technology on Information System Security,Beijing,China"
+          }
+        ]
+      },
+      {
+        "given": "Yiwei",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Engineering, University of Electronic Science and Technology of China,Chengdu,China"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SP.2014.44"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SP.2015.54"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2020/454"
+      },
+      {
+        "key": "ref13",
+        "article-title": "The property graph database model",
+        "author": "angles",
+        "year": "2018",
+        "journal-title": "Proceedings of the 12th Alberto Mendelzon International Workshop on Foundations of Data Management"
+      },
+      {
+        "key": "ref14",
+        "article-title": "Pattern-based methods for vulnerability discovery",
+        "author": "yamaguchi",
+        "year": "2015",
+        "journal-title": "the PhD Program in Computer Science (PCS) of the Georg-August"
+      },
+      {
+        "key": "ref15",
+        "article-title": "Joern, Open-Source Code Querying Engine for C/C++",
+        "author": "joern",
+        "year": "0",
+        "journal-title": "ShiftLeft"
+      },
+      {
+        "key": "ref16",
+        "year": "0",
+        "journal-title": "Juliet Documents"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IEEESTD.2008.5976968"
+      },
+      {
+        "key": "ref18",
+        "article-title": "NIST Software Assurance Reference Dataset Project",
+        "year": "0",
+        "journal-title": "Software Assurance Reference Dataset"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TKDE.2008.239"
+      },
+      {
+        "key": "ref4",
+        "first-page": "3404",
+        "article-title": "Vulnerability Mining Method Based on Code Property Graph and Attention BiLSTM",
+        "volume": "31",
+        "author": "duan",
+        "year": "2020",
+        "journal-title": "Journal of Software"
+      },
+      {
+        "key": "ref3",
+        "first-page": "1",
+        "article-title": "Survey on static software vulnerability detection for source code",
+        "volume": "5",
+        "author": "li",
+        "year": "2019",
+        "journal-title": "Chinese Journal of Network and Information Security"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TDSC.2021.3051525"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIFS.2020.3044773"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2991079.2991102"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SP.2012.13"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1587/transinf.2018EDP7192"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICMLA.2018.00120"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SP.2017.62"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.14722/ndss.2018.23158"
+      },
+      {
+        "key": "ref21",
+        "author": "zhang",
+        "year": "2019",
+        "journal-title": "Hierarchical graph pooling with structure learning"
+      }
+    ],
+    "event": {
+      "name": "2021 IEEE Sixth International Conference on Data Science in Cyberspace (DSC)",
+      "location": "Shenzhen, China",
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            10,
+            9
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2021,
+            10,
+            11
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2021 IEEE Sixth International Conference on Data Science in Cyberspace (DSC)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/9750413/9750273/09750460.pdf?arnumber=9750460",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          9
+        ]
+      ],
+      "date-time": "2022-07-09T02:20:10Z",
+      "timestamp": 1657333210000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9750460/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          10
+        ]
+      ]
+    },
+    "references-count": 21,
+    "URL": "http://dx.doi.org/10.1109/dsc53577.2021.00060",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          10
+        ]
+      ]
+    }
+  }
+}

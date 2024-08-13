@@ -1,0 +1,543 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          12
+        ]
+      ],
+      "date-time": "2024-03-12T13:09:11Z",
+      "timestamp": 1710248951505
+    },
+    "publisher-location": "Cham",
+    "reference-count": 21,
+    "publisher": "Springer International Publishing",
+    "isbn-type": [
+      {
+        "value": "9783031203084",
+        "type": "print"
+      },
+      {
+        "value": "9783031203091",
+        "type": "electronic"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2022-01-01T00:00:00Z",
+          "timestamp": 1640995200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "DOI": "10.1007/978-3-031-20309-1_15",
+    "type": "book-chapter",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          7
+        ]
+      ],
+      "date-time": "2022-12-07T06:11:35Z",
+      "timestamp": 1670393495000
+    },
+    "page": "168-180",
+    "update-policy": "http://dx.doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 3,
+    "title": [
+      "Code Comments Generation with Data Flow-Guided Transformer"
+    ],
+    "prefix": "10.1007",
+    "author": [
+      {
+        "given": "Wen",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Junhua",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          8
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "15_CR1",
+        "series-title": "Lecture Notes in Computer Science",
+        "doi-asserted-by": "publisher",
+        "first-page": "544",
+        "DOI": "10.1007/978-3-030-87571-8_47",
+        "volume-title": "Web Information Systems and Applications",
+        "author": "Y Wang",
+        "year": "2021",
+        "unstructured": "Wang, Y., Wu, J.: The code generation method based on gated attention and interAction-LSTM. In: Xing, C., Fu, X., Zhang, Y., Zhang, G., Borjigin, C. (eds.) WISA 2021. LNCS, vol. 12999, pp. 544\u2013555. Springer, Cham (2021). https://doi.org/10.1007/978-3-030-87571-8_47"
+      },
+      {
+        "key": "15_CR2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hu, X., Li, G., Xia, X., Lo, D., Jin, Z.: Deep code comment generation. In: 2018 IEEE/ACM 26th International Conference on Program Comprehension (ICPC), pp. 200\u201320010. IEEE (2018)",
+        "DOI": "10.1145/3196321.3196334"
+      },
+      {
+        "key": "15_CR3",
+        "unstructured": "Allamanis, M., Peng, H., Sutton, C.: A convolutional attention network for extreme summarization of source code. In: International Conference on machine Learning, pp. 2091\u20132100. PMLR (2016)"
+      },
+      {
+        "key": "15_CR4",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ahmad, W.U., Chakraborty, S., Ray, B., Chang, K.W.: A transformer-based approach for source code summarization. arXiv preprint arXiv:2005.00653 (2020)",
+        "DOI": "10.18653/v1/2020.acl-main.449"
+      },
+      {
+        "key": "15_CR5",
+        "unstructured": "Vaswani, A., et al.: Attention is all you need. Adv. Neural Inf. Process. Syst. 30 (2017)"
+      },
+      {
+        "key": "15_CR6",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Iyer, S., Konstas, I., Cheung, A., Zettlemoyer, L.: Summarizing source code using a neural attention model. In: Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), pp. 2073\u20132083 (2016)",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "15_CR7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liang, Y., Zhu, K.: Automatic generation of text descriptive comments for code blocks. In: Proceedings of the AAAI Conference on Artificial Intelligence, vol. 32, no. 1 (2018)",
+        "DOI": "10.1609/aaai.v32i1.11963"
+      },
+      {
+        "key": "15_CR8",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hu, X., Li, G., Xia, X., Lo, D., Lu, S., Jin, Z.: Summarizing source code with transferred API knowledge (2018)",
+        "DOI": "10.24963/ijcai.2018/314"
+      },
+      {
+        "key": "15_CR9",
+        "doi-asserted-by": "crossref",
+        "unstructured": "LeClair, A., Jiang, S., McMillan, C.: A neural model for generating natural language summaries of program subroutines. In: 2019 IEEE/ACM 41st International Conference on Software Engineering (ICSE), pp. 795\u2013806. IEEE (2019)",
+        "DOI": "10.1109/ICSE.2019.00087"
+      },
+      {
+        "key": "15_CR10",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Shido, Y., Kobayashi, Y., Yamamoto, A., Miyamoto, A., Matsumura, T.: Automatic source code summarization with extended tree-lstm. In: 2019 International Joint Conference on Neural Networks (IJCNN), pp. 1\u20138. IEEE (2019)",
+        "DOI": "10.1109/IJCNN.2019.8851751"
+      },
+      {
+        "key": "15_CR11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "LeClair, A., Haque, S., Wu, L., McMillan, C.: Improved code summarization via a graph neural network. In: Proceedings of the 28th International Conference on Program Comprehension, pp. 184\u2013195 (2020)",
+        "DOI": "10.1145/3387904.3389268"
+      },
+      {
+        "key": "15_CR12",
+        "unstructured": "Liu, S., Chen, Y., Xie, X., Siow, J.K., Liu, Y.: Automatic code summarization via multi-dimensional semantic fusing in gnn. arXiv preprint arXiv:2006.05405 (2020)"
+      },
+      {
+        "key": "15_CR13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wan, Y., et al.: Improving automatic source code summarization via deep reinforcement learning. In: Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering, pp. 397\u2013407 (2018)",
+        "DOI": "10.1145/3238147.3238206"
+      },
+      {
+        "key": "15_CR14",
+        "unstructured": "Wei, B., Li, G., Xia, X., Fu, Z., Jin, Z.: Code generation as a dual task of code summarization. Adv. Neural Inf. Process. Syst. 32 (2019)"
+      },
+      {
+        "key": "15_CR15",
+        "unstructured": "Guo, D., et al.: Graphcodebert: Pre-training code representations with data flow. arXiv preprint arXiv:2009.08366 (2020)"
+      },
+      {
+        "key": "15_CR16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Freitag, M., Al-Onaizan, Y.: Beam search strategies for neural machine translation. arXiv preprint arXiv:1702.01806 (2017)",
+        "DOI": "10.18653/v1/W17-3207"
+      },
+      {
+        "key": "15_CR17",
+        "unstructured": "Wu, Y., et al.: Google\u2019s neural machine translation system: Bridging the gap between human and machine translation. arXiv preprint arXiv:1609.08144 (2016)"
+      },
+      {
+        "key": "15_CR18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Papineni, K., Roukos, S., Ward, T., Zhu, W.J.: Bleu: a method for automatic evaluation of machine translation. In: Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics, pp. 311\u2013318 (2002)",
+        "DOI": "10.3115/1073083.1073135"
+      },
+      {
+        "key": "15_CR19",
+        "unstructured": "Banerjee, S., Lavie, A.: Meteor: an automatic metric for MT evaluation with improved correlation with human judgments. In: Proceedings of the ACL Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation and/or Summarization, pp. 65\u201372 (2005)"
+      },
+      {
+        "key": "15_CR20",
+        "unstructured": "Lin, C.Y.: Rouge: A package for automatic evaluation of summaries. In: Text Summarization Branches Out, pp. 74\u201381 (2004)"
+      },
+      {
+        "key": "15_CR21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Eriguchi, A., Hashimoto, K., Tsuruoka, Y.: Tree-to-sequence attentional neural machine translation. arXiv preprint arXiv:1603.06075 (2016)",
+        "DOI": "10.18653/v1/P16-1078"
+      }
+    ],
+    "container-title": [
+      "Web Information Systems and Applications",
+      "Lecture Notes in Computer Science"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/978-3-031-20309-1_15",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          24
+        ]
+      ],
+      "date-time": "2023-01-24T20:04:44Z",
+      "timestamp": 1674590684000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/978-3-031-20309-1_15"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "ISBN": [
+      "9783031203084",
+      "9783031203091"
+    ],
+    "references-count": 21,
+    "URL": "http://dx.doi.org/10.1007/978-3-031-20309-1_15",
+    "relation": {},
+    "ISSN": [
+      "0302-9743",
+      "1611-3349"
+    ],
+    "issn-type": [
+      {
+        "value": "0302-9743",
+        "type": "print"
+      },
+      {
+        "value": "1611-3349",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "8 December 2022",
+        "order": 1,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ChapterHistory",
+          "label": "Chapter History"
+        }
+      },
+      {
+        "value": "WISA",
+        "order": 1,
+        "name": "conference_acronym",
+        "label": "Conference Acronym",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "International Conference on Web Information Systems and Applications",
+        "order": 2,
+        "name": "conference_name",
+        "label": "Conference Name",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Dalian",
+        "order": 3,
+        "name": "conference_city",
+        "label": "Conference City",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "China",
+        "order": 4,
+        "name": "conference_country",
+        "label": "Conference Country",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "2022",
+        "order": 5,
+        "name": "conference_year",
+        "label": "Conference Year",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "16 September 2022",
+        "order": 7,
+        "name": "conference_start_date",
+        "label": "Conference Start Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "18 September 2022",
+        "order": 8,
+        "name": "conference_end_date",
+        "label": "Conference End Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "19",
+        "order": 9,
+        "name": "conference_number",
+        "label": "Conference Number",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "wisa22022",
+        "order": 10,
+        "name": "conference_id",
+        "label": "Conference ID",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "https://conf.ccf.org.cn/web/html7/index.html?globalId=m9475032704175349761645943983427&type=1",
+        "order": 11,
+        "name": "conference_url",
+        "label": "Conference URL",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Double-blind",
+        "order": 1,
+        "name": "type",
+        "label": "Type",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "EasyChair",
+        "order": 2,
+        "name": "conference_management_system",
+        "label": "Conference Management System",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "212",
+        "order": 3,
+        "name": "number_of_submissions_sent_for_review",
+        "label": "Number of Submissions Sent for Review",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "45",
+        "order": 4,
+        "name": "number_of_full_papers_accepted",
+        "label": "Number of Full Papers Accepted",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "19",
+        "order": 5,
+        "name": "number_of_short_papers_accepted",
+        "label": "Number of Short Papers Accepted",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "21% - The value is computed by the equation \"Number of Full Papers Accepted / Number of Submissions Sent for Review * 100\" and then rounded to a whole number.",
+        "order": 6,
+        "name": "acceptance_rate_of_full_papers",
+        "label": "Acceptance Rate of Full Papers",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "3",
+        "order": 7,
+        "name": "average_number_of_reviews_per_paper",
+        "label": "Average Number of Reviews per Paper",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "5",
+        "order": 8,
+        "name": "average_number_of_papers_per_reviewer",
+        "label": "Average Number of Papers per Reviewer",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "Yes",
+        "order": 9,
+        "name": "external_reviewers_involved",
+        "label": "External Reviewers Involved",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      }
+    ]
+  }
+}

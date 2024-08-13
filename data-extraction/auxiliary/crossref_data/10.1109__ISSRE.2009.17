@@ -1,0 +1,324 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          12
+        ]
+      ],
+      "date-time": "2024-07-12T20:33:06Z",
+      "timestamp": 1720816386649
+    },
+    "reference-count": 27,
+    "publisher": "IEEE",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2009,
+          11
+        ]
+      ]
+    },
+    "DOI": "10.1109/issre.2009.17",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2010,
+          1,
+          7
+        ]
+      ],
+      "date-time": "2010-01-07T16:46:50Z",
+      "timestamp": 1262882810000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 118,
+    "title": [
+      "Putting It All Together: Using Socio-technical Networks to Predict Failures"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Christian",
+        "family": "Bird",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Nachiappan",
+        "family": "Nagappan",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Harald",
+        "family": "Gall",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Brendan",
+        "family": "Murphy",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Premkumar",
+        "family": "Devanbu",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref10",
+        "author": "burt",
+        "year": "1995",
+        "journal-title": "Structural Holes The Social Structure of Competition"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1453101.1453106"
+      },
+      {
+        "key": "ref12",
+        "article-title": "A Social Network Perspective of Conway's Law",
+        "author": "amrit",
+        "year": "2004",
+        "journal-title": "Proceedings of the CSCW Workshop on Social Networks"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MSR.2007.33"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1180875.1180929"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1414004.1414008"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "crossref",
+        "first-page": "107",
+        "DOI": "10.1145/302405.302457",
+        "article-title": "N degrees of separation: Multi-dimensional separation of concerns",
+        "author": "tarr",
+        "year": "1999",
+        "journal-title": "International Conference on Software Engineering"
+      },
+      {
+        "key": "ref17",
+        "article-title": "UCINET 6 for Windows: Software for Social Network Analysis. Harvard, MA, Analytic Technologies",
+        "author": "borgatti",
+        "year": "2002"
+      },
+      {
+        "key": "ref18",
+        "article-title": "The pagerank citation ranking: Bringing order to the web",
+        "author": "page",
+        "year": "1998",
+        "journal-title": "Tech Rep"
+      },
+      {
+        "key": "ref19",
+        "article-title": "The 5 types of open source projects",
+        "author": "berkus",
+        "year": "2007"
+      },
+      {
+        "key": "ref4",
+        "article-title": "Predicting defects using social network analysis on dependency graphs",
+        "author": "zimmermann",
+        "year": "2008",
+        "journal-title": "Proc of the International Conference on Software Engineering"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "crossref",
+        "author": "dowdy",
+        "year": "2004",
+        "journal-title": "Statistics for Research",
+        "DOI": "10.1002/0471477435"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISSRE.2007.19"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511815478"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1137983.1138016"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0378-8733(00)00031-9"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0378-8733(78)90021-7"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1453101.1453105"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1086/228631"
+      },
+      {
+        "key": "ref1",
+        "first-page": "2",
+        "article-title": "The economic impacts of inadequate infrastructure for software testing",
+        "year": "2002",
+        "journal-title": "National Institute of Standards and Technology (NIST) Planning Report"
+      },
+      {
+        "key": "ref20",
+        "article-title": "Efficient Integration Testing using Dependency Analysis",
+        "author": "srivastava",
+        "year": "2005",
+        "journal-title": "Tech Rep MSR-TR-2005&#x2013;94"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2307/1937887"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1083142.1083147"
+      },
+      {
+        "key": "ref24",
+        "author": "lancaster",
+        "year": "1979",
+        "journal-title": "Information Retrieval Systems Characteristics Testing and Evaluati on"
+      },
+      {
+        "key": "ref23",
+        "author": "jackson",
+        "year": "2005",
+        "journal-title": "A User's Guide to Principal Components"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "crossref",
+        "first-page": "289",
+        "DOI": "10.1111/j.2517-6161.1995.tb02031.x",
+        "article-title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+        "volume": "57",
+        "author": "benjamini",
+        "year": "1995",
+        "journal-title": "Journal of the Royal Statistical Society Series B (Methodological)"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0031-3203(96)00142-2"
+      }
+    ],
+    "event": {
+      "name": "2009 20th International Symposium on Software Reliability Engineering (ISSRE)",
+      "location": "Mysuru, Karnataka, India",
+      "start": {
+        "date-parts": [
+          [
+            2009,
+            11,
+            16
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2009,
+            11,
+            19
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2009 20th International Symposium on Software Reliability Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx5/5361941/5361942/05362091.pdf?arnumber=5362091",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          10,
+          19
+        ]
+      ],
+      "date-time": "2021-10-19T23:26:24Z",
+      "timestamp": 1634685984000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://ieeexplore.ieee.org/document/5362091/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2009,
+          11
+        ]
+      ]
+    },
+    "references-count": 27,
+    "URL": "http://dx.doi.org/10.1109/issre.2009.17",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2009,
+          11
+        ]
+      ]
+    }
+  }
+}

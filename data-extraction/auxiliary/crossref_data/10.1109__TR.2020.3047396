@@ -1,0 +1,414 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          17
+        ]
+      ],
+      "date-time": "2024-07-17T23:38:11Z",
+      "timestamp": 1721259491746
+    },
+    "reference-count": 45,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "2",
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61772263",
+          "61772014"
+        ]
+      },
+      {
+        "name": "Collaborative Innovation Center of Novel Software Technology and Industrialization"
+      },
+      {
+        "DOI": "10.13039/501100012246",
+        "name": "Priority Academic Program Development of Jiangsu Higher Education Institutions",
+        "doi-asserted-by": "publisher"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Rel."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          6
+        ]
+      ]
+    },
+    "DOI": "10.1109/tr.2020.3047396",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          2,
+          25
+        ]
+      ],
+      "date-time": "2021-02-25T19:11:26Z",
+      "timestamp": 1614280286000
+    },
+    "page": "711-727",
+    "source": "Crossref",
+    "is-referenced-by-count": 59,
+    "title": [
+      "Software Defect Prediction Based on Gated Hierarchical LSTMs"
+    ],
+    "prefix": "10.1109",
+    "volume": "70",
+    "author": [
+      {
+        "given": "Hao",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Weiyuan",
+        "family": "Zhuang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0002-8667-0456",
+        "authenticated-orcid": false,
+        "given": "Xiaofang",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "first-page": "284?292",
+        "article-title": "Use of relative code churn measures to predict system defect density",
+        "author": "nagappan",
+        "year": "0",
+        "journal-title": "Proc 27th Int l Conf Software Eng"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISSRE.2010.25"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CSMR.2010.18"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2931037.2931051"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2950290.2950353"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-018-9661-2"
+      },
+      {
+        "key": "ref37",
+        "first-page": "45?52",
+        "article-title": "Convolutional neural networks over control flow graphs for software defect prediction",
+        "author": "phan",
+        "year": "0",
+        "journal-title": "Proc IEEE Int Conf Tools Artif Intell"
+      },
+      {
+        "key": "ref36",
+        "first-page": "69?81",
+        "article-title": "Using object-oriented design metrics to predict software defects, models and methods of system dependability",
+        "author": "jureczko",
+        "year": "2010"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1868328.1868342"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1111/j.2517-6161.1995.tb02031.x"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3290353"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2007.07.040"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/423"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/390013.808479"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/APSEC48747.2019.00041"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/QRS.2017.42"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.2006.18.7.1527"
+      },
+      {
+        "key": "ref16",
+        "first-page": "3111?3119",
+        "article-title": "Distributed representations of words and phrases and their compositionality",
+        "author": "mikolov",
+        "year": "0",
+        "journal-title": "Proc Adv Neural Inf Process Syst"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/D14-1162"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2019.2925313"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSME.2017.51"
+      },
+      {
+        "key": "ref4",
+        "article-title": "Elements of Software Science (Operating and Programming Systems Series).",
+        "author": "maurice",
+        "year": "1977"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.256941"
+      },
+      {
+        "key": "ref3",
+        "article-title": "Survey on software defect prediction",
+        "author": "nam",
+        "year": "2014"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2018.2877612"
+      },
+      {
+        "key": "ref29",
+        "first-page": "757?773",
+        "article-title": "A large-scale empirical study of just-in-time quality assurance",
+        "volume": "39",
+        "author": "kamei",
+        "year": "2012",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.1976.233837"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TR.2020.3001918"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3183339"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2013.6693087"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2889160.2889165"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.eswa.2008.10.027"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2018.8330212"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ESEM.2007.28"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2019.03.012"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0218194018400259"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ins.2008.12.001"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568320"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2011.09.002"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ESEM.2013.20"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/QRS.2015.14"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-008-9079-3"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-014-9346-4"
+      },
+      {
+        "key": "ref25",
+        "article-title": "Do different cross-project defect prediction methods identify the same defective modules?",
+        "volume": "32",
+        "author": "chen",
+        "year": "2020",
+        "journal-title": "Journal of Software: Evolution and Process"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Reliability"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/24/9448244/09326336.pdf?arnumber=9326336",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          10,
+          26
+        ]
+      ],
+      "date-time": "2021-10-26T20:27:46Z",
+      "timestamp": 1635280066000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9326336/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          6
+        ]
+      ]
+    },
+    "references-count": 45,
+    "journal-issue": {
+      "issue": "2"
+    },
+    "URL": "http://dx.doi.org/10.1109/tr.2020.3047396",
+    "relation": {},
+    "ISSN": [
+      "0018-9529",
+      "1558-1721"
+    ],
+    "issn-type": [
+      {
+        "value": "0018-9529",
+        "type": "print"
+      },
+      {
+        "value": "1558-1721",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          6
+        ]
+      ]
+    }
+  }
+}

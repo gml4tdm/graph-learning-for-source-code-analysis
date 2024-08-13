@@ -1,0 +1,481 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ],
+      "date-time": "2024-07-15T02:58:25Z",
+      "timestamp": 1721012305560
+    },
+    "reference-count": 37,
+    "publisher": "Wiley",
+    "issue": "19",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              12,
+              18
+            ]
+          ],
+          "date-time": "2018-12-18T00:00:00Z",
+          "timestamp": 1545091200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61772405"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "onlinelibrary.wiley.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Concurrency and Computation"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          10,
+          10
+        ]
+      ]
+    },
+    "abstract": "<jats:title>Summary</jats:title><jats:p>Software vulnerability is a critical issue in the realm of cyber security. In terms of techniques, machine learning (ML) has been successfully used in many real\u2010world problems such as software vulnerability detection, malware detection and function recognition, for high\u2010quality feature representation learning. In this paper, we propose a performance evaluation study on ML based solutions for software vulnerability detection, conducting three experiments: machine learning\u2010based techniques for software vulnerability detection based on the scenario of single type of vulnerability and multiple types of vulnerabilities per dataset; machine learning\u2010based techniques for cross\u2010project software vulnerability detection; and software vulnerability detection when facing the class imbalance problem with varying imbalance ratios. Experimental results show that it is possible to employ software vulnerability detection based on ML techniques. However, ML\u2010based techniques suffer poor performance on both cross\u2010project and class imbalance problem in software vulnerability detection.</jats:p>",
+    "DOI": "10.1002/cpe.5103",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          12,
+          19
+        ]
+      ],
+      "date-time": "2018-12-19T01:25:20Z",
+      "timestamp": 1545182720000
+    },
+    "update-policy": "http://dx.doi.org/10.1002/crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 29,
+    "title": [
+      "A performance evaluation of deep\u2010learnt features for software vulnerability detection"
+    ],
+    "prefix": "10.1002",
+    "volume": "31",
+    "author": [
+      {
+        "given": "Xinbo",
+        "family": "Ban",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Software and Electrical Engineering Swinburne University of Technology  Victoria Australia"
+          }
+        ]
+      },
+      {
+        "given": "Shigang",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Software and Electrical Engineering Swinburne University of Technology  Victoria Australia"
+          }
+        ]
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0003-1355-3870",
+        "authenticated-orcid": false,
+        "given": "Chao",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Software and Electrical Engineering Swinburne University of Technology  Victoria Australia"
+          }
+        ]
+      },
+      {
+        "given": "Caslon",
+        "family": "Chua",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Software and Electrical Engineering Swinburne University of Technology  Victoria Australia"
+          }
+        ]
+      }
+    ],
+    "member": "311",
+    "published-online": {
+      "date-parts": [
+        [
+          2018,
+          12,
+          18
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_6_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.sysarc.2010.06.003"
+      },
+      {
+        "key": "e_1_2_6_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2010.81"
+      },
+      {
+        "key": "e_1_2_6_4_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "NguyenVH TranLMS.Predicting vulnerable software components with dependency graphs. In: Proceedings of the 6th International Workshop on Security Measurements and Metrics;2010;Bolzano Italy.",
+        "DOI": "10.1145/1853919.1853923"
+      },
+      {
+        "key": "e_1_2_6_5_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "VanegueJ LahiriSK.Towards practical reactive security audit using extended static checkers. Paper presented at: 2013 IEEE Symposium on Security and Privacy;2013;Berkeley CA.",
+        "DOI": "10.1109/SP.2013.12"
+      },
+      {
+        "key": "e_1_2_6_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/COMST.2018.2800740"
+      },
+      {
+        "key": "e_1_2_6_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2014.2340398"
+      },
+      {
+        "key": "e_1_2_6_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TII.2018.2821768"
+      },
+      {
+        "key": "e_1_2_6_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNET.2014.2320577"
+      },
+      {
+        "key": "e_1_2_6_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPDS.2012.98"
+      },
+      {
+        "key": "e_1_2_6_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIFS.2016.2621888"
+      },
+      {
+        "key": "e_1_2_6_12_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "MorrisonP HerzigK MurphyB WilliamsL.Challenges with applying vulnerability prediction models. In: Proceedings of the 2015 Symposium and Bootcamp on the Science of Security;2015;Urbana IL.",
+        "DOI": "10.1145/2746194.2746198"
+      },
+      {
+        "key": "e_1_2_6_13_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "YamaguchiF MaierA GasconH RieckK.Automatic inference of search patterns for taint\u2010style vulnerabilities. Paper presented at: 2015 IEEE Symposium on Security and Privacy;2015;San Jose CA.",
+        "DOI": "10.1109/SP.2015.54"
+      },
+      {
+        "key": "e_1_2_6_14_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "AlvesH FonsecaB AntunesN.Experimenting machine learning techniques to predict vulnerabilities. Paper presented at: 2016 Seventh Latin\u2010American Symposium on Dependable Computing (LADC);2016;Cali Colombia.",
+        "DOI": "10.1109/LADC.2016.32"
+      },
+      {
+        "key": "e_1_2_6_15_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "EschweilerS YakdanK Gerhards\u2010PadillaE.discovRE: efficient cross\u2010architecture identification of bugs in binary code. Paper presented at: 23rd Annual Network and Distributed System Security Symposium (NDSS);2016;San Diego CA.",
+        "DOI": "10.14722/ndss.2016.23185"
+      },
+      {
+        "key": "e_1_2_6_16_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "GriecoG GrinblatGL UzalL RawatS FeistJ MounierL.Toward large\u2010scale vulnerability discovery using machine learning. In: Proceedings of the Sixth ACM Conference on Data and Application Security and Privacy;2016;New Orleans LA.",
+        "DOI": "10.1145/2857705.2857720"
+      },
+      {
+        "key": "e_1_2_6_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0164-1212(99)00102-8"
+      },
+      {
+        "key": "e_1_2_6_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2005.49"
+      },
+      {
+        "key": "e_1_2_6_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.256941"
+      },
+      {
+        "key": "e_1_2_6_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-011-9190-8"
+      },
+      {
+        "key": "e_1_2_6_21_1",
+        "unstructured": "YamaguchiF LindnerF RieckK.Vulnerability extrapolation: assisted discovery of vulnerabilities using machine learning. In: Proceedings of the 5th USENIX Conference on Offensive Technologies;2011;San Francisco CA."
+      },
+      {
+        "key": "e_1_2_6_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-015-9378-4"
+      },
+      {
+        "key": "e_1_2_6_23_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "WaldenJ StuckmanJ ScandariatoR.Predicting vulnerable components: software metrics vs text mining. Paper presented at: 2014 IEEE 25th International Symposium on Software Reliability Engineering;2014;Naples Italy.",
+        "DOI": "10.1109/ISSRE.2014.32"
+      },
+      {
+        "key": "e_1_2_6_24_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "PoonWN BenninKE HuangJ PhannachittaP KeungJW.Cross\u2010project defect prediction using a credibility theory based naive Bayes classifier. Paper presented at: 2017 IEEE International Conference on Software Quality Reliability and Security (QRS);2017;Prague Czech Republic.",
+        "DOI": "10.1109/QRS.2017.53"
+      },
+      {
+        "key": "e_1_2_6_25_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "NamJ PanSJ KimS.Transfer defect learning. Paper presented at: 2013 35th International Conference on Software Engineering (ICSE);2013;San Francisco CA.",
+        "DOI": "10.1109/ICSE.2013.6606584"
+      },
+      {
+        "key": "e_1_2_6_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNN.2010.2091281"
+      },
+      {
+        "key": "e_1_2_6_27_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "WangS LiuT TanL.Automatically learning semantic features for defect prediction. Paper presented at: 2016 IEEE/ACM 38th International Conference on Software Engineering (ICSE);2016;Austin TX.",
+        "DOI": "10.1145/2884781.2884804"
+      },
+      {
+        "key": "e_1_2_6_28_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "PerlH DechandS SmithM et al.VCCFinder: finding potential vulnerabilities in open\u2010source projects to assist code audits. In: Proceedings of the 22nd ACM SIGSAC Conference on Computer and Communications Security;2015;Denver CO.",
+        "DOI": "10.1145/2810103.2813604"
+      },
+      {
+        "key": "e_1_2_6_29_1",
+        "unstructured": "DamHK TranT PhamT NgSW GrundyJ GhoseA.Automatic feature learning for vulnerability prediction.2017. arXiv preprint arXiv:1708.02368."
+      },
+      {
+        "key": "e_1_2_6_30_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "PinzgerM NagappanN MurphyB.Can developer\u2010module networks predict failures?In: Proceedings of the 16th ACM SIGSOFT International Symposium on Foundations of Software Engineering;2008;Atlanta Ga.",
+        "DOI": "10.1145/1453101.1453105"
+      },
+      {
+        "key": "e_1_2_6_31_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "MeneelyA WilliamsL.Secure open source collaboration: an empirical study of Linus' law. In: Proceedings of the 16th ACM Conference on Computer and Communications Security;2009;Chicago IL.",
+        "DOI": "10.1145/1653662.1653717"
+      },
+      {
+        "key": "e_1_2_6_32_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "ZimmermannT NagappanN GallH GigerE MurphyB.Cross\u2010project defect prediction: a large scale experiment on data vs. domain vs. process. In: Proceedings of the 7th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering;2009;Amsterdam The Netherlands.",
+        "DOI": "10.1145/1595696.1595713"
+      },
+      {
+        "key": "e_1_2_6_33_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "YamaguchiF LottmannM RieckK.Generalized vulnerability extrapolation using abstract syntax trees. In: Proceedings of the 28th Annual Computer Security Applications Conference;2012;Orlando FL.",
+        "DOI": "10.1145/2420950.2421003"
+      },
+      {
+        "key": "e_1_2_6_34_1",
+        "unstructured": "MoonenL.Generating robust parsers using island grammars. In: Proceedings of the Eighth Working Conference on Reverse Engineering;2001;Stuttgart Germany."
+      },
+      {
+        "key": "e_1_2_6_35_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "LinG ZhangJ LuoW PanL XiangY.POSTER: vulnerability discovery with function representation learning from unlabeled projects. In: Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security (CCS);2017;Dallas TX.",
+        "DOI": "10.1145/3133956.3138840"
+      },
+      {
+        "key": "e_1_2_6_36_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "LiZ ZouD XuS et al.VulDeePecker: a deep learning\u2010based system for vulnerability detection.2018. arXiv preprint arXiv:1801.01681.",
+        "DOI": "10.14722/ndss.2018.23158"
+      },
+      {
+        "key": "e_1_2_6_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TFUZZ.2017.2754998"
+      },
+      {
+        "key": "e_1_2_6_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-40253-6_13"
+      }
+    ],
+    "container-title": [
+      "Concurrency and Computation: Practice and Experience"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2Fcpe.5103",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.5103",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/cpe.5103",
+        "content-type": "application/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/cpe.5103",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          9,
+          10
+        ]
+      ],
+      "date-time": "2023-09-10T06:51:01Z",
+      "timestamp": 1694328661000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://onlinelibrary.wiley.com/doi/10.1002/cpe.5103"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          12,
+          18
+        ]
+      ]
+    },
+    "references-count": 37,
+    "journal-issue": {
+      "issue": "19",
+      "published-print": {
+        "date-parts": [
+          [
+            2019,
+            10,
+            10
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1002/cpe.5103"
+    ],
+    "URL": "http://dx.doi.org/10.1002/cpe.5103",
+    "archive": [
+      "Portico"
+    ],
+    "relation": {},
+    "ISSN": [
+      "1532-0626",
+      "1532-0634"
+    ],
+    "issn-type": [
+      {
+        "value": "1532-0626",
+        "type": "print"
+      },
+      {
+        "value": "1532-0634",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          12,
+          18
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2018-08-29",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2018-11-25",
+        "order": 1,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2018-12-18",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

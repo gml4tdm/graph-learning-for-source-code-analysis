@@ -1,0 +1,841 @@
+[
+    {
+        "uid": "sb-001",
+        "full": " Raychev V., Vechev M., Krause A., Predicting program properties from \u201dBig Code\u201d, SIGPLAN Not., 50, 1, pp. 111-124, (2015)",
+        "stripped": "predicting program properties from \u201dbig code\u201d",
+        "doi": "10.1145/2676726.2677009"
+    },
+    {
+        "uid": "sb-002",
+        "full": " Brockschmidt M., Allamanis M., Gaunt A.L., Polozov O., Generative Code Modeling with Graphs, International Conference on Learning Representations, (2019)",
+        "stripped": "generative code modeling with graphs",
+        "doi": null,
+        "bibtex": {
+            "title": "Generative Code Modeling with Graphs",
+            "authors": [
+                {"given": ["Marc"], "more-initials": [], "last": "Brockschmidt"},
+                {"given":  ["Miltiadis"], "more-initials": [], "last": "Allamanis"},
+                {"given": ["Alexander"], "more-initials": ["L"], "last": "Gaunt"},
+                {"given": ["Oleksandr"], "more-initials": [], "last": "Polozov"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "International Conference on Learning Representations",
+                "abbreviation": "ICLR"
+            },
+            "book": "7th International Conference on Learning Representations",
+            "year": "2019",
+            "url": "https://openreview.net/forum?id=Bke4KsA5FX"
+        }
+    },
+    {
+        "uid": "sb-004",
+        "full": " Shi E., Et al., Cast: Enhancing code summarization with hierarchical splitting and reconstruction of abstract syntax trees, (2021)",
+        "stripped": "cast: enhancing code summarization with hierarchical splitting and reconstruction of abstract syntax trees",
+        "doi": "10.18653/v1/2021.emnlp-main.332"
+    },
+    {
+        "uid": "sb-006",
+        "full": " Yan J., Sun H., Wang X., Liu X., Song X., Profiling Developer Expertise Across Software Communities With Heterogeneous Information Network Analysis, Proceedings of the Tenth Asia-Pacific Symposium on Internetware, pp. 1-9, (2018)",
+        "stripped": "profiling developer expertise across software communities with heterogeneous information network analysis",
+        "doi": "10.1145/3275219.3275226"
+    },
+    {
+        "uid": "sb-007",
+        "full": " Liu S., Gao C., Chen S., Lun Yiu N., Liu Y., Atom: Commit message generation based on abstract syntax tree and hybrid ranking, IEEE Transactions on Software Engineering, (2020)",
+        "stripped": "atom: commit message generation based on abstract syntax tree and hybrid ranking",
+        "doi": "10.1109/TSE.2020.3038681"
+    },
+    {
+        "uid": "sb-008",
+        "full": " Wan Y., Zhao Z., Yang M., Xu G., Ying H., Wu J., Yu P.S., Improving automatic source code summarization via deep reinforcement learning, Ase, pp. 397-407, (2018)",
+        "stripped": "improving automatic source code summarization via deep reinforcement learning",
+        "doi": "10.1145/3238147.3238206"
+    },
+    {
+        "uid": "sb-009",
+        "full": " Lin C., Ouyang Z., Zhuang J., Chen J., Li H., Wu R., Improving code summarization with block-wise abstract syntax tree splitting, 2021 IEEE/ACM 29th International Conference on Program Comprehension, pp. 184-195, (2021)",
+        "stripped": "improving code summarization with block-wise abstract syntax tree splitting",
+        "doi": "10.1109/ICPC52881.2021.00026"
+    },
+    {
+        "uid": "sb-010",
+        "full": " Lyu C., Wang R., Zhang H., Zhang H., Hu S., Embedding API dependency graph for neural code generation, Empirical Softw. Eng., 26, 4, pp. 1-51, (2021)",
+        "stripped": "embedding api dependency graph for neural code generation",
+        "doi": "10.1007/s10664-021-09968-2"
+    },
+    {
+        "uid": "sb-011",
+        "full": " Habib A., Pradel M., Is this class thread-safe? Inferring documentation using graph-based learning, ASE, pp. 41-52, (2018)",
+        "stripped": "is this class thread-safe? inferring documentation using graph-based learning",
+        "doi": "10.1145/3238147.3238212"
+    },
+    {
+        "uid": "sb-012",
+        "full": " Yin P., Neubig G., Allamanis M., Brockschmidt M., Gaunt A.L., Learning to Represent Edits, International Conference on Learning Representations, (2019)",
+        "stripped": "learning to represent edits",
+        "doi": null,
+        "arxiv-doi": "10.48550/arXiv.1810.13337",
+        "bibtex": {
+            "title": "Learning to Represent Edits",
+            "authors": [
+                {"given": ["Pengcheng"], "more-initials": [], "last":  "Yin"},
+                {"given": ["Graham"], "more-initials": [], "last": "Neubig"},
+                {"given":  ["Miltiadis"], "more-initials": [], "last": "Allamanis"},
+                {"given": ["Marc"], "more-initials": [], "last": "Brockschmidt"},
+                {"given": ["Alexander"], "more-initials": ["L"], "last": "Gaunt"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "International Conference on Learning Representations",
+                "abbreviation": "ICLR"
+            },
+            "book": "7th International Conference on Learning Representations",
+            "year": "2019",
+            "url": "https://openreview.net/forum?id=BJl6AjC5F7"
+        }
+    },
+    {
+        "uid": "sb-013",
+        "full": " Tang Z., Shen X., Li C., Ge J., Huang L., Zhu Z., Luo B., AST-trans: Code summarization with efficient tree-structured attention, 44th IEEE/ACM 44th International Conference on Software Engineering, ICSE 2022, pp. 150-162, (2022)",
+        "stripped": "ast-trans: code summarization with efficient tree-structured attention",
+        "doi": "10.1145/3510003.3510224"
+    },
+    {
+        "uid": "sb-015",
+        "full": " Zhang Y., Fan Y., Hou S., Ye Y., Xiao X., Li P., Shi C., Zhao L., Xu S., Cyber-Guided Deep Neural Network For Malicious Repository Detection In Github, 2020 IEEE International Conference on Knowledge Graph (ICKG), pp. 458-465, (2020)",
+        "stripped": "cyber-guided deep neural network for malicious repository detection in github",
+        "doi": "10.1109/ICBK50248.2020.00071"
+    },
+    {
+        "uid": "sb-016",
+        "full": " Alon U., Zilberstein M., Levy O., A general path-based representation for predicting program properties., (2018)",
+        "stripped": "a general path-based representation for predicting program properties.",
+        "doi": "10.1145/3192366.3192412"
+    },
+    {
+        "uid": "sb-017",
+        "full": " Liang H., Yang Y., Sun L., Jiang L., JSAC: a novel framework to detect malicious javascript via CNNs over AST and CFG, 2019 International Joint Conference on Neural Networks (IJCNN), pp. 1-8, (2019)",
+        "stripped": "jsac: a novel framework to detect malicious javascript via cnns over ast and cfg",
+        "doi": "10.1109/IJCNN.2019.8851760"
+    },
+    {
+        "uid": "sb-018",
+        "full": " Ghaffarian S.M., Shahriari H.R., Neural software vulnerability analysis using rich intermediate graph representations of programs, Information Sciences, 553, pp. 189-207, (2021)",
+        "stripped": "neural software vulnerability analysis using rich intermediate graph representations of programs",
+        "doi": "10.1016/j.ins.2020.11.053"
+    },
+    {
+        "uid": "sb-021",
+        "full": " Control flow graph embedding based on multi-instance decomposition for bug localization, Proceedings of the 34Th AAAI Conference on Artificial Intelligence, Volume 34, pp. 4223-4230, (2020)",
+        "stripped": "control flow graph embedding based on multi-instance decomposition for bug localization",
+        "doi": "10.1609/aaai.v34i04.5844"
+    },
+    {
+        "uid": "sb-022",
+        "full": " Liu F., Li G., Wei B., Xia X., Fu Z., Jin Z., A self-attentional neural architecture for code completion with multi-task learning, Proc. 28th Int. Conf. Prog. Comprehension, pp. 37-47, (2020)",
+        "stripped": "a self-attentional neural architecture for code completion with multi-task learning",
+        "doi": "10.1145/3387904.3389261"
+    },
+    {
+        "uid": "sb-023",
+        "full": " Cvitkovic M., Singh B., Anandkumar A., Deep learning on code with an unbounded vocabulary, CAV, (2018)",
+        "stripped": "deep learning on code with an unbounded vocabulary",
+        "doi": "10.29007/bc6w"
+    },
+    {
+        "uid": "sb-024",
+        "full": " Cheng X., Wang H., Hua J., Zhang M., Xu G., Yi L., Sui Y., Static detection of control-flow-related vulnerabilities using graph embedding, 2019 24th International Conference on Engineering of Complex Computer Systems (ICECCS\u201919), pp. 41-50, (2019)",
+        "stripped": "static detection of control-flow-related vulnerabilities using graph embedding",
+        "doi": "10.1109/ICECCS.2019.00012"
+    },
+    {
+        "uid": "sb-025",
+        "full": " Mou L., Li G., Zhang L., Wang T., Jin Z., Convolutional Neural Networks over Tree Structures for Programming Language Processing, Proceedings of the Thirtieth AAAI Conference on Artificial Intelligence, pp. 1287-1293, (2016)",
+        "stripped": "convolutional neural networks over tree structures for programming language processing",
+        "doi": "10.1609/aaai.v30i1.10139"
+    },
+    {
+        "uid": "sb-027",
+        "full": " Hu X., Li G., Xia X., Lo D., Jin Z., Deep code comment generation with hybrid lexical and syntactical information, Empir. Softw. Eng., 25, 3, pp. 2179-2217, (2020)",
+        "stripped": "deep code comment generation with hybrid lexical and syntactical information",
+        "doi": "10.1007/s10664-019-09730-9"
+    },
+    {
+        "uid": "sb-028",
+        "full": " Li J., Wang Y., Lyu M.R., King I., Code completion with neural attention and pointer networks, Proceedings of the twenty-seventh international joint conference on artificial intelligence, IJCAI, pp. 4159-4165, (2018)",
+        "stripped": "code completion with neural attention and pointer networks",
+        "doi": "10.24963/ijcai.2018/578"
+    },
+    {
+        "uid": "sb-029",
+        "full": " Chakraborty S., Ding Y., Allamanis M., Ray B., CODIT: Code editing with treebased neural models, IEEE Transactions on Software Engineering, (2020)",
+        "stripped": "codit: code editing with treebased neural models",
+        "doi": "10.1109/TSE.2020.3020502"
+    },
+    {
+        "uid": "sb-031",
+        "full": " Chen X., Liu C., Song D., Tree-to-tree neural networks for program translation, NIPS'18 Proceedings of the 32nd International Conference on Neural Information Processing Systems, 31, pp. 2552-2562, (2018)",
+        "stripped": "tree-to-tree neural networks for program translation",
+        "doi": null,
+        "arxiv-doi": "10.48550/arXiv.1802.03691",
+        "bibtex": {
+            "title": "Tree-to-tree neural networks for program translation",
+            "authors": [
+                {"given": ["Xinyun"], "more-initials": [], "last":  "Chen"},
+                {"given": ["Chang"], "more-initials": [], "last": "Liu"},
+                {"given": ["Dawn"], "more-initials": [], "last": "Song"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "International Conference on Neural Information Processing System",
+                "abbreviation": "NIPS"
+            },
+            "book": "Proceedings of the 32nd International Conference on Neural Information Processing System",
+            "year": "2018",
+            "url": "https://dl-acm-org.proxy-ub.rug.nl/doi/abs/10.5555/3327144.3327180"
+        }
+    },
+    {
+        "uid": "sb-033",
+        "full": " Pan W., Ming H., Chang C.K., Yang Z., Kim D., ElementRank: Ranking Java software classes and packages using a multilayer complex network-based approach, IEEE Trans. Softw. Eng., 47, 10, pp. 2272-2295, (2021)",
+        "stripped": "elementrank: ranking java software classes and packages using a multilayer complex network-based approach",
+        "doi": "10.1109/TSE.2019.2946357"
+    },
+    {
+        "uid": "sb-035",
+        "full": " Lazarine B., Samtani S., Patton M., Zhu H., Ullman S., Ampel B., Chen H., Identifying Vulnerable Github Repositories And Users In Scientific Cyberinfrastructure: An Unsupervised Graph Embedding Approach, 2020 IEEE International Conference on Intelligence and Security Informatics (ISI), pp. 1-6, (2020)",
+        "stripped": "identifying vulnerable github repositories and users in scientific cyberinfrastructure: an unsupervised graph embedding approach",
+        "doi": "10.1109/ISI49825.2020.9280544"
+    },
+    {
+        "uid": "sb-037",
+        "full": " Yao Z., Xu F.F., Yin P., Sun H., Neubig G., Learning structural edits via incremental tree transformations, 9Th International Conference on Learning Representations, ICLR 2021, Virtual Event, Austria, May 3\u20137, 2021, Openreview.Net, (2021)",
+        "stripped": "learning structural edits via incremental tree transformations",
+        "doi": null,
+        "arxiv-doi": "10.48550/arXiv.2101.12087",
+        "bibtex": {
+            "title": "Learning Structural Edits via Incremental Tree Transformations",
+            "authors": [
+                {"given": ["Ziyu"], "more-initials": [], "last": "Yao"},
+                {"given": ["Frank"], "more-initials": ["F"], "last": "Xu"},
+                {"given": ["Pengcheng"], "more-initials": [], "last": "Yin"},
+                {"given": ["Huan"], "more-initials": [], "last": "Sun"},
+                {"given": ["Graham"], "more-initials": [], "last": "Neubig"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "International Conference on Learning Representations",
+                "abbreviation": "ICLR"
+            },
+            "book": "9th International Conference on Learning Representations",
+            "year": "2021",
+            "url": "https://openreview.net/forum?id=v9hAX77--cZ"
+        }
+    },
+    {
+        "uid": "sb-038",
+        "full": " Liu F., Zhang L., Jin Z., Modeling programs hierarchically with stack-augmented lstm, Journal of Systems and Software, 164, (2020)",
+        "stripped": "modeling programs hierarchically with stack-augmented lstm",
+        "doi": "10.1016/j.jss.2020.110547"
+    },
+    {
+        "uid": "sb-039",
+        "full": " Gupta R., Kanade A., Shevade S., Neural attribution for semantic bug-localization in student programs, NeurIPS, (2019)",
+        "stripped": "neural attribution for semantic bug-localization in student programs",
+        "doi": null,
+        "bibtex": {
+            "title": "Neural Attribution for Semantic Bug-Localization in Student Programs",
+            "authors": [
+                {"given": ["Pengcheng"], "more-initials": [], "last":  "Yin"},
+                {"given": ["Graham"], "more-initials": [], "last": "Neubig"},
+                {"given":  ["Miltiadis"], "more-initials": [], "last": "Allamanis"},
+                {"given": ["Marc"], "more-initials": [], "last": "Brockschmidt"},
+                {"given": ["Alexander"], "more-initials": ["L"], "last": "Gaunt"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "Neural Information Processing Systems",
+                "abbreviation": "NeurIPS"
+            },
+            "book": "Advances in Neural Information Processing Systems 32 (NeurIPS 2019)",
+            "year": "2019",
+            "url": "https://proceedings.neurips.cc/paper/2019/hash/f29a179746902e331572c483c45e5086-Abstract.html"
+        }
+    },
+    {
+        "uid": "sb-040",
+        "full": " Liang H., Sun L., Wang M., Yang Y., Deep learning with customized abstract syntax tree for bug localization, IEEE Access, 7, pp. 116309-116320, (2019)",
+        "stripped": "deep learning with customized abstract syntax tree for bug localization",
+        "doi": "10.1109/ACCESS.2019.2936948"
+    },
+    {
+        "uid": "sb-041",
+        "full": " Zhang J., Xie R., Ye W., Zhang Y., Zhang S., Exploiting code knowledge graph for bug localization via bi-directional attention, pp. 219-229, (2020)",
+        "stripped": "exploiting code knowledge graph for bug localization via bi-directional attention",
+        "doi": "10.1145/3387904.3389281"
+    },
+    {
+        "uid": "sb-042",
+        "full": " Zhu Z., Li Y., Tong H., Wang Y., COOBA: Cross-project bug localization via adversarial transfer learning, pp. 3565-3571, (2020)",
+        "stripped": "cooba: cross-project bug localization via adversarial transfer learning",
+        "doi": "10.24963/ijcai.2020/493"
+    },
+    {
+        "uid": "sb-043",
+        "full": " Zhong H., Mei H., Learning a graph-based classifier for fault localization, Science China Information Sciences, 63, (2020)",
+        "stripped": "learning a graph-based classifier for fault localization",
+        "doi": "10.1007/s11432-019-2720-1"
+    },
+    {
+        "uid": "sb-045",
+        "full": " Buch L., Andrzejak A., Learning-based recursive aggregation of abstract syntax trees for code clone detection. Proceedings of the 2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering",
+        "stripped": "learning-based recursive aggregation of abstract syntax trees for code clone detection. proceedings of the 2019 ieee 26th international conference on software analysis",
+        "doi": "10.1109/SANER.2019.8668039"
+    },
+    {
+        "uid": "sb-049",
+        "full": " DeFreez D., Thakur A.V., Rubio-Gonzalez C., Path-based function embedding and its application to error-handling specification mining, ESEC/FSE, pp. 423-433, (2018)",
+        "stripped": "path-based function embedding and its application to error-handling specification mining",
+        "doi": "10.1145/3236024.3236059"
+    },
+    {
+        "uid": "sb-050",
+        "full": " Kang H. J., Lo D., Active learning of discriminative subgraph patterns for api misuse detection, IEEE Transactions on Software Engineering, (2021)",
+        "stripped": "active learning of discriminative subgraph patterns for api misuse detection",
+        "doi": "10.1109/TSE.2021.3069978"
+    },
+    {
+        "uid": "sb-051",
+        "full": " Chen C., Et al., Generative API usage code recommendation with parameter concretization, SCIENCE CHINA Inf. Sci., 62, 9, pp. 1921031-19210322, (2019)",
+        "stripped": "generative api usage code recommendation with parameter concretization",
+        "doi": "10.1007/s11432-018-9821-9"
+    },
+    {
+        "uid": "sb-052",
+        "full": " Ling C., Zou Y., Xie B., Graph neural network based collaborative filtering for api usage recommendation, Proceedings of the 2021 IEEE International Conference on Software Analysis, Evolution and Reengineering, pp. 36-47, (2021)",
+        "stripped": "graph neural network based collaborative filtering for api usage recommendation",
+        "doi": "10.1109/SANER50967.2021.00013"
+    },
+    {
+        "uid": "sb-053",
+        "full": " Wang Y., Li H., Code Completion by Modeling Flattened Abstract Syntax Trees as Graphs. Arxiv Preprint Arxiv, 2103, (2021)",
+        "stripped": "code completion by modeling flattened abstract syntax trees as graphs. arxiv preprint arxiv",
+        "doi": "10.1609/aaai.v35i16.17650"
+    },
+    {
+        "uid": "sb-055",
+        "full": " Bui Q.N.D., Yu Y., Jiang L., TreeCaps: Tree-Based Capsule Networks for Source Code Processing, Thirty-Fifth AAAI Conference on Artificial Intelligence, AAAI 2021, Thirty-Third Conference on Innovative Applications of Artificial Intelligence, IAAI 2021, The Eleventh Symposium on Educational Advances in Artificial Intelligence, EAAI 2021, pp. 30-38, (2021)",
+        "stripped": "treecaps: tree-based capsule networks for source code processing",
+        "doi": "10.1609/aaai.v35i1.16074"
+    },
+    {
+        "uid": "sb-056",
+        "full": " Hua W., Sui Y., Wan Y., Liu G., Xu G., FCCA: Hybrid code representation for functional clone detection using attention networks, IEEE Trans. Reliabil., 70, pp. 304-318, (2020)",
+        "stripped": "fcca: hybrid code representation for functional clone detection using attention networks",
+        "doi": "10.1109/TR.2020.3001918"
+    },
+    {
+        "uid": "sb-057",
+        "full": " White M., Tufano M., Vendome C., Poshyvanyk D., Deep learning code fragments for code clone detection, ASE, (2016)",
+        "stripped": "deep learning code fragments for code clone detection",
+        "doi": "10.1145/2970276.2970326"
+    },
+    {
+        "uid": "sb-058",
+        "full": " Zeng J., Ben K., Li X., Zhang X., Fast code clone detection based on weighted recursive autoencoders, IEEE Access, 7, pp. 125062-125078, (2019)",
+        "stripped": "fast code clone detection based on weighted recursive autoencoders",
+        "doi": "10.1109/ACCESS.2019.2938825"
+    },
+    {
+        "uid": "sb-059",
+        "full": " Yu H., Lam W., Chen L., Li G., Xie T., Wang Q., Neural detection of semantic code clones via tree-based convolution, Proceedings of the 27th International Conference on Program Comprehension, pp. 70-80, (2019)",
+        "stripped": "neural detection of semantic code clones via tree-based convolution",
+        "doi": "10.1109/ICPC.2019.00021"
+    },
+    {
+        "uid": "sb-060",
+        "full": " Fang C., Liu Z., Shi Y., Huang J., Shi Q., Functional code clone detection with syntax and semantics fusion learning, pp. 516-527, (2020)",
+        "stripped": "functional code clone detection with syntax and semantics fusion learning",
+        "doi": "10.1145/3395363.3397362"
+    },
+    {
+        "uid": "sb-061",
+        "full": " Wei H., Li M., Supervised deep features for software functional clone detection by exploiting lexical and syntactical information in source code, IJCAI, pp. 3034-3040, (2017)",
+        "stripped": "supervised deep features for software functional clone detection by exploiting lexical and syntactical information in source code",
+        "doi": "10.24963/ijcai.2017/423"
+    },
+    {
+        "uid": "sb-064",
+        "full": " Zhang J., Wang X., Zhang H., Sun H., Wang K., Liu X., A novel neural source code representation based on abstract syntax tree, Proceedings of the 41st International Conference on Software Engineering, ICSE 2019, pp. 783-794, (2019)",
+        "stripped": "a novel neural source code representation based on abstract syntax tree",
+        "doi": "10.1109/ICSE.2019.00086"
+    },
+    {
+        "uid": "sb-065",
+        "full": " Tufano M., Watson C., Bavota G., Di Penta M., White M., Poshyvanyk D., Deep learning similarities from different representations of source code, MSR, (2018)",
+        "stripped": "deep learning similarities from different representations of source code",
+        "doi": "10.1145/3196398.3196431"
+    },
+    {
+        "uid": "sb-066",
+        "full": " Gu W., Et al., CRaDLe: Deep code retrieval based on semantic dependency learning, Neural Netw, 141, pp. 385-394, (2021)",
+        "stripped": "cradle: deep code retrieval based on semantic dependency learning",
+        "doi": "10.1016/j.neunet.2021.04.019"
+    },
+    {
+        "uid": "sb-067",
+        "full": " Zhao G., Huang J., Deepsim: deep learning code functional similarity, pp. 141-151, (2018)",
+        "stripped": "deepsim: deep learning code functional similarity",
+        "doi": "10.1145/3236024.3236068"
+    },
+    {
+        "uid": "sb-069",
+        "full": " Bui N.D.Q., Yu Y., Jiang L., Bilateral dependency neural networks for cross-language algorithm classification, 2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering (SANER). IEEE, pp. 422-433, (2019)",
+        "stripped": "bilateral dependency neural networks for cross-language algorithm classification",
+        "doi": "10.1109/SANER.2019.8667995"
+    },
+    {
+        "uid": "sb-070",
+        "full": " Liu S., A Unified Framework to Learn Program Semantics with Graph Neural Networks, 2020 35th IEEE/ACM International Conference on Automated Software Engineering (ASE, (2020)",
+        "stripped": "a unified framework to learn program semantics with graph neural networks",
+        "doi": "10.1145/3324884.3418924"
+    },
+    {
+        "uid": "sb-072",
+        "full": " Dinella E., Dai H., Li Z., Naik M., Song L., Wang K., Hoppity: Learning Graph Transformations to Detect and Fix Bugs in Programs, International Conference on Learning Representations, (2020)",
+        "stripped": "hoppity: learning graph transformations to detect and fix bugs in programs",
+        "doi": null,
+        "bibtex": {
+            "title": "HOPPITY: LEARNING GRAPH TRANSFORMATIONS TO DETECT AND FIX BUGS IN PROGRAMS",
+            "authors": [
+                {"given": ["Elizabth"], "more-initials": [], "last": "Dinella"},
+                {"given": ["Hanjun"], "more-initials": [], "last": "Dai"},
+                {"given": ["Ziyang"], "more-initials": [], "last": "Li"},
+                {"given": ["Mayur"], "more-initials": [], "last": "Naik"},
+                {"given": ["Le"], "more-initials": [], "last": "Song"},
+                {"given": ["Ke"], "more-initials": [], "last": "Wang"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "International Conference on Learning Representations",
+                "abbreviation": "ICLR"
+            },
+            "book": "8th International Conference on Learning Representations (ICLR)",
+            "year": "2020",
+            "url": "https://openreview.net/forum?id=SJeqs6EFvB"
+        }
+    },
+    {
+        "uid": "sb-074",
+        "full": " Meneely A., Williams L., Snipes W., Osborne J., Predicting failures with developer networks and social network analysis, Proceedings of the 16th ACM SIGSOFT International Symposium On Foundations of Software Engineering, pp. 13-23, (2008)",
+        "stripped": "predicting failures with developer networks and social network analysis",
+        "doi": "10.1145/1453101.1453106"
+    },
+    {
+        "uid": "sb-075",
+        "full": " Bird C., Nagappan N., Gall H., Murphy B., Devanbu P., Putting it all together: Using socio-technical networks to predict failures, 2009 20th International Symposium On Software Reliability Engineering, pp. 109-119, (2009)",
+        "stripped": "putting it all together: using socio-technical networks to predict failures",
+        "doi": "10.1109/ISSRE.2009.17"
+    },
+    {
+        "uid": "sb-076",
+        "full": " Chen L., Ma W., Zhou Y., Xu L., Wang Z., Chen Z., Xu B., Empirical analysis of network measures for predicting high severity software faults, Sci. China Inf. Sci., 59, 12, pp. 1-18, (2016)",
+        "stripped": "empirical analysis of network measures for predicting high severity software faults",
+        "doi": "10.1007/s11432-015-5426-3"
+    },
+    {
+        "uid": "sb-078",
+        "full": " Li Y., Wong W.E., Lee S.Y., Wotawa F., Using tri-relation networks for effective software fault-proneness prediction, Ieee Access, 7, pp. 63066-63080, (2019)",
+        "stripped": "using tri-relation networks for effective software fault-proneness prediction",
+        "doi": "10.1109/ACCESS.2019.2916615"
+    },
+    {
+        "uid": "sb-081",
+        "full": "Alon U., Zilberstein M., Levy O., Yahav E., 2019. Code2vec: Learning Distributed Representations of Code, 3, (2019)",
+        "stripped": "2019. code2vec: learning distributed representations of code",
+        "doi": "10.1145/3290353"
+    },
+    {
+        "uid": "sb-082",
+        "full": " Cabrera Lozoya R., Baumann A., Sabetta A., Bezzi M., Commit2vec: Learning distributed representations of code changes, SN Computer Science, 2, 3, pp. 1-16, (2021)",
+        "stripped": "commit2vec: learning distributed representations of code changes",
+        "doi": "10.1007/s42979-021-00566-z"
+    },
+    {
+        "uid": "sb-083",
+        "full": " Ben-Nun T., Jakobovits A. S., Hoefler T., Neural code comprehension: a learnable representation of code semantics, Advances in Neural Information Processing Systems, pp. 3585-3597, (2018)",
+        "stripped": "neural code comprehension: a learnable representation of code semantics",
+        "doi": null,
+        "arxiv-doi": "10.48550/arXiv.1806.07336",
+        "bibtex": {
+            "title": "Neural Code Comprehension: A Learnable Representation of Code Semantics",
+            "authors": [
+                {"given": ["Tal"], "more-initials": [], "last": "Ben-Nun"},
+                {"given": ["Alice", "Shoshana"], "more-initials": [], "last": "Jakobovits"},
+                {"given": ["Torsten"], "more-initials": [], "last": "Hoefler"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "Neural Information Processing Systems",
+                "abbreviation": "NeurIPS"
+            },
+            "book": "Advances in Neural Information Processing Systems 31 (NeurIPS 2018)",
+            "year": "2018",
+            "url": "https://openreview.net/forum?id=BJl6AjC5F7"
+        }
+    },
+    {
+        "uid": "sb-084",
+        "full": " Brody S., Alon U., Yahav E., A structural model for contextual code changes, Proceedings of the ACM on Programming Languages, 4, pp. 1-28, (2020)",
+        "stripped": "a structural model for contextual code changes",
+        "doi": "10.1145/3428283"
+    },
+    {
+        "uid": "sb-085",
+        "full": " Hellendoorn V.J., Sutton C., Singh R., Maniatis P., Bieber D., Global relational models of source code, International Conference on Learning Representations, (2020)",
+        "stripped": "global relational models of source code",
+        "doi": null,
+        "bibtex": {
+            "title": "Global Relational Models of Source Code",
+            "authors": [
+                {"given": ["Vincent"], "more-initials": ["J"], "last": "Hellendoorn"},
+                {"given": ["Charles"], "more-initials": [], "last": "Sutton"},
+                {"given": ["Rishabh"], "more-initials": [], "last": "Singh"},
+                {"given": ["Petros"], "more-initials": [], "last": "Maniatis"},
+                {"given": ["David"], "more-initials": [], "last": "Bieber"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "International Conference on Learning Representations",
+                "abbreviation": "ICLR"
+            },
+            "book": "8th International Conference on Learning Representations",
+            "year": "2020",
+            "url": "https://openreview.net/forum?id=B1lnbRNtwr"
+        }
+    },
+    {
+        "uid": "sb-087",
+        "full": " Guo D., Ren S., Lu S., Feng Z., Tang D., Liu S., Zhou L., Duan N., Svyatkovskiy A., Fu S., Et al., Graphcodebert: Pre-training code representations with data-ow, (2020)",
+        "stripped": "graphcodebert: pre-training code representations with data-ow",
+        "doi": null,
+        "bibtex": {
+            "title": "GraphCodeBERT: Pre-training Code Representations with Data Flow",
+            "authors": [
+                {"given": ["Daya"], "more-initials": [], "last": "Guo"},
+                {"given": ["Shuo"], "more-initials": [], "last": "Ren"},
+                {"given": ["Shuai"], "more-initials": [], "last": "Lu"},
+                {"given": ["Zhangyin"], "more-initials": [], "last": "Feng"},
+                {"given": ["Duyu"], "more-initials": [], "last": "Tang"},
+                {"given": ["Shujie"], "more-initials": [], "last": "Liu"},
+                {"given": ["Long"], "more-initials": [], "last": "Zhou"},
+                {"given": ["Nan"], "more-initials": [], "last": "Duan"},
+                {"given": ["Alexey"], "more-initials": [], "last": "Svyatkovskiy"},
+                {"given": ["Shengyu"], "more-initials": [], "last": "Fu"},
+                {"given": ["Michele"], "more-initials": [], "last": "Tufano"},
+                {"given": ["Shao", "Kun"], "more-initials": [], "last": "Deng"},
+                {"given": ["Colin"], "more-initials": [], "last": "Clement"},
+                {"given": ["Dawn"], "more-initials": [], "last": "Drain"},
+                {"given": ["Neel"], "more-initials": [], "last": "Sundaresan"},
+                {"given": ["Jian"], "more-initials": [], "last": "Yin"},
+                {"given": ["Daxin"], "more-initials": [], "last": "Jiang"},
+                {"given": ["Ming"], "more-initials": [], "last": "Zhou"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "International Conference on Learning Representations",
+                "abbreviation": "ICLR"
+            },
+            "book": "9th International Conference on Learning Representations",
+            "year": "2021",
+            "url": "https://openreview.net/forum?id=jLoC4ez43PZ"
+        }
+    },
+    {
+        "uid": "sb-088",
+        "full": " Jiang X., Zheng Z., Lyu C., Li L., Lyu L., Treebert: A tree-based pre-trained model for programming language, UAI 2021: Uncertainty in Artificial Intelligence, (2021)",
+        "stripped": "treebert: a tree-based pre-trained model for programming language",
+        "doi": null,
+        "bibtex": {
+            "title": "TreeBERT: A tree-based pre-trained model for programming language",
+            "authors": [
+                {"given": ["Xue"], "more-initials": [], "last": "Jiang"},
+                {"given": ["Zhuoran"], "more-initials": [], "last": "Zheng"},
+                {"given": ["Chen"], "more-initials": [], "last": "Lyu"},
+                {"given": ["Liang"], "more-initials": [], "last": "Li"},
+                {"given": ["Lei"], "more-initials": [], "last": "Lyu"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "Conference on Uncertainty in Artificial Intelligence",
+                "abbreviation": null
+            },
+            "book": "Proceedings of the Thirty-Seventh Conference on Uncertainty in Artificial Intelligence",
+            "series": "Proceedings of Machine Learning Research",
+            "volume": "161",
+            "pages": {"start": "54", "stop": "63"},
+            "year": "2021",
+            "url": "https://proceedings.mlr.press/v161/jiang21a.html"
+        }
+    },
+    {
+        "uid": "sb-089",
+        "full": " Bui N.D.Q., Yu Y., Jiang L., InferCode: Self-Supervised Learning of Code Representations by Predicting Subtrees, 2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)., pp. 1186-1197, (2021)",
+        "stripped": "infercode: self-supervised learning of code representations by predicting subtrees",
+        "doi": "10.1109/ICSE43902.2021.00109"
+    },
+    {
+        "uid": "sb-090",
+        "full": " Vagavolu D., Swarna K. C., Chimalakonda S., A mocktail of source code representations, ASE, (2021)",
+        "stripped": "a mocktail of source code representations",
+        "doi": "10.1109/ASE51524.2021.9678551"
+    },
+    {
+        "uid": "sb-091",
+        "full": " Chen D., Chen X., Li H., Xie J., Mu Y., Deepcpdp: Deep learning based cross-project defect prediction, Ieee Access, 7, pp. 184832-184848, (2019)",
+        "stripped": "deepcpdp: deep learning based cross-project defect prediction",
+        "doi": "10.1109/ACCESS.2019.2961129"
+    },
+    {
+        "uid": "sb-092",
+        "full": " Zeng C., Zhou C.Y., Lv S.K., He P., Huang J., GCN2defect: Graph Convolutional Networks for SMOTETomek-based Software Defect Prediction, pp. 69-79, (2021)",
+        "stripped": "gcn2defect: graph convolutional networks for smotetomek-based software defect prediction",
+        "doi": "10.1109/ISSRE52982.2021.00020"
+    },
+    {
+        "uid": "sb-094",
+        "full": " Xu J., Wang F., Ai J., Defect prediction with semantics and context features of codes based on graph representation learning, Ieee Trans. Reliab, pp. 1-13, (2020)",
+        "stripped": "defect prediction with semantics and context features of codes based on graph representation learning",
+        "doi": "10.1109/TR.2020.3040191"
+    },
+    {
+        "uid": "sb-096",
+        "full": " Cai Z., Lu L., Qiu S., An abstract syntax tree encoding method for cross-project defect prediction, Ieee Access, 7, pp. 170844-170853, (2019)",
+        "stripped": "an abstract syntax tree encoding method for cross-project defect prediction",
+        "doi": "10.1109/ACCESS.2019.2953696"
+    },
+    {
+        "uid": "sb-097",
+        "full": " Yang Y., Ai J., Wang F., Defect prediction based on the characteristics of multilayer structure of software network, 2018 Ieee International Conference on Software Quality, Reliability and Security Companion (QRS-C), pp. 27-34, (2018)",
+        "stripped": "defect prediction based on the characteristics of multilayer structure of software network",
+        "doi": "10.1109/QRS-C.2018.00019"
+    },
+    {
+        "uid": "sb-098",
+        "full": " Shippey T., Bowes D., Hall T., Automatically identifying code features for software defect prediction: Using AST N-grams, Inf. Softw. Technol., 106, pp. 142-160, (2019)",
+        "stripped": "automatically identifying code features for software defect prediction: using ast n-grams",
+        "doi": "10.1016/j.infsof.2018.10.001"
+    },
+    {
+        "uid": "sb-100",
+        "full": " Meilong S., He P., Xiao H., Li H., Zeng C., An approach to semantic and structural features learning for software defect prediction, Math. Problems Eng., 2020, (2020)",
+        "stripped": "an approach to semantic and structural features learning for software defect prediction",
+        "doi": "10.1155/2020/6038619"
+    },
+    {
+        "uid": "sb-101",
+        "full": " Wang H., Zhuang W., Zhang X., Software Defect Prediction Based on Gated Hierarchical LSTMs, IEEE Transactions on Reliability, 70, 2, pp. 711-727, (2021)",
+        "stripped": "software defect prediction based on gated hierarchical lstms",
+        "doi": "10.1109/TR.2020.3047396"
+    },
+    {
+        "uid": "sb-102",
+        "full": " Nguyen V. H., Tran L. M. S., Predicting vulnerable software components with dependency graphs, Proceedings of the 6th International Workshop on Security Measurements and Metrics, ser. MetriSec'10, pp. 31-38, (2010)",
+        "stripped": "predicting vulnerable software components with dependency graphs",
+        "doi": "10.1145/1853919.1853923"
+    },
+    {
+        "uid": "sb-103",
+        "full": " Qu Y., Liu T., Chi J., Jin Y., Cui D., He A., Zheng Q., node2defect: Using network embedding to improve software defect prediction, 2018 33rd IEEE/ACM International Conference on Automated Software Engineering, ASE, pp. 844-849, (2018)",
+        "stripped": "node2defect: using network embedding to improve software defect prediction",
+        "doi": "10.1145/3238147.3240469"
+    },
+    {
+        "uid": "sb-104",
+        "full": " Pan C., Lu M., Xu B., Gao H., An improved CNN model for withinproject software defect prediction, Appl. Sci., 9, 10, (2019)",
+        "stripped": "an improved cnn model for withinproject software defect prediction",
+        "doi": "10.3390/app9102138"
+    },
+    {
+        "uid": "sb-105",
+        "full": " Li M., Li C., Li S., Wu Y., Zhang B., Wen Y., ACGVD: Vulnerability detection based on comprehensive graph via graph neural network with attention, International Conference on Information and Communications Security, pp. 243-259, (2021)",
+        "stripped": "acgvd: vulnerability detection based on comprehensive graph via graph neural network with attention",
+        "doi": "10.1007/978-3-030-86890-1_14"
+    },
+    {
+        "uid": "sb-106",
+        "full": " Wu H., Zhang Z., Wang S., Lei Y., Lin B., Qin Y., Zhang H., Mao X., Peculiar: Smart contract vulnerability detection based on crucial data flow graph and pre-Training techniques, 2021 IEEE 32nd International Symposium on Software Reliability Engineering (ISSRE). IEEE, pp. 378-389, (2021)",
+        "stripped": "peculiar: smart contract vulnerability detection based on crucial data flow graph and pre-training techniques",
+        "doi": "10.1109/ISSRE52982.2021.00047"
+    },
+    {
+        "uid": "sb-109",
+        "full": " Zhou L., Huang M., Li Y., Et al., GraphEye: A Novel Solution for Detecting Vulnerable Functions Based on Graph Attention Network [C], 2021 IEEE Sixth International Conference on Data Science in Cyberspace (DSC). IEEE, pp. 381-388, (2021)",
+        "stripped": "grapheye: a novel solution for detecting vulnerable functions based on graph attention network [c]",
+        "doi": "10.1109/DSC53577.2021.00060"
+    },
+    {
+        "uid": "sb-110",
+        "full": " Duan X., Wu J., Ji S., Rui Z., Luo T., Yang M., Wu Y., Vulsniper: Focus your attention to shoot fine-grained vulnerabilities., IJCAI, pp. 4665-4671, (2019)",
+        "stripped": "vulsniper: focus your attention to shoot fine-grained vulnerabilities.",
+        "doi": "10.24963/ijcai.2019/648"
+    },
+    {
+        "uid": "sb-111",
+        "full": " Bilgin Z., Ersoy M.A., Soykan E.U., Tomur E., Comak P., Karacay L., Vulnerability prediction from source code using machine learning, IEEE Access, 8, pp. 150672-150684, (2020)",
+        "stripped": "vulnerability prediction from source code using machine learning",
+        "doi": "10.1109/ACCESS.2020.3016774"
+    },
+    {
+        "uid": "sb-114",
+        "full": " Ban X., Liu S., Chen C., Chua C., A performance evaluation of deep-learnt features for software vulnerability detection, Concurrency Comput., Practice Experience, 31, (2019)",
+        "stripped": "a performance evaluation of deep-learnt features for software vulnerability detection",
+        "doi": "10.1002/cpe.5103"
+    },
+    {
+        "uid": "sb-115",
+        "full": " Zhu Q., Sun Z., Xiao Y., Zhang W., Yuan K., Xiong Y., Zhang L., A syntax-guided edit decoder for neural program repair, Proceedings of the 29th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering., pp. 341-353, (2021)",
+        "stripped": "a syntax-guided edit decoder for neural program repair",
+        "doi": "10.1145/3468264.3468544"
+    },
+    {
+        "uid": "sb-117",
+        "full": " Li Y., Wang S., Nguyen T.N., DEAR: A novel deep learning-based approach for automated program repair, International Conference on Software Engineering. ACM, pp. 511-523, (2022)",
+        "stripped": "dear: a novel deep learning-based approach for automated program repair",
+        "doi": "10.1145/3510003.3510177"
+    },
+    {
+        "uid": "sb-119",
+        "full": " Wu H., Zhao H., Zhang M., Code summarization with structure-induced transformer, Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021, pp. 1078-1090, (2021)",
+        "stripped": "code summarization with structure-induced transformer",
+        "doi": null,
+        "bibtex": {
+            "title": "Code Summarization with Structure-induced Transformer",
+            "authors": [
+                {"given": ["Hongqiu"], "more-initials": [], "last": "Wu"},
+                {"given": ["Hai"], "more-initials": [], "last": "Zhao"},
+                {"given": ["Min"], "more-initials": [], "last": "Zhang"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "The Joint Conference of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (ACL-IJCNLP 2021)",
+                "abbreviation": "ACL-IJCNLP"
+            },
+            "book": "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+            "pages": {"start": "1078", "stop": "1090"},
+            "year": "2021",
+            "url": "https://aclanthology.org/2021.findings-acl.93.pdf"
+        }
+    },
+    {
+        "uid": "sb-120",
+        "full": " LeClair A., Jiang S., McMillan C., A neural model for generating natural language summaries of program subroutines, Icse, pp. 795-806, (2019)",
+        "stripped": "a neural model for generating natural language summaries of program subroutines",
+        "doi": "10.1109/ICSE.2019.00087"
+    },
+    {
+        "uid": "sb-121",
+        "full": " Zhou Z., Yu H., Fan G., Huang Z., Yang X., Summarizing source code with hierarchical code representation, Inf. Softw. Technol., 143, (2022)",
+        "stripped": "summarizing source code with hierarchical code representation",
+        "doi": "10.1016/j.infsof.2021.106761"
+    },
+    {
+        "uid": "sb-122",
+        "full": " Gong Z., Gao C., Wang Y., Gu W., Peng Y., Xu Z., Source code summarization with structural relative position guided transformer, (2022)",
+        "stripped": "source code summarization with structural relative position guided transformer",
+        "doi": "10.1109/SANER53432.2022.00013"
+    },
+    {
+        "uid": "sb-123",
+        "full": " Zhou W., Junhua W., Code comments generation with data flow-guided transformer, Web Information Systems and Applications: 19Th International Conference, WISA 2022, Dalian, China, September 16\u201318, 2022, Proceedings, pp. 168-180, (2022)",
+        "stripped": "code comments generation with data flow-guided transformer",
+        "doi": "10.1007/978-3-031-20309-1_15"
+    },
+    {
+        "uid": "sb-124",
+        "full": " Wang Y., Dong Y., Lu X., Zhou A., Gypsum: Learning hybrid representations for code summarization, Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension, pp. 12-23, (2022)",
+        "stripped": "gypsum: learning hybrid representations for code summarization",
+        "doi": "10.1145/3524610.3527903"
+    },
+    {
+        "uid": "sb-126",
+        "full": " Choi Y.S., Bak J.Y., Na C.W., Lee J.H., Learning sequential and structural information for source code summarization, Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021, pp. 2842-2851, (2021)",
+        "stripped": "learning sequential and structural information for source code summarization",
+        "doi": null,
+        "bibtex": {
+            "title": "Learning Sequential and Structural Information for Source Code Summarization",
+            "authors": [
+                {"given": ["YunSeok"], "more-initials": [], "last": "Choi"},
+                {"given": ["JinYeong"], "more-initials": [], "last": "Bak"},
+                {"given": ["CheolWon"], "more-initials": [], "last": "Na"},
+                {"given": ["Jee-Hyong"], "more-initials": [], "last": "Lee"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "The Joint Conference of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (ACL-IJCNLP 2021)",
+                "abbreviation": "ACL-IJCNLP"
+            },
+            "book": "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 2: Short Papers)",
+            "pages": {"start": "2842", "stop": "2851"},
+            "year": "2021",
+            "url": "https://aclanthology.org/2021.findings-acl.251.pdf"
+        }
+    },
+    {
+        "uid": "sb-127",
+        "full": " Peng H., Li G., Wang W., Zhao Y., Jin Z., Integrating tree path in transformer for code representation, Thirty-Fifth Conference on Neural Information Processing Systems, (2021)",
+        "stripped": "integrating tree path in transformer for code representation",
+        "doi": null,
+        "bibtex": {
+            "title": "Integrating tree path in transformer for code representation",
+            "authors": [
+                {"given": ["Han"], "more-initials": [], "last": "Peng"},
+                {"given": ["Ge"], "more-initials": [], "last": "Li"},
+                {"given": ["Wenhan"], "more-initials": [], "last": "Wang"},
+                {"given": ["Yunfei"], "more-initials": [], "last": "Zhao"},
+                {"given": ["Zhi"], "more-initials": [], "last": "Jin"}
+            ],
+            "type": "conference paper",
+            "conference": {
+                "name": "International Conference on Neural Information Processing Systems",
+                "abbreviation": "NIPS"
+            },
+            "book": "NIPS'21: Proceedings of the 35th International Conference on Neural Information Processing Systems",
+            "series": "Proceedings of Machine Learning Research",
+            "pages": {"start": "9343", "stop": "9354"},
+            "year": "2021",
+            "url": "https://proceedings.neurips.cc/paper/2021/hash/4e0223a87610176ef0d24ef6d2dcde3a-Abstract.html"
+        }
+    },
+    {
+        "uid": "sb-128",
+        "full": " Gao Y., Lyu C., M2ts: Multi-scale multi-modal approach based on transformer for source code summarization, Proceedings of the 30th IEEE/ACM International Conference on Program Comprehension, pp. 24-35, (2022)",
+        "stripped": "m2ts: multi-scale multi-modal approach based on transformer for source code summarization",
+        "doi": "10.1145/3524610.3527907"
+    },
+    {
+        "uid": "sb-130",
+        "full": " Zhou Z., Yu H., Fan G., Effective approaches to combining lexical and syntactical information for code summarization, Softw Pract Exp, 50, 12, pp. 2313-2336, (2020)",
+        "stripped": "effective approaches to combining lexical and syntactical information for code summarization",
+        "doi": "10.1002/spe.2893"
+    },
+    {
+        "uid": "sb-131",
+        "full": " Sun Z., Zhu Q., Mou L., Xiong Y., Li G., Zhang L., A grammar- based structural CNN decoder for code generation, (2018)",
+        "stripped": "a grammar- based structural cnn decoder for code generation",
+        "doi": "10.1609/aaai.v33i01.33017055"
+    },
+    {
+        "uid": "sb-132",
+        "full": " Sun Z., Zhu Q., Xiong Y., Sun Y., Mou L., Zhang L., TreeGen: A tree-based transformer architecture for code generation, AAAI, (2020)",
+        "stripped": "treegen: a tree-based transformer architecture for code generation",
+        "doi": "10.1609/AAAI.V34I05.6430"
+    },
+    {
+        "uid": "sb-133",
+        "full": " Shido Y., Kobayashi Y., Yamamoto A., Miyamoto A., Matsumura T., Automatic Source Code Summarization with Extended Treelstm, (2019)",
+        "stripped": "automatic source code summarization with extended treelstm",
+        "doi": "10.1109/IJCNN.2019.8851751"
+    }
+]

@@ -1,0 +1,546 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          15
+        ]
+      ],
+      "date-time": "2024-03-15T17:57:24Z",
+      "timestamp": 1710525444440
+    },
+    "reference-count": 57,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2019-02-01T00:00:00Z",
+          "timestamp": 1548979200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2019-02-01T00:00:00Z",
+          "timestamp": 1548979200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              2,
+              1
+            ]
+          ],
+          "date-time": "2019-02-01T00:00:00Z",
+          "timestamp": 1548979200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          2
+        ]
+      ]
+    },
+    "DOI": "10.1109/saner.2019.8667995",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          3,
+          19
+        ]
+      ],
+      "date-time": "2019-03-19T01:30:10Z",
+      "timestamp": 1552959010000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 11,
+    "title": [
+      "Bilateral Dependency Neural Networks for Cross-Language Algorithm Classification"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Nghi D. Q.",
+        "family": "Bui",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Yijun",
+        "family": "Yu",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Lingxiao",
+        "family": "Jiang",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2015.36"
+      },
+      {
+        "key": "ref38",
+        "first-page": "155",
+        "article-title": "Do contexts help in phrase-based, statistical source code migration?",
+        "author": "nguyen",
+        "year": "2016",
+        "journal-title": "IEEE International Conference on Software Maintenance (ICSM"
+      },
+      {
+        "key": "ref33",
+        "first-page": "457",
+        "article-title": "Statistical learning approach for mining API usage mappings for code migration",
+        "author": "nguyen",
+        "year": "2014",
+        "journal-title": "Proc Conf Automated Software Eng (ASE)"
+      },
+      {
+        "key": "ref32",
+        "first-page": "2786",
+        "article-title": "Siamese recurrent architectures for learning sentence similarity",
+        "author": "mueller",
+        "year": "2016",
+        "journal-title": "Proc of the Thirtieth AAAI Conference on Artificial Intelligence"
+      },
+      {
+        "key": "ref31",
+        "first-page": "1287",
+        "article-title": "Convolutional neural networks over tree structures for programming language processing",
+        "author": "mou",
+        "year": "2016",
+        "journal-title": "Proc of the Thirtieth AAAI Conference on Artificial Intelligence"
+      },
+      {
+        "key": "ref30",
+        "first-page": "3111",
+        "article-title": "Distributed representations of words and phrases and their compositionality",
+        "author": "mikolov",
+        "year": "2013",
+        "journal-title": "Advances in Neural Information Processing Systems (NIPS)"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2015.74"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2591062.2591072"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2491411.2494584"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2591062.2591144"
+      },
+      {
+        "key": "ref28",
+        "first-page": "103",
+        "article-title": "Supporting program comprehension using semantic and structural information",
+        "author": "maletic",
+        "year": "2001",
+        "journal-title": "Proceedings of the 23rd International Conference on Software Engineering"
+      },
+      {
+        "key": "ref27",
+        "article-title": "Mining fix patterns for findbugs violations",
+        "volume": "abs 1712 3201",
+        "author": "liu",
+        "year": "2017",
+        "journal-title": "CoRR"
+      },
+      {
+        "key": "ref29",
+        "article-title": "Efficient estimation of word representations in vector space",
+        "volume": "abs 1301 3781",
+        "author": "mikolov",
+        "year": "2013",
+        "journal-title": "CoRR"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2017.7884617"
+      },
+      {
+        "key": "ref1",
+        "year": "0",
+        "journal-title": "Java2CSharp"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WCRE.2012.48"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "crossref",
+        "first-page": "415",
+        "DOI": "10.1109/72.991427",
+        "article-title": "A comparison of methods for multiclass support vector machines",
+        "volume": "13",
+        "author": "hsu",
+        "year": "2002",
+        "journal-title": "IEEE Transactions on Neural Networks"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "crossref",
+        "first-page": "173",
+        "DOI": "10.1145/2661136.2661148",
+        "article-title": "Phrase-based statistical translation of programming languages",
+        "author": "karaivanov",
+        "year": "2014",
+        "journal-title": "Proceedings of the 2014 ACM International Symposium on New Ideas New Paradigms and Reflections on Programming & Software"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1572272.1572283"
+      },
+      {
+        "key": "ref26",
+        "article-title": "Gated graph sequence neural networks",
+        "author": "li",
+        "year": "2016",
+        "journal-title": "International Conference on Learning Representations (ICLR)"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2348283.2348453"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/579"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/423"
+      },
+      {
+        "key": "ref57",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1806799.1806831"
+      },
+      {
+        "key": "ref56",
+        "first-page": "130",
+        "article-title": "Exposing behavioral differences in cross-language API mapping relations",
+        "author": "zhong",
+        "year": "2013",
+        "journal-title": "Proceedings of 16th International Conference on Fundamental Approaches to Software Engineering (FASE) Held as Part of the European Joint Conferences on Theory and Practice of Software (ETAPS)"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2338965.2336767"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CyberC.2016.42"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P17-1041"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/AINA.2013.88"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/AINA.2010.121"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/comjnl/23.1.61"
+      },
+      {
+        "key": "ref40",
+        "first-page": "547",
+        "article-title": "Building program vector representations for deep learning",
+        "author": "peng",
+        "year": "2015",
+        "journal-title": "Proceedings of the 8th International Conference on Knowledge Science Engineering and Management (KSEM)"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SCAM.2011.19"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.scico.2011.11.002"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2950290.2950334"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/514"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D15-1181"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3106237.3106290"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227135"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICDAR.1995.598994"
+      },
+      {
+        "key": "ref4",
+        "article-title": "Learning to represent programs with graphs",
+        "author": "allamanis",
+        "year": "2018",
+        "journal-title": "International Conference on Learning Representations (ICLR)"
+      },
+      {
+        "key": "ref3",
+        "first-page": "81",
+        "article-title": "A survey of machine learning for big code and naturalness",
+        "volume": "51",
+        "author": "allamanis",
+        "year": "2018",
+        "journal-title": "ACM Computing Surveys (CSUR)"
+      },
+      {
+        "key": "ref6",
+        "article-title": "Anonymous paper",
+        "year": "0",
+        "journal-title": "Anonymous Publication Venue"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/smr.1651"
+      },
+      {
+        "key": "ref8",
+        "first-page": "204",
+        "article-title": "Feature-oriented classification for software reuse",
+        "author": "b\u00f6rstler",
+        "year": "1995",
+        "journal-title": "Proceedings of the 7th International Conference on Software Engineering and Knowledge Engineering (SEKE)"
+      },
+      {
+        "key": "ref7",
+        "article-title": "Program equivalence using neural networks",
+        "author": "boccardo",
+        "year": "2010",
+        "journal-title": "5th International ICST Conference on Bio-Inspired Models of Network Information and Computing Systems At Boston United States"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3106237.3106289"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0218001493000339"
+      },
+      {
+        "key": "ref46",
+        "first-page": "801",
+        "article-title": "Dynamic pooling and unfolding recursive autoencoders for paraphrase detection",
+        "author": "socher",
+        "year": "2011",
+        "journal-title": "Proceedings of the 24th International Conference on Neural Information Processing Systems (NIPS)"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884848"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635875"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/comjnl/bxq049"
+      },
+      {
+        "key": "ref42",
+        "author": "peters",
+        "year": "2018",
+        "journal-title": "Text filtering and ranking for security bug report prediction"
+      },
+      {
+        "key": "ref41",
+        "first-page": "1",
+        "article-title": "Text filtering and ranking for security bug report prediction",
+        "volume": "1",
+        "author": "peters",
+        "year": "2018",
+        "journal-title": "IEEE Transactions on Software Engineering"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WPC.2002.1021348"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE-C.2017.17"
+      }
+    ],
+    "event": {
+      "name": "2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering (SANER)",
+      "location": "Hangzhou, China",
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            2,
+            24
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2019,
+            2,
+            27
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering (SANER)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/8663526/8667965/08667995.pdf?arnumber=8667995",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          18
+        ]
+      ],
+      "date-time": "2022-07-18T14:50:24Z",
+      "timestamp": 1658155824000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8667995/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          2
+        ]
+      ]
+    },
+    "references-count": 57,
+    "URL": "http://dx.doi.org/10.1109/saner.2019.8667995",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          2
+        ]
+      ]
+    }
+  }
+}

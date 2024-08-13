@@ -1,0 +1,1444 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          10
+        ]
+      ],
+      "date-time": "2024-05-10T16:59:27Z",
+      "timestamp": 1715360367539
+    },
+    "reference-count": 130,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "6",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              5,
+              9
+            ]
+          ],
+          "date-time": "2020-05-09T00:00:00Z",
+          "timestamp": 1588982400000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              5,
+              9
+            ]
+          ],
+          "date-time": "2020-05-09T00:00:00Z",
+          "timestamp": 1588982400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Sci. China Inf. Sci."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          6
+        ]
+      ]
+    },
+    "DOI": "10.1007/s11432-019-2720-1",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          5,
+          14
+        ]
+      ],
+      "date-time": "2020-05-14T04:05:26Z",
+      "timestamp": 1589429126000
+    },
+    "update-policy": "http://dx.doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 13,
+    "title": [
+      "Learning a graph-based classifier for fault localization"
+    ],
+    "prefix": "10.1007",
+    "volume": "63",
+    "author": [
+      {
+        "given": "Hao",
+        "family": "Zhong",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Hong",
+        "family": "Mei",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          5,
+          9
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "2720_CR1",
+        "first-page": "132",
+        "volume-title": "Proceedings of Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA)",
+        "author": "D Hovemeyer",
+        "year": "2004",
+        "unstructured": "Hovemeyer D, Pugh W. Finding bugs is easy. In: Proceedings of Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA), 2004. 132\u2013136"
+      },
+      {
+        "key": "2720_CR2",
+        "first-page": "210",
+        "volume-title": "Proceedings of International Symposium on Software Testing and Analysis (ISSTA)",
+        "author": "N DiGiuseppe",
+        "year": "2011",
+        "unstructured": "DiGiuseppe N, Jones J A. On the influence of multiple faults on coverage-based fault localization. In: Proceedings of International Symposium on Software Testing and Analysis (ISSTA), 2011. 210\u2013220"
+      },
+      {
+        "key": "2720_CR3",
+        "doi-asserted-by": "publisher",
+        "first-page": "88",
+        "DOI": "10.1109/ASE.2009.25",
+        "volume-title": "Proceedings of the 2009 IEEE/ACM International Conference on Automated Software Engineering",
+        "author": "R Abreu",
+        "year": "2009",
+        "unstructured": "Abreu R, Zoeteweij P, van Gemund A J C. Spectrum-based multiple fault localization. In: Proceedings of the 2009 IEEE/ACM International Conference on Automated Software Engineering, 2009. 88\u201399"
+      },
+      {
+        "key": "2720_CR4",
+        "doi-asserted-by": "publisher",
+        "first-page": "405",
+        "DOI": "10.1007/s10664-005-3861-2",
+        "volume": "10",
+        "author": "H Do",
+        "year": "2005",
+        "unstructured": "Do H, Elbaum S, Rothermel G. Supporting controlled experimentation with testing techniques: an infrastructure and its potential impact. Empir Softw Eng, 2005, 10: 405\u2013435",
+        "journal-title": "Empir Softw Eng"
+      },
+      {
+        "key": "2720_CR5",
+        "first-page": "1",
+        "volume-title": "Proceedings of International Symposium on Software Testing and Analysis (ISSTA)",
+        "author": "Q Wang",
+        "year": "2015",
+        "unstructured": "Wang Q, Parnin C, Orso A. Evaluating the usefulness of IR-based fault localization techniques. In: Proceedings of International Symposium on Software Testing and Analysis (ISSTA), 2015. 1\u201311"
+      },
+      {
+        "key": "2720_CR6",
+        "first-page": "672",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "B Johnson",
+        "year": "2013",
+        "unstructured": "Johnson B, Song Y, Murphy-Hill E, et al. Why don\u2019t software developers use static analysis tools to find bugs? In: Proceedings of the International Conference on Software Engineering (ICSE), 2013. 672\u2013681"
+      },
+      {
+        "key": "2720_CR7",
+        "doi-asserted-by": "publisher",
+        "first-page": "364",
+        "DOI": "10.1109/TSE.1975.6312866",
+        "volume": "1",
+        "author": "M J Rochkind",
+        "year": "1975",
+        "unstructured": "Rochkind M J. The source code control system. IEEE Trans Softw Eng, 1975, 1: 364\u2013370",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR8",
+        "first-page": "15",
+        "volume-title": "Proceedings of ESEC/FSE",
+        "author": "R Wu",
+        "year": "2011",
+        "unstructured": "Wu R, Zhang H, Kim S, et al. Relink: recovering links between bugs and changes. In: Proceedings of ESEC/FSE, 2011. 15\u201325"
+      },
+      {
+        "key": "2720_CR9",
+        "first-page": "386",
+        "volume-title": "Proceedings of the 34th International Conference on Software Engineering (ICSE)",
+        "author": "Y Tian",
+        "year": "2012",
+        "unstructured": "Tian Y, Lawall J, Lo D. Identifying linux bug fixing patches. In: Proceedings of the 34th International Conference on Software Engineering (ICSE), 2012. 386\u2013396"
+      },
+      {
+        "key": "2720_CR10",
+        "doi-asserted-by": "publisher",
+        "first-page": "056101",
+        "DOI": "10.1007/s11432-017-9355-3",
+        "volume": "61",
+        "author": "H Mei",
+        "year": "2018",
+        "unstructured": "Mei H, Zhang L. Can big data bring a breakthrough for software automation? Sci China Inf Sci, 2018, 61: 056101",
+        "journal-title": "Sci China Inf Sci"
+      },
+      {
+        "key": "2720_CR11",
+        "first-page": "495",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "P J Guo",
+        "year": "2010",
+        "unstructured": "Guo P J, Zimmermann T, Nagappan N, et al. Characterizing and predicting which bugs get fixed: an empirical study of microsoft windows. In: Proceedings of the International Conference on Software Engineering (ICSE), 2010. 495\u2013504"
+      },
+      {
+        "key": "2720_CR12",
+        "first-page": "913",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "H Zhong",
+        "year": "2015",
+        "unstructured": "Zhong H, Su Z. An empirical study on real bug fixes. In: Proceedings of the International Conference on Software Engineering (ICSE), 2015. 913\u2013923"
+      },
+      {
+        "key": "2720_CR13",
+        "doi-asserted-by": "publisher",
+        "first-page": "176",
+        "DOI": "10.1007/s10664-013-9282-8",
+        "volume": "20",
+        "author": "M Martinez",
+        "year": "2015",
+        "unstructured": "Martinez M, Monperrus M. Mining software repair models for reasoning on the search space of automated program fixing. Empir Softw Eng, 2015, 20: 176\u2013205",
+        "journal-title": "Empir Softw Eng"
+      },
+      {
+        "key": "2720_CR14",
+        "first-page": "3",
+        "volume": "23",
+        "author": "E Rahm",
+        "year": "2000",
+        "unstructured": "Rahm E, Do H H. Data cleaning: problems and current approaches. IEEE Data Eng Bullet, 2000, 23: 3\u201313",
+        "journal-title": "IEEE Data Eng Bullet"
+      },
+      {
+        "key": "2720_CR15",
+        "doi-asserted-by": "publisher",
+        "first-page": "177",
+        "DOI": "10.1145/390011.808263",
+        "volume": "19",
+        "author": "K J Ottenstein",
+        "year": "1984",
+        "unstructured": "Ottenstein K J, Ottenstein L M. The program dependence graph in a software development environment. ACM SIGPLAN Not, 1984, 19: 177\u2013184",
+        "journal-title": "ACM SIGPLAN Not"
+      },
+      {
+        "key": "2720_CR16",
+        "doi-asserted-by": "publisher",
+        "first-page": "e1838",
+        "DOI": "10.1002/smr.1838",
+        "volume": "29",
+        "author": "M Tufano",
+        "year": "2017",
+        "unstructured": "Tufano M, Palomba F, Bavota G, et al. There and back again: can you compile that snapshot? J Softw Evol Proc, 2017, 29: e1838",
+        "journal-title": "J Softw Evol Proc"
+      },
+      {
+        "key": "2720_CR17",
+        "first-page": "439",
+        "volume-title": "Proceedings of the 23rd IEEE/ACM International Conference on Automated Software Engineering",
+        "author": "H-Y Hsu",
+        "year": "2008",
+        "unstructured": "Hsu H-Y, Jones J A, Orso A. Rapid: identifying bug signatures to support debugging activities. In: Proceedings of the 23rd IEEE/ACM International Conference on Automated Software Engineering, 2008. 439\u2013442"
+      },
+      {
+        "key": "2720_CR18",
+        "doi-asserted-by": "publisher",
+        "first-page": "576",
+        "DOI": "10.1145/2491411.2491449",
+        "volume-title": "Proceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering",
+        "author": "C Sun",
+        "year": "2013",
+        "unstructured": "Sun C, Khoo S-C. Mining succinct predicated bug signatures. In: Proceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering, 2013. 576\u2013586"
+      },
+      {
+        "key": "2720_CR19",
+        "first-page": "191",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "M Hutchins",
+        "year": "1994",
+        "unstructured": "Hutchins M, Foster H, Goradia T, et al. Experiments of the effectiveness of dataflow-and controlflow-based test adequacy criteria. In: Proceedings of the International Conference on Software Engineering (ICSE), 1994. 191\u2013200"
+      },
+      {
+        "key": "2720_CR20",
+        "first-page": "310",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "J Li",
+        "year": "2012",
+        "unstructured": "Li J, Ernst M D. CBCD: cloned buggy code detector. In: Proceedings of the International Conference on Software Engineering (ICSE), 2012. 310\u2013320"
+      },
+      {
+        "key": "2720_CR21",
+        "doi-asserted-by": "publisher",
+        "first-page": "725",
+        "DOI": "10.1109/TSE.2007.70731",
+        "volume": "33",
+        "author": "B Fluri",
+        "year": "2007",
+        "unstructured": "Fluri B, Wuersch M, PInzger M, et al. Change distilling: tree differencing for fine-grained source code change extraction. IEEE Trans Softw Eng, 2007, 33: 725\u2013743",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR22",
+        "first-page": "997",
+        "volume-title": "Proceedings of Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA)",
+        "author": "A Mishne",
+        "year": "2012",
+        "unstructured": "Mishne A, Shoham S, Yahav E. Typestate-based semantic code search over partial programs. In: Proceedings of Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA), 2012. 997\u20131016"
+      },
+      {
+        "key": "2720_CR23",
+        "first-page": "313",
+        "volume-title": "Proceedings of Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA)",
+        "author": "B Dagenais",
+        "year": "2008",
+        "unstructured": "Dagenais B, Hendren L J. Enabling static analysis for partial Java programs. In: Proceedings of Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA), 2008. 313\u2013328"
+      },
+      {
+        "key": "2720_CR24",
+        "doi-asserted-by": "publisher",
+        "first-page": "597",
+        "DOI": "10.1142/S0219622006002258",
+        "volume": "05",
+        "author": "Q Yang",
+        "year": "2006",
+        "unstructured": "Yang Q, Wu X. 10 challenging problems in data mining research. Int J Info Tech Dec Mak, 2006, 05: 597\u2013604",
+        "journal-title": "Int J Info Tech Dec Mak"
+      },
+      {
+        "key": "2720_CR25",
+        "first-page": "671",
+        "volume-title": "Proceedings of IEEE/ACM International Conference on Automated Software Engineering",
+        "author": "H Zhong",
+        "year": "2017",
+        "unstructured": "Zhong H, Wang X. Boosting complete-code tools for partial program. In: Proceedings of IEEE/ACM International Conference on Automated Software Engineering, 2017. 671\u2013681"
+      },
+      {
+        "key": "2720_CR26",
+        "doi-asserted-by": "publisher",
+        "first-page": "2521",
+        "DOI": "10.1007/s10664-017-9584-3",
+        "volume": "23",
+        "author": "H Zhong",
+        "year": "2018",
+        "unstructured": "Zhong H, Meng N. Towards reusing hints from past fixes. Empir Softw Eng, 2018, 23: 2521\u20132549",
+        "journal-title": "Empir Softw Eng"
+      },
+      {
+        "key": "2720_CR27",
+        "volume-title": "Proceedings of IEEE International Conference on Software Maintenance and Evolution (ICSME)",
+        "author": "Y Wang",
+        "year": "2018",
+        "unstructured": "Wang Y, Meng N, Zhong H. An empirical study of multi-entity changes in real bug fixes. In: Proceedings of IEEE International Conference on Software Maintenance and Evolution (ICSME), 2018"
+      },
+      {
+        "key": "2720_CR28",
+        "doi-asserted-by": "publisher",
+        "first-page": "1597",
+        "DOI": "10.1109/TSE.2013.24",
+        "volume": "39",
+        "author": "D S Kim",
+        "year": "2013",
+        "unstructured": "Kim D S, Tao Y D, Kim S H, et al. Where should we fix this bug? A two-phase recommendation model. IEEE Trans Softw Eng, 2013, 39: 1597\u20131610",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR29",
+        "doi-asserted-by": "publisher",
+        "first-page": "5",
+        "DOI": "10.1007/s10515-009-0056-x",
+        "volume": "17",
+        "author": "D Hao",
+        "year": "2010",
+        "unstructured": "Hao D, Xie T, Zhang L, et al. Test input reduction for result inspection to facilitate fault localization. Autom Softw Eng, 2010, 17: 5\u201331",
+        "journal-title": "Autom Softw Eng"
+      },
+      {
+        "key": "2720_CR30",
+        "first-page": "609",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "S Pearson",
+        "year": "2017",
+        "unstructured": "Pearson S, Campos J, Just R, et al. Evaluating and improving fault localization. In: Proceedings of the International Conference on Software Engineering (ICSE), 2017. 609\u2013620"
+      },
+      {
+        "key": "2720_CR31",
+        "volume-title": "World Wide Web Consortium (W3C)",
+        "author": "A Berglund",
+        "year": "2003",
+        "unstructured": "Berglund A, Boag S, Chamberlin D, et al. XML path language (xpath). World Wide Web Consortium (W3C), 2003"
+      },
+      {
+        "key": "2720_CR32",
+        "first-page": "1",
+        "volume": "11",
+        "author": "J B Lovins",
+        "year": "1968",
+        "unstructured": "Lovins J B. Development of a stemming algorithm. Mech Transl Comput Linguist, 1968, 11: 1\u201310",
+        "journal-title": "Mech Transl Comput Linguist"
+      },
+      {
+        "key": "2720_CR33",
+        "first-page": "1801",
+        "volume": "10",
+        "author": "D Newman",
+        "year": "2009",
+        "unstructured": "Newman D, Asuncion A, Smyth P, et al. Distributed algorithms for topic models. J Mach Learn Res, 2009, 10: 1801\u20131828",
+        "journal-title": "J Mach Learn Res"
+      },
+      {
+        "key": "2720_CR34",
+        "first-page": "263",
+        "volume-title": "Proceedings of IEEE/ACM International Conference on Automated Software Engineering",
+        "author": "A T Nguyen",
+        "year": "2011",
+        "unstructured": "Nguyen A T, Nguyen T T, Al-Kofahi J, et al. A topic-based approach for narrowing the search space of buggy files from a bug report. In: Proceedings of IEEE/ACM International Conference on Automated Software Engineering, 2011. 263\u2013272"
+      },
+      {
+        "key": "2720_CR35",
+        "doi-asserted-by": "publisher",
+        "first-page": "83",
+        "DOI": "10.1002/nav.3800020109",
+        "volume": "2",
+        "author": "H W Kuhn",
+        "year": "1955",
+        "unstructured": "Kuhn H W. The Hungarian method for the assignment problem. Naval Res Logist, 1955, 2: 83\u201397",
+        "journal-title": "Naval Res Logist"
+      },
+      {
+        "key": "2720_CR36",
+        "volume-title": "Efficient estimation of word representations in vector space",
+        "author": "T Mikolov",
+        "year": "2013",
+        "unstructured": "Mikolov T, Chen K, Corrado G, et al. Efficient estimation of word representations in vector space. 2013. ArXiv: 1301.3781"
+      },
+      {
+        "key": "2720_CR37",
+        "first-page": "55",
+        "volume-title": "Proceedings of the 32nd International Conference on Software Engineering (ICSE)",
+        "author": "Z Gu",
+        "year": "2010",
+        "unstructured": "Gu Z, Barr E T, Hamilton D J, et al. Has the bug really been fixed? In: Proceedings of the 32nd International Conference on Software Engineering (ICSE), 2010. 55\u201364"
+      },
+      {
+        "key": "2720_CR38",
+        "doi-asserted-by": "publisher",
+        "first-page": "1263",
+        "DOI": "10.1109/TKDE.2008.239",
+        "volume": "21",
+        "author": "H B He",
+        "year": "2009",
+        "unstructured": "He H B, Garcia E A. Learning from imbalanced data. IEEE Trans Knowl Data Eng, 2009, 21: 1263\u20131284",
+        "journal-title": "IEEE Trans Knowl Data Eng"
+      },
+      {
+        "key": "2720_CR39",
+        "doi-asserted-by": "publisher",
+        "first-page": "321",
+        "DOI": "10.1613/jair.953",
+        "volume": "16",
+        "author": "N V Chawla",
+        "year": "2002",
+        "unstructured": "Chawla N V, Bowyer K W, Hall L O, et al. SMOTE: synthetic minority over-sampling technique. J Artif Intell Res, 2002, 16: 321\u2013357",
+        "journal-title": "J Artif Intell Res"
+      },
+      {
+        "key": "2720_CR40",
+        "doi-asserted-by": "publisher",
+        "first-page": "539",
+        "DOI": "10.1109/TSMCB.2008.2007853",
+        "volume": "39",
+        "author": "X-Y Liu",
+        "year": "2009",
+        "unstructured": "Liu X-Y, Wu J X, Zhou Z-H. Exploratory undersampling for class-imbalance learning. IEEE Trans Syst Man Cybern B, 2009, 39: 539\u2013550",
+        "journal-title": "IEEE Trans Syst Man Cybern B"
+      },
+      {
+        "key": "2720_CR41",
+        "first-page": "409",
+        "volume": "8",
+        "author": "D Mease",
+        "year": "2007",
+        "unstructured": "Mease D, Wyner A J, Buja A. Boosted classification trees and class probability/quantile estimation. J Mach Learn Res, 2007, 8: 409\u2013439",
+        "journal-title": "J Mach Learn Res"
+      },
+      {
+        "key": "2720_CR42",
+        "doi-asserted-by": "publisher",
+        "first-page": "3358",
+        "DOI": "10.1016/j.patcog.2007.04.009",
+        "volume": "40",
+        "author": "Y Sun",
+        "year": "2007",
+        "unstructured": "Sun Y, Kamel M S, Wong A K C, et al. Cost-sensitive boosting for classification of imbalanced data. Pattern Recogn, 2007, 40: 3358\u20133378",
+        "journal-title": "Pattern Recogn"
+      },
+      {
+        "key": "2720_CR43",
+        "doi-asserted-by": "publisher",
+        "first-page": "7",
+        "DOI": "10.1145/1007730.1007734",
+        "volume": "6",
+        "author": "G M Weiss",
+        "year": "2004",
+        "unstructured": "Weiss G M. Mining with rarity: a unifying framework. ACM SIGKDD Explor Newsletter, 2004, 6: 7\u201319",
+        "journal-title": "ACM SIGKDD Explor Newsletter"
+      },
+      {
+        "key": "2720_CR44",
+        "volume-title": "Pruning decision trees and lists",
+        "author": "E Frank",
+        "year": "2000",
+        "unstructured": "Frank E. Pruning decision trees and lists. Dissertation for Ph.D. Degree. Hamilton: University of Waikato, 2000"
+      },
+      {
+        "key": "2720_CR45",
+        "first-page": "148",
+        "volume-title": "Proceedings of International Conference on Machine Learning, San Francisco",
+        "author": "Y Freund",
+        "year": "1996",
+        "unstructured": "Freund Y, Schapire R E. Experiments with a new boosting algorithm. In: Proceedings of International Conference on Machine Learning, San Francisco, 1996. 148\u2013156"
+      },
+      {
+        "key": "2720_CR46",
+        "first-page": "612",
+        "volume-title": "Proceedings of the 25th IEEE International Conference on Software Analysis, Evolution, and Reengineering",
+        "author": "D Di Nucci",
+        "year": "2018",
+        "unstructured": "Di Nucci D, Palomba F, Tamburri D A, et al. Detecting code smells using machine learning techniques: are we there yet? In: Proceedings of the 25th IEEE International Conference on Software Analysis, Evolution, and Reengineering, 2018. 612\u2013621"
+      },
+      {
+        "key": "2720_CR47",
+        "doi-asserted-by": "publisher",
+        "first-page": "5",
+        "DOI": "10.1109/TSE.2017.2659747",
+        "volume": "44",
+        "author": "D Di Nucci",
+        "year": "2018",
+        "unstructured": "Di Nucci D, Palomba F, de Rosa G, et al. A developer centered bug prediction model. IEEE Trans Softw Eng, 2018, 44: 5\u201324",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR48",
+        "first-page": "78",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "A E Hassan",
+        "year": "2009",
+        "unstructured": "Hassan A E. Predicting faults using the complexity of code changes. In: Proceedings of the International Conference on Software Engineering (ICSE), 2009. 78\u201388"
+      },
+      {
+        "key": "2720_CR49",
+        "doi-asserted-by": "publisher",
+        "first-page": "172",
+        "DOI": "10.1002/smr.1616",
+        "volume": "26",
+        "author": "L Lucia",
+        "year": "2014",
+        "unstructured": "Lucia L, Lo D, Jiang L, et al. Extended comprehensive study of association measures for fault localization. J Softw Evol Proc, 2014, 26: 172\u2013219",
+        "journal-title": "J Softw Evol Proc"
+      },
+      {
+        "key": "2720_CR50",
+        "doi-asserted-by": "publisher",
+        "first-page": "928",
+        "DOI": "10.1007/s10664-014-9304-1",
+        "volume": "20",
+        "author": "N Di Giuseppe",
+        "year": "2015",
+        "unstructured": "Di Giuseppe N, Jones J A. Fault density, fault types, and spectra-based fault localization. Empir Softw Eng, 2015, 20: 928\u2013967",
+        "journal-title": "Empir Softw Eng"
+      },
+      {
+        "key": "2720_CR51",
+        "first-page": "297",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "S Wang",
+        "year": "2016",
+        "unstructured": "Wang S, Liu T, Tan L. Automatically learning semantic features for defect prediction. In: Proceedings of the International Conference on Software Engineering (ICSE), 2016. 297\u2013308"
+      },
+      {
+        "key": "2720_CR52",
+        "first-page": "1",
+        "volume-title": "Noise Reduction in Speech Processing. Berlin: Springer",
+        "author": "J Benesty",
+        "year": "2009",
+        "unstructured": "Benesty J, Chen J, Huang Y, et al. Pearson correlation coefficient. In: Noise Reduction in Speech Processing. Berlin: Springer, 2009. 1\u20134"
+      },
+      {
+        "key": "2720_CR53",
+        "volume-title": "Dissertation for Ph.D. Degree",
+        "author": "M A Hall",
+        "year": "1999",
+        "unstructured": "Hall M A. Correlation-based feature selection for machine learning. Dissertation for Ph.D. Degree. 1999"
+      },
+      {
+        "key": "2720_CR54",
+        "first-page": "307",
+        "volume-title": "Proceedings of the 24th IEEE/ACM International Conference on Automated Software Engineering",
+        "author": "H Zhong",
+        "year": "2009",
+        "unstructured": "Zhong H, Zhang L, Xie T, et al. Inferring resource specifications from natural language API documentation. In: Proceedings of the 24th IEEE/ACM International Conference on Automated Software Engineering, 2009. 307\u2013318"
+      },
+      {
+        "key": "2720_CR55",
+        "first-page": "185",
+        "volume-title": "Advances in Kernel Methods",
+        "author": "J C Platt",
+        "year": "1999",
+        "unstructured": "Platt J C. Fast training of support vector machines using sequential minimal optimization. Advances in Kernel Methods, 1999. 185\u2013208"
+      },
+      {
+        "key": "2720_CR56",
+        "doi-asserted-by": "publisher",
+        "first-page": "293",
+        "DOI": "10.1023/A:1018628609742",
+        "volume": "9",
+        "author": "J A K Suykens",
+        "year": "1999",
+        "unstructured": "Suykens J A K, Vandewalle J. Least squares support vector machine classifiers. Neural Process Lett, 1999, 9: 293\u2013300",
+        "journal-title": "Neural Process Lett"
+      },
+      {
+        "key": "2720_CR57",
+        "first-page": "338",
+        "volume-title": "Proceedings of the 11th Conference on Uncertainty in Artificial Intelligence",
+        "author": "G H John",
+        "year": "1995",
+        "unstructured": "John G H, Langley P. Estimating continuous distributions in bayesian classifiers. In: Proceedings of the 11th Conference on Uncertainty in Artificial Intelligence, 1995. 338\u2013345"
+      },
+      {
+        "key": "2720_CR58",
+        "first-page": "174",
+        "volume-title": "Proceedings of the 8th European Conference on Machine Learning",
+        "author": "R Kohavi",
+        "year": "1995",
+        "unstructured": "Kohavi R. The power of decision tables. In: Proceedings of the 8th European Conference on Machine Learning, 1995. 174\u2013189"
+      },
+      {
+        "key": "2720_CR59",
+        "doi-asserted-by": "publisher",
+        "first-page": "191",
+        "DOI": "10.2307/2347628",
+        "volume": "41",
+        "author": "S Le Cessie",
+        "year": "1992",
+        "unstructured": "Le Cessie S, van Houwelingen J C. Ridge estimators in logistic regression. Appl Stat, 1992, 41: 191\u2013201",
+        "journal-title": "Appl Stat"
+      },
+      {
+        "key": "2720_CR60",
+        "doi-asserted-by": "publisher",
+        "first-page": "861",
+        "DOI": "10.1016/j.patrec.2005.10.010",
+        "volume": "27",
+        "author": "T Fawcett",
+        "year": "2006",
+        "unstructured": "Fawcett T. An introduction to ROC analysis. Pattern Recogn Lett, 2006, 27: 861\u2013874",
+        "journal-title": "Pattern Recogn Lett"
+      },
+      {
+        "key": "2720_CR61",
+        "first-page": "702",
+        "volume-title": "Proceedings of the 19th International Joint Conference on Artificial Intelligence",
+        "author": "P A Flach",
+        "year": "2005",
+        "unstructured": "Flach P A, Wu S. Repairing concavities in roc curves. In: Proceedings of the 19th International Joint Conference on Artificial Intelligence, 2005. 702\u2013707"
+      },
+      {
+        "key": "2720_CR62",
+        "first-page": "789",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "B Ghotra",
+        "year": "2015",
+        "unstructured": "Ghotra B, McIntosh S, Hassan A E. Revisiting the impact of classification techniques on the performance of defect prediction models. In: Proceedings of the International Conference on Software Engineering (ICSE), 2015. 789\u2013800"
+      },
+      {
+        "key": "2720_CR63",
+        "doi-asserted-by": "publisher",
+        "first-page": "1276",
+        "DOI": "10.1109/TSE.2011.103",
+        "volume": "38",
+        "author": "T Hall",
+        "year": "2012",
+        "unstructured": "Hall T, Beecham S, Bowes D, et al. A systematic literature review on fault prediction performance in software engineering. IEEE Trans Softw Eng, 2012, 38: 1276\u20131304",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR64",
+        "doi-asserted-by": "publisher",
+        "first-page": "43",
+        "DOI": "10.1145/1985441.1985451",
+        "volume-title": "Proceedings of the 8th International Working Conference on Mining Software Repositories",
+        "author": "S Rao",
+        "year": "2011",
+        "unstructured": "Rao S, Kak A. Retrieval from software libraries for bug localization: a comparative study of generic and composite text models. In: Proceedings of the 8th International Working Conference on Mining Software Repositories, 2011. 43\u201352"
+      },
+      {
+        "key": "2720_CR65",
+        "first-page": "14",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "J Zhou",
+        "year": "2012",
+        "unstructured": "Zhou J, Zhang H, Lo D. Where should the bugs be fixed? more accurate information retrieval-based bug localization based on bug reports. In: Proceedings of the International Conference on Software Engineering (ICSE), 2012. 14\u201324"
+      },
+      {
+        "key": "2720_CR66",
+        "first-page": "181",
+        "volume-title": "Proceedings of IEEE International Conference on Software Maintenance and Evolution (ICSME)",
+        "author": "C Wong",
+        "year": "2014",
+        "unstructured": "Wong C, Xiong Y, Zhang H, et al. Boosting bug-report-oriented fault localization with segmentation and stack-trace analysis. In: Proceedings of IEEE International Conference on Software Maintenance and Evolution (ICSME), 2014. 181\u2013190"
+      },
+      {
+        "key": "2720_CR67",
+        "first-page": "50",
+        "volume-title": "Proceedings of 9th IEEE Working Conference on Mining Software Repositories",
+        "author": "B Sisman",
+        "year": "2012",
+        "unstructured": "Sisman B, Kak A C. Incorporating version histories in information retrieval based bug localization. In: Proceedings of 9th IEEE Working Conference on Mining Software Repositories, 2012. 50\u201359"
+      },
+      {
+        "key": "2720_CR68",
+        "first-page": "489",
+        "volume-title": "Proceedings of the 29th International Conference on Software Engineering (ICSE)",
+        "author": "S Kim",
+        "year": "2007",
+        "unstructured": "Kim S, Zimmermann T, Whitehead Jr E J, et al. Predicting faults from cached history. In: Proceedings of the 29th International Conference on Software Engineering (ICSE), 2007. 489\u2013498"
+      },
+      {
+        "key": "2720_CR69",
+        "first-page": "97",
+        "volume-title": "Proceedings of the 18th ACM SIGSOFT International Symposium on Foundations of Software Engineering",
+        "author": "A Bachmann",
+        "year": "2010",
+        "unstructured": "Bachmann A, Bird C, Rahman F, et al. The missing links: bugs and bug-fix commits. In: Proceedings of the 18th ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2010. 97\u2013106"
+      },
+      {
+        "key": "2720_CR70",
+        "first-page": "304",
+        "volume-title": "Proceedings of Conference of the Center for Advanced Studies on Collaborative Research",
+        "author": "G Antoniol",
+        "year": "2008",
+        "unstructured": "Antoniol G, Ayari K, Di Penta M D, et al. Is it a bug or an enhancement? a text-based approach to classify change requests. In: Proceedings of Conference of the Center for Advanced Studies on Collaborative Research, 2008. 304\u2013318"
+      },
+      {
+        "key": "2720_CR71",
+        "first-page": "392",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "K Herzig",
+        "year": "2013",
+        "unstructured": "Herzig K, Just S, Zeller A. It\u2019s not a bug, it\u2019s a feature: how misclassification impacts bug prediction. In: Proceedings of the International Conference on Software Engineering (ICSE), 2013. 392\u2013401"
+      },
+      {
+        "key": "2720_CR72",
+        "first-page": "364",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "W Weimer",
+        "year": "2009",
+        "unstructured": "Weimer W, Nguyen T, Le Goues C, et al. Automatically finding patches using genetic programming. In: Proceedings of the International Conference on Software Engineering (ICSE), 2009. 364\u2013374"
+      },
+      {
+        "key": "2720_CR73",
+        "doi-asserted-by": "publisher",
+        "first-page": "254",
+        "DOI": "10.1145/2568225.2568254",
+        "volume-title": "Proceedings of the 36th International Conference on Software Engineering (ICSE)",
+        "author": "Y Qi",
+        "year": "2014",
+        "unstructured": "Qi Y, Mao X, Lei Y, et al. The strength of random search on automated program repair. In: Proceedings of the 36th International Conference on Software Engineering (ICSE), 2014. 254\u2013265"
+      },
+      {
+        "key": "2720_CR74",
+        "doi-asserted-by": "publisher",
+        "first-page": "1215",
+        "DOI": "10.1145/2245276.2231967",
+        "volume-title": "Proceedings of the 27th Annual ACM Symposium on Applied Computing",
+        "author": "F Sarro",
+        "year": "2012",
+        "unstructured": "Sarro F, Di Martino S, Ferrucci F, et al. A further analysis on the use of genetic algorithm to configure support vector machines for inter-release fault prediction. In: Proceedings of the 27th Annual ACM Symposium on Applied Computing, 2012. 1215\u20131220"
+      },
+      {
+        "key": "2720_CR75",
+        "first-page": "321",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "C Tantithamthavorn",
+        "year": "2016",
+        "unstructured": "Tantithamthavorn C, McIntosh S, Hassan A E, et al. Automated parameter optimization of classification techniques for defect prediction models. In: Proceedings of the International Conference on Software Engineering (ICSE), 2016. 321\u2013332"
+      },
+      {
+        "key": "2720_CR76",
+        "doi-asserted-by": "publisher",
+        "first-page": "847",
+        "DOI": "10.1145/2487575.2487629",
+        "volume-title": "Proceedings of the 19th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+        "author": "C Thornton",
+        "year": "2013",
+        "unstructured": "Thornton C, Hutter F, Hoos H H, et al. Auto-WEKA: combined selection and hyperparameter optimization of classification algorithms. In: Proceedings of the 19th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 2013. 847\u2013855"
+      },
+      {
+        "key": "2720_CR77",
+        "doi-asserted-by": "publisher",
+        "first-page": "683",
+        "DOI": "10.1109/TSE.2018.2794977",
+        "volume": "45",
+        "author": "C Tantithamthavorn",
+        "year": "2019",
+        "unstructured": "Tantithamthavorn C, McIntosh S, Hassan A E, et al. The impact of automated parameter optimization on defect prediction models. IEEE Trans Softw Eng, 2019, 45: 683\u2013711",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR78",
+        "doi-asserted-by": "publisher",
+        "first-page": "579",
+        "DOI": "10.1145/2786805.2786880",
+        "volume-title": "Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering",
+        "author": "T-D B Le",
+        "year": "2015",
+        "unstructured": "Le T-D B, Oentaryo R J, Lo D. Information retrieval and spectrum based bug localization: better together. In: Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering, 2015. 579\u2013590"
+      },
+      {
+        "key": "2720_CR79",
+        "volume-title": "Algorithmic program debugging",
+        "author": "E Shapiro",
+        "year": "1983",
+        "unstructured": "Shapiro E. Algorithmic program debugging. Dissertation for Ph.D. Degree. New Haven: Yale University, 1983"
+      },
+      {
+        "key": "2720_CR80",
+        "doi-asserted-by": "publisher",
+        "first-page": "707",
+        "DOI": "10.1109/TSE.2016.2521368",
+        "volume": "42",
+        "author": "W E Wong",
+        "year": "2016",
+        "unstructured": "Wong W E, Gao R, Li Y, et al. A survey on software fault localization. IEEE Trans Softw Eng, 2016, 42: 707\u2013740",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR81",
+        "first-page": "467",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "J A Jones",
+        "year": "2002",
+        "unstructured": "Jones J A, Harrold M J, Stasko J. Visualization of test information to assist fault localization. In: Proceedings of the International Conference on Software Engineering (ICSE), 2002. 467\u2013477"
+      },
+      {
+        "key": "2720_CR82",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1145/2000791.2000795",
+        "volume": "20",
+        "author": "L Naish",
+        "year": "2011",
+        "unstructured": "Naish L, Lee H J, Ramamohanarao K. A model for spectra-based software diagnosis. ACM Trans Softw Eng Methodol, 2011, 20: 1\u201332",
+        "journal-title": "ACM Trans Softw Eng Methodol"
+      },
+      {
+        "key": "2720_CR83",
+        "doi-asserted-by": "publisher",
+        "first-page": "378",
+        "DOI": "10.1109/TSMCC.2011.2118751",
+        "volume": "42",
+        "author": "W E Wong",
+        "year": "2012",
+        "unstructured": "Wong W E, Debroy V, Xu D. Towards better fault localization: a crosstab-based statistical approach. IEEE Trans Syst Man Cybern C, 2012, 42: 378\u2013396",
+        "journal-title": "IEEE Trans Syst Man Cybern C"
+      },
+      {
+        "key": "2720_CR84",
+        "first-page": "39",
+        "volume-title": "Proceedings of the 12th Pacific Rim International Symposium on Dependable Computing",
+        "author": "R Abreu",
+        "year": "2006",
+        "unstructured": "Abreu R, Zoeteweij P, van Gemund A J C. An evaluation of similarity coefficients for software fault localization. In: Proceedings of the 12th Pacific Rim International Symposium on Dependable Computing, 2006. 39\u201346"
+      },
+      {
+        "key": "2720_CR85",
+        "doi-asserted-by": "publisher",
+        "first-page": "1780",
+        "DOI": "10.1016/j.jss.2009.06.035",
+        "volume": "82",
+        "author": "R Abreu",
+        "year": "2009",
+        "unstructured": "Abreu R, Zoeteweij P, Golsteijn R, et al. A practical evaluation of spectrum-based fault localization. J Syst Softw, 2009, 82: 1780\u20131792",
+        "journal-title": "J Syst Softw"
+      },
+      {
+        "key": "2720_CR86",
+        "doi-asserted-by": "publisher",
+        "first-page": "573",
+        "DOI": "10.1142/S021819400900426X",
+        "volume": "19",
+        "author": "W E Wong",
+        "year": "2009",
+        "unstructured": "Wong W E, Qi Y. BP neural network-based effective fault localization. Int J Soft Eng Knowl Eng, 2009, 19: 573\u2013597",
+        "journal-title": "Int J Soft Eng Knowl Eng"
+      },
+      {
+        "key": "2720_CR87",
+        "doi-asserted-by": "publisher",
+        "first-page": "51",
+        "DOI": "10.1016/j.jss.2013.08.031",
+        "volume": "89",
+        "author": "X Mao",
+        "year": "2014",
+        "unstructured": "Mao X, Lei Y, Dai Z, et al. Slice-based statistical fault localization. J Syst Softw, 2014, 89: 51\u201362",
+        "journal-title": "J Syst Softw"
+      },
+      {
+        "key": "2720_CR88",
+        "first-page": "339",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "W Dickinson",
+        "year": "2001",
+        "unstructured": "Dickinson W, Leon D, Podgurski A. Finding failures by cluster analysis of execution profiles. In: Proceedings of the International Conference on Software Engineering (ICSE), 2001. 339\u2013348"
+      },
+      {
+        "key": "2720_CR89",
+        "doi-asserted-by": "publisher",
+        "first-page": "301",
+        "DOI": "10.1109/TSE.2017.2776912",
+        "volume": "45",
+        "author": "R Gao",
+        "year": "2019",
+        "unstructured": "Gao R, Wong W E. MSeer-an advanced technique for locating multiple bugs in parallel. IEEE Trans Softw Eng, 2019, 45: 301\u2013318",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR90",
+        "first-page": "165",
+        "volume-title": "Proceedings of IEEE International Conference on Software Reliability Engineering",
+        "author": "V Debroy",
+        "year": "2009",
+        "unstructured": "Debroy V, Wong W E. Insights on fault interference for programs with multiple bugs. In: Proceedings of IEEE International Conference on Software Reliability Engineering, 2009. 165\u2013174"
+      },
+      {
+        "key": "2720_CR91",
+        "first-page": "12",
+        "volume-title": "Proceedings of IEEE International Conference on Software Testing",
+        "author": "A Perez",
+        "year": "2017",
+        "unstructured": "Perez A, Abreu R, d\u2019Amorim M. Prevalence of single-fault fixes and its impact on fault localization. In: Proceedings of IEEE International Conference on Software Testing, 2017. 12\u201322"
+      },
+      {
+        "key": "2720_CR92",
+        "first-page": "287",
+        "volume-title": "Proceedings of International Symposium on Software Testing and Analysis (ISSTA)",
+        "author": "R Just",
+        "year": "2018",
+        "unstructured": "Just R, Parnin C, Drosos I, et al. Comparing developer-provided to user-provided tests for fault localization and automated program repair. In: Proceedings of International Symposium on Software Testing and Analysis (ISSTA), 2018. 287\u2013297"
+      },
+      {
+        "key": "2720_CR93",
+        "first-page": "257",
+        "volume-title": "Proceedings of IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+        "author": "J Campos",
+        "year": "2013",
+        "unstructured": "Campos J, Abreu R, Fraser G, et al. Entropy-based test generation for improved fault localization. In: Proceedings of IEEE/ACM International Conference on Automated Software Engineering (ASE), 2013. 257\u2013267"
+      },
+      {
+        "key": "2720_CR94",
+        "first-page": "654",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "A Perez",
+        "year": "2017",
+        "unstructured": "Perez A, Abreu R, van Deursen A. A test-suite diagnosability metric for spectrum-based fault localization approaches. In: Proceedings of the International Conference on Software Engineering (ICSE), 2017. 654\u2013664"
+      },
+      {
+        "key": "2720_CR95",
+        "doi-asserted-by": "publisher",
+        "first-page": "972",
+        "DOI": "10.1016/j.infsof.2010.04.002",
+        "volume": "52",
+        "author": "S K Lukins",
+        "year": "2010",
+        "unstructured": "Lukins S K, Kraft N A, Etzkorn L H. Bug localization using latent dirichlet allocation. Inf Softw Tech, 2010, 52: 972\u2013990",
+        "journal-title": "Inf Softw Tech"
+      },
+      {
+        "key": "2720_CR96",
+        "first-page": "171",
+        "volume-title": "Proceedings of IEEE International Conference on Software Maintenance and Evolution (ICSME)",
+        "author": "S Wang",
+        "year": "2014",
+        "unstructured": "Wang S, Lo D, Lawall J. Compositional vector space models for improved bug localization. In: Proceedings of IEEE International Conference on Software Maintenance and Evolution (ICSME), 2014. 171\u2013180"
+      },
+      {
+        "key": "2720_CR97",
+        "first-page": "345",
+        "volume-title": "Proceedings of IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+        "author": "R K Saha",
+        "year": "2013",
+        "unstructured": "Saha R K, Lease M, Khurshid S, et al. Improving bug localization using structured information retrieval. In: Proceedings of IEEE/ACM International Conference on Automated Software Engineering (ASE), 2013. 345\u2013355"
+      },
+      {
+        "key": "2720_CR98",
+        "doi-asserted-by": "publisher",
+        "first-page": "921",
+        "DOI": "10.1002/smr.1801",
+        "volume": "28",
+        "author": "S Wang",
+        "year": "2016",
+        "unstructured": "Wang S, Lo D. AmaLgam+: composing rich information sources for accurate bug localization. J Softw Evol Proc, 2016, 28: 921\u2013942",
+        "journal-title": "J Softw Evol Proc"
+      },
+      {
+        "key": "2720_CR99",
+        "doi-asserted-by": "publisher",
+        "first-page": "4",
+        "DOI": "10.1145/503272.503275",
+        "volume-title": "Proceedings of the 29th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages",
+        "author": "G Ammons",
+        "year": "2002",
+        "unstructured": "Ammons G, Bod\u00b4\u0131k R, Larus J R. Mining specifications. In: Proceedings of the 29th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages, 2002. 4\u201316"
+      },
+      {
+        "key": "2720_CR100",
+        "first-page": "815",
+        "volume-title": "Proceedings of the 34th International Conference on Software Engineering (ICSE)",
+        "author": "R Pandita",
+        "year": "2012",
+        "unstructured": "Pandita R, Xiao X, Zhong H, et al. Inferring method specifications from natural language API descriptions. In: Proceedings of the 34th International Conference on Software Engineering (ICSE), 2012. 815\u2013825"
+      },
+      {
+        "key": "2720_CR101",
+        "doi-asserted-by": "publisher",
+        "first-page": "383",
+        "DOI": "10.1145/1595696.1595767",
+        "volume-title": "Proceedings of the 7th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on The Foundations of Software Engineering",
+        "author": "T T Nguyen",
+        "year": "2009",
+        "unstructured": "Nguyen T T, Nguyen H A, Pham N H, et al. Graph-based mining of multiple object usage patterns. In: Proceedings of the 7th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on The Foundations of Software Engineering, 2009. 383\u2013392"
+      },
+      {
+        "key": "2720_CR102",
+        "doi-asserted-by": "publisher",
+        "first-page": "791",
+        "DOI": "10.1145/2568225.2568302",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "H V Nguyen",
+        "year": "2014",
+        "unstructured": "Nguyen H V, Nguyen H A, Nguyen A T, et al. Mining interprocedural, data-oriented usage patterns in JavaScript web applications. In: Proceedings of the International Conference on Software Engineering (ICSE), 2014. 791\u2013802"
+      },
+      {
+        "key": "2720_CR103",
+        "doi-asserted-by": "publisher",
+        "first-page": "439",
+        "DOI": "10.1145/337180.337234",
+        "volume-title": "Proceedings of the 22nd International Conference on Software Engineering (ICSE)",
+        "author": "J C Corbett",
+        "year": "2000",
+        "unstructured": "Corbett J C, Dwyer M B, Hatcliff J, et al. Bandera: Extracting finite-state models from Java source code. In: Proceedings of the 22nd International Conference on Software Engineering (ICSE), 2000. 439\u2013448"
+      },
+      {
+        "key": "2720_CR104",
+        "doi-asserted-by": "publisher",
+        "first-page": "613",
+        "DOI": "10.1109/TSE.2012.63",
+        "volume": "39",
+        "author": "M P Robillard",
+        "year": "2013",
+        "unstructured": "Robillard M P, Bodden E, Kawrykow D, et al. Automated API property inference techniques. IEEE Trans Softw Eng, 2013, 39: 613\u2013637",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR105",
+        "doi-asserted-by": "publisher",
+        "first-page": "306",
+        "DOI": "10.1145/1081706.1081755",
+        "volume-title": "Proceedings of the 10th European Software Engineering Conference Held Jointly With 13th ACM SIGSOFT International Symposium on Foundations of Software Engineering",
+        "author": "Z Li",
+        "year": "2005",
+        "unstructured": "Li Z, Zhou Y. PR-Miner: automatically extracting implicit programming rules and detecting violations in large software code. In: Proceedings of the 10th European Software Engineering Conference Held Jointly With 13th ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2005. 306\u2013315"
+      },
+      {
+        "key": "2720_CR106",
+        "first-page": "23",
+        "volume-title": "Proceedings of IEEE 22nd International Conference on Software Analysis, Evolution, and Reengineering (SANER)",
+        "author": "A Saied",
+        "year": "2015",
+        "unstructured": "Saied A, Benomar O, Abdeen H, et al. Mining multi-level API usage patterns. In: Proceedings of IEEE 22nd International Conference on Software Analysis, Evolution, and Reengineering (SANER), 2015. 23\u201332"
+      },
+      {
+        "key": "2720_CR107",
+        "first-page": "57",
+        "volume-title": "Proceedings of 18th Symposium on Operating Systems Principles",
+        "author": "D Engler",
+        "year": "2001",
+        "unstructured": "Engler D, Chen D, Chou A. Bugs as inconsistent behavior: a general approach to inferring errors in systems code. In: Proceedings of 18th Symposium on Operating Systems Principles, 2001. 57\u201372"
+      },
+      {
+        "key": "2720_CR108",
+        "first-page": "35",
+        "volume-title": "Proceedings of the 6th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on The Foundations of Software Engineering",
+        "author": "A Wasylkowski",
+        "year": "2007",
+        "unstructured": "Wasylkowski A, Zeller A, Lindig C. Detecting object usage anomalies. In: Proceedings of the 6th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on The Foundations of Software Engineering, 2007. 35\u201344"
+      },
+      {
+        "key": "2720_CR109",
+        "first-page": "240",
+        "volume-title": "Proceedings of the 29th International Conference on Software Engineering (ICSE)",
+        "author": "M Ramanathan",
+        "year": "2007",
+        "unstructured": "Ramanathan M, Grama A, Jagannathan S. Path-sensitive inference of function precedence protocols. In: Proceedings of the 29th International Conference on Software Engineering (ICSE), 2007. 240\u2013250"
+      },
+      {
+        "key": "2720_CR110",
+        "first-page": "96",
+        "volume-title": "Proceedings of the 10th Joint Meeting on Foundations of Software Engineering",
+        "author": "S Maoz",
+        "year": "2015",
+        "unstructured": "Maoz S, Ringert J O. GR(1) synthesis for LTL specification patterns. In: Proceedings of the 10th Joint Meeting on Foundations of Software Engineering, 2015. 96\u2013106"
+      },
+      {
+        "key": "2720_CR111",
+        "first-page": "81",
+        "volume-title": "Proceedings of the 30th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+        "author": "C Lemieux",
+        "year": "2015",
+        "unstructured": "Lemieux C, Park D, Beschastnikh I. General LTL specification mining. In: Proceedings of the 30th IEEE/ACM International Conference on Automated Software Engineering (ASE), 2015. 81\u201392"
+      },
+      {
+        "key": "2720_CR112",
+        "first-page": "3",
+        "volume-title": "Proceedings of the 11th International Conference on Data Engineering",
+        "author": "R Agrawal",
+        "year": "1995",
+        "unstructured": "Agrawal R, Srikant R. Mining sequential patterns. In: Proceedings of the 11th International Conference on Data Engineering, 1995. 3\u201314"
+      },
+      {
+        "key": "2720_CR113",
+        "doi-asserted-by": "publisher",
+        "first-page": "35",
+        "DOI": "10.1016/j.scico.2007.01.015",
+        "volume": "69",
+        "author": "M D Ernst",
+        "year": "2007",
+        "unstructured": "Ernst M D, Perkins J H, Guo P J, et al. The Daikon system for dynamic detection of likely invariants. Sci Comput Programm, 2007, 69: 35\u201345",
+        "journal-title": "Sci Comput Programm"
+      },
+      {
+        "key": "2720_CR114",
+        "first-page": "115",
+        "volume-title": "Proceedings of the 30th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+        "author": "T Le",
+        "year": "2015",
+        "unstructured": "Le T, Le X, Lo D, et al. Synergizing specification miners through model fissions and fusions. In: Proceedings of the 30th IEEE/ACM International Conference on Automated Software Engineering (ASE), 2015. 115\u2013125"
+      },
+      {
+        "key": "2720_CR115",
+        "doi-asserted-by": "publisher",
+        "first-page": "85",
+        "DOI": "10.1145/1831708.1831719",
+        "volume-title": "Proceedings of the 19th International Symposium on Software Testing and Analysis",
+        "author": "V Dallmeier",
+        "year": "2010",
+        "unstructured": "Dallmeier V, Knopp N, Mallon C, et al. Generating test cases for specification mining. In: Proceedings of the 19th International Symposium on Software Testing and Analysis, 2010. 85\u201396"
+      },
+      {
+        "key": "2720_CR116",
+        "first-page": "288",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "M Pradel",
+        "year": "2012",
+        "unstructured": "Pradel M, Gross T R. Leveraging test generation and specification mining for automated bug detection without false positives. In: Proceedings of the International Conference on Software Engineering (ICSE), 2012. 288\u2013298"
+      },
+      {
+        "key": "2720_CR117",
+        "first-page": "39",
+        "volume-title": "Proceedings of the 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering",
+        "author": "M Br\u00a8unink",
+        "year": "2016",
+        "unstructured": "Br\u00a8unink M, Rosenblum D S. Mining performance specifications. In: Proceedings of the 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering, 2016. 39\u201349"
+      },
+      {
+        "key": "2720_CR118",
+        "first-page": "227",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "N H Pham",
+        "year": "2010",
+        "unstructured": "Pham N H, Nguyen T T, Nguyen H A, et al. Detecting recurring and similar software vulnerabilities. In: Proceedings of the International Conference on Software Engineering (ICSE), 2010. 227\u2013230"
+      },
+      {
+        "key": "2720_CR119",
+        "first-page": "141",
+        "volume-title": "Proceedings of International Symposium on Software Testing and Analysis (ISSTA)",
+        "author": "H Cheng",
+        "year": "2009",
+        "unstructured": "Cheng H, Lo D, Zhou Y, et al. Identifying bug signatures using discriminative graph mining. In: Proceedings of International Symposium on Software Testing and Analysis (ISSTA), 2009. 141\u2013152"
+      },
+      {
+        "key": "2720_CR120",
+        "first-page": "215",
+        "volume-title": "Proceedings of International Symposium on Software Testing and Analysis (ISSTA)",
+        "author": "Z Zuo",
+        "year": "2014",
+        "unstructured": "Zuo Z, Khoo S-C, Sun C. Efficient predicated bug signature mining via hierarchical instrumentation. In: Proceedings of International Symposium on Software Testing and Analysis (ISSTA), 2014. 215\u2013224"
+      },
+      {
+        "key": "2720_CR121",
+        "doi-asserted-by": "publisher",
+        "first-page": "63",
+        "DOI": "10.1016/S0164-1212(00)00086-8",
+        "volume": "56",
+        "author": "K El Emam",
+        "year": "2001",
+        "unstructured": "El Emam K, Melo W, Machado J C. The prediction of faulty classes using object-oriented design metrics. J Syst Softw, 2001, 56: 63\u201375",
+        "journal-title": "J Syst Softw"
+      },
+      {
+        "key": "2720_CR122",
+        "doi-asserted-by": "publisher",
+        "first-page": "287",
+        "DOI": "10.1109/TSE.2007.70768",
+        "volume": "34",
+        "author": "A Marcus",
+        "year": "2008",
+        "unstructured": "Marcus A, Poshyvanyk D, Ferenc R. Using the conceptual cohesion of classes for fault prediction in object-oriented systems. IEEE Trans Softw Eng, 2008, 34: 287\u2013300",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR123",
+        "first-page": "452",
+        "volume-title": "Proceedings of the International Conference on Software Engineering (ICSE)",
+        "author": "N Nagappan",
+        "year": "2006",
+        "unstructured": "Nagappan N, Ball T, Zeller A. Mining metrics to predict component failures. In: Proceedings of the International Conference on Software Engineering (ICSE), 2006. 452\u2013461"
+      },
+      {
+        "key": "2720_CR124",
+        "doi-asserted-by": "publisher",
+        "first-page": "322",
+        "DOI": "10.1145/2025113.2025157",
+        "volume-title": "Proceedings of the 19th ACM SIGSOFT Symposium and the 13th European Conference on Foundations of Software Engineering",
+        "author": "F Rahman",
+        "year": "2011",
+        "unstructured": "Rahman F, Posnett D, Hindle A, et al. Bugcache for inspections: hit or miss? In: Proceedings of the 19th ACM SIGSOFT Symposium and the 13th European Conference on Foundations of Software Engineering, 2011. 322\u2013331"
+      },
+      {
+        "key": "2720_CR125",
+        "first-page": "138",
+        "volume-title": "Proceedings of 11th IEEE International Requirements Engineering Conference",
+        "author": "J H Hayes",
+        "year": "2003",
+        "unstructured": "Hayes J H, Dekhtyar A, Osborne J. Improving requirements tracing via information retrieval. In: Proceedings of 11th IEEE International Requirements Engineering Conference, 2003. 138\u2013147"
+      },
+      {
+        "key": "2720_CR126",
+        "doi-asserted-by": "publisher",
+        "first-page": "466",
+        "DOI": "10.1109/TSE.2005.63",
+        "volume": "31",
+        "author": "C C Williams",
+        "year": "2005",
+        "unstructured": "Williams C C, Hollingsworth J K. Automatic mining of source code repositories to improve bug finding techniques. IEEE Trans Softw Eng, 2005, 31: 466\u2013480",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "2720_CR127",
+        "first-page": "388",
+        "volume-title": "Proceedings of the 9th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining",
+        "author": "M Last",
+        "year": "2003",
+        "unstructured": "Last M, Friedman M, Kandel A. The data mining approach to automated software testing. In: Proceedings of the 9th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 2003. 388\u2013396"
+      },
+      {
+        "key": "2720_CR128",
+        "first-page": "465",
+        "volume-title": "Proceedings of the 25th International Conference on Software Engineering (ICSE)",
+        "author": "A Podgurski",
+        "year": "2003",
+        "unstructured": "Podgurski A, Leon D, Francis P, et al. Automated support for classifying software failure reports. In: Proceedings of the 25th International Conference on Software Engineering (ICSE), 2003. 465\u2013475"
+      },
+      {
+        "key": "2720_CR129",
+        "doi-asserted-by": "publisher",
+        "first-page": "99",
+        "DOI": "10.1145/1370750.1370773",
+        "volume-title": "Proceedings of the 2008 International Working Conference on Mining Software Repositories",
+        "author": "A Hindle",
+        "year": "2008",
+        "unstructured": "Hindle A, German D M, Holt R. What do large commits tell us? a taxonomical study of large commits. In: Proceedings of the 2008 International Working Conference on Mining Software Repositories, 2008. 99\u2013108"
+      },
+      {
+        "key": "2720_CR130",
+        "doi-asserted-by": "publisher",
+        "first-page": "11474",
+        "DOI": "10.1109/TSE.2003.1199076",
+        "volume": "29",
+        "author": "T D Menzies",
+        "year": "2003",
+        "unstructured": "Menzies T, Di Stefano J S. More success and failure factors in software reuse. IEEE Trans Softw Eng, 2003, 29: 11474\u2013477",
+        "journal-title": "IEEE Trans Softw Eng"
+      }
+    ],
+    "container-title": [
+      "Science China Information Sciences"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s11432-019-2720-1.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/article/10.1007/s11432-019-2720-1/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s11432-019-2720-1.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          4,
+          12
+        ]
+      ],
+      "date-time": "2023-04-12T15:20:33Z",
+      "timestamp": 1681312833000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/s11432-019-2720-1"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          5,
+          9
+        ]
+      ]
+    },
+    "references-count": 130,
+    "journal-issue": {
+      "issue": "6",
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            6
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "2720"
+    ],
+    "URL": "http://dx.doi.org/10.1007/s11432-019-2720-1",
+    "relation": {},
+    "ISSN": [
+      "1674-733X",
+      "1869-1919"
+    ],
+    "issn-type": [
+      {
+        "value": "1674-733X",
+        "type": "print"
+      },
+      {
+        "value": "1869-1919",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          5,
+          9
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "21 July 2019",
+        "order": 1,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "22 September 2019",
+        "order": 2,
+        "name": "revised",
+        "label": "Revised",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "21 November 2019",
+        "order": 3,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "9 May 2020",
+        "order": 4,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      }
+    ],
+    "article-number": "162101"
+  }
+}

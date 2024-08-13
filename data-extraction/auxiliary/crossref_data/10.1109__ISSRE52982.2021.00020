@@ -1,0 +1,503 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          12
+        ]
+      ],
+      "date-time": "2024-07-12T14:33:18Z",
+      "timestamp": 1720794798333
+    },
+    "reference-count": 47,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2021-10-01T00:00:00Z",
+          "timestamp": 1633046400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2021-10-01T00:00:00Z",
+          "timestamp": 1633046400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61832014,61902114"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          10
+        ]
+      ]
+    },
+    "DOI": "10.1109/issre52982.2021.00020",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          2,
+          12
+        ]
+      ],
+      "date-time": "2022-02-12T01:01:25Z",
+      "timestamp": 1644627685000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 9,
+    "title": [
+      "GCN2defect : Graph Convolutional Networks for SMOTETomek-based Software Defect Prediction"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Cheng",
+        "family": "Zeng",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Information Engineering, Hubei University,Wuhan,China"
+          }
+        ]
+      },
+      {
+        "given": "Chun Ying",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Information Engineering, Hubei University,Wuhan,China"
+          }
+        ]
+      },
+      {
+        "given": "Sheng Kai",
+        "family": "Lv",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Information Engineering, Hubei University,Wuhan,China"
+          }
+        ]
+      },
+      {
+        "given": "Peng",
+        "family": "He",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Information Engineering, Hubei University,Wuhan,China"
+          }
+        ]
+      },
+      {
+        "given": "Jie",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Computer Science and Technology, Guizhou University,Guiyang,China"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "author": "tomek",
+        "year": "1976",
+        "journal-title": "Two modifications of CNN"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICOACS.2016.7563084"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0218194017500401"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2020.3020825"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10115-014-0789-0"
+      },
+      {
+        "key": "ref30",
+        "volume": "826",
+        "author": "xu",
+        "year": "2018",
+        "journal-title": "How powerful are graph neural networks?"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-01307-2_43"
+      },
+      {
+        "key": "ref36",
+        "article-title": "Borderline-SMOTE: a new over-sampling method in imbalanced data sets learning",
+        "author": "han",
+        "year": "2005",
+        "journal-title": "International Conference on Intelligent Computing"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1613/jair.953"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/NAFIPS.2007.383813"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/QRS.2017.42"
+      },
+      {
+        "key": "ref40",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.89"
+      },
+      {
+        "key": "ref11",
+        "article-title": "Convolutional neural networks over control flow graphs for software defect prediction",
+        "author": "phan",
+        "year": "0",
+        "journal-title": "2017 IEEE 29th International Conference on Tools with Artificial Intelligence (ICTAI)"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3240469"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2015.139"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2015.09.001"
+      },
+      {
+        "key": "ref15",
+        "author": "li",
+        "year": "2017",
+        "journal-title": "Applying Social Network Analysis to Software Fault-Proneness Prediction"
+      },
+      {
+        "key": "ref16",
+        "article-title": "Using K-core Decomposition on Class Dependency Networks to Improve Bug Prediction Model's Practical Performance",
+        "author": "qu",
+        "year": "2019",
+        "journal-title": "IEEE Transactions on Software Engineering"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0218194017500401"
+      },
+      {
+        "key": "ref18",
+        "article-title": "Learning unified features from natural and programming languages for locating buggy source code",
+        "volume": "16",
+        "author": "huo",
+        "year": "0",
+        "journal-title": "IJCAl"
+      },
+      {
+        "key": "ref19",
+        "article-title": "Automatic feature learning for predicting vulnerable software components",
+        "author": "dam",
+        "year": "2018",
+        "journal-title": "IEEE Transactions on Software Engineering"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2020.106287"
+      },
+      {
+        "key": "ref28",
+        "volume": "10903",
+        "author": "veli?kovi?",
+        "year": "2017",
+        "journal-title": "Graph attention networks"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2019.07.003"
+      },
+      {
+        "key": "ref27",
+        "volume": "2216",
+        "author": "hamilton",
+        "year": "2017",
+        "journal-title": "Inductive Representation Learning on Large Graphs"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2018.11.005"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TR.2018.2804922"
+      },
+      {
+        "key": "ref29",
+        "author": "chen",
+        "year": "2018",
+        "journal-title": "Fastgcn fast learning with graph convolutional networks via importance sampling"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2018.10.001"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1595696.1595713"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "crossref",
+        "first-page": "182",
+        "DOI": "10.1016/j.infsof.2018.10.004",
+        "article-title": "Software defect prediction based on kernel PCA and weighted extreme learning machine [J]",
+        "volume": "106",
+        "author": "xu",
+        "year": "2019",
+        "journal-title": "Information and Software Technology"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2018.2877612"
+      },
+      {
+        "key": "ref1",
+        "first-page": "1394",
+        "article-title": "Survey on software defect prediction using machine learning techniques",
+        "volume": "3",
+        "author": "paramshetti",
+        "year": "2014",
+        "journal-title": "International Journal of Science and Research"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1368088.1368161"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2623330.2623732"
+      },
+      {
+        "key": "ref45",
+        "first-page": "25",
+        "article-title": "Social network analysis: An introduction",
+        "volume": "11",
+        "author": "marin",
+        "year": "2011",
+        "journal-title": "The SAGE Handbook of Social Network Analysis"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3097983.3098061"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227173"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2939672.2939754"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2939672.2939785"
+      },
+      {
+        "key": "ref24",
+        "volume": "9375",
+        "author": "defferrard",
+        "year": "2016",
+        "journal-title": "Convolutional neural networks on graphs with fast localized spectral filtering"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.324"
+      },
+      {
+        "key": "ref23",
+        "article-title": "A comprehensive survey on graph neural networks",
+        "author": "wu",
+        "year": "2020",
+        "journal-title": "IEEE Transactions on Neural Networks and Learning Systems"
+      },
+      {
+        "key": "ref44",
+        "first-page": "257",
+        "article-title": "An evolution analysis of software system based on multi-granularity software network",
+        "volume": "46",
+        "author": "peng",
+        "year": "2018",
+        "journal-title": "Acta Electronica Sinica"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSP.2018.2879624"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1155/2013/869356"
+      },
+      {
+        "key": "ref25",
+        "volume": "2907",
+        "author": "kipf",
+        "year": "2016",
+        "journal-title": "Semi-supervised classification with graph convolutional networks"
+      }
+    ],
+    "event": {
+      "name": "2021 IEEE 32nd International Symposium on Software Reliability Engineering (ISSRE)",
+      "location": "Wuhan, China",
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            10,
+            25
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2021,
+            10,
+            28
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2021 IEEE 32nd International Symposium on Software Reliability Engineering (ISSRE)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/9700160/9700163/09700305.pdf?arnumber=9700305",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          6,
+          13
+        ]
+      ],
+      "date-time": "2022-06-13T21:07:26Z",
+      "timestamp": 1655154446000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9700305/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          10
+        ]
+      ]
+    },
+    "references-count": 47,
+    "URL": "http://dx.doi.org/10.1109/issre52982.2021.00020",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          10
+        ]
+      ]
+    }
+  }
+}

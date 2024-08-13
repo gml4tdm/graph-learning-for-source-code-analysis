@@ -1,0 +1,582 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          18
+        ]
+      ],
+      "date-time": "2024-07-18T01:35:55Z",
+      "timestamp": 1721266555097
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 57,
+    "publisher": "ACM",
+    "funder": [
+      {
+        "name": "NSF award",
+        "award": [
+          "2034508"
+        ]
+      },
+      {
+        "name": "Natural Science Foundation of Jiangsu Province, China",
+        "award": [
+          "BK20201250"
+        ]
+      },
+      {
+        "name": "Cooperation Fund of Huawei-NJU Creative Laboratory for the Next Programming"
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61802167, 61802095"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          21
+        ]
+      ]
+    },
+    "DOI": "10.1145/3510003.3510224",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          5
+        ]
+      ],
+      "date-time": "2022-07-05T22:42:59Z",
+      "timestamp": 1657060979000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 27,
+    "title": [
+      "AST-trans"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Ze",
+        "family": "Tang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Nanjing University, Nanjing, China"
+          }
+        ]
+      },
+      {
+        "given": "Xiaoyu",
+        "family": "Shen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Amazon, Berlin, Germany"
+          }
+        ]
+      },
+      {
+        "given": "Chuanyi",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Nanjing University, Nanjing, China"
+          }
+        ]
+      },
+      {
+        "given": "Jidong",
+        "family": "Ge",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Nanjing University, Nanjing, China"
+          }
+        ]
+      },
+      {
+        "given": "Liguo",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Southern Methodist University"
+          }
+        ]
+      },
+      {
+        "given": "Zhelin",
+        "family": "Zhu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Nanjing University, Nanjing, China"
+          }
+        ]
+      },
+      {
+        "given": "Bin",
+        "family": "Luo",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Nanjing University, Nanjing, China"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          5
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2020.acl-main.449"
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "volume-title": "6th International Conference on Learning Representations, ICLR",
+        "author": "Allamanis Miltiadis",
+        "year": "2018",
+        "unstructured": "Miltiadis Allamanis, Marc Brockschmidt, and Mahmoud Khademi. 2018. Learning to Represent Programs with Graphs. In 6th International Conference on Learning Representations, ICLR 2018, Vancouver, BC, Canada, April 30 - May 3, 2018, Conference Track Proceedings. OpenReview.net. https://openreview.net/forum?id=BJOFETxR-"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "volume-title": "Proceedings of the 33nd International Conference on Machine Learning, ICML 2016, New York City, NY, USA, June 19--24, 2016 (JMLR Workshop and Conference Proceedings",
+        "volume": "2100",
+        "author": "Allamanis Miltiadis",
+        "year": "2016",
+        "unstructured": "Miltiadis Allamanis, Hao Peng, and Charles Sutton. 2016. A Convolutional Attention Network for Extreme Summarization of Source Code. In Proceedings of the 33nd International Conference on Machine Learning, ICML 2016, New York City, NY, USA, June 19--24, 2016 (JMLR Workshop and Conference Proceedings, Vol. 48), Maria-Florina Balcan and Kilian Q. Weinberger (Eds.). JMLR.org, 2091--2100. http://proceedings.mlr.press/v48/allamanis16.html"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "volume-title": "7th International Conference on Learning Representations, ICLR 2019",
+        "author": "Alon Uri",
+        "year": "2019",
+        "unstructured": "Uri Alon, Shaked Brody, Omer Levy, and Eran Yahav. 2019. code2seq: Generating Sequences from Structured Representations of Code. In 7th International Conference on Learning Representations, ICLR 2019, New Orleans, LA, USA, May 6--9, 2019. OpenReview.net. https://openreview.net/forum?id=H1gKYo09tX"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "volume-title": "3rd International Conference on Learning Representations, ICLR 2015, San Diego, CA, USA, May 7--9, 2015, Conference Track Proceedings, Yoshua Bengio and Yann LeCun (Eds.). http://arxiv.org/abs/1409",
+        "author": "Bahdanau Dzmitry",
+        "year": "2015",
+        "unstructured": "Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2015. Neural Machine Translation by Jointly Learning to Align and Translate. In 3rd International Conference on Learning Representations, ICLR 2015, San Diego, CA, USA, May 7--9, 2015, Conference Track Proceedings, Yoshua Bengio and Yann LeCun (Eds.). http://arxiv.org/abs/1409.0473"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "volume-title": "Proceedings of the Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation and/or Summarization@ACL 2005",
+        "author": "Banerjee Satanjeev",
+        "year": "2005",
+        "unstructured": "Satanjeev Banerjee and Alon Lavie. 2005. METEOR: An Automatic Metric for MT Evaluation with Improved Correlation with Human Judgments. In Proceedings of the Workshop on Intrinsic and Extrinsic Evaluation Measures for Machine Translation and/or Summarization@ACL 2005, Ann Arbor, Michigan, USA, June 29, 2005, Jade Goldstein, Alon Lavie, Chin-Yew Lin, and Clare R. Voss (Eds.). Association for Computational Linguistics, 65--72. https://www.aclweb.org/anthology/W05-0909/"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "volume-title": "Longformer: The Long-Document Transformer. CoRR abs/2004.05150",
+        "author": "Beltagy Iz",
+        "year": "2020",
+        "unstructured": "Iz Beltagy, Matthew E. Peters, and Arman Cohan. 2020. Longformer: The Long-Document Transformer. CoRR abs/2004.05150 (2020). arXiv:2004.05150 https://arxiv.org/abs/2004.05150"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2021.acl-short.2"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/HPCA47549.2020.00056"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "volume-title": "ACCL: Architecting Highly Scalable Distributed Training Systems with Highly-Efficient Collective Communication Library",
+        "author": "Dong Jianbo",
+        "year": "2021",
+        "unstructured": "Jianbo Dong, Shaochuang Wang, Fei Feng, Zheng Cao, Heng Pan, Lingbo Tang, Pengcheng Li, Hao Li, Qianyuan Ran, Yiqun Guo, et al. 2021. ACCL: Architecting Highly Scalable Distributed Training Systems with Highly-Efficient Collective Communication Library. IEEE Micro (2021)."
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/p16-1078"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "volume-title": "Structured Neural Summarization. In 7th International Conference on Learning Representations, ICLR 2019",
+        "author": "Fernandes Patrick",
+        "year": "2019",
+        "unstructured": "Patrick Fernandes, Miltiadis Allamanis, and Marc Brockschmidt. 2019. Structured Neural Summarization. In 7th International Conference on Learning Representations, ICLR 2019, New Orleans, LA, USA, May 6--9, 2019. OpenReview.net. https://openreview.net/forum?id=H1ersoRqtm"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1810295.1810335"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WCRE.2010.13"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "volume-title": "Tree-Transformer: A Transformer-Based Method for Correction of Tree-Structured Data. CoRR abs/1908.00449",
+        "author": "Harer Jacob",
+        "year": "2019",
+        "unstructured": "Jacob Harer, Christopher P. Reale, and Peter Chin. 2019. Tree-Transformer: A Transformer-Based Method for Correction of Tree-Structured Data. CoRR abs/1908.00449 (2019). arXiv:1908.00449 http://arxiv.org/abs/1908.00449"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "volume-title": "9th International Conference on Learning Representations, ICLR 2021",
+        "author": "He Pengcheng",
+        "year": "2021",
+        "unstructured": "Pengcheng He, Xiaodong Liu, Jianfeng Gao, and Weizhu Chen. 2021. Deberta: decoding-Enhanced Bert with Disentangled Attention. In 9th International Conference on Learning Representations, ICLR 2021, Virtual Event, Austria, May 3--7, 2021. OpenReview.net. https://openreview.net/forum?id=XPZIaotutsD"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "volume-title": "Bridging Nonlinearities and Stochastic Regularizers with Gaussian Error Linear Units. CoRR abs/1606.08415",
+        "author": "Hendrycks Dan",
+        "year": "2016",
+        "unstructured": "Dan Hendrycks and Kevin Gimpel. 2016. Bridging Nonlinearities and Stochastic Regularizers with Gaussian Error Linear Units. CoRR abs/1606.08415 (2016). arXiv:1606.08415 http://arxiv.org/abs/1606.08415"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3196321.3196334"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2018/314"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/p16-1195"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE43902.2021.00026"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "volume-title": "Kipf and Max Welling",
+        "author": "Thomas",
+        "year": "2017",
+        "unstructured": "Thomas N. Kipf and Max Welling. 2017. Semi-Supervised Classification with Graph Convolutional Networks. In 5th International Conference on Learning Representations, ICLR 2017, Toulon, France, April 24--26, 2017, Conference Track Proceedings. OpenReview.net. https://openreview.net/forum?id=SJU4ayYgl"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3387904.3389268"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00087"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3368089.3417926"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v32i1.11963"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "volume-title": "ROUGE: A Package for Automatic Evaluation of Summaries. In Text Summarization Branches Out",
+        "author": "Lin Chin-Yew",
+        "year": "2004",
+        "unstructured": "Chin-Yew Lin. 2004. ROUGE: A Package for Automatic Evaluation of Summaries. In Text Summarization Branches Out. Association for Computational Linguistics, Barcelona, Spain, 74--81. https://www.aclweb.org/anthology/W04-1013"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "volume-title": "Decoupled Weight Decay Regularization. In 7th International Conference on Learning Representations, ICLR 2019",
+        "author": "Loshchilov Ilya",
+        "year": "2019",
+        "unstructured": "Ilya Loshchilov and Frank Hutter. 2019. Decoupled Weight Decay Regularization. In 7th International Conference on Learning Representations, ICLR 2019, New Orleans, LA, USA, May 6--9, 2019. OpenReview.net. https://openreview.net/forum?id=Bkg6RiCqY7"
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2015.2465386"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2013.6613830"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3015812.3016002"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/3-540-49430-8"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "volume-title": "Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics, July 6--12",
+        "author": "Papineni Kishore",
+        "year": "2002",
+        "unstructured": "Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. 2002. Bleu: a Method for Automatic Evaluation of Machine Translation. In Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics, July 6--12, 2002, Philadelphia, PA, USA. ACL, 311--318. https://www.aclweb.org/anthology/P02-1040/"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/0004-3702(90)90005-K"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "volume-title": "Arch. Math. Phys 27",
+        "author": "Pr\u00fcfer Heinz",
+        "year": "1918",
+        "unstructured": "Heinz Pr\u00fcfer. 1918. Neuer beweis eines satzes \u00fcber permutationen. Arch. Math. Phys 27, 1918 (1918), 742--744."
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/n18-2074"
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.21437/Interspeech.2017-729"
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D19-1054"
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D19-1390"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2021/214"
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IJCNN.2019.8851751"
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "volume-title": "Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019",
+        "author": "Shiv Vighnesh Leonardo",
+        "year": "2019",
+        "unstructured": "Vighnesh Leonardo Shiv and Chris Quirk. 2019. Novel positional encodings to enable tree-based transformers. In Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019, NeurIPS 2019, December 8--14, 2019, Vancouver, BC, Canada, Hanna M. Wallach, Hugo Larochelle, Alina Beygelzimer, Florence d'Alch\u00e9-Buc, Emily B. Fox, and Roman Garnett (Eds.). 12058--12068."
+      },
+      {
+        "key": "e_1_3_2_1_43_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1858996.1859006"
+      },
+      {
+        "key": "e_1_3_2_1_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2627435.2670313"
+      },
+      {
+        "key": "e_1_3_2_1_45_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/2020.emnlp-main.535"
+      },
+      {
+        "key": "e_1_3_2_1_46_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.308"
+      },
+      {
+        "key": "e_1_3_2_1_47_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/p15-1150"
+      },
+      {
+        "key": "e_1_3_2_1_48_1",
+        "volume-title": "AST-Transformer: Encoding Abstract Syntax Trees Efficiently for Code Summarization. arXiv preprint arXiv:2112.01184",
+        "author": "Tang Ze",
+        "year": "2021",
+        "unstructured": "Ze Tang, Chuanyi Li, Jidong Ge, Xiaoyu Shen, Zheling Zhu, and Bin Luo. 2021. AST-Transformer: Encoding Abstract Syntax Trees Efficiently for Code Summarization. arXiv preprint arXiv:2112.01184 (2021)."
+      },
+      {
+        "key": "e_1_3_2_1_49_1",
+        "volume-title": "Advances in Neural Information Processing Systems 30: Annual Conference on Neural Information Processing Systems 2017",
+        "author": "Vaswani Ashish",
+        "year": "2017",
+        "unstructured": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, and Illia Polosukhin. 2017. Attention is All you Need. In Advances in Neural Information Processing Systems 30: Annual Conference on Neural Information Processing Systems 2017, 4--9 December 2017, Long Beach, CA, USA, Isabelle Guyon, Ulrike von Luxburg, Samy Bengio, Hanna M. Wallach, Rob Fergus, S. V. N. Vishwanathan, and Roman Garnett (Eds.). 5998--6008. http://papers.nips.cc/paper/7181-attention-is-all-you-need"
+      },
+      {
+        "key": "e_1_3_2_1_50_1",
+        "volume-title": "6th International Conference on Learning Representations, ICLR",
+        "author": "Velickovic Petar",
+        "year": "2018",
+        "unstructured": "Petar Velickovic, Guillem Cucurull, Arantxa Casanova, Adriana Romero, Pietro Li\u00f2, and Yoshua Bengio. 2018. Graph Attention Networks. In 6th International Conference on Learning Representations, ICLR 2018, Vancouver, BC, Canada, April 30 -- May 3, 2018, Conference Track Proceedings. OpenReview.net. https://openreview.net/forum?id=rJXMpikCZ"
+      },
+      {
+        "key": "e_1_3_2_1_51_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3238206"
+      },
+      {
+        "key": "e_1_3_2_1_52_1",
+        "volume-title": "A Transformer-based Framework for Unifying Code Summarization and Code Search. CoRR abs/2003.03238",
+        "author": "Wang Wenhua",
+        "year": "2020",
+        "unstructured": "Wenhua Wang, Yuqun Zhang, Zhengran Zeng, and Guandong Xu. 2020. TranS^3: A Transformer-based Framework for Unifying Code Summarization and Code Search. CoRR abs/2003.03238 (2020). arXiv:2003.03238 https://arxiv.org/abs/2003.03238"
+      },
+      {
+        "key": "e_1_3_2_1_53_1",
+        "volume-title": "Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019",
+        "author": "Wei Bolin",
+        "year": "2019",
+        "unstructured": "Bolin Wei, Ge Li, Xin Xia, Zhiyi Fu, and Zhi Jin. 2019. Code Generation as a Dual Task of Code Summarization. In Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019, NeurIPS 2019, December 8--14, 2019, Vancouver, BC, Canada, Hanna M. Wallach, Hugo Larochelle, Alina Beygelzimer, Florence d'Alch\u00e9-Buc, Emily B. Fox, and Roman Garnett (Eds.). 6559--6569."
+      },
+      {
+        "key": "e_1_3_2_1_54_1",
+        "volume-title": "Big Bird: Transformers for Longer Sequences. In Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020",
+        "author": "Zaheer Manzil",
+        "year": "2020",
+        "unstructured": "Manzil Zaheer, Guru Guruganesh, Kumar Avinava Dubey, Joshua Ainslie, Chris Alberti, Santiago Onta\u00f1\u00f3n, Philip Pham, Anirudh Ravula, Qifan Wang, Li Yang, and Amr Ahmed. 2020. Big Bird: Transformers for Longer Sequences. In Advances in Neural Information Processing Systems 33: Annual Conference on Neural Information Processing Systems 2020, NeurIPS 2020, December 6--12, 2020, virtual, Hugo Larochelle, Marc'Aurelio Ranzato, Raia Hadsell, Maria-Florina Balcan, and Hsuan-Tien Lin (Eds.). https://proceedings.neurips.cc/paper/2020/hash/c8512d142a2d849725f31a9a7a361ab9-Abstract.html"
+      },
+      {
+        "key": "e_1_3_2_1_55_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P19-1216"
+      },
+      {
+        "key": "e_1_3_2_1_56_1",
+        "volume-title": "Automatic Code Summarization: A Systematic Literature Review. CoRR abs/1909.04352",
+        "author": "Zhu Yuxiang",
+        "year": "2019",
+        "unstructured": "Yuxiang Zhu and Minxue Pan. 2019. Automatic Code Summarization: A Systematic Literature Review. CoRR abs/1909.04352 (2019). arXiv:1909.04352 http://arxiv.org/abs/1909.04352"
+      },
+      {
+        "key": "e_1_3_2_1_57_1",
+        "volume-title": "9th International Conference on Learning Representations, ICLR 2021",
+        "author": "Z\u00fcgner Daniel",
+        "year": "2021",
+        "unstructured": "Daniel Z\u00fcgner, Tobias Kirschstein, Michele Catasta, Jure Leskovec, and Stephan G\u00fcnnemann. 2021. Language-Agnostic Representation Learning of Source Code from Structure and Context. In 9th International Conference on Learning Representations, ICLR 2021, Virtual Event, Austria, May 3--7, 2021. OpenReview.net. https://openreview.net/forum?id=Xh5eMZVONGF"
+      }
+    ],
+    "event": {
+      "name": "ICSE '22: 44th International Conference on Software Engineering",
+      "location": "Pittsburgh Pennsylvania",
+      "acronym": "ICSE '22",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE CS"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 44th International Conference on Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3510003.3510224",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          14
+        ]
+      ],
+      "date-time": "2024-07-14T23:57:15Z",
+      "timestamp": 1721001435000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3510003.3510224"
+      }
+    },
+    "subtitle": [
+      "code summarization with efficient tree-structured attention"
+    ],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          21
+        ]
+      ]
+    },
+    "references-count": 57,
+    "alternative-id": [
+      "10.1145/3510003.3510224",
+      "10.1145/3510003"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3510003.3510224",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          21
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2022-07-05",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

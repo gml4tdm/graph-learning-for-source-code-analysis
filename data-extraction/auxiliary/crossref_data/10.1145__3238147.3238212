@@ -1,0 +1,628 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ],
+      "date-time": "2024-07-15T00:16:53Z",
+      "timestamp": 1721002613256
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 83,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              3
+            ]
+          ],
+          "date-time": "2018-09-03T00:00:00Z",
+          "timestamp": 1535932800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1145/3238147.3238212",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          20
+        ]
+      ],
+      "date-time": "2018-08-20T20:04:36Z",
+      "timestamp": 1534795476000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 8,
+    "title": [
+      "Is this class thread-safe? inferring documentation using graph-based learning"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Andrew",
+        "family": "Habib",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "TU Darmstadt, Germany"
+          }
+        ]
+      },
+      {
+        "given": "Michael",
+        "family": "Pradel",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "TU Darmstadt, Germany"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "unstructured": "{n. d.}. JBoss Platform issue 1416472. {n. d.}. JBoss Platform issue 1416472."
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "unstructured": "https://bugzilla.redhat.com/show_bug.cgi?id=1416472. https://bugzilla.redhat.com/show_bug.cgi?id=1416472."
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "unstructured": "{n. d.}. NX issue 239. https://track.radensolutions.com/issue/NX-239. {n. d.}. NX issue 239. https://track.radensolutions.com/issue/NX-239."
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "unstructured": "{n. d.}. RESTEasy issue 1669. https://issues.jboss.org/browse/RESTEASY-1669. {n. d.}. RESTEasy issue 1669. https://issues.jboss.org/browse/RESTEASY-1669."
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/11678779_14"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/503272.503275"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Blake Anderson Daniel Quist Joshua Neil Curtis Storlie and Terran Lane. {n. d.}. Graph-based malware detection using dynamic analysis. 7 4 ({n. d.}) 247\u2013258. Blake Anderson Daniel Quist Joshua Neil Curtis Storlie and Terran Lane. {n. d.}. Graph-based malware detection using dynamic analysis. 7 4 ({n. d.}) 247\u2013258.",
+        "DOI": "10.1007/s11416-011-0152-x"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/stvr.281"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3106237.3106292"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICDM.2005.132"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/bioinformatics/bti1007"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "volume-title": "GraphML Progress Report Structural Layer Proposal",
+        "author": "Brandes Ulrik",
+        "unstructured": "Ulrik Brandes , Markus Eiglsperger , Ivan Herman , Michael Himsolt , and M. Scott Marshall . 2002. GraphML Progress Report Structural Layer Proposal . Springer Berlin Heidelberg , Berlin, Heidelberg , 501\u2013512. 3-540-45848-4_59 Ulrik Brandes, Markus Eiglsperger, Ivan Herman, Michael Himsolt, and M. Scott Marshall. 2002. GraphML Progress Report Structural Layer Proposal. Springer Berlin Heidelberg, Berlin, Heidelberg, 501\u2013512. 3-540-45848-4_59"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1736020.1736040"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/512529.512560"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2017.32"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1147/sj.411.0111"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884882"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "volume-title": "Freund",
+        "author": "Flanagan Cormac",
+        "year": "2000",
+        "unstructured": "Cormac Flanagan and Stephen N . Freund . 2000 . Type-based race detection for Java . 219\u2013232. Cormac Flanagan and Stephen N. Freund. 2000. Type-based race detection for Java. 219\u2013232."
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/964001.964023"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1542476.1542490"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/781131.781169"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Eibe Frank Mark A. Hall Geoffrey Holmes Richard Kirkby and Bernhard Pfahringer. 2005. WEKA - A Machine Learning Workbench for Data Mining. In The Data Mining and Knowledge Discovery Handbook. 1305\u20131314. Eibe Frank Mark A. Hall Geoffrey Holmes Richard Kirkby and Bernhard Pfahringer. 2005. WEKA - A Machine Learning Workbench for Data Mining. In The Data Mining and Knowledge Discovery Handbook. 1305\u20131314.",
+        "DOI": "10.1007/0-387-25465-X_62"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1453101.1453150"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "volume-title": "Learning Theory and Kernel Machines",
+        "author": "G\u00e4rtner Thomas",
+        "unstructured": "Thomas G\u00e4rtner , Peter Flach , and Stefan Wrobel . 2003. On graph kernels: Hardness results and efficient alternatives . In Learning Theory and Kernel Machines . Springer , 129\u2013143. Thomas G\u00e4rtner, Peter Flach, and Stefan Wrobel. 2003. On graph kernels: Hardness results and efficient alternatives. In Learning Theory and Kernel Machines. Springer, 129\u2013143."
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2517312.2517315"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2007.383049"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.70705"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2017.12"
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-02658-4_54"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3041838.3041879"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "volume-title": "Proceedings of the Nineteenth International Conference on Machine Learning (ICML \u201902)",
+        "author": "Kondor Risi Imre",
+        "unstructured": "Risi Imre Kondor and John D. Lafferty . 2002. Diffusion Kernels on Graphs and Other Discrete Input Spaces . In Proceedings of the Nineteenth International Conference on Machine Learning (ICML \u201902) . Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 315\u2013322. http://dl.acm.org/citation.cfm?id=645531.655996 Risi Imre Kondor and John D. Lafferty. 2002. Diffusion Kernels on Graphs and Other Discrete Input Spaces. In Proceedings of the Nineteenth International Conference on Machine Learning (ICML \u201902). Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 315\u2013322. http://dl.acm.org/citation.cfm?id=645531.655996"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1985793.1985874"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MS.2003.1241364"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1081706.1081755"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970355"
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1168857.1168864"
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1669112.1669181"
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "first-page": "1",
+        "article-title": "Towards Prioritizing Documentation Effort",
+        "volume": "99",
+        "author": "McBurney P. W.",
+        "year": "2017",
+        "unstructured": "P. W. McBurney , S. Jiang , M. Kessentini , N. A. Kraft , A. Armaly , M. W. Mkaouer , and C. McMillan . 2017 . Towards Prioritizing Documentation Effort . IEEE Transactions on Software Engineering PP , 99 (2017), 1 \u2013 1 . 2017.2716950 P. W. McBurney, S. Jiang, M. Kessentini, N. A. Kraft, A. Armaly, M. W. Mkaouer, and C. McMillan. 2017. Towards Prioritizing Documentation Effort. IEEE Transactions on Software Engineering PP, 99 (2017), 1\u20131. 2017.2716950",
+        "journal-title": "IEEE Transactions on Software Engineering PP"
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/248052.248106"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "volume-title": "Finding and Reproducing Heisenbugs in Concurrent Programs. In Symposium on Operating Systems Design and Implementation. USENIX, 267\u2013280",
+        "author": "Musuvathi Madanlal",
+        "year": "2008",
+        "unstructured": "Madanlal Musuvathi , Shaz Qadeer , Thomas Ball , G\u00e9rard Basler , Piramanayagam Arumuga Nainar , and Iulian Neamtiu . 2008 . Finding and Reproducing Heisenbugs in Concurrent Programs. In Symposium on Operating Systems Design and Implementation. USENIX, 267\u2013280 . Madanlal Musuvathi, Shaz Qadeer, Thomas Ball, G\u00e9rard Basler, Piramanayagam Arumuga Nainar, and Iulian Neamtiu. 2008. Finding and Reproducing Heisenbugs in Concurrent Programs. In Symposium on Operating Systems Design and Implementation. USENIX, 267\u2013280."
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2009.5070538"
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "volume-title": "BALLERINA: Automatic Generation and Clustering of Efficient Random Unit Tests for Multithreaded Code. In International Conference on Software Engineering (ICSE). 727\u2013737",
+        "author": "Nistor Adrian",
+        "year": "2012",
+        "unstructured": "Adrian Nistor , Qingzhou Luo , Michael Pradel , Thomas R. Gross , and Darko Marinov . 2012 . BALLERINA: Automatic Generation and Clustering of Efficient Random Unit Tests for Multithreaded Code. In International Conference on Software Engineering (ICSE). 727\u2013737 . Adrian Nistor, Qingzhou Luo, Michael Pradel, Thomas R. Gross, and Darko Marinov. 2012. BALLERINA: Automatic Generation and Clustering of Efficient Random Unit Tests for Multithreaded Code. In International Conference on Software Engineering (ICSE). 727\u2013737."
+      },
+      {
+        "key": "e_1_3_2_1_43_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/781498.781528"
+      },
+      {
+        "key": "e_1_3_2_1_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2009.60"
+      },
+      {
+        "key": "e_1_3_2_1_45_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2254064.2254126"
+      },
+      {
+        "key": "e_1_3_2_1_46_1",
+        "volume-title": "Automatic Testing of Sequential and Concurrent Substitutability. In International Conference on Software Engineering (ICSE). 282\u2013291",
+        "author": "Pradel Michael",
+        "unstructured": "Michael Pradel and Thomas R. Gross . 2013 . Automatic Testing of Sequential and Concurrent Substitutability. In International Conference on Software Engineering (ICSE). 282\u2013291 . Michael Pradel and Thomas R. Gross. 2013. Automatic Testing of Sequential and Concurrent Substitutability. In International Conference on Software Engineering (ICSE). 282\u2013291."
+      },
+      {
+        "key": "e_1_3_2_1_47_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2610384.2610393"
+      },
+      {
+        "key": "e_1_3_2_1_48_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.neunet.2005.07.009"
+      },
+      {
+        "key": "e_1_3_2_1_49_1",
+        "volume-title": "Proceedings of the first international workshop on mining graphs, trees and sequences. 65\u201374",
+        "author": "Ramon Jan",
+        "year": "2003",
+        "unstructured": "Jan Ramon and Thomas G\u00e4rtner . 2003 . Expressivity versus efficiency of graph kernels . In Proceedings of the first international workshop on mining graphs, trees and sequences. 65\u201374 . Jan Ramon and Thomas G\u00e4rtner. 2003. Expressivity versus efficiency of graph kernels. In Proceedings of the first international workshop on mining graphs, trees and sequences. 65\u201374."
+      },
+      {
+        "key": "e_1_3_2_1_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3155562.3155581"
+      },
+      {
+        "key": "e_1_3_2_1_51_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MS.2009.193"
+      },
+      {
+        "key": "e_1_3_2_1_52_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2660193.2660238"
+      },
+      {
+        "key": "e_1_3_2_1_53_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2786805.2786874"
+      },
+      {
+        "key": "e_1_3_2_1_54_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2737924.2737998"
+      },
+      {
+        "key": "e_1_3_2_1_55_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2983990.2984040"
+      },
+      {
+        "key": "e_1_3_2_1_56_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/265924.265927"
+      },
+      {
+        "key": "e_1_3_2_1_57_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bernhard Sch\u00f6lkopf and Alexander J Smola. 2002. Learning with kernels: Support vector machines regularization optimization and beyond. the MIT Press. Bernhard Sch\u00f6lkopf and Alexander J Smola. 2002. Learning with kernels: Support vector machines regularization optimization and beyond. the MIT Press.",
+        "DOI": "10.7551/mitpress/4175.001.0001"
+      },
+      {
+        "key": "e_1_3_2_1_58_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1375581.1375584"
+      },
+      {
+        "key": "e_1_3_2_1_59_1",
+        "volume-title": "Kurt Mehlhorn, and Karsten M. Borgwardt.",
+        "author": "Shervashidze Nino",
+        "year": "2011",
+        "unstructured": "Nino Shervashidze , Pascal Schweitzer , Erik Jan van Leeuwen , Kurt Mehlhorn, and Karsten M. Borgwardt. 2011 . Weisfeiler-Lehman Graph Kernels. J. Mach. Learn. Res . 12 (Nov. 2011), 2539\u20132561. http://dl.acm.org/citation.cfm?id=1953048. Nino Shervashidze, Pascal Schweitzer, Erik Jan van Leeuwen, Kurt Mehlhorn, and Karsten M. Borgwardt. 2011. Weisfeiler-Lehman Graph Kernels. J. Mach. Learn. Res. 12 (Nov. 2011), 2539\u20132561. http://dl.acm.org/citation.cfm?id=1953048."
+      },
+      {
+        "key": "e_1_3_2_1_60_1",
+        "unstructured": "2078187 2078187"
+      },
+      {
+        "key": "e_1_3_2_1_61_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/bioinformatics/bti1055"
+      },
+      {
+        "key": "e_1_3_2_1_62_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/APSEC.2010.46"
+      },
+      {
+        "key": "e_1_3_2_1_63_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884876"
+      },
+      {
+        "key": "e_1_3_2_1_64_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3155562.3155585"
+      },
+      {
+        "key": "e_1_3_2_1_65_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884800"
+      },
+      {
+        "key": "e_1_3_2_1_66_1",
+        "volume-title": "Conference of the Centre for Advanced Studies on Collaborative Research (CASCON). IBM, 125\u2013135",
+        "author": "Vall\u00e9e-Rai Raja",
+        "year": "1999",
+        "unstructured": "Raja Vall\u00e9e-Rai , Phong Co , Etienne Gagnon , Laurie J. Hendren , Patrick Lam , and Vijay Sundaresan . 1999 . Soot - a Java bytecode optimization framework . In Conference of the Centre for Advanced Studies on Collaborative Research (CASCON). IBM, 125\u2013135 . Raja Vall\u00e9e-Rai, Phong Co, Etienne Gagnon, Laurie J. Hendren, Patrick Lam, and Vijay Sundaresan. 1999. Soot - a Java bytecode optimization framework. In Conference of the Centre for Advanced Studies on Collaborative Research (CASCON). IBM, 125\u2013135."
+      },
+      {
+        "key": "e_1_3_2_1_67_1",
+        "unstructured": "S. V. N. Vishwanathan Nicol N. Schraudolph Risi Kondor and Karsten M. Borgwardt. {n. d.}. Graph Kernels. 11 ({n. d.}) 1201\u20131242. http://dl.acm.org/citation. cfm?id=1756006.1859891 S. V. N. Vishwanathan Nicol N. Schraudolph Risi Kondor and Karsten M. Borgwardt. {n. d.}. Graph Kernels. 11 ({n. d.}) 1201\u20131242. http://dl.acm.org/citation. cfm?id=1756006.1859891"
+      },
+      {
+        "key": "e_1_3_2_1_68_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1022920129859"
+      },
+      {
+        "key": "e_1_3_2_1_69_1",
+        "unstructured": "Bimal Viswanath M. Ahmad Bashir Mark Crovella Saikat Guha Krishna P. Gummadi Balachander Krishnamurthy and Alan Mislove. 2014. Towards Detecting Anomalous User Behavior in Online Social Networks.. In USENIX Security. 223\u2013238. Bimal Viswanath M. Ahmad Bashir Mark Crovella Saikat Guha Krishna P. Gummadi Balachander Krishnamurthy and Alan Mislove. 2014. Towards Detecting Anomalous User Behavior in Online Social Networks.. In USENIX Security. 223\u2013238."
+      },
+      {
+        "key": "e_1_3_2_1_70_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/504282.504288"
+      },
+      {
+        "key": "e_1_3_2_1_71_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/781131.781145"
+      },
+      {
+        "key": "e_1_3_2_1_72_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MALWARE.2009.5403018"
+      },
+      {
+        "key": "e_1_3_2_1_73_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1122971.1122993"
+      },
+      {
+        "key": "e_1_3_2_1_74_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/959242.959249"
+      },
+      {
+        "key": "e_1_3_2_1_75_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2009.30"
+      },
+      {
+        "key": "e_1_3_2_1_76_1",
+        "first-page": "12",
+        "article-title": "A reduction of a graph to a canonical form and an algebra arising during this reduction",
+        "volume": "2",
+        "author": "Weisfeiler Boris",
+        "year": "1968",
+        "unstructured": "Boris Weisfeiler and AA Lehman . 1968 . A reduction of a graph to a canonical form and an algebra arising during this reduction . Nauchno-Technicheskaya Informatsia 2 , 9 (1968), 12 \u2013 16 . Boris Weisfeiler and AA Lehman. 1968. A reduction of a graph to a canonical form and an algebra arising during this reduction. Nauchno-Technicheskaya Informatsia 2, 9 (1968), 12\u201316.",
+        "journal-title": "Nauchno-Technicheskaya Informatsia"
+      },
+      {
+        "key": "e_1_3_2_1_77_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/566172.566212"
+      },
+      {
+        "key": "e_1_3_2_1_78_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/11531142_26"
+      },
+      {
+        "key": "e_1_3_2_1_79_1",
+        "volume-title": "Java Threads",
+        "author": "Wong Henry",
+        "unstructured": "Henry Wong and Scott Oaks . 2004. Java Threads ( 3 rd edition ed.). O\u2019Reilly Media, Inc. Henry Wong and Scott Oaks. 2004. Java Threads (3rd edition ed.). O\u2019Reilly Media, Inc.",
+        "edition": "3"
+      },
+      {
+        "key": "e_1_3_2_1_80_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1065010.1065013"
+      },
+      {
+        "key": "e_1_3_2_1_81_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1134285.1134325"
+      },
+      {
+        "key": "e_1_3_2_1_82_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2660267.2660359"
+      },
+      {
+        "key": "e_1_3_2_1_83_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2017.11"
+      }
+    ],
+    "event": {
+      "name": "ASE '18: 33rd ACM/IEEE International Conference on Automated Software Engineering",
+      "location": "Montpellier France",
+      "acronym": "ASE '18",
+      "sponsor": [
+        "SIGAI ACM Special Interest Group on Artificial Intelligence",
+        "CNRS Centre National De La Rechercue Scientifique",
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE-CS Computer Society"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3238147.3238212",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          9
+        ]
+      ],
+      "date-time": "2024-07-09T11:47:28Z",
+      "timestamp": 1720525648000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3238147.3238212"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "references-count": 83,
+    "alternative-id": [
+      "10.1145/3238147.3238212",
+      "10.1145/3238147"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3238147.3238212",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2018-09-03",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ],
+      "date-time": "2024-07-15T00:18:26Z",
+      "timestamp": 1721002706517
+    },
+    "reference-count": 16,
+    "publisher": "Association for Computing Machinery (ACM)",
+    "issue": "OOPSLA",
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Proc. ACM Program. Lang."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          11,
+          13
+        ]
+      ]
+    },
+    "abstract": "<jats:p>\n            We address the problem of predicting\n            <jats:italic>edit completions</jats:italic>\n            based on a learned model that was trained on past edits. Given a code snippet that is partially edited, our goal is to predict a\n            <jats:italic>completion of the edit for the rest of the snippet</jats:italic>\n            . We refer to this task as the EditCompletion task and present a novel approach for tackling it. The main idea is to directly represent structural edits. This allows us to model the likelihood of the edit itself, rather than learning the likelihood of the edited code. We represent an edit operation as a path in the program\u2019s Abstract Syntax Tree (AST), originating from the source of the edit to the target of the edit. Using this representation, we present a powerful and lightweight neural model for the EditCompletion task.\n          </jats:p>\n          <jats:p>\n            We conduct a thorough evaluation, comparing our approach to a variety of representation and modeling approaches that are driven by multiple strong models such as LSTMs, Transformers, and neural CRFs. Our experiments show that our model achieves a 28% relative gain over state-of-the-art sequential models and 2\u00d7 higher accuracy than syntactic models that learn to generate the edited\n            <jats:italic>code</jats:italic>\n            , as opposed to modeling the\n            <jats:italic>edits</jats:italic>\n            directly.\n          </jats:p>\n          <jats:p>Our code, dataset, and trained models are publicly available at &lt;a&gt;https://github.com/tech-srl/c3po/&lt;/a&gt; .</jats:p>",
+    "DOI": "10.1145/3428283",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          11,
+          24
+        ]
+      ],
+      "date-time": "2020-11-24T23:36:06Z",
+      "timestamp": 1606260966000
+    },
+    "page": "1-28",
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 19,
+    "title": [
+      "A structural model for contextual code changes"
+    ],
+    "prefix": "10.1145",
+    "volume": "4",
+    "author": [
+      {
+        "given": "Shaked",
+        "family": "Brody",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Technion, Israel"
+          }
+        ]
+      },
+      {
+        "given": "Uri",
+        "family": "Alon",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Technion, Israel"
+          }
+        ]
+      },
+      {
+        "given": "Eran",
+        "family": "Yahav",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Technion, Israel"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2020,
+          11,
+          13
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_2_2_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P17-2021"
+      },
+      {
+        "key": "e_1_2_2_2_1",
+        "volume-title": "Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering",
+        "author": "In",
+        "year": "2015"
+      },
+      {
+        "key": "e_1_2_2_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2786805.2786849"
+      },
+      {
+        "key": "e_1_2_2_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3290353"
+      },
+      {
+        "key": "e_1_2_2_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICASSP.2016.7472621"
+      },
+      {
+        "key": "e_1_2_2_6_1",
+        "first-page": "8",
+        "article-title": "05620 [cs.SE] Sepp Hochreiter and J\u00fcrgen Schmidhuber. 1997. Long Short-Term Memory",
+        "volume": "9",
+        "year": "2003",
+        "journal-title": "Neural Comput."
+      },
+      {
+        "key": "e_1_2_2_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "e_1_2_2_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "e_1_2_2_9_1",
+        "volume-title": "1412.6980Comment: Published as a conference paper at the 3rd International Conference for Learning Representations",
+        "year": "2015"
+      },
+      {
+        "key": "e_1_2_2_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3133908"
+      },
+      {
+        "key": "e_1_2_2_11_1",
+        "volume-title": "Manning",
+        "author": "Luong Minh-Thang",
+        "year": "2015"
+      },
+      {
+        "key": "e_1_2_2_12_1",
+        "volume-title": "Encode",
+        "author": "Malmi Eric"
+      },
+      {
+        "key": "e_1_2_2_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3338906.3340455"
+      },
+      {
+        "key": "e_1_2_2_14_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Reuven Rubinstein. 1999. The cross-entropy method for combinatorial and continuous optimization. Methodology and Computing in Applied Probability 1 2 ( 1999 ) 127-190.  Reuven Rubinstein. 1999. The cross-entropy method for combinatorial and continuous optimization. Methodology and Computing in Applied Probability 1 2 ( 1999 ) 127-190.",
+        "DOI": "10.1023/A:1010091220143"
+      },
+      {
+        "key": "e_1_2_2_15_1",
+        "volume-title": "Curran Associates",
+        "author": "Bengio S."
+      },
+      {
+        "key": "e_1_2_2_16_1",
+        "volume-title": "Graham Neubig, Miltiadis Allamanis, Marc Brockschmidt, and Alexander L. Gaunt.",
+        "author": "Vinyals Oriol",
+        "year": "2019"
+      }
+    ],
+    "container-title": [
+      "Proceedings of the ACM on Programming Languages"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3428283",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          1
+        ]
+      ],
+      "date-time": "2023-01-01T21:41:42Z",
+      "timestamp": 1672609302000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3428283"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          11,
+          13
+        ]
+      ]
+    },
+    "references-count": 16,
+    "journal-issue": {
+      "issue": "OOPSLA",
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            11,
+            13
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1145/3428283"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3428283",
+    "relation": {},
+    "ISSN": [
+      "2475-1421"
+    ],
+    "issn-type": [
+      {
+        "value": "2475-1421",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          11,
+          13
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2020-11-13",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

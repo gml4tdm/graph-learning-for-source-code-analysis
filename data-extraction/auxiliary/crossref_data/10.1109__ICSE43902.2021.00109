@@ -1,0 +1,612 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T11:53:38Z",
+      "timestamp": 1721390018422
+    },
+    "reference-count": 71,
+    "publisher": "IEEE",
+    "funder": [
+      {
+        "DOI": "10.13039/100010002",
+        "name": "Ministry of Education",
+        "doi-asserted-by": "publisher"
+      },
+      {
+        "DOI": "10.13039/501100000288",
+        "name": "Royal Society",
+        "doi-asserted-by": "publisher"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          5
+        ]
+      ]
+    },
+    "DOI": "10.1109/icse43902.2021.00109",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          5,
+          8
+        ]
+      ],
+      "date-time": "2021-05-08T04:38:59Z",
+      "timestamp": 1620448739000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 60,
+    "title": [
+      "InferCode: Self-Supervised Learning of Code Representations by Predicting Subtrees"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Nghi D. Q.",
+        "family": "Bui",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Yijun",
+        "family": "Yu",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Lingxiao",
+        "family": "Jiang",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref71",
+        "article-title": "Lambdanet: Probabilistic type inference using graph neural networks",
+        "author": "wei",
+        "year": "0",
+        "journal-title": "ICLR&#x2019;20"
+      },
+      {
+        "key": "ref70",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2019.00062"
+      },
+      {
+        "key": "ref39",
+        "first-page": "3294",
+        "article-title": "Skip-thought vectors",
+        "author": "kiros",
+        "year": "2015",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref38",
+        "first-page": "3636",
+        "article-title": "Self-Supervised video representation learning with odd-oneout networks",
+        "author": "fernando",
+        "year": "2017",
+        "journal-title": "CVPR"
+      },
+      {
+        "key": "ref33",
+        "first-page": "99",
+        "article-title": "Cross pixel optical-flow similarity for self-supervised learning",
+        "author": "mahendran",
+        "year": "2018",
+        "journal-title": "Asian Conference on Computer Vision"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE-Companion.2019.00113"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2013.85"
+      },
+      {
+        "key": "ref30",
+        "first-page": "121134",
+        "article-title": "Blended, precise semantic program embeddings",
+        "author": "wang",
+        "year": "0",
+        "journal-title": "PLDI&#x2019;20"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v33i01.33018545"
+      },
+      {
+        "key": "ref36",
+        "first-page": "7763",
+        "article-title": "Cooperative learning of audio and video models from self-supervised synchronization",
+        "author": "korbar",
+        "year": "2018",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref35",
+        "first-page": "649",
+        "article-title": "Colorful image colorization",
+        "author": "zhang",
+        "year": "2016",
+        "journal-title": "ECCV"
+      },
+      {
+        "key": "ref34",
+        "article-title": "Unsupervised representation learning by predicting image rotations",
+        "author": "gidaris",
+        "year": "0",
+        "journal-title": "ICLR&#x2019;18"
+      },
+      {
+        "key": "ref60",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/N16-1162"
+      },
+      {
+        "key": "ref62",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884877"
+      },
+      {
+        "key": "ref61",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.30"
+      },
+      {
+        "key": "ref63",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970326"
+      },
+      {
+        "key": "ref28",
+        "article-title": "graph2vec: Learning distributed representations of graphs",
+        "volume": "abs 1707 5005",
+        "author": "narayanan",
+        "year": "2017",
+        "journal-title": "CoRR"
+      },
+      {
+        "key": "ref64",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2009916.2009934"
+      },
+      {
+        "key": "ref27",
+        "article-title": "A literature study of embeddings on source code",
+        "author": "chen",
+        "year": "2019",
+        "journal-title": "arXiv preprint arXiv 1904 01870"
+      },
+      {
+        "key": "ref65",
+        "first-page": "2835",
+        "article-title": "A deep architecture for semantic matching with multiple positional sentence representations",
+        "volume": "16",
+        "author": "wan",
+        "year": "2016",
+        "journal-title": "AAAI"
+      },
+      {
+        "key": "ref66",
+        "first-page": "363",
+        "article-title": "Monolingual and crosslingual information retrieval models based on (bilingual) word embeddings",
+        "author": "vuli?",
+        "year": "2015",
+        "journal-title": "38th SIGIR"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3196398.3196431"
+      },
+      {
+        "key": "ref67",
+        "first-page": "17461751",
+        "author": "kim",
+        "year": "0",
+        "journal-title": "Convolutional neural networks for sentence classification"
+      },
+      {
+        "key": "ref68",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/78.650093"
+      },
+      {
+        "key": "ref69",
+        "first-page": "2579",
+        "article-title": "Visualizing data using tsne",
+        "volume": "9",
+        "author": "maaten",
+        "year": "2008",
+        "journal-title": "Journal of Machine Learning Research"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "crossref",
+        "first-page": "3422",
+        "DOI": "10.1109/ICASSP.2013.6638293",
+        "article-title": "Largescale malware classification using random projections and neural networks",
+        "author": "dahl",
+        "year": "2013",
+        "journal-title": "IEEE International Conference on Acoustics Speech and Signal Processing"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IJCNN.2017.7966078"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCV.2017.226"
+      },
+      {
+        "key": "ref22",
+        "first-page": "3111",
+        "article-title": "Distributed representations of words and phrases and their compositionality",
+        "author": "mikolov",
+        "year": "2013",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2019.00202"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/423"
+      },
+      {
+        "key": "ref23",
+        "first-page": "1188",
+        "article-title": "Distributed representations of sentences and documents",
+        "author": "le",
+        "year": "2014",
+        "journal-title": "ICML"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/APSEC.2018.00082"
+      },
+      {
+        "key": "ref25",
+        "author": "ingram",
+        "year": "2018",
+        "journal-title": "A comparative study of various code embeddings in software semantic matching"
+      },
+      {
+        "key": "ref50",
+        "article-title": "Gated graph sequence neural networks",
+        "author": "li",
+        "year": "2016",
+        "journal-title": "ICLRE"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D15-1279"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-04277-5_18"
+      },
+      {
+        "key": "ref58",
+        "first-page": "422",
+        "article-title": "Bilateral dependency neural networks for cross-language algorithm classification",
+        "author": "nghi",
+        "year": "0",
+        "journal-title": "SANER&#x2019;19"
+      },
+      {
+        "key": "ref57",
+        "article-title": "Adam: A method for stochastic optimization",
+        "author": "kingma",
+        "year": "0",
+        "journal-title": "ICLR&#x2019;19"
+      },
+      {
+        "key": "ref56",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3360578"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3236024.3236026"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2002.1017616"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2019.00021"
+      },
+      {
+        "key": "ref52",
+        "article-title": "Cross-language learning for program classification using bilateral tree-based convolutional neural networks",
+        "author": "bui",
+        "year": "2018",
+        "journal-title": "NL4SE AAAI&#x2019;18"
+      },
+      {
+        "key": "ref10",
+        "first-page": "10197",
+        "article-title": "Devign: Effective vulnerability identification by learning comprehensive program semantics via graph neural networks",
+        "author": "zhou",
+        "year": "2019",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref11",
+        "first-page": "2547",
+        "article-title": "Tree-to-tree neural networks for program translation",
+        "author": "chen",
+        "year": "2018",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref40",
+        "first-page": "41714186",
+        "article-title": "BERT: Pre-training of deep bidirectional transformers for language understanding",
+        "author": "devlin",
+        "year": "0",
+        "journal-title": "NAACL&#x2019;18"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/514"
+      },
+      {
+        "key": "ref13",
+        "article-title": "code2seq: Generating sequences from structured representations of code",
+        "author": "alon",
+        "year": "2019",
+        "journal-title": "ICLRE"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3395363.3397362"
+      },
+      {
+        "key": "ref15",
+        "first-page": "261",
+        "article-title": "Detecting code clones with graph neural network and flowaugmented abstract syntax tree",
+        "author": "wang",
+        "year": "2020",
+        "journal-title": "27th SANER"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2019.00011"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.2006.18.7.1527"
+      },
+      {
+        "key": "ref18",
+        "first-page": "1597",
+        "article-title": "A simple framework for contrastive learning of visual representations",
+        "author": "chen",
+        "year": "0",
+        "journal-title": "ICML&#x2019;20"
+      },
+      {
+        "key": "ref19",
+        "first-page": "10799",
+        "article-title": "Graph-based, self-supervised program repair from diagnostic feedback",
+        "author": "yasunaga",
+        "year": "0",
+        "journal-title": "ICML&#x2019;20"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3180187"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3180167"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3196321.3196334"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3211346.3211353"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3290353"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3238206"
+      },
+      {
+        "key": "ref49",
+        "article-title": "Learning to represent programs with graphs",
+        "author": "allamanis",
+        "year": "2018",
+        "journal-title": "ICLRE"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/QRS.2017.42"
+      },
+      {
+        "key": "ref46",
+        "first-page": "11861",
+        "article-title": "Neural attribution for semantic bug-localization in student programs",
+        "author": "gupta",
+        "year": "2019",
+        "journal-title": "NeurIPS"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3276517"
+      },
+      {
+        "key": "ref48",
+        "article-title": "Generative code modeling with graphs",
+        "author": "brockschmidt",
+        "year": "2019",
+        "journal-title": "7th ICLR"
+      },
+      {
+        "key": "ref47",
+        "article-title": "Structured neural summarization",
+        "author": "fernandes",
+        "year": "2019",
+        "journal-title": "7th ICLR"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1089"
+      },
+      {
+        "key": "ref41",
+        "first-page": "1",
+        "article-title": "An efficient framework for learning sentence representations",
+        "author": "logeswaran",
+        "year": "0",
+        "journal-title": "ICLR&#x2019;18"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00086"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1609/aaai.v30i1.10139",
+        "article-title": "Convolutional neural networks over tree structures for programming language processing",
+        "author": "mou",
+        "year": "2016",
+        "journal-title": "AAAI"
+      }
+    ],
+    "event": {
+      "name": "2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)",
+      "location": "Madrid, ES",
+      "start": {
+        "date-parts": [
+          [
+            2021,
+            5,
+            22
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2021,
+            5,
+            30
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/9401807/9401950/09402028.pdf?arnumber=9402028",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          26
+        ]
+      ],
+      "date-time": "2022-12-26T18:25:50Z",
+      "timestamp": 1672079150000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9402028/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          5
+        ]
+      ]
+    },
+    "references-count": 71,
+    "URL": "http://dx.doi.org/10.1109/icse43902.2021.00109",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          5
+        ]
+      ]
+    }
+  }
+}

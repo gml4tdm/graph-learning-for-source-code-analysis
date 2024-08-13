@@ -1,0 +1,422 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          22
+        ]
+      ],
+      "date-time": "2024-06-22T06:06:14Z",
+      "timestamp": 1719036374982
+    },
+    "reference-count": 42,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2019-01-01T00:00:00Z",
+          "timestamp": 1546300800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "U1713212"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Access"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "DOI": "10.1109/access.2019.2936948",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          8,
+          22
+        ]
+      ],
+      "date-time": "2019-08-22T20:18:45Z",
+      "timestamp": 1566505125000
+    },
+    "page": "116309-116320",
+    "source": "Crossref",
+    "is-referenced-by-count": 38,
+    "title": [
+      "Deep Learning With Customized Abstract Syntax Tree for Bug Localization"
+    ],
+    "prefix": "10.1109",
+    "volume": "7",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0001-6877-780X",
+        "authenticated-orcid": false,
+        "given": "Hongliang",
+        "family": "Liang",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Lu",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Meilin",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Yuxing",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "author": "bird",
+        "year": "2009",
+        "journal-title": "Natural Language Processing With Python"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1108/00330330610681286"
+      },
+      {
+        "key": "ref33",
+        "first-page": "1",
+        "article-title": "Learning to represent programs with graphs",
+        "author": "allamanis",
+        "year": "2018",
+        "journal-title": "Proc Int Conf Learn Represent (ICLR)ICLR"
+      },
+      {
+        "key": "ref32",
+        "article-title": "A deep tree-based model for software defect prediction",
+        "author": "dam",
+        "year": "2018",
+        "journal-title": "arXiv 1802 00921"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/CBO9780511809071"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "crossref",
+        "first-page": "547",
+        "DOI": "10.1007/978-3-319-25159-2_49",
+        "article-title": "Building program vector representations for deep learning",
+        "author": "peng",
+        "year": "2015",
+        "journal-title": "Proc Int Conf Knowl Sci Eng Manage"
+      },
+      {
+        "key": "ref37",
+        "first-page": "1",
+        "article-title": "Adam: A method for stochastic optimization",
+        "author": "kingma",
+        "year": "2015",
+        "journal-title": "Proc Int Conf Learn Represent (ICLR)ICLR"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2009.5090039"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/APSEC.2017.40"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-93411-2_14"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "crossref",
+        "first-page": "436",
+        "DOI": "10.1038/nature14539",
+        "article-title": "Deep learning",
+        "volume": "521",
+        "author": "lecun",
+        "year": "2015",
+        "journal-title": "Nature"
+      },
+      {
+        "key": "ref40",
+        "first-page": "1",
+        "article-title": "TF-IDuF: A novel term-weighting scheme for user modeling based on users&#x2019; personal document collections",
+        "author": "beel",
+        "year": "2017",
+        "journal-title": "Proc 12th Conf"
+      },
+      {
+        "key": "ref11",
+        "first-page": "1188",
+        "article-title": "Distributed representations of sentences and documents",
+        "volume": "32",
+        "author": "le",
+        "year": "2014",
+        "journal-title": "Proc 31st Int Conf Mach Learn"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/N15-1011"
+      },
+      {
+        "key": "ref13",
+        "first-page": "1",
+        "article-title": "Efficient estimation of word representations in vector space",
+        "author": "mikolov",
+        "year": "2013",
+        "journal-title": "Proc Int Conf Learn Represent (ICLR)ICLR"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/265"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.1016"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2420950.2421003"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2017.29"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2013.6693093"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10515-016-0194-x"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227210"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2010.04.002"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TKDE.2006.17"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3213846.3213856"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970341"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2017.24"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3210459.3210469"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/D14-1181"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2015.73"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884804"
+      },
+      {
+        "key": "ref9",
+        "first-page": "1287",
+        "article-title": "Convolutional neural networks over tree structures for programming language processing",
+        "author": "mou",
+        "year": "2016",
+        "journal-title": "Proc AAAI Conf Artif Intell"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/P14-1062"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE-C.2017.68"
+      },
+      {
+        "key": "ref22",
+        "first-page": "1606",
+        "article-title": "Learning unified features from natural and programming languages for locating buggy source code",
+        "author": "huo",
+        "year": "2016",
+        "journal-title": "Proc 25th Int Conf Artif Intell"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635874"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1037/0033-2909.114.3.494"
+      },
+      {
+        "key": "ref24",
+        "first-page": "3642",
+        "article-title": "Multi-column deep neural networks for image classification",
+        "author": "ciresan",
+        "year": "2012",
+        "journal-title": "Proc IEEE Conf Comput Vis Pattern Recognit"
+      },
+      {
+        "key": "ref41",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2018.08.002"
+      },
+      {
+        "key": "ref23",
+        "author": "murphy",
+        "year": "2012",
+        "journal-title": "Machine Learning A Probabilistic Perspective"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2013.50"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2009.5306315"
+      }
+    ],
+    "container-title": [
+      "IEEE Access"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/6287639/8600701/08809752.pdf?arnumber=8809752",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2022-01-12T16:31:30Z",
+      "timestamp": 1642005090000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8809752/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "references-count": 42,
+    "URL": "http://dx.doi.org/10.1109/access.2019.2936948",
+    "relation": {},
+    "ISSN": [
+      "2169-3536"
+    ],
+    "issn-type": [
+      {
+        "value": "2169-3536",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    }
+  }
+}

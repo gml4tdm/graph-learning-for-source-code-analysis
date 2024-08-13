@@ -1,0 +1,663 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          31
+        ]
+      ],
+      "date-time": "2024-05-31T15:16:55Z",
+      "timestamp": 1717168615874
+    },
+    "publisher-location": "Cham",
+    "reference-count": 36,
+    "publisher": "Springer International Publishing",
+    "isbn-type": [
+      {
+        "value": "9783030868895",
+        "type": "print"
+      },
+      {
+        "value": "9783030868901",
+        "type": "electronic"
+      }
+    ],
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2021-01-01T00:00:00Z",
+          "timestamp": 1609459200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springer.com/tdm"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2021-01-01T00:00:00Z",
+          "timestamp": 1609459200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "DOI": "10.1007/978-3-030-86890-1_14",
+    "type": "book-chapter",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          9,
+          17
+        ]
+      ],
+      "date-time": "2021-09-17T00:49:44Z",
+      "timestamp": 1631839784000
+    },
+    "page": "243-259",
+    "update-policy": "http://dx.doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 6,
+    "title": [
+      "ACGVD: Vulnerability Detection Based on Comprehensive Graph via Graph Neural Network with Attention"
+    ],
+    "prefix": "10.1007",
+    "author": [
+      {
+        "given": "Min",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Chunfang",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Shuailou",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Yanna",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Boyang",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Yu",
+        "family": "Wen",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          9,
+          17
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "14_CR1",
+        "unstructured": "Flawfinder. http://www.dwheeler.com/flawfinder"
+      },
+      {
+        "key": "14_CR2",
+        "unstructured": "Infer static analyzer. https://fbinfer.com/"
+      },
+      {
+        "key": "14_CR3",
+        "unstructured": "National vulnerability database. https://nvd.nist.gov"
+      },
+      {
+        "key": "14_CR4",
+        "unstructured": "National vulnerability database (2019). https://nvd.nist.gov"
+      },
+      {
+        "key": "14_CR5",
+        "unstructured": "Record-breaking number of vulnerabilities disclosed in 2017: Report (2017). https://www.securityweek.com/record-breaking-number-vulnerabilities-disclosed-2017-report"
+      },
+      {
+        "key": "14_CR6",
+        "unstructured": "Rough audit tool for security. https://code.google.com/archive/p/rough-auditing-tool-for-security/"
+      },
+      {
+        "key": "14_CR7",
+        "unstructured": "Software assurance reference dataset. https://samate.nist.gov/SRD/index.php"
+      },
+      {
+        "issue": "19",
+        "key": "14_CR8",
+        "doi-asserted-by": "publisher",
+        "first-page": "e5103",
+        "DOI": "10.1002/cpe.5103",
+        "volume": "31",
+        "author": "X Ban",
+        "year": "2019",
+        "unstructured": "Ban, X., Liu, S., Chen, C., Chua, C.: A performance evaluation of deep-learnt features for software vulnerability detection. Concurrency Comput. Pract. Exp. 31(19), e5103 (2019)",
+        "journal-title": "Concurrency Comput. Pract. Exp."
+      },
+      {
+        "key": "14_CR9",
+        "unstructured": "Cao, K., Jing, H.E., Fan, W.Q., Huang, W.: PHP vulnerability detection based on stain analysis. J. Commun. Univ. China (Sci. Technol.) (2019)"
+      },
+      {
+        "key": "14_CR10",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chakraborty, S., Krishna, R., Ding, Y., Ray, B.: Deep learning based vulnerability detection: are we there yet? arXiv preprint arXiv:2009.07235 (2020)",
+        "DOI": "10.1109/TSE.2021.3087402"
+      },
+      {
+        "key": "14_CR11",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1080/23742917.2019.1629529",
+        "volume": "4",
+        "author": "Z Chen",
+        "year": "2020",
+        "unstructured": "Chen, Z., Zou, D., Li, Z., Jin, H.: Intelligent vulnerability detection system based on abstract syntax tree. J. Cyber Secur. 4, 1\u201313 (2020)",
+        "journal-title": "J. Cyber Secur."
+      },
+      {
+        "key": "14_CR12",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Choi, M.j., Jeong, S., Oh, H., Choo, J.: End-to-end prediction of buffer overruns from raw source code via neural memory networks. arXiv preprint arXiv:1703.02458 (2017)",
+        "DOI": "10.24963/ijcai.2017/214"
+      },
+      {
+        "key": "14_CR13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dai, H., Murphy, C., Kaiser, G.: Configuration fuzzing for software vulnerability detection. In: 2010 International Conference on Availability, Reliability and Security, pp. 525\u2013530. IEEE (2010)",
+        "DOI": "10.1109/ARES.2010.22"
+      },
+      {
+        "key": "14_CR14",
+        "unstructured": "Dam, H.K., Tran, T., Pham, T., Ng, S.W., Grundy, J., Ghose, A.: Automatic feature learning for vulnerability prediction. arXiv preprint arXiv:1708.02368 (2017)"
+      },
+      {
+        "issue": "4",
+        "key": "14_CR15",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1145/3092566",
+        "volume": "50",
+        "author": "SM Ghaffarian",
+        "year": "2017",
+        "unstructured": "Ghaffarian, S.M., Shahriari, H.R.: Software vulnerability analysis and discovery using machine-learning and data-mining techniques: a survey. ACM Comput. Surv. (CSUR) 50(4), 1\u201336 (2017)",
+        "journal-title": "ACM Comput. Surv. (CSUR)"
+      },
+      {
+        "key": "14_CR16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Guo, J., Wang, Z., Li, H., Xue, Y.: Detecting vulnerability in source code using CNN and LSTM network (2021)",
+        "DOI": "10.1007/s00500-021-05994-w"
+      },
+      {
+        "key": "14_CR17",
+        "unstructured": "Harer, J.A., et al.: Automated software vulnerability detection with machine learning. arXiv preprint arXiv:1803.04497 (2018)"
+      },
+      {
+        "key": "14_CR18",
+        "unstructured": "Lee, M., Cho, S., Jang, C., Park, H., Choi, E.: A rule-based security auditing tool for software vulnerability detection. In: 2006 International Conference on Hybrid Information Technology, vol. 2, pp. 505\u2013512. IEEE (2006)"
+      },
+      {
+        "issue": "6",
+        "key": "14_CR19",
+        "first-page": "255",
+        "volume": "6",
+        "author": "H Li",
+        "year": "2013",
+        "unstructured": "Li, H., Kim, T., Baterdene, M., Lee, H.: Software vulnerability detection using backward trace analysis and symbolic execution. Int. J. Comput. Biol. Drug Des. 6(6), 255\u201362 (2013)",
+        "journal-title": "Int. J. Comput. Biol. Drug Des."
+      },
+      {
+        "key": "14_CR20",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, Z., Zou, D., Xu, S., Chen, Z., Zhu, Y., Jin, H.: Vuldeelocator: a deep learning-based fine-grained vulnerability detector. IEEE Trans. Dependable Secure Comput. (2021)",
+        "DOI": "10.1109/TDSC.2021.3076142"
+      },
+      {
+        "key": "14_CR21",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, Z., Zou, D., Xu, S., Jin, H., Zhu, Y., Chen, Z.: SySeVR: a framework for using deep learning to detect software vulnerabilities. IEEE Trans. Dependable Secure Comput. (2021)",
+        "DOI": "10.1109/TDSC.2021.3051525"
+      },
+      {
+        "key": "14_CR22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, Z., et al.: Vuldeepecker: a deep learning-based system for vulnerability detection. arXiv preprint arXiv:1801.01681 (2018)",
+        "DOI": "10.14722/ndss.2018.23158"
+      },
+      {
+        "issue": "10",
+        "key": "14_CR23",
+        "doi-asserted-by": "publisher",
+        "first-page": "1825",
+        "DOI": "10.1109/JPROC.2020.2993293",
+        "volume": "108",
+        "author": "G Lin",
+        "year": "2020",
+        "unstructured": "Lin, G., Wen, S., Han, Q.L., Zhang, J., Xiang, Y.: Software vulnerability detection using deep neural networks: a survey. Proc. IEEE 108(10), 1825\u20131848 (2020)",
+        "journal-title": "Proc. IEEE"
+      },
+      {
+        "key": "14_CR24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lin, G., Zhang, J., Luo, W., Pan, L., Xiang, Y.: Poster: vulnerability discovery with function representation learning from unlabeled projects. In: Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security, pp. 2539\u20132541 (2017)",
+        "DOI": "10.1145/3133956.3138840"
+      },
+      {
+        "issue": "7",
+        "key": "14_CR25",
+        "doi-asserted-by": "publisher",
+        "first-page": "3289",
+        "DOI": "10.1109/TII.2018.2821768",
+        "volume": "14",
+        "author": "G Lin",
+        "year": "2018",
+        "unstructured": "Lin, G., et al.: Cross-project transfer representation learning for vulnerable function discovery. IEEE Trans. Industr. Inf. 14(7), 3289\u20133297 (2018)",
+        "journal-title": "IEEE Trans. Industr. Inf."
+      },
+      {
+        "key": "14_CR26",
+        "doi-asserted-by": "publisher",
+        "first-page": "105721",
+        "DOI": "10.1016/j.asoc.2019.105721",
+        "volume": "84",
+        "author": "S Ndichu",
+        "year": "2019",
+        "unstructured": "Ndichu, S., Kim, S., Ozawa, S., Misu, T., Makishima, K.: A machine learning approach to detection of Javascript-based attacks using AST features and paragraph vectors. Appl. Soft Comput. 84, 105721 (2019)",
+        "journal-title": "Appl. Soft Comput."
+      },
+      {
+        "issue": "5",
+        "key": "14_CR27",
+        "first-page": "720",
+        "volume": "29",
+        "author": "J Newsome",
+        "year": "2005",
+        "unstructured": "Newsome, J.: Dynamic taint analysis for automatic detection, analysis, and signature generation of exploits on commodity software. Chin. J. Eng. Math. 29(5), 720\u2013724 (2005)",
+        "journal-title": "Chin. J. Eng. Math."
+      },
+      {
+        "key": "14_CR28",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pewny, J., Schuster, F., Bernhard, L., Holz, T., Rossow, C.: Leveraging semantic signatures for bug search in binary programs. In: Proceedings of the 30th Annual Computer Security Applications Conference, pp. 406\u2013415 (2014)",
+        "DOI": "10.1145/2664243.2664269"
+      },
+      {
+        "key": "14_CR29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Russell, R., et al.: Automated vulnerability detection in source code using deep representation learning. In: 2018 17th IEEE International Conference on Machine Learning and Applications (ICMLA), pp. 757\u2013762. IEEE (2018)",
+        "DOI": "10.1109/ICMLA.2018.00120"
+      },
+      {
+        "issue": "10",
+        "key": "14_CR30",
+        "doi-asserted-by": "publisher",
+        "first-page": "993",
+        "DOI": "10.1109/TSE.2014.2340398",
+        "volume": "40",
+        "author": "R Scandariato",
+        "year": "2014",
+        "unstructured": "Scandariato, R., Walden, J., Hovsepyan, A., Joosen, W.: Predicting vulnerable software components via text mining. IEEE Trans. Softw. Eng. 40(10), 993\u20131006 (2014)",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "14_CR31",
+        "doi-asserted-by": "publisher",
+        "first-page": "654",
+        "DOI": "10.1049/iet-sen.2020.0084",
+        "volume": "14",
+        "author": "AOA Semasaba",
+        "year": "2020",
+        "unstructured": "Semasaba, A.O.A., Zheng, W., Wu, X., Agyemang, S.A.: Literature survey of deep learning-based vulnerability analysis on source code. IET Softw. 14, 654\u2013664 (2020)",
+        "journal-title": "IET Softw."
+      },
+      {
+        "key": "14_CR32",
+        "unstructured": "Veli\u010dkovi\u0107, P., Cucurull, G., Casanova, A., Romero, A., Lio, P., Bengio, Y.: Graph attention networks. arXiv preprint arXiv:1710.10903 (2017)"
+      },
+      {
+        "key": "14_CR33",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Votipka, D., Stevens, R., Redmiles, E., Hu, J., Mazurek, M.L.: Hackers vs. testers: a comparison of software vulnerability discovery processes. In: IEEE Symposium on Security and Privacy (2018)",
+        "DOI": "10.1109/SP.2018.00003"
+      },
+      {
+        "key": "14_CR34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wang, T., Wei, T., Gu, G., Zou, W.: TaintScope: a checksum-aware directed fuzzing tool for automatic software vulnerability detection. In: 2010 IEEE Symposium on Security and Privacy, pp. 497\u2013512. IEEE (2010)",
+        "DOI": "10.1109/SP.2010.37"
+      },
+      {
+        "key": "14_CR35",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wang, X., et al.: Heterogeneous graph attention network. In: The World Wide Web Conference, pp. 2022\u20132032 (2019)",
+        "DOI": "10.1145/3308558.3313562"
+      },
+      {
+        "key": "14_CR36",
+        "unstructured": "Zhou, Y., Liu, S., Siow, J., Du, X., Liu, Y.: Devign: effective vulnerability identification by learning comprehensive program semantics via graph neural networks. arXiv preprint arXiv:1909.03496 (2019)"
+      }
+    ],
+    "container-title": [
+      "Information and Communications Security",
+      "Lecture Notes in Computer Science"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/978-3-030-86890-1_14",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          9,
+          17
+        ]
+      ],
+      "date-time": "2021-09-17T01:01:30Z",
+      "timestamp": 1631840490000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/978-3-030-86890-1_14"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "ISBN": [
+      "9783030868895",
+      "9783030868901"
+    ],
+    "references-count": 36,
+    "URL": "http://dx.doi.org/10.1007/978-3-030-86890-1_14",
+    "relation": {},
+    "ISSN": [
+      "0302-9743",
+      "1611-3349"
+    ],
+    "issn-type": [
+      {
+        "value": "0302-9743",
+        "type": "print"
+      },
+      {
+        "value": "1611-3349",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "17 September 2021",
+        "order": 1,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ChapterHistory",
+          "label": "Chapter History"
+        }
+      },
+      {
+        "value": "ICICS",
+        "order": 1,
+        "name": "conference_acronym",
+        "label": "Conference Acronym",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "International Conference on Information and Communications Security",
+        "order": 2,
+        "name": "conference_name",
+        "label": "Conference Name",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Chongqing",
+        "order": 3,
+        "name": "conference_city",
+        "label": "Conference City",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "China",
+        "order": 4,
+        "name": "conference_country",
+        "label": "Conference Country",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "2021",
+        "order": 5,
+        "name": "conference_year",
+        "label": "Conference Year",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "17 September 2021",
+        "order": 7,
+        "name": "conference_start_date",
+        "label": "Conference Start Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "19 September 2021",
+        "order": 8,
+        "name": "conference_end_date",
+        "label": "Conference End Date",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "23",
+        "order": 9,
+        "name": "conference_number",
+        "label": "Conference Number",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "icics2021",
+        "order": 10,
+        "name": "conference_id",
+        "label": "Conference ID",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "https://www.icics.cn/",
+        "order": 11,
+        "name": "conference_url",
+        "label": "Conference URL",
+        "group": {
+          "name": "ConferenceInfo",
+          "label": "Conference Information"
+        }
+      },
+      {
+        "value": "Double-blind",
+        "order": 1,
+        "name": "type",
+        "label": "Type",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "EasyChair",
+        "order": 2,
+        "name": "conference_management_system",
+        "label": "Conference Management System",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "182",
+        "order": 3,
+        "name": "number_of_submissions_sent_for_review",
+        "label": "Number of Submissions Sent for Review",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "49",
+        "order": 4,
+        "name": "number_of_full_papers_accepted",
+        "label": "Number of Full Papers Accepted",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "0",
+        "order": 5,
+        "name": "number_of_short_papers_accepted",
+        "label": "Number of Short Papers Accepted",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "27% - The value is computed by the equation \"Number of Full Papers Accepted / Number of Submissions Sent for Review * 100\" and then rounded to a whole number.",
+        "order": 6,
+        "name": "acceptance_rate_of_full_papers",
+        "label": "Acceptance Rate of Full Papers",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "4",
+        "order": 7,
+        "name": "average_number_of_reviews_per_paper",
+        "label": "Average Number of Reviews per Paper",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "5",
+        "order": 8,
+        "name": "average_number_of_papers_per_reviewer",
+        "label": "Average Number of Papers per Reviewer",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      },
+      {
+        "value": "Yes",
+        "order": 9,
+        "name": "external_reviewers_involved",
+        "label": "External Reviewers Involved",
+        "group": {
+          "name": "ConfEventPeerReviewInformation",
+          "label": "Peer Review Information (provided by the conference organizers)"
+        }
+      }
+    ]
+  }
+}

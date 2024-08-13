@@ -1,0 +1,406 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          16
+        ]
+      ],
+      "date-time": "2024-07-16T02:16:42Z",
+      "timestamp": 1721096202048
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 41,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              16
+            ]
+          ],
+          "date-time": "2018-09-16T00:00:00Z",
+          "timestamp": 1537056000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          16
+        ]
+      ]
+    },
+    "DOI": "10.1145/3275219.3275226",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          10,
+          9
+        ]
+      ],
+      "date-time": "2018-10-09T12:14:26Z",
+      "timestamp": 1539087266000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 13,
+    "title": [
+      "Profiling Developer Expertise across Software Communities with Heterogeneous Information Network Analysis"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Jiafei",
+        "family": "Yan",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "SKLSDE Lab, School of Computer Science and Engineering, Beihang University, Beijing Advanced Innovation Center for Big Data and Brain Computing, Beihang University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Hailong",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "SKLSDE Lab, School of Computer Science and Engineering, Beihang University, Beijing Advanced Innovation Center for Big Data and Brain Computing, Beihang University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Xu",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "SKLSDE Lab, School of Computer Science and Engineering, Beihang University, Beijing Advanced Innovation Center for Big Data and Brain Computing, Beihang University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Xudong",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "SKLSDE Lab, School of Computer Science and Engineering, Beihang University, Beijing Advanced Innovation Center for Big Data and Brain Computing, Beihang University, Beijing, China"
+          }
+        ]
+      },
+      {
+        "given": "Xiaotao",
+        "family": "Song",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Software, Taiyuan University of Technology, Taiyuan, China"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          16
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "unstructured": "Ricardo Baeza-Yates Berthier Ribeiro-Neto etal 1999. Modern information retrieval. Vol. 463. ACM press New York.   Ricardo Baeza-Yates Berthier Ribeiro-Neto et al. 1999. Modern information retrieval. Vol. 463. ACM press New York."
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Christian Bizer Tom Heath and Tim Berners-Lee. 2011. Linked data: The story so far. In Semantic services interoperability and web applications: emerging concepts. IGI Global 205--227.  Christian Bizer Tom Heath and Tim Berners-Lee. 2011. Linked data: The story so far. In Semantic services interoperability and web applications: emerging concepts. IGI Global 205--227.",
+        "DOI": "10.4018/978-1-60960-593-3.ch008"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1401890.1401994"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "unstructured": "Thomas Cover and Peter Hart. 1967. Nearest neighbor pattern classification. IEEE transactions on information theory 13 1 (1967) 21--27. 10.1109/TIT.1967.1053964   Thomas Cover and Peter Hart. 1967. Nearest neighbor pattern classification. IEEE transactions on information theory 13 1 (1967) 21--27. 10.1109/TIT.1967.1053964"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SOFTWAREMINING.2017.8100851"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1458082.1458204"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2820518.2820563"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Weizhi Huang Wenkai Mo Beijun Shen Yu Yang and Ning Li. 2016. CPDScorer: Modeling and Evaluating Developer Programming Ability across Software Communities.. In SEKE. 87--92.  Weizhi Huang Wenkai Mo Beijun Shen Yu Yang and Ning Li. 2016. CPDScorer: Modeling and Evaluating Developer Programming Ability across Software Communities.. In SEKE. 87--92.",
+        "DOI": "10.18293/SEKE2016-012"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2396761.2398474"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2012.6405329"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2009916.2009975"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2588555.2588559"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1099554.1099644"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "unstructured": "L\u00e1szl\u00f3 Lov\u00e1sz. 1993. Random walks on graphs. Combinatorics Paul erdos is eighty 2 1--46 (1993) 4.  L\u00e1szl\u00f3 Lov\u00e1sz. 1993. Random walks on graphs. Combinatorics Paul erdos is eighty 2 1--46 (1993) 4."
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/876875.879024"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/APSEC.2015.48"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3022198.3026354"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2247596.2247618"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TKDE.2016.2598561"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "volume-title": "BMC bioinformatics",
+        "author": "Shih Yu-Keng"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.14778/3402707.3402736"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1516360.1516426"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2500492"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.4018/jdwm.2007070101"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SocialCom.2013.35"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2487788.2487832"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3155562.3155651"
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SOFTWAREMINING.2017.8100850"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yunxiang Xiong Zhangyuan Meng Beijun Shen and Wei Yin. 2017. Mining Developer Behavior Across GitHub and StackOverflow.. In SEKE. 578--583.  Yunxiang Xiong Zhangyuan Meng Beijun Shen and Wei Yin. 2017. Mining Developer Behavior Across GitHub and StackOverflow.. In SEKE. 578--583.",
+        "DOI": "10.18293/SEKE2017-062"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2505515.2505720"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2897659.2897660"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1242572.1242603"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "unstructured": "Jiawei Zhang and S Yu Philip. 2015. Integrated Anchor and Social Link Predictions across Social Networks.. In IJCAI. 2125--2132.   Jiawei Zhang and S Yu Philip. 2015. Integrated Anchor and Social Link Predictions across Social Networks.. In IJCAI. 2125--2132."
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2623330.2623645"
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1360/N112017-00117"
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "volume-title": "DevRec: A Developer Recommendation System for Open Source Repositories. In International Conference on Software Reuse. Springer, 3--11",
+        "author": "Zhang Xunhui",
+        "year": "2017"
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "unstructured": "Zhou Zhao Qifan Yang Deng Cai Xiaofei He and Yueting Zhuang. 2016. Expert Finding for Community-Based Question Answering via Ranking Metric Network Learning.. In IJCAI. 3000--3006.   Zhou Zhao Qifan Yang Deng Cai Xiaofei He and Yueting Zhuang. 2016. Expert Finding for Community-Based Question Answering via Ranking Metric Network Learning.. In IJCAI. 3000--3006."
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TKDE.2014.2356461"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2396761.2398493"
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1882291.1882313"
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11280-013-0217-5"
+      }
+    ],
+    "event": {
+      "name": "Internetware '18: The Tenth Asia-Pacific Symposium on Internetware",
+      "location": "Beijing China",
+      "acronym": "Internetware '18",
+      "sponsor": [
+        "Institute of Software, Chinese Academy of Sciences",
+        "CCF China Computer Federation"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the Tenth Asia-Pacific Symposium on Internetware"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3275219.3275226",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2020,
+          12,
+          13
+        ]
+      ],
+      "date-time": "2020-12-13T12:22:58Z",
+      "timestamp": 1607862178000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3275219.3275226"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          16
+        ]
+      ]
+    },
+    "references-count": 41,
+    "alternative-id": [
+      "10.1145/3275219.3275226",
+      "10.1145/3275219"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3275219.3275226",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          16
+        ]
+      ]
+    }
+  }
+}

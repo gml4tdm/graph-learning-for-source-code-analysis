@@ -1,0 +1,640 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          19
+        ]
+      ],
+      "date-time": "2024-07-19T05:53:15Z",
+      "timestamp": 1721368395115
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 77,
+    "publisher": "ACM",
+    "funder": [
+      {
+        "name": "the National Key Research and Development Program of China",
+        "award": [
+          "2017YFB1001803"
+        ]
+      },
+      {
+        "name": "National Natural Science Foundation of China under Grant",
+        "award": [
+          "61922003"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          20
+        ]
+      ]
+    },
+    "DOI": "10.1145/3468264.3468544",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          19
+        ]
+      ],
+      "date-time": "2021-08-19T01:44:18Z",
+      "timestamp": 1629337458000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 81,
+    "title": [
+      "A syntax-guided edit decoder for neural program repair"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Qihao",
+        "family": "Zhu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Peking University, China"
+          }
+        ]
+      },
+      {
+        "given": "Zeyu",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Peking University, China"
+          }
+        ]
+      },
+      {
+        "given": "Yuan-an",
+        "family": "Xiao",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Peking University, China"
+          }
+        ]
+      },
+      {
+        "given": "Wenjie",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Peking University, China"
+          }
+        ]
+      },
+      {
+        "given": "Kang",
+        "family": "Yuan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Stony Brook University, USA"
+          }
+        ]
+      },
+      {
+        "given": "Yingfei",
+        "family": "Xiong",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Peking University, China"
+          }
+        ]
+      },
+      {
+        "given": "Lu",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Peking University, China"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          18
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "volume-title": "On the Accuracy of Spectrum-based Fault Localization. In Testing: Academic & Industrial Conference Practice & Research Techniques-mutation.",
+        "author": "Abreu Rui",
+        "unstructured": "Rui Abreu , Peter Zoeteweij , and Arjan J. C . Van Gemund. 2007 . On the Accuracy of Spectrum-based Fault Localization. In Testing: Academic & Industrial Conference Practice & Research Techniques-mutation. Rui Abreu, Peter Zoeteweij, and Arjan J. C. Van Gemund. 2007. On the Accuracy of Spectrum-based Fault Localization. In Testing: Academic & Industrial Conference Practice & Research Techniques-mutation."
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3360585"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "volume-title": "Neural Machine Translation by Jointly Learning to Align and Translate. CoRR, abs/1409.0473",
+        "author": "Bahdanau Dzmitry",
+        "year": "2015",
+        "unstructured": "Dzmitry Bahdanau , Kyunghyun Cho , and Yoshua Bengio . 2015. Neural Machine Translation by Jointly Learning to Align and Translate. CoRR, abs/1409.0473 ( 2015 ). Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2015. Neural Machine Translation by Jointly Learning to Align and Translate. CoRR, abs/1409.0473 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3428283"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.13328/j.cnki.jos.006227"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "volume-title": "CODIT: Code Editing with Tree-Based Neural Machine Translation. arXiv preprint arXiv:1810.00314.",
+        "author": "Chakraborty Saikat",
+        "year": "2018",
+        "unstructured": "Saikat Chakraborty , Miltiadis Allamanis , and Baishakhi Ray . 2018 . CODIT: Code Editing with Tree-Based Neural Machine Translation. arXiv preprint arXiv:1810.00314. Saikat Chakraborty, Miltiadis Allamanis, and Baishakhi Ray. 2018. CODIT: Code Editing with Tree-Based Neural Machine Translation. arXiv preprint arXiv:1810.00314."
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2017.8115674"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2019.2940179"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "volume-title": "International Conference on Learning Representations. https://openreview.net/forum?id=SJeqs6EFvB",
+        "author": "Dinella Elizabeth",
+        "year": "2020",
+        "unstructured": "Elizabeth Dinella , Hanjun Dai , Ziyang Li , Mayur Naik , Le Song , and Ke Wang . 2020 . Hoppity: Learning Graph Transformation to Detect and Fix Bugs in Programs . In International Conference on Learning Representations. https://openreview.net/forum?id=SJeqs6EFvB Elizabeth Dinella, Hanjun Dai, Ziyang Li, Mayur Naik, Le Song, and Ke Wang. 2020. Hoppity: Learning Graph Transformation to Detect and Fix Bugs in Programs. In International Conference on Learning Representations. https://openreview.net/forum?id=SJeqs6EFvB"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3338906.3338911"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "unstructured": "Thomas Durieux and Martin Monperrus. 2016. IntroClassJava: A Benchmark of 297 Small and Buggy Java Programs. Universite Lille 1. https://hal.archives-ouvertes.fr/hal-01272126/document  Thomas Durieux and Martin Monperrus. 2016. IntroClassJava: A Benchmark of 297 Small and Buggy Java Programs. Universite Lille 1. https://hal.archives-ouvertes.fr/hal-01272126/document"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "first-page": "1",
+        "article-title": "Beyond Tests: Program Vulnerability Repair via Crash Constraint Extraction",
+        "volume": "30",
+        "author": "Gao Xiang",
+        "year": "2021",
+        "unstructured": "Xiang Gao , Bo Wang , Gregory J Duck , Ruyi Ji , Yingfei Xiong , and Abhik Roychoudhury . 2021 . Beyond Tests: Program Vulnerability Repair via Crash Constraint Extraction . ACM Transactions on Software Engineering and Methodology (TOSEM) , 30 , 2 (2021), 1 \u2013 27 . Xiang Gao, Bo Wang, Gregory J Duck, Ruyi Ji, Yingfei Xiong, and Abhik Roychoudhury. 2021. Beyond Tests: Program Vulnerability Repair via Crash Constraint Extraction. ACM Transactions on Software Engineering and Methodology (TOSEM), 30, 2 (2021), 1\u201327.",
+        "journal-title": "ACM Transactions on Software Engineering and Methodology (TOSEM)"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2017.2755013"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3293882.3330559"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2019.00116"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "unstructured": "GitHub. 2020. https://github.com/.  GitHub. 2020. https://github.com/."
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3318162"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v31i1.10742"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "volume-title": "Learning to Generate Corrective Patches using Neural Machine Translation. CoRR, abs/1812.07170",
+        "author": "Hata Hideaki",
+        "year": "2018",
+        "unstructured": "Hideaki Hata , Emad Shihab , and Graham Neubig . 2018. Learning to Generate Corrective Patches using Neural Machine Translation. CoRR, abs/1812.07170 ( 2018 ), arxiv:1812.07170. arxiv:1812.07170 Hideaki Hata, Emad Shihab, and Graham Neubig. 2018. Learning to Generate Corrective Patches using Neural Machine Translation. CoRR, abs/1812.07170 (2018), arxiv:1812.07170. arxiv:1812.07170"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "unstructured": "D. Hendrycks and K. Gimpel. 2016. Bridging Nonlinearities and Stochastic Regularizers with Gaussian Error Linear Units.  D. Hendrycks and K. Gimpel. 2016. Bridging Nonlinearities and Stochastic Regularizers with Gaussian Error Linear Units."
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "volume-title": "Improving neural networks by preventing co-adaptation of feature detectors. CoRR, abs/1207.0580",
+        "author": "Hinton Geoffrey E.",
+        "year": "2012",
+        "unstructured": "Geoffrey E. Hinton , Nitish Srivastava , Alex Krizhevsky , Ilya Sutskever , and Ruslan Salakhutdinov . 2012. Improving neural networks by preventing co-adaptation of feature detectors. CoRR, abs/1207.0580 ( 2012 ), arxiv:1207.0580. arxiv:1207.0580 Geoffrey E. Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, and Ruslan Salakhutdinov. 2012. Improving neural networks by preventing co-adaptation of feature detectors. CoRR, abs/1207.0580 (2012), arxiv:1207.0580. arxiv:1207.0580"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3236024.3264600"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2019.00033"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "volume-title": "Shaping Program Repair Space with Existing Patches and Similar Code. In International Symposium on Software Testing & Analysis. 298\u2013309",
+        "author": "Jiang Jiajun",
+        "year": "2018",
+        "unstructured": "Jiajun Jiang , Yingfei Xiong , Hongyu Zhang , Qing Gao , and Xiangqun Chen . 2018 . Shaping Program Repair Space with Existing Patches and Similar Code. In International Symposium on Software Testing & Analysis. 298\u2013309 . Jiajun Jiang, Yingfei Xiong, Hongyu Zhang, Qing Gao, and Xiangqun Chen. 2018. Shaping Program Repair Space with Existing Patches and Similar Code. In International Symposium on Software Testing & Analysis. 298\u2013309."
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE43902.2021.00069"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "volume-title": "Proceedings of the International Symposium on Software Testing and Analysis (ISSTA)",
+        "author": "Just Ren\u00e9",
+        "unstructured": "Ren\u00e9 Just , Darioush Jalali , and Michael D. Ernst . 2014. Defects4J: A database of existing faults to enable controlled testing studies for Java programs . In Proceedings of the International Symposium on Software Testing and Analysis (ISSTA) . San Jose, CA, USA. 437\u2013440. Ren\u00e9 Just, Darioush Jalali, and Michael D. Ernst. 2014. Defects4J: A database of existing faults to enable controlled testing studies for Java programs. In Proceedings of the International Symposium on Software Testing and Analysis (ISSTA). San Jose, CA, USA. 437\u2013440."
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568258"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606626"
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "volume-title": "Kingma and Jimmy Ba",
+        "author": "Diederik",
+        "year": "2015",
+        "unstructured": "Diederik P. Kingma and Jimmy Ba . 2015 . Adam : A Method for Stochastic Optimization. CoRR , abs/1412.6980 (2015). Diederik P. Kingma and Jimmy Ba. 2015. Adam: A Method for Stochastic Optimization. CoRR, abs/1412.6980 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "unstructured": "Thomas N Kipf and Max Welling. 2016. Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907.  Thomas N Kipf and Max Welling. 2016. Semi-supervised classification with graph convolutional networks. arXiv preprint arXiv:1609.02907."
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "volume-title": "Fixminer: Mining relevant fix patterns for automated program repair. Empirical Software Engineering, 1\u201345.",
+        "author": "Koyuncu Anil",
+        "year": "2020",
+        "unstructured": "Anil Koyuncu , Kui Liu , Tegawend\u00e9 F Bissyand\u00e9 , Dongsun Kim , Jacques Klein , Martin Monperrus , and Yves Le Traon . 2020 . Fixminer: Mining relevant fix patterns for automated program repair. Empirical Software Engineering, 1\u201345. Anil Koyuncu, Kui Liu, Tegawend\u00e9 F Bissyand\u00e9, Dongsun Kim, Jacques Klein, Martin Monperrus, and Yves Le Traon. 2020. Fixminer: Mining relevant fix patterns for automated program repair. Empirical Software Engineering, 1\u201345."
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2016.76"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227211"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2015.2454513"
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2011.104"
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3377811.3380345"
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3135932.3135941"
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "volume-title": "Tom\u00e1\u0161 Ko\u010disk\u1ef3, Fumin Wang, and Andrew Senior.",
+        "author": "Ling Wang",
+        "year": "2016",
+        "unstructured": "Wang Ling , Phil Blunsom , Edward Grefenstette , Karl Moritz Hermann , Tom\u00e1\u0161 Ko\u010disk\u1ef3, Fumin Wang, and Andrew Senior. 2016 . Latent Predictor Networks for Code Generation. In ACL. 599\u2013609. Wang Ling, Phil Blunsom, Edward Grefenstette, Karl Moritz Hermann, Tom\u00e1\u0161 Ko\u010disk\u1ef3, Fumin Wang, and Andrew Senior. 2016. Latent Predictor Networks for Code Generation. In ACL. 599\u2013609."
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2019.8667970"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3293882.3330577"
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3377811.3380338"
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3106237.3106253"
+      },
+      {
+        "key": "e_1_3_2_1_43_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2837614.2837617"
+      },
+      {
+        "key": "e_1_3_2_1_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3395363.3397369"
+      },
+      {
+        "key": "e_1_3_2_1_45_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2931037.2948705"
+      },
+      {
+        "key": "e_1_3_2_1_46_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3236024.3236049"
+      },
+      {
+        "key": "e_1_3_2_1_47_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2015.63"
+      },
+      {
+        "key": "e_1_3_2_1_48_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884807"
+      },
+      {
+        "key": "e_1_3_2_1_49_1",
+        "unstructured": "Tomas Mikolov Kai Chen G. S. Corrado and J. Dean. 2013. Efficient Estimation of Word Representations in Vector Space. In ICLR.  Tomas Mikolov Kai Chen G. S. Corrado and J. Dean. 2013. Efficient Estimation of Word Representations in Vector Space. In ICLR."
+      },
+      {
+        "key": "e_1_3_2_1_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3105906"
+      },
+      {
+        "key": "e_1_3_2_1_51_1",
+        "unstructured": "Martin Monperrus. 2020. The Living Review on Automated Program Repair. HAL. https://www.monperrus.net/martin/repair-living-review.pdf  Martin Monperrus. 2020. The Living Review on Automated Program Repair. HAL. https://www.monperrus.net/martin/repair-living-review.pdf"
+      },
+      {
+        "key": "e_1_3_2_1_52_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2013.6606623"
+      },
+      {
+        "key": "e_1_3_2_1_53_1",
+        "unstructured": "pytorch. 2020. https://pytorch.org/.  pytorch. 2020. https://pytorch.org/."
+      },
+      {
+        "key": "e_1_3_2_1_54_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568254"
+      },
+      {
+        "key": "e_1_3_2_1_55_1",
+        "unstructured": "Zichao Qi Fan Long Sara Achour and Martin Rinard. 2015. An Analysis of Patch Plausibility and Correctness for Generate-and-validate Patch Generation Systems. ISSTA. 24\u201336.  Zichao Qi Fan Long Sara Achour and Martin Rinard. 2015. An Analysis of Patch Plausibility and Correctness for Generate-and-validate Patch Generation Systems. ISSTA. 24\u201336."
+      },
+      {
+        "key": "e_1_3_2_1_56_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P17-1105"
+      },
+      {
+        "key": "e_1_3_2_1_57_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-15585-7_25"
+      },
+      {
+        "key": "e_1_3_2_1_58_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2017.44"
+      },
+      {
+        "key": "e_1_3_2_1_59_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2017.44"
+      },
+      {
+        "key": "e_1_3_2_1_60_1",
+        "volume-title": "Prasad",
+        "author": "Saha Ripon K.",
+        "year": "2017",
+        "unstructured": "Ripon K. Saha , Yingjun Lyu , Hiroaki Yoshida , and Mukul R . Prasad . 2017 . ELIXIR : Effective Object Oriented Program Repair. In ASE. IEEE Press . http://dl.acm.org/citation.cfm?id=3155562.3155643 Ripon K. Saha, Yingjun Lyu, Hiroaki Yoshida, and Mukul R. Prasad. 2017. ELIXIR: Effective Object Oriented Program Repair. In ASE. IEEE Press. http://dl.acm.org/citation.cfm?id=3155562.3155643"
+      },
+      {
+        "key": "e_1_3_2_1_61_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2019.00020"
+      },
+      {
+        "key": "e_1_3_2_1_62_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNN.2008.2005605"
+      },
+      {
+        "key": "e_1_3_2_1_63_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v33i01.33017055"
+      },
+      {
+        "key": "e_1_3_2_1_64_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1609/aaai.v34i05.6430"
+      },
+      {
+        "key": "e_1_3_2_1_65_1",
+        "volume-title": "Learning to Fix Build Errors with Graph2Diff Neural Networks. CoRR, abs/1911.01205",
+        "author": "Tarlow Daniel",
+        "year": "2019",
+        "unstructured": "Daniel Tarlow , Subhodeep Moitra , Andrew Rice , Zimin Chen , Pierre-Antoine Manzagol , Charles Sutton , and Edward Aftandilian . 2019. Learning to Fix Build Errors with Graph2Diff Neural Networks. CoRR, abs/1911.01205 ( 2019 ), arxiv:1911.01205. arxiv:1911.01205 Daniel Tarlow, Subhodeep Moitra, Andrew Rice, Zimin Chen, Pierre-Antoine Manzagol, Charles Sutton, and Edward Aftandilian. 2019. Learning to Fix Build Errors with Graph2Diff Neural Networks. CoRR, abs/1911.01205 (2019), arxiv:1911.01205. arxiv:1911.01205"
+      },
+      {
+        "key": "e_1_3_2_1_66_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3240732"
+      },
+      {
+        "key": "e_1_3_2_1_67_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3295222.3295349"
+      },
+      {
+        "key": "e_1_3_2_1_68_1",
+        "volume-title": "Pointer Networks. ArXiv, abs/1506.03134",
+        "author": "Vinyals Oriol",
+        "year": "2015",
+        "unstructured": "Oriol Vinyals , Meire Fortunato , and Navdeep Jaitly . 2015. Pointer Networks. ArXiv, abs/1506.03134 ( 2015 ). Oriol Vinyals, Meire Fortunato, and Navdeep Jaitly. 2015. Pointer Networks. ArXiv, abs/1506.03134 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_69_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3180233"
+      },
+      {
+        "key": "e_1_3_2_1_70_1",
+        "volume-title": "Proceedings of the 32nd IEEE/ACM International Conference on Automated Software Engineering (ASE). 660\u2013670",
+        "author": "Xin Qi",
+        "unstructured": "Qi Xin and Steven P. Reiss . 2017. Leveraging syntax-related code for automated program repair . In Proceedings of the 32nd IEEE/ACM International Conference on Automated Software Engineering (ASE). 660\u2013670 . Qi Xin and Steven P. Reiss. 2017. Leveraging syntax-related code for automated program repair. In Proceedings of the 32nd IEEE/ACM International Conference on Automated Software Engineering (ASE). 660\u2013670."
+      },
+      {
+        "key": "e_1_3_2_1_71_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3194810.3194816"
+      },
+      {
+        "key": "e_1_3_2_1_72_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2017.45"
+      },
+      {
+        "key": "e_1_3_2_1_73_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2016.2560811"
+      },
+      {
+        "key": "e_1_3_2_1_74_1",
+        "unstructured": "Michihiro Yasunaga and Percy Liang. 2020. Graph-based Self-Supervised Program Repair from Diagnostic Feedback. arxiv:2005.10636.  Michihiro Yasunaga and Percy Liang. 2020. Graph-based Self-Supervised Program Repair from Diagnostic Feedback. arxiv:2005.10636."
+      },
+      {
+        "key": "e_1_3_2_1_75_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P17-1041"
+      },
+      {
+        "key": "e_1_3_2_1_76_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2020/164"
+      },
+      {
+        "key": "e_1_3_2_1_77_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3324884.3416530"
+      }
+    ],
+    "event": {
+      "name": "ESEC/FSE '21: 29th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering",
+      "location": "Athens Greece",
+      "acronym": "ESEC/FSE '21",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 29th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3468264.3468544",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          9
+        ]
+      ],
+      "date-time": "2023-01-09T15:56:40Z",
+      "timestamp": 1673279800000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3468264.3468544"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          18
+        ]
+      ]
+    },
+    "references-count": 77,
+    "alternative-id": [
+      "10.1145/3468264.3468544",
+      "10.1145/3468264"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3468264.3468544",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          8,
+          18
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2021-08-18",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

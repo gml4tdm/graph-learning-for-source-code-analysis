@@ -1,0 +1,645 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          16
+        ]
+      ],
+      "date-time": "2024-07-16T02:13:39Z",
+      "timestamp": 1721096019552
+    },
+    "reference-count": 60,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "4",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              4,
+              21
+            ]
+          ],
+          "date-time": "2021-04-21T00:00:00Z",
+          "timestamp": 1618963200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springer.com/tdm"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              4,
+              21
+            ]
+          ],
+          "date-time": "2021-04-21T00:00:00Z",
+          "timestamp": 1618963200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springer.com/tdm"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61602286"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "crossref",
+        "award": [
+          "61976127"
+        ]
+      },
+      {
+        "name": "Shandong Key Research and Development Program",
+        "award": [
+          "2018GGX101003"
+        ]
+      },
+      {
+        "name": "Shandong Province Higher Educational Science and Technology Program",
+        "award": [
+          "J16LN09"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Empir Software Eng"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          7
+        ]
+      ]
+    },
+    "DOI": "10.1007/s10664-021-09968-2",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          4,
+          21
+        ]
+      ],
+      "date-time": "2021-04-21T15:03:30Z",
+      "timestamp": 1619017410000
+    },
+    "update-policy": "http://dx.doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 10,
+    "title": [
+      "Embedding API dependency graph for neural code generation"
+    ],
+    "prefix": "10.1007",
+    "volume": "26",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0002-5044-1459",
+        "authenticated-orcid": false,
+        "given": "Chen",
+        "family": "Lyu",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Ruyun",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Hongyu",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Hanwen",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Songlin",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          4,
+          21
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "issue": "4",
+        "key": "9968_CR1",
+        "doi-asserted-by": "publisher",
+        "first-page": "491",
+        "DOI": "10.1145/69558.75700",
+        "volume": "11",
+        "author": "AV Aho",
+        "year": "1989",
+        "unstructured": "Aho AV, Ganapathi M, Tjiang SWK (1989) Code generation using tree matching and dynamic programming. ACM Trans Program Lang Syst (TOPLAS) 11(4):491\u2013516",
+        "journal-title": "ACM Trans Program Lang Syst (TOPLAS)"
+      },
+      {
+        "key": "9968_CR2",
+        "unstructured": "Allamanis M, Brockschmidt M, Khademi M (2017) Learning to represent programs with graphs. arXiv:1711.00740"
+      },
+      {
+        "key": "9968_CR3",
+        "unstructured": "Bahdanau D, Cho K, Bengio Y (2015) Neural machine translation by jointly learning to align and translate. In: Proceedings of the 3rd international conference on learning representations, p 2015"
+      },
+      {
+        "key": "9968_CR4",
+        "unstructured": "Brockschmidt M, Allamanis M, Gaunt AL, Polozov O (2018) Generative code modeling with graphs. arXiv:1805.08490"
+      },
+      {
+        "key": "9968_CR5",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cho K, van Merri\u00ebnboer B, Gulcehre C, Bahdanau D, Bougares F, Schwenk H, Bengio Y (2014) Learning phrase representations using rnn encoder\u2013decoder for statistical machine translation. In: Proceedings of the 2014 conference on empirical methods in natural language processing (EMNLP), pp 1724\u20131734",
+        "DOI": "10.3115/v1/D14-1179"
+      },
+      {
+        "key": "9968_CR6",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Costa-juss\u00e0 MR, Fonollosa JAR (2016) Character-based neural machine translation. In: Proceedings of the 54th annual meeting of the association for computational linguistics (Volume 2:, Short Papers), pp 357\u2013361",
+        "DOI": "10.18653/v1/P16-2058"
+      },
+      {
+        "key": "9968_CR7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Dong L, Lapata M (2016) Language to logical form with neural attention. In: Proceedings of the 54th annual meeting of the association for computational linguistics (Volume 1:, Long Papers), pp 33\u201343",
+        "DOI": "10.18653/v1/P16-1004"
+      },
+      {
+        "key": "9968_CR8",
+        "unstructured": "Gehring J, Auli M, Grangier D, Yarats D, Dauphin YN (2017) Convolutional sequence to sequence learning. In: Proceedings of the 34th international conference on machine learning-Volume 70. JMLR.org, pp 1243\u20131252"
+      },
+      {
+        "key": "9968_CR9",
+        "unstructured": "Glorot X, Bengio Y (2010) Understanding the difficulty of training deep feedforward neural networks. In: Proceedings of the thirteenth international conference on artificial intelligence and statistics, pp 249\u2013256"
+      },
+      {
+        "key": "9968_CR10",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Grover A, Leskovec J (2016) node2vec: Scalable feature learning for networks. In: Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining, pp 855\u2013864",
+        "DOI": "10.1145/2939672.2939754"
+      },
+      {
+        "key": "9968_CR11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gu X, Zhang H, Kim S (2019) Codekernel: A graph kernel based approach to the selection of api usage examples. In: 2019 34th IEEE/ACM international conference on automated software engineering (ASE). IEEE, pp 590\u2013601",
+        "DOI": "10.1109/ASE.2019.00061"
+      },
+      {
+        "key": "9968_CR12",
+        "unstructured": "Hamilton W, Ying Z, Leskovec J (2017) Inductive representation learning on large graphs. In: Advances in neural information processing systems, pp 1024\u20131034"
+      },
+      {
+        "key": "9968_CR13",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hayati SA, Olivier R, Avvaru P, Yin P, Tomasic A, Neubig G (2018) Retrieval-based neural code generation. In: Proceedings of the 2018 conference on empirical methods in natural language processing, pp 925\u2013930",
+        "DOI": "10.18653/v1/D18-1111"
+      },
+      {
+        "key": "9968_CR14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hu X, Ge L, Xia X, Lo D, Jin Z (2018) Deep code comment generation. In: Proceedings of the 26th conference on program comprehension, pp 200\u2013210",
+        "DOI": "10.1145/3196321.3196334"
+      },
+      {
+        "key": "9968_CR15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hu X, Li G, Xia X, Lo D, Jin Z (2018) Summarizing source code with transferred api knowledge. In: Twenty-seventh international joint conference on artificial intelligence IJCAI-18",
+        "DOI": "10.24963/ijcai.2018/314"
+      },
+      {
+        "issue": "3",
+        "key": "9968_CR16",
+        "doi-asserted-by": "publisher",
+        "first-page": "2179",
+        "DOI": "10.1007/s10664-019-09730-9",
+        "volume": "25",
+        "author": "X Hu",
+        "year": "2020",
+        "unstructured": "Hu X, Li G, Xia X, Lo D, Jin Z (2020) Deep code comment generation with hybrid lexical and syntactical information. Empir Softw Eng 25(3):2179\u20132217",
+        "journal-title": "Empir Softw Eng"
+      },
+      {
+        "key": "9968_CR17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Huang P-Y, Liu F, Shiang S-R, Jean O, Chris D (2016) Attention-based multimodal neural machine translation. In: Proceedings of the first conference on machine translation: Volume 2, Shared Task Papers, pp 639\u2013645",
+        "DOI": "10.18653/v1/W16-2360"
+      },
+      {
+        "key": "9968_CR18",
+        "unstructured": "Isozaki H, Hirao T, Duh K, Sudoh K, Hajime T (2010) Automatic evaluation of translation quality for distant language pairs. In: Proceedings of the conference on empirical methods in natural language processing. Association for Computational Linguistics, p 2010"
+      },
+      {
+        "key": "9968_CR19",
+        "unstructured": "Kalchbrenner N, Danihelka I, Graves A (2015) Grid long short-term memory. arXiv:1507.01526"
+      },
+      {
+        "key": "9968_CR20",
+        "unstructured": "Kingma DP, Adam Ba J (2014) A method for stochastic optimization. arXiv:1412.6980"
+      },
+      {
+        "key": "9968_CR21",
+        "unstructured": "Kipf TN, Welling M (2016) Semi-supervised classification with graph convolutional networks. arXiv:1609.02907"
+      },
+      {
+        "key": "9968_CR22",
+        "unstructured": "Li Y, Chenjie G, Dullien T, Vinyals O, Kohli P (2019) Graph matching networks for learning the similarity of graph structured objects. In: International conference on machine learning, pp 3835\u20133845"
+      },
+      {
+        "key": "9968_CR23",
+        "unstructured": "Li Y, Tarlow D, Brockschmidt M, Zemel R (2015) Gated graph sequence neural networks. arXiv:1511.05493"
+      },
+      {
+        "key": "9968_CR24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Lin Chin-Yew, Cao Guihong, Gao Jianfeng, Nie J-Y (2006) An information-theoretic approach to automatic evaluation of summaries. In: Proceedings of the main conference on Human Language Technology Conference of the North American Chapter of the Association of Computational Linguistics. Association for Computational Linguistics, pp 463\u2013470",
+        "DOI": "10.3115/1220835.1220894"
+      },
+      {
+        "key": "9968_CR25",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ling W, Blunsom P, Grefenstette E, Hermann KM, Ko\u010disky\u0300 T, Wang F, Senior A (2016) Latent predictor networks for code generation. In: Proceedings of the 54th annual meeting of the association for computational linguistics (Volume 1:, Long Papers), pp 599\u2013609",
+        "DOI": "10.18653/v1/P16-1057"
+      },
+      {
+        "key": "9968_CR26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liu Z, Xia X, Treude C, Lo D, Li S (2019) Automatic generation of pull request descriptions. In: 2019 34th IEEE/ACM international conference on automated software engineering (ASE). IEEE, pp 176\u2013188",
+        "DOI": "10.1109/ASE.2019.00026"
+      },
+      {
+        "key": "9968_CR27",
+        "unstructured": "Luong M-T, Le QV, Sutskever I, Vinyals O, Kaiser L (2015) Multi-task sequence to sequence learning. arXiv:1511.06114"
+      },
+      {
+        "key": "9968_CR28",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Luong M-T, Pham H, Manning CD (2015) Effective approaches to attention-based neural machine translation. In: Proceedings of the 2015 conference on empirical methods in natural language processing, pp 1412\u20131421",
+        "DOI": "10.18653/v1/D15-1166"
+      },
+      {
+        "key": "9968_CR29",
+        "unstructured": "Mnih V, Heess N, Graves A, Kavukcuoglu K (2014) Recurrent models of visual attention. In: Proceedings of the 27th international conference on neural information processing systems - Volume 2, NIPS\u201914. MIT Press, Cambridge, pp 2204\u20132212"
+      },
+      {
+        "key": "9968_CR30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mou L, Li G, Zhang L, Wang T, Jin Z (2016) Convolutional neural networks over tree structures for programming language processing. In: Thirtieth AAAI conference on artificial intelligence",
+        "DOI": "10.1609/aaai.v30i1.10139"
+      },
+      {
+        "key": "9968_CR31",
+        "unstructured": "Mou L, Men R, Li G, Zhang L, Jin Z (2015) On end-to-end program generation from user intention by deep neural networks. arXiv:1510.07211"
+      },
+      {
+        "key": "9968_CR32",
+        "unstructured": "Murali V, Qi L, Chaudhuri S, Jermaine C (2017) Neural sketch learning for conditional program generation. arXiv:1703.05698"
+      },
+      {
+        "key": "9968_CR33",
+        "unstructured": "Neubig G (2015) lamtram: A toolkit for language and translation modeling using neural networks"
+      },
+      {
+        "key": "9968_CR34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Papineni K, Roukos S, Ward T, Zhu W-J (2002) Bleu: A method for automatic evaluation of machine translation. In: Proceedings of the 40th annual meeting on association for computational linguistics. Association for Computational Linguistics, pp 311\u2013318",
+        "DOI": "10.3115/1073083.1073135"
+      },
+      {
+        "key": "9968_CR35",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Perozzi B, Al-Rfou R, Skiena S (2014) Deepwalk: Online learning of social representations. In: Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining, pp 701\u2013710",
+        "DOI": "10.1145/2623330.2623732"
+      },
+      {
+        "key": "9968_CR36",
+        "unstructured": "Phan AV, Nguyen ML, Bui LT (2017) Convolutional neural networks over control flow graphs for software defect prediction. In: IEEE 29th international conference on tools with artificial intelligence (ICTAI). IEEE, p 2017"
+      },
+      {
+        "key": "9968_CR37",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Quirk C, Mooney R, Galley M (2015) Language to code: Learning semantic parsers for if-this-then-that recipes. In: Proceedings of the 53rd annual meeting of the association for computational linguistics and the 7th international joint conference on natural language processing (Volume 1:, Long Papers), pp 878\u2013888",
+        "DOI": "10.3115/v1/P15-1085"
+      },
+      {
+        "key": "9968_CR38",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rabinovich M, Stern M, Klein D (2017) Abstract syntax networks for code generation and semantic parsing. In: Proceedings of the 55th annual meeting of the association for computational linguistics (Volume 1:, Long Papers), pp 1139\u20131149",
+        "DOI": "10.18653/v1/P17-1105"
+      },
+      {
+        "key": "9968_CR39",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Satter A, Kazi S (2017) A similarity-based method retrieval technique to improve effectiveness in code search. In: Companion to the first international conference on the art, science and engineering of programming, pp 1\u20133",
+        "DOI": "10.1145/3079368.3079372"
+      },
+      {
+        "issue": "1",
+        "key": "9968_CR40",
+        "doi-asserted-by": "publisher",
+        "first-page": "61",
+        "DOI": "10.1109/TNN.2008.2005605",
+        "volume": "20",
+        "author": "F Scarselli",
+        "year": "2008",
+        "unstructured": "Scarselli F, Gori M, Chung TA, Hagenbuchner M, Monfardini G (2008) The graph neural network model. IEEE Trans Neural Netw 20(1):61\u201380",
+        "journal-title": "IEEE Trans Neural Netw"
+      },
+      {
+        "key": "9968_CR41",
+        "unstructured": "Shiv V, Quirk C (2019) Novel positional encodings to enable tree-based transformers. In: Advances in neural information processing systems, pp 12081\u201312091"
+      },
+      {
+        "issue": "3",
+        "key": "9968_CR42",
+        "doi-asserted-by": "publisher",
+        "first-page": "257",
+        "DOI": "10.1093/ptj/85.3.257",
+        "volume": "85",
+        "author": "J Sim",
+        "year": "2005",
+        "unstructured": "Sim J, Wright CC (2005) The kappa statistic in reliability studies: use, interpretation, and sample size requirements. Phys Ther 85(3):257\u2013268",
+        "journal-title": "Phys Ther"
+      },
+      {
+        "issue": "1",
+        "key": "9968_CR43",
+        "first-page": "1929",
+        "volume": "15",
+        "author": "N Srivastava",
+        "year": "2014",
+        "unstructured": "Srivastava N, Hinton G, Krizhevsky A, Sutskever I, Salakhutdinov R (2014) Dropout: A simple way to prevent neural networks from overfitting. J Machine Learn Res 15(1):1929\u20131958",
+        "journal-title": "J Machine Learn Res"
+      },
+      {
+        "key": "9968_CR44",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sun Z, Zhu Q, Mou L, Xiong Y, Ge L, Zhang L (2019) A grammar-based structural cnn decoder for code generation. In: Proceedings of the AAAI conference on artificial intelligence, vol 33, pp 7055\u20137062",
+        "DOI": "10.1609/aaai.v33i01.33017055"
+      },
+      {
+        "key": "9968_CR45",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sun Z, Zhu Q, Xiong Y, Sun Y, Mou L, Zhang L (2020) Treegen: A tree-based transformer architecture for code generation. In: AAAI 2020 : The Thirty-fourth AAAI conference on artificial intelligence, vol 34, pp 8984\u20138991",
+        "DOI": "10.1609/aaai.v34i05.6430"
+      },
+      {
+        "key": "9968_CR46",
+        "unstructured": "Sutskever I, Vinyals O, Le QV (2014) Sequence to sequence learning with neural networks. In: Advances in neural information processing systems, pp 3104\u20133112"
+      },
+      {
+        "key": "9968_CR47",
+        "unstructured": "Vaswani A, Shazeer N, Parmar N, Uszkoreit J, Jones L, Gomez AN, Kaiser \u0141, Polosukhin I (2017) Attention is all you need. In: Proceedings of the 31st international conference on neural information processing systems. Curran Associates Inc, New York, pp 6000\u20136010"
+      },
+      {
+        "key": "9968_CR48",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Vedantam R, Lawrence ZC, Parikh D (2015) Cider: Consensus-based image description evaluation. In: Proceedings of the IEEE conference on computer vision and pattern recognition, pp 4566\u20134575",
+        "DOI": "10.1109/CVPR.2015.7299087"
+      },
+      {
+        "key": "9968_CR49",
+        "unstructured": "Veli\u010dkovi\u0107 P, Cucurull G, Casanova A, Romero A, lio P, Bengio Y (2017) Graph attention networks. arXiv:1710.10903"
+      },
+      {
+        "key": "9968_CR50",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wan Y, Shu J, Sui Y, Xu G, Zhao Z, Wu J, Yu P (2019) Multi-modal attention network learning for semantic source code retrieval. In: 2019 34th IEEE/ACM international conference on automated software engineering (ASE). IEEE, pp 13\u201325",
+        "DOI": "10.1109/ASE.2019.00012"
+      },
+      {
+        "key": "9968_CR51",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wang W, Ge L, Bo M, Xia X, Zhi J (2020) Detecting code clones with graph neural network and flow-augmented abstract syntax tree. In: IEEE 27th international conference on software analysis, evolution and reengineering (SANER). IEEE, p 2020",
+        "DOI": "10.1109/SANER48275.2020.9054857"
+      },
+      {
+        "key": "9968_CR52",
+        "unstructured": "Wang K, Singh R, Su Z (2017) Dynamic neural program embedding for program repair. arXiv:1711.07163"
+      },
+      {
+        "key": "9968_CR53",
+        "unstructured": "Wei B, Li G, Xia X, Fu Z, Jin Z (2019) Code generation as a dual task of code summarization. In: Advances in neural information processing systems, pp 6559\u20136569"
+      },
+      {
+        "issue": "2",
+        "key": "9968_CR54",
+        "doi-asserted-by": "publisher",
+        "first-page": "270",
+        "DOI": "10.1162/neco.1989.1.2.270",
+        "volume": "1",
+        "author": "RJ Williams",
+        "year": "1989",
+        "unstructured": "Williams RJ, Zipser D (1989) A learning algorithm for continually running fully recurrent neural networks. Neural Comput 1(2):270\u2013280",
+        "journal-title": "Neural Comput"
+      },
+      {
+        "key": "9968_CR55",
+        "unstructured": "Xu K, Ba J, Kiros R, Cho K, Courville A, Salakhudinov R, Zemel R, Bengio Y (2015) Show, attend and tell: Neural image caption generation with visual attention. In: International conference on machine learning, pp 2048\u20132057"
+      },
+      {
+        "key": "9968_CR56",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Yin P, Neubig G (2017) A syntactic neural model for general-purpose code generation. In: Proceedings of the 55th annual meeting of the association for computational linguistics (Volume 1:, Long Papers), pp 440\u2013450",
+        "DOI": "10.18653/v1/P17-1041"
+      },
+      {
+        "key": "9968_CR57",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang J, Wang M, Liu Q, Zhou J (2017) Incorporating word reordering knowledge into attention-based neural machine translation. In: Proceedings of the 55th annual meeting of the association for computational linguistics (Volume 1:, Long Papers), pp 1524\u20131534",
+        "DOI": "10.18653/v1/P17-1140"
+      },
+      {
+        "key": "9968_CR58",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang J, Wang X, Zhang H, Sun H, Liu X (2020) Retrieval-based neural source code summarization. In: Proceedings of the 42nd international conference on software engineering. IEEE",
+        "DOI": "10.1145/3377811.3380383"
+      },
+      {
+        "key": "9968_CR59",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang J, Wang X, Zhang H, Sun H, Wang K, Xudong L (2019) A novel neural source code representation based on abstract syntax tree. In: IEEE/ACM 41st international conference on software engineering (ICSE). IEEE, p 2019",
+        "DOI": "10.1109/ICSE.2019.00086"
+      },
+      {
+        "key": "9968_CR60",
+        "unstructured": "Zhou K, Dong Y, Lee WS, Hooi B, Xu H, Feng J (2020) Effective training strategies for deep graph neural networks. arXiv:2006.07107"
+      }
+    ],
+    "container-title": [
+      "Empirical Software Engineering"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s10664-021-09968-2.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/article/10.1007/s10664-021-09968-2/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s10664-021-09968-2.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          25
+        ]
+      ],
+      "date-time": "2022-12-25T01:37:51Z",
+      "timestamp": 1671932271000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/s10664-021-09968-2"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          4,
+          21
+        ]
+      ]
+    },
+    "references-count": 60,
+    "journal-issue": {
+      "issue": "4",
+      "published-print": {
+        "date-parts": [
+          [
+            2021,
+            7
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "9968"
+    ],
+    "URL": "http://dx.doi.org/10.1007/s10664-021-09968-2",
+    "relation": {},
+    "ISSN": [
+      "1382-3256",
+      "1573-7616"
+    ],
+    "issn-type": [
+      {
+        "value": "1382-3256",
+        "type": "print"
+      },
+      {
+        "value": "1573-7616",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          4,
+          21
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "26 March 2021",
+        "order": 1,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "21 April 2021",
+        "order": 2,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "order": 1,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Declarations"
+        }
+      },
+      {
+        "value": "The authors declare that they have no conflict of interest.",
+        "order": 2,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "<!--Emphasis Type='Bold' removed-->Conflict of Interests"
+        }
+      }
+    ],
+    "article-number": "61"
+  }
+}

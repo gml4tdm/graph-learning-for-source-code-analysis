@@ -1,0 +1,616 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          13
+        ]
+      ],
+      "date-time": "2024-07-13T08:30:43Z",
+      "timestamp": 1720859443610
+    },
+    "reference-count": 67,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2021-03-01T00:00:00Z",
+          "timestamp": 1614556800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61672338",
+          "61373028"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100000923",
+        "name": "Australian Research Council",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "DP200101374",
+          "LP170100891",
+          "DP200101328"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Trans. Rel."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1109/tr.2020.3001918",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          22
+        ]
+      ],
+      "date-time": "2020-07-22T20:46:27Z",
+      "timestamp": 1595450787000
+    },
+    "page": "304-318",
+    "source": "Crossref",
+    "is-referenced-by-count": 58,
+    "title": [
+      "FCCA: Hybrid Code Representation for Functional Clone Detection Using Attention Networks"
+    ],
+    "prefix": "10.1109",
+    "volume": "70",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0002-9245-5293",
+        "authenticated-orcid": false,
+        "given": "Wei",
+        "family": "Hua",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Yulei",
+        "family": "Sui",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Yao",
+        "family": "Wan",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Guangzhong",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0003-4493-6663",
+        "authenticated-orcid": false,
+        "given": "Guandong",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref39",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D15-1044"
+      },
+      {
+        "key": "ref38",
+        "first-page": "2224",
+        "article-title": "Convolutional networks on graphs for learning molecular fingerprints",
+        "author": "duvenaud",
+        "year": "0",
+        "journal-title": "Proc Advances Neural Inf Process Syst"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3238206"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/D16-1058"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "ref30",
+        "first-page": "1",
+        "article-title": "DiSAN: Directional self-attention network for RNN/CNN-free language understanding",
+        "author": "shen",
+        "year": "0",
+        "journal-title": "Proc 32nd AAAI Conf Artif Intell"
+      },
+      {
+        "key": "ref37",
+        "article-title": "Subgraph2vec: Learning distributed representations of rooted sub-graphs from large graphs",
+        "author": "narayanan",
+        "year": "2016",
+        "journal-title": "arXiv 1606 08928"
+      },
+      {
+        "key": "ref36",
+        "first-page": "1",
+        "article-title": "Learning to represent programs with graphs",
+        "author": "allamanis",
+        "year": "0",
+        "journal-title": "Proc Int Conf Learn Representations"
+      },
+      {
+        "key": "ref35",
+        "first-page": "1188",
+        "article-title": "Distributed representations of sentences and documents",
+        "author": "mikolov",
+        "year": "0",
+        "journal-title": "Proc Int Conf Mach Learn"
+      },
+      {
+        "key": "ref34",
+        "first-page": "1",
+        "article-title": "Semi-supervised classification with graph convolutional networks",
+        "author": "kipf",
+        "year": "0",
+        "journal-title": "Proc 5th Int Conf Learn Representations"
+      },
+      {
+        "key": "ref60",
+        "first-page": "2397",
+        "article-title": "Dynamic memory networks for visual and textual question answering",
+        "author": "xiong",
+        "year": "0",
+        "journal-title": "Proc Int Conf Mach Learn"
+      },
+      {
+        "key": "ref62",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/P15-1107"
+      },
+      {
+        "key": "ref61",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.499"
+      },
+      {
+        "key": "ref63",
+        "first-page": "1378",
+        "article-title": "Ask me anything: Dynamic memory networks for natural language processing",
+        "author": "kumar",
+        "year": "0",
+        "journal-title": "Proc Int Conf Mach Learn"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1368088.1368132"
+      },
+      {
+        "key": "ref64",
+        "first-page": "1",
+        "article-title": "A deep reinforced model for abstractive summarization",
+        "author": "paulus",
+        "year": "2017"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICCKE.2015.7365827"
+      },
+      {
+        "key": "ref65",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2017.232"
+      },
+      {
+        "key": "ref66",
+        "first-page": "7354",
+        "article-title": "Self-attention generative adversarial networks",
+        "author": "zhang",
+        "year": "0",
+        "journal-title": "Proc Int Conf Mach Learn"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/390013.808479"
+      },
+      {
+        "key": "ref67",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3236024.3236026"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970326"
+      },
+      {
+        "key": "ref1",
+        "first-page": "131",
+        "article-title": "Evolution in open source software: A case study",
+        "author": "tu",
+        "year": "0",
+        "journal-title": "Proc Int Conf Softw Maintenance"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/K17-1034"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/N16-1174"
+      },
+      {
+        "key": "ref21",
+        "first-page": "2048",
+        "article-title": "Show, attend and Tell: Neural image caption generation with visual attention",
+        "author": "xu",
+        "year": "0",
+        "journal-title": "Proc Int Conf Mach Learn"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3290353"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.30"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.70725"
+      },
+      {
+        "key": "ref25",
+        "first-page": "596",
+        "article-title": "BigCloneEval: A clone detection tool evaluation framework with BigCloneBench",
+        "author": "svajlenko",
+        "year": "0",
+        "journal-title": "Proc IEEE Intern Conf on Software Maintenance"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2020.2979701"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICECCS.2019.00012"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.10"
+      },
+      {
+        "key": "ref58",
+        "first-page": "1",
+        "article-title": "Draw: A recurrent neural network for image generation",
+        "author": "gregor",
+        "year": "2015"
+      },
+      {
+        "key": "ref57",
+        "first-page": "3545",
+        "article-title": "Deep networks with internal selective attention through feedback connections",
+        "author": "stollenga",
+        "year": "0",
+        "journal-title": "Proc Adv Neural Inf Process Syst"
+      },
+      {
+        "key": "ref56",
+        "first-page": "2204",
+        "article-title": "Recurrent models of visual attention",
+        "author": "mnih",
+        "year": "0",
+        "journal-title": "Proc Adv Neural Inf Process Syst"
+      },
+      {
+        "key": "ref55",
+        "first-page": "289",
+        "article-title": "Hierarchical question-image co-attention for visual question answering",
+        "author": "lu",
+        "year": "0",
+        "journal-title": "Proc Adv Neural Inf Process Syst"
+      },
+      {
+        "key": "ref54",
+        "first-page": "842",
+        "article-title": "The application of two-level attention models in deep convolutional neural network for fine-grained image classification",
+        "author": "xiao",
+        "year": "0",
+        "journal-title": "Proc IEEE Conf Comput Vis Pattern Recognit"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.503"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIFS.2019.2947861"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884877"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2002.1019480"
+      },
+      {
+        "key": "ref40",
+        "article-title": "Graph attention networks",
+        "author": "veli?kovi?",
+        "year": "2017",
+        "journal-title": "arXiv 1710 10903"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2008.41"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/423"
+      },
+      {
+        "key": "ref14",
+        "article-title": "Survey of research on software clones",
+        "author": "koschke",
+        "year": "2007",
+        "journal-title": "Dagstuhl Seminar Proceedings"
+      },
+      {
+        "key": "ref15",
+        "first-page": "1895",
+        "article-title": "Tri-party deep network representation",
+        "author": "pan",
+        "year": "0",
+        "journal-title": "Proc 25th Int Joint Conf Artif Intell"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TKDE.2018.2833443"
+      },
+      {
+        "key": "ref17",
+        "first-page": "1",
+        "article-title": "Learning factorized multimodal representations",
+        "author": "tsai",
+        "year": "0",
+        "journal-title": "Proc Int Conf Learn Represent"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2019.00012"
+      },
+      {
+        "key": "ref19",
+        "article-title": "Neural machine translation by jointly learning to align and translate",
+        "author": "bahdanau",
+        "year": "2015",
+        "journal-title": "CoRR"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SCAM.2017.21"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.1998.738528"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.physa.2016.09.021"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IWSC.2013.6613041"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2009.5070547"
+      },
+      {
+        "key": "ref7",
+        "first-page": "14",
+        "article-title": "Continuous integration",
+        "volume": "122",
+        "author": "fowler",
+        "year": "2006",
+        "journal-title": "Thought-Works"
+      },
+      {
+        "key": "ref49",
+        "first-page": "2672",
+        "article-title": "Generative adversarial nets",
+        "author": "goodfellow",
+        "year": "0",
+        "journal-title": "Proc Adv Neural Inf Process Syst"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2006.28"
+      },
+      {
+        "key": "ref46",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2015.7332459"
+      },
+      {
+        "key": "ref45",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1925805.1925818"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3236024.3236068"
+      },
+      {
+        "key": "ref47",
+        "first-page": "1",
+        "article-title": "Convolutional neural networks over tree structures for programming language processing",
+        "author": "mou",
+        "year": "0",
+        "journal-title": "Proc 13th AAAI Conf Artif Intell"
+      },
+      {
+        "key": "ref42",
+        "year": "0"
+      },
+      {
+        "key": "ref41",
+        "first-page": "2786",
+        "article-title": "Siamese recurrent architectures for learning sentence similarity",
+        "volume": "16",
+        "author": "mueller",
+        "year": "0",
+        "journal-title": "Proc 30th AAAI Conf Artif Intell"
+      },
+      {
+        "key": "ref44",
+        "author": "parr",
+        "year": "2013",
+        "journal-title": "The Definitive Antlr 4 Reference"
+      },
+      {
+        "key": "ref43",
+        "author": "kleinbaum",
+        "year": "2002",
+        "journal-title": "Logistic Regression"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Reliability"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/24/9367048/09146274.pdf?arnumber=9146274",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2022-01-12T16:48:25Z",
+      "timestamp": 1642006105000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/9146274/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          3
+        ]
+      ]
+    },
+    "references-count": 67,
+    "journal-issue": {
+      "issue": "1"
+    },
+    "URL": "http://dx.doi.org/10.1109/tr.2020.3001918",
+    "relation": {},
+    "ISSN": [
+      "0018-9529",
+      "1558-1721"
+    ],
+    "issn-type": [
+      {
+        "value": "0018-9529",
+        "type": "print"
+      },
+      {
+        "value": "1558-1721",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          3
+        ]
+      ]
+    }
+  }
+}

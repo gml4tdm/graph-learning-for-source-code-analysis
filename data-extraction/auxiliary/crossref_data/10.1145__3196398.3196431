@@ -1,0 +1,616 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          18
+        ]
+      ],
+      "date-time": "2024-07-18T05:53:13Z",
+      "timestamp": 1721281993964
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 75,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              28
+            ]
+          ],
+          "date-time": "2019-05-28T00:00:00Z",
+          "timestamp": 1559001600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 365,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000001",
+        "name": "NSF",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "CCF-1525902"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          5,
+          28
+        ]
+      ]
+    },
+    "DOI": "10.1145/3196398.3196431",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          7,
+          23
+        ]
+      ],
+      "date-time": "2018-07-23T13:02:25Z",
+      "timestamp": 1532350945000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 87,
+    "title": [
+      "Deep learning similarities from different representations of source code"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Michele",
+        "family": "Tufano",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "College of William and Mary"
+          }
+        ]
+      },
+      {
+        "given": "Cody",
+        "family": "Watson",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of William and Mary"
+          }
+        ]
+      },
+      {
+        "given": "Gabriele",
+        "family": "Bavota",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Universit\u00e0 della Svizzera italiana (USI), Lugano, Switzerland"
+          }
+        ]
+      },
+      {
+        "given": "Massimiliano",
+        "family": "Di Penta",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Sannio, Benevento, Italy"
+          }
+        ]
+      },
+      {
+        "given": "Martin",
+        "family": "White",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of William and Mary"
+          }
+        ]
+      },
+      {
+        "given": "Denys",
+        "family": "Poshyvanyk",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "College of William and Mary"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2018,
+          5,
+          28
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "unstructured": "2017. Apache Commons Project Distributions: https://archive.apache.org/dist/commons/. (2017).  2017. Apache Commons Project Distributions: https://archive.apache.org/dist/commons/. (2017)."
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "volume-title": "Source Code: https://github.com/micheletufano/AutoenCODE.",
+        "year": "2017",
+        "unstructured": "2017. Online Appendix: https://sites.google.com/view/learningcodesimilarities , Source Code: https://github.com/micheletufano/AutoenCODE. ( 2017 ). 2017. Online Appendix: https://sites.google.com/view/learningcodesimilarities, Source Code: https://github.com/micheletufano/AutoenCODE. (2017)."
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "unstructured": "2017. Soot: https://github.com/Sable/soot. (2017).  2017. Soot: https://github.com/Sable/soot. (2017)."
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2786805.2786849"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "volume-title": "Proceedings of the 33nd International Conference on Machine Learning, ICML 2016",
+        "author": "Allamanis Miltiadis",
+        "year": "2016",
+        "unstructured": "Miltiadis Allamanis , Hao Peng , and Charles A. Sutton . 2016. A Convolutional Attention Network for Extreme Summarization of Source Code . In Proceedings of the 33nd International Conference on Machine Learning, ICML 2016 , New York City, NY, USA , June 19-24, 2016 . 2091--2100. http://jmlr.org/proceedings/papers/v48/allamanis16.html Miltiadis Allamanis, Hao Peng, and Charles A. Sutton. 2016. A Convolutional Attention Network for Extreme Summarization of Source Code. In Proceedings of the 33nd International Conference on Machine Learning, ICML 2016, New York City, NY, USA, June 19-24, 2016. 2091--2100. http://jmlr.org/proceedings/papers/v48/allamanis16.html"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635901"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "unstructured": "B. Baker. {n. d.}. On Finding Duplication and Near-duplication in Large Software Systems (WCRE'95).   B. Baker. {n. d.}. On Finding Duplication and Near-duplication in Large Software Systems (WCRE'95)."
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "unstructured": "B. Baker. 1992. A program for identifying duplicated code. In Computer Science and Statistics.  B. Baker. 1992. A program for identifying duplicated code. In Computer Science and Statistics."
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1006/jcss.1996.0003"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635898"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2486788.2486879"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2559935"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2013.60"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "unstructured": "I. Baxter A. Yahin L. Moura M. Sant'Anna and L. Bier. {n. d.}. Clone Detection Using Abstract Syntax Trees (ICSM'98).   I. Baxter A. Yahin L. Moura M. Sant'Anna and L. Bier. {n. d.}. Clone Detection Using Abstract Syntax Trees (ICSM'98)."
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970311"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TPAMI.2013.50"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1010933404324"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2568225.2568286"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2011.47"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-014-9339-3"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/smr.567"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s10664-011-9194-4"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "unstructured": "S. Ducasse M. Rieger and S. Demeyer. {n. d.}. A Language Independent Approach for Detecting Duplicated Code (ICSM'99).   S. Ducasse M. Rieger and S. Demeyer. {n. d.}. A Language Independent Approach for Detecting Duplicated Code (ICSM'99)."
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1037/h0031619"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3106237.3106256"
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1368088.1368132"
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "unstructured": "C. Goller and A. K\u00fcchler. {n. d.}. Learning Task-Dependent Distributed Representations by Backpropagation Through Structure (ICNN'96).  C. Goller and A. K\u00fcchler. {n. d.}. Learning Task-Dependent Distributed Representations by Backpropagation Through Structure (ICNN'96)."
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "volume-title": "Graph Embedding Techniques, Applications, and Performance: A Survey. CoRR abs/1705.02801",
+        "author": "Goyal Palash",
+        "year": "2017",
+        "unstructured": "Palash Goyal and Emilio Ferrara . 2017. Graph Embedding Techniques, Applications, and Performance: A Survey. CoRR abs/1705.02801 ( 2017 ). Palash Goyal and Emilio Ferrara. 2017. Graph Embedding Techniques, Applications, and Performance: A Survey. CoRR abs/1705.02801 (2017)."
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2950290.2950334"
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Rahul Gupta Soham Pal Aditya Kanade and Shirish Shevade. 2017. DeepFix: Fixing Common C Language Errors by Deep Learning.. In AAAI. 1345--1351.  Rahul Gupta Soham Pal Aditya Kanade and Shirish Shevade. 2017. DeepFix: Fixing Common C Language Errors by Deep Learning.. In AAAI. 1345--1351.",
+        "DOI": "10.1609/aaai.v31i1.10742"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3106237.3106290"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3060832.3060845"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.30"
+      },
+      {
+        "key": "e_1_3_2_1_34_1",
+        "unstructured": "J. Johnson. {n. d.}. Identifying Redundancy in Source Code Using Fingerprints (CASCON'93).   J. Johnson. {n. d.}. Identifying Redundancy in Source Code Using Fingerprints (CASCON'93)."
+      },
+      {
+        "key": "e_1_3_2_1_35_1",
+        "unstructured": "J. Johnson. {n. d.}. Substring Matching for Clone Detection and Change Tracking (ICSM'94).   J. Johnson. {n. d.}. Substring Matching for Clone Detection and Change Tracking (ICSM'94)."
+      },
+      {
+        "key": "e_1_3_2_1_36_1",
+        "unstructured": "J. Johnson. {n. d.}. Visualizing Textual Redundancy in Legacy Source (CAS-CON'94).   J. Johnson. {n. d.}. Visualizing Textual Redundancy in Legacy Source (CAS-CON'94)."
+      },
+      {
+        "key": "e_1_3_2_1_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2002.1019480"
+      },
+      {
+        "key": "e_1_3_2_1_38_1",
+        "unstructured": "R. Komondoor and S. Horwitz. {n. d.}. Using Slicing to Identify Duplication in Source Code (SAS'01).   R. Komondoor and S. Horwitz. {n. d.}. Using Slicing to Identify Duplication in Source Code (SAS'01)."
+      },
+      {
+        "key": "e_1_3_2_1_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WCRE.2006.18"
+      },
+      {
+        "key": "e_1_3_2_1_40_1",
+        "unstructured": "J. Krinke. {n. d.}. Identifying Similar Code with Program Dependence Graphs (WCRE'01).   J. Krinke. {n. d.}. Identifying Similar Code with Program Dependence Graphs (WCRE'01)."
+      },
+      {
+        "key": "e_1_3_2_1_41_1",
+        "unstructured": "A. Lam A. Nguyen H. Nguyen and T. Nguyen. {n. d.}. Combining Deep Learning with Information Retrieval to Localize Buggy Files for Bug Reports (ASE'15).  A. Lam A. Nguyen H. Nguyen and T. Nguyen. {n. d.}. Combining Deep Learning with Information Retrieval to Localize Buggy Files for Bug Reports (ASE'15)."
+      },
+      {
+        "key": "e_1_3_2_1_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2017.24"
+      },
+      {
+        "key": "e_1_3_2_1_43_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISCAS.2010.5537907"
+      },
+      {
+        "key": "e_1_3_2_1_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2006.28"
+      },
+      {
+        "key": "e_1_3_2_1_45_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1150402.1150522"
+      },
+      {
+        "key": "e_1_3_2_1_46_1",
+        "volume-title": "Identification of High-Level Concept Clones in Source Code. In 16th IEEE International Conference on Automated Software Engineering (ASE 2001)",
+        "author": "Marcus Andrian",
+        "year": "2001",
+        "unstructured": "Andrian Marcus and Jonathan I. Maletic . 2001 . Identification of High-Level Concept Clones in Source Code. In 16th IEEE International Conference on Automated Software Engineering (ASE 2001) , 26-29 November 2001 , Coronado Island, San Diego, CA, USA. 107--114. Andrian Marcus and Jonathan I. Maletic. 2001. Identification of High-Level Concept Clones in Source Code. In 16th IEEE International Conference on Automated Software Engineering (ASE 2001), 26-29 November 2001, Coronado Island, San Diego, CA, USA. 107--114."
+      },
+      {
+        "key": "e_1_3_2_1_47_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2337223.2337267"
+      },
+      {
+        "key": "e_1_3_2_1_49_1",
+        "unstructured": "T. Mikolov I. Sutskever K. Chen G. Corrado and J. Dean. {n. d.}. Distributed Representations of Words and Phrases and their Compositionality.   T. Mikolov I. Sutskever K. Chen G. Corrado and J. Dean. {n. d.}. Distributed Representations of Words and Phrases and their Compositionality."
+      },
+      {
+        "key": "e_1_3_2_1_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2635868.2635926"
+      },
+      {
+        "key": "e_1_3_2_1_51_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3015812.3016002"
+      },
+      {
+        "key": "e_1_3_2_1_52_1",
+        "volume-title": "Proceedings of the 37th International Conference on Software Engineering -",
+        "volume": "1",
+        "author": "Nguyen Anh Tuan",
+        "year": "1875",
+        "unstructured": "Anh Tuan Nguyen and Tien N. Nguyen . 2015. Graph-based Statistical Language Model for Code . In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, Piscataway, NJ, USA, 858--868. http://dl.acm.org/citation.cfm?id=28 1875 4.2818858 Anh Tuan Nguyen and Tien N. Nguyen. 2015. Graph-based Statistical Language Model for Code. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, Piscataway, NJ, USA, 858--868. http://dl.acm.org/citation.cfm?id=2818754.2818858"
+      },
+      {
+        "key": "e_1_3_2_1_53_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE-C.2017.118"
+      },
+      {
+        "key": "e_1_3_2_1_54_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1595696.1595767"
+      },
+      {
+        "key": "e_1_3_2_1_55_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2939672.2939751"
+      },
+      {
+        "key": "e_1_3_2_1_56_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2486788.2486857"
+      },
+      {
+        "key": "e_1_3_2_1_57_1",
+        "volume-title": "Parameterizing and Assembling IR-Based Solutions for SE Tasks Using Genetic Algorithms. In IEEE 23rd International Conference on Software Analysis, Evolution, and Reengineering, SANER 2016",
+        "volume": "1",
+        "author": "Panichella Annibale",
+        "year": "2016",
+        "unstructured": "Annibale Panichella , Bogdan Dit , Rocco Oliveto , Massimiliano Di Penta , Denys Poshyvanyk , and Andrea De Lucia . 2016 . Parameterizing and Assembling IR-Based Solutions for SE Tasks Using Genetic Algorithms. In IEEE 23rd International Conference on Software Analysis, Evolution, and Reengineering, SANER 2016 , Suita, Osaka, Japan , March 14-18, 2016 - Volume 1 . 314--325. Annibale Panichella, Bogdan Dit, Rocco Oliveto, Massimiliano Di Penta, Denys Poshyvanyk, and Andrea De Lucia. 2016. Parameterizing and Assembling IR-Based Solutions for SE Tasks Using Genetic Algorithms. In IEEE 23rd International Conference on Software Analysis, Evolution, and Reengineering, SANER 2016, Suita, Osaka, Japan, March 14-18, 2016 - Volume 1. 314--325."
+      },
+      {
+        "key": "e_1_3_2_1_58_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2010.10"
+      },
+      {
+        "key": "e_1_3_2_1_59_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2008.41"
+      },
+      {
+        "key": "e_1_3_2_1_60_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2662708.2662719"
+      },
+      {
+        "key": "e_1_3_2_1_61_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884877"
+      },
+      {
+        "key": "e_1_3_2_1_62_1",
+        "unstructured": "R. Socher C. Lin A. Ng and C. Manning. {n. d.}. Parsing Natural Scenes and Natural Language with Recursive Neural Networks (ICML'11).   R. Socher C. Lin A. Ng and C. Manning. {n. d.}. Parsing Natural Scenes and Natural Language with Recursive Neural Networks (ICML'11)."
+      },
+      {
+        "key": "e_1_3_2_1_63_1",
+        "unstructured": "R. Socher J. Pennington E. Huang A. Ng and C. Manning. {n. d.}. Semi-supervised Recursive Autoencoders for Predicting Sentiment Distributions (EMNLP'11).   R. Socher J. Pennington E. Huang A. Ng and C. Manning. {n. d.}. Semi-supervised Recursive Autoencoders for Predicting Sentiment Distributions (EMNLP'11)."
+      },
+      {
+        "key": "e_1_3_2_1_64_1",
+        "unstructured": "R. Socher A. Perelygin J. Wu J. Chuang C. Manning A. Ng and C. Potts. {n. d.}. Recursive Deep Models for Semantic Compositionality Over a Sentiment Treebank (EMNLP'13).  R. Socher A. Perelygin J. Wu J. Chuang C. Manning A. Ng and C. Potts. {n. d.}. Recursive Deep Models for Semantic Compositionality Over a Sentiment Treebank (EMNLP'13)."
+      },
+      {
+        "key": "e_1_3_2_1_65_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1093/biomet/13.2-3.263"
+      },
+      {
+        "key": "e_1_3_2_1_66_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2015.7332459"
+      },
+      {
+        "key": "e_1_3_2_1_67_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2662708.2662710"
+      },
+      {
+        "key": "e_1_3_2_1_68_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2507288.2507314"
+      },
+      {
+        "key": "e_1_3_2_1_69_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2016.7503721"
+      },
+      {
+        "key": "e_1_3_2_1_70_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884804"
+      },
+      {
+        "key": "e_1_3_2_1_71_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2491411.2491420"
+      },
+      {
+        "key": "e_1_3_2_1_72_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2491411.2491420"
+      },
+      {
+        "key": "e_1_3_2_1_73_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3172077.3172312"
+      },
+      {
+        "key": "e_1_3_2_1_74_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970326"
+      },
+      {
+        "key": "e_1_3_2_1_75_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/spe.4380210706"
+      },
+      {
+        "key": "e_1_3_2_1_76_1",
+        "volume-title": "Ensemble Learning",
+        "author": "Zhou Zhi-Hua",
+        "unstructured": "Zhi-Hua Zhou . 2009. Ensemble Learning . Springer US , Boston, MA , 270--273. Zhi-Hua Zhou. 2009. Ensemble Learning. Springer US, Boston, MA, 270--273."
+      }
+    ],
+    "event": {
+      "name": "ICSE '18: 40th International Conference on Software Engineering",
+      "location": "Gothenburg Sweden",
+      "acronym": "ICSE '18",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE-CS Computer Society"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 15th International Conference on Mining Software Repositories"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3196398.3196431",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "syndication"
+      },
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3196398.3196431",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          10
+        ]
+      ],
+      "date-time": "2023-01-10T18:35:17Z",
+      "timestamp": 1673375717000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3196398.3196431"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          5,
+          28
+        ]
+      ]
+    },
+    "references-count": 75,
+    "alternative-id": [
+      "10.1145/3196398.3196431",
+      "10.1145/3196398"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3196398.3196431",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          5,
+          28
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2018-05-28",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

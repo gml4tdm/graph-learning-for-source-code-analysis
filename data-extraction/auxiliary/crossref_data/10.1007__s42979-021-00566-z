@@ -1,0 +1,471 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ],
+      "date-time": "2024-07-15T00:12:27Z",
+      "timestamp": 1721002347631
+    },
+    "reference-count": 31,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "3",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              3,
+              19
+            ]
+          ],
+          "date-time": "2021-03-19T00:00:00Z",
+          "timestamp": 1616112000000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              3,
+              19
+            ]
+          ],
+          "date-time": "2021-03-19T00:00:00Z",
+          "timestamp": 1616112000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100010668",
+        "name": "H2020 Leadership in Enabling and Industrial Technologies",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "830892"
+        ]
+      },
+      {
+        "DOI": "10.13039/100010669",
+        "name": "H2020 LEIT Information and Communication Technologies",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "952647"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "SN COMPUT. SCI."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          5
+        ]
+      ]
+    },
+    "DOI": "10.1007/s42979-021-00566-z",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          3,
+          19
+        ]
+      ],
+      "date-time": "2021-03-19T17:06:51Z",
+      "timestamp": 1616173611000
+    },
+    "update-policy": "http://dx.doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 19,
+    "title": [
+      "Commit2Vec: Learning Distributed Representations of Code Changes"
+    ],
+    "prefix": "10.1007",
+    "volume": "2",
+    "author": [
+      {
+        "given": "Roc\u00edo",
+        "family": "Cabrera Lozoya",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Arnaud",
+        "family": "Baumann",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0003-3506-8374",
+        "authenticated-orcid": false,
+        "given": "Antonino",
+        "family": "Sabetta",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Michele",
+        "family": "Bezzi",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          3,
+          19
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "566_CR1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Allamanis M, Barr ET, Bird C, Sutton C. Suggesting accurate method and class names. Proceedings of the 2015 10th Joint Meeting on Foundations of Software Engineering; 2015. p. 38\u201349.",
+        "DOI": "10.1145/2786805.2786849"
+      },
+      {
+        "issue": "4",
+        "key": "566_CR2",
+        "doi-asserted-by": "publisher",
+        "first-page": "81",
+        "DOI": "10.1145/3212695",
+        "volume": "51",
+        "author": "M Allamanis",
+        "year": "2018",
+        "unstructured": "Allamanis M, Barr ET, Devanbu P, Sutton C. A survey of machine learning for big code and naturalness. ACM Comput Surv (CSUR). 2018;51(4):81.",
+        "journal-title": "ACM Comput Surv (CSUR)"
+      },
+      {
+        "key": "566_CR3",
+        "unstructured": "Allamanis M, Peng H, Sutton CA. A convolutional attention network for extreme summarization of source code. CoRR arXiv:1602.03001. 2016."
+      },
+      {
+        "key": "566_CR4",
+        "unstructured": "Alon U, Brody S, Levy O, Yahav E. code2seq: Generating sequences from structured representations of code. arXiv preprint arXiv:1808.01400. 2018."
+      },
+      {
+        "key": "566_CR5",
+        "first-page": "40:1",
+        "volume": "3",
+        "author": "U Alon",
+        "year": "2019",
+        "unstructured": "Alon U, Zilberstein M, Levy O, Yahav E. Code2vec: learning distributed representations of code. Proc ACM Program Lang POPL. 2019;3:40:1-40:29.",
+        "journal-title": "Proc ACM Program Lang POPL"
+      },
+      {
+        "key": "566_CR6",
+        "unstructured": "Ben-Nun T, Jakobovits AS, Hoefler T. Neural code comprehension: a learnable representation of code semantics. In: Advances in neural information processing systems; 2018. p. 3585\u20133597."
+      },
+      {
+        "key": "566_CR7",
+        "unstructured": "Chen Z, Monperrus M. A literature study of embeddings on source code. arXiv preprint arXiv:1904.03061. 2019."
+      },
+      {
+        "key": "566_CR8",
+        "unstructured": "Cummins C, Fisches ZV, Ben-Nun T, Hoefler T, Leather H. Programl: graph-based deep learning for program optimization and analysis. arXiv preprint arXiv:2003.10536. 2020."
+      },
+      {
+        "key": "566_CR9",
+        "unstructured": "Dong Y, Guo W, Chen Y, Xing X, Zhang Y, Wang G. Towards the detection of inconsistencies in public security vulnerability reports. In: 28th USENIX Security Symposium (USENIX Security 19) (Santa Clara, CA, Aug. 2019), USENIX Association; 2019. p. 869\u2013885."
+      },
+      {
+        "key": "566_CR10",
+        "unstructured": "Equifax Inc. Cybersecurity incident and important consumer information. 2017. https://www.equifaxsecurity2017.com/consumer-notice/. Accessed 11 Jan 2021."
+      },
+      {
+        "key": "566_CR11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Falleri J-R, Morandat F, Blanc X, Martinez M, Monperrus M. Fine-grained and accurate source code differencing. In: Proceedings of the 29th ACM/IEEE international conference on automated software engineering; 2014. p. 313\u2013324.",
+        "DOI": "10.1145/2642937.2642982"
+      },
+      {
+        "key": "566_CR12",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Feng Z, Guo D, Tang D, Duan N, Feng X, Gong M, Shou L, Qin B, Liu T, Jiang D, et\u00a0al. Codebert: A pre-trained model for programming and natural languages. arXiv preprint arXiv:2002.08155. 2020.",
+        "DOI": "10.18653/v1/2020.findings-emnlp.139"
+      },
+      {
+        "key": "566_CR13",
+        "doi-asserted-by": "publisher",
+        "first-page": "725",
+        "DOI": "10.1109/TSE.2007.70731",
+        "volume": "11",
+        "author": "B Fluri",
+        "year": "2007",
+        "unstructured": "Fluri B, Wursch M, Pinzger M, Gall H. Change distilling: tree differencing for fine-grained source code change extraction. IEEE Trans Softw Eng. 2007;11:725\u201343.",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "566_CR14",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hindle A, Barr ET, Su Z, Gabel M, Devanbu P. On the naturalness of software. In: IEEE 2012 34th international conference on software engineering (ICSE); 2012. p.\u00a0837\u2013847.",
+        "DOI": "10.1109/ICSE.2012.6227135"
+      },
+      {
+        "key": "566_CR15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hoang T, Kang HJ, Lawall J, Lo D. Cc2vec: distributed representations of code changes. arXiv preprint arXiv:2003.05620. 2020.",
+        "DOI": "10.1145/3377811.3380361"
+      },
+      {
+        "key": "566_CR16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hoang T, Khanh Dam H, Kamei Y, Lo D, Ubayashi N. Deepjit: An end-to-end deep learning framework for just-in-time defect prediction. In: 2019 IEEE/ACM 16th international conference on mining software repositories (MSR); 2019. p.\u00a034\u201345.",
+        "DOI": "10.1109/MSR.2019.00016"
+      },
+      {
+        "key": "566_CR17",
+        "unstructured": "Lachaux M-A, Roziere B, Chanussot L, Lample G. Unsupervised translation of programming languages. arXiv preprint arXiv:2006.03511. 2020."
+      },
+      {
+        "key": "566_CR18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li Z, Zou D, Xu S, Ou X, Jin H, Wang S, Deng Z, Zhong Y. Vuldeepecker: a deep learning-based system for vulnerability detection. arXiv preprint arXiv:1801.01681. 2018.",
+        "DOI": "10.14722/ndss.2018.23158"
+      },
+      {
+        "issue": "5",
+        "key": "566_CR19",
+        "doi-asserted-by": "publisher",
+        "first-page": "339",
+        "DOI": "10.1080/21681163.2015.1061448",
+        "volume": "5",
+        "author": "J Margeta",
+        "year": "2017",
+        "unstructured": "Margeta J, Criminisi A, Cabrera Lozoya R, Lee DC, Ayache N. Fine-tuned convolutional neural nets for cardiac MRI acquisition plane recognition. Comput Methods Biomech Biomed Eng Imaging Vis. 2017;5(5):339\u201349.",
+        "journal-title": "Comput Methods Biomech Biomed Eng Imaging Vis"
+      },
+      {
+        "key": "566_CR20",
+        "unstructured": "Mikolov T, Chen K, Corrado G, Dean J. Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781. 2013."
+      },
+      {
+        "key": "566_CR21",
+        "unstructured": "OWASP Foundation. OWASP Top Ten. https://www.owasp.org/index.php/Top10. Accessed 04 Jan 2021."
+      },
+      {
+        "key": "566_CR22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ponta SE, Plate H, Sabetta A, Bezzi M, Dangremont C. A manually-curated dataset of fixes to vulnerabilities of open-source software. In: Proceedings of the 16th IEEE/ACM international conference on mining software repositories (MSR); 2019.",
+        "DOI": "10.1109/MSR.2019.00064"
+      },
+      {
+        "key": "566_CR23",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Raychev V, Vechev M, Yahav E. Code completion with statistical language models. SIGPLAN Not. 49, 6(June) 2014. p. 419\u2013428.",
+        "DOI": "10.1145/2666356.2594321"
+      },
+      {
+        "key": "566_CR24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sabetta A, Bezzi M. A practical approach to the automatic classification of security-relevant commits. In: 2018 IEEE international conference on software maintenance and evolution (ICSME). IEEE; 2018. p.\u00a0579\u2013582.",
+        "DOI": "10.1109/ICSME.2018.00058"
+      },
+      {
+        "key": "566_CR25",
+        "unstructured": "Santos CD, Zadrozny B. Learning character-level representations for part-of-speech tagging. In: Xing EP, Jebara T, editors. Proceedings of the 31st international conference on machine learning (Beijing, China, 22\u201324 Jun 2014), vol.\u00a032 of proceedings of machine learning research, PMLR; 2014. p.\u00a01818\u20131826."
+      },
+      {
+        "key": "566_CR26",
+        "unstructured": "Snyk.io. The state of open-source security. https://snyk.io/open-source-security/. Accessed 04 Jan 2021."
+      },
+      {
+        "key": "566_CR27",
+        "unstructured": "Synopsys. The heartbleed bug. http://heartbleed.com/. Accessed 04 Jan 2021."
+      },
+      {
+        "key": "566_CR28",
+        "unstructured": "Yin P, Neubig G, Allamanis M, Brockschmidt M, Gaunt AL. Learning to represent edits. arXiv preprint arXiv:1810.13337. 2018."
+      },
+      {
+        "key": "566_CR29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang J, Wang X, Zhang H, Sun H, Wang K, Liu X. A novel neural source code representation based on abstract syntax tree. In: 2019 IEEE/ACM 41st international conference on software engineering (ICSE). IEEE; 2019. p.\u00a0783\u2013794.",
+        "DOI": "10.1109/ICSE.2019.00086"
+      },
+      {
+        "key": "566_CR30",
+        "unstructured": "Zhou Y, Liu S, Siow J, Du X, Liu Y. Devign: effective vulnerability identification by learning comprehensive program semantics via graph neural networks. In: Advances in neural information processing systems; 2019. p.\u00a010197\u201310207."
+      },
+      {
+        "key": "566_CR31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhou Y, Sharma A. Automated identification of security issues from commit messages and bug reports. In: Proceedings of the 2017 11th Joint meeting on foundations of software engineering (New York), ESEC/FSE 2017, association for computing machinery; 2017. p.\u00a0914\u2013919.",
+        "DOI": "10.1145/3106237.3117771"
+      }
+    ],
+    "container-title": [
+      "SN Computer Science"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/s42979-021-00566-z.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/article/10.1007/s42979-021-00566-z/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/s42979-021-00566-z.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2021,
+          3,
+          19
+        ]
+      ],
+      "date-time": "2021-03-19T17:10:14Z",
+      "timestamp": 1616173814000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://link.springer.com/10.1007/s42979-021-00566-z"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          3,
+          19
+        ]
+      ]
+    },
+    "references-count": 31,
+    "journal-issue": {
+      "issue": "3",
+      "published-print": {
+        "date-parts": [
+          [
+            2021,
+            5
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "566"
+    ],
+    "URL": "http://dx.doi.org/10.1007/s42979-021-00566-z",
+    "relation": {},
+    "ISSN": [
+      "2662-995X",
+      "2661-8907"
+    ],
+    "issn-type": [
+      {
+        "value": "2662-995X",
+        "type": "print"
+      },
+      {
+        "value": "2661-8907",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          3,
+          19
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "13 July 2020",
+        "order": 1,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "4 March 2021",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "19 March 2021",
+        "order": 3,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "order": 1,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Declaration"
+        }
+      },
+      {
+        "value": "On behalf of all authors, the corresponding author states that there is no conflict of interest.",
+        "order": 2,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Conflict of interest"
+        }
+      }
+    ],
+    "article-number": "150"
+  }
+}

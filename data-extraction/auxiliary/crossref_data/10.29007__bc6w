@@ -1,0 +1,132 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          8
+        ]
+      ],
+      "date-time": "2023-01-08T19:50:18Z",
+      "timestamp": 1673207418194
+    },
+    "reference-count": 0,
+    "publisher": "EasyChair",
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          29
+        ]
+      ]
+    },
+    "abstract": "<jats:p>A major challenge when using techniques from Natural Language Processing for supervised learning on computer program source code is that many words in code are neologisms. Reasoning over such an unbounded vocabulary is not something NLP methods are typically suited for. We introduce a deep model that contends with an unbounded vocabulary (at training or test time) by embedding new words as nodes in a graph as they are encountered and processing the graph with a Graph Neural Network.</jats:p>",
+    "DOI": "10.29007/bc6w",
+    "type": "report-series",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          29
+        ]
+      ],
+      "date-time": "2018-08-29T18:11:38Z",
+      "timestamp": 1535566298000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 5,
+    "title": [
+      "Deep Learning On Code with an Unbounded Vocabulary"
+    ],
+    "prefix": "10.29007",
+    "author": [
+      {
+        "given": "Milan",
+        "family": "Cvitkovic",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Badal",
+        "family": "Singh",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Anima",
+        "family": "Anandkumar",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "11545",
+    "container-title": [
+      "EasyChair Preprints"
+    ],
+    "original-title": [],
+    "deposited": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          29
+        ]
+      ],
+      "date-time": "2018-08-29T18:11:41Z",
+      "timestamp": 1535566301000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://easychair.org/publications/preprint/8Zpt"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          29
+        ]
+      ]
+    },
+    "references-count": 0,
+    "alternative-id": [
+      "466"
+    ],
+    "URL": "http://dx.doi.org/10.29007/bc6w",
+    "relation": {},
+    "ISSN": [
+      "2516-2314"
+    ],
+    "issn-type": [
+      {
+        "value": "2516-2314",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          29
+        ]
+      ]
+    }
+  }
+}

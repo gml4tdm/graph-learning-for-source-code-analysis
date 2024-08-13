@@ -1,0 +1,665 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          8
+        ]
+      ],
+      "date-time": "2024-07-08T21:17:15Z",
+      "timestamp": 1720473435193
+    },
+    "reference-count": 42,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100007219",
+        "name": "Natural Science Foundation of Shanghai",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "21ZR1416300"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61772200"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Information and Software Technology"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.infsof.2021.106761",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          11,
+          23
+        ]
+      ],
+      "date-time": "2021-11-23T02:07:05Z",
+      "timestamp": 1637633225000
+    },
+    "page": "106761",
+    "update-policy": "http://dx.doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 7,
+    "special_numbering": "C",
+    "title": [
+      "Summarizing source code with hierarchical code representation"
+    ],
+    "prefix": "10.1016",
+    "volume": "143",
+    "author": [
+      {
+        "given": "Ziyi",
+        "family": "Zhou",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Huiqun",
+        "family": "Yu",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Guisheng",
+        "family": "Fan",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Zijie",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Xingguang",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "issue": "10",
+        "key": "10.1016/j.infsof.2021.106761_bib0001",
+        "doi-asserted-by": "crossref",
+        "first-page": "951",
+        "DOI": "10.1109/TSE.2017.2734091",
+        "article-title": "Measuring program comprehension: A large-scale field study with professionals",
+        "volume": "44",
+        "author": "Xia",
+        "year": "2018",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0002",
+        "series-title": "ASE 2010, 25th IEEE/ACM International Conference on Automated Software Engineering",
+        "first-page": "43",
+        "article-title": "Towards automatically generating summary comments for java methods",
+        "author": "Sridhara",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0003",
+        "series-title": "17th Working Conference on Reverse Engineering, WCRE 2010",
+        "first-page": "35",
+        "article-title": "On the use of automated text summarization techniques for summarizing source code",
+        "author": "Haiduc",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0004",
+        "series-title": "Proceedings of the 33rd International Conference on Software Engineering, ICSE 2011",
+        "first-page": "101",
+        "article-title": "Automatically detecting and describing high level actions within methods",
+        "author": "Sridhara",
+        "year": "2011"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0005",
+        "series-title": "Proceedings of the 32nd ACM/IEEE International Conference on Software Engineering - Volume 2, ICSE 2010",
+        "first-page": "223",
+        "article-title": "Supporting program comprehension with source code summarization",
+        "author": "Haiduc",
+        "year": "2010"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.infsof.2021.106761_bib0006",
+        "doi-asserted-by": "crossref",
+        "first-page": "103",
+        "DOI": "10.1109/TSE.2015.2465386",
+        "article-title": "Automatic source code summarization of context for java methods",
+        "volume": "42",
+        "author": "McBurney",
+        "year": "2016",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0007",
+        "series-title": "Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics, ACL 2013, 4-9 August 2013",
+        "first-page": "35",
+        "article-title": "Natural language models for predicting programming comments",
+        "author": "Movshovitz-Attias",
+        "year": "2013"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0008",
+        "series-title": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics, ACL 2016",
+        "article-title": "Summarizing source code using a neural attention model",
+        "author": "Iyer",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0009",
+        "series-title": "Proceedings of the 33nd International Conference on Machine Learning, ICML 2016",
+        "first-page": "2091",
+        "article-title": "A convolutional attention network for extreme summarization of source code",
+        "volume": "48",
+        "author": "Allamanis",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0010",
+        "series-title": "Proceedings of the 26th Conference on Program Comprehension, ICPC 2018",
+        "first-page": "200",
+        "article-title": "Deep code comment generation",
+        "author": "Hu",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0011",
+        "series-title": "7th International Conference on Learning Representations, ICLR 2019",
+        "article-title": "code2seq: Generating sequences from structured representations of code",
+        "author": "Alon",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0012",
+        "series-title": "ICSE \u201920: 42nd International Conference on Software Engineering",
+        "first-page": "1385",
+        "article-title": "Retrieval-based neural source code summarization",
+        "author": "Zhang",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0013",
+        "series-title": "Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering, ASE 2018",
+        "first-page": "397",
+        "article-title": "Improving automatic source code summarization via deep reinforcement learning",
+        "author": "Wan",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0014",
+        "series-title": "Proceedings of the 41st International Conference on Software Engineering, ICSE 2019",
+        "first-page": "795",
+        "article-title": "A neural model for generating natural language summaries of program subroutines",
+        "author": "LeClair",
+        "year": "2019"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.infsof.2021.106761_bib0015",
+        "doi-asserted-by": "crossref",
+        "first-page": "2179",
+        "DOI": "10.1007/s10664-019-09730-9",
+        "article-title": "Deep code comment generation with hybrid lexical and syntactical information",
+        "volume": "25",
+        "author": "Hu",
+        "year": "2020",
+        "journal-title": "Empir. Softw. Eng."
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0016",
+        "series-title": "Proceedings of the Twenty-Seventh International Joint Conference on Artificial Intelligence, IJCAI 2018",
+        "first-page": "2269",
+        "article-title": "Summarizing source code with transferred API knowledge",
+        "author": "Hu",
+        "year": "2018"
+      },
+      {
+        "issue": "12",
+        "key": "10.1016/j.infsof.2021.106761_bib0017",
+        "doi-asserted-by": "crossref",
+        "first-page": "2313",
+        "DOI": "10.1002/spe.2893",
+        "article-title": "Effective approaches to combining lexical and syntactical information for code summarization",
+        "volume": "50",
+        "author": "Zhou",
+        "year": "2020",
+        "journal-title": "Softw. Pract. Exp."
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0018",
+        "series-title": "7th International Conference on Learning Representations, ICLR 2019",
+        "article-title": "Structured neural summarization",
+        "author": "Fernandes",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0019",
+        "series-title": "CoRR",
+        "article-title": "Automatic code summarization via multi-dimensional semantic fusing in GNN",
+        "author": "Liu",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0020",
+        "series-title": "ICPC \u201920: 28th International Conference on Program Comprehension",
+        "first-page": "184",
+        "article-title": "Improved code summarization via a graph neural network",
+        "author": "LeClair",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0021",
+        "series-title": "Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering, ASE 2018",
+        "first-page": "826",
+        "article-title": "A neural framework for retrieval and summarization of source code",
+        "author": "Chen",
+        "year": "2018"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0022",
+        "series-title": "The World Wide Web Conference, WWW 2019",
+        "first-page": "2203",
+        "article-title": "Coacor: Code annotation for code retrieval with reinforcement learning",
+        "author": "Yao",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0023",
+        "series-title": "Advances in Neural Information Processing Systems 32: Annual Conference on Neural Information Processing Systems 2019",
+        "first-page": "6559",
+        "article-title": "Code generation as a dual task of code summarization",
+        "author": "Wei",
+        "year": "2019"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0024",
+        "series-title": "WWW \u201920: The Web Conference 2020",
+        "first-page": "2309",
+        "article-title": "Leveraging code generation to improve code retrieval and summarization via dual learning",
+        "author": "Ye",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0025",
+        "article-title": "Reinforcement-learning-guided source code summarization via hierarchical attention",
+        "author": "Wang",
+        "year": "2020",
+        "journal-title": "IEEE Trans. Softw. Eng."
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0026",
+        "series-title": "Advances in Neural Information Processing Systems 27: Annual Conference on Neural Information Processing Systems 2014",
+        "first-page": "3104",
+        "article-title": "Sequence to sequence learning with neural networks",
+        "author": "Sutskever",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0027",
+        "series-title": "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, EMNLP 2014",
+        "first-page": "1724",
+        "article-title": "Learning phrase representations using RNN encoder-decoder for statistical machine translation",
+        "author": "Cho",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0028",
+        "series-title": "Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing, EMNLP 2015",
+        "first-page": "1412",
+        "article-title": "Effective approaches to attention-based neural machine translation",
+        "author": "Luong",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0029",
+        "series-title": "CoRR",
+        "article-title": "Google's neural machine translation system: Bridging the gap between human and machine translation",
+        "author": "Wu",
+        "year": "2016"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0030",
+        "series-title": "Proceedings of the 39th International Conference on Software Engineering, ICSE 2017",
+        "first-page": "164",
+        "article-title": "Automatic categorization with deep neural network for open-source java projects",
+        "author": "Nguyen",
+        "year": "2017"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0031",
+        "series-title": "NAACL HLT 2016, The 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+        "first-page": "1480",
+        "article-title": "Hierarchical attention networks for document classification",
+        "author": "Yang",
+        "year": "2016"
+      },
+      {
+        "issue": "8",
+        "key": "10.1016/j.infsof.2021.106761_bib0032",
+        "doi-asserted-by": "crossref",
+        "first-page": "1735",
+        "DOI": "10.1162/neco.1997.9.8.1735",
+        "article-title": "Long short-term memory",
+        "volume": "9",
+        "author": "Hochreiter",
+        "year": "1997",
+        "journal-title": "Neural. Comput."
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0033",
+        "series-title": "Proceedings of SSST@EMNLP 2014, Eighth Workshop on Syntax, Semantics and Structure in Statistical Translation",
+        "first-page": "103",
+        "article-title": "On the properties of neural machine translation: Encoder-decoder approaches",
+        "author": "Cho",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0034",
+        "series-title": "Proceedings of the Thirteenth International Conference on Artificial Intelligence and Statistics, AISTATS 2010",
+        "first-page": "249",
+        "article-title": "Understanding the difficulty of training deep feedforward neural networks",
+        "author": "Glorot",
+        "year": "2010"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0035",
+        "series-title": "3rd International Conference on Learning Representations, ICLR 2015",
+        "article-title": "Adam: A method for stochastic optimization",
+        "author": "Kingma",
+        "year": "2015"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.infsof.2021.106761_bib0036",
+        "first-page": "1929",
+        "article-title": "Dropout: a simple way to prevent neural networks from overfitting",
+        "volume": "15",
+        "author": "Srivastava",
+        "year": "2014",
+        "journal-title": "J. Mach. Learn. Res."
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0037",
+        "series-title": "Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics",
+        "first-page": "311",
+        "article-title": "Bleu: a method for automatic evaluation of machine translation",
+        "author": "Papineni",
+        "year": "2002"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0038",
+        "series-title": "Workshop on Text Summarization Branches Out, Post-Conference Workshop of ACL 2004",
+        "article-title": "Rouge: a package for automatic evaluation of summaries",
+        "author": "Lin",
+        "year": "2004"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0039",
+        "series-title": "Proceedings of the Ninth Workshop on Statistical Machine Translation, WMT@ACL 2014The Association for Computer Linguistics",
+        "first-page": "362",
+        "article-title": "A systematic comparison of smoothing techniques for sentence-level BLEU",
+        "author": "Chen",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0040",
+        "series-title": "Proceedings of the Ninth Workshop on Statistical Machine Translation",
+        "article-title": "Meteor universal: language specific translation evaluation for any target language",
+        "author": "Denkowski",
+        "year": "2014"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0041",
+        "series-title": "Proceedings of the 30th IEEE/ACM International Conference on Automated Software Engineering",
+        "first-page": "574",
+        "article-title": "Learning to generate pseudo-code from source code using statistical machine translation",
+        "author": "Oda",
+        "year": "2015"
+      },
+      {
+        "key": "10.1016/j.infsof.2021.106761_bib0042",
+        "series-title": "Proceedings of the 35th IEEE/ACM International Conference on Automated Software Engineering",
+        "first-page": "349",
+        "article-title": "Retrieve and refine: exemplar-based neural comment generation",
+        "author": "Wei",
+        "year": "2020"
+      }
+    ],
+    "container-title": [
+      "Information and Software Technology"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S095058492100207X?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S095058492100207X?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          3,
+          9
+        ]
+      ],
+      "date-time": "2023-03-09T20:13:55Z",
+      "timestamp": 1678392835000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S095058492100207X"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "references-count": 42,
+    "alternative-id": [
+      "S095058492100207X"
+    ],
+    "URL": "http://dx.doi.org/10.1016/j.infsof.2021.106761",
+    "relation": {},
+    "ISSN": [
+      "0950-5849"
+    ],
+    "issn-type": [
+      {
+        "value": "0950-5849",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Summarizing source code with hierarchical code representation",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Information and Software Technology",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.infsof.2021.106761",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "\u00a9 2021 Elsevier B.V. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "106761"
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          18
+        ]
+      ],
+      "date-time": "2024-07-18T01:35:05Z",
+      "timestamp": 1721266505423
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 24,
+    "publisher": "ACM",
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2010,
+          9,
+          15
+        ]
+      ]
+    },
+    "DOI": "10.1145/1853919.1853923",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2010,
+          9,
+          22
+        ]
+      ],
+      "date-time": "2010-09-22T12:04:33Z",
+      "timestamp": 1285157073000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 70,
+    "title": [
+      "Predicting vulnerable software components with dependency graphs"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Viet Hung",
+        "family": "Nguyen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Trento, Italy"
+          }
+        ]
+      },
+      {
+        "given": "Le Minh Sang",
+        "family": "Tran",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Trento, Italy"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2010,
+          9,
+          15
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/872016.872155"
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.eswa.2008.10.027"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.sysarc.2010.06.003"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "volume-title": "NJ: Lawrence Erlbaum Associates",
+        "author": "Cohen J.",
+        "year": "1988"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1449814.1449907"
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ISSRE.2008.24"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1456362.1456370"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1370788.1370793"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1853919.1853925"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.10"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1062455.1062514"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1315245.1315311"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.1015"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1295074.1295080"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "unstructured": "}}A. Ozment. Vulnerability Discovery and Software Security. PhD thesis University of Cambridge. Cambridge UK 2007.  }}A. Ozment. Vulnerability Discovery and Software Security . PhD thesis University of Cambridge. Cambridge UK 2007."
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "volume-title": "Proc. of the Int. Doctoral Symp. on Empirical Soft. Eng. (IDoESE'08)",
+        "author": "Shin Y."
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1414004.1414065"
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1456362.1456372"
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "unstructured": "}}Wessa. P. (2010) Free Statistics Software Office for Research Development and Education version 1.1.23-r6. http://www.wessa.net/.  }}Wessa. P. (2010) Free Statistics Software Office for Research Development and Education version 1.1.23-r6. http://www.wessa.net/."
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.70706"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PRDC.2007.56"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ESEM.2009.5316024"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/PROMISE.2007.10"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1049/ic:20040466"
+      }
+    ],
+    "event": {
+      "name": "ESEM '10: 2010 ACM-IEEE International Symposium on Empirical Software Engineering and Measurement",
+      "location": "Bolzano Italy",
+      "acronym": "ESEM '10",
+      "sponsor": [
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE CS"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 6th International Workshop on Security Measurements and Metrics"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/1853919.1853923",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          12
+        ]
+      ],
+      "date-time": "2023-01-12T05:18:57Z",
+      "timestamp": 1673500737000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/1853919.1853923"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          9,
+          15
+        ]
+      ]
+    },
+    "references-count": 24,
+    "alternative-id": [
+      "10.1145/1853919.1853923",
+      "10.1145/1853919"
+    ],
+    "URL": "http://dx.doi.org/10.1145/1853919.1853923",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2010,
+          9,
+          15
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2010-09-15",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

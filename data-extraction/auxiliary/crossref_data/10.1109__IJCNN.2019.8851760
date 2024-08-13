@@ -1,0 +1,371 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          2
+        ]
+      ],
+      "date-time": "2024-07-02T11:19:09Z",
+      "timestamp": 1719919149830
+    },
+    "reference-count": 29,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2019-07-01T00:00:00Z",
+          "timestamp": 1561939200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2019-07-01T00:00:00Z",
+          "timestamp": 1561939200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2019-07-01T00:00:00Z",
+          "timestamp": 1561939200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          7
+        ]
+      ]
+    },
+    "DOI": "10.1109/ijcnn.2019.8851760",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          10,
+          1
+        ]
+      ],
+      "date-time": "2019-10-01T03:44:32Z",
+      "timestamp": 1569901472000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 5,
+    "title": [
+      "JSAC: A Novel Framework to Detect Malicious JavaScript via CNNs over AST and CFG"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Hongliang",
+        "family": "Liang",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Yuxing",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Lu",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Lin",
+        "family": "Jiang",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2018.2874098"
+      },
+      {
+        "key": "ref11",
+        "first-page": "3111",
+        "article-title": "Distributed Representations of Words and Phrases and their Compositionality",
+        "author": "mikolov",
+        "year": "2013",
+        "journal-title": "Advances in Neural Information Processing Systems 26 27th Annual Conference on Neural Information Processing Systems 2013 Proceedings of a meeting held December 5-8 2013"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-93411-2_14"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227135"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-25159-2_49"
+      },
+      {
+        "key": "ref15",
+        "author": "mou",
+        "year": "2014",
+        "journal-title": "Convolutional neural networks over tree structures for programming language processing"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICTAI.2017.00019"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/78.650093"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "ref19",
+        "first-page": "6000",
+        "article-title": "Attention Is All You Need",
+        "author": "ashish",
+        "year": "2017",
+        "journal-title": "NIPS"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1772690.1772720"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5220/0001863603170320"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2714576.2714620"
+      },
+      {
+        "key": "ref3",
+        "first-page": "169",
+        "article-title": "NOZZLE: A Defense Against Heap-spraying Code Injection Attacks",
+        "author": "ratanaworabhan",
+        "year": "2009",
+        "journal-title": "18th USENIX Security Symposium Montreal Canada August 10-14 2009 Proceedings"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSTW.2010.41"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2435349.2435364"
+      },
+      {
+        "key": "ref5",
+        "first-page": "911",
+        "article-title": "Efficient Detection of Malicious Web Pages Using High-Interaction Client Honeypots",
+        "volume": "28",
+        "author": "kim",
+        "year": "2012",
+        "journal-title": "J Inf Sci Eng"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2638404.2737181"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ATNAC.2008.4783302"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-642-02918-9_6"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2018.2795383"
+      },
+      {
+        "key": "ref1",
+        "article-title": "The Ghost in the Browser: Analysis of Web-based Malware",
+        "author": "provos",
+        "year": "2007",
+        "journal-title": "First workshop on hot topics in understanding botnets"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/390013.808479"
+      },
+      {
+        "key": "ref22",
+        "article-title": "Adam: A Method for Stochastic Optimization",
+        "author": "kingma",
+        "year": "2014",
+        "journal-title": "CoRR"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/MALWARE.2009.5403020"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/sec.1441"
+      },
+      {
+        "key": "ref23",
+        "first-page": "2825",
+        "article-title": "Scikit-learn: Machine Learning in Python",
+        "volume": "12",
+        "author": "pedregosa",
+        "year": "2011",
+        "journal-title": "Journal of Machine Learning Research"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SP.2005.20"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IJCNN.2018.8489414"
+      }
+    ],
+    "event": {
+      "name": "2019 International Joint Conference on Neural Networks (IJCNN)",
+      "location": "Budapest, Hungary",
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            7,
+            14
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2019,
+            7,
+            19
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2019 International Joint Conference on Neural Networks (IJCNN)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/8840768/8851681/08851760.pdf?arnumber=8851760",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          17
+        ]
+      ],
+      "date-time": "2022-07-17T21:55:29Z",
+      "timestamp": 1658094929000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8851760/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          7
+        ]
+      ]
+    },
+    "references-count": 29,
+    "URL": "http://dx.doi.org/10.1109/ijcnn.2019.8851760",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          7
+        ]
+      ]
+    }
+  }
+}

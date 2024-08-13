@@ -1,0 +1,624 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          20
+        ]
+      ],
+      "date-time": "2024-06-20T14:42:14Z",
+      "timestamp": 1718894534518
+    },
+    "reference-count": 41,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "12",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2016,
+              11,
+              7
+            ]
+          ],
+          "date-time": "2016-11-07T00:00:00Z",
+          "timestamp": 1478476800000
+        },
+        "content-version": "unspecified",
+        "delay-in-days": 0,
+        "URL": "http://www.springer.com/tdm"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Sci. China Inf. Sci."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2016,
+          12
+        ]
+      ]
+    },
+    "DOI": "10.1007/s11432-015-5426-3",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2016,
+          11,
+          11
+        ]
+      ],
+      "date-time": "2016-11-11T01:25:31Z",
+      "timestamp": 1478827531000
+    },
+    "update-policy": "http://dx.doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 15,
+    "title": [
+      "Empirical analysis of network measures for predicting high severity software faults"
+    ],
+    "prefix": "10.1007",
+    "volume": "59",
+    "author": [
+      {
+        "given": "Lin",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Wanwangying",
+        "family": "Ma",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Yuming",
+        "family": "Zhou",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Lei",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Ziyuan",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Zhifei",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Baowen",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2016,
+          11,
+          7
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "5426_CR1",
+        "doi-asserted-by": "crossref",
+        "first-page": "771",
+        "DOI": "10.1109/TSE.2006.102",
+        "volume": "32",
+        "author": "Y Zhou",
+        "year": "2006",
+        "unstructured": "Zhou Y, Leung H. Empirical analysis of object-oriented design metrics for predicting high and low severity faults. IEEE Trans Softw Eng, 2006, 32: 771\u2013789",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "5426_CR2",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1145/2047414.2047423",
+        "volume": "36",
+        "author": "R S Chhillar",
+        "year": "2011",
+        "unstructured": "Chhillar R S, Nisha. Empirical analysis of object-oriented design metrics for predicting high, medium and low severity faults using mallows Cp. ACM SIGSOFT Softw Eng Notes, 2011, 36: 1\u20139",
+        "journal-title": "ACM SIGSOFT Softw Eng Notes"
+      },
+      {
+        "key": "5426_CR3",
+        "doi-asserted-by": "crossref",
+        "first-page": "751",
+        "DOI": "10.1109/32.544352",
+        "volume": "22",
+        "author": "V R Basili",
+        "year": "1996",
+        "unstructured": "Basili V R, Briand L C, Melo W L. A validation of object-oriented design metrics as quality indicators. IEEE Trans Softw Eng, 1996, 22: 751\u2013761",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "5426_CR4",
+        "doi-asserted-by": "crossref",
+        "first-page": "297",
+        "DOI": "10.1109/TSE.2003.1191795",
+        "volume": "29",
+        "author": "R Subramanyam",
+        "year": "2003",
+        "unstructured": "Subramanyam R, Krishnan M S. Empirical analysis of ck metrics for object-oriented design complexity: implications for software defects. IEEE Trans Softw Eng, 2003, 29: 297\u2013310",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "5426_CR5",
+        "doi-asserted-by": "crossref",
+        "first-page": "452",
+        "DOI": "10.1145/1134285.1134349",
+        "volume-title": "Proceedings of the 28th International Conference on Software Engineering",
+        "author": "N Nagappan",
+        "year": "2006",
+        "unstructured": "Nagappan N, Ball T, Zeller A. Mining metrics to predict component failures. In: Proceedings of the 28th International Conference on Software Engineering. New York: ACM, 2006. 452\u2013461"
+      },
+      {
+        "key": "5426_CR6",
+        "doi-asserted-by": "crossref",
+        "first-page": "274",
+        "DOI": "10.1109/ICSM.2009.5306304",
+        "volume-title": "Proceedings of 2009 IEEE International Conference on Software Maintenance",
+        "author": "H Y Zhang",
+        "year": "2009",
+        "unstructured": "Zhang H Y. An investigation of the relationships between lines of code and defects. In: Proceedings of 2009 IEEE International Conference on Software Maintenance. Piscataway: IEEE, 2009. 274\u2013283"
+      },
+      {
+        "key": "5426_CR7",
+        "first-page": "284",
+        "volume-title": "Proceedings of the 27th International Conference on Software Engineering",
+        "author": "N Nagappan",
+        "year": "2005",
+        "unstructured": "Nagappan N, Ball T. Use of relative code churn measures to predict system defect density. In: Proceedings of the 27th International Conference on Software Engineering. Piscataway: IEEE, 2005. 284\u2013292"
+      },
+      {
+        "key": "5426_CR8",
+        "first-page": "181",
+        "volume-title": "Proceedings of the 30th International Conference on Software Engineering",
+        "author": "R Moser",
+        "year": "2008",
+        "unstructured": "Moser R, Pedrycz W, Succi G. A comparative analysis of the efficiency of change metrics and static code attributes for defect prediction. In: Proceedings of the 30th International Conference on Software Engineering. Piscataway: IEEE, 2008. 181\u2013190"
+      },
+      {
+        "key": "5426_CR9",
+        "first-page": "78",
+        "volume-title": "Proceedings of the 31st International Conference on Software Engineering",
+        "author": "A E Hassan",
+        "year": "2009",
+        "unstructured": "Hassan A E. Predicting faults using the complexity of code changes. In: Proceedings of the 31st International Conference on Software Engineering. Piscataway: IEEE, 2009. 78\u201388"
+      },
+      {
+        "key": "5426_CR10",
+        "doi-asserted-by": "crossref",
+        "first-page": "263",
+        "DOI": "10.1109/ICSM.2005.91",
+        "volume-title": "Proceedings of the 21st IEEE International Conference on Software Maintenance",
+        "author": "A E Hassan",
+        "year": "2005",
+        "unstructured": "Hassan A E, Holt R C. The top ten list: dynamic fault prediction. In: Proceedings of the 21st IEEE International Conference on Software Maintenance. Piscataway: IEEE, 2005. 263\u2013272"
+      },
+      {
+        "key": "5426_CR11",
+        "doi-asserted-by": "crossref",
+        "first-page": "340",
+        "DOI": "10.1109/TSE.2005.49",
+        "volume": "31",
+        "author": "T J Ostrand",
+        "year": "2005",
+        "unstructured": "Ostrand T J, Weyuker E J, Bell R M. Predicting the location and number of faults in large software systems. IEEE Trans Softw Eng, 2005, 31: 340\u2013355",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "5426_CR12",
+        "first-page": "121101",
+        "volume": "57",
+        "author": "W Q Zhang",
+        "year": "2014",
+        "unstructured": "Zhang W Q, Nie L M, Jiang H, et al. Developer social networks in software engineering: construction, analysis, and applications. Sci China Inf Sci, 2014, 57: 121101",
+        "journal-title": "Sci China Inf Sci"
+      },
+      {
+        "key": "5426_CR13",
+        "first-page": "435",
+        "volume-title": "Proceedings of the 3rd International Symposium on Empirical Software Engineering and Measurement",
+        "author": "T Zimmermann",
+        "year": "2009",
+        "unstructured": "Zimmermann T, Nagappan N. Predicting defects with program dependencies. In: Proceedings of the 3rd International Symposium on Empirical Software Engineering and Measurement. Piscataway: IEEE, 2009: 435\u2013438"
+      },
+      {
+        "key": "5426_CR14",
+        "first-page": "531",
+        "volume-title": "Proceedings of the 30th International Conference on Software Engineering",
+        "author": "T Zimmermann",
+        "year": "2008",
+        "unstructured": "Zimmermann T, Nagappan N. Predicting defects using network analysis on dependency graphs. In: Proceedings of the 30th International Conference on Software Engineering. New York: ACM, 2008. 531\u2013540"
+      },
+      {
+        "key": "5426_CR15",
+        "first-page": "270",
+        "volume-title": "Proceedings of the 29th IEEE International Conference on Software Maintenance",
+        "author": "S E S Taba",
+        "year": "2013",
+        "unstructured": "Taba S E S, Khomh F, Zou Y, et al. Predicting bugs using antipatterns. In: Proceedings of the 29th IEEE International Conference on Software Maintenance. Piscataway: IEEE, 2013. 270\u2013279"
+      },
+      {
+        "key": "5426_CR16",
+        "first-page": "1",
+        "volume-title": "Proceedings of the 5th International Conference on Predictor Models in Software Engineering",
+        "author": "A Tosun",
+        "year": "2009",
+        "unstructured": "Tosun A, Turhan B, Bener A. Validation of network measures as indicators of defective modules in software systems. In: Proceedings of the 5th International Conference on Predictor Models in Software Engineering. New York: ACM, 2009. 1\u20135"
+      },
+      {
+        "key": "5426_CR17",
+        "first-page": "215",
+        "volume-title": "Proceedings of the 5th International Symposium on Empirical Software Engineering and Measurement",
+        "author": "R Premraj",
+        "year": "2011",
+        "unstructured": "Premraj R, Herzig K. Network versus code metrics to predict defects: a replication study. In: Proceedings of the 5th International Symposium on Empirical Software Engineering and Measurement. Piscataway: IEEE, 2011. 215\u2013224"
+      },
+      {
+        "key": "5426_CR18",
+        "first-page": "1",
+        "volume-title": "Proceedings of the 2010 IEEE International Conference on Software Maintenance",
+        "author": "T H D Nguyen",
+        "year": "2010",
+        "unstructured": "Nguyen T H D, Adams B, Hassan A E. Studying the impact of dependency network measures on software quality. In: Proceedings of the 2010 IEEE International Conference on Software Maintenance. Piscataway: IEEE, 2010. 1\u201310"
+      },
+      {
+        "key": "5426_CR19",
+        "first-page": "60",
+        "volume": "v2",
+        "author": "Y Ma",
+        "year": "2010",
+        "unstructured": "Ma Y, He K, Li B, et al. How multiple-dependency structure of classes affects their functions a statistical perspective. In: Proceedings of the 2nd International Conference on Software Technology and Engineering. Piscataway: IEEE, 2010, v2: 60\u201366",
+        "journal-title": "Proceedings of the 2nd International Conference on Software Technology and Engineering"
+      },
+      {
+        "key": "5426_CR20",
+        "doi-asserted-by": "crossref",
+        "first-page": "456",
+        "DOI": "10.1109/32.799939",
+        "volume": "25",
+        "author": "V R Basili",
+        "year": "1999",
+        "unstructured": "Basili V R, Shull F, Lanubile F. Building knowledge through families of experiments. IEEE Trans Softw Eng, 1999, 25: 456\u2013473",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "5426_CR21",
+        "first-page": "50",
+        "volume-title": "Elements of Software Science",
+        "author": "M H Halstead",
+        "year": "1977",
+        "unstructured": "Halstead M H. Elements of Software Science. New York: Elsevier, 1977. 50\u201370"
+      },
+      {
+        "key": "5426_CR22",
+        "doi-asserted-by": "crossref",
+        "first-page": "476",
+        "DOI": "10.1109/32.295895",
+        "volume": "20",
+        "author": "S R Chidamber",
+        "year": "1994",
+        "unstructured": "Chidamber S R, Kemerer C F. A metrics suite for object oriented design. IEEE Trans Softw Eng, 1994, 20: 476\u2013493",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "5426_CR23",
+        "first-page": "153",
+        "volume-title": "Applied Logistic Regression",
+        "author": "D W Hosmer Jr",
+        "year": "2004",
+        "unstructured": "Hosmer Jr D W, Lemeshow S. Applied Logistic Regression. New Jersey: John Wiley & Sons, 2004. 153\u2013223"
+      },
+      {
+        "key": "5426_CR24",
+        "doi-asserted-by": "crossref",
+        "first-page": "6",
+        "DOI": "10.1002/0471725153.ch2",
+        "volume-title": "Regression Diagnostics: Identifying Influential Data and Sources of Collinearity",
+        "author": "D A Belsley",
+        "year": "2005",
+        "unstructured": "Belsley D A, Kuh E, Welsch R E. Regression Diagnostics: Identifying Influential Data and Sources of Collinearity. New Jersey: John Wiley & Sons, 2005. 6\u201338"
+      },
+      {
+        "key": "5426_CR25",
+        "doi-asserted-by": "crossref",
+        "first-page": "215",
+        "DOI": "10.1007/978-1-4757-3462-1_10",
+        "volume-title": "Regression Modeling Strategies: With Applications to Linear Models, Logistic Regression, and Survival Analysis",
+        "author": "F E Harrell",
+        "year": "2001",
+        "unstructured": "Harrell F E. Regression Modeling Strategies: With Applications to Linear Models, Logistic Regression, and Survival Analysis. New York: Springer, 2001. 215\u2013268"
+      },
+      {
+        "key": "5426_CR26",
+        "first-page": "20",
+        "volume-title": "Applied Linear Regression Models",
+        "author": "M H Kutner",
+        "year": "2004",
+        "unstructured": "Kutner M H, Nachtsheim C, Neter J. Applied Linear Regression Models. 4th ed. Chicago: Irwin, 2004. 20\u201370"
+      },
+      {
+        "key": "5426_CR27",
+        "doi-asserted-by": "crossref",
+        "first-page": "100",
+        "DOI": "10.1017/CBO9780511810176",
+        "volume-title": "Limited-Dependent and Qualitative Variables in Econometrics",
+        "author": "G S Maddala",
+        "year": "1983",
+        "unstructured": "Maddala G S. Limited-Dependent and Qualitative Variables in Econometrics. New York: Cambridge University Press, 1983. 100\u2013124"
+      },
+      {
+        "key": "5426_CR28",
+        "doi-asserted-by": "crossref",
+        "first-page": "691",
+        "DOI": "10.1093/biomet/78.3.691",
+        "volume": "78",
+        "author": "N J D Nagelkerke",
+        "year": "1991",
+        "unstructured": "Nagelkerke N J D. A note on a general definition of the coefficient of determination. Biometrika, 1991, 78: 691\u2013692",
+        "journal-title": "Biometrika"
+      },
+      {
+        "key": "5426_CR29",
+        "doi-asserted-by": "crossref",
+        "first-page": "289",
+        "DOI": "10.1111/j.2517-6161.1995.tb02031.x",
+        "volume": "57",
+        "author": "Y Benjamini",
+        "year": "1995",
+        "unstructured": "Benjamini Y, Hochberg Y. Controlling the false discovery rate: a practical and powerful approach to multiple testing. J Royal Stat Soc Ser B (Methodological), 1995, 57: 289\u2013300",
+        "journal-title": "J Royal Stat Soc Ser B (Methodological)"
+      },
+      {
+        "key": "5426_CR30",
+        "doi-asserted-by": "crossref",
+        "first-page": "48",
+        "DOI": "10.1016/j.ecolmodel.2008.05.015",
+        "volume": "217",
+        "author": "E A Freeman",
+        "year": "2008",
+        "unstructured": "Freeman E A, Moisen G G. A comparison of the performance of threshold criteria for binary classification in terms of predicted prevalence and kappa. Ecol Model, 2008, 217: 48\u201358",
+        "journal-title": "Ecol Model"
+      },
+      {
+        "key": "5426_CR31",
+        "doi-asserted-by": "crossref",
+        "first-page": "167",
+        "DOI": "10.1007/s10515-011-0090-3",
+        "volume": "19",
+        "author": "Z He",
+        "year": "2012",
+        "unstructured": "He Z, Shu F, Yang Y, et al. An investigation on the feasibility of cross-project defect prediction. Autom Softw Eng, 2012, 19: 167\u2013199",
+        "journal-title": "Autom Softw Eng"
+      },
+      {
+        "key": "5426_CR32",
+        "first-page": "2114",
+        "volume": "6",
+        "author": "R H Chang",
+        "year": "2011",
+        "unstructured": "Chang R H, Mu X D, Zhang L. Software defect prediction using non-negative matrix factorization. J Softw, 2011, 6: 2114\u20132120",
+        "journal-title": "J Softw"
+      },
+      {
+        "key": "5426_CR33",
+        "first-page": "120",
+        "volume-title": "Case Study Research: Design and Methods",
+        "author": "R K Yin",
+        "year": "2002",
+        "unstructured": "Yin R K. Case Study Research: Design and Methods. 3rd ed. New York: SAGE Publications, 2002. 120\u2013180"
+      },
+      {
+        "key": "5426_CR34",
+        "doi-asserted-by": "crossref",
+        "first-page": "481",
+        "DOI": "10.1145/1985793.1985859",
+        "volume-title": "Proceedings of the 33rd International Conference on Software Engineering",
+        "author": "S Kim",
+        "year": "2011",
+        "unstructured": "Kim S, Zhang H, Wu R, et al. Dealing with noise in defect prediction. In: Proceedings of the 33rd International Conference on Software Engineering. Piscataway: IEEE, 2011. 481\u2013490"
+      },
+      {
+        "key": "5426_CR35",
+        "doi-asserted-by": "crossref",
+        "first-page": "660",
+        "DOI": "10.1016/j.jss.2009.11.704",
+        "volume": "83",
+        "author": "Y Zhou",
+        "year": "2010",
+        "unstructured": "Zhou Y, Xu B, Leung H. On the ability of complexity metrics to predict fault-prone classes in object-oriented systems. J Syst Softw, 2010, 83: 660\u2013674",
+        "journal-title": "J Syst Softw"
+      },
+      {
+        "key": "5426_CR36",
+        "doi-asserted-by": "crossref",
+        "first-page": "607",
+        "DOI": "10.1109/TSE.2009.32",
+        "volume": "35",
+        "author": "Y Zhou",
+        "year": "2009",
+        "unstructured": "Zhou Y, Leung H, Xu B. Examining the potentially confounding effect of class size on the associations between object-oriented Metrics and change-proneness. IEEE Trans Softw Eng, 2009, 35: 607\u2013623",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "5426_CR37",
+        "first-page": "31",
+        "volume-title": "Proceedings of the 6th International Working Conference on Source Code Analysis and Manipulation, Philadelphia",
+        "author": "K Pan",
+        "year": "2006",
+        "unstructured": "Pan K, Kim S, Whitehead E J. Bug classification using program slicing metrics. In: Proceedings of the 6th International Working Conference on Source Code Analysis and Manipulation, Philadelphia, 2006. 31\u201342"
+      },
+      {
+        "key": "5426_CR38",
+        "doi-asserted-by": "crossref",
+        "first-page": "625",
+        "DOI": "10.1109/TSE.2005.89",
+        "volume": "31",
+        "author": "A G Koru",
+        "year": "2005",
+        "unstructured": "Koru A G, Tian J. Comparing high-change modules and modules with the highest measurement values in two large-scale open-source products. IEEE Trans Softw Eng, 2005, 31: 625\u2013642",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "5426_CR39",
+        "doi-asserted-by": "crossref",
+        "first-page": "2",
+        "DOI": "10.1109/TSE.2007.256941",
+        "volume": "33",
+        "author": "T Menzies",
+        "year": "2007",
+        "unstructured": "Menzies T, Greenwald J, Frank A. Data mining static code attributes to learn defect predictors. IEEE Trans Softw Eng, 2007, 33: 2\u201313",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "5426_CR40",
+        "doi-asserted-by": "crossref",
+        "first-page": "3",
+        "DOI": "10.1007/s11219-009-9079-6",
+        "volume": "18",
+        "author": "Y Singh",
+        "year": "2010",
+        "unstructured": "Singh Y, Kaur A, Malhotra R. Empirical validation of object-oriented metrics for predicting fault proneness models. Softw Qual J, 2010, 18: 3\u201335",
+        "journal-title": "Softw Qual J"
+      },
+      {
+        "key": "5426_CR41",
+        "doi-asserted-by": "crossref",
+        "first-page": "1868",
+        "DOI": "10.1016/j.jss.2007.12.794",
+        "volume": "81",
+        "author": "R Shatnawi",
+        "year": "2008",
+        "unstructured": "Shatnawi R, Li W. The effectiveness of software metrics in identifying fault-prone classes in post-release software evolution process. J Syst Softw, 2008, 81: 1868\u20131882",
+        "journal-title": "J Syst Softw"
+      }
+    ],
+    "container-title": [
+      "Science China Information Sciences"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/s11432-015-5426-3.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/article/10.1007/s11432-015-5426-3/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "http://link.springer.com/content/pdf/10.1007/s11432-015-5426-3.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          20
+        ]
+      ],
+      "date-time": "2024-06-20T14:19:49Z",
+      "timestamp": 1718893189000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "http://link.springer.com/10.1007/s11432-015-5426-3"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          11,
+          7
+        ]
+      ]
+    },
+    "references-count": 41,
+    "journal-issue": {
+      "issue": "12",
+      "published-print": {
+        "date-parts": [
+          [
+            2016,
+            12
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "5426"
+    ],
+    "URL": "http://dx.doi.org/10.1007/s11432-015-5426-3",
+    "relation": {},
+    "ISSN": [
+      "1674-733X",
+      "1869-1919"
+    ],
+    "issn-type": [
+      {
+        "value": "1674-733X",
+        "type": "print"
+      },
+      {
+        "value": "1869-1919",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2016,
+          11,
+          7
+        ]
+      ]
+    },
+    "article-number": "122901"
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          24
+        ]
+      ],
+      "date-time": "2024-06-24T07:15:38Z",
+      "timestamp": 1719213338940
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 33,
+    "publisher": "ACM",
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2020,
+          12,
+          21
+        ]
+      ]
+    },
+    "DOI": "10.1145/3324884.3418924",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          27
+        ]
+      ],
+      "date-time": "2021-01-27T23:39:02Z",
+      "timestamp": 1611790742000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 10,
+    "title": [
+      "A unified framework to learn program semantics with graph neural networks"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Shangqing",
+        "family": "Liu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Nanyang Technological University, Singapore"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          27
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "volume-title": "Typilus: neural type hints. arXiv preprint arXiv:2004.10657",
+        "author": "Allamanis Miltiadis",
+        "year": "2020",
+        "unstructured": "Miltiadis Allamanis , Earl T Barr , Soline Ducousso , and Zheng Gao . 2020. Typilus: neural type hints. arXiv preprint arXiv:2004.10657 ( 2020 ). Miltiadis Allamanis, Earl T Barr, Soline Ducousso, and Zheng Gao. 2020. Typilus: neural type hints. arXiv preprint arXiv:2004.10657 (2020)."
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "volume-title": "Learning to represent programs with graphs. arXiv preprint arXiv:1711.00740",
+        "author": "Allamanis Miltiadis",
+        "year": "2017",
+        "unstructured": "Miltiadis Allamanis , Marc Brockschmidt , and Mahmoud Khademi . 2017. Learning to represent programs with graphs. arXiv preprint arXiv:1711.00740 ( 2017 ). Miltiadis Allamanis, Marc Brockschmidt, and Mahmoud Khademi. 2017. Learning to represent programs with graphs. arXiv preprint arXiv:1711.00740 (2017)."
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "volume-title": "code2seq: Generating Sequences from Structured Representations of Code. CoRR abs/1808.01400",
+        "author": "Alon Uri",
+        "year": "2018",
+        "unstructured": "Uri Alon , Omer Levy , and Eran Yahav . 2018. code2seq: Generating Sequences from Structured Representations of Code. CoRR abs/1808.01400 ( 2018 ). arXiv:1808.01400 http://arxiv.org/abs/1808.01400 Uri Alon, Omer Levy, and Eran Yahav. 2018. code2seq: Generating Sequences from Structured Representations of Code. CoRR abs/1808.01400 (2018). arXiv:1808.01400 http://arxiv.org/abs/1808.01400"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "volume-title": "Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473",
+        "author": "Bahdanau Dzmitry",
+        "year": "2014",
+        "unstructured": "Dzmitry Bahdanau , Kyunghyun Cho , and Yoshua Bengio . 2014. Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473 ( 2014 ). Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. 2014. Neural machine translation by jointly learning to align and translate. arXiv preprint arXiv:1409.0473 (2014)."
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "volume-title": "Learning-Based Recursive Aggregation of Abstract Syntax Trees for Code Clone Detection. In 2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering (SANER). 95--104",
+        "author": "B\u00fcch L.",
+        "unstructured": "L. B\u00fcch and A. Andrzejak . 2019 . Learning-Based Recursive Aggregation of Abstract Syntax Trees for Code Clone Detection. In 2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering (SANER). 95--104 . L. B\u00fcch and A. Andrzejak. 2019. Learning-Based Recursive Aggregation of Abstract Syntax Trees for Code Clone Detection. In 2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering (SANER). 95--104."
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "volume-title": "Reinforcement learning based graph-to-sequence model for natural question generation. arXiv preprint arXiv:1908.04942",
+        "author": "Chen Yu",
+        "year": "2019",
+        "unstructured": "Yu Chen , Lingfei Wu , and Mohammed J Zaki . 2019. Reinforcement learning based graph-to-sequence model for natural question generation. arXiv preprint arXiv:1908.04942 ( 2019 ). Yu Chen, Lingfei Wu, and Mohammed J Zaki. 2019. Reinforcement learning based graph-to-sequence model for natural question generation. arXiv preprint arXiv:1908.04942 (2019)."
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "unstructured": "Kyunghyun Cho Bart van Merrienboer Caglar Gulcehre Dzmitry Bahdanau Fethi Bougares Holger Schwenk and Yoshua Bengio. 2014. Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation. In EMNLP. 1724--1734.  Kyunghyun Cho Bart van Merrienboer Caglar Gulcehre Dzmitry Bahdanau Fethi Bougares Holger Schwenk and Yoshua Bengio. 2014. Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation. In EMNLP. 1724--1734."
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "volume-title": "John Grundy, and Aditya Ghose.",
+        "author": "Dam Hoa Khanh",
+        "year": "2017",
+        "unstructured": "Hoa Khanh Dam , Truyen Tran , Trang Pham , Shien Wee Ng , John Grundy, and Aditya Ghose. 2017 . Automatic feature learning for vulnerability prediction. arXiv preprint arXiv:1708.02368 (2017). Hoa Khanh Dam, Truyen Tran, Trang Pham, Shien Wee Ng, John Grundy, and Aditya Ghose. 2017. Automatic feature learning for vulnerability prediction. arXiv preprint arXiv:1708.02368 (2017)."
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "volume-title": "Structured neural summarization. arXiv preprint arXiv:1811.01824",
+        "author": "Fernandes Patrick",
+        "year": "2018",
+        "unstructured": "Patrick Fernandes , Miltiadis Allamanis , and Marc Brockschmidt . 2018. Structured neural summarization. arXiv preprint arXiv:1811.01824 ( 2018 ). Patrick Fernandes, Miltiadis Allamanis, and Marc Brockschmidt. 2018. Structured neural summarization. arXiv preprint arXiv:1811.01824 (2018)."
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IJCNN.2005.1555942"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1162/neco.1997.9.8.1735"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.18653/v1/P16-1195"
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.30"
+      },
+      {
+        "key": "e_1_3_2_1_14_1",
+        "unstructured": "Alex Krizhevsky Ilya Sutskever and Geoffrey E Hinton. 2012. Imagenet classification with deep convolutional neural networks. In Advances in neural information processing systems. 1097--1105.  Alex Krizhevsky Ilya Sutskever and Geoffrey E Hinton. 2012. Imagenet classification with deep convolutional neural networks. In Advances in neural information processing systems. 1097--1105."
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "volume-title": "Unsupervised Translation of Programming Languages. arXiv preprint arXiv:2006.03511",
+        "author": "Lachaux Marie-Anne",
+        "year": "2020",
+        "unstructured": "Marie-Anne Lachaux , Baptiste Roziere , Lowik Chanussot , and Guillaume Lample . 2020. Unsupervised Translation of Programming Languages. arXiv preprint arXiv:2006.03511 ( 2020 ). Marie-Anne Lachaux, Baptiste Roziere, Lowik Chanussot, and Guillaume Lample. 2020. Unsupervised Translation of Programming Languages. arXiv preprint arXiv:2006.03511 (2020)."
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "volume-title": "Improved Code Summarization via a Graph Neural Network. arXiv preprint arXiv:2004.02843",
+        "author": "LeClair Alexander",
+        "year": "2020",
+        "unstructured": "Alexander LeClair , Sakib Haque , Linfgei Wu , and Collin McMillan . 2020. Improved Code Summarization via a Graph Neural Network. arXiv preprint arXiv:2004.02843 ( 2020 ). Alexander LeClair, Sakib Haque, Linfgei Wu, and Collin McMillan. 2020. Improved Code Summarization via a Graph Neural Network. arXiv preprint arXiv:2004.02843 (2020)."
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "volume-title": "Gated graph sequence neural networks. arXiv",
+        "author": "Li Y",
+        "year": "2015",
+        "unstructured": "Y Li , D Tarlow , M Brockschmidt , and R Zemel . 2015. Gated graph sequence neural networks. arXiv , 2015 . arXiv preprint arXiv:1511.05493 (2015). Y Li, D Tarlow, M Brockschmidt, and R Zemel. 2015. Gated graph sequence neural networks. arXiv, 2015. arXiv preprint arXiv:1511.05493 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "volume-title": "Vuldeepecker: A deep learning-based system for vulnerability detection. arXiv preprint arXiv:1801.01681",
+        "author": "Li Zhen",
+        "year": "2018",
+        "unstructured": "Zhen Li , Deqing Zou , Shouhuai Xu , Xinyu Ou , Hai Jin , Sujuan Wang , Zhijun Deng , and Yuyi Zhong . 2018 . Vuldeepecker: A deep learning-based system for vulnerability detection. arXiv preprint arXiv:1801.01681 (2018). Zhen Li, Deqing Zou, Shouhuai Xu, Xinyu Ou, Hai Jin, Sujuan Wang, Zhijun Deng, and Yuyi Zhong. 2018. Vuldeepecker: A deep learning-based system for vulnerability detection. arXiv preprint arXiv:1801.01681 (2018)."
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "volume-title": "Lun Yiu Nie, and Yang Liu",
+        "author": "Liu Shangqing",
+        "year": "2019",
+        "unstructured": "Shangqing Liu , Cuiyun Gao , Sen Chen , Lun Yiu Nie, and Yang Liu . 2019 . ATOM : Commit Message Generation Based on Abstract Syntax Tree and Hybrid Ranking . arXiv preprint arXiv:1912.02972 (2019). Shangqing Liu, Cuiyun Gao, Sen Chen, Lun Yiu Nie, and Yang Liu. 2019. ATOM: Commit Message Generation Based on Abstract Syntax Tree and Hybrid Ranking. arXiv preprint arXiv:1912.02972 (2019)."
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "volume-title": "Effective approaches to attention-based neural machine translation. arXiv preprint arXiv:1508.04025",
+        "author": "Luong Minh-Thang",
+        "year": "2015",
+        "unstructured": "Minh-Thang Luong , Hieu Pham , and Christopher D Manning . 2015. Effective approaches to attention-based neural machine translation. arXiv preprint arXiv:1508.04025 ( 2015 ). Minh-Thang Luong, Hieu Pham, and Christopher D Manning. 2015. Effective approaches to attention-based neural machine translation. arXiv preprint arXiv:1508.04025 (2015)."
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/3015812.3016002"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICMLA.2018.00120"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "volume-title": "McConley",
+        "author": "Russell Rebecca L.",
+        "year": "2018",
+        "unstructured": "Rebecca L. Russell , Louis Y. Kim , Lei H. Hamilton , Tomo Lazovich , Jacob A. Harer , Onur Ozdemir , Paul M. Ellingwood , and Marc W . McConley . 2018 . Automated Vulnerability Detection in Source Code Using Deep Representation Learning. CoRR abs/1807.04320 (2018). arXiv:1807.04320 http://arxiv.org/abs/1807.04320 Rebecca L. Russell, Louis Y. Kim, Lei H. Hamilton, Tomo Lazovich, Jacob A. Harer, Onur Ozdemir, Paul M. Ellingwood, and Marc W. McConley. 2018. Automated Vulnerability Detection in Source Code Using Deep Representation Learning. CoRR abs/1807.04320 (2018). arXiv:1807.04320 http://arxiv.org/abs/1807.04320"
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TNN.2008.2005605"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "unstructured": "Ashish Vaswani Noam Shazeer Niki Parmar Jakob Uszkoreit Llion Jones Aidan N Gomez \u0141ukasz Kaiser and Illia Polosukhin. 2017. Attention is all you need. In Advances in neural information processing systems. 5998--6008.  Ashish Vaswani Noam Shazeer Niki Parmar Jakob Uszkoreit Llion Jones Aidan N Gomez \u0141ukasz Kaiser and Illia Polosukhin. 2017. Attention is all you need. In Advances in neural information processing systems. 5998--6008."
+      },
+      {
+        "key": "e_1_3_2_1_26_1",
+        "volume-title": "Unsupervised Classifying of Software Source Code Using Graph Neural Networks. In 2019 24th Conference of Open Innovations Association (FRUCT). 518--524",
+        "author": "Vytovtov P.",
+        "unstructured": "P. Vytovtov and K. Chuvilin . 2019 . Unsupervised Classifying of Software Source Code Using Graph Neural Networks. In 2019 24th Conference of Open Innovations Association (FRUCT). 518--524 . P. Vytovtov and K. Chuvilin. 2019. Unsupervised Classifying of Software Source Code Using Graph Neural Networks. In 2019 24th Conference of Open Innovations Association (FRUCT). 518--524."
+      },
+      {
+        "key": "e_1_3_2_1_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3238147.3238206"
+      },
+      {
+        "key": "e_1_3_2_1_28_1",
+        "volume-title": "Detecting Code Clones with Graph Neural Network and Flow-Augmented Abstract Syntax Tree. In 2020 IEEE 27th International Conference on Software Analysis, Evolution and Reengineering (SANER). 261--271",
+        "author": "Wang W.",
+        "unstructured": "W. Wang , G. Li , B. Ma , X. Xia , and Z. Jin . 2020 . Detecting Code Clones with Graph Neural Network and Flow-Augmented Abstract Syntax Tree. In 2020 IEEE 27th International Conference on Software Analysis, Evolution and Reengineering (SANER). 261--271 . W. Wang, G. Li, B. Ma, X. Xia, and Z. Jin. 2020. Detecting Code Clones with Graph Neural Network and Flow-Augmented Abstract Syntax Tree. In 2020 IEEE 27th International Conference on Software Analysis, Evolution and Reengineering (SANER). 261--271."
+      },
+      {
+        "key": "e_1_3_2_1_29_1",
+        "volume-title": "2016 31st IEEE/ACM International Conference on Automated Software Engineering (ASE). 87--98",
+        "author": "White M.",
+        "unstructured": "M. White , M. Tufano , C. Vendome , and D. Poshyvanyk . 2016. Deep learning code fragments for code clone detection . In 2016 31st IEEE/ACM International Conference on Automated Software Engineering (ASE). 87--98 . M. White, M. Tufano, C. Vendome, and D. Poshyvanyk. 2016. Deep learning code fragments for code clone detection. In 2016 31st IEEE/ACM International Conference on Automated Software Engineering (ASE). 87--98."
+      },
+      {
+        "key": "e_1_3_2_1_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SP.2014.44"
+      },
+      {
+        "key": "e_1_3_2_1_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-319-10590-1_53"
+      },
+      {
+        "key": "e_1_3_2_1_32_1",
+        "unstructured": "Yaqin Zhou Shangqing Liu Jingkai Siow Xiaoning Du and Yang Liu. 2019. Devign: Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks. In Advances in Neural Information Processing Systems 32 H. Wallach H. Larochelle A. Beygelzimer F. d'Alch\u00e9-Buc E. Fox and R. Garnett (Eds.). Curran Associates Inc. 10197--10207. http://papers.nips.cc/paper/9209-devign-effective-vulnerability-identification-by-learning-comprehensive-program-semantics-via-graph-neural-networks.pdf  Yaqin Zhou Shangqing Liu Jingkai Siow Xiaoning Du and Yang Liu. 2019. Devign: Effective Vulnerability Identification by Learning Comprehensive Program Semantics via Graph Neural Networks. In Advances in Neural Information Processing Systems 32 H. Wallach H. Larochelle A. Beygelzimer F. d'Alch\u00e9-Buc E. Fox and R. Garnett (Eds.). Curran Associates Inc. 10197--10207. http://papers.nips.cc/paper/9209-devign-effective-vulnerability-identification-by-learning-comprehensive-program-semantics-via-graph-neural-networks.pdf"
+      },
+      {
+        "key": "e_1_3_2_1_33_1",
+        "volume-title": "Modeling Graph Structure in Transformer for Better AMR-to-Text Generation. arXiv preprint arXiv:1909.00136",
+        "author": "Zhu Jie",
+        "year": "2019",
+        "unstructured": "Jie Zhu , Junhui Li , Muhua Zhu , Longhua Qian , Min Zhang , and Guodong Zhou . 2019. Modeling Graph Structure in Transformer for Better AMR-to-Text Generation. arXiv preprint arXiv:1909.00136 ( 2019 ). Jie Zhu, Junhui Li, Muhua Zhu, Longhua Qian, Min Zhang, and Guodong Zhou. 2019. Modeling Graph Structure in Transformer for Better AMR-to-Text Generation. arXiv preprint arXiv:1909.00136 (2019)."
+      }
+    ],
+    "event": {
+      "name": "ASE '20: 35th IEEE/ACM International Conference on Automated Software Engineering",
+      "location": "Virtual Event Australia",
+      "acronym": "ASE '20",
+      "sponsor": [
+        "SIGAI ACM Special Interest Group on Artificial Intelligence",
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE CS"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 35th IEEE/ACM International Conference on Automated Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3324884.3418924",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          6
+        ]
+      ],
+      "date-time": "2023-01-06T09:25:48Z",
+      "timestamp": 1672997148000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3324884.3418924"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020,
+          12,
+          21
+        ]
+      ]
+    },
+    "references-count": 33,
+    "alternative-id": [
+      "10.1145/3324884.3418924",
+      "10.1145/3324884"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3324884.3418924",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          12,
+          21
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2021-01-27",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

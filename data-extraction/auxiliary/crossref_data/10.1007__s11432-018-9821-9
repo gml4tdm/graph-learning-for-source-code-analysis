@@ -1,0 +1,556 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          30
+        ]
+      ],
+      "date-time": "2024-06-30T09:05:31Z",
+      "timestamp": 1719738331829
+    },
+    "reference-count": 39,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "9",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              7,
+              30
+            ]
+          ],
+          "date-time": "2019-07-30T00:00:00Z",
+          "timestamp": 1564444800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              7,
+              30
+            ]
+          ],
+          "date-time": "2019-07-30T00:00:00Z",
+          "timestamp": 1564444800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Sci. China Inf. Sci."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          9
+        ]
+      ]
+    },
+    "DOI": "10.1007/s11432-018-9821-9",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          8,
+          1
+        ]
+      ],
+      "date-time": "2019-08-01T07:02:39Z",
+      "timestamp": 1564642959000
+    },
+    "update-policy": "http://dx.doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 13,
+    "title": [
+      "Generative API usage code recommendation with parameter concretization"
+    ],
+    "prefix": "10.1007",
+    "volume": "62",
+    "author": [
+      {
+        "given": "Chi",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Xin",
+        "family": "Peng",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Jun",
+        "family": "Sun",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Zhenchang",
+        "family": "Xing",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Xin",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Yifan",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Hairui",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Wenyun",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2019,
+          7,
+          30
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "9821_CR1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Stylos J, Myers B A. Mica: a web-search tool for finding API components and examples. In: Proceedings of IEEE Symposium on Visual Languages and Human-Centric Computing, Brighton, 2006. 195\u2013202",
+        "DOI": "10.1109/VLHCC.2006.32"
+      },
+      {
+        "key": "9821_CR2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Gu X D, Zhang H Y, Zhang D M, et al. Deep API learning. In: Proceedings of the 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering, Seattle, 2016. 631\u2013642",
+        "DOI": "10.1145/2950290.2950334"
+      },
+      {
+        "key": "9821_CR3",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Raghothaman M, Wei Y, Hamadi Y. SWIM: synthesizing what i mean: code search and idiomatic snippet synthesis. In: Proceedings of the 38th International Conference on Software Engineering, Austin, 2016. 357\u2013367",
+        "DOI": "10.1145/2884781.2884808"
+      },
+      {
+        "key": "9821_CR4",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nguyen A T, Nguyen T N. Graph-based statistical language model for code. In: Proceedings of the 37th IEEE/ACM International Conference on Software Engineering, Florence, 2015. 858\u2013868",
+        "DOI": "10.1109/ICSE.2015.336"
+      },
+      {
+        "key": "9821_CR5",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nguyen A T, Nguyen T T, Nguyen H A, et al. Graph-based pattern-oriented, context-sensitive source code completion. In: Proceedings of the 34th International Conference on Software Engineering, Zurich, 2012. 69\u201379",
+        "DOI": "10.1109/ICSE.2012.6227205"
+      },
+      {
+        "key": "9821_CR6",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nguyen A T, Hilton M, Codoban M, et al. API code recommendation using statistical learning from fine-grained changes. In: Proceedings of the 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering, Seattle, 2016. 511\u2013522",
+        "DOI": "10.1145/2950290.2950333"
+      },
+      {
+        "key": "9821_CR7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hindle A, Barr E T, Su Z D, et al. On the naturalness of software. In: Proceedings of the 34th International Conference on Software Engineering, Zurich, 2012. 837\u2013847",
+        "DOI": "10.1109/ICSE.2012.6227135"
+      },
+      {
+        "key": "9821_CR8",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Raychev V, Vechev M T, Yahav E. Code completion with statistical language models. In: Proceedings of ACM SIGPLAN Conference on Programming Language Design and Implementation, Edinburgh, 2014. 419\u2013428",
+        "DOI": "10.1145/2666356.2594321"
+      },
+      {
+        "key": "9821_CR9",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Graves A, Jaitly N, Mohamed A. Hybrid speech recognition with deep bidirectional LSTM. In: Proceedings of IEEE Workshop on Automatic Speech Recognition and Understanding, Olomouc, 2013. 273\u2013278",
+        "DOI": "10.1109/ASRU.2013.6707742"
+      },
+      {
+        "key": "9821_CR10",
+        "doi-asserted-by": "publisher",
+        "first-page": "207",
+        "DOI": "10.1162/tacl_a_00177",
+        "volume": "2",
+        "author": "R Socher",
+        "year": "2014",
+        "unstructured": "Socher R, Karpathy A, Le Q V, et al. Grounded compositional semantics for finding and describing images with sentences. Trans Association Comput Linguist, 2014, 2: 207\u2013218",
+        "journal-title": "Trans Association Comput Linguist"
+      },
+      {
+        "key": "9821_CR11",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tai K S, Socher R, Manning C D. Improved semantic representations from tree-structured long short-term memory networks. In: Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing of the Asian Federation of Natural Language Processing, Beijing, 2015. 1556\u20131566",
+        "DOI": "10.3115/v1/P15-1150"
+      },
+      {
+        "key": "9821_CR12",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang X X, Lu L, Lapata M. Top-down tree long short-term memory networks. In: Proceedings of Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, San Diego, 2016. 310\u2013320",
+        "DOI": "10.18653/v1/N16-1035"
+      },
+      {
+        "key": "9821_CR13",
+        "first-page": "2121",
+        "volume": "12",
+        "author": "J C Duchi",
+        "year": "2011",
+        "unstructured": "Duchi J C, Hazan E, Singer Y. Adaptive subgradient methods for online learning and stochastic optimization. J Mach Learn Res, 2011, 12: 2121\u20132159",
+        "journal-title": "J Mach Learn Res"
+      },
+      {
+        "key": "9821_CR14",
+        "doi-asserted-by": "publisher",
+        "first-page": "e19875",
+        "DOI": "10.1371/journal.pone.0019875",
+        "volume": "6",
+        "author": "M A Montemurro",
+        "year": "2011",
+        "unstructured": "Montemurro M A, Zanette D H. Universal entropy of word ordering across linguistic families. PLoS ONE, 2011, 6: e19875",
+        "journal-title": "PLoS ONE"
+      },
+      {
+        "key": "9821_CR15",
+        "unstructured": "Looks M, Herreshoff M, Hutchins D, et al. Deep learning with dynamic computation graphs. 2017. ArXiv: 1702.02181"
+      },
+      {
+        "key": "9821_CR16",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hellendoorn V J, Devanbu P T. Are deep neural networks the best choice for modeling source code? In: Proceedings of the 11th Joint Meeting on Foundations of Software Engineering, Paderborn, 2017. 763\u2013773",
+        "DOI": "10.1145/3106237.3106290"
+      },
+      {
+        "key": "9821_CR17",
+        "unstructured": "Dam H K, Tran T, Pham T. A deep language model for software code. 2016. ArXiv: 1608.02715"
+      },
+      {
+        "key": "9821_CR18",
+        "doi-asserted-by": "publisher",
+        "first-page": "056101",
+        "DOI": "10.1007/s11432-017-9355-3",
+        "volume": "61",
+        "author": "H Mei",
+        "year": "2018",
+        "unstructured": "Mei H, Zhang L. Can big data bring a breakthrough for software automation? Sci China Inf Sci, 2018, 61: 056101",
+        "journal-title": "Sci China Inf Sci"
+      },
+      {
+        "key": "9821_CR19",
+        "unstructured": "Mou L L, Men R, Li G, et al. On end-to-end program generation from user intention by deep neural networks. 2015. ArXiv: 1510.07211"
+      },
+      {
+        "key": "9821_CR20",
+        "doi-asserted-by": "publisher",
+        "first-page": "050107",
+        "DOI": "10.1007/s11432-017-9354-x",
+        "volume": "61",
+        "author": "X Zhou",
+        "year": "2018",
+        "unstructured": "Zhou X, Wu K D, Cai H Q, et al. LogPruner: detect, analyze and prune logging calls in Android apps. Sci China Inf Sci, 2018, 61: 050107",
+        "journal-title": "Sci China Inf Sci"
+      },
+      {
+        "key": "9821_CR21",
+        "doi-asserted-by": "publisher",
+        "first-page": "12106",
+        "DOI": "10.1007/s11432-015-1026-y",
+        "volume": "60",
+        "author": "G Huang",
+        "year": "2017",
+        "unstructured": "Huang G, Cai H Q, Swiech M, et al. DelayDroid: an instrumented approach to reducing tail-time energy of Android apps. Sci China Inf Sci, 2017, 60: 12106",
+        "journal-title": "Sci China Inf Sci"
+      },
+      {
+        "key": "9821_CR22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Pletcher D M, Hou D Q. BCC: enhancing code completion for better API usability. In: Proceedings of the 25th IEEE International Conference on Software Maintenance, Edmonton, 2009. 393\u2013394",
+        "DOI": "10.1109/ICSM.2009.5306289"
+      },
+      {
+        "key": "9821_CR23",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hou D Q, Pletcher D M. Towards a better code completion system by API grouping, filtering, and popularity-based ranking. In: Proceedings of the 2nd International Workshop on Recommendation Systems for Software Engineering, Cape Town, 2010. 26\u201330",
+        "DOI": "10.1145/1808920.1808926"
+      },
+      {
+        "key": "9821_CR24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Hou D Q, Pletcher D M. An evaluation of the strategies of sorting, filtering, and grouping API methods for code completion. In: Proceedings of IEEE 27th International Conference on Software Maintenance, Williamsburg, 2011. 233\u2013242",
+        "DOI": "10.1109/ICSM.2011.6080790"
+      },
+      {
+        "key": "9821_CR25",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mandelin D, Xu L, Bod\u00edR, et al. Jungloid mining: helping to navigate the API jungle. In: Proceedings of the ACM SIGPLAN Conference on Programming Language Design and Implementation, Chicago, 2005. 48\u201361",
+        "DOI": "10.1145/1064978.1065018"
+      },
+      {
+        "key": "9821_CR26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Bruch M, Monperrus M, Mezini M. Learning from examples to improve code completion systems. In: Proceedings of the 7th joint meeting of the European Software Engineering Conference and the ACM SIGSOFT International Symposium on Foundations of Software Engineering, Amsterdam, 2009. 213\u2013222",
+        "DOI": "10.1145/1595696.1595728"
+      },
+      {
+        "key": "9821_CR27",
+        "doi-asserted-by": "publisher",
+        "first-page": "512",
+        "DOI": "10.1002/smr.1791",
+        "volume": "28",
+        "author": "M Asaduzzaman",
+        "year": "2016",
+        "unstructured": "Asaduzzaman M, Roy C K, Schneider K A, et al. A simple, efficient, context-sensitive approach for code completion. J Softw Evol Proc, 2016, 28: 512\u2013541",
+        "journal-title": "J Softw Evol Proc"
+      },
+      {
+        "key": "9821_CR28",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Allamanis M, Sutton C A. Mining source code repositories at massive scale using language modeling. In: Proceedings of the 10th Working Conference on Mining Software Repositories, San Francisco, 2013. 207\u2013216",
+        "DOI": "10.1109/MSR.2013.6624029"
+      },
+      {
+        "key": "9821_CR29",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Tu Z P, Su Z D, Devanbu P T. On the localness of software. In: Proceedings of the 22nd ACM SIGSOFT International Symposium on Foundations of Software Engineering, Hong Kong, 2014. 269\u2013280",
+        "DOI": "10.1145/2635868.2635875"
+      },
+      {
+        "key": "9821_CR30",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nguyen T T, Nguyen A T, Nguyen H A, et al. A statistical semantic language model for source code. In: Proceedings of Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering, Saint Petersburg, 2013. 532\u2013542",
+        "DOI": "10.1145/2491411.2491458"
+      },
+      {
+        "key": "9821_CR31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Galenson J, Reames P, Bod\u00edR, et al. CodeHint: dynamic and interactive synthesis of code snippets. In: Proceedings of the 36th International Conference on Software Engineering, Hyderabad, 2014. 653\u2013663",
+        "DOI": "10.1145/2568225.2568250"
+      },
+      {
+        "key": "9821_CR32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Fowkes J M, Sutton C A. Parameter-free probabilistic API mining across GitHub. In: Proceedings of the 24th ACM SIGSOFT International Symposium on Foundations of Software Engineering, Seattle, 2016. 254\u2013265",
+        "DOI": "10.1145/2950290.2950319"
+      },
+      {
+        "key": "9821_CR33",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wang J, Dang Y N, Zhang H Y, et al. Mining succinct and high-coverage API usage patterns from source code. In: Proceedings of the 10th Working Conference on Mining Software Repositories, San Francisco, 2013. 319\u2013328",
+        "DOI": "10.1109/MSR.2013.6624045"
+      },
+      {
+        "key": "9821_CR34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhong H, Xie T, Zhang L, et al. MAPO: mining and recommending API usage patterns. In: Proceedings of the 23rd European Conference on Object-Oriented Programming, Genoa, 2009. 318\u2013343",
+        "DOI": "10.1007/978-3-642-03013-0_15"
+      },
+      {
+        "key": "9821_CR35",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nguyen T T, Nguyen H A, Pham N H, et al. Graph-based mining of multiple object usage patterns. In: Proceedings of the 7th joint meeting of the European Software Engineering Conference and the ACM SIGSOFT International Symposium on Foundations of Software Engineering, Amsterdam, 2009. 383\u2013392",
+        "DOI": "10.1145/1595696.1595767"
+      },
+      {
+        "key": "9821_CR36",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Mou L L, Li G, Zhang L, et al. Convolutional neural networks over tree structures for programming language processing. In: Proceedings of the 30th AAAI Conference on Artificial Intelligence, Phoenix, 2016. 1287\u20131293",
+        "DOI": "10.1609/aaai.v30i1.10139"
+      },
+      {
+        "key": "9821_CR37",
+        "unstructured": "Allamanis M, Peng H, Sutton C A. A convolutional attention network for extreme summarization of source code. In: Proceedings of the 33rd International Conference on Machine Learning, New York City, 2016. 2091\u20132100"
+      },
+      {
+        "key": "9821_CR38",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wang S, Liu T Y, Tan L. Automatically learning semantic features for defect prediction. In: Proceedings of the 38th International Conference on Software Engineering, Austin, 2016. 297\u2013308",
+        "DOI": "10.1145/2884781.2884804"
+      },
+      {
+        "key": "9821_CR39",
+        "doi-asserted-by": "publisher",
+        "first-page": "072102",
+        "DOI": "10.1007/s11432-015-0860-9",
+        "volume": "60",
+        "author": "X Peng",
+        "year": "2017",
+        "unstructured": "Peng X, Xing Z C, Pan S, et al. Reflective feature location: knowledge in mind meets information in system. Sci China Inf Sci, 2017, 60: 072102",
+        "journal-title": "Sci China Inf Sci"
+      }
+    ],
+    "container-title": [
+      "Science China Information Sciences"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s11432-018-9821-9.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/article/10.1007/s11432-018-9821-9/fulltext.html",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://link.springer.com/content/pdf/10.1007/s11432-018-9821-9.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          8,
+          8
+        ]
+      ],
+      "date-time": "2023-08-08T10:38:13Z",
+      "timestamp": 1691491093000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://link.springer.com/10.1007/s11432-018-9821-9"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          7,
+          30
+        ]
+      ]
+    },
+    "references-count": 39,
+    "journal-issue": {
+      "issue": "9",
+      "published-print": {
+        "date-parts": [
+          [
+            2019,
+            9
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "9821"
+    ],
+    "URL": "http://dx.doi.org/10.1007/s11432-018-9821-9",
+    "relation": {},
+    "ISSN": [
+      "1674-733X",
+      "1869-1919"
+    ],
+    "issn-type": [
+      {
+        "value": "1674-733X",
+        "type": "print"
+      },
+      {
+        "value": "1869-1919",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          7,
+          30
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "10 July 2018",
+        "order": 1,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "20 October 2018",
+        "order": 2,
+        "name": "revised",
+        "label": "Revised",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "27 February 2019",
+        "order": 3,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "30 July 2019",
+        "order": 4,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      }
+    ],
+    "article-number": "192103"
+  }
+}

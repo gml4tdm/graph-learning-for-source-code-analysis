@@ -1,0 +1,727 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          13
+        ]
+      ],
+      "date-time": "2024-07-13T08:30:29Z",
+      "timestamp": 1720859429695
+    },
+    "reference-count": 76,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "10",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2021-10-01T00:00:00Z",
+          "timestamp": 1633046400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2021-10-01T00:00:00Z",
+          "timestamp": 1633046400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              1
+            ]
+          ],
+          "date-time": "2021-10-01T00:00:00Z",
+          "timestamp": 1633046400000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100012166",
+        "name": "National Key Research and Development Program of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2017YFB1400602"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "61202048",
+          "61572371",
+          "61832014"
+        ]
+      },
+      {
+        "DOI": "10.13039/501100008990",
+        "name": "Science and Technology Department of Zhejiang Province",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "LGF19F020007"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IIEEE Trans. Software Eng."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          10,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1109/tse.2019.2946357",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          10,
+          8
+        ]
+      ],
+      "date-time": "2019-10-08T20:02:28Z",
+      "timestamp": 1570564948000
+    },
+    "page": "2272-2295",
+    "source": "Crossref",
+    "is-referenced-by-count": 38,
+    "title": [
+      "ElementRank: Ranking Java Software Classes and Packages using a Multilayer Complex Network-Based Approach"
+    ],
+    "prefix": "10.1109",
+    "volume": "47",
+    "author": [
+      {
+        "ORCID": "http://orcid.org/0000-0001-6355-1385",
+        "authenticated-orcid": false,
+        "given": "Weifeng",
+        "family": "Pan",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0001-5379-6311",
+        "authenticated-orcid": false,
+        "given": "Hua",
+        "family": "Ming",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0001-6734-7082",
+        "authenticated-orcid": false,
+        "given": "Carl K.",
+        "family": "Chang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Zijiang",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "ORCID": "http://orcid.org/0000-0002-7133-9111",
+        "authenticated-orcid": false,
+        "given": "Dae-Kyoo",
+        "family": "Kim",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref73",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-662-54494-5_10"
+      },
+      {
+        "key": "ref72",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2009.19"
+      },
+      {
+        "key": "ref71",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2012.6227128"
+      },
+      {
+        "key": "ref70",
+        "first-page": "353",
+        "article-title": "Exploring the relationships between the understandability of architectural components and graph-Based component level metrics",
+        "author": "elish",
+        "year": "2014",
+        "journal-title": "Proc 14th Int Conf Quality Softw"
+      },
+      {
+        "key": "ref76",
+        "first-page": "1477",
+        "article-title": "Probabilistic latent semantic indexing",
+        "author": "hofmann",
+        "year": "2015",
+        "journal-title": "Proc 22nd Int Conf Res Develop Inf Retrieval"
+      },
+      {
+        "key": "ref74",
+        "first-page": "4",
+        "article-title": "Latent dirichlet allocation",
+        "volume": "3",
+        "author": "blei",
+        "year": "2003",
+        "journal-title": "J Mach Learn Res"
+      },
+      {
+        "key": "ref39",
+        "article-title": "Leaders in social networks, the Delicious Case",
+        "volume": "6",
+        "author": "l\u00fc",
+        "year": "2011",
+        "journal-title": "PLoS ONE"
+      },
+      {
+        "key": "ref75",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/(SICI)1097-4571(199009)41:6<391::AID-ASI1>3.0.CO;2-9"
+      },
+      {
+        "key": "ref38",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2015.08.014"
+      },
+      {
+        "key": "ref33",
+        "article-title": "The analytic hierarchy process: Planning",
+        "author": "saaty",
+        "year": "1980",
+        "journal-title": "Priority Setting Resource Allocation"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0169-7552(98)00110-X"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "crossref",
+        "first-page": "461",
+        "DOI": "10.1515/jisys-2014-0015",
+        "article-title": "Identifying important packages of object-oriented software using weighted $k$k-core decomposition",
+        "volume": "23",
+        "author": "pan",
+        "year": "2014",
+        "journal-title": "J Intell Syst"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.chaos.2016.10.013"
+      },
+      {
+        "key": "ref37",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.748920"
+      },
+      {
+        "key": "ref36",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1155/2018/1525186"
+      },
+      {
+        "key": "ref35",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/COMPSAC.2014.34"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.6178"
+      },
+      {
+        "key": "ref60",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.87287"
+      },
+      {
+        "key": "ref62",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.2307/2332226"
+      },
+      {
+        "key": "ref61",
+        "doi-asserted-by": "crossref",
+        "first-page": "381",
+        "DOI": "10.1109/32.917526",
+        "article-title": "On the applicability of Weyuker Property 9 to object-oriented structural inheritance complexity metrics",
+        "volume": "27",
+        "author": "roy",
+        "year": "2001",
+        "journal-title": "IEEE Trans Softw Eng"
+      },
+      {
+        "key": "ref63",
+        "author": "myers",
+        "year": "2010",
+        "journal-title": "Research Design and Statistical Analysis"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1209/0295-5075/99/68007",
+        "article-title": "Identifying influential spreaders and efficiently estimating infection numbers in epidemic models: A walk counting approach",
+        "volume": "99",
+        "author": "bauer",
+        "year": "2012",
+        "journal-title": "Europhysics Lett"
+      },
+      {
+        "key": "ref64",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ins.2009.12.010"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1126/science.1215842"
+      },
+      {
+        "key": "ref65",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.544352"
+      },
+      {
+        "key": "ref66",
+        "author": "martin",
+        "year": "2002",
+        "journal-title": "Agile Software Development Principles Patterns and Practices"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1142/S0219525918500042",
+        "article-title": "Structural properties of multilayer software networks: A case study in Tomcat",
+        "volume": "21",
+        "author": "pan",
+        "year": "2018",
+        "journal-title": "Advances in Complex Systems"
+      },
+      {
+        "key": "ref67",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ins.2007.01.021"
+      },
+      {
+        "key": "ref68",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11390-009-9223-6"
+      },
+      {
+        "key": "ref69",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICPC.2010.43"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.1980.234503"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2019.2946357"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.1019"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2015.06.015"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11390-010-9398-x"
+      },
+      {
+        "key": "ref24",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/35019019"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0218194019500323"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "crossref",
+        "first-page": "1777",
+        "DOI": "10.1016/j.physa.2011.09.017",
+        "article-title": "Identifying influential nodes in complex networks",
+        "volume": "391",
+        "author": "chen",
+        "year": "2012",
+        "journal-title": "Physica A"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "crossref",
+        "first-page": "888",
+        "DOI": "10.1038/nphys1746",
+        "article-title": "Identification of influential spreaders in complex networks",
+        "volume": "6",
+        "author": "kitsak",
+        "year": "2010",
+        "journal-title": "Nature Physics"
+      },
+      {
+        "key": "ref50",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.omega.2005.08.004"
+      },
+      {
+        "key": "ref51",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/qre.1753"
+      },
+      {
+        "key": "ref59",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2377656.2377661"
+      },
+      {
+        "key": "ref58",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.1996.493415"
+      },
+      {
+        "key": "ref57",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ins.2006.07.010"
+      },
+      {
+        "key": "ref56",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jss.2009.11.735"
+      },
+      {
+        "key": "ref55",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.295895"
+      },
+      {
+        "key": "ref54",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.177371"
+      },
+      {
+        "key": "ref53",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/359619.359631"
+      },
+      {
+        "key": "ref52",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24846/v24i2y201502"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CSMR.2005.12"
+      },
+      {
+        "key": "ref11",
+        "first-page": "1",
+        "article-title": "Ranking software artifacts",
+        "author": "perin",
+        "year": "2010",
+        "journal-title": "Proc 4th Workshop FAMIX Moose Softw Reeng"
+      },
+      {
+        "key": "ref40",
+        "first-page": "264",
+        "article-title": "Coupling and cohesion in object-oriented systems",
+        "author": "eder",
+        "year": "1995",
+        "journal-title": "Proc of the International Workshop on Object Orientation in Operating Systems"
+      },
+      {
+        "key": "ref12",
+        "first-page": "3",
+        "article-title": "Discovering core architecture classes to assist initial program comprehension",
+        "author": "kamran",
+        "year": "2012",
+        "journal-title": "Proc Int Conf Inf Technol Softw Eng"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0219525915500046"
+      },
+      {
+        "key": "ref14",
+        "first-page": "2062",
+        "article-title": "Measuring the importance of classes using UIO sequence",
+        "volume": "43",
+        "author": "jiang",
+        "year": "2015",
+        "journal-title": "Acta Electronica Sinica"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.future.2017.10.006"
+      },
+      {
+        "key": "ref16",
+        "article-title": "Finding key classes in object-oriented software systems by techniques based on static analysis",
+        "volume": "116",
+        "author": "?ora",
+        "year": "2019",
+        "journal-title": "Inf Softw Technol"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11424-011-0319-z"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1103/PhysRevE.68.046116"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1060710.1060716"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11390-010-9399-9"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ins.2013.05.014"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2006.116"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/358413.358421"
+      },
+      {
+        "key": "ref8",
+        "first-page": "891",
+        "article-title": "Identifying key classes using $h$h-index and its variants",
+        "volume": "5",
+        "author": "wang",
+        "year": "2011",
+        "journal-title": "J Frontiers Comput Sci Technol"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/smr.370"
+      },
+      {
+        "key": "ref49",
+        "doi-asserted-by": "crossref",
+        "first-page": "380",
+        "DOI": "10.1016/j.procs.2015.06.044",
+        "article-title": "Search-based object-oriented software re-structuring with structural coupling strength",
+        "volume": "54",
+        "author": "prajapati",
+        "year": "2015",
+        "journal-title": "Procedia Comput Sci"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WCRE.2012.19"
+      },
+      {
+        "key": "ref46",
+        "first-page": "1",
+        "article-title": "A merit factor driven approach to the modularization of object-oriented system",
+        "volume": "7",
+        "author": "abreu",
+        "year": "2001",
+        "journal-title": "L&#x2019;"
+      },
+      {
+        "key": "ref45",
+        "first-page": "222",
+        "article-title": "A complexity measure for ontology based on UML",
+        "author": "kang",
+        "year": "2004",
+        "journal-title": "Proc 10th IEEE Int Workshop Future Trends Distrib Comput Syst"
+      },
+      {
+        "key": "ref48",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.70768"
+      },
+      {
+        "key": "ref47",
+        "doi-asserted-by": "crossref",
+        "first-page": "96",
+        "DOI": "10.1016/j.infsof.2016.09.011",
+        "article-title": "Improving modular structure of software system using structural and lexical dependency",
+        "volume": "82",
+        "author": "prajapati",
+        "year": "2017",
+        "journal-title": "Inf Softw Technol"
+      },
+      {
+        "key": "ref42",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/3-540-60406-5_11"
+      },
+      {
+        "key": "ref41",
+        "first-page": "25",
+        "article-title": "Measuring coupling and cohesion in object-oriented systems",
+        "author": "hitz",
+        "year": "1995",
+        "journal-title": "Proc 3rd Int Symp Appl Corporate Comput"
+      },
+      {
+        "key": "ref44",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CSMR.2001.914968"
+      },
+      {
+        "key": "ref43",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CSMR.2000.827300"
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/32/9573514/08862895.pdf?arnumber=8862895",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          5,
+          10
+        ]
+      ],
+      "date-time": "2022-05-10T14:50:06Z",
+      "timestamp": 1652194206000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8862895/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          10,
+          1
+        ]
+      ]
+    },
+    "references-count": 76,
+    "journal-issue": {
+      "issue": "10"
+    },
+    "URL": "http://dx.doi.org/10.1109/tse.2019.2946357",
+    "relation": {},
+    "ISSN": [
+      "0098-5589",
+      "1939-3520",
+      "2326-3881"
+    ],
+    "issn-type": [
+      {
+        "value": "0098-5589",
+        "type": "print"
+      },
+      {
+        "value": "1939-3520",
+        "type": "electronic"
+      },
+      {
+        "value": "2326-3881",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          10,
+          1
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          27
+        ]
+      ],
+      "date-time": "2024-05-27T15:49:08Z",
+      "timestamp": 1716824948119
+    },
+    "publisher-location": "New York, NY, USA",
+    "reference-count": 24,
+    "publisher": "ACM",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              3
+            ]
+          ],
+          "date-time": "2018-09-03T00:00:00Z",
+          "timestamp": 1535932800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://www.acm.org/publications/policies/copyright_policy#Background"
+      }
+    ],
+    "funder": [
+      {
+        "name": "National Natural Science Foundation of China",
+        "award": [
+          "61602369, 61472318, 61632015, 61721002"
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "dl.acm.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1145/3238147.3240469",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          20
+        ]
+      ],
+      "date-time": "2018-08-20T20:04:36Z",
+      "timestamp": 1534795476000
+    },
+    "update-policy": "http://dx.doi.org/10.1145/crossmark-policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 17,
+    "title": [
+      "node2defect: using network embedding to improve software defect prediction"
+    ],
+    "prefix": "10.1145",
+    "author": [
+      {
+        "given": "Yu",
+        "family": "Qu",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Xi'an Jiaotong University, China"
+          }
+        ]
+      },
+      {
+        "given": "Ting",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Xi'an Jiaotong University, China"
+          }
+        ]
+      },
+      {
+        "given": "Jianlei",
+        "family": "Chi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Xi'an Jiaotong University, China"
+          }
+        ]
+      },
+      {
+        "given": "Yangxu",
+        "family": "Jin",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Xi'an Jiaotong University, China"
+          }
+        ]
+      },
+      {
+        "given": "Di",
+        "family": "Cui",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Xi'an Jiaotong University, China"
+          }
+        ]
+      },
+      {
+        "given": "Ancheng",
+        "family": "He",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Xi'an Jiaotong University, China"
+          }
+        ]
+      },
+      {
+        "given": "Qinghua",
+        "family": "Zheng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Xi'an Jiaotong University, China"
+          }
+        ]
+      }
+    ],
+    "member": "320",
+    "published-online": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_2_1_1_1",
+        "volume-title": "Introduction to Machine Learning",
+        "author": "Alpaydin Ethem",
+        "unstructured": "Ethem Alpaydin . 2004. Introduction to Machine Learning . MIT Press ,. 28 pages. Ethem Alpaydin. 2004. Introduction to Machine Learning. MIT Press,. 28 pages."
+      },
+      {
+        "key": "e_1_3_2_1_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1167515.1167507"
+      },
+      {
+        "key": "e_1_3_2_1_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/0022250X.2001.9990249"
+      },
+      {
+        "key": "e_1_3_2_1_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1023/A:1010933404324"
+      },
+      {
+        "key": "e_1_3_2_1_5_1",
+        "volume-title": "A comprehensive survey of graph embedding: problems, techniques and applications",
+        "author": "Cai Hongyun",
+        "year": "2018",
+        "unstructured": "Hongyun Cai , Vincent W Zheng , and Kevin Chang . 2018. A comprehensive survey of graph embedding: problems, techniques and applications . IEEE Transactions on Knowledge and Data Engineering ( 2018 ). Hongyun Cai, Vincent W Zheng, and Kevin Chang. 2018. A comprehensive survey of graph embedding: problems, techniques and applications. IEEE Transactions on Knowledge and Data Engineering (2018)."
+      },
+      {
+        "key": "e_1_3_2_1_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11432-015-5426-3"
+      },
+      {
+        "key": "e_1_3_2_1_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/32.295895"
+      },
+      {
+        "key": "e_1_3_2_1_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1142/S0218194017500401"
+      },
+      {
+        "key": "e_1_3_2_1_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5555/2022348.2022375"
+      },
+      {
+        "key": "e_1_3_2_1_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.knosys.2018.03.022"
+      },
+      {
+        "key": "e_1_3_2_1_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2939672.2939754"
+      },
+      {
+        "key": "e_1_3_2_1_12_1",
+        "volume-title": "Representation Learning on Graphs: Methods and Applications. arXiv preprint arXiv:1709.05584",
+        "author": "Hamilton William L",
+        "year": "2017",
+        "unstructured": "William L Hamilton , Rex Ying , and Jure Leskovec . 2017. Representation Learning on Graphs: Methods and Applications. arXiv preprint arXiv:1709.05584 ( 2017 ). William L Hamilton, Rex Ying, and Jure Leskovec. 2017. Representation Learning on Graphs: Methods and Applications. arXiv preprint arXiv:1709.05584 (2017)."
+      },
+      {
+        "key": "e_1_3_2_1_13_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1868328.1868342"
+      },
+      {
+        "key": "e_1_3_2_1_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1391984.1391986"
+      },
+      {
+        "key": "e_1_3_2_1_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.infsof.2015.09.001"
+      },
+      {
+        "key": "e_1_3_2_1_17_1",
+        "unstructured": "Tim Menzies Rahul Krishna and David Pryor. 2015. The Promise Repository of Empirical Software Engineering Data. http://openscience.us/repo. North Carolina State University Department of Computer Science.  Tim Menzies Rahul Krishna and David Pryor. 2015. The Promise Repository of Empirical Software Engineering Data. http://openscience.us/repo. North Carolina State University Department of Computer Science."
+      },
+      {
+        "key": "e_1_3_2_1_18_1",
+        "volume-title": "Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781",
+        "author": "Mikolov Tomas",
+        "year": "2013",
+        "unstructured": "Tomas Mikolov , Kai Chen , Greg Corrado , and Jeffrey Dean . 2013. Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781 ( 2013 ). Tomas Mikolov, Kai Chen, Greg Corrado, and Jeffrey Dean. 2013. Efficient estimation of word representations in vector space. arXiv preprint arXiv:1301.3781 (2013)."
+      },
+      {
+        "key": "e_1_3_2_1_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2010.5609560"
+      },
+      {
+        "key": "e_1_3_2_1_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TETCI.2017.2699224"
+      },
+      {
+        "key": "e_1_3_2_1_21_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ESEM.2011.30"
+      },
+      {
+        "key": "e_1_3_2_1_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2961111.2962620"
+      },
+      {
+        "key": "e_1_3_2_1_23_1",
+        "volume-title": "Community structure of complex software systems: Analysis and applications. Physica A: Statistical Mechanics and its Applications 390, 16",
+        "author": "\u0160ubelj Lovro",
+        "year": "2011",
+        "unstructured": "Lovro \u0160ubelj and Marko Bajec . 2011. Community structure of complex software systems: Analysis and applications. Physica A: Statistical Mechanics and its Applications 390, 16 ( 2011 ), 2968\u20132975. Lovro \u0160ubelj and Marko Bajec. 2011. Community structure of complex software systems: Analysis and applications. Physica A: Statistical Mechanics and its Applications 390, 16 (2011), 2968\u20132975."
+      },
+      {
+        "key": "e_1_3_2_1_24_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1540438.1540446"
+      },
+      {
+        "key": "e_1_3_2_1_25_1",
+        "volume-title": "Data Mining: Practical machine learning tools and techniques. Morgan Kaufmann.",
+        "author": "Witten Ian H",
+        "year": "2016",
+        "unstructured": "Ian H Witten , Eibe Frank , Mark A Hall , and Christopher J Pal . 2016 . Data Mining: Practical machine learning tools and techniques. Morgan Kaufmann. Ian H Witten, Eibe Frank, Mark A Hall, and Christopher J Pal. 2016. Data Mining: Practical machine learning tools and techniques. Morgan Kaufmann."
+      }
+    ],
+    "event": {
+      "name": "ASE '18: 33rd ACM/IEEE International Conference on Automated Software Engineering",
+      "location": "Montpellier France",
+      "acronym": "ASE '18",
+      "sponsor": [
+        "SIGAI ACM Special Interest Group on Artificial Intelligence",
+        "CNRS Centre National De La Rechercue Scientifique",
+        "SIGSOFT ACM Special Interest Group on Software Engineering",
+        "IEEE-CS Computer Society"
+      ]
+    },
+    "container-title": [
+      "Proceedings of the 33rd ACM/IEEE International Conference on Automated Software Engineering"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "https://dl.acm.org/doi/pdf/10.1145/3238147.3240469",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          19
+        ]
+      ],
+      "date-time": "2023-01-19T01:11:33Z",
+      "timestamp": 1674090693000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://dl.acm.org/doi/10.1145/3238147.3240469"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "references-count": 24,
+    "alternative-id": [
+      "10.1145/3238147.3240469",
+      "10.1145/3238147"
+    ],
+    "URL": "http://dx.doi.org/10.1145/3238147.3240469",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2018,
+          9,
+          3
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "2018-09-03",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

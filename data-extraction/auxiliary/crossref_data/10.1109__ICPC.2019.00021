@@ -1,0 +1,379 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          15
+        ]
+      ],
+      "date-time": "2024-07-15T03:00:49Z",
+      "timestamp": 1721012449841
+    },
+    "reference-count": 29,
+    "publisher": "IEEE",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2019-05-01T00:00:00Z",
+          "timestamp": 1556668800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2019-05-01T00:00:00Z",
+          "timestamp": 1556668800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2019,
+              5,
+              1
+            ]
+          ],
+          "date-time": "2019-05-01T00:00:00Z",
+          "timestamp": 1556668800000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          5
+        ]
+      ]
+    },
+    "DOI": "10.1109/icpc.2019.00021",
+    "type": "proceedings-article",
+    "created": {
+      "date-parts": [
+        [
+          2019,
+          8,
+          30
+        ]
+      ],
+      "date-time": "2019-08-30T01:02:02Z",
+      "timestamp": 1567126922000
+    },
+    "source": "Crossref",
+    "is-referenced-by-count": 78,
+    "title": [
+      "Neural Detection of Semantic Code Clones Via Tree-Based Convolution"
+    ],
+    "prefix": "10.1109",
+    "author": [
+      {
+        "given": "Hao",
+        "family": "Yu",
+        "sequence": "first",
+        "affiliation": []
+      },
+      {
+        "given": "Wing",
+        "family": "Lam",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Long",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Ge",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Tao",
+        "family": "Xie",
+        "sequence": "additional",
+        "affiliation": []
+      },
+      {
+        "given": "Qianxiang",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": []
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref10",
+        "year": "0",
+        "journal-title": "Word2Vec embeddings"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3115/v1/P15-1150"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2970276.2970326"
+      },
+      {
+        "key": "ref13",
+        "year": "0",
+        "journal-title": "Neural network embeddings explained"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSE.2007.30"
+      },
+      {
+        "key": "ref15",
+        "first-page": "1287",
+        "article-title": "Convolutional neural networks over tree structures for programming language processing",
+        "author": "mou",
+        "year": "2016",
+        "journal-title": "AAAI"
+      },
+      {
+        "key": "ref16",
+        "first-page": "547",
+        "article-title": "Building program vector representations for deep learning",
+        "author": "peng",
+        "year": "2015",
+        "journal-title": "KSEM"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3106237.3106290"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSME.2017.46"
+      },
+      {
+        "key": "ref19",
+        "year": "0",
+        "journal-title": "OpenJudge"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2018/394"
+      },
+      {
+        "key": "ref4",
+        "author": "roy",
+        "year": "2007",
+        "journal-title": "A survey on software clone detection research"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1572272.1572283"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSE.2007.70725"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSM.2015.7332459"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/3180155.3180167"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/SANER.2018.8330194"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSME.2014.77"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/2884781.2884877"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSTW.2009.18"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.24963/ijcai.2017/423"
+      },
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/WCRE.2006.18"
+      },
+      {
+        "key": "ref20",
+        "first-page": "2269",
+        "article-title": "Sum-marizing source code with transferred API knowledge",
+        "author": "hu",
+        "year": "2018",
+        "journal-title": "IICAl"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ASE.2017.8115626"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "crossref",
+        "first-page": "200",
+        "DOI": "10.1145/3196321.3196334",
+        "article-title": "Deep code comment generation",
+        "author": "hu",
+        "year": "2018",
+        "journal-title": "ICPC"
+      },
+      {
+        "key": "ref24",
+        "year": "0",
+        "journal-title": "Our dataset and source code"
+      },
+      {
+        "key": "ref23",
+        "year": "0",
+        "journal-title": "TensorFlow&#x2122;"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1145/1985793.1985835"
+      },
+      {
+        "key": "ref25",
+        "first-page": "40",
+        "article-title": "Using slicing to identify duplication in source code",
+        "author": "komondoor",
+        "year": "2001",
+        "journal-title": "SAS"
+      }
+    ],
+    "event": {
+      "name": "2019 IEEE/ACM 27th International Conference on Program Comprehension (ICPC)",
+      "location": "Montreal, QC, Canada",
+      "start": {
+        "date-parts": [
+          [
+            2019,
+            5,
+            25
+          ]
+        ]
+      },
+      "end": {
+        "date-parts": [
+          [
+            2019,
+            5,
+            26
+          ]
+        ]
+      }
+    },
+    "container-title": [
+      "2019 IEEE/ACM 27th International Conference on Program Comprehension (ICPC)"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/8797605/8813248/08813290.pdf?arnumber=8813290",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          7,
+          18
+        ]
+      ],
+      "date-time": "2022-07-18T14:50:21Z",
+      "timestamp": 1658155821000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/8813290/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          5
+        ]
+      ]
+    },
+    "references-count": 29,
+    "URL": "http://dx.doi.org/10.1109/icpc.2019.00021",
+    "relation": {},
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          5
+        ]
+      ]
+    }
+  }
+}
