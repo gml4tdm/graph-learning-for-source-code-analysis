@@ -18,7 +18,7 @@ from sentence_transformers import SentenceTransformer
 
 def main(filename: str, seed: int):
     print('Loading data from CSV file...')
-    df = pd.load_csv(filename)
+    df = pd.read_csv(filename)
     documents = df[['Title', 'Abstract']].apply('. '.join, axis=1).values.tolist()
 
     print('Embedding using SentenceTransformer...')
@@ -26,11 +26,11 @@ def main(filename: str, seed: int):
     embeddings = model.encode(documents, show_progress_bar=True)
 
     print('Reducing dimensionality with UMAP...')
-    umap = UMAP(n_neighbours=15,
+    umap = UMAP(n_neighbors=15,
                 n_components=5,
                 min_dist=0.0,
                 metric='cosine',
-                seed=seed)
+                random_state=seed)
     projections = umap.fit_transform(embeddings)
 
     print('Clustering with HDBSCAN...')
@@ -43,6 +43,8 @@ def main(filename: str, seed: int):
     print('Saving results to CSV file...')
     df['Cluster'] = labels
     df.to_csv('clusters.csv', index=False)
+
+    print('Results saved to `clusters.csv`')
 
 
 if __name__ == '__main__':
