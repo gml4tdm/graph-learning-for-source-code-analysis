@@ -1,10 +1,11 @@
 #! ../venv/bin/python
-import argparse
+
 ####################################################################################################
 ####################################################################################################
 # Imports, Constants, Config
 ####################################################################################################
 
+import argparse
 import collections
 import contextlib
 import os
@@ -41,8 +42,6 @@ def _set_seaborn_theme(font_scale):
 FONT_SCALE = 1.5
 _set_seaborn_theme(FONT_SCALE)
 pyplot.rcParams["font.family"] = "Hack"
-
-os.makedirs('temp', exist_ok=True)
 
 
 ####################################################################################################
@@ -243,6 +242,10 @@ def plot_features(args, data: list[data_loading.DataLoader]):
     plot_edge_feature_encoding_strategies(args, data)
     plot_other_feature_encoding_strategies(args, data)
     plot_features_joint(args, data)
+    plot_domain_other_features_as_upset(args, data)
+    plot_domain_node_features_as_barh(args, data)
+    plot_domain_other_features_as_upset(args, data)
+    plot_domain_node_features_as_barh(args, data)
 
 
 @utils.easy_log('Plotting Features Joint')
@@ -345,6 +348,35 @@ def plot_global_feature_types_as_barh(args, data: list[data_loading.DataLoader],
         plot_utils.barh_chart_from_dict(total, ax)
 
 
+@utils.easy_log('Plot domain feature types as barh')
+def plot_domain_feature_types_as_barh(args, data: list[data_loading.DataLoader], keys, filename_base):
+    studies_by_domain = collections.defaultdict(list)
+    for study in data:
+        for d in study.domains:
+            studies_by_domain[d].append(study)
+    for domain, studies in studies_by_domain.items():
+        plot_global_feature_types_as_barh(args, studies, keys, f'{filename_base}-{domain}.png')
+
+
+@utils.easy_log('Plot domain node features as barh')
+def plot_domain_node_features_as_barh(args, data: list[data_loading.DataLoader]):
+    keys = [
+        'node feature (internal)',
+        'node feature (terminal)',
+        'node feature (root/terminal)',
+        'node feature',
+    ]
+    plot_domain_feature_types_as_barh(args, data, keys, 'features/domain-node-feature-types-as-barh')
+
+
+@utils.easy_log('Plot domain other features as barh')
+def plot_domain_other_features_as_barh(args, data: list[data_loading.DataLoader]):
+    keys = [
+        'other'
+    ]
+    plot_domain_feature_types_as_barh(args, data, keys, 'features/domain-other-feature-types-as-barh')
+
+
 @utils.easy_log('Plotting Global Node Features as Upset Chart')
 def plot_global_node_feature_types_as_upset(args, data: list[data_loading.DataLoader]):
     features = [
@@ -380,22 +412,53 @@ def plot_global_other_features_as_upset(args, data: list[data_loading.DataLoader
 
 @utils.easy_log('Plot global feature types as upset')
 def plot_global_feature_types_as_upset(args, data: list[data_loading.DataLoader], keys, filename):
-    df = upsetplot.from_memberships(
+    data = [
         [
-            [
-                _remove_brackets(item)
-                for feature in study.features
-                for feat in keys
-                for item in feature.get_next_attribute_level(feat)
-            ]
-            for study in data
-         ]
-    )
+            _remove_brackets(item)
+            for feature in study.features
+            for feat in keys
+            for item in feature.get_next_attribute_level(feat)
+        ]
+        for study in data
+    ]
+    if all(not x for x in data):
+        print(f'WARNING: Not generating file {filename}! (no data)', )
+        return
+    df = upsetplot.from_memberships(data)
     with plot_utils.figure(filename,
                            nrows=2,
                            ncols=2,
                            tight=3) as (fig, axes):
         plot_utils.upset_plot(df, fig, axes, min_size=args.min_feature_upset)
+
+
+@utils.easy_log('Plot domain feature types as upset')
+def plot_domain_feature_types_as_upset(args, data: list[data_loading.DataLoader], keys, filename_base):
+    studies_by_domain = collections.defaultdict(list)
+    for study in data:
+        for d in study.domains:
+            studies_by_domain[d].append(study)
+    for domain, studies in studies_by_domain.items():
+        plot_global_feature_types_as_upset(args, studies, keys, f'{filename_base}-{domain}.png')
+
+
+@utils.easy_log('Plot domain node features as upset')
+def plot_domain_node_features_as_upset(args, data: list[data_loading.DataLoader]):
+    keys = [
+        'node feature (internal)',
+        'node feature (terminal)',
+        'node feature (root/terminal)',
+        'node feature',
+    ]
+    plot_domain_feature_types_as_upset(args, data, keys, 'features/domain-node-feature-types-as-upset')
+
+
+@utils.easy_log('Plot domain other features as upset')
+def plot_domain_other_features_as_upset(args, data: list[data_loading.DataLoader]):
+    keys = [
+        'other'
+    ]
+    plot_domain_feature_types_as_upset(args, data, keys, 'features/domain-other-feature-types-as-upset')
 
 
 @utils.easy_log('Plotting Node Feature Encoding Strategies')
@@ -523,6 +586,8 @@ def plot_models(args, data: list[data_loading.DataLoader]):
     plot_tree_stuff(args, data)
     plot_classic_models(args, data)
     plot_pooling_as_starburst(args, data)
+    plot_models_by_type_per_domain(args, data)
+    plot_models_by_type_as_upset_per_domain(args, data)
 
 
 @utils.easy_log('Plotting Models by Type')
@@ -540,6 +605,23 @@ def plot_models_by_type(args, data: list[data_loading.DataLoader]):
         plot_utils.barh_chart_from_dict(models_by_type, ax)
 
 
+@utils.easy_log('Plotting models by type per domain')
+def plot_models_by_type_per_domain(args, data: list[data_loading.DataLoader]):
+    models_by_type = collections.defaultdict(lambda: collections.defaultdict(int))
+    for study in data:
+        for model in study.models:
+            model_type = '/'.join(
+                sorted(
+                    model.get_attributes('base-type')
+                )
+            )
+            for domain in study.domains:
+                models_by_type[domain][model_type] += 1
+    for domain, models in models_by_type.items():
+        with plot_utils.figure(f'models/models-by-type-per-domain-{domain}.png') as (fig, ax):
+            plot_utils.barh_chart_from_dict(models, ax)
+
+
 @utils.easy_log('Plotting models by type as upset plot')
 def plot_models_by_type_as_upset(args, data: list[data_loading.DataLoader]):
     models = [m.get_attributes('base-type') for study in data for m in study.models]
@@ -549,6 +631,22 @@ def plot_models_by_type_as_upset(args, data: list[data_loading.DataLoader]):
                            ncols=2,
                            tight=3) as (fig, axes):
         plot_utils.upset_plot(df, fig, axes)
+
+
+@utils.easy_log('Plotting models by type as upset plot per domain')
+def plot_models_by_type_as_upset_per_domain(args, data: list[data_loading.DataLoader]):
+    models_by_domain = collections.defaultdict(list)
+    for study in data:
+        for model in study.models:
+            for domain in study.domains:
+                models_by_domain[domain].append(model.get_attributes('base-type'))
+    for domain, models in models_by_domain.items():
+        df = upsetplot.from_memberships(models)
+        with plot_utils.figure(f'models/models-by-type-as-upset-per-domain-{domain}.png',
+                               nrows=2,
+                               ncols=2,
+                               tight=3) as (fig, axes):
+            plot_utils.upset_plot(df, fig, axes)
 
 
 @utils.easy_log('Plotting Models by Domain')

@@ -24,12 +24,12 @@ import libedit
 
 SNOWBALLING_FILE = '../data-extraction/raw/auxiliary/snowballing.json'
 SCOPUS_FILE = '../data-extraction/raw/auxiliary/scopus.csv'
-CROSSREF_DIRECTORY = '../data-extraction/auxiliary/crossref_data'
+CROSSREF_DIRECTORY = '../data-extraction/raw/auxiliary/crossref_data'
 DATA_DIRECTORIES = [
-    '../data-extraction/initial/form-1',
-    '../data-extraction/initial/form-2',
-    '../data-extraction/initial/form-3',
-    '../data-extraction/backward-snowballing/form-3',
+    '../data-extraction/raw/initial/form-1',
+    '../data-extraction/raw/initial/form-2',
+    '../data-extraction/raw/initial/form-3',
+    '../data-extraction/raw/backward-snowballing/form-3',
 ]
 
 _scopus_data: dict[str, dict[str, str]] | None = None
@@ -176,7 +176,7 @@ class DataLoader(abc.ABC):
         graphs = json.loads(self._raw)['graphs']
         if isinstance(graphs, str):
             return {'any': ['any graph']}       # Weird special case
-        with open('../resolver/graph_key_overwrite.json') as file:
+        with open('graph_key_overwrite.json') as file:
             overwrites = json.load(file)
         if self.uid in overwrites:
             mapping = overwrites[self.uid]
