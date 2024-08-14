@@ -1,0 +1,67 @@
+paper-id: 97
+pdf-id: 133
+graphs:
+  code-property-graph-plus:
+    name: CPG+
+    description: Code property graph with NCS edges
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+      - name: Natural Code Sequence Edge (NCS)
+        details: n/a
+    vertex-features: |-
+      Tokenize, normalize names, average word2vec vector of all tokens per node.
+      Concatenate that with node type encoded as integer.
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Parallel paths for the separate subgraphs based on edge type. For subgraph r,
+        a node i is updated according to:
+        
+        h_{i,r}^{t + 1} = concat_{k = 1}^K \sigma\left(\sum_{j \in N(i) a_{ij}^{r^k}W^k h_{j,r}^t\right)
+        
+        Here, a_{ij}^{r^k} is the attention weight for node j and W^k the corresponding
+        weight matrix. We are summing over K because multi-head attention is used.
+        Attention computed according to:
+          a_{ij}^r = softmax(e_{ij}^r)
+          e_{ij}^r = m(Wh_{i,r}^t \mid\mid Wh_{j,r}^t)
+          Where m is an operation mapping a vector to a scalar, 
+          and W is a shared parameter _increasing_ the dimension of the embedding
+        
+        After message passing rounds,
+        node embeddings are averaged per node over all graphs.
+        Next, average pooling to combine all node embeddings 
+        MLP
+        sigmoid
+tasks:
+  training-objective:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: code-property-graph-plus
+    model: model
+    task: training-objective
+    comments:
+comments: # list

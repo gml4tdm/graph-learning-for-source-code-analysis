@@ -1,0 +1,67 @@
+paper-id: 147
+pdf-id:
+graphs:
+  cfg:
+    name: Control Flow Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Natural Sequence Edge
+        details: natural control flow
+      - name: True Edge
+        details: True branch of conditional
+      - name: False Edge
+        details: False branch of conditional
+    vertex-features: |-
+      Tokens in nodes are embedded using word2vec
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: |-
+      Identifier names in tokens are split up; punctuation is removed 
+      Tokens from the code are encoded using word2vec.
+      
+      Already generated words are encoded using word2vec.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two parallel inputs:
+          i) Tokens -- Fed Into Transformer encoder 
+              - Multi-head self attention w/ residual connection and layer normalisation 
+              - Positional FNN w/ residual connection and layer normalisation
+          ii) Graph Nodes
+              - Tokens in nodes are passed through BiLSTM to generate node embeddings
+        2) Node embeddings are passed through GNN
+          i) GAT 
+          ii) Each node embedding is passed through FNN w/ residual connection and layer normalisation
+        3) Already generated words are passed to a multi-head self attention layer w/ residual connection and layer normalisation
+        4) graph embedding and embedding of generated words are combined in multi-head attention module 
+        5) token embedding and embedding of generated words are combined in multi-head attention module
+        6) output of the two multi-head attention modules is concatenated
+        7) Linear layer 
+        8) Softmax
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph + Sequence to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph + Sequence to Sequence
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

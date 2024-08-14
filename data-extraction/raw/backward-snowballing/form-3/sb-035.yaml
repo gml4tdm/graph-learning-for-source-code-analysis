@@ -1,0 +1,43 @@
+paper-id:
+pdf-id:
+graphs:
+  graph:
+    name: n/a
+    description: bipartite network
+    artefacts:
+      - name: github repositories
+        details: n/a
+      - name: github user data
+        details: n/a
+    vertex-type: repositories/users
+    edge-type: contributes
+    vertex-features: |-
+      for users: potential passwords/keys, occurrences of string "password" in a file, sensitive filetypes.
+      
+      for repos: vulnerability type(s) detected by scanner tool (secret leakage, classical vulnerabilities such as sql, etc.)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: |-
+      The bipartite network is projected into two mono-partite networks (user network and repo network)
+      
+      Graphs are encoded using text associated deep walk
+    other-features: n/a
+models:
+  model:
+    name: K-means clustering
+    architecture-attributes:
+      - k means
+tasks:
+  clustering:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: Cluster nodes together
+    working-granularity: graph clustering
+    application: identification of groups of vulnerable repositories and users (proactively identify vulnerable communities)
+    supervision: unsupervised
+combinations:
+  - graph: graph
+    model: model
+    task: clustering
+    comments:
+comments: # list

@@ -1,0 +1,75 @@
+paper-id: 170
+pdf-id: 223
+graphs:
+  ast:
+    name: n/a
+    description: Hypergraph based on AST
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: Internal node (non-token)
+      - name: Identifier Node
+        details: Token node
+    edge-type:
+      - name: Directed Hyper Edge
+        details: |-
+          If a node aggregates multiple items in e.g. a list,
+          then the items in the list are connected to the parent 
+          node using a hyper edge (going _from_ multiple children _to_ the parent).
+          
+          Edges have distinct types, based on the type of relation 
+          between parent and children (e.g. "elements" for list elements).
+    vertex-features: Node value (payload)
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Let n = (\mu, x) denote a node of type \mu with value x 
+        Let e = (\rho, S(e), T(e)) denote an edge of type \rho with tails S(e) and head T(e)
+        
+        1) Embedding of nodes using embedding layers according to
+            d_n = Embed_{\mu}(x) 
+        2) Embedding of edges using embedding layer according to
+            d_e = Embed_{edge}(\rho)
+        3) h_n^0 = W_{\mu}d_n + b_{\mu}
+        4) Heterogeneous Directed Hypergraph Convolutional Layer (HDHGConv) (L layers)
+            i) Message Aggregation From Nodes to Hyper-Edges 
+                - Compute message according to 
+                    m^{\ell}_{n,e} = \begin{cases}
+                        W^{\ell}_{head}h_n^{\ell-1} + b^{\ell}_{head} & n \in S(e) \\
+                        W^{\ell}_{tail}h_n^{\ell-1} + b^{\ell}_{tail} & n = T(e) \\
+                    \end{cases}
+                - The directed hyper-edge e gathers messages frm tail nodes and head 
+                  node using attention. For a message, attention is computed using 
+                  d_e and m^{\ell}_{n,e}.
+                  Messages are then aggregated using an attention weighted sum w/ learnable matrix
+                  in order to obtain o_e^{\ell}
+                - New embedding becomes q_e^{\ell} = o_e^{\ell} + W_z^{\ell} d_e + b_z^{\ell}
+            ii) Message Aggregation From Hyper-Edges to Nodes
+                - First two step identical to those for nodes -> edges, resulting in v_n^{\ell} 
+                - New embedding computed according to 
+                    h_n^{\ell} = ELU(GraphNorm(W^{\ell}_{u1}v_n^{\ell} + W^{\ell}_{u2}h_n^{\ell - 1} + b_u^{\ell}))
+        5) Attention-weighted sum pooling of node embeddings 
+            a_n = softmax(g^t h_n^L), where g is a learnable vector 
+        6) MLP w/ Softmax
+tasks:
+  code-classification:
+    training-objective: Classify program into one of multiple categories
+    training-granularity: Graph Classification
+    working-objective: Classify program into one of multiple categories
+    working-granularity: Graph Classification
+    application: Code Classification
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-classification
+    comments:
+comments: # list

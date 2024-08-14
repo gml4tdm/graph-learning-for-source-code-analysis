@@ -1,0 +1,41 @@
+paper-id: sb-029
+pdf-id: sb-040
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Sequence of nonterminal rule expansions used to 
+      from free (depth first, left-to-right order), is used as feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - encoder / decoder architecture
+      - learnable embedding
+      - encode is LSTM
+      - decoder is LSTM with attention weighted sum of hidden states (softmax over possible rules)
+      - generate next rule to be applied; separate model for generating tokens
+tasks:
+  code-generation:
+    training-objective: Given an AST, generate a new AST (edit proposal)
+    training-granularity: n/a
+    working-objective: Given an AST, generate a new AST (edit proposal)
+    working-granularity: n/a
+    application: Automated code editing
+    supervision: (self-)supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-generation
+    comments:
+comments: # list

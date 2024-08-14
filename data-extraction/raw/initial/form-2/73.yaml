@@ -1,0 +1,71 @@
+paper-id: 73
+pdf-id:
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features: |-
+      Node type is encoded as a scalar 
+      Tokens in a node are embedded using word2vec; vectors per token are averaged 
+      node type and payload embedding are concatenated
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix (?)
+    graph-features: |-
+      Graph is rendered as an image.
+      Each node has sa different colour,
+      and has the line number of its corresponding statement as its content. 
+      Different edge types have different colours and line types.
+    other-features: n/a
+models:
+  multi-modal-model:
+    type:
+      name:
+      architecture:
+        1) Global Image Encoder
+          SwinV2, followed by an FNN layer
+        2) Positional Encoder 
+          Use character recognition to determine node locations in terms of bounding boxes
+          FNN layer 
+        3) Code Encoder 
+          Each statement (node content) is encoded using pre-trained UniXcoder
+        4) Multi-model Graph Encoder 
+          Graph passed to GAT network with encoded code (3) as node embeddings
+          FNN layer 
+          Node embeddings are combined with bounding boxes (2),
+            and a new graph is constructed, where the presence of an edge 
+            R_{ij} between nodes i and j is computed as f(v_i)g(v_j),
+            where f and g are FNN layers, and v_i and v_j are node embeddings (including bounding box information).
+          New graph is passed through GCN
+          Compute average of all node embeddings
+      
+        Concatenate outputs of (1), (3), and (4) (NOT (2))
+        FNN w/ softmax
+tasks:
+  vulnerability-detection:
+    training-objective: Classify code sample as vulnerable/not vulnerable
+    training-granularity: Graph Classification (ish)
+    working-objective: Classify code sample as vulnerable/not vulnerable
+    working-granularity: Graph Classification (ish)
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: code-property-graph
+    model: multi-modal-model
+    task: vulnerability-detection
+    comments:
+comments: # list

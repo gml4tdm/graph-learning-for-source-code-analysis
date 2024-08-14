@@ -1,0 +1,40 @@
+paper-id: sb-011
+pdf-id: sb-018
+graphs:
+  graph:
+    name: field focussed graph
+    description: n/a
+    artefacts:
+      - name: source code
+        details: class
+    vertex-type: methods/fields/constructors/semantic relations (calls, reads, writes, sync, modifier)
+    edge-type: method/fields/constructors are connected with undirected edges, with a semantic node inbetween them
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: |-
+      several subgraphs are isolated, by taking all subsets of <= 2 methods/fields/constructors,
+      and extracting the subgraphs reachable from those nodes.
+    other-features: |-
+      Every subgraph is encoded using the  Weisfeiler Lehman kernel. 
+      The resulting vectors are combined by first computing three vectors through min/max/mean pooling,
+      and then concatenating these.
+models:
+  model:
+    name: SVM
+    architecture-attributes:
+      - svm
+tasks:
+  thread-safe-detection:
+    training-objective: Classify sample (class) as thread safe or not
+    training-granularity: Graph classification
+    working-objective: Classify sample (class) as thread safe or not
+    working-granularity: Graph classification
+    application: Thread Safety Inference for Automated Documentation Generation
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: thread-safe-detection
+    comments:
+comments: # list

@@ -1,0 +1,41 @@
+paper-id: sb-004
+pdf-id: sb-006
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: token in AST nodes w/ sub-token splitting (embedding not specified)
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: |-
+      pre-order traversal. At every statement (composite) node, tree is split into sub-trees.
+      
+      Code is used as a feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - encoder/decoder architecture
+      - transformer decoder w/ copy
+      - recursive neural network for ast embedding (combine embeddings of parent and direct children until sub-tree is done; max pooling over nodes in subtree. Move to subtrees one level up)
+      - code encoded using transformer encoder
+tasks:
+  code-summarization:
+    training-objective: Given a code sample, generate a summary
+    training-granularity: x to sequence
+    working-objective: Given a summary, generate a code sample
+    working-granularity: x to sequence
+    application: Code summarization
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

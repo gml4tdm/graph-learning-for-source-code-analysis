@@ -1,0 +1,51 @@
+paper-id: sb-091
+pdf-id: sb-127
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: module
+    vertex-type: ast (only specific node types are kept)
+    edge-type: ast
+    vertex-features: node type
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      pre-order traversal sequence of ast nodes.
+models:
+  model-1:
+    name: n/a
+    architecture-attributes:
+      - CBOW model
+  model-2:
+    name: n/a
+    architecture-attributes:
+      - Use learned embeddings from model-1 to encode token input
+      - Bidirectional LSTM
+      - max pooling
+      - attention
+      - sigmoid
+tasks:
+  embedding:
+    training-objective: Given the parent and children of a node (i.e. their types), predict the masked node (type)
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: embedding
+    supervision: self-supervised
+  defect-prediction:
+    training-objective: Classify a module as defective or not
+    training-granularity: n/a
+    working-objective: Classify a module as defective or not
+    working-granularity: n/a
+    application: Defect Prediction
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model-1 + model-2
+    task: embedding + defect-prediction
+    comments:
+comments: # list

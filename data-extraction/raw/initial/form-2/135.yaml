@@ -1,0 +1,117 @@
+paper-id: 135
+pdf-id: 178
+graphs:
+  augmented-code-property-graph:
+    name: Augmented Code Property Graph
+    description: Code property graph, including call information
+    artefacts:
+      - name: Source code
+        details: file
+    vertex-type:
+      - name: AST Node
+        details: |-
+          Three main attributes; 1) node type, 2) node code, 3) node location 
+          
+          Nodes are pruned:
+          1) Nodes with syntactic elements which are characteristics of certain bugs are selected
+          2) All nodes making up the statements these nodes are part of are selected 
+          3) all nodes making up statements with data and call relationships to these statements are selected.
+          4) For all selected nodes, a nearest neighbour set is computed 
+          5) All selected nodes are kept 
+          
+          The result is multiple possible graphs per file.
+          Furthermore, each graph is associated with a certain defect type.
+    edge-type:
+      - name: AST Edge
+        details: |-
+          Every edge has three main attributes; 1) source node, 2) destination node, 3) edge type
+          Note that the node type is actually one of 24 possible types (the four shown here is a simplification)
+      - name: Control Flow Edge
+        details: |-
+          Every edge has three main attributes; 1) source node, 2) destination node, 3) edge type
+          Note that the node type is actually one of 24 possible types (the four shown here is a simplification)
+      - name: Data Flow Edge
+        details: |-
+          Every edge has three main attributes; 1) source node, 2) destination node, 3) edge type
+          Note that the node type is actually one of 24 possible types (the four shown here is a simplification)
+      - name: Call Edge
+        details: |-
+          Every edge has three main attributes; 1) source node, 2) destination node, 3) edge type
+          Note that the node type is actually one of 24 possible types (the four shown here is a simplification)
+    vertex-features: |-
+      The tokens in the node value are encoded using word2vec,
+      and combined using kernel PCA.
+      
+      node type is embedded using integer,
+      
+      The two embeddings are concatenated.
+    edge-features: n/a
+    connectivity-features: (sparse) adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  gcn:
+    type:
+      name: n/a
+      architecture: |-
+        Repeated modules of: [GCN, ReLU, BathNormalisation, Linear, Linear]
+        MLP
+        Softmax
+  gin:
+    type:
+      name: n/a
+      architecture: |-
+        Repeated modules of: [GIN, ReLU, BathNormalisation, Linear, Linear]
+        MLP
+        Softmax
+  sgc:
+    type:
+      name: n/a
+      architecture: |-
+        Repeated modules of: [SGC (Simplified Graph Convolutional Network), ReLU, BathNormalisation, Linear, Linear]
+        MLP
+        Softmax
+  gat:
+    type:
+      name: n/a
+      architecture: |-
+        Repeated modules of: [GAT, ReLU, BathNormalisation, Linear, Linear]
+        MLP
+        Softmax
+  graphsage:
+    type:
+      name: n/a
+      architecture: |-
+        Repeated modules of: [GraphSAGE, ReLU, BathNormalisation, Linear, Linear]
+        MLP
+        Softmax
+tasks:
+  defect-prediction:
+    training-objective: Given a sample, predict as defect or not defect
+    training-granularity: Graph Classification
+    working-objective: Given a sample, predict as defect or not defect
+    working-granularity: Graph Classification
+    application: Defect Prediction
+    supervision: Supervised
+combinations:
+  - graph: augmented-code-property-graph
+    model: gcn
+    task: defect-prediction
+    comments:
+  - graph: augmented-code-property-graph
+    model: gin
+    task: defect-prediction
+    comments:
+  - graph: augmented-code-property-graph
+    model: sgc
+    task: defect-prediction
+    comments:
+  - graph: augmented-code-property-graph
+    model: gat
+    task: defect-prediction
+    comments:
+  - graph: augmented-code-property-graph
+    model: graphsage
+    task: defect-prediction
+    comments:
+comments: # list

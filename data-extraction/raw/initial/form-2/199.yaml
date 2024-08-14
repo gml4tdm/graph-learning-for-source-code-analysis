@@ -1,0 +1,79 @@
+paper-id: 199
+pdf-id: 267
+graphs:
+  tree-graph:
+    name: Tree Graph
+    description: Simplified version of AST
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node Type Node
+        details: Every node type in the AST has _one_ node in the tree graph
+    edge-type:
+      - name: Edge
+        details: |-
+          There is an edge between two node types in the tree graph 
+          if and only if there exists an edge between two nodes of 
+          those types in the original AST.
+    vertex-features: |-
+      1) Degree Centrality
+      2) Katz Centrality 
+      3) Betweenness Centrality
+      4) Eigenvector Centrality
+      5) Closeness Centrality
+      6) Harmonic Centrality
+      7) Mean Centrality: average of the six above
+      8) Concatenate Centrality: concatenation of the first six
+      
+      Each centrality measure is tested _individually_.
+      The feature vectors (obtained by concatenating the measures 
+      for all [72] node types) for two code samples asre concatenated 
+      and passed to a classifier.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  knn:
+    type:
+      name: KNN
+      architecture: n/a
+  dt:
+    type:
+      name: Decision Tree
+      architecture: n/a
+  rf:
+    type:
+      name: Random Forest
+      architecture: n/a
+  lr:
+    type:
+      name: Logistic Regression
+      architecture: n/a
+tasks:
+  clone-detection:
+    training-objective: Determine whether the two given code samples are semantic clones
+    training-granularity: Graph Classification (?)
+    working-objective: Determine whether the two given code samples are semantic clones
+    working-granularity: Graph Classification (?)
+    application: Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: tree-graph
+    model: knn
+    task: clone-detection
+    comments:
+  - graph: tree-graph
+    model: dt
+    task: clone-detection
+    comments:
+  - graph: tree-graph
+    model: rf
+    task: clone-detection
+    comments:
+  - graph: tree-graph
+    model: lr
+    task: clone-detection
+    comments:
+comments: # list

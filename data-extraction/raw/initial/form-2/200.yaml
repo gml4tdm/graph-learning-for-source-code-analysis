@@ -1,0 +1,61 @@
+paper-id: 200
+pdf-id: 268
+graphs:
+  lr-fa-ast:
+    name: LR-FA-AST (Less Redundancy Flow Augmented AST)
+    description: |-
+      Flow-augmented AST with pruning applied.
+      Specifically, only "important" nodes and their edges 
+      are kept, where important nodes are nodes dealing 
+      with variable/method declarations, and control structures (e.g. if, loops)
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: Certain node types are pruned (see description)
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Block Edge
+        details: Edges between the child node of block structures
+      - name: Conditional Edge
+        details: Edges between child nodes of control structures (e.g. while, if)
+      - name: Leaf Edge
+        details: Edges between (successive) leaf nodes
+      - name: Control Edge
+        details: Edges for function calls(?)
+    vertex-features: Unclear; presumably node type based on images in the paper
+    edge-features: Edges have weights; unclear how they are computed. It seems to be the edge type
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Node Embedding Layer 
+        2) Edge Embedding Layer
+        3) The two inputs graphs are joined (as in, two separate disjoint graphs, but in the same graph representation) 
+        4) Message passing:
+          i) message generation: m_{ij} = ReLU(W[h_i^t; h_j^t; e_{ij}] + b)
+          ii) Aggregation: h_i^{t+1}' = \sigma(W * (h_i^t \mid\mid \sum_j m_{ij} h_j^t) + b)
+          iii) GRU: h_i^{t + 1} = GRU(h_i^{t + 1}', h_i^t)
+        5) Nodes are separated per (original) graph 
+        6) Some attention mechanism is used to pool features; unclear what exactly 
+        7) Cosine similarity
+tasks:
+  clone-detection:
+    training-objective: Given two code samples, determine whether they are semantic clones
+    training-granularity: Graph Classification (?)
+    working-objective: Given two code samples, determine whether they are semantic clones
+    working-granularity: Graph Classification (?)
+    application: Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: lr-fa-ast
+    model: model
+    task: clone-detection
+    comments:
+comments: # list

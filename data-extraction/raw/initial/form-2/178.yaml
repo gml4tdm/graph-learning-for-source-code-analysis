@@ -1,0 +1,75 @@
+paper-id: 178
+pdf-id: 232
+graphs:
+  ast:
+    name: AST
+    description: |-
+      Each AST is split into subtrees.
+      Specifically, each composite structure (e.g. if, while)
+      is replaced with a placeholder node, and the 
+      corresponding subtree is isolated from its parent tree.
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: unclear how nodes in tokens are initially embedded
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: |-
+      Structure tree (tree representing how all subtrees fit together) 
+      is also used as graph.
+    other-features: |-
+      Raw code snippets are used as features
+      
+      For code search, a query is given in text form.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Raw code snippet tokens encoded using transformer encoder
+        2) Subtrees passed to a tree-based (bottom up) RNN (RvNN):
+            i) h_i^{t + 1} = \tanh(W^C c_i^t + \frac{1}{|CH^t(v_i)} \sum_{j \in CH^t(v_i)} W^A h_j^t)
+              (h = hidden states, CH = children, c = token embedding)
+            ii) After all nodes updated, compute dimension-wise max-pooling to obtain tree representation
+        3) Same scheme is applied to the structure tree (tree representing how all subtrees fit together),
+              but c_i now denote the embeddings of sub-trees.
+        4.1) for summarisation, encoded tokens and encoded AST are passed to transformer decoder w/ copy mechanism
+        4.2) for code search, the embedding of the root of the structure tree, and the embedding
+            of the [CLS] token from the last encoder layer are concatenated and passed through a linear layer.
+        
+            Query encoded using transformer encoder 
+        
+            The scalar product is used to compute similarity between the code and query vectors.
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+    training-granularity: Graph to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+    working-granularity: Graph to Sequence
+    application: Code summarization
+    supervision: Supervised
+  code-search:
+    training-objective: Maximise similarity between _related_ code snippet and queries (compared to unrelated pairs)
+    training-granularity: n/a
+    working-objective: Compute similarity of code snippets and query
+    working-granularity: n/a
+    application: Code search
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-search
+    comments:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

@@ -1,0 +1,63 @@
+paper-id: 218
+pdf-id: 288
+graphs:
+  cfg:
+    name: CFG
+    description: Control flow graph extracted from the bytecode of a smart contract
+    artefacts:
+      - name: Source Code
+        details: smart contract
+    vertex-type:
+      - name: Entry Point
+        details: n/a
+      - name: New Variable
+        details: n/a
+      - name: If
+        details: n/a
+      - name: Expression
+        details: assignment without declaration
+      - name: EndIf
+        details: n/a
+      - name: Return
+        details: n/a
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+      - name: True Branch Edge
+        details: n/a
+      - name: False Branch Edge
+        details: n/a
+    vertex-features: |-
+      TF/IDF weighted sum of the Word2Vec embeddings in the opcodes of a node
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two parallel inputs
+          i) Graph Input
+            - GCN
+            - GCN
+            - Average Pooling
+          ii) Adjacency Matrix
+            - CNN
+        2) Concatenate 
+        3) FNN
+tasks:
+  vulnerability-detection:
+    training-objective: Given a graph, classify it as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Given a graph, classify it as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection in Smart Contracts
+    supervision: Supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

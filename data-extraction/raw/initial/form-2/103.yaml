@@ -1,0 +1,93 @@
+paper-id: 103
+pdf-id: 139
+graphs:
+  spg:
+    name: Slice Property Graph
+    description: |-
+      Similar to code property graph, but with program slicing.
+      
+      First, AST is used to detect SyVC's. 
+      These are used as a basis for slicing in the PDG.
+      Next, a graph with data, control, and function call dependence edges is created.
+      
+      Note: one function may have multiple slices.
+    artefacts:
+      - name: Source code
+        details: Also function focussed, but not exclusively
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Data Dependence Edge
+        details: n/a
+      - name: Control Dependence Edge
+        details: n/a
+      - name: Function Call Dependence Edge
+        details: n/a
+    vertex-features: |-
+      Statements in nodes are tokenized, encoded using word2vec,
+      and enhanced with positional labels. 
+      
+      Node types are one-hot encoded.
+    edge-features: Edges are labelled according to type (d \in D)
+    connectivity-features: n/a
+    graph-features: Three subgraphs are created by considering different edge types
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        First, tokens are put through a multi-head attention mechanism to 
+        come up with node embeddings for the statements.
+        
+        These are concatenated with the node type, and passed through a FNN layer.
+        
+        The four graphs (main SPG and 3 subgraphs) are passed through multiple (L) rounds of R-GCN.
+        
+        L+1 node embeddings (including initial) are concatenated for every node _per graph separately_.
+        
+        Pooling _separately per graph_ according to attention mechanism:
+          1) z_i^G = \sigma\left(\sum_{d in D} \sum_{v_j \in N_j^d} \frac{1}{|N_j^d| h_j^G\Theta_d^G + h_i^G\Theta_o^G\right)
+            (where $\Theta_d^G$ and $\Theta_o^G$ are learnable parameters)
+          2) a_i^G = softmax(z_i^G)
+          3) S_G = \sum_{v \ in V_G} a_i^G h_i^G
+        
+        Subgraphs are pooled through attention mechanism:
+          1) r_{sub} = S_{sub}^T W_r S_{SPG}
+            (with W_r a learnable matrix)
+          2) a_{sub} = softmax(r_{sub})
+          3) S_{SA} = \sum_{sub} a_{sub} S_{sub}
+        
+        Concatenate S_G and S_{SA} 
+        FNN 
+        Softmax
+tasks:
+  slice-level-vulnerability-detection:
+    training-objective: Classify sample (slice) as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample (slice) as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection (slice level)
+    supervision: Supervised
+  function-level-vulnerability-detection:
+    training-objective: Classify sample (slice) as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample (slice) as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection (function level)
+    supervision: Supervised
+combinations:
+  - graph: spg
+    model: model
+    task: slice-level-vulnerability-detection
+    comments:
+  - graph: spg
+    model: model
+    task: function-level-vulnerability-detection
+    comments: |-
+      Training is the same as for slice-level-vulnerability-detection.
+      It is just a matter of how predictions are used.
+      A function is considered vulnerable if at least one of its 
+      slices was predicted as vulnerable.
+comments: # list

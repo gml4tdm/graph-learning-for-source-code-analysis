@@ -1,0 +1,107 @@
+paper-id: 186
+pdf-id: 246
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      The AST is traversed (depth first order), and the resulting sequence of 
+      AST node is used as the AST representation (types for internal nodes,
+      tokens for leaf nodes)
+    
+      The original sequence of code tokens is also used as a feature
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Variational Auto Encoder w/ 2 encoders and 1 decoder  
+      
+        1) Token encoder -- generates latent representation w/ von Mises-Fisher (vMF) distribution
+          i) Bidirectional LSTM
+          ii) Two parallel FNNs 
+              - One generates \mu 
+              - One generates \kappa
+        2) AST Encoder -- generates Gaussian latent representation
+          i) Bidirectional LSTM
+          ii) Two parallel FNNs
+                - One generates \mu
+                - One generates \sigma^2
+        
+        3) Decoder 
+          i) LSTM 
+          ii) FNN w/ Softmax 
+        
+        For cross language learning, 
+        there is a language-specific (ast encoder, token encoder, decoder) triple 
+        per language.
+        
+        There are also a shared token encoder and decoder. 
+        The token encoder aims to output the same as the language-specific encoder,
+        in a student/teacher setup. The output of the shared encoder and the 
+        language specific AST encoder are passed to the shared decoder,
+        which aims to given the same output as the language specific decoder 
+        (student/teacher setup).
+tasks:
+  embedding:
+    training-objective: Minimise reconstruction loss
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: Model pre-training
+    supervision: Unsupervised / Self-supervised
+  cross-language-program-translation:
+    training-objective: Given the source snippet in language A, generate the target snippet in language B
+    training-granularity: n/a
+    working-objective: Given the source snippet in language A, generate the target snippet in language B
+    working-granularity: n/a
+    application: Cross Language Program Translation
+    supervision: Supervised
+  cross-language-code-clone-detection:
+    training-objective: |-
+      Given two code snippets, maximise their cosine similarity (computed based on shared encoder output)
+      if they are semantic clones, minimise it otherwise
+    training-granularity: n/a
+    working-objective: Output vector representation useful for code clone detection
+    working-granularity: n/a
+    application: Cross Language Code Clone Detection
+    supervision: Supervised
+  cross-language-code-search:
+    training-objective: |-
+      Given two code snippets, encode them (using shared encoder),
+      concatenate, and put through FNN, and output a label denoting the unique functionality of that pair
+    training-granularity: n/a
+    working-objective: |-
+      Given two code snippets, encode them (using shared encoder),
+      concatenate, and put through FNN, and output a label denoting the unique functionality of that pair
+    working-granularity: n/a
+    application: Cross Language Code to Code Search
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: embedding + cross-language-program-translation
+    comments: The `embedding` task is used for pretraining; the other task is used for fine-tuning.
+  - graph: ast
+    model: model
+    task: embedding + cross-language-code-clone-detection
+    comments: The `embedding` task is used for pretraining; the other task is used for fine-tuning.
+  - graph: ast
+    model: model
+    task: embedding + cross-language-code-search
+    comments: The `embedding` task is used for pretraining; the other task is used for fine-tuning.
+comments:
+  - I don't fully understand the code search task

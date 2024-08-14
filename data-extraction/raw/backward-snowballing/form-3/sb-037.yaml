@@ -1,0 +1,38 @@
+paper-id: sb-037
+pdf-id: sb-055
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: pairs of source code for training (diff)
+    vertex-type: ast
+    edge-type: ast (bidirectional) / siblings
+    vertex-features: not specified
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: sequence of edit actions to transform first AST into the other
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - encoder/decoder
+      - Edits encoded using embedding layers; fed into bidirectional LSTM to get representation of the full edit as single vector
+      - encoder - GGNN w/ average pooling; LSTM over pooling outputs to capture edit history of the tree; LSTM also takes as input edit representation
+      - decoder; softmax for action selection, pointer-like network for node selection implemented using FNN, value selector/predictor using FNN for add and copy operations
+tasks:
+  code-editing:
+    training-objective: Given a tree and edit sequence, transform the tree into the other
+    training-granularity: x to tree
+    working-objective: Given a tree and edit sequence, transform the tree into the other
+    working-granularity: x to tree
+    application: program edit representation learning
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-editing
+    comments:
+comments: # list

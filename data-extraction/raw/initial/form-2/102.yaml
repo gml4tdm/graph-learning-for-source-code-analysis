@@ -1,0 +1,73 @@
+paper-id: 102
+pdf-id: 138
+graphs:
+  graph:
+    name: n/a
+    description: Combination of AST and CFG
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: |-
+      User defined names are normalised 
+      Node type one-hot encoded 
+      content of node is the average of the word2vec embeddings of all tokens in the content
+      the two embeddings are concatenated
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  gcn:
+    type:
+      name: n/a
+      architecture: |-
+        GCN
+        x_g = \sum_{v \in V} softmax(MPL(h_v)) \cdot MLP(h_v)
+        MLP 
+        sigmoid
+  gat:
+    type:
+      name: n/a
+      architecture: |-
+        GAT
+        x_g = \sum_{v \in V} softmax(MPL(h_v)) \cdot MLP(h_v)
+        MLP 
+        sigmoid
+  ggnn:
+    type:
+      name: n/a
+      architecture: |-
+        GGNN
+        x_g = \sum_{v \in V} softmax(MPL(h_v)) \cdot MLP(h_v)
+        MLP 
+        sigmoid
+tasks:
+  vulnerability-detection:
+    training-objective: Classify samples as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify samples as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection (in C/C++ source code)
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: graph
+    model: gat
+    task: vulnerability-detection
+    comments:
+  - graph: graph
+    model: ggnn
+    task: vulnerability-detection
+    comments:
+comments: # list

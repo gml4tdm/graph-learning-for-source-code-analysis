@@ -1,0 +1,43 @@
+paper-id: sb-053
+pdf-id: sb-075
+graphs:
+  ast-graph:
+    name: AST graph (constructed from partial AST)
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast (but identical nodes are merged)
+    edge-type: ast (directed)/nodes adjacent in the depth-first traversal sequence of the AST are linked (undirected)
+    vertex-features: node type and node value (EMPTY for internal nodes) (embedding method unclear); also positional information (distance to right-most node in sequence, which may be 0 if the right-most node is duplicated elsewhere, encoded as vector of repeated entries)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features:
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - Concat node type and value; add positional embedding
+      - |-
+        Blocks of the following three layers:
+          1) Neighbour Graph Attention Layer -- Similar to GAT. Attention between 1-hop neighbours. "Adjacent node" edges only
+          2) Global Self-attention Layer -- Attention with node feature matrix 
+          3) parent-child attention layer -- Attention where children receive messages from parents
+          4) Residual connection
+      - (soft) attention weighted sum of node embeddings
+      - softmax outputs for outputting type and value for next node
+tasks:
+  code-completion:
+    training-objective: Given an incomplete AST, predict the next node in the AST (right-most expansion)
+    training-granularity: n/a
+    working-objective: Given an incomplete AST, predict the next node in the AST (right-most expansion)
+    working-granularity: n/a
+    application: Code completion
+    supervision: supervised (self-)
+combinations:
+  - graph: ast-graph
+    model: model
+    task: code-completion
+    comments:
+comments: # list

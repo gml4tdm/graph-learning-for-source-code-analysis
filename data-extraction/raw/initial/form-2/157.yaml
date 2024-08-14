@@ -1,0 +1,72 @@
+paper-id: 157
+pdf-id: 207
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: Tokens are split into subtokens with separate nodes
+    edge-type:
+      - name: AST Edge
+        details: undirected
+    vertex-features:
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: |-
+      Tokenised Code is also used as input.
+      
+      Previous summary tokens are also given as input
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        encoder/decoder setup
+        
+        1) Two parallel encoders
+          i) Code token input 
+            - Embedding Layer 
+            - Bidirectional GRU
+            - Parallel to the GRU, a linear layer 
+            - Add GRU and linear layer output 
+          ii) Graph Input
+            - Embedding Layer 
+            - GAT (Specifically, output of multiple Graph Attention Layers applied in 1-hop neighbourhoods are concatenated, then another graph attention layer)
+            - Bidirectional GRU (on pre-order traversal of AST)
+        2) Decoder
+            - For both the graph encoder output and token encoder output, compute attention scores according to 
+              e_{ij} = U_a^T \tanh(W_a[h_{i - 1}, s_j]) (h_{i-1}; previous decoder hidden state -- s_j; encoder hidden state)
+              a_{ij} = softmax(e_{ij})
+            - Compute context vector according to 
+              c_i = \sum_{j = 1}^n a_{ij} T_j + p \sum_{j = 1}^N a'_{ij} V_j 
+        
+              Here, T_j is the embedding of the j-th token, V_j the embedding of the j-th node,
+              p = \sigma(y^{softmax}(h_{i - 1}))
+            - Embedding Layer for previous generated summary token
+            - Concatenate embedded summary token and context vector
+            - GRU 
+            - Linear Layer (input: GRU output concatenated with context vector)
+            - Softmax
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph + Sequence to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph + Sequence to Sequence
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

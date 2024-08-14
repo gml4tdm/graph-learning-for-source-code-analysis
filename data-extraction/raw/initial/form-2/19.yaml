@@ -1,0 +1,168 @@
+paper-id: 19
+pdf-id: 30
+graphs:
+  heterogeneous-contract-graph:
+    name: Heterogeneous Contract Graph
+    description: |-
+      Combination of heterogeneous control flow and heterogeneous call graphs at multiple levels of granularity.
+    artefacts:
+      - name: Source code
+        details: Source code of smart contracts
+    vertex-type:
+      - name: Different node types for different control flow (e.g ENTRY_POINT, NEW_VARIABLE, RETURN, IF, END_IF, FUNCTION_START)
+        details: n/a
+      - name: FALLBACK_NODE
+        details: Node to represent the call to a fallback function
+      - name: FUNCTION_NAME
+        details: |-
+          Node to represent the name of a function;
+          used combined with INTERNAL_CALL/EXTERNAL_CALL to represent FCG information,
+          and is connected to the ENTRY_POINT of a function (and thus forms the merging points for call and control flow graphs)
+    edge-type:
+      - name: Different types for control flow (e.g. TRUE, FALSE, NEXT)
+        details:
+      - name: INTERNAL_CALL
+        details: Call to function within the same smart contract
+      - name: EXTERNAL_CALL
+        details: Call to function in another smart contract
+    vertex-features: |-
+      One-hot encoded node types, _but_ that is not used for most evaluations
+    edge-features: |-
+      All length 2 meta-paths for all pairs of node types are extracted. Not used for all evaluations. 
+      (Note -- length 2 meta path is like A -> B -> C)
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  mando-one-hot:
+    type:
+      name: n/a
+      architecture: |-
+        General setup:
+        1) Nodes are embedded by the Topological Graph Neural Network (TGNN) Component
+        2) Node embeddings are, combined with the extracted meta paths, used in the 
+          Node-level attention heterogeneous graph neural network component (NLAHTGNN).
+        3) Output of NLAHTGNN is fed through MLP for downstream tasks.
+        
+        NLAHTGNN -- based on HAN, but with adjustments.
+        In particular, the network type used can handle multiple dynamic customised metapaths 
+        without pre-defining the list of input metapaths.
+        
+        TGNN used: one-hot encoding of node type
+  mando-line:
+    type:
+      name: n/a
+      architecture: |-
+        General setup:
+        1) Nodes are embedded by the Topological Graph Neural Network (TGNN) Component
+        2) Node embeddings are, combined with the extracted meta paths, used in the 
+          Node-level attention heterogeneous graph neural network component (NLAHTGNN).
+        3) Output of NLAHTGNN is fed through MLP for downstream tasks.
+
+        NLAHTGNN -- based on HAN, but with adjustments.
+        In particular, the network type used can handle multiple dynamic customised metapaths 
+        without pre-defining the list of input metapaths.
+
+        TGNN used: LINE
+  mando-node2vec:
+    type:
+      name: n/a
+      architecture: |-
+        General setup:
+        1) Nodes are embedded by the Topological Graph Neural Network (TGNN) Component
+        2) Node embeddings are, combined with the extracted meta paths, used in the 
+          Node-level attention heterogeneous graph neural network component (NLAHTGNN).
+        3) Output of NLAHTGNN is fed through MLP for downstream tasks.
+
+        NLAHTGNN -- based on HAN, but with adjustments.
+        In particular, the network type used can handle multiple dynamic customised metapaths 
+        without pre-defining the list of input metapaths.
+
+        TGNN used: Node2Vec
+  mando-metapath2vec:
+    type:
+      name: n/a
+      architecture: |-
+        General setup:
+        1) Nodes are embedded by the Topological Graph Neural Network (TGNN) Component
+        2) Node embeddings are, combined with the extracted meta paths, used in the 
+          Node-level attention heterogeneous graph neural network component (NLAHTGNN).
+        3) Output of NLAHTGNN is fed through MLP for downstream tasks.
+
+        NLAHTGNN -- based on HAN, but with adjustments.
+        In particular, the network type used can handle multiple dynamic customised metapaths 
+        without pre-defining the list of input metapaths.
+
+        TGNN used: Metapath2vec
+  mando-gcn:
+    type:
+      name: n/a
+      architecture: |-
+        General setup:
+        1) Nodes are embedded by the Topological Graph Neural Network (TGNN) Component
+        2) Node embeddings are, combined with the extracted meta paths, used in the 
+          Node-level attention heterogeneous graph neural network component (NLAHTGNN).
+        3) Output of NLAHTGNN is fed through MLP for downstream tasks.
+
+        NLAHTGNN -- based on HAN, but with adjustments.
+        In particular, the network type used can handle multiple dynamic customised metapaths 
+        without pre-defining the list of input metapaths.
+
+        TGNN used: GCN
+tasks:
+  contract-level-analysis:
+    training-objective: Classify smart contracts as vulnerable/not vulnerable (for the attention network part)
+    training-granularity: Graph Classification
+    working-objective: Classify smart contracts as vulnerable/not vulnerable (for the attention network part)
+    working-granularity: Graph Classification
+    application: Smart Contract Vulnerability Detection
+    supervision: supervised
+  statement-level-analysis:
+    training-objective: Identify vulnerable lines in smart contracts which are guaranteed to contain vulnerabilities (for the attention network part)
+    training-granularity: Node Classification
+    working-objective: Identify vulnerable lines in smart contracts which are guaranteed to contain vulnerabilities (for the attention network part)
+    working-granularity: Node Classification
+    application: Smart Contract Vulnerability Identification
+    supervision: supervised
+combinations:
+  - graph: heterogeneous-contract-graph
+    model: mando-one-hot
+    task: contract-level-analysis
+    comments:
+  - graph: heterogeneous-contract-graph
+    model: mando-one-hot
+    task: statement-level-analysis
+    comments:
+  - graph: heterogeneous-contract-graph
+    model: mando-nod2vec
+    task: contract-level-analysis
+    comments:
+  - graph: heterogeneous-contract-graph
+    model: mando-node2vec
+    task: statement-level-analysis
+    comments:
+  - graph: heterogeneous-contract-graph
+    model: mando-line
+    task: contract-level-analysis
+    comments:
+  - graph: heterogeneous-contract-graph
+    model: mando-line
+    task: statement-level-analysis
+    comments:
+  - graph: heterogeneous-contract-graph
+    model: mando-metapath2vec
+    task: contract-level-analysis
+    comments:
+  - graph: heterogeneous-contract-graph
+    model: mando-metapath2vec
+    task: statement-level-analysis
+    comments:
+  - graph: heterogeneous-contract-graph
+    model: mando-gcn
+    task: contract-level-analysis
+    comments:
+  - graph: heterogeneous-contract-graph
+    model: mando-gcn
+    task: statement-level-analysis
+    comments:
+comments: # list

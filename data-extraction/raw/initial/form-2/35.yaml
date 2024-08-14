@@ -1,0 +1,60 @@
+paper-id: 35
+pdf-id: 48
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: |-
+      Based on bag of graphs (Silva et al.)
+      
+      First, authors define Nodes of Interest (NOIs).
+      These NOIs are used to capture three types of GOIs:
+      
+      1) NOI w/ source code text 
+      2) Trees with the NOI as their root
+      3) Shortest path from AST root to the NOI
+      
+      For each GOI, concatenate all node payloads (text) and hash them. 
+     
+      Next, for each NOI, generate a feature vector of all GOI corresponding
+      to the NOI by concatenating the hashes. 
+      
+      Since number of NOI is variable, sample a fixed number through 
+      random sampling with replacement. 
+      
+      Cluster vectors using K-means.
+      
+      Generate graph features by creating a histogram of how many 
+      NOI of each type (cluster) are present in the graph.
+    other-features: n/a
+models:
+  svm:
+    type:
+      name: SVM
+      architecture: SVM
+tasks:
+  cryptograpy-misuse-detection:
+    training-objective: Classify given graph as secure or insecure
+    training-granularity: Binary Graph Classification
+    working-objective: Classify given graph as secure or insecure
+    working-granularity: Binary Graph Classification
+    application: Cryptography Misuse Detection
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: svm
+    task: cryptograpy-misuse-detection
+    comments: n/a
+comments: # list

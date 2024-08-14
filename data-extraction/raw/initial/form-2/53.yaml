@@ -1,0 +1,115 @@
+paper-id: 53
+pdf-id: 76
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: method
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      Node content is encoded using Word2Vec
+      
+      Note that all nodes, even e.g. BlockStm, are considered 
+      to contain a text payload (e.g. "{}")
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      For every graph, the minimum set of long paths covering 
+      all nodes in the AST is computed.
+      Here, a long path is a path from one leaf node to another,
+      via the root, possibly sharing one or multiple nodes along 
+      the path.
+      
+      During the generation of training data,
+      If a long path contains a node which was present in a 
+      bug/vulnerability fix, all embeddings in the path
+      are multiplied by a weight w.
+      
+      For the GRU model, the nodes in a long path are seen 
+      as a sequence of token.
+      
+      For the CNN model, the nodes in a long path are combined 
+      into a matrix.
+      
+      Joint model, with two parallel paths:
+        1) Attention-based GRU layer
+        2) Attention-based CNN layer followed by FNN
+      Both paths are combined w/ a multi-head attention layer. 
+      
+      This method is used to encode every path into a (local) vector.
+      
+      For every long path, the nodes in the PDG and DFG (partially) 
+      covered by the long path are extracted, and formed into two matrices.
+      These matrices (global) are multiplied with the local vector and 
+      then concatenated in order to obtain a vector 
+      with both local and global information for each path.
+      
+      The vectors for each path are then concatenated in order to obtain a
+      matrix representing the entire method, with additional global information.
+  pdg:
+    name: Program Dependence Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: Multiple methods
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: PDG Edge
+        details: n/a
+    vertex-features: Vertices encoded using node2vec
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+  dfg:
+    name: Data Flow Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: Multiple methods
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Data Flow Edge
+        details: n/a
+    vertex-features: Vertices encoded using node2vec
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  cnn:
+    type:
+      name:  n/a
+      architecture: |-
+        CNN w/ Max pooling, followed by an FNN layer with softmax.
+tasks:
+  bug-detection:
+    training-objective: Given a method, predict whether it contains a bug
+    training-granularity: n/a (Ambiguous; Graph embedding, node embedding, graph classification)
+    working-objective: Given a method, predict whether it contains a bug
+    working-granularity:  n/a (Ambiguous; Graph embedding, node embedding, graph classification)
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ast + pdg + dfg
+    model: cnn
+    task: bug-detection
+    comments: |-
+      Unclear how exactly the local path vectors are obtained;
+      unclear how the model is trained.
+      Specifically, it is unclear what training objective was used.
+      The repository uses categorical cross entropy and sigmoid activation,
+      which seems odd, given that this ought to be an embedding task.
+comments: # list

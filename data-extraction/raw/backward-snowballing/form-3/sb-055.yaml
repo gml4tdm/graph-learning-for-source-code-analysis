@@ -1,0 +1,50 @@
+paper-id: sb-055
+pdf-id: sb-081
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: text and type
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding layers
+      - TBCNN (output; tensor of shape num_nodes * D)
+      - Capsule Layer (non-linear squash function)
+      - Capsule Model for converting dynamically sized tensor to fixed size tensor
+      - Capsule Module for Output
+tasks:
+  code-classification:
+    training-objective: Classify sample (code) into one of multiple classes
+    training-granularity: graph classification
+    working-objective: Classify sample (code) into of multiple classes
+    working-granularity: graph classification
+    application: code classification
+    supervision: supervised
+  method-name-prediction:
+    training-objective: Predict a name for a function/method
+    training-granularity: graph classification
+    working-objective: Predict a name for a function/method
+    working-granularity: graph classification
+    application: method name prediction
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-classification
+    comments:
+  - graph: ast
+    model: model
+    task: method-name-prediction
+    comments: yes, modelling this as a classification task is correct
+comments: # list

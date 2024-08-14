@@ -1,0 +1,55 @@
+paper-id: 111
+pdf-id:
+graphs:
+  graph:
+    name: n/a
+    description: Mix of AST, CFG, DFG, NCS
+    artefacts:
+      - name: Source code
+        details: functions
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+      - name: NCS Edge
+        details: n/a
+    vertex-features: |-
+      Node type encoded using label encoding
+      Source code encoded using word2vec
+      the two encodings are concatenated
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  devign:
+    type:
+      name: n/a
+      architecture: |-
+        Copy original features, pad with zeros 
+        GAT layers (w/ SUM aggregation)
+        Pooling through 1D convolutions:
+          Z_1 = \sigma(H_T, X) (node matrix, original features); Z_{\ell} = \sigma(Z_{\ell-1})
+          Y_1 = \sigma(H_T), Y_{\ell} = \sigma(Y_{\ell-1})
+          Where \sigma(x) = MaxPool(ReLU(Conv1D(x)))
+        y = sigmoid(AVG(MLP(Z_{\ell) \cdot MLP(Y_{\ell}))))
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: devign
+    task: vulnerability-detection
+    comments:
+comments: # list

@@ -1,0 +1,52 @@
+paper-id: sb-096
+pdf-id: sb-134
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: file (I think)
+    vertex-type: ast (only certain node types are kept)
+    edge-type: ast
+    vertex-features: not specified, though images imply type for nonterminals, and tokens for terminals
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      pre-order sequence of nodes, encoded using model-1, is used as input for model-2.
+      
+      Hand-crafted detection-related features are used.
+models:
+  model-1:
+    name: n/a
+    architecture-attributes:
+      - cbow
+  model-2:
+    name: n/a
+    architecture-attributes:
+      - CNN w/ max pooling
+      - hand-crafted features are concatenated with vectors extracted by the CNN
+      - TCA
+      - sigmoid
+tasks:
+  embedding:
+    training-objective: Given the parent and child node, predict  the node itself
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: embedding
+    supervision: self-supervised
+  defect-prediction:
+    training-objective: Classify sample as  defective or not
+    training-granularity: n/a
+    working-objective: Classify sample as  defective or not
+    working-granularity: n/a
+    application: defect prediction
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model-1 + model-2
+    task: embedding + defect-prediction
+    comments:
+comments: # list

@@ -1,0 +1,81 @@
+paper-id: 267
+pdf-id: 289
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: smart contracts
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Depth first traversal to generate:
+      1) node type sequence 
+      2) node value sequence
+models:
+  model:
+    name:
+      architecture-attributes:
+        - embedding layer
+        - add the two sequences
+        - transformer encoder
+        - cnn (multiple in parallel) w/ max-pooling and mlp over transformer output
+        - local (node) discriminator; take Transformer encoder output and apply MLP
+        - global (graph) discriminator; cnn module output and apply mlp
+        - decoder; cnn module output with mlp
+tasks:
+  real-fake:
+    training-objective: Given a smart contract, determine whether is was syntactically changed or not
+    training-granularity: graph classification
+    working-objective: n/a
+    working-granularity: n/a
+    application: Pre-training of model
+    supervision: supervised (self-supervised)
+  token-real-fake:
+    training-objective: Given a smart contract, determine which node were changed (replaced)
+    training-granularity: node classification
+    working-objective: n/a
+    working-granularity: n/a
+    application: Pre-training of model
+    supervision: supervised (self-supervised)
+  value-sequence-recovery:
+    training-objective: Given a smart contract, recover the value sequence
+    training-granularity: sequence to sequence
+    working-objective: n/a
+    working-granularity: n/a
+    application: Pre-training of model
+    supervision: supervised (self-supervised)
+  bug-detection:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: embed code snippets for similarity comparison
+    working-granularity: graph embedding
+    application: Bug detection through comparing code snippet embeddings with known bugs
+    supervision: n/a
+  code-clone-detection:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: embed code snippets for similarity comparison
+    working-granularity: graph embedding
+    application: clone detection through comparing code snippet embeddings with known bugs
+    supervision: n/a
+  code-clustering:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: embed code snippets for clustering
+    working-granularity: graph embedding
+    application: clone clustering
+    supervision: n/a
+combinations:
+  - graph: ast
+    model: model
+    task: real-fake + token-real-fake + value-sequence-recovery + bug-detection + code-clone-detection + code-clustering
+    comments: |-
+      The model is first trained on the embedding task, and can then be used for downstream tasks.
+      The other three were used by the authors for testing the approach.
+comments: # list

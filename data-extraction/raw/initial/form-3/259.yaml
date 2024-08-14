@@ -1,0 +1,38 @@
+paper-id: 259
+pdf-id: 251
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: first compiled to IR
+    vertex-type: operands/opcode/labels in IR
+    edge-type: control dependency/data dependency/oop related links (e.g. link method to object instance)
+    vertex-features: variables in ir instruction (one hot)
+    edge-features: edge type
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: code summary/query
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - ggnn (edge type aware)
+      - pooling through soft-attention (\sigma(f(h_i) \cdot a)) weighted sum
+      - summary into embedding layer w/ LSTM w/ attention-weighted sum of hidden states
+      - cosine similarity
+tasks:
+  code-search:
+    training-objective: Maximise similarity between related (code, summary) pairs, minimise similarity between unrelated (code, summary) pairs
+    training-granularity: n/a
+    working-objective: Given query, find most similar code snippets through similarity
+    working-granularity: n/a
+    application: Code search (Cross language)
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model
+    task: code-search
+    comments:
+comments: # list

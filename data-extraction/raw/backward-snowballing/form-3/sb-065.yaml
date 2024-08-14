@@ -1,0 +1,66 @@
+paper-id: sb-065
+pdf-id: sb-092
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: node type
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      byte code sequence 
+      
+      sequence of identifiers and constants from the code
+      
+      pre-order sequence of ast node types
+  cfg:
+    name: cfg
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: statement
+    edge-type: control flow
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: |-
+      High-Order Proximity preserved Embedding (HOPE) for node embedding; then take average
+    other-features: n/a
+models:
+  sequence-model-1:
+    name: n/a
+    architecture-attributes:
+      - RNN over tokens / words (training objective unclear)
+  sequence-model-2:
+    name: n/a
+    architecture-attributes:
+      - auto-encoder
+      - used over encoded pairs of words (encoded using sequence-model-1); given n words, this results in n-1 encoded pairs; recursively keep encoding until one embedding is obtained
+tasks:
+  auto-encoding:
+    training-objective: Reconstruct input embeddings
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: auto-encoding / embedding
+    supervision: self-supervised
+  code-clone-detection:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: Given embeddings (variables, byte code, ast using sequence models, cfg using hope), concat embeddings, use euclidean distance to detect clones
+    working-granularity: n/a
+    application: Code Clone Detection
+    supervision: n/a
+combinations:
+  - graph: ast + cfg
+    model: sequence-model-1 + sequence-model-2
+    task: code-clone-detection + auto-encoding
+    comments: training task for sequence-model-1 is not clearly specified
+comments: # list

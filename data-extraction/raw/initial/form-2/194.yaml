@@ -1,0 +1,74 @@
+paper-id: 194
+pdf-id:
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details:
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: Not specified
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: Token representation of the code is used as feature
+  cfg:
+    name: CFG
+    description: n/a
+    artefacts:
+      - name: Source code
+        details:
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: Not specified
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: See AST
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Token Sequence Encoder 
+          i) Embedding Layer
+          ii) LSTM 
+          iii) Attention; a_i^{tok} = softmax(g(f(h_i), u)), with u a learnable vector 
+          iv) Sum based on a_i^{tok}
+        2) AST Encoder
+          i) Tree-LSTM
+          ii) Attention (same as for token)
+          iii) Sum based on a_i^{ast}
+        3) CF Encoder
+          i) GGNN 
+          ii) Attention; a_i^{cfg} = sigmoid(g(f(h_i), u))
+          iii) Sum based on a_i^{cfg}
+        4) Concatenate 
+        5) Linear layer 
+        6) Description Encoder 
+          i) LSTM; last hidden state used as output
+        7) Cosine similarity between outputs of (5) and (6)
+tasks:
+  code-search:
+    training-objective: Maximise similarity of related (summary, code) pairs; minimise similarity of unrelated (summary, code) pairs
+    training-granularity: Graph Regression (?)
+    working-objective: Output similarity scores of (query, code) pairs
+    working-granularity: Graph Regression (?)
+    application: Code Search
+    supervision: Supervised
+combinations:
+  - graph: ast + cfg
+    model: model
+    task: code-search
+    comments:
+comments: # list

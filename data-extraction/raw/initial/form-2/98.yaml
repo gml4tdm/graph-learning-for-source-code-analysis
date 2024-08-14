@@ -1,0 +1,70 @@
+paper-id: 98
+pdf-id: 134
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features: Concatenate word2vec embeddings of tokens
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Nodes are sequenced in a way preserving 
+      token order from original code;
+      Corresponding feature vectors now 
+      form a sequence of feature vectors
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Two separate models (trained independently):
+        
+        1) Graph Input
+          GGNN network
+          MLP 
+          Softmax (pointer network style)
+        
+        2) Sequenced data
+          Transformer model 
+          MLP 
+          Softmax (pointer network style)
+        
+        Ensemble created by averaging predicted probabilities.
+tasks:
+  vulnerability-detection:
+    training-objective: |-
+      Assign a probability to every node of it containing a probability;
+      node with highest probability is taken as one which was 
+      predicted as vulnerable (argmax).
+      Dummy node is added which signifies a prediction of not vulnerable.
+    training-granularity: Node Identification/Node Classification (?)
+    working-objective: |-
+      Assign a probability to every node of it containing a probability;
+      node with highest probability is taken as one which was 
+      predicted as vulnerable (argmax).
+      Dummy node is added which signifies a prediction of not vulnerable.
+    working-granularity: Node Identification/Node Classification (?)
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: code-property-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

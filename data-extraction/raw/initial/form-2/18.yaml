@@ -1,0 +1,77 @@
+paper-id: 18
+pdf-id: 29
+graphs:
+  augmented-ast:
+    name: n/a
+    description: AST with various augmentations
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type:
+      - name: AST node
+        details: |-
+          Basic structure is AST, with some simplifications:
+          
+          1) mentions of the same variable inside the name function are merged into a single node
+          2) mentions of the same function/class in a file are merged into a single node
+          3) All constants are erased and replaced with one global (shared) node 
+          3) All identifiers are suffixed with their (inner-most) scope
+      - name: Subword node
+        details: |-
+          Identifiers in code are split into subwords, and each subword is represented by a separate node
+    edge-type:
+      - name: AST edge
+        details: n/a
+      - name: Next/Prev edge
+        details: Next/prev edges between successive expressions
+      - name: Control block edge
+        details: All expressions in a control block (e.g. if) link back to the parent control operator (e.g. if)
+      - name: function call edge (cross-file)
+        details: Function callee is linked to called function
+      - name: Inheritance edge (cross-file)
+        details: Child class is linked to parent class
+      - name: Import edge (cross-file)
+        details: Link items in one file to items from other files
+      - name: Subword edge
+        details: Edge from every subword (e.g. "a") to all nodes containing that subword (e.g. "a@FunctionDef_scale")
+    vertex-features: Not specified (unclear how initial vector representation is determined)
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  gnn:
+    type:
+      name: n/a
+      architecture: RGCN w/ ReLU (Relational Graph Convolutional Network)
+tasks:
+  auto-encoder:
+    training-objective: Reconstruct the connections in the network from node embedding
+    training-granularity: Edge prediction (?)
+    working-objective: n/a
+    working-granularity: n/a
+    application: Node Embedding for Type Prediction (hence, node embedding for use in downstream task)
+    supervision: Unsupervised (Self-supervised)
+  name-prediction:
+    training-objective: Predict the (masked) names of node representing function and variable names
+    training-granularity: Node prediction
+    working-objective: n/a
+    working-granularity: n/a
+    application: Node Embedding for Type Prediction (hence, node embedding for use in downstream task)
+    supervision: Unsupervised (Self-supervised)
+combinations:
+  - graph: augmented-ast
+    model: gnn
+    task: auto-encoder
+    comments: Combined w/ name-prediction to pre-train the model
+  - graph: augmented-ast
+    model: gnn
+    task: name-prediction
+    comments: Combined w/ auto-encoder to pre-train the model
+comments:
+  - The paper does not explain all concepts clearly
+  - the image in the paper seemingly contradicts the text
+  - The construction of the graph is ambiguous (e.g. direction of edges)
+  - Auto-encoder setup is strange (strange loss, no reference to the standard graph auto encoder)
+  - Strange loss function is used
+  - This paper is very low quality

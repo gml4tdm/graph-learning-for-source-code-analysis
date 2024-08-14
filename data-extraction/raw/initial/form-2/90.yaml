@@ -1,0 +1,72 @@
+paper-id: 90
+pdf-id: 125
+graphs:
+  pdg:
+    name: PDG
+    description: Using slicing, every PDG is split into multiple slice subgraphs
+    artefacts:
+      - name: Source Code
+        details: |-
+          Comments removed, user defined names are normalised.
+          Program slicing based on sensitive APIs, arrays,
+          integers, and pointers is performed.
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Data Dependence Edge
+        details: n/a
+      - name: Control Dependence Edge
+        details: n/a
+    vertex-features: Statement embedded using sent2vec
+    edge-features: n/a
+    connectivity-features: Using slicing, every PDG is split into multiple slice subgraphs
+    graph-features: |-
+      Using slicing, every PDG is split into multiple slice subgraphs.
+      
+      The subgraph-model is used to filter subgraphs; 
+      the 25% of subgraphs with the lowest predicted probabilities 
+      of containing a vulnerability are dropped.
+      
+      The remaining subgraphs are passed to the "full" model.
+    other-features:  Using slicing, every PDG is split into multiple slice subgraphs
+models:
+  subgraph-model:
+    type:
+      name: n/a
+      architecture: |-
+        x_i = initial feature values 
+        h_i = GGNN(x_i)
+        c_i = [h_i, x_i]
+        y_1 = MaxPool(ReLU(Conv(MaxPool(ReLU(Conv(h_i)))))))
+        y_2 = MaxPool(ReLU(Conv(MaxPool(ReLU(Conv(c_i)))))))
+        b = MLP(y_1) \cdot MLP(y_2)
+        y = sigmoid(MeanPool(b))
+  full:
+    type:
+      name: n/a
+      architecture: |-
+        x_i = initial feature values 
+        h_i = GGNN(x_i)
+        c_subgraph_i = [AveragePool(h_i), AveragePool(x_i)]
+        o_i = Attention Layer (fuses all c_subgraph_i in to one vector C)
+        y_1 = MaxPool(ReLU(Conv(MaxPool(ReLU(Conv(o_i)))))))
+        y_2 = MaxPool(ReLU(Conv(MaxPool(ReLU(Conv(c_i)))))))
+        b = MLP(y_1) \cdot MLP(y_2)
+        y = sigmoid(MeanPool(b))
+tasks:
+  vulnerability-detection:
+    training-objective: Classify code sample (function) as vulnerable/not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify code sample (function) as vulnerable/not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: pdg
+    model: subgraph-model + full
+    task: vulnerability-detection
+    comments: |-
+      The paper mentions using attention to fuse everything in a single vector;
+      that does not seem to be the case based on the code.
+comments: # list

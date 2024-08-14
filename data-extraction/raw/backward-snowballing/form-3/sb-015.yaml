@@ -1,0 +1,57 @@
+paper-id: sb-015
+pdf-id: sb-022
+graphs:
+  graph-1:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: repository
+    vertex-type: repository/token (frequently occurring source code tokens from malicious repositories)
+    edge-type: source file in repository contains token
+    vertex-features: node embeddings computed using deepwalk (random walk w/ skipgram)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+  graph-2:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: repository
+        details: n/a
+    vertex-type: user/repository/file
+    edge-type: user interactions (comment, fork, star, contribute)/repository has file
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: |-
+      Various (eight) meta paths are used
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - DNN
+      - |-
+        The loss function includes information from the meta-paths,
+        with the notion that for all pairs of repositories i, j, the 
+        probability of repository i being malicious should be greater 
+        than the probability of repository j being malicious,
+        if and only if i scores higher on some meta-path based scoring 
+        criteria than j. Specifically, every meta path is (roughly)
+        positively correlated with a repository being malicious.
+tasks:
+  malicious-repository-detection:
+    training-objective: Classify repositories as malicious or not
+    training-granularity: node classification
+    working-objective: Classify repositories as malicious or not
+    working-granularity: node classification
+    application: malicious repository detection
+    supervision: supervised
+combinations:
+  - graph: graph-1 + graph-2
+    model: model
+    task: malicious-repository-detection
+    comments:
+comments: # list

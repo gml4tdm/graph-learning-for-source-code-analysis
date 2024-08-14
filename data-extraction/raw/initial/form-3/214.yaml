@@ -1,0 +1,53 @@
+paper-id: 214
+pdf-id: 284
+graphs:
+  asg:
+    name: Abstract Semantic Graph
+    description: Graph with Control and Data Flow Information
+    artefacts:
+      - name: Source code
+        details: Smart Contracts
+    vertex-type: statement
+    edge-type: control flow/data flow
+    vertex-features: not specified
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  gnn:
+    name: n/a
+    architecture-attributes:
+      - ggnn
+      - readout through mlp weighted sum
+  gmn:
+    name: n/a
+    architecture-attributes:
+      - graph matching network (ggnn-based)
+      - readout through mlp weighted sum
+      - compute similarity of graphs
+tasks:
+  vulnerability-detection-1:
+    training-objective: classify graph as vulnerable or not vulnerable
+    training-granularity: graph classification
+    working-objective: classify graph as vulnerable or not vulnerable
+    working-granularity: graph classification
+    application: vulnerability detection
+    supervision: supervised
+  vulnerability-detection-2:
+    training-objective: compute similarity between graphs (unclear what exact objective is)
+    training-granularity: graph classification (multiple graphs)
+    working-objective: compute similarity between graphs  (compute similarity to known vulnerable graphs)
+    working-granularity: graph classification (multiple graphs)
+    application: vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: asg
+    model: gnn
+    task: vulnerability-detection-1
+    comments:
+  - graph: asg
+    model: gmn
+    task: vulnerability-detection-2
+    comments:
+comments: # list

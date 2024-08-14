@@ -1,0 +1,59 @@
+paper-id: 201
+pdf-id: 269
+graphs:
+  fc-pdg:
+    name: Fused Clone PDG
+    description: n/a
+    artefacts:
+      - name: Code Clone Source Code
+        details: |-
+          For a given pair of code clones, where one has been modified,
+          three artefacts are used:
+          1) Original code of the changed clone 
+          2) Modified code of the changed clone
+          3) Code of the other clone
+    vertex-type:
+      - name: Statement
+        details: |-
+          Every node has a triple-vector (Existence Vector), 
+          indicating whether that node is present in the PDG 
+          of every included code snippet.
+    edge-type:
+      - name: Data Dependence Edge
+        details: n/a
+      - name: Control Dependence Edge
+        details: n/a
+      - name: Execution Edge
+        details: Represent order of node execution
+      - name: Mapping Edge
+        details: |-
+          Edge connecting two "corresponding" nodes originating from the PDGs of two code snippets,
+          but which do not contain the exact same statement
+    vertex-features: |-
+      Code encoded using CodeBERT; vector concatenated with the existence vector
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        RGCN
+        Mean Pooling 
+        FNN w/ Softmax
+tasks:
+  propagation-prediction:
+    training-objective: Given a sample (code clone pair), determine whether the clones are propagation-required or propagation-free
+    training-granularity: Graph Classification
+    working-objective: Given a sample (code clone pair), determine whether the clones are propagation-required or propagation-free
+    working-granularity: Graph Classification
+    application: Change Propagation Requirement Prediction (i.e. given a change, determine whether changes in one clone must be propagated to the other)
+    supervision: Supervised
+combinations:
+  - graph: fc-pdf
+    model: model
+    task: propagation-prediction
+    comments:
+comments: # list

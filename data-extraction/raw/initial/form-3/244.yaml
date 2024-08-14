@@ -1,0 +1,35 @@
+paper-id: 244
+pdf-id: 339
+graphs:
+  delta-pdg:
+    name: \delta-ndg
+    description: start with two separate graphs, merge based on unchanged nodes
+    artefacts:
+      - name: Source code
+        details: commit
+    vertex-type: statement
+    edge-type: control dependence/data dependence/name flow
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  cluster:
+    name: Agglomerative Clustering
+    architecture-attributes:
+      - agglomerative clustering w/ Weisfeiler-Lehman kernel for similarity
+tasks:
+  commit-untangling:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: Cluster graph into separate commits
+    working-granularity: Graph Clustering
+    application: Untangling (decomposing) composite commits
+    supervision: unsupervised
+combinations:
+  - graph: \delta-ndg
+    model: cluster
+    task: commit-untangling
+    comments:
+comments: # list

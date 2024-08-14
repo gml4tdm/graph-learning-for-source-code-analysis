@@ -1,0 +1,69 @@
+paper-id: 126
+pdf-id: 169
+graphs:
+  pdg:
+    name: PDG
+    description: |-
+      All source files in a project are processed.
+      Furthermore, every function in a source file is 
+      represented using its own graph.
+      
+      Given a bug report, the model must pinpoint the file 
+      with the defect;
+      
+      To avoid confusion, remember that the artefacts in the 
+      "artefacts" section are not related _beforehand_, but their
+      relatedness must be predicted
+    artefacts:
+      - name: Bug report
+        details: n/a
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details: Every function in a source file has its own PDG
+    edge-type:
+      - name: Control Dependence Edge
+        details: n/a
+      - name: Data Dependence Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: |-
+      Graphs Represented using Graph2Vec.
+      
+      All graph representations are aggregated into a single vector 
+      through k-medoids with Hausdorff distance
+    other-features: |-
+      Summary and description of bug reports are encoded using word2vec.
+      
+      Content of source code files is encoded using word2vec,
+      after removal of keywords and splitting up identifiers.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Encoded issue fed into CNN w/ Max pooling 
+        2) Encoded source code fed into
+          deeply separable convolution,
+          followed by pooling,
+          followed by convolution,
+          followed by pooling
+        3) Source code, bug report, and graph embeddings are concatenated.
+        4) MLP
+tasks:
+  bug-localisation:
+    training-objective: Predict file containing the reported bug
+    training-granularity: n/a
+    working-objective: Predict file containing the reported bug
+    working-granularity: n/a
+    application: Software Defect Localisation
+    supervision: Supervised
+combinations:
+  - graph: pdg
+    model: model
+    task: bug-localisation
+    comments:
+comments: # list

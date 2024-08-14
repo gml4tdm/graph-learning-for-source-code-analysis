@@ -1,0 +1,73 @@
+paper-id: 160
+pdf-id: 210
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      First of all, for each node, its type, content, and position (line nr, column),
+      are combined into a string and embedded using a document embedding (flair)
+      
+      Paths from the root to leaf nodes are extracted, and embedded in the same way.
+      
+      Path embeddings are added to node embeddings to augment them.
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        First, we introduce the Residual Self-Attention Mechanism Sub-layer (RSM),
+          which takes input embeddings X and adjacency matrix A:
+            i) K = GNN(X, A); Q = GNN(X, A); V = GNN(X, A);
+            ii) Attn = softmax(Q * K^T / sqrt(d_k) + Attn_{prev});
+            iii) H' = GCN((Attn, V), A)     (no clue how they combine V and attention, or why that's meaningful) 
+            iv) H = X + H'
+        
+        Actual network: 
+          stack of the following:
+            X' = LayerNorm(X + RSM(X, A))
+            H = LayerNorm(X' + GCN(X', A))
+tasks:
+  ast-level-prediction:
+    training-objective: Given a node, predict its level (depth) in the tree
+    training-granularity: Node regression
+    working-objective: n/a
+    working-granularity: n/a
+    application: Graph / Node embedding (through pre-training)
+    supervision: Self-supervised / Supervised (can automatically generate labels)
+  node-relationship-optimisation:
+    training-objective: |-
+      Given node triplet (anchor, positive (node on same level), negative (node on lower leven)), 
+      make sure anchor and positive are more similar than anchor and negative,
+      taking into account the level difference between the anchor and negative node.
+    training-granularity: node embedding
+    working-objective: n/a
+    working-granularity: n/a
+    application: Graph / Node embedding (through pre-training)
+    supervision: Self-supervised / Supervised (can automatically generate labels)
+combinations:
+  - graph: ast
+    model: model
+    task:
+    comments: |-
+      The two tasks are used to pre-train the model.
+      
+      The model is then meant to be used on downstream tasks. 
+      Examples given in the paper are:
+        1) Augment with an FNN layer and do code classification
+        2) Embed code and train a new classifier, for e.g. code clone detection 
+        3) Embed code for use in e.g. clustering
+comments: # list

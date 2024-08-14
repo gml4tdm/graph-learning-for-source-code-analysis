@@ -1,0 +1,86 @@
+paper-id: sb-018
+pdf-id: sb-026
+graphs:
+  ast: &graph-base
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: node content encoded using tf-idf / doc2vec (2 sets of experiments)
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+  cfg:
+    <<: *graph-base
+    name: cfg
+    vertex-type: statement
+    edge-type: control flow
+  cdg:
+    <<: *graph-base
+    name: cdg (control dependence graph)
+    vertex-type: statement
+    edge-type: control dependence
+  ddg:
+    <<: *graph-base
+    name: ddg (data dependence graph)
+    vertex-type: statement
+    edge-type: data flow
+models:
+  gcn:
+    name: n/a
+    architecture-attributes:
+      - gcn
+      - sum pooling
+      - fnn
+  gat:
+    name: n/a
+    architecture-attributes:
+      - gat
+      - sum pooling
+      - fnn
+tasks:
+  vulnerability-detection:
+    training-objective: classify sample as vulnerable or not vulnerable
+    training-granularity: graph classification
+    working-objective: classify sample as vulnerable or not vulnerable
+    working-granularity: graph  classification
+    application: vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: cfg
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: cdg
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: ddg
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: ast
+    model: gat
+    task: vulnerability-detection
+    comments:
+  - graph: cfg
+    model: gat
+    task: vulnerability-detection
+    comments:
+  - graph: cdg
+    model: gat
+    task: vulnerability-detection
+    comments:
+  - graph: ddg
+    model: gat
+    task: vulnerability-detection
+    comments:
+comments: # list

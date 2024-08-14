@@ -1,0 +1,48 @@
+paper-id: sb-122
+pdf-id: sb-173
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: method
+    vertex-type: ast
+    edge-type: ast/control flow/data dependence
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: weighted sum of adjacency matrices (A)
+    graph-features: n/a
+    other-features: |-
+      source code is used as feature 
+      
+      shortest path length matrix is used as feature (normalised) (M)
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - transformer encoder/decoder setup
+      - |-
+        encoder with special encoder modules:
+        
+        source code into mostly traditional transformer encoder layer.
+        However, input is transformed according to \sigma(FC(H) + FC(MH)), where M is the normalised shorts path length matrix
+        
+        output of this first layer is fed into parallel second layer, which is an transformer encoder layer
+        using graph-connection based attention (AQK^T) (uses the summed _adjacency matrices_)
+        
+        output of the two is concatenated`
+tasks:
+  code-summarization:
+    training-objective: Given a method, generate a summary
+    training-granularity: n/a
+    working-objective: Given a method, generate a summary
+    working-granularity: n/a
+    application: Code summarization
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

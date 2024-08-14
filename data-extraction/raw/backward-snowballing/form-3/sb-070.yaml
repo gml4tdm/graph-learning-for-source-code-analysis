@@ -1,0 +1,52 @@
+paper-id: sb-070
+pdf-id: sb-099
+graphs:
+  code-property-graph:
+    name: cpg
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/control dependence/control flow/data dependence
+    vertex-features: node type ordinal, node content (encoding unclear)
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - node content encoded using bidirectional LSTM
+      - Attention is used to dynamically construct a new adjacency matrix
+      - normal message passing for the input graph
+      - dynamic message passing over the dynamic graph; h^{k+1}' = \sum_j A_{k,j}(h_j^{k}W^V + e_{v,j}W^F)
+      - every round, fuse static and dynamic embeddings and pass through GRU
+      - See paper 165.yaml for full details
+      - task-specific output nog specified
+tasks:
+  vulnerability-detection:
+    training-objective: Classify a program as vulnerable or not vulnerable
+    training-granularity: graph classification
+    working-objective: Classify a program as vulnerable or not vulnerable
+    working-granularity: graph classification
+    application: vulnerability-detection
+    supervision: supervised
+  code-summarization:
+    training-objective: Generate a summary for a given piece of code
+    training-granularity: graph to sequence
+    working-objective: Generate a summary for a given piece of code
+    working-granularity: graph to sequence
+    application: Code summarization
+    supervision: supervised
+combinations:
+  - graph: code-property-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+  - graph: code-property-graph
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

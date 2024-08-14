@@ -1,0 +1,68 @@
+paper-id: 128
+pdf-id: 171
+graphs:
+  ast:
+    name: AST
+    description: |-
+      The AST of the old and of the new function are both extracted. 
+      Three subtrees are extracted
+        1) The old (buggy) subtree
+        2) The new (fixed) subtree
+        3) The common context
+    artefacts:
+      - name: Source code
+        details: patch
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      The tokens of leaf nodes are extracted as features.
+      Names are split up
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      All paths from the AST connecting two leaf nodes are extracted.
+      If multiple paths are possible, the shorted is used.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) AST encoding
+          Two learnable embeddings: one for node type, one for (sub-)tokens.
+          The tokens in the path (_excluding_ the node tokens) are encoded
+          as a single vector using LSTM. The resulting vector is concatenated 
+          with the token vectors.
+          Paths for a single tree are combined using attention:
+            z_i = \tanh(W_f V_i)
+            a_i = \frac{\exp(z_i^T \cdot a)}{\sum_{j = 1}^n \exp(z_j^T \cdot a)}
+            E = \sum_{i = 1}^k a_i \cdot z_i
+        2) Concatenate vectors for buggy method and context
+        3) Concatenate vectors for fixed method and context
+        4) Combine the two vectors by concatenating:
+          i) The result of adding the two vectors 
+          ii) The result of subtracting the two vectors
+          iii) The Hadamard product of the two vectors
+          iv) The cosine similarity of the two vectors (just a single number)
+          v) Bilinear model (Tanenbaum et al.)
+        5) FNN
+        6) FNN
+        7) Softmax
+tasks:
+  patch-correctness-assessment:
+    training-objective: Predict whether the given fix for a bug is correct
+    training-granularity: Graph Classification (somewhat; 3 graphs are given)
+    working-objective: Predict whether the given fix for a bug is correct
+    working-granularity: Graph Classification (somewhat; 3 graphs are given)
+    application: Patch correctness assessment
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: patch-correctness-assessment
+    comments:
+comments: # list

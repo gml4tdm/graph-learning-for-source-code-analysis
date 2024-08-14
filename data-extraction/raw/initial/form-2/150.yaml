@@ -1,0 +1,67 @@
+paper-id: 150
+pdf-id: 199
+graphs:
+  augmented-ast:
+    name: Augmented AST
+    description: AST augmented with additional edges
+    artefacts:
+      - name: Source code
+        details: method
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: Undirected
+      - name: Computed From
+        details: Undirected
+      - name: Last Use
+        details: Undirected
+      - name: Returns To
+        details: Undirected; Node in return statement points to the return type declaration in a method
+      - name: Next Token Edge
+        details: Undirected; Connect nodes on the same level in sequential order (perhaps not named to aptly)
+    vertex-features: Not specified
+    edge-features: When I say undirected, I mean back-edges are added
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Summary generated thus far (in tokens) is also given as input
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two parallel inputs (encoders)
+          i) Code is tokenized using Byte Pair Encoding (generating sub-tokens), and passed through a pre-trained RoBERTa model,
+              where the RoBERTa model was pretrained _by the authors_ on a contrastive learning task.
+          ii) AST is input into a slightly modified GAT, which computed e_{ij} according to   
+                e_{ij} = a^T LeakyReLU(W[h_i || h_j]), as opposed to e_{ij} = LeakyReLU(a^t[W h_i || W h_j])
+        2) Decoder (summary thus far as input)
+          i) Embedding Layer
+          ii) Enrich with positional encoding 
+          iii) Masked multi-head self-attention w/ residual connection and normalisation
+          iv) Multi-head attention w/ residual connection and normalisation 
+            K: output of the token encoder
+            V: output of graph encoder
+            Q: output of the embedding layer 
+          v) FNN w/ residual connection and normalisation
+          vi) Pointer Generator
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph + Sequence to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph + Sequence to Sequence
+    application: Code summarization (Generating comments for Python code)
+    supervision: Supervised
+combinations:
+  - graph: augmented-ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

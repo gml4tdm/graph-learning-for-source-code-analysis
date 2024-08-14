@@ -1,0 +1,86 @@
+paper-id: 172
+pdf-id: 225
+graphs:
+  heterogeneous-program-graph:
+    name: Heterogeneous Program Graph (HPG)
+    description: Based on AST
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: |-
+          Every node has a type and a value.
+          The type is the composite or primitive type of the node (e.g. statement),
+          the value is either the Constructor (e.g. FunctionDef, for a statement in the
+          Abstract Syntax Description Language (ASDL), or the token payload 
+          of the node (leaf nodes)
+      - name: Subtoken
+        details: |-
+          Two variants:
+          shared subtokens (one node for every _unique_ subtoken),
+          or separate subtoken node per occurrence
+    edge-type:
+      - name: AST Child
+        details:
+      - name: Next Sibling Edge
+        details:
+      - name: Next Token Edge
+        details:
+      - name: AST Parent
+        details: n/a
+      - name: Previous Sibling Edge
+        details: n/a
+      - name: Previous Token Edge
+        details: n/a
+      - name: Subtoken of
+        details: n/a
+      - name: Subtoken of reversed
+        details: n/a
+    vertex-features: type and value 
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  hgt:
+    type:
+      name: n/a
+      architecture: |-
+        1) Embedding Layer 
+        2) Positional Encoding Layer, based on \sin() of the position in the depth first traversal of the AST 
+        3) Add output of embedding layer and positional encoding layer
+        4) Heterogeneous Message Passing
+            1) Considering a node t, which has a neighbour s of type tau(t) connected through e with type \phi(e), 
+                Compute message head according to M^k(s, e, t) = Linear_{\tau(t)}(h_s^{k - 1}) W^M_{phi(e)}
+            2) Concatenate multiple independent message head to obtain Message 
+            3) Compute unnormalised attention score
+                A^k(s, e, t) = (K^k(s) W^A_{\phi(e)} (Q^k(t))^T) \frac{\mu_{\tau(s),\phi(e),\tau(t)}}{\sqrt{d}}
+                \mu is some trainable parameter 
+            4) Normalise using softmax 
+            5) Aggregate message by summing using attention scores as weights 
+            6) Residual connection
+        5) Downstream tasks specific part
+            1) decoder with pointer network and copy mechanism for generation tasks 
+            2) global attention pooling w/ MLP for classification
+tasks:
+  method-name-prediction:
+    training-objective: Generate a name for the given method
+    training-granularity: Neural Code Translation (Graph To Sequence)
+    working-objective: Generate a name for the given method
+    working-granularity: Neural Code Translation (Graph To Sequence)
+    application: Method Name Generation
+    supervision: Supervised
+  code-classification:
+    training-objective: Classify code snippet into one of several categories
+    training-granularity: Graph Multi-class classification
+    working-objective: Classify code snippet into one of several categories
+    working-granularity: Graph Multi-class classification
+    application: Program Classification
+    supervision: Supervised
+combinations:
+  - graph: heterogeneous-program-graph
+    model: hgt
+    task: method-name-prediction + code-classification
+    comments: The model is a general one meant for downstream tasks, where the given tasks are examples used in the paper for evaluation.
+comments: # list

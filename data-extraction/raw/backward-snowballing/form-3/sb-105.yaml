@@ -1,0 +1,38 @@
+paper-id: sb-105
+pdf-id: sb-145
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: function
+    vertex-type: ast
+    edge-type: ast/control flow/control dependence/data dependence/dominator/post dominator
+    vertex-features: node type (presumably one-hot), code associated with node encoded using word2vec
+    edge-features: edge type one-hot encoded
+    connectivity-features: not specified
+    graph-features: the heterogeneous graph is split into multiple homogeneous graphs based on edge type
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - gat
+      - attention-weighted sum of the node embeddings of the different graphs
+      - concat initial and learned features for every node; pass through 1D convolution w/ max pooling (twice); pass through MLP
+      - sum transformed node embeddings; sigmoid
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: graph classification
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: graph classification
+    application: vuln detection
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

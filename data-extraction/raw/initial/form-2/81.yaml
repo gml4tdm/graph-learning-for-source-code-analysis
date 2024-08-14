@@ -1,0 +1,64 @@
+paper-id: 81
+pdf-id: 112
+graphs:
+  graph:
+    name: n/a
+    description: Program Dependency Graph with additional heterogeneous information
+    artefacts:
+      - name: Source code
+        details: methods
+    vertex-type:
+      - name: Method Node
+        details: Represents the method. Only one such node exists in the graph
+      - name: Statement Node
+        details: b/a
+    edge-type:
+      - name: Control Flow Edge
+        details: Connects successive statements
+      - name: Control Dependency Edge
+        details: Connects statements where the execution of one is controlled by the other
+      - name: Data Dependency Edge
+        details: Connects statements with variables to the statement where the variable is defined
+      - name: Include Edge
+        details: Edge from Method Node to Statement Node
+    vertex-features:
+      Method Node Features;
+        1) LOC -- Amount of statements in the method 
+        2) CC -- McCabe's Cyclomatic Complexity of the method 
+        3) PC -- Parameter count of the method 
+        4) LCOM1 to LCOM4 -- Four type of cohesion metrics propoposed by Charalampidou 
+    
+      Statement Node Features;
+        1) ABCL --  Metric proposed by Fitzpatrick, representing the type of statement (assignment, branch, condition, loop)
+        2) FUC -- Amount of fields used in a statement 
+        3) LMUC -- Total amount of local (same class) methods used in the statement 
+        4) PUC -- Number of parameters used in the statement 
+        5) NBD -- Nesting depth of the statement 
+        6) VUC -- Amount of variables used in a statement 
+        7) WC -- Word count of the statement
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  gcn:
+    type:
+      name: n/a
+      architecture: |-
+        GCN
+        GCN 
+        FNN
+tasks:
+  long-method-detection:
+    training-objective: Classify method as long/not long
+    training-granularity: Graph Classification
+    working-objective: Classify method as long/not long
+    working-granularity: Graph Classification
+    application: Long Method (Complicated methods violating single responsibility) detection
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: gcn
+    task: long-method-detection
+    comments:
+comments: # list

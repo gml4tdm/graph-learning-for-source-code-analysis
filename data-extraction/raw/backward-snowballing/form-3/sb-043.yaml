@@ -1,0 +1,45 @@
+paper-id: sb-043
+pdf-id: sb-065
+graphs:
+  pdg:
+    name: PDG
+    description: n/a
+    artefacts:
+      - name: source code
+        details: file
+    vertex-type: statement (?)
+    edge-type: control dependence/data dependence
+    vertex-features: |-
+      method and field names are encoded using word2vec.
+      
+      number of api names 
+      
+      node type 
+      
+      Various network-derived metrics are used
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: |-
+      title, description, comments of bug report are analysed using LDA;
+      "multiple-hot" vector of present topics is used as feature
+models:
+  model:
+    name: decision tree
+    architecture-attributes:
+      - decision tree
+      - adaboost for meta learning
+tasks:
+  bug-localisation:
+    training-objective: In a buggy piece of code, identify the buggy statement.
+    training-granularity: node classification
+    working-objective: In a buggy piece of code, identify the buggy statement.
+    working-granularity: node classification
+    application: bug localisation
+    supervision: supervised
+combinations:
+  - graph: pdg
+    model: model
+    task: bug-localisation
+    comments:
+comments: # list

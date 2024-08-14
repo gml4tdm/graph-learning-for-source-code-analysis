@@ -1,0 +1,65 @@
+paper-id: 163
+pdf-id: 213
+graphs:
+  pdg:
+    name: PDG
+    description: based on Java compiled to (Jimple) IR
+    artefacts:
+      - name: Source code
+        details: Method
+    vertex-type:
+      - name: Statement
+        details: Jimple; Intermediate Representation
+    edge-type:
+      - name: Control Dependence Edge
+        details: n/a
+      - name: Data Dependence Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Random walk is used to generate a bag of paths from the PDG.
+      Each path n_1 e_1 n_2 e_2 ... is seen as a sentence. 
+      Node are replaced by their statements, edges with their type (data or control).
+      NLP preprocessing (tokenization, name splitting, remove non-alphabet characters,
+      remove locals, transform to lower case).
+      
+      The IR is represented as a sequence and enhanced with type information.
+      Specifically, the type of the instruction, and every token in the IR 
+      statement is prefixed with its nonterminal type according to the Jimple grammar. 
+      
+      First comment of JavaDoc comment describing the method is also included as input.
+      
+      All "sentences" obtained this way are combined into a single set of |N| + |P| + 1 sentences.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Transformer based encoder/decoder setup.
+        
+        Encoder:
+          1) Embedding Layer
+          2) Add positional Encoding 
+          3) FNN
+          4) Add more positional encoding 
+          6) Transformer Encoder 
+        
+        Decoder:
+          1) Transformer decoder
+tasks:
+  method-name-generation:
+    training-objective: Generate a name for the given method
+    training-granularity: Neural Code Translation
+    working-objective: Generate a name for the given method
+    working-granularity: Neural Code Translation
+    application: Method Name Generation
+    supervision: Supervised (Self-supervised)
+combinations:
+  - graph: pdg
+    model: model
+    task: method-name-generation
+    comments:
+comments: # list

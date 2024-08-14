@@ -1,0 +1,44 @@
+paper-id: sb-127
+pdf-id: sb-178
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: function
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      source code text is used as feature 
+      
+      Terminal to terminal ("relative") paths are extracted (only the nonterminals in the path are used)
+      
+      Terminal to root ("absolute") paths are extracted (only the nonterminals in the path are used)
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - transformer encoder/decoder architecture
+      - Paths embedded using learnable embedding matrix
+      - Paths encoded using bidirectional GRU
+      - Integrate the last state of the bidirectional GRU over the path from token i to token j into attention score a_{ij}
+      - Integrate the term (x_iW^Q)(x_jW^K)^T (where x_i is the output of the GRU for the absolute path of x_i to the root) into attention score a_{ij}
+tasks:
+  code-summarization:
+    training-objective: Given a function, generate its summary
+    training-granularity: n/a
+    working-objective: Given a function, generate its summary
+    working-granularity: n/a
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments: Actually, the paper tests three different schemes; using only relative paths, only absolute paths, and both
+comments: # list

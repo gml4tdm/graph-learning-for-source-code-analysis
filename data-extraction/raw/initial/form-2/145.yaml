@@ -1,0 +1,91 @@
+paper-id: 145
+pdf-id: 194
+graphs:
+  hsg:
+    name: Heterogeneous Syntax Graph
+    description: AST with explicitly heterogeneous edges
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Child Edge
+        details: n/a
+      - name: AST Parent Edge
+        details: n/a
+      - name: AST Left Sibling Edge
+        details: n/a
+      - name: AST Right Sibling Edge
+        details: n/a
+      - name: Next Data Flow Node Edge
+        details: n/a
+      - name: Previous Data Flow Node Edge
+        details: n/a
+    vertex-features: Not clearly specified
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Each token is enhanced with its line number and position (in terms of tokens) in the line it came from.
+      
+      The goal of the model is to predict the next token in the summary.
+      As such, the summary generated thus far is also an input.
+models:
+  het-sum:
+    type:
+      name: n/a
+      architecture: |-
+        Base architecture is encoder-decoder transformer, with additional information from the HSG
+        
+        1) Embedding Layers
+            i) Encode Nodes
+            ii) Encode summary tokens
+            iii) Loose tokens (enhanced w/ line and position) are embedded, where the embedding
+                is the sum of the token embedding, and the embeddings of the position information components.
+        2) [Code Token Encoder] (1.iii) are fed into two Transformer Layers (2x):
+            i) Multihead attention w/ residual connections and normalisation (H^k_c = LayerNorm(E_c^{k-1} + Attention(E_c^{k-1}, E_c^{k-1}, E_c^{k-1})))
+            ii) FNN w/ residual connections and normalisation (E_c^k = LayerNorm(H_c^k + FNN(H_c^k)))
+        3) [HSG Encoder] (1.i) is passed through (6 repetitions of):
+            o) Embedding from (2.ii) is added to the existing embeddings in the graph
+            i) Heterogeneous GraphSAGE
+                - Neighbours are aggregated by edge type
+                - The aggregated groups are transformed using a matrix multiplication
+                - The transformed groups are then again aggregated 
+                - The aggregated vector is added to the previous node embedding, which has also been multiplied by a learnable matrix
+            ii) Node states are concatenated (into node embedding matrix)
+            iii) ReLU
+            iv) Residual Connection and Normalisation  (and then outputted is a node embedding matrix)
+        4) [Summary Decoder] (1.ii) is passed through (6x repetitions of):
+            i) Masked MultiHead Self-Attention w/ Residual Connections and Normalisation 
+            ii) Masked Multihead Attention w/ Residual Connections and Normalisation.
+                Q and K are output of graph encoder 
+            iii) Masked Multihead Attention w/ Residual Connections and Normalisation
+                Q and K are output of token encoder
+            iv) FNN w/ residual connections and normalisation
+        5) outputs of (2), (3), and (4) are fed into multi-source pointer generator
+            (note; omitting lots of details here since it will not be relevant for the SMS)
+            i) output of (4) is used to compute p_v = Softmax(Linear(...))
+            ii) Output of (2) and (3) are passed through multi-head attention layers,
+                  Where V is the output of (4)
+            iii) Concat + Linear Layer to compute weights 
+            iv) Compute weighted softmax sum
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph + Sequence to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph + Sequence to Sequence
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: hsg
+    model: het-sum
+    task: code-summarization
+    comments:
+comments: # list

@@ -1,0 +1,51 @@
+paper-id: sb-039
+pdf-id: sb-060
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast (nonterminal nodes only)
+    edge-type: ast
+    vertex-features: node type
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      nodes are put into bread-first sequence; 
+      for every node, it is replaced by a list consisting of itself and its direct children
+      padding is applied
+      result: matrix of size (max_subtrees x max_children)
+models:
+  model-1:
+    name: n/a
+    architecture-attributes:
+      - embedding layer
+      - cnn
+tasks:
+  test-failure-prediction:
+    training-objective: Predict whether a program will fail on a given test case
+    training-granularity: graph classification (kinda)
+    working-objective: Predict whether a program will fail on a given test case
+    working-granularity: graph classification (kinda)
+    application: Test Failure Prediction
+    supervision: supervised
+  bug-localisation:
+    training-objective: Given a failing program (on some given test case), output the faulty line(s)
+    training-granularity: n/a
+    working-objective: Given a failing program (on some given test case), output the faulty line(s)
+    working-granularity: n/a
+    application: Bug Localisation
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model-1
+    task: test-failure-prediction
+    comments:
+  - graph: ast
+    model: model-1
+    task: bug-localisation
+    comments:
+comments: # list

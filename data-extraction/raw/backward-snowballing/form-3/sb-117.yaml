@@ -1,0 +1,78 @@
+paper-id: sb-117
+pdf-id: sb-164
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: method (s) (possibly multiple at once)
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: |-
+      Statement corresponding to node encoded using GloVe
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: |-
+      Buggy sub-tree is summarised using TreeCaps.
+      
+      For training, each buggy sub-tree is replaced 
+      with its fixed sub-tree. The pairs of trees 
+      are used for the context learning model.
+      
+      For the working phase, each buggy tree is replaced with its 
+      summarised vector.
+      
+      We call this the context tree
+      
+      Each node in a buggy sub-tree is multiplied by its context vector;
+      for the old versions, this is the output of TreeCaps. For new versions,
+      this is output of TreeCaps (training), or the predicted node from the 
+      context model (working)
+    other-features: |-
+      Bug detector is used to collect buggy statements 
+      and suspiciousness scores; consecutive statements are grouped into hunks.
+      BERT is used to determine which hunks must be fixed together.
+      Overall goal: given a function/method with multiple faulty statements (subtrees),
+      fix them all
+models:
+  model-1:
+    name: n/a
+    architecture-attributes:
+      - encoder/decoder architecture
+      - encoder layer - child sum Tree-LSTM
+      - attention layer
+      - decoder layer - child sum Tree-LSTM
+      - cycle training (backward mapping decoder -> attention -> encoder)
+  model-2:
+    name: n/a
+    architecture-attributes:
+      - encoder/decoder architecture
+      - encoder layer - child sum Tree-LSTM
+      - attention layer
+      - decoder layer - child sum Tree-LSTM
+      - cycle training (backward mapping decoder -> attention -> encoder)
+tasks:
+  context-learning:
+    training-objective: From the old (pre-fix) context tree, construct the new (post-fix) context tree (map node embeddings in old to node embeddings in new)
+    training-granularity: n/a
+    working-objective: from the old (pre-fix) context tree, predict the new (post-fix) context tree
+    working-granularity: n/a
+    application: n/a (auxiliary step)
+    supervision: self-supervised
+  automated-program-repair:
+    training-objective: Map weighted buggy sub-tree to fixed weighted sub-tree
+    training-granularity: n/a
+    working-objective: Map weighted buggy sub-tree to fixed weighted sub-tree
+    working-granularity: n/a
+    application: automated program repair
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model-1 + model-2
+    task: context-learning + automated-program-repair
+    comments: |-
+      model-1 for context learning, model-2 for automated program repair.
+      
+      After the mapping (APR) phase, weights are removed and tree is used to generate code.
+comments: # list

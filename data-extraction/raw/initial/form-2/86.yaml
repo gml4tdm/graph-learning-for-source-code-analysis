@@ -1,0 +1,64 @@
+paper-id: 86
+pdf-id: 118
+graphs:
+  sliced-sdg:
+    name: SDG (Sub-dependence Graph)
+    description: |-
+      Program Dependence Graph with slicing applied;
+      only those nodes _from which_ a dangerous function
+      call is reachable, are kept.
+    artefacts:
+      - name: Source Code
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details: Names in the code are normalised
+    edge-type:
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Flow Dependency Edge
+        details: n/a
+    vertex-features: Statements are encoded using doc2vec (PV-DM)
+    edge-features:
+    connectivity-features:
+    graph-features:
+    other-features:
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        GCN Layer
+        Top-k Graph Pooling Layer
+        Attention Layer
+        
+        For each layer $k$, the following output is computed: 
+          s^k = \frac{1}{N_k}\sum_{i = 1}^{N_k} x_{k,i} \mid\mid \max_{1 \le j \le N_k} x_{k,j}
+        
+          Here, $N_k$ is the number of nodes in layer $k$.
+        
+        Final embedding:
+          y = \sum_{k = 1}^{K} s^k
+        
+        MLP(y)
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable/not vulnerable
+    training-granularity: Graph Classification (Binary)
+    working-objective: Classify sample as vulnerable/not vulnerable
+    working-granularity:  Graph Classification (Binary)
+    application: Vulnerability Detection in PHP code
+    supervision: Supervised
+  vulnerability-classification:
+    training-objective: Classify sample in a vulnerability category or as not vulnerable
+    training-granularity: Multi-class Graph Classification
+    working-objective: Classify sample in a vulnerability category or as not vulnerable
+    working-granularity: Multi-class Graph Classification
+    application: Vulnerability Detection in PHP code
+    supervision: Supervised
+combinations:
+  - graph: sliced-sdg
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

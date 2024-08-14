@@ -1,0 +1,37 @@
+paper-id: sb-119
+pdf-id: sb-167
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/control flow (might well be dependence; not a good distinction is made)/data dependence
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: weighted sum of the three adjacency matrices for the different edge types
+    graph-features: n/a
+    other-features: |-
+      code tokens are used as input
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - transformer (encoder/decoder)
+      - attention based on graph connectivity (AQK^T in stead of QK^T); each attention layer has a normal attention component and graph attention component, which are summed
+tasks:
+  code-summarization:
+    training-objective: Given a method, generate a summary
+    training-granularity: n/a
+    working-objective: Given a method, generate a summary
+    working-granularity: n/a
+    application: Code summarization
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

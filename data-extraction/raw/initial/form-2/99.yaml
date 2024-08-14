@@ -1,0 +1,119 @@
+paper-id: 99
+pdf-id: 135
+graphs:
+  unique-token-focussed-construction-codebert: &unique-token-focussed-construction-codebert
+    name: Unique Token Focussed Construction
+    description: |-
+      Each unique token has a node,
+      and two tokens are connected if they
+      co-occur in a sliding window of size v.
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: Token
+        details: n/a
+    edge-type:
+      - name: Co-occurrence Edge
+        details: within a sliding window of size v
+    vertex-features: Tokens embedded using token embedding layer of CodeBERT
+    edge-features: n/a
+    connectivity-features: Not specified (adjacency matrix?)
+    graph-features: n/a
+    other-features:
+  unique-token-focussed-construction-grapcodebert:
+    <<: *unique-token-focussed-construction-codebert
+    vertex-features: Tokens embedded using token embedding layer of GrapCodeBERT
+  index-focussed-construction-codebert: &index-focussed-construction-codebert
+    name: Index-Focussed Construction
+    description: |-
+      All tokens are represented as a sequence,
+      and two nodes are connected if they occur within
+      a sliding window of size v
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: Token
+        details: Not necessarily unique
+    edge-type:
+      - name: Co-occurrence Edge
+        details: within a sliding window of size v
+    vertex-features: Tokens embedded using token embedding layer of CodeBERT
+    edge-features: n/a
+    connectivity-features: Not specified (adjacency matrix?)
+    graph-features: n/a
+    other-features:
+  index-focussed-construction-grapcodebert:
+    <<: *index-focussed-construction-codebert
+    vertex-features: Tokens embedded using token embedding layer of GrapCodeBERT
+models:
+  gcn:
+    type:
+      name: n/a
+      architecture: |-
+        GCN w/ residual connections 
+        Pooling:
+          i) Soft attention mechanism
+            e_v = \sigma(w^Th_v + b) \cdot \phi(Wh_v + b)
+          ii) Pooling through one of the following (all combinations tried)
+            e_g = \sum_{v \in V} e_v + MaxPool(V)
+            e_g = \sum_{v \in V} e_v \cdot MaxPool(V)
+            e_g = \sum_{v \in V} e_v \mid\mid MaxPool(V)
+        softmax
+  ggnn:
+    type:
+      name: n/a
+      architecture: |-
+        GGNN
+        Pooling:
+          i) Soft attention mechanism
+            e_v = \sigma(w^Th_v + b) \cdot \phi(Wh_v + b)
+          ii) Pooling through one of the following (all combinations tried)
+            e_g = \sum_{v \in V} e_v + MaxPool(V)
+            e_g = \sum_{v \in V} e_v \cdot MaxPool(V)
+            e_g = \sum_{v \in V} e_v \mid\mid MaxPool(V)
+        softmax 
+
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: unique-token-focussed-construction-codebert
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: unique-token-focussed-construction-graphcodebert
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: index-focussed-construction-codebert
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: index-focussed-construction-graphcodebert
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: unique-token-focussed-construction-codebert
+    model: ggnn
+    task: vulnerability-detection
+    comments:
+  - graph: unique-token-focussed-construction-graphcodebert
+    model: ggnn
+    task: vulnerability-detection
+    comments:
+  - graph: index-focussed-construction-codebert
+    model: ggnn
+    task: vulnerability-detection
+    comments:
+  - graph: index-focussed-construction-graphcodebert
+    model: ggnn
+    task: vulnerability-detection
+    comments:
+comments: # list

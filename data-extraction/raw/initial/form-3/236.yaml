@@ -1,0 +1,38 @@
+paper-id:
+pdf-id:
+graphs:
+  csg:
+    name: code structure graph (csg)
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/data dependence/control dependence/control flow/ncs
+    vertex-features: word2vec (unclear what)
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: |-
+      32 different meta-paths are used (expression, statement, symbol level)
+    other-features: n/a
+models:
+  model:
+    name:  n/a
+    architecture-attributes:
+      - node and edge based attention, used to compute meta-path attention
+      - message passing, with messages weighted according to the meta-path attention,  w/ residual connections
+      - combined (added) sum and max pooling
+tasks:
+  vulnerability-detection:
+    training-objective: Classify graph as vulnerable or not vulnerable
+    training-granularity: graph classification
+    working-objective: classify  graph as vulnerable or not vulnerable
+    working-granularity: graph classification
+    application: vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: csg
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

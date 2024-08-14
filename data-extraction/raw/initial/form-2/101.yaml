@@ -1,0 +1,47 @@
+paper-id: 101
+pdf-id: 137
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: undirected
+    vertex-features: Tokens encoded using word2vec
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: n/a
+        First, note embeddings passed through attention mechanism followed by FNN
+        GCN
+        ReLU
+        Softmax
+tasks:
+  fault-localisation:
+    training-objective: Given a graph, identify the node(s?) corresponding to the faulty statement
+    training-granularity: Node classification
+    working-objective: Given a graph, identify the node(s?) corresponding to the faulty statement
+    working-granularity: Node classification
+    application: Fault Localisation
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: fault-localisation
+    comments: |-
+      Unclear if there is only one faulty node per graph or multiple.
+      Similarly, it is unclear whether only a single node is predicted 
+      as being faulty, or multiple. I get the feeling it is the latter, 
+      but I am not sure.
+comments: # list

@@ -1,0 +1,55 @@
+paper-id: sb-084
+pdf-id: sb-117
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: some amount of edits must already have been applied
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: |-
+      1) node type is a feature
+      2) terminals have tokens, split into subtokens 
+      3) Each token has its index among its siblings as feature
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Each edit is represented as a path, e.g. 
+      1) A MOVE is represented as a path from the root of the subtree being moved, to its new location (eg its left-most sibling)
+      2) UPDATE, INSERT, DELETE have similar path representations.
+      
+      Specifically, two sets are created: 1) the set of applied edits, 2) the set of all possible edits.
+      Both are separately encoded
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - encoder/decoder architecture
+      - (encoder) embedding layers
+      - (encoder) index and type encoding are added
+      - (encoder) terminal is encoded as sum of its subtokens embeddings
+      - (encoder) LSTM with path (nonterminal nodes)
+      - (encoder) concat terminal and path embeddings
+      - (encoder) fnn
+      - (encoder) LSTM over all encoded edit paths
+      - (encoder) All possible edits are encoded (!one of the two sets only thus!), and projected it with a operation-specific matrix
+      - (decoder) LSTM over encoded _applied_ edits
+      - (decoder) attention over encoded _applied_ edits
+      - (decoder) pointer network to "point" to edit (out of set of valid edits) (from the encoded edits)
+tasks:
+  program-editing:
+    training-objective: Given a source sample (as AST), with some edits, predict a sequence of edits to transform it into a different AST
+    training-granularity: n/a
+    working-objective: Given a source sample (as AST), with some edits, predict the following edits
+    working-granularity: n/a
+    application: Program Edit Completion
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: program-editing
+    comments:
+comments: # list

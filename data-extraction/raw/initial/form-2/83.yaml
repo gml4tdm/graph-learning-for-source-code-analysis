@@ -1,0 +1,109 @@
+paper-id: 83
+pdf-id: 115
+graphs:
+  compact-abstract-graph:
+    name: Compact Abstract Graph
+    description:
+    artefacts:
+      - name: Source code method
+        details:
+    vertex-type:
+      - name: AST Node (Normal)
+        details: n/a
+      - name: AST Node (Merged)
+        details: |-
+          Any "linear" sequence of nodes which form a direct chain
+          without other incoming edges, are merged into one.
+          The root node cannot be part of a chain,
+          and leaf nodes cannot be part of a chain.
+      - name: AST Node (Aggregated)
+        details: |-
+          Any node aggregating _only_ a set of linear chains (length >= 1),
+          is turned into a single node combining all chains.
+    edge-type:
+      - name: Next Token Edge
+        details: Each token points to the next token
+      - name: Inverted AST Edge
+        details: Inverted so all AST edges point "upward" towards the root node
+      - name: Root Edge
+        details: Each leaf node has an edge pointing to the root node
+    vertex-features: |-
+      Node content encoded using MPNet. Specifically;
+      Normal nodes; embedded as is 
+      Merged nodes; average of all contained nodes 
+      Aggregated Nodes; \frac{1}{k}\sum_{i=1}^k\left(\frac{1}{n_i}\sum_{j = 1}^{n_1} MPNet(T_{ij})\right)
+    edge-features: n/a
+    connectivity-features: Adjacency List (directed)
+    graph-features: n/a
+    other-features: n/a
+models:
+  gcn:
+    type:
+      name: n/a
+      architecture: |-
+        GCN (two layers)
+        Global Soft Attention Layer (for Pooling)
+  gat:
+    type:
+      name: n/a
+      architecture: |-
+        GAT (two layers)
+        Global Soft Attention Layer (for Pooling)
+  unimp:
+    type:
+      name: n/a
+      architecture: |-
+        Unified Message Passing Model (two layers)
+        Global Soft Attention Layer (for Pooling)
+  armaconv:
+    type:
+      name: n/a
+      architecture: |-
+        ARMAConv (two layers)
+        Global Soft Attention Layer (for Pooling)
+  res-gated-gcn:
+    type:
+      name: n/a
+      architecture: |-
+        ResGatedGCN (two layers)
+        Global Soft Attention Layer (for Pooling)
+  feastnet:
+    type:
+      name: n/a
+      architecture: |-
+        FeaStNet (two layers)
+        Global Soft Attention Layer (for Pooling)
+tasks:
+  vulnerability-detection:
+    training-objective: Classify graph as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify graph as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: compact-abstract-graph
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: compact-abstract-graph
+    model: gat
+    task: vulnerability-detection
+    comments:
+  - graph: compact-abstract-graph
+    model: unimp
+    task: vulnerability-detection
+    comments:
+  - graph: compact-abstract-graph
+    model: armaconv
+    task: vulnerability-detection
+    comments:
+  - graph: compact-abstract-graph
+    model: res-gated-gcn
+    task: vulnerability-detection
+    comments:
+  - graph: compact-abstract-graph
+    model: feastnet
+    task: vulnerability-detection
+    comments:
+comments: # list

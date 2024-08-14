@@ -1,0 +1,71 @@
+paper-id: 149
+pdf-id: 198
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: |-
+          Every node has three attributes:
+          x: Depth 
+          y: left-to-right sequential position of its parent in the layer
+          z: left-to-right sequential position among its siblings
+    edge-type:
+      - name: AST Edge
+        details: Each edge has the (x, y, z) attribute as its destination node as attributes
+    vertex-features: |-
+      (x, y, z), and the token payload (type or token)
+      Note: vertices are used on their own, not as part of a graph
+    edge-features: |-
+      (x, y, z), and the pair of token payloads (type or token) of the nodes it is connecting 
+      Note: edges are used on their own, not as part of a graph
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      The comment generated thus far (in token form) is also used as an input.
+      Each token is enhanced with positional information describing its location in the sequence.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Transformer based architecture 
+        
+        Each type of input (node, vertex, token) is passed through an embedding layer.
+        The node/edge/token is embedded, and its position is embedded. Finally, 
+        both embeddings are combined using a (weighted) sum; E = E_o * \sqrt{d} + E_{pos}
+        
+        Edge embeddings and vertex embeddings are both passed through separate encoders created out of units with the following structure:
+          1) Multi-head self attention w/ residual connections and normalisation
+          2) FNN w/ residual connections and normalisation
+        
+        Comment generated thus far is put into a decoder created out of units with the following structure:
+          1) Masked multi-head self attention w/ residual connections and normalisation
+          2) multi-head attention, with as input the output of the edge encoder, w/ residual connections and normalisation
+          3) multi-head attention, with as input the output of the vertex encoder, w/ residual connections and normalisation
+          4) FNN w/ residual connections and normalisation
+        
+        Linear Layer
+        Softmax
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph to Sequence
+    application: Code summarization (Generating comments for Python code)
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

@@ -1,0 +1,35 @@
+paper-id: 247
+pdf-id: 343
+graphs:
+  object-usage-graph:
+    name: Object Usage Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type: action (API invocation; e.g java.lang.String.new) or control (eg. while)
+    edge-type: (temporal) usage order/data dependency
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  cluster:
+    name: Spectral Clustering
+    architecture-attributes:
+      - spectral-clustering w/ shortest path kernel for similarity
+tasks:
+  usage-example-mining:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: Cluster similar graphs together
+    working-granularity: graph clustering
+    application: Mining API usage examples
+    supervision: unsupervised
+combinations:
+  - graph: object-usage-graph
+    model: cluster
+    task: usage-example-mining
+    comments:
+comments: # list

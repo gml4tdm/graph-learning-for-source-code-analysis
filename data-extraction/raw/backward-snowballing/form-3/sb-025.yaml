@@ -1,0 +1,47 @@
+paper-id: sb-025
+pdf-id: sb-035
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: nodes encoded using continuous binary tree
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  tree-cnn:
+    name: n/a
+    architecture-attributes:
+      - CNN over tree (e.g. triangular sliding window over tree, e.g. node + direct children)
+      - pooling applied, but exact type not specified
+tasks:
+  program-classification:
+    training-objective: Classify program into one of multiple classes based on functionality
+    training-granularity: graph classification
+    working-objective: Classify program into one of multiple classes based on functionality
+    working-granularity: graph classification
+    application: program classification
+    supervision: supervised
+  bubble-sort-detection:
+    training-objective: Detect if a program contains a bubble sort
+    training-granularity: graph classification
+    working-objective: Detect if a program contains a bubble sort
+    working-granularity: graph classification
+    application: program classification
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: tree-cnn
+    task: program-classification
+    comments: The method (the CNN specifically) is meant to be a general method, and the two tasks are example evaluation tasks
+  - graph: ast
+    model: tree-cnn
+    task: bubble-sort-detection
+    comments: The method (the CNN specifically) is meant to be a general method, and the two tasks are example evaluation tasks
+comments: # list

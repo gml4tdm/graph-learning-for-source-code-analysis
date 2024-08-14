@@ -1,0 +1,61 @@
+paper-id: sb-001
+pdf-id: sb-001
+graphs:
+  name-graph:
+    name: n/a
+    description: Graph relation names of program variables
+    artefacts:
+      - name: Source code
+        details: program
+    vertex-type: constants, properties, methods, globals
+    edge-type: Relations (e.g. L += R, L < R where L = left, R = right; anything relating two names, essentially)/alias relation/may call/may access
+    vertex-features: Program Element Names
+    edge-features: Relation Type
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+  type-graph:
+    name: n/a
+    description: Graph relation names of program variables
+    artefacts:
+      - name: Source code
+        details: program
+    vertex-type: expressions, constants
+    edge-type: Relations (e.g. L += R, L < R where L = left, R = right; anything relating two names, essentially)/alias relation/may call/may access
+    vertex-features: data types associated with nodes
+    edge-features: Relation Type
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - Central model is a conditional random field P(y | x) = 1 / Z(x) \exp(w^T f(y, x)), where f is some scoring function
+      - w is learned using structured support vector machine on training set
+      - inference of unknown properties using MAP (Maximum a Posteriori)
+tasks:
+  name-prediction:
+    training-objective: Learn weight matrix using SVM
+    training-granularity: n/a
+    working-objective: Predict names of unknown program elements
+    working-granularity: node prediction
+    application: name prediction
+    supervision: supervised
+  type-inference:
+    training-objective: Learn weight matrix using SVM
+    training-granularity: n/a
+    working-objective: Predict data types of unknown program elements
+    working-granularity: node prediction
+    application: type inference
+    supervision: supervised
+combinations:
+  - graph: name-graph
+    model: model
+    task: name-prediction
+    comments:
+  - graph: type-graph
+    model: model
+    task: type-inference
+    comments:
+comments: # list

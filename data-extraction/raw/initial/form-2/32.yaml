@@ -1,0 +1,70 @@
+paper-id: 32
+pdf-id: 45
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: Computed using word embeddings
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  mtn-a:
+    type:
+      name: MTN-a
+      architecture: |-
+        Based on Child-sum Tree-LSTM, but instead of summing all the children in the first step
+        (computing \tilde{h}_j, use a custom child-order aware function
+        Some examples: tanh activation for a fixed number of child nodes, normal LSTM for a nested block, etc.
+        
+        This means that every node type has a special, dedicated type of MTN unit.
+        
+        All MTN unit types share the W, U, and b parameters.
+  mtn-b:
+    type:
+      name: MNT-b
+      architecture:
+        Same as MTN-a, but the parameters W, U, b are _not_ shared between different LSTM types.
+tasks:
+  program-classification:
+    training-objective: Given a program, classify what it is doing
+    training-granularity: Graph Classification
+    working-objective: Given a program, classify what it is doing
+    working-granularity: Graph Classification
+    application: Program Classification
+    supervision: Supervised
+  clone-detection:
+    training-objective: Given two programs, determine if they are functionally identical
+    training-granularity: Graph Classification (?)
+    working-objective: Given two programs, determine if they are functionally identical
+    working-granularity: Graph Classification (?)
+    application: Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: mtn-a
+    task: program-classification
+    comments:
+  - graph: ast
+    model: mtn-a
+    task: clone-detection
+    comments:
+  - graph: ast
+    model: mtn-b
+    task: program-classification
+    comments:
+  - graph: ast
+    model: mtn-b
+    task: clone-detection
+    comments:
+comments: # list

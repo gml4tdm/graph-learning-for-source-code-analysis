@@ -1,0 +1,157 @@
+paper-id: 20
+pdf-id: 32
+graphs:
+  pdg:
+    name: PDG (Program Dependence Graph)
+    description: Based on Jimple IR
+    artefacts:
+      - name: Source code
+        details: Multiple files
+    vertex-type:
+      - name: Instruction
+        details: Based on the Jimple instructions
+    edge-type:
+      - name: Data flow edge
+        details: n/a
+      - name: Control flow edge
+        details: n/a
+      - name: Method call edge
+        details: n/a
+    vertex-features: Embedding instructions (as learned by the Lexical Embedding Model)
+    edge-features: n/a (edge type)
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Each Jimple instruction is split into subwords.
+      A Word2Vec model is trained on the subwords.
+models:
+  model-gcn:
+    type:
+      name: GraphCode2Vec
+      architecture:
+        Two parts
+        1) Lexical Embedding
+          Using Bidirectional LSTM network with subword embeddings as input to learn Jimple instruction embeddings.
+          Use element-wise addition to compute program embedding
+      
+        2) Dependence Embedding
+          GCN Layers to learn per-node embeddings
+          Global attention pooling to learn program embedding
+      
+        Concatenation to fuse lexical and dependence embeddings
+  model-graph-sage:
+    type:
+      name: GraphCode2Vec
+      architecture:
+        Two parts
+        1) Lexical Embedding
+        Using Bidirectional LSTM network with subword embeddings as input to learn Jimple instruction embeddings.
+        Use element-wise addition to compute program embedding
+
+        2) Dependence Embedding
+        GraphSAGE Layers to learn per-node embeddings
+        Global attention pooling to learn program embedding
+
+        Concatenation to fuse lexical and dependence embeddings
+  model-gat:
+    type:
+      name: GraphCode2Vec
+      architecture:
+        Two parts
+        1) Lexical Embedding
+        Using Bidirectional LSTM network with subword embeddings as input to learn Jimple instruction embeddings.
+        Use element-wise addition to compute program embedding
+
+        2) Dependence Embedding
+        GAT Layers to learn per-node embeddings
+        Global attention pooling to learn program embedding
+
+        Concatenation to fuse lexical and dependence embeddings
+  model-gin:
+    type:
+      name: GraphCode2Vec
+      architecture:
+        Two parts
+        1) Lexical Embedding
+        Using Bidirectional LSTM network with subword embeddings as input to learn Jimple instruction embeddings.
+        Use element-wise addition to compute program embedding
+
+        2) Dependence Embedding
+        GIN (graph isomorphism network) Layers to learn per-node embeddings
+        Global attention pooling to learn program embedding
+
+        Concatenation to fuse lexical and dependence embeddings
+tasks:
+  node-classification:
+    training-objective: Predict node type given its embedding
+    training-granularity: Node classification
+    working-objective: Embed nodes (to perform graph embedding via pooling)
+    working-granularity: Compute node embedding (to be combined via pooling)
+    application: Graph Embedding
+    supervision: self-supervised
+  contex-prediction:
+    training-objective: Predict masked node given surrounding context
+    training-granularity: Node Prediction/Context Prediction
+    working-objective: Embed nodes (to perform graph embedding via pooling)
+    working-granularity: Compute node embedding (to be combined via pooling)
+    application: Graph Embedding
+    supervision: self-supervised
+  variational-graph-encoding:
+    training-objective: Encode/Decode graph structures
+    training-granularity: Graph Encoding/Decoding
+    working-objective: Encode graph
+    working-granularity: Graph Embedding
+    application: Graph Embedding
+    supervision: self-supervised
+combinations:
+  - graph: pdg
+    model: model-gcn
+    task: node-classification
+    comments:
+  - graph: pdg
+    model: model-gcn
+    task: context-prediction
+    comments:
+  - graph: pdg
+    model: model-gcn
+    task: variational-graph-encoding
+    comments:
+  - graph: pdg
+    model: model-graph-sage
+    task: node-classification
+    comments:
+  - graph: pdg
+    model: model-graph-sage
+    task: context-prediction
+    comments:
+  - graph: pdg
+    model: model-graph-sage
+    task: variational-graph-encoding
+    comments:
+  - graph: pdg
+    model: model-gat
+    task: node-classification
+    comments:
+  - graph: pdg
+    model: model-gat
+    task: context-prediction
+    comments:
+  - graph: pdg
+    model: model-gat
+    task: variational-graph-encoding
+    comments:
+  - graph: pdg
+    model: model-gin
+    task: node-classification
+    comments:
+  - graph: pdg
+    model: model-gin
+    task: context-prediction
+    comments:
+  - graph: pdg
+    model: model-gin
+    task: variational-graph-encoding
+    comments:
+comments: # list
+  - The use of instructions is simply a means of representing semantic information.
+  - Evaluated on several downstream tasks, including method name prediction

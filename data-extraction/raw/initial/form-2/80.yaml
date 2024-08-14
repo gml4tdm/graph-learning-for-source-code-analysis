@@ -1,0 +1,60 @@
+paper-id: 80
+pdf-id:
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features:
+      tag; node type/role -- one hot encoded
+      op; encoding for some program operations (e.g. conditional, jump) -- one hot encoded 
+      func; reflects relationship with specific functions -- one hot encoded 
+      lite; describes involved parameters -- one hot encoded 
+      type; type parameter in C/C++ (16 fixed options) -- one hot encoded 
+ 
+      Node tokens encoded using Word2vec
+    
+      all features are concatenated
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix (?)
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Z = GCN layers 
+        Normalisation(Z + \theta) (\theta is learnable) --> IS Scores (Influence Scores)
+        ceil(k*n) nodes with highest IS scores are kept 
+        BiLSTM on ranked list of kept nodes 
+        MLP
+        softmax
+tasks:
+  vulnerability-detection:
+    training-objective: Classify function as vulnerable/not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify function as vulnerable/not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: code-property-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

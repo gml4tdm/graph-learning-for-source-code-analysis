@@ -1,0 +1,120 @@
+paper-id: 33
+pdf-id: 46
+graphs:
+  augmented-ast:
+    name: n/a
+    description: AST with additional control and data flow edges. Note that all edges are undirected
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Next token
+        details: n/a
+      - name: Computed From
+        details: e.g. assigment target to expression
+      - name: Guarded By
+        details: Edge from each variable in an if-block to the condition of the if-block
+      - name: Jump
+        details: Edge between variables with control dependencies
+      - name: Last Use
+        details: Edge between uses of the same variable
+      - name: Last Lexical Use
+        details: Edge between uses of variable with the same name in different branches of a conditional
+    vertex-features: Vertex payload (instruction, token, node type) is encoded using Word2Vec
+    edge-features: n/a
+    connectivity-features: |-
+      For every edge type, a separate adjacency matrix is created, where 
+      back-edges are added for every edge (i.e. the adjacency matrix is symmetric).
+    graph-features: n/a
+    other-features: n/a
+  cdfg:
+    name: CDFG (Control-Data Flow Graph)
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: IR instructions and types
+        details: Variable names are replaced with their type
+    edge-type:
+      - name: Sequential IR flow
+        details: n/a
+      - name: Data flow
+        details: n/a
+      - name: Control flow
+        details: n/a
+    vertex-features: Vertex payload (instruction, token, node type) is encoded using Word2Vec
+    edge-features: n/a
+    connectivity-features: |-
+      For every edge type, a separate adjacency matrix is created, where 
+      back-edges are added for every edge (i.e. the adjacency matrix is symmetric).
+    graph-features: n/a
+    other-features: n/a
+models:
+  poem-gnn:
+    type:
+      name: Poem-GNN
+      architecture: |-
+        Node embeddings updated according to
+        h_v^{t + 1}) = \sigma\left(MPL_1\left(\right\sum_{\ell}\sum_{(u,v) \in A_{\ell}} MPL_{\ell}(h_u^t)\right)
+        
+        Where $\ell$ sums over all relation graphs.
+
+        Final global representation given by 
+      
+        \text{CONCAT}\left(\sum_{i = 1}^m \left(h_{v,i}^t \mid v \in G_i \right) \mid t = 0, 1, \hdots, n \right)
+
+        $m$ is the number of relation graphs, $n$ the number of neighbourhood aggregation iterations.
+tasks:
+  heterogeneous-mapping:
+    training-objective: Classify whether program should run on or gpu
+    training-granularity: Graph Classification
+    working-objective: Classify whether program should run on or gpu
+    working-granularity: Graph Classification
+    application: Determine if OpenCL kernel should run on CPU or GPU
+    supervision: Supervised
+  thread-coarsening:
+    training-objective: For a given program, output the thread coarsening factor (discrete number from set of options)
+    training-granularity: Graph Classification
+    working-objective: For a given program, output the thread coarsening factor (discrete number from set of options)
+    working-granularity: Graph Classification
+    application: Determine thread coarsening factor in OpenCL
+    supervision: supervised
+  loop-vectorisation:
+    training-objective: Pick best parameter pair from a set of options
+    training-granularity: Graph Classification
+    working-objective: Pick best parameter pair from a set of options
+    working-granularity: Graph Classification
+    application: Determine parameters (vectorisation factor, interleaving factor) for loop vectorisation
+    supervision: Supervised
+  vulnerability-detection:
+    training-objective: Classify input graph as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify input graph as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability detection
+    supervision: Supervised
+combinations:
+  - graph: augmented-ast + cdfg
+    model: poem-gnn
+    task: heterogeneous-mapping
+    comments:
+  - graph: augmented-ast + cdfg
+    model: poem-gnn
+    task: thread-coarsening
+    comments:
+  - graph: augmented-ast + cdfg
+    model: poem-gnn
+    task: loop-vectorisation
+    comments:
+  - graph: augmented-ast + cdfg
+    model: poem-gnn
+    task: vulnerability-detection
+    comments:
+comments: # list
+  - Generic model which is trained on downstream tasks

@@ -1,0 +1,88 @@
+paper-id: 213
+pdf-id: 283
+graphs:
+  heterogeneous-contract-graph:
+    name: Heterogeneous Contract Graph
+    description: |-
+      Combination of heterogeneous control flow and heterogeneous call graphs at multiple levels of granularity.
+    artefacts:
+      - name: Source code
+        details: Source code of smart contracts
+    vertex-type:
+#      - name: Different node types for different control flow (e.g ENTRY_POINT, NEW_VARIABLE, RETURN, IF, END_IF, FUNCTION_START)
+#        details: n/a
+      - name: ROOT (cfg node)
+        details: Entry point of the control flow graph of a function
+      - name: BASIC (cfg node)
+        details: Basic block
+      - name: DISPATCHER (cfg node)
+        details: n/a
+      - name: LEAF (cfg node)
+        details: n/a
+      - name: EXIT (cfg node)
+        details: n/a
+      - name: FALLBACK NODE (cfg node)
+        details: Node to represent the call to a fallback function
+      - name: FUNCTION_NAME
+        details: |-
+          Node to represent the name of a function;
+          used combined with INTERNAL_CALL/EXTERNAL_CALL to represent FCG information,
+          and is connected to the ENTRY_POINT of a function (and thus forms the merging points for call and control flow graphs)
+    edge-type:
+      - name: Different types for control flow (e.g. TRUE, FALSE, NEXT)
+        details:
+      - name: INTERNAL_CALL
+        details: Call to function within the same smart contract
+      - name: EXTERNAL_CALL
+        details: Call to function in another smart contract
+    vertex-features: |-
+      Four different schemes of generating node features, used separately:
+        1) One-hot encoded node types
+        2) metapath2vec (random walk + skipgram)
+        3) LINE 
+        4) node2vec
+    edge-features: All length 2 meta-paths for all pairs of node types are extracted. (Note -- length 2 meta path is like A -> B -> C)
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Transformer-like model, but with special Heterogeneous Graph Transformer layers 
+        
+        For every triple (s_1, t, s_2), where t is the target node and s_1 and s_2 are neighbours according to
+        the metapath relation, 
+          1) compute attention scores based on the node embeddings and edge types
+          2) Compute messages from s_1, s_2 based on node embeddings and edge types
+          3) Combine od embedding of t with the messages from s_1, s_2 using the computed attention scores 
+      
+        Pooling (for graph classification) not specified 
+      
+        MLP (graph and node-wise, depending on the task)
+tasks:
+  coarse-grained-vulnerability-detection:
+    training-objective: Classify graph as vulnerable or not vulnerable (per vulnerability type)
+    training-granularity: graph classification (seems to be multi-label, not 100% sure)
+    working-objective: Classify graph as vulnerable or not vulnerable (per vulnerability type)
+    working-granularity: graph classification (seems to be multi-label, not 100% sure)
+    application: vulnerability detection
+    supervision: supervised
+  fine-grained-vulnerability-detection:
+    training-objective: Classify node as vulnerable or not vulnerable (per vulnerability type)
+    training-granularity: node classification (seems to be multi-label, not 100% sure)
+    working-objective: Classify node as vulnerable or not vulnerable (per vulnerability type)
+    working-granularity: node classification (seems to be multi-label, not 100% sure)
+    application: vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: heterogeneous-contract-graph
+    model: model
+    task: coarse-grained-vulnerability-detection
+    comments: the main idea is a two-step approach; first detect _whether_ a graph is vulnerable, then _where_ it is vulnerable
+  - graph: heterogeneous-contract-graph
+    model: model
+    task: fine-grained-vulnerability-detection
+    comments: the main idea is a two-step approach; first detect _whether_ a graph is vulnerable, then _where_ it is vulnerable
+comments: # list

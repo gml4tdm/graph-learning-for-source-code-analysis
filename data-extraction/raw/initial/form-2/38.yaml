@@ -1,0 +1,96 @@
+paper-id: 38
+pdf-id: 54
+graphs:
+  type-dependency-graph:
+    name: Type Dependency Graph
+    description: |-
+      Hypergraph representing relationships between types.
+      
+      In this hypergraph, each edge may connect an arbitrary number of vertices.
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Type
+        details: Some types are intermediary/placeholder types, e.g. introduced for untyped var declarations.
+    edge-type:
+      - name: Bool(a)
+        details: True if a is used as a Boolean
+      - name: Subtype(a, b)
+        details: a is a subtype of b
+      - name: Assign(a, b)
+        details: b is assigned to a
+      - name: Function(a, b_1, b_2, ..., b_k, b*)
+        details: a is a function taking b_1, b_2, ..., b_k as arguments, and returning b*
+      - name: Call(a, b*, b_1, b_2,, ..., b_k)
+        details: The result of calling function of type b* with arguments b_1, b_2, ..., b_k is assigned to a
+      - name: Object_{l_1, \hdots, l_k}(a, b_1, ..., b_k)
+        details: a is an object {l_1 -> b_1,  \hdots, l_k -> b_k}
+      - name: Access_l(a, b)
+        details: a = b.l
+      - name: Name_l(a)
+        details: a has name l
+      - name: NameSimilar(a, b)
+        details: |-
+          a and b have similar names
+          
+          The names of a and b are considered similar if their sets of tokens have nonempty intersection.
+          Tokenization occurs by splitting on underscores, camelcase, and numbers, and then converting
+          to lowercase.
+      - name: Usage_l((a*, b*), (a_1, b_1), ..., (a_k, b_k))
+        details: Usages involving name l
+    vertex-features: |-
+      Nodes corresponding to constants (with known type) are set to a vector which is never updated further.
+      
+      Other nodes are all initialised with the same generic vector.
+    edge-features: |-
+      Edge features are based on identifier names (i.e. l_k).
+      Each name is tokenized (as explained above). 
+      Each token occurring > 1 times is kept as-is.
+      Other tokens are mapped randomly to one of the <Unknown-i> tokens,
+      where 0 <= i <= 50
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Node and identifier embeddings trainable.
+        
+        Works using a message passing/aggregation scheme.
+        
+        Message passing comes in three forms:
+        1) For edges with a fixed number of nodes,
+            all embeddings of all nodes and identifiers involved are passed
+            through a MPL
+        2) For edges with a variable number of nodes, but not pairs,
+            The set of messages for a are computed as {MPL_a(v_{l_j} \mid\mid v_{b_j}) \mid j = 1, ..., k}.
+            The message for each b_j is computed as MLP_b(v_{l_j} \mid\mid v_{a})
+        3) For edges with a variable number of node pairs,
+            A dot-product based attention mechanism is used to compute messages.
+      
+        Aggregation is done similar to GAT, with the difference being that 
+        attention weights are computed using a dot product, not a linear model.
+        
+        Finally, a prediction layer MPL(v_n, u_n) is to compute a compatability 
+        score for each type. Here, u_n is the embedding for the type, and v_n
+        is a trainable vector for the library the type comes from. 
+        For user defined types, v_n = u_n.
+        
+        A softmax layer is used to compute the scores to probability distribution.
+tasks:
+  type-prediction:
+    training-objective: Predict types of nodes w/ unknown type
+    training-granularity: Node Classification related, but not quite
+    working-objective: Predict types of nodes w/ unknown type
+    working-granularity: Node Classification related, but not quite
+    application: Type prediction for converting dynamically typed to statically typed code
+    supervision: Supervised
+combinations:
+  - graph: type-dependency-graph
+    model: model
+    task: type-prediction
+    comments:
+comments: # list

@@ -1,0 +1,36 @@
+paper-id: 238
+pdf-id: 333
+graphs:
+  graph:
+    name: commit graph
+    description: separate graphs are created for old and new code, which are then merged based on common nodes.
+    artefacts:
+      - name: Source code
+        details: commit
+    vertex-type: statements
+    edge-type: control flow/data flow/name flow [data flow considering variable names]/sub-token co-occurrence
+    vertex-features: node value BERT
+    edge-features: n/a
+    connectivity-features: not specified, presumable adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - Graph convolution _operator_ (!not network!) (k-th order GCN; X' = (I - 0.5*L)^k X, with L the graph Laplacian)
+      - affinity propagation clustering (similarity = euclidean distance)
+tasks:
+  commit-untangling:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: Cluster graph into separate commits
+    working-granularity: Graph Clustering
+    application: Untangling (decomposing) composite commits
+    supervision: unsupervised
+combinations:
+  - graph:
+    model:
+    task:
+    comments:
+comments: # list

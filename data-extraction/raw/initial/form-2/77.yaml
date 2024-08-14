@@ -1,0 +1,82 @@
+paper-id: 77
+pdf-id: 107
+graphs:
+  patch-cpg:
+    name: PatchCPG
+    description: A variant of the code property graph for representing patches
+    artefacts:
+      - name: Source code
+        details: Constructed based on commits, but also uses full source code.
+    vertex-type:
+      - name: AST Node
+        details: |-
+          AST Nodes are obtained by taking files which were modified in the commit,
+          and excluding all unchanged functions (as a means to include global variables
+          in the resulting graphs).
+          
+          The amount of nodes is further reduced through program slicing,
+          though this is only done following data- and control edges.
+          
+          Nodes are marked as "added", "deleted", or "context"
+    edge-type:
+      - name: AST Edge
+        details: Edges are marked as "added", "deleted", or "context"
+      - name: Control Dependency Edge
+        details: Edges are marked as "added", "deleted", or "context"
+      - name: Data Dependency Edge
+        details: Edges are marked as "added", "deleted", or "context"
+    vertex-features: |-
+      1) Number of characters in the node payload 
+      2) version (added/deleted/context)
+      3) number of function calls 
+      4) number of variables 
+      5) number of number (constants)
+      6) number of strings
+      7) number of pointers 
+      8) number of arrays
+      9) number of NULL identifiers 
+      10) Boolean indicating if the node if a conditional
+      11) Boolean indicating if the node if a loop
+      12) Boolean indicating if the node if a jump statement 
+      13) Number of arithmetic operators
+      14) Number of relational (comparison) operators
+      15) Number of logical operators
+      16) Number of bitwise operators
+      17) Boolean indicating if the node contains the API name of memory operations
+      18) Boolean indicating if the node contains the API name of string operations
+      19) Boolean indicating if the node contains the API name of lock operations
+      20) Boolean indicating if the node contains the API name of system operations
+    edge-features: |-
+      Edge type is one-hot encoded 
+      version info encoded according to "added" -> [0, 1], "deleted" -> [1, 0], "context" -> [1, 1]
+      The two vectors are concatenated
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Multi-attributed graph convolutional layers (3)
+          This means that 5 subgraphs are created, where for subgraph i, 
+          the i-th edge feature is used to determine if that edge is 
+          present in subgraph i.
+        Mean and Max pooling to obtain two graph embedding vectors 
+        concatenate graph embedding vectors 
+        dropout layer 
+        MLP
+tasks:
+  patch-detection:
+    training-objective: Classify patch as security fixing/not fixing
+    training-granularity: Graph Classification
+    working-objective: Classify patch as security fixing/not fixing
+    working-granularity: Graph Classification
+    application: automatically detect patches/commits introducing security fixes
+    supervision: Supervised
+combinations:
+  - graph: patch-cpg
+    model: model
+    task: patch-detection
+    comments:
+comments: # list

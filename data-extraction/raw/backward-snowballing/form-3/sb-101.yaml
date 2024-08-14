@@ -1,0 +1,40 @@
+paper-id: sb-101
+pdf-id: sb-139
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: file
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: node type, unclear if content (code tokens) are also used, but seems to be only node type
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      AST linearised. Tokens (node type; code tokens unclear if used) are encoded using Glove.
+      
+      traditional code metrics are also used as features.
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - LSTM over linearised AST
+      - LSTM over traditional code metrics (1 numerical input per "time step", hence 18 steps for 18D vector input)
+      - concatenation followed by softmax
+tasks:
+  defect-prediction:
+    training-objective: Classify file as defective or not.
+    training-granularity: n/a
+    working-objective: Classify file as defective or not.
+    working-granularity: n/a
+    application: defect-prediction
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: defect-prediction
+    comments:
+comments: # list

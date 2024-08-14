@@ -1,0 +1,51 @@
+paper-id: 94
+pdf-id: 130
+graphs:
+  cfg:
+    name: CFG
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: PHP files
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Control flow Edge
+        details: n/a
+    vertex-features: Content of statement nodes is tokenized
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Original source code snippet is parsed into a sequence of tokens.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Two inputs:
+        1) Token sequence representation 
+            i) Embedding Layer
+            ii) Bidirectional GRU
+        2) CFG 
+            i) Embedding Layer 
+            ii) GCN
+            iii) Edge Pooling
+        
+        Streams are concatenated 
+        MLP
+tasks:
+  vulnerability-classification:
+    training-objective: Classify sample (graph) as safe/XSS/SQL injection/OSCI
+    training-granularity: Graph Classification
+    working-objective: Classify sample (graph) as safe/XSS/SQL injection/OSCI
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: vulnerability-classification
+    comments:
+comments: # list

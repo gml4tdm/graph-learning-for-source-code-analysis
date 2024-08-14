@@ -1,0 +1,39 @@
+paper-id: sb-104
+pdf-id: sb-143
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: file
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: node type
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      AST is linearised, where only certain node types are kept.
+      Node types are replaced with their code token(s) if they represent identifiers.
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding layer
+      - CNN w/ max pooling, flattening, and fnn
+      - sigmoid
+tasks:
+  defect-prediction:
+    training-objective: Predict file as buggy or not
+    training-granularity: n/a
+    working-objective: Predict file as buggy or not
+    working-granularity: n/a
+    application: Defect Prediction
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: defect-prediction
+    comments:
+comments: # list

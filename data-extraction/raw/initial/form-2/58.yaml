@@ -1,0 +1,59 @@
+paper-id: 58
+pdf-id: 82
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: |-
+          Some AST nodes, specifically those without 
+          child nodes and only contain AST edges,
+          are pruned.
+          
+          Content of AST nodes is simplified. 
+          In particular, user defined names are 
+          replaced with standardised placeholders.
+          Examples: F<i> for functions, V<i> for variables.
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features: Payload of node encoded using Word2Vec
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        GGNN layer 
+        GCN powered SAGPool layer (attention based pooling) -> outputs key (important) subgraph and remainder subgraph
+        key subgraph to global pooling layer 
+        remainder subgraph to max pooling layer
+        resulting embeddings are concatenated to obtain graph embedding
+        MPL w/ sigmoidal activation for final output
+tasks:
+  vulnerability-detection:
+    training-objective: Given a graph representing a method, determine if is contains a vulnerability
+    training-granularity: Graph Classification
+    working-objective: Given a graph representing a method, determine if is contains a vulnerability
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: code-property-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

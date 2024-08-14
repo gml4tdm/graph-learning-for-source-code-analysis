@@ -1,0 +1,47 @@
+paper-id: sb-067
+pdf-id: sb-094
+graphs:
+  cfg:
+    name: CFG
+    description: n/a
+    artefacts:
+      - name: source code
+        details: method
+    vertex-type: basic block (statement)
+    edge-type: control flow
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      A matrix of features is associated with every method.
+      Three types of entities are present in the graph:
+      1) variables -- features: type, modifiers, additional info (3x one-hot)
+      2) basic blocks (relationship between variable and basic block) -- state: statement type (one-hot)
+      3) variable relationships in blocks [data flow]: 43D vector 
+      
+      "pilar" A_{ij} in the feature matrix (actually a tensor) records the 
+      relationships between {block,variable}-i and {block,variable}-j;
+      the contents in the pilar is either (1), (2), or (3), depending on the
+      types of i and j.
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - MLP w/ dimensionality reductions and flattening
+      - average pooling
+      - concat both vectors in different orders, fnn, average pooling, softmax
+tasks:
+  code-clone-detection:
+    training-objective: Given two code samples, determine if they are clones
+    training-granularity: graph classification (but two graphs)
+    working-objective: Given two code samples, determine if they are clones
+    working-granularity: graph classification (but two graphs)
+    application: Code clone detection
+    supervision: supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: code-clone-detection
+    comments:
+comments: # list

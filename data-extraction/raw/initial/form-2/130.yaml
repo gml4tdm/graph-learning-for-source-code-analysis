@@ -1,0 +1,66 @@
+paper-id: 130
+pdf-id:
+graphs:
+  code-non:
+    name: Code-NoN (network of networks)
+    description: |-
+      Control Flow Graph in which each node is an AST.
+      
+      To avoid confusion, remember that the artefacts in the 
+      "artefacts" section are not related _beforehand_, but their
+      relatedness must be predicted
+    artefacts:
+      - name: Source Code
+        details: n/a
+      - name: Bug Report
+        details: n/a
+    vertex-type:
+      - name: AST
+        details: |-
+          A full blown AST corresponding to the basic block in the original CFG,
+          consisting of AST nodes and AST edges. 
+          The AST nodes are referred to as token nodes,
+          while the CFG nodes are referred to as block nodes.
+          
+          In token nodes, compound names are split up.
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      From a bug report (summary + description),
+      so-called "bug clues" are extracted,
+      which are encoded using word2vec
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Parallel inputs:
+          1) Bug Clue
+              Apply convolutional filters (varying sizes)
+              Max-pooling per filter
+          2) Code-Non
+              Token nodes embedded using trainable embedding layer initialised using word2vec
+              DGP is applied to each AST network, with mean pooling to represent each AST as a single vector.
+              DGP is then applied to the CFG network, with the previous AST vectors as node embeddings.
+              Every possible execution path CFG is represented as a vector using mean pooling.
+        Every combination of (bug clue, execution path) are fed into a bi-affine classifier
+        Maximum relevancy score (from bi-affine classifier) of each clue is summed to obtain final score for (report, file) pair.
+tasks:
+  bug-localisation:
+    training-objective: Given a bug report and source file, predict whether the given file is associated wih the given bug
+    training-granularity: n/a
+    working-objective: Given a bug report and source file, predict whether the given file is associated wih the given bug
+    working-granularity: n/a
+    application: Bug localisation
+    supervision: Supervised
+combinations:
+  - graph: code-non
+    model: model
+    task: bug-localisation
+    comments:
+comments: # list

@@ -1,0 +1,84 @@
+paper-id: 93
+pdf-id: 128
+graphs:
+  vdrg:
+    name: Vulnerability Dependence Representation Graph (VDRG)
+    description: Based on PDG
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Control Dependence Edge
+        details: Regular Control Dependence Edge
+      - name: Vulnerability Control Dependence Edge
+        details: |-
+          Control Dependence Edge pointing to a statement 
+          which was marked as syntactically being potentially vulnerable (SyVC).
+          
+          Control Dependence Edges are marked as Vulnerability Control Dependence Edges
+          if one of the following is true:
+          1) The edge points to a statement that is marked as syntactically potentially vulnerable.
+          2) The edge transitively points to a statement that is marked as syntactically potentially vulnerable.
+      - name: Data Dependence Edge
+        details: Regular Data Dependence Edge
+      - name: Vulnerability Data Dependence Edge
+        details: |-
+          Data Dependence Edge pointing to a statement 
+          which was marked as syntactically being potentially vulnerable (SyVC).
+
+          Data Dependence Edges are marked as Vulnerability Data Dependence Edges
+          if one of the following is true:
+          1) The edge points to a statement that is marked as syntactically potentially vulnerable.
+          2) The edge transitively points to a statement that is marked as syntactically potentially vulnerable.
+    vertex-features: |-
+      Names are normalised.
+      
+      Node are encoded using word2vec.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Globally, the network uses 
+        attention with weights based on edge type,
+        and some message passing scheme.
+        Final, global pooling is applied
+        
+        Exact algorithm:
+        
+        h = 2
+        for t in V:
+          for s in N(t):
+            for i in range(0, h + 1):
+              K^i(s) = K_Linear^i_{\tau(s)}(H^{init}[s])
+              Q^i(t) = Q_Linear^i_{\tau(t)}(H^{init}[t])
+              e = (s, t)
+              ATT_head^i(s, e, t) = (K^i(s)W^{ATT}_{phi(e)}Q^i(t)^T) * \frac{\mu_{<\tau(s),\phi(e),\tau(t)>}}{\sqrt{d}}
+            Attention_{HGT}(s, e, t) = softmax(concat_{i \in [1, h]}(ATT_head^i(s, e, t)))
+            for i in range(0, h + 1):
+              MSG_Head^i(s, e, t) = M_Linear^i_{\tau(s)}(H^{init}[s])W^{MSG}_{phi(e)}
+            Message_{HGT}(s, e, t) = concat_{i \in [1, h]}(MSG_Head^i(s, e, t))
+          H'(t) = \oplus_{s \in N(t)} (Attention_{HGT}(s, e, t) \cdot Message_{HGT}(s, e, t))
+          H(t) = ReLU(A_Linear_{\tau(t)}(\sigma(H'(t))) + H^{init}[t])
+        H = \oplus_{t \in V} H(t)
+tasks:
+  vulnerability-detection:
+    training-objective: Classify graph (function) as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify graph (function) as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: vdrg
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

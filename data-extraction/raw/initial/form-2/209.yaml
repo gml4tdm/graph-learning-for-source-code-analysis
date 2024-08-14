@@ -1,0 +1,71 @@
+paper-id: 209
+pdf-id: 279
+graphs:
+  graph:
+    name: n/a
+    description: AST with additional data- and control flow edges
+    artefacts:
+      - name: Source code
+        details: smart contract
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Next Node
+        details: Added if two nodes are adjacent in the depth first traversal of the AST
+      - name: Next Token
+        details: n/a
+      - name: Condition True
+        details: n/a
+      - name: Condition False
+        details: n/a
+      - name: While Exec
+        details: Connect root of condition subtree to root of body subtree
+      - name: For Exec
+        details: n/a
+      - name: Last Read
+        details: n/a
+      - name: Last Write
+        details: n/a
+      - name: Next Use
+        details: n/a
+    vertex-features: |-
+      Unclear what exactly is used as feature. 
+      Seems to be token for leaf nodes, nonterminal for non-leaf nodes.
+      Paper does not mention specific features.
+      
+      Unclear how feature are encoded.
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) GraphSAGE
+        2) SAGPool
+        3) GraphSAGE
+        4) SAGPool
+        5) GraphSAGE
+        6) SAGPool
+        7) Outputs of (2), (4), (6) are aggregated using unspecified readout function, and summed together 
+        8) MLP
+        9) Softmax
+tasks:
+  vulnerability-detection:
+    training-objective: Given a graph, classify it as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Given a graph, classify it as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection in Smart Contracts
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

@@ -1,0 +1,35 @@
+paper-id: 254
+pdf-id: 55
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: classes/interfaces
+    edge-type: dependencies between classes/interfaces (implements, data access, etc.)
+    vertex-features: n/a
+    edge-features: edges have weights (fine-tuned using simulated annealing)
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  page-rank:
+    name: PageRank
+    architecture-attributes:
+      - page rank (with support for weights)
+tasks:
+  key-class-detection:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: rank nodes
+    working-granularity: node ranking
+    application: detection of key classes ("hotspots")
+    supervision: unsupervised
+combinations:
+  - graph: graph
+    model: page-rank
+    task: key-class-detection
+    comments:
+comments: # list

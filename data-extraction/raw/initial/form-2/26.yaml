@@ -1,0 +1,61 @@
+paper-id: 26
+pdf-id: 39
+graphs:
+  pdg:
+    name: Program Dependency Graph
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type:
+      - name: PDG Node
+        details: |-
+          Nodes are created for AST nodes containing 
+          1) method calls
+          2) assignment
+          3) control statements 
+          4) declarations 
+          5) API field access 
+          
+          Furthermore, every node involving a type has the type name fully expanded (e.g. java.lang.String)
+      - name: Hole
+        details: Node in the graph for which a type must be predicted.
+    edge-type:
+      - name: PDG Edge
+        details: Both data and control flow edges
+      - name: Prediction Flow Dependency Edge
+        details: Edge from a node in the PDF to the hole
+    vertex-features: n/a (embedding layer)
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Textual elements are extracted. Specifically:
+      1) The name of the method in which a prediction is made. Compound name (e.g. getFileLine) are split into individual words.
+      2) All (full) names of all API classes used in the method
+      3) Variable Names
+models:
+  gat:
+    type:
+      name: n/a
+      architecture: |-
+        Double model setup. A graph embedding is learned using a GAT network.
+        
+        The textual elements are encoded using an LSTM network, to obtain
+        three separate vectors which are concatenated.
+        
+        The textual and structural embeddings are fused and fed into a MLP.
+tasks:
+  api-recommendation:
+    training-objective: Given a method with a hole node, predict the API to be used in the hole node
+    training-granularity: n/a
+    working-objective: Given a method with a hole node, predict the API to be used in the hole node
+    working-granularity: n/a
+    application: API recommendation
+    supervision: Supervised
+combinations:
+  - graph: pdg
+    model: gat
+    task: api recommendation
+    comments: Although the hole is a node, the full graph is embedded; this is not node prediction.
+comments: # list

@@ -1,0 +1,57 @@
+paper-id: sb-87
+pdf-id: sb-170
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: variable
+    edge-type: data flow (values comes from; directed)
+    vertex-features: variable name
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      comment (for function, e.g. javadoc) is used as feature
+      
+      function source is used as feature 
+      
+      graph is linearised and used as feature 
+      
+      sequence starts with [CLS], the three parts are separated with [SEP]
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - multi-layer bidirectional transformer as base model
+      - attention computed based on connectivity using mask matrix (M_{ij} = 0 for connected variable pairs, or if either q_i or k_j represents a comment or word token, -\infty otherwise)
+tasks:
+  masked-language-modelling:
+    training-objective: Masked language modelling (as in BERT)
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: model pre-training
+    supervision: self-supervised
+  edge-prediction:
+    training-objective: Given samples with masked edges, predict which pairs of variables have missing edges
+    training-granularity: Link prediction
+    working-objective: n/a
+    working-granularity: n/a
+    application: model pre-training
+    supervision: self-supervised
+  node-alignment:
+    training-objective: Predict masked "edges" between variables and code tokens
+    training-granularity: Kind of like link prediction, but the code tokens were never explicitly part of the graph -- simply matching code tokens to their occurrence in the graph sequence part of the input
+    working-objective: n/a
+    working-granularity: n/a
+    application: model pre-training
+    supervision: self-supervised
+combinations:
+  - graph: graph
+    model: model
+    task: masked-language-modelling + edge-prediction + node-alignment
+    comments: I am not fully sure how the node alignment task works (on an input level); some part of the input is masked, but I do not fully understand how
+comments: # list

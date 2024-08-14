@@ -1,0 +1,37 @@
+paper-id: sb-006
+pdf-id: sb-009
+graphs:
+  graph:
+    name: n/a
+    description: heterogeneous graph with developers' github and stackoverflow activity
+    artefacts:
+      - name: github data
+        details: projects, user data, topics ("abilities")
+      - name: stackoverflow data
+        details: questions, answers, users, tags ("abilities")
+    vertex-type: developers/projects/questions/abilities
+    edge-type: follows (developer -> developer) / answered (Q -> D) / ask (D -> Q) / commit/committed (D <-> P) / label/labelled (P <-> A, Q <-> A)
+    vertex-features: n/a
+    edge-features: Edges are weighted (1 for most, except \# committ(ed), \# asked/answered)
+    connectivity-features: transition probability matrix
+    graph-features: n/a
+    other-features:
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - Use random walk with restarts to compute affinity for abilities for a given developer (probability of reaching ability node from developer node)
+tasks:
+  ability-mining:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: determine developer affinity for abilities
+    working-granularity: n/a
+    application: Determine developer capabilities from online community data
+    supervision: unsupervised
+combinations:
+  - graph: graph
+    model: model
+    task: ability-mining
+    comments:
+comments: # list

@@ -1,0 +1,40 @@
+paper-id: sb-072
+pdf-id: sb-102
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/ncs
+    vertex-features: node type one-hot
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - gin (multiple layers; take the average of the max-pool over each layer)
+      - graph embedding fed into LSTM network together with previous hidden state (which represent edit history); used to compute edit type and location
+      - second LSTM (c = LSTM(edit type, LSTM(edit location, history))) to compute embedding used for value or type prediction
+      - pointer network for edit location prediction
+      - value for leaf node predicted using attention mechanism; either copy from local or global dictionary
+      - softmax to assign types for nonterminal nodes
+tasks:
+  program-repair:
+    training-objective: Given a buggy program (as graph), output a series of graph transformations that result in the graph of a fixed program
+    training-granularity: graph to sequence [of edit operations]
+    working-objective: Given a fixed program (as graph), output a series of graph transformations that result in the graph of a buggy program
+    working-granularity: graph to sequence [of edit operations]
+    application: Program repair
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model
+    task: program-repair
+    comments:
+comments: # list

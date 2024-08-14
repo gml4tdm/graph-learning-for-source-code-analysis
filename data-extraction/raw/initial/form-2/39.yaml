@@ -1,0 +1,100 @@
+paper-id: 39
+pdf-id: 57
+graphs:
+  dataflow-enriched-ast:
+    name: Dataflow Enriched AST (AST+DF)
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: |-
+          Nodes of types ImplicitCastExpr and DeclRefExpr are merged
+          with their AST edge successor to reduce graph diameter.
+          
+          Nodes are two-tuples (type, property), where
+          the property is 
+          1) data type (Function, FunctionArg, DeclStmt)
+          2) operator (Operator)
+          3) function name (CallExpr)
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: Edge from every usage of a variable to its definition
+    vertex-features: n/a (used embedding layer)
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+  cdfg-call-mem:
+    name: CDFG + CALL + MEM
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: LLVM IR Instructions
+        details: n/a
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+      - name: MEM Edge
+        details: Store/load dependencies
+      - name: CALL Edge
+        details: Dependencies to return values of functions
+    vertex-features: n/a (used embedding layer)
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  gnn-ast:
+    type: &gnn-ast
+      name: GNN-AST
+      architecture: |-
+        Trainable Embedding Layer
+        GGNN Layers 
+        Learnable MPL to map node embeddings to higher dimension
+        global attention sum pooling (weighted sum based on attention)
+        MPL for final output
+  gnn-cdfg:
+    type:
+      name: GNN-CDFG
+      <<: *gnn-ast
+tasks:
+  cpu-gpu-mapping:
+    training-objective: Given a graph, classify as cpu or gpu
+    training-granularity: Binary Graph Classification
+    working-objective: Given a graph, classify as cpu or gpu
+    working-granularity: Binary Graph Classification
+    application: Determine whether to run OpenCl kernel on CPU or GPU
+    supervision: Supervised
+  thread-coarsening:
+    training-objective: Determine thread coarsening factor from a set of options
+    training-granularity: Graph Classification
+    working-objective: Determine thread coarsening factor from a set of options
+    working-granularity: Graph Classification
+    application: Determine thread coarsening factors
+    supervision: supervised
+combinations:
+  - graph: dataflow-enriched-ast
+    model: gnn-ast
+    task: cpu-gpu-mapping
+    comments:
+  - graph: dataflow-enriched-ast
+    model: gnn-ast
+    task: thread-coarsening
+    comments:
+  - graph: cdfg-call-mem
+    model: gnn-cdfg
+    task: cpu-gpu-mapping
+    comments:
+  - graph: cdfg-call-mem
+    model: gnn-cdfg
+    task: thread-coarsening
+    comments:
+comments: # list

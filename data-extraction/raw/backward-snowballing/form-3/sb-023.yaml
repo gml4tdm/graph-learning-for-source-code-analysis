@@ -1,0 +1,50 @@
+paper-id: sb-023
+pdf-id: sb-031
+graphs:
+  augmented-ast:
+    name: Augmented AST
+    description: AST w/ additional edges
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast/shared subtoken nodes (one for each unique subtoken) [vocab node]
+    edge-type: ast/sibling/control flow/data flow
+    vertex-features: token for vocab nodes, type for ast nodes
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - vocab nodes vectorised using Character-level CNN
+      - node types using embedding layer
+      - ggnn
+      - augmented with MLP for fill-in-the-blank
+      - augmented with mean pooling and GRU for variable naming
+tasks:
+  fill-in-the-blank:
+    training-objective: Given a graph where one node has been masked, predict the correct variable
+    training-granularity: Node classification (kinda)
+    working-objective: Given a graph where one node has no variable, predict the correct variable
+    working-granularity: Node classification (kinda)
+    application: Variable usage prediction
+    supervision: supervised
+  variable-naming:
+    training-objective: Given a graph where one variable has been removed (i.e. it has no name), predict the name
+    training-granularity: Graph to Sequence
+    working-objective: Given a graph with an unnamed variable, predict the name for the variable
+    working-granularity: Graph to Sequence
+    application: Variable Naming
+    supervision: supervised
+combinations:
+  - graph: augmented-ast
+    model: model
+    task: fill-in-the-blank
+    comments: The method is supposed to be general, while the two tasks are example evaluation tasks used in the paper
+  - graph: augmented-ast
+    model: model
+    task: variable naming
+    comments: The method is supposed to be general, while the two tasks are example evaluation tasks used in the paper
+comments: # list

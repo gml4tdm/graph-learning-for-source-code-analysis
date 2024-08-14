@@ -1,0 +1,49 @@
+paper-id: 266
+pdf-id: 257
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: method
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      nodes put into sequence using breath first search
+      
+      method name (split up into sequence) is used as feature 
+      
+      sequence of APIs used in the method is used as feature
+      
+      bag of tokens used in the snippets is used as feature 
+      
+      code summary/query is used as feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding layers for all features
+      - for every sequence (ast, method name, apis, tokens, summary/query), apply soft-attention (mlp based) to every element (separately)
+      - fuse features (ast, method name, apis, tokens) through concatenation
+      - multiply fused matrix and summary/query matrix
+      - perform cnn and use max pooling/softmax to compute attention scores; multiple with pre-matrix multiplication features (i.e. fused feature matrix and summary matrix)
+      - cosine similarity with summary embedding
+tasks:
+  code-search:
+    training-objective: Maximise similarity between related (code, summary) pairs, minimise similarity between unrelated (code, summary) pairs
+    training-granularity: n/a
+    working-objective: compute code snippet <-> query similarity
+    working-granularity: n/a
+    application: Code search
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-search
+    comments:
+comments: # list

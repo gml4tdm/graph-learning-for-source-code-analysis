@@ -1,0 +1,38 @@
+paper-id: sb-103
+pdf-id: sb-142
+graphs:
+  class-dependency-network:
+    name: Class Dependency Network
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: class
+    edge-type: class/interface relationships
+    vertex-features: |-
+      nodes are embedded using node2vec.
+      
+      Traditional software engineering metrics (e.g. CBO) are used as features.
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  random-forest:
+    name: Random Forest
+    architecture-attributes:
+      - Random Forest
+tasks:
+  defect-prediction:
+    training-objective: Classify node as buggy or not
+    training-granularity: node classification
+    working-objective: Classify node as buggy or not
+    working-granularity: node classification
+    application: defect prediction
+    supervision: supervised
+combinations:
+  - graph: class-dependency-network
+    model: random-forest
+    task: defect-prediction
+    comments:
+comments: # list

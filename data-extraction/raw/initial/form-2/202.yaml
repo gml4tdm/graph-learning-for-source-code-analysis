@@ -1,0 +1,59 @@
+paper-id: 202
+pdf-id: 271
+graphs:
+  graph:
+    name: n/a
+    description: AST with additional edges
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Next Token Edge
+        details: NCS
+      - name: Hub Edge (My name; does not have a name in the paper)
+        details: |-
+          Connects node with types which generally have 
+          many child nodes (e.g. ClassDeclaration, MethodDeclaration)
+    vertex-features: Word vectors are used to encode node (unclear what exactly is encoded; could be node type for internal nodes, token for leafs)
+    edge-features: n/a
+    connectivity-features: Adjacency List
+    graph-features: n/a
+    other-features:  n/a
+models:
+  gcn:
+    type:
+      name: n/a
+      architecture: |-
+        GCN
+        Max pooling
+        Similarity Score (unclear if part of network or separate)
+  gat:
+    type:
+      name: n/a
+      architecture: |-
+        GAT 
+        Max Pooling 
+        Similarity Score (unclear if part of network or separate)
+tasks:
+  clone-detection:
+    training-objective: Given two code samples, determine whether they are semantic clones
+    training-granularity: Graph Classification (?)
+    working-objective: Given two code samples, determine whether they are semantic clones
+    working-granularity: Graph Classification (?)
+    application: Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: gcn
+    task: clone-detection
+    comments:
+  - graph: graph
+    model: gat
+    task: clone-detection
+    comments:
+comments: # list

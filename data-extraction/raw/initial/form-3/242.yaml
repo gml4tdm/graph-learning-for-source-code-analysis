@@ -1,0 +1,36 @@
+paper-id: 242
+pdf-id: 337
+graphs:
+  class-diagram:
+    name: class dependency network
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: classes
+    edge-type: dependencies
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  cluster:
+    name: n/a
+    architecture-attributes:
+      - graph clustering algorithm
+      - similarity based; aggregate similar classes into modules
+tasks:
+  modularization:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: Cluster classes into modules
+    working-granularity: graph clustering
+    application: Software modularisation
+    supervision: unsupervised
+combinations:
+  - graph: class-diagram
+    model: cluster
+    task: modularization
+    comments:
+comments: # list

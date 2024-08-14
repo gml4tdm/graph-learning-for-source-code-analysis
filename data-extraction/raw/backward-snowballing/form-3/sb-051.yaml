@@ -1,0 +1,46 @@
+paper-id: sb-051
+pdf-id: sb-073
+graphs:
+  graph:
+    name: n/a
+    description: based on AST, but with abstracted/less information
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: API call/control unit/variable declaration/assignment
+    edge-type: ast
+    vertex-features: not clearly specified, but seems to be node content (type for control unit; tokens for the others)
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: |-
+      Generated statements _without variables_ are ranked based on classifier confidence,
+      and a score computed based on a (non ML) data flow analysis of the graph,
+      which intuitively measures whether the variables in the statements 
+      make sense, given the graph full training corpus, 
+      is used to fill in the names of the variables.
+models:
+  statement-model:
+    name: n/a
+    architecture-attributes:
+      - embedding layer
+      - child-sum tree-LSTM adapted to handle an arbitrary number of children
+tasks:
+  api-recommendation:
+    training-objective: Given a piece of code with some API usage, predict the next API usage
+    training-granularity: n/a
+    working-objective: Given a piece of code with some API usage, recommend the next API usage
+    working-granularity: n/a
+    application: API Recommendation
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: statement-model
+    task: api-recommendation
+    comments: |-
+      The code completion is really simple; only a single API (e.g. no nesting),
+      possibly wrapped in a control structure.
+      
+      The paper does not mention _how_ the API is recommended; it is totally unclear 
+      how the actual code is generated.
+comments: # list

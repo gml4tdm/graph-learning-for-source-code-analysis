@@ -1,0 +1,68 @@
+paper-id: sb-075
+pdf-id: sb-107
+graphs:
+  socio-technical-network: &base
+    name: Socio-Technical Network
+    description: Directed graph
+    artefacts:
+      - name: version history information
+        details: n/a
+      - name: source code
+        details: project
+    vertex-type: developer/software component
+    edge-type: contributed to (dev -> component)/contributed by (component -> dev)/depends on (component -> component)
+    vertex-features: various local (node-level) network metrics (some of which use edge weights)
+    edge-features: contributed to edge is weighted by the number of commits
+    connectivity-features: n/a
+    graph-features: various global network metrics
+    other-features: n/a
+  dependency-network:
+    name: Dependency Network
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: software component
+    edge type: depends on
+    <<: *base
+  contribution-network:
+    name: Contribution Network
+    description: n/a
+    artefacts:
+      - name: version history information
+        details: n/a
+    vertex-type: developer/software component
+    edge type: contribution
+    edge-features: contribution is weighted by the number of commits
+    <<: *base
+models:
+  logistic-regression:
+    name: Logistic Regression
+    architecture-attributes:
+      - logistic regression
+tasks:
+  failure-prediction:
+    training-objective: Predict which components are fault prone (large amount of bugs)
+    training-granularity: node classification
+    working-objective: Predict which components are fault prone (large amount of bugs)
+    working-granularity: node classification
+    application: Fault Proneness Prediction
+    supervision: Supervised
+combinations:
+  - graph: socio-technical-network
+    model: logistic-regression
+    task: failure-prediction
+    comments:
+  - graph: dependency-network
+    model: logistic-regression
+    task: failure-prediction
+    comments:
+  - graph: contribution-network
+    model: logistic-regression
+    task: failure-prediction
+    comments:
+  - graph: contribution-network + dependency-network
+    model: logistic-regression
+    task: failure-prediction
+    comments: metrics from both graphs are combined
+comments: # list

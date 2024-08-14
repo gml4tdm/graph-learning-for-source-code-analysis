@@ -1,0 +1,52 @@
+paper-id: sb-012
+pdf-id: sb-019
+graphs:
+  graph:
+    name: n/a
+    description: ast w/ ncs; AST of the old source code
+    artefacts:
+      - name: source code
+        details: diff
+    vertex-type: ast
+    edge-type: ast/ncs
+    vertex-features: not specified
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+  graph-2:
+    name: n/a
+    description: difference between old and new ast
+    artefacts:
+      - name: source code
+        details: diff
+    vertex-type: ast
+    edge-type: ast/added/removed/replaced/unchanged
+    vertex-features: not specified
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - encoder/decoder architecture
+      - auto-encoder
+      - ggnn encoders (w/ normalised attention-weighted sum for pooling); one for ast of old code, one for the change graph
+      - partial AST state is modelled using an LSTM; receives the two graph embeddings as inputs (and previous decoder output)
+      - decoder generates edit operation or move subtree operation using pointer-like network
+tasks:
+  neural-editing:
+    training-objective: Given an old AST and change graph (edit representation), generate the new AST
+    training-granularity: x to tree
+    working-objective: Given an old AST and change graph (edit representation), generate a new AST
+    working-granularity: x to tree
+    application: Edit Representation Learning
+    supervision: supervised
+combinations:
+  - graph: graph + graph-2
+    model: model
+    task: neural-editing
+    comments: A secondary goal of the training is to use the second GGNN to learn how to represent edits as vectors
+comments: # list

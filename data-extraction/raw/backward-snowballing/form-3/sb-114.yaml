@@ -1,0 +1,41 @@
+paper-id: sb-114
+pdf-id: sb-160
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      linearised using depth first traversal, 
+      yielding a stream of node types and code tokens.
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding layer
+      - bidirectional LSTM
+      - max pooling
+      - MLP
+      - sigmoid
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: n/a
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: n/a
+    application: vulnerability detection
+    supervision: n/a
+combinations:
+  - graph: ast
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

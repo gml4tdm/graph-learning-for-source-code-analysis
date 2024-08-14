@@ -1,0 +1,36 @@
+paper-id: 260
+pdf-id: 273
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: first compiled to IR
+    vertex-type: operands/opcode/labels in IR
+    edge-type: control dependency (or flow; not clearly specified)/data dependency
+    vertex-features: both exact feature and encoding unclear
+    edge-features: edge have a weight
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - graph matching network (w/ attention) (aggregation per graph using mlp-based soft-attention weighted sum)
+      - cosine similarity
+tasks:
+  clone-detection:
+    training-objective: Given two graphs, determine whether they are semantic clones
+    training-granularity: graph classification (but with two graphs)
+    working-objective: Given two graphs, determine whether they are semantic clones
+    working-granularity: graph classification (but with two graphs)
+    application: code clone detection (cross language)
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model
+    task: clone-detection
+    comments:
+comments: # list

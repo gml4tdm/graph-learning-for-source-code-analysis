@@ -1,0 +1,52 @@
+paper-id: 89
+pdf-id: 123
+graphs:
+  code-property-like-graph:
+    name: n/a
+    description: Network of statements, where every statement has its AST subtree attached
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Statement Node
+        details: All type names are fully expanded. Variable names are replaced with their fully expanded type.
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: Between statements
+      - name: PDG Edge
+        details: Between statements
+    vertex-features: Node content is encoded using doc2vec
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+   type:
+      name: n/a
+      architecture:
+        GGNN 
+        GAT 
+        GGNN 
+        GAT 
+        GGNN 
+        GAT 
+        FNN (output per _statement_ node)
+tasks:
+  exception-detection:
+    training-objective: Classify nodes (statements) as throwing no exception, or predict exception type
+    training-granularity: Multi Class Node Classification
+    working-objective: Classify nodes (statements) as throwing no exception, or predict exception type
+    working-granularity: Multi Class Node Classification
+    application: Detect (Prevent) Exceptions which will occur at runtime (in Java)
+    supervision: Supervised
+combinations:
+  - graph: code-property-like-graph
+    model: model
+    task: exception-detection
+    comments:
+comments: # list

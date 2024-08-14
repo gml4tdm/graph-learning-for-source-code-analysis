@@ -1,0 +1,58 @@
+paper-id: 125
+pdf-id: 167
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: Some node types are discarded, others are kept
+    edge-type:
+      - name: AST Edge
+        details: Seen as undirected
+    vertex-features: |-
+      Node "strings" mapped to numerical vectors; unclear what this means exactly
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Embedding Layer 
+        2) 3x (GIN Layer; BatchNormalisation; ReLU; Dropout)
+        3) Transformer Layer 
+          H_0 = H_G + PE_{sin} + PE_{Laplace}
+          H'_{n} = MultiHeadAttention(Linear(H_{n-1})) + H_{n-1}
+          H_N = FNN(Linear(H'_{n-1})) + H'_{n-1}
+        
+          Here, PE_{sin} is a matrix satisfying
+            PE_{sin}(i,2j) = sin(i/10000^{2j / d})
+            PE_{sin}(i,2j+1) = cos(i/10000^{2j / d})
+        
+          PE_{Laplace} is a matrix satisfying 
+            PE_{Laplace} = Linear(concat(\lambda_m, x_{n,m}))
+            where \lambda_m is the m-th lowest eigenvector of the graph Laplace matrix
+            and x_{n,m} is the n-th element of the eigenvector corresponding to \lambda_m
+        
+        4) Special token at the end of transformer input, whose embedding is used for prediction;
+          y = sigmoid(FullyConnectedLayer(H_last))
+tasks:
+  defect-prediction:
+    training-objective: Classify sample as buggy or not buggy
+    training-granularity: Graph Classification
+    working-objective: Classify sample as buggy or not buggy
+    working-granularity: Graph Classification
+    application: Defect Detection
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: defect-prediction
+    comments:
+comments: # list

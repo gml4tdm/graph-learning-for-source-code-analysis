@@ -1,0 +1,82 @@
+paper-id: 173
+pdf-id: 226
+graphs:
+  sg:
+    name: Structure Graph (SG)
+    description: Essentially an AST
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: Nodes representing variables are replaced with the types of those variables
+    edge-type:
+      - name: AST Child Edge
+        details: n/a
+      - name: AST Parent Edge
+        details: n/a
+    vertex-features: Encode tokens (either actual tokens or node type) using word2vec
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+  edfg:
+    name: Execution Data Flow Graph
+    description: Based on AST
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: Nodes representing variables are replaced with the types of those variables
+    edge-type:
+      - name: Route Edge
+        details: Denotes execution flow between nodes (incl. branching)
+      - name: Value Edge
+        details: Connects nodes representing variables to nodes providing the values for those variables
+    vertex-features: Encode tokens (either actual tokens or node type) using word2vec
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Not specified how edge embeddings are initialised
+        
+        1) SG is fed to T-GCN
+            i) Nodes are enhanced with positional embedding base on sin/cos (Viswani et al.),
+                where "pos" is the hierarchical position of the node; (pos, 2d) -> sin(pos / 10000^{2d/F}), 
+                (pos, 2d + 1) -> cos(pos/10000^{2d/F})
+            ii) Positional encoding and word embedding are concatenated 
+            iii) GCN which also takes edge embeddings into account:
+                h_{c,i}^{ell + 1} = sigma(b^{\ell} + sum_{j \in N(i)} \frac{1}{c_{ij}}(h_{c,j}^{\ell} + m_{c,ij})W_c^{\ell})
+                (where m is the edge embedding)
+                c_{ij} = \sqrt{|N_i|}\sqrt{|N_j|}
+        2) EDFG is fed to E-GAT
+            i) Like GAT, but aggregated edge embeddings too like in T-GCN
+        3) Fuse vectors per node using gating mechanism 
+        4) Sum pooling
+tasks:
+  code-classification:
+    training-objective: Classify code snippet into one of several categories
+    training-granularity: Classification (of multiple graphs)
+    working-objective: Classify code snippet into one of several categories
+    working-granularity: Classification (of multiple graphs)
+    application: Code Classification
+    supervision: Supervised
+  code-clone-detection:
+    training-objective: Given a pair of programs, output whether they implement the same functionality
+    training-granularity: Classification (of multiple graphs)
+    working-objective: Given a pair of programs, output whether they implement the same functionality
+    working-granularity:  Classification (of multiple graphs)
+    application: (Functional) Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: sg + edfg
+    model: model
+    task: code-classification + code-clone-detection
+    comments: The paper presents a general framework, evaluated on the two downstream tasks.
+comments: # list

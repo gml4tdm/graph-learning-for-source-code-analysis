@@ -1,0 +1,50 @@
+paper-id: sb-056
+pdf-id: sb-082
+graphs:
+  ast: &ast
+    name: ast (binarized)
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: not specified
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: source code text is used as feature
+  cfg:
+    name: CFG
+    vertex-type: statement
+    edge-type: control flow
+    vertex-features: encoded using doc2vec
+    edge-features: n/a
+    connectivity-features: not specified explicitly, presumably adjacency matrix
+    graph-features: n/a
+    <<: *ast
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - LSTM is used for source text
+      - Tree-LSTM is used for AST
+      - GCN is used for CF G
+      - attention applied to all
+      - Fusion (concat)
+      - output manhatten distance
+      - Siamese network (looks like it, though not stated explicitly)
+tasks:
+  clone-detection:
+    training-objective: Given two graphs, output what types of clones they are, or that they are not clones
+    training-granularity: graph classification (kinda, two graph inputs)
+    working-objective: Given two graphs, output what types of clones they are, or that they are not clones
+    working-granularity: graph classification (kinda, two graph inputs)
+    application: code clone detection
+    supervision: supervised
+combinations:
+  - graph: ast + cfg
+    model: model
+    task: clone-detection 
+    comments:
+comments: # list

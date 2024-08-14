@@ -1,0 +1,68 @@
+paper-id: 162
+pdf-id: 212
+graphs:
+  graph:
+    name: n/a
+    description: Heterogeneous graph mapping tokens to "sentences"
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Sentence Node
+        details: |-
+          For Java code, a sentence is a statement. For control statement, the portion before the opening { is used as a sentence.
+          For Python code, each line is considered a sentence.
+      - name: Token Node
+        details: Represents a single token. One unique node for every unique token
+    edge-type:
+      - name: sentence/token edge
+        details: connects a sentence node to every token contained in said sentence
+    vertex-features: Node payload, embedded using embedding layers
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: Previously generated tokens are used as input.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Encoder/decoder architecture, based on transformer.
+        
+        Encoder:
+          1) Embedding Layer to encode nodes 
+          2) Nodes are enhanced with relative positional encoding 
+          3) multi-head self-attention w/ residual connections and normalisation 
+          4) Position-wise FNN w/ residual connections and normalisation
+        
+        Graph Network:
+          1) Output of embedding layer is used to initialise token nodes 
+          2) Output of encoder is used to initialise sentence nodes 
+          3) GAT 
+        
+        Decoder: 
+          1) Embedding Layer  
+          2) Positional Encoding (absolute)
+          3) Masked multi-head self-attention w/ residual connections and normalisation
+          4) Multi-head attention with outputs from GAT w/ residual connections and normalisation
+          5) Position-wise FNN w/ residual connections and normalisation
+          6) Linear Layer 
+          7) Softmax
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph to Sequence
+    application: Code summarization (Generating comments)
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

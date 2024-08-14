@@ -1,0 +1,49 @@
+paper-id: 231
+pdf-id: 323
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast w/ subtokens
+    edge-type: ast
+    vertex-features: content CodeBERT
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+  sdg:
+    name: sdg (system dependence graph)
+    description: derived from a set of pdgs
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: statement
+    edge-type: control dependence (data dependence not used)
+    vertex-features: for each statement, max-pool over embeddings of all nodes in corresponding ast subtree
+    edges: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - edge type represented using edge-decomposition as in r-gcn
+      - edge-type aware generic message passing scheme; h_v = f(\sum_{(u, r) \in N(v)} W_type(r)\phi(x_u, z_r)) (u - node; r - edge)
+tasks:
+  vulnerability-detection:
+    training-objective: classify statement as vulnerable or non-vulnerable
+    training-granularity: node classification
+    working-objective: classify statement as vulnerable or non-vulnerable
+    working-granularity: node classification
+    application: statement-level memory vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: ast + sdg
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

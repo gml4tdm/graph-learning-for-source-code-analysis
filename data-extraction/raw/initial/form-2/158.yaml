@@ -1,0 +1,63 @@
+paper-id: 158
+pdf-id: 208
+graphs:
+  crg:
+    name: Code Relationship Graph (CRG)
+    description: n/a
+    artefacts:
+      - name: Source Code
+        details: Method
+    vertex-type:
+      - name: AST Node
+        details: Tokens are decomposed into sub-tokens
+    edge-type:
+      - name: Child
+        details: AST Edge
+      - name: Next Token
+        details: NCS
+      - name: Last Use
+        details: Connect variable to all possible last uses
+      - name: Computed From
+        details: Connect expression node to all variables occurring in it
+      - name: Return To
+        details: Connect return tokens to method declaration
+      - name: Subtoken Edge
+        details: n/a
+    vertex-features: |-
+      Not explicitly specified what is encoded/used as features, but 
+      figures suggest node type for internal node, and content (tokens) for other nodes.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Token sequence is used as input.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Token input embedded using embedding layer, encoded using GRU
+        2) Graph encoder
+          i) Nodes embedded using embedding layer
+          ii) R-GCN
+          iii) GGNN (to obtain time-series like behaviour, similar to GRU; not node type dependent messaging)
+        3) Select nodes containing nodes occurring in the token sequence to obtain equal length sequences 
+        4) For every node, we have a sequence of hidden states. For every hidden state index j, pairwise join node and token sequences (h_j, h'_j) etc
+        5) Compute sequence of the pairwise joined sets as output 
+        5) Decoder
+          i) Attention 
+          ii) Pointer network
+tasks:
+  method-name-generation:
+    training-objective: Given a method body, generate the target name for the method
+    training-granularity: X-to-sequence
+    working-objective: Given a method body, generate the target name for the method
+    working-granularity: X-to-sequence
+    application: method name generation
+    supervision: supervised
+combinations:
+  - graph: crg
+    model: model
+    task: method-name-generation
+    comments:
+comments: # list

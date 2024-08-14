@@ -1,0 +1,84 @@
+paper-id: 15
+pdf-id: 25
+graphs:
+  code-meta-model:
+    name: n/a
+    description: |-
+      Based on a meta model for source code and design patterns defined in 
+      
+      Mario Luca Bernardi, Marta Cimitile, and Giuseppe Di Lucca. 2014. Design
+      pattern detection using a DSL-driven graph matching approach. Journal of
+      Software: Evolution and Process 26, 12 (2014), 1233–1266. https://doi.org/
+      10.1002/smr.1674
+      
+      This describes graphs for source code.
+      
+      For source code specifically, k-hop neighbourhoods are extracted from the
+      system (metamodel) graph.
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: |-
+          Nodes from meta-model
+          
+          Graphs are centered around pivotal nodes (classes, interfaces, methods);
+          other types of nodes are thus ignored.
+        details: n/a
+    edge-type:
+      - name: Edges from meta-model
+        details: n/a
+    vertex-features: n/a (unclear how node embeddings are initialised)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+  pattern-meta-model:
+    name: n/a
+    description: |-
+      Based on a meta model for source code and design patterns defined in 
+
+      Mario Luca Bernardi, Marta Cimitile, and Giuseppe Di Lucca. 2014. Design
+      pattern detection using a DSL-driven graph matching approach. Journal of
+      Software: Evolution and Process 26, 12 (2014), 1233–1266. https://doi.org/
+      10.1002/smr.1674
+      
+      This describes graphs for design patterns
+    artefacts:
+      - name: Design Pattern Specifications
+        details: n/a
+    vertex-type:
+      - name: |-
+          Nodes from meta-model.
+          
+          Graphs are centered around pivotal nodes (classes, interfaces, methods);
+          other types of nodes are thus ignored.
+        details: n/a
+    edge-type:
+      - name: Edges from meta-model
+        details: n/a
+    vertex-features: n/a (unclear how node embeddings are initialised)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Exact model not specified, but some encoder/decoder setup
+tasks:
+  design-pattern-mining:
+    training-objective: Embed graphs such that subgraphs are embedded to the lower-left of their parents
+    training-granularity: Subgraph matching
+    working-objective: Embed graphs such that subgraphs are embedded to the lower-left of their parents
+    working-granularity: Subgraph matching
+    application: Design pattern mining
+    supervision: supervised
+combinations:
+  - graph: code-meta-model + pattern-meta-model
+    model: model
+    task: design-pattern-mining
+    comments:
+comments: # list

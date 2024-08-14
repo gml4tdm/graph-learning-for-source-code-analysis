@@ -1,0 +1,39 @@
+paper-id: sb-010
+pdf-id: sb-015
+graphs:
+  api-dependency-graph:
+    name: API Dependency Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type: API
+    edge-type: Denotes that some output(s) of method A match (type-wise) some input(s) of method B
+    vertex-features: one-hot encoded
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      code snippet is used as feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - Code snippet tokens processed using embedding layer w/ LSTM
+      - Nodes in graphs encoded using LSTM, where the input of the LSTM is the collection of 1- and 2-hop neighbours of a given node
+      - By default, only tokens from the query are used, except for tokens representing APIs; then corresponding node embedding is used by decoder
+      - Decoding through LSTM w/ attention and softmax output
+tasks:
+  code-generation:
+    training-objective: Given a text description, generate a code snippet
+    training-granularity: sequence to sequence
+    working-objective: Given a text description, generate a code snippet
+    working-granularity: sequence to sequence
+    application: Code generation
+    supervision: supervised
+combinations:
+  - graph: api-dependency-graph
+    model: model
+    task: code-generation
+    comments:
+comments: # list

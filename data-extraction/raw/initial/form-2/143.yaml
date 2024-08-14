@@ -1,0 +1,77 @@
+paper-id: 143
+pdf-id: 190
+graphs:
+  augmented-ast:
+    name: Augmented AST
+    description: n/a
+    artefacts:
+      - name: Source Code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: Undirected
+      - name: Next Token Edge (NCS)
+        details: Undirected
+      - name: Computed From
+        details: Undirected
+      - name: Last Read
+        details: Undirected; connect use of variable to all possible moments of last read
+      - name: Last Write
+        details: Undirected; connect use of variable to all possible moments of last write
+      - name: Returns To
+        details: Undirected; Node in return statement points to the return type declaration in a method
+      - name: Last Scope Use
+        details: Undirected; point variable to previous use in the scope
+      - name: Last Field Lex
+        details: Undirected; Connect field access to the last of use said field
+      - name: Field
+        details: Undirected; point field access to the point the field was declared
+    vertex-features: |-
+      node type is one-hot encoded
+    edge-features: |-
+      edge type is one-hot encoded
+    connectivity-features: Not specified
+    graph-features:  |-
+      Global graph state is one-hot encoded (unclear what is)
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Uses the basic concept of a "Graph Network Block",
+        which takes as input node embeddings V, edge embeddings E, and global vector u,
+        and updates these to obtain V', E', and u' according to:
+          1) For each e_k \in E: e'_k = \phi^e(e_k, v_{source}, v_{target}, u)
+          2) For each v_k \in V: v'_k = \phi^v(\rho^{e \rightarrow v}(E'_k), v_k, u)
+              Where E'_k is the set of incoming edges of v_k
+          3) V' = {v'_1, ..., v'_n}
+          4) E' = {e'_1, ..., e'_m}
+          5) u' = \phi^u(\rho^{e \rightarrow u}(E'), \rho^{v \rightarrow u}(V'), u)
+        
+        The paper does not further specify the six function \phi^x, \rho^x. 
+        
+        Encoder-decoder setup:
+        
+        V'_0, E'_0, u'_0 = f_{enc}(V_0, E_0, u_0)
+        
+        Next, 10 recurrent units which operate according to:
+          V_t, E_t, u_t = f_{dec}(V'_{t-1}, E'_{t-1}, u'_{t-1})
+          V'_{t + 1},  E'_{t + 1}, u'_{t + 1} = f_{core}([V'_0, V'_t], [E'_0, E'_t], [u'_0, u'_t])
+tasks:
+  embedding:
+    training-objective: Minimise reconstruction loss
+    training-granularity: Graph Embedding
+    working-objective: Embed graphs into latent space
+    working-granularity: Graph Embedding
+    application: Graph Embedding (goal -- cluster latent representations to classify programs in unsupervised manner)
+    supervision: unsupervised
+combinations:
+  - graph: augmented-ast
+    model: model
+    task: embedding
+    comments:
+comments: # list

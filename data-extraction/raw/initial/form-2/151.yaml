@@ -1,0 +1,90 @@
+paper-id: 151
+pdf-id: 200
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      The string represented by each node is embedded using word embeddings,
+      to obtain a matrix per node.
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+  cfg:
+    name: CFG
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Basic Block
+        details: n/a
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: |-
+      The instructions in basic clock are one-hot encoded
+      to obtain a matrix per node.
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+  adg:
+    name: ADG (API Dependency Graph)
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: API Node
+        details: n/a
+    edge-type:
+      - name: Dependency Edge
+        details: n/a
+    vertex-features: Not specified
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Every graph is input in a network of the following type:
+          GCN w/ ReLU 
+          GCN w/ Softmax
+        
+        CFG and ADG nodes are matched to the AST nodes. Keep only 
+        matches nodes. 
+        
+        The embeddings of all matches node are concatenated,
+        and max pooling is applied.
+tasks:
+  source-code-classification:
+    training-objective: Given a sample, classify it as the correct class
+    training-granularity: Graph Multi-class classification
+    working-objective: Given a sample, classify it as the correct class
+    working-granularity: Graph Multi-class classification
+    application: Program Classification
+    supervision: Supervised
+combinations:
+  - graph: ast + cfg + adg
+    model: model
+    task: source-code-classification
+    comments: |-
+      The source code classification task is an example application. 
+      The graph is used as a general framework useful for different tasks.
+comments:
+  - Unclear if the max-pooling is applied over all nodes, or per node.
+  - If the max-pooling is applied per node, then it is unclear how the global pooling for the classification task was done

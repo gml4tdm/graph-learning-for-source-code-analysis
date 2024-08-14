@@ -1,0 +1,70 @@
+paper-id: 62
+pdf-id: 89
+graphs:
+  interation-graph:
+    name: n/a
+    description: Bipartite graph relating users and repositories (temporal graph)
+    artefacts:
+      - name: Users
+        details: from github
+      - name: Repositories
+        details: from github
+    vertex-type:
+      - name: User
+        details: n/a
+      - name: Repository
+        details: n/a
+    edge-type:
+      - name: Vulnerability
+        details: |-
+          Denotes the introduction of a vulnerability in a repository by a user
+          
+          Every interaction is annotated with a time (normalised to [0, 1]) at 
+          which the interaction occurred.
+    vertex-features: |-
+      Note: all features are time dependent! i.e. they change over time 
+      
+      For users;
+        - Number of repositories owned
+        - Number of repositories starred
+        - Number of comments made by a user
+        - Number of public repositories starred by a user
+        - Number of vulnerabilities introduced _before this interaction_
+        - Cumulative severity score of introduced vulnerabilities 
+
+      For repositories;
+        - Primary language used in the repository
+        - Boolean indicating whether the repository has been forked 
+        - Number of open issues 
+        - Number of stars 
+        - Number of people watching 
+        - Number of forks 
+        - Number of pull requests 
+        - Size of the repository 
+        - Cumulative amount of vulnerability introduced _before this interaction_
+        - Cumulative severity score of introduced vulnerabilities
+
+    edge-features: Severity score, time t
+    connectivity-features: Adjacency matrix (time dependent)
+    graph-features: n/a
+    other-features: n/a
+models:
+  network:
+    type:
+      name: SeCoPe
+      architecture: |-
+        Variant of CoPe, with \alpha set to the eigenvector centrality of the matrix A_k
+tasks:
+  vulnerability-prevention:
+    training-objective: Predict future vulnerabilities introduced by users
+    training-granularity: Link Prediction
+    working-objective: Predict future vulnerabilities introduced by users
+    working-granularity: Link Prediction
+    application: Predict Vulnerabilities Introduced by Specific Users (and identify high-risk contributors)
+    supervision: Supervised
+combinations:
+  - graph: interaction-graph
+    model: network
+    task: vulnerability-prevention
+    comments:
+comments: # list

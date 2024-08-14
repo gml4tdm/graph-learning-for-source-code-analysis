@@ -1,0 +1,84 @@
+paper-id: 82
+pdf-id: 114
+graphs:
+  modified-code-property-graph:
+    name: n/a
+    description: Code Property Graph with an additional edge type
+    artefacts:
+      - name: Source code
+        details: dangerous function calls are identified and program slicing is performed based on their parameters.
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+      - name: CAD (Control And Data) Edge
+        details: When in the PDG, there would be both control and data dependency edges between two nodes.
+    vertex-features: Node content is encoded using word2vec
+    edge-features: Edge type is encoded using an ordinal encoding
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Static taint analysis (path of input data) of source code;
+      statements encountered are put in sequence and embedded using word2vec.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Two input paths:
+        1)
+          (operating on taint analysis input)
+          
+          Bidirectional LSTM 
+          Attention Layer
+          Dropout Layer 
+          FNN Layer 
+          Normalisation Layer 
+          Dropout Layer
+          FNN Layer 
+          Attention Layer 
+        
+        2)
+          GGNN Layer 
+          Normalisation Layer
+          Attention Layer
+          Dropout Layer 
+          GGNN Layer 
+          Mean pooling of all node embeddings
+        
+        Outputs are concatenated 
+      
+        These high level features are passed to XGBoost
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable/not vulnerable
+    training-granularity: Binary Classification (not of graphs)
+    working-objective: Classify sample as vulnerable/not vulnerable
+    working-granularity: Binary Classification (not of graphs)
+    application: Vulnerability Detection
+    supervision: Supervised
+  vulnerability-classification:
+    training-objective: Classify sample in a vulnerability category or as not vulnerable
+    training-granularity: Multi-class Classification (not of graphs)
+    working-objective: Classify sample in a vulnerability category or as not vulnerable
+    working-granularity: Multi-class Classification (not of graphs)
+    application: Vulnerability Detection and classification
+    supervision: Supervised
+combinations:
+  - graph: modified-code-property-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+  - graph: modified-code-property-graph
+    model: model
+    task: vulnerability-classification
+    comments:
+comments: # list

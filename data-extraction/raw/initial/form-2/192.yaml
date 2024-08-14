@@ -1,0 +1,77 @@
+paper-id: 192
+pdf-id: 255
+graphs:
+  apdg:
+    name: APDG (Advanced PDG)
+    description: n/a
+    artefacts:
+      - name: Source Code
+        details:
+    vertex-type:
+      - name: Method Declaration
+        details:
+      - name: Parameter
+        details:
+      - name: Unary Expression
+        details:
+      - name: Variable Declaration Expression
+        details:
+      - name: Method Call Expression
+        details:
+      - name: Assign Expression
+        details:
+      - name: Construction Declaration
+        details:
+      - name: Try Statement
+        details:
+      - name: Class Or Interface Declaration
+        details:
+      - name: Condition
+        details:
+      - name: Return Statement
+        details:
+      - name: Assert Statement
+        details:
+    edge-type:
+      - name: Data Dependence Edge
+        details:
+      - name: Control Dependence -- Child
+        details: Essentially an AST Edge
+      - name: Control Dependence -- Next Statement
+        details:
+      - name: Control Dependence -- Judge
+        details: True/False branches of if; back to condition for loop; denote conditional flow control
+    vertex-features: Graph Node is a set of (unordered) tokens (obtained from camel case for every node)
+    edge-features:  n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: Summary (Training) or query (working) is also used as feature
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Summary Encoder
+          i) Embedding Layer
+          ii) Tokens (per node) encoded using a bidirectional LSTM,
+              where hidden states for time t are added,
+              and the final embedding is obtained through max pooling
+        2) Graph Encoder
+          i) Embedding Layer
+          ii) Tokens (per node) encoded using an MLP followed by max pooling
+          iii) GGNN w/ attention mechanism for edge _types_
+        3) Cosine similarity
+tasks:
+  code-search:
+    training-objective: Maximise similarity of related (summary, code) pairs; minimise similarity of unrelated (summary, code) pairs
+    training-granularity: Graph Regression (?)
+    working-objective: Output similarity scores of (query, code) pairs
+    working-granularity: Graph Regression (?)
+    application: Code Search
+    supervision: Supervised
+combinations:
+  - graph: apdg
+    model: model
+    task: code-search
+    comments:
+comments: # list

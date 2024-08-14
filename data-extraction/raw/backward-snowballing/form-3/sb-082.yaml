@@ -1,0 +1,67 @@
+paper-id: sb-082
+pdf-id: sb-115
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: commit / diff + full files (old / new versions)
+    vertex-type: ast
+    edge-type: ast
+    vertex-features:
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      methods from diff are extracted. AST is computed for old and new versions.
+      terminal to terminal paths in the ASTs are computed. Paths present 
+      in both old and new version are discarded. 
+      For the terminal nodes, tokens are features. 
+      The path itself (sequence of types, interlaced with up/down directions) are also features (i.e. a full path is a single feature)
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - Re-uses the pre-trained code2vec model and applies transfer learning. Rest of bullet points give the code2vec details.
+      - embedding layers for tokens and paths
+      - concat start token, path, and end token embeddings
+      - fnn
+      - attention-weighted sum of path vectors
+      - (if necessary, softmax for prediction)
+tasks:
+  security-commit-detection:
+    training-objective: Given a commit (diff), determine whether it makes a security related fix or change
+    training-granularity: n/a
+    working-objective: Given a commit (diff), determine whether it makes a security related fix or change
+    working-granularity: n/a
+    application: Security Patch Detection
+    supervision: Supervised
+  method-name-prediction:
+    training-objective: Given a method, predict its name (from a corpus of possible method names)
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: Model pre-training
+    supervision: Supervised
+  priority-prediction:
+    training-objective: Given a commit, predict the priority of its accompanying issue
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: Model pre-training
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: method-name-prediction + security-commit-detection
+    comments:
+  - graph: ast
+    model: model
+    task: priority-prediction + security-commit-detection
+    comments:
+  - graph: ast
+    model: model
+    task: security-commit-detection
+    comments:
+comments: # list

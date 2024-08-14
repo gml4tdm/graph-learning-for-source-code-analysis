@@ -1,0 +1,37 @@
+paper-id: 237
+pdf-id: 332
+graphs:
+  change-impact-graph:
+    name: Change Impact Graph
+    description: create full graphs (according to vertex/edge types) of old and new code; slice based on changed lines; two input graphs/commit
+    artefacts:
+      - name: source code
+        details: diff
+    vertex-type: variables/statements/method/classes/package (entities at different levels)
+    edge-type: data dependence/control dependence/program relations (package member, overwrite, implement, inherit, initialize, data member, param in, param out, etc)
+    vertex-features: node2vec + one hot node type
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: syntax change type (extracted using ChangeDistiller) is also given as input (encoding unclear)
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - gcn
+      - SortPooling for readout
+      - fusion of graph and syntax change features
+tasks:
+  commit-classification:
+    training-objective: classify graph (commit) into one of multiple categories
+    training-granularity: graph classification
+    working-objective: classify graph (commit) into one of multiple categories
+    working-granularity: graph classification
+    application: Commit classification (refine ChangeDistiller output)
+    supervision: supervised
+combinations:
+  - graph: change-impact-graph
+    model: model
+    task: commit-classification
+    comments:
+comments: # list

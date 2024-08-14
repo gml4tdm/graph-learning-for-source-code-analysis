@@ -1,0 +1,42 @@
+paper-id: 168
+pdf-id: 221
+graphs:
+  fcg:
+    name: Function Call Graph
+    description:
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Function
+        details: n/a
+    edge-type:
+      - name: Call Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: Edge weights calculated using Ricci curvature
+    connectivity-features: Not  specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  embedding:
+    type:
+      name: n/a
+      architecture: |-
+        Riemannian stochastic gradient descent to 
+        compute embedding vectors based on a hyperbolic loss function.
+tasks:
+  embedding:
+    training-objective: Minimise loss function
+    training-granularity: Node embedding
+    working-objective: n/a
+    working-granularity: n/a
+    application: Embedding of nodes in hyperbolic space
+    supervision: Unsupervised
+combinations:
+  - graph: fcg
+    model: embedding
+    task: embedding
+    comments:
+comments: # list
+  - Technique can be used on downstream tasks, such as clustering or link prediction using e.g. logistic regression

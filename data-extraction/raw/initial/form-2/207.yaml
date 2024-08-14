@@ -1,0 +1,57 @@
+paper-id: 207
+pdf-id: 277
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: Slicing is applied based on vulnerable functions and vulnerable data
+    artefacts:
+      - name: Source code
+        details: smart contracts
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features: Tokens encoded using word2vec
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: |-
+      9 handcrafted expert features are used
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two parallel inputs
+          i) Handcrafted features 
+            - Convolution
+            - Max Pooling -> P_r 
+          ii) Graph 
+            - GGNN (not edge-type specific)
+            - Hierarchical self-attention graph pooling layer -> H_{top-k}
+            - Compute H_global = \sum_{i \in V} Softmax(MLP(h_i^T)) * h_i
+            - S_r = H_{top-k} + H_global
+        2) X_r = [P_r; S_r]
+        3) FNN w/ Sigmoid on X_r
+tasks:
+  vulnerability-detection:
+    training-objective: Given a graph, classify it as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Given a graph, classify it as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection in Smart Contracts
+    supervision: Supervised
+combinations:
+  - graph: code-property-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

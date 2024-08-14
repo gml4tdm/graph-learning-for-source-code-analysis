@@ -1,0 +1,182 @@
+paper-id: 1
+pdf-id: 3
+graphs:
+  dataflow-1: &graph-base
+    name: n/a
+    description: AST with added control and data flow edges
+    artefacts:
+      - name: Source code (methods)
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: |-
+          Edges between different uses of the same variable.
+          
+          Type 1: Starting from the declaration, each usage of the 
+          variable points to the next usage.
+      - name: Control Flow Edge
+        details: |-
+          Edges between Statement node. 
+          Every statement node points to all statements node which can 
+          immediately follow it in execution. 
+          Example: fallible operations pointing to the next statement,
+          but also the encapsulating catch block.
+    vertex-features: |-
+      Node type is one-hot encoded.
+      
+      The source code snippets corresponding to every node 
+      (including comments) is represented as a sequence of 
+      tokens, where every token is encoded using CodeBERT.
+      
+      The average vector of all encoded tokens is computed,
+      and concatenated to the one-hot encoded node type.
+    edge-features: n/a
+    connectivity-features: Adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+  dataflow-2:
+    <<: *graph-base
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: |-
+          Edges between different uses of the same variable.
+
+          Type 2: The declaration of a variable points to every usage of that variable.
+      - name: Control Flow Edge
+        details: |-
+          Edges between Statement node. 
+          Every statement node points to all statements node which can 
+          immediately follow it in execution. 
+          Example: fallible operations pointing to the next statement,
+          but also the encapsulating catch block.
+  dataflow-3:
+    <<: *graph-base
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: |-
+          Edges between different uses of the same variable.
+
+          Type 3: The declaration of a variable points to every usage of that variable.
+          Additionally, starting from the declaration, each usage of the 
+          variable points to the next usage. (combined type 1 and type 2)
+      - name: Control Flow Edge
+        details: |-
+          Edges between Statement node. 
+          Every statement node points to all statements node which can 
+          immediately follow it in execution. 
+          Example: fallible operations pointing to the next statement,
+          but also the encapsulating catch block.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        GCN Layer [Kipf] (size 128)
+        DMoNPooling Layer (# clusters: 150)
+        k-GNN Layer (w/ ReLU)
+        DMoNPooling Layer (# clusters: 150)
+        k-GNN Layer (w/ ReLU)
+        DMoNPooling Layer (# clusters: 150)
+        k-GNN Layer (w/ ReLU)
+        Multi Layer Perceptron w/ Log-softmax output (1 hidden layer of size 64; 3 layers total)
+tasks:
+  readability-prediction:
+    training-objective: Classify graph (method) as Readable/Neutral/Unreadable
+    training-granularity: Graph Classification
+    working-objective: Classify graph (method) as Readable/Neutral/Unreadable
+    working-granularity: Graph Classification
+    application: Code Readability Classification
+    supervision: Supervised
+training:
+  experiment:
+    train-test-split: n/a
+    cross-validation:
+      used: yes
+      details: |-
+        5-fold cross validation.
+          
+        3 folds for training, 1 for validation, 1 for testing.
+    hyper-parameters:
+      - name: batch size
+        value: 15
+      - name: learning rate
+        value: 0.0001
+      - name: epochs
+        value: 200
+    hyper-parameter-selection: search
+    search-tuned-hyper-parameters:
+      - number of clusters in pooling layers
+      - number of gcn layers
+      - number of pooling/k-gnn layer pairs
+      - gcn layer size
+      - perceptron layer size
+      - batch size
+      - learning rate
+    evaluation-details: |-
+      During cross validation, train for 200 epochs each time 
+      and record best result on test set.
+        
+      After cross validation, take average of the five results 
+      for final performance score.
+    evaluation-methods:
+      - name: precision
+        type: metric
+        details: n/a
+      - name: recall
+        type: metric
+        details: n/a
+      - name: f1-score
+        type: metric
+        details: n/a
+      - name: MCC
+        type: metric
+        details: Matthews Correlation Coefficient
+      - name: AUC
+        type: metric
+        details: Area Under Curve (ROC)
+datasets:
+  scalabrino:
+    name: n/a
+    description: |-
+      Existing dataset curated by other researchers,
+      consisting of Java methods with valid syntax,
+      where each method is 10 to 50 lines long.
+      Every method is annotated with the readability of the method.
+    source:
+      - jUnit
+      - Hibernate
+      - jFreeChart
+      - ArgoUML
+    labelling: Manually annotated
+    size: 200
+    is-pre-existing: yes
+combinations:
+  - graph: dataflow-1
+    model: model
+    task: readability-prediction
+    training: experiment
+    dataset: scalabrino
+    comments: n/a
+  - graph: dataflow-2
+    model: model
+    task: readability-prediction
+    training: experiment
+    dataset: scalabrino
+    comments: n/a
+  - graph: dataflow-3
+    model: model
+    task: readability-prediction
+    training: experiment
+    dataset: scalabrino
+    comments: n/a
+comments:
+  - Inconsistent in reporting the number of pooling/k-gnn pairs (some parts say 2, others 3)

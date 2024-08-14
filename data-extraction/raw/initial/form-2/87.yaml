@@ -1,0 +1,57 @@
+paper-id: 87
+pdf-id: 120
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      A network with a learnable embedding layer and 5 FNN layers is used
+      to learn node embeddings. 
+      Given the parent node type and the top-4 immediate child node types,
+      predict the node type itself.
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  gcn:
+    type:
+      name: n/a
+      architecture: |-
+        GCN Layer (3x)
+        Pooling Layer (concatenation of max and average pooling)
+        FNN Layer (2x)
+  graphsage:
+    type:
+      name: n/a
+      architecture: |-
+        GraphSAGE Layer (3x)
+        Pooling Layer (concatenation of max and average pooling)
+        FNN Layer (2x)
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable/not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample as vulnerable/not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: ast
+    model: graphsage
+    task: vulnerability-detection
+    comments:
+comments: # list

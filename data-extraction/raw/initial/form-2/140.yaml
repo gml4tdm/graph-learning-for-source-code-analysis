@@ -1,0 +1,113 @@
+paper-id: 140
+pdf-id: 185
+graphs:
+  code-change-genealogy:
+    name: Code Change Genealogy
+    description: |-
+      Graph representing the dependencies between code changes. 
+      Roughly speaking, a code change is related to the previously 
+      most recent related code change, for some definition 
+      of relatedness. For instance, when a call to a method is added,
+      the change may be related to the last change modifying 
+      (the signature of) said method.
+    artefacts:
+      - name: Source Code Changes
+        details: n/a
+    vertex-type:
+      - name: Code Change
+        details: n/a
+    edge-type:
+      - name: Change Dependency Edge
+        details: According to the rules of Herzig et al.
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Random walks over the graph are used.
+      A random walk produces a sequence of nodes,
+      which can be seen as a sentence. 
+      A collection of random walks thus makes for a corpus of "sentences",
+      similar to what word2vec was trained on.
+      
+      For the semantic-model task, the changed tokens (as a sequence)
+      per change are also included as features.
+models:
+  cbow:
+    type:
+      name: Continuous Bag of Words (CBOW)
+      architecture: CBOW
+  c-skipgram:
+    type:
+      name: Skipgram
+      architecture: Continuos Skipgram
+  semantic-model:
+    type:
+      name: n/a
+      architecture:
+        Takes as input the sequence of changes,
+        and the token sequence belonging to the target.
+        1) Predict the context given the target, as in skipgram
+        2) in parallel, train the tokens as in CBOW. 
+            Also jointly train a vector representing the entire change,
+            similar to doc2vec
+        3) Combine the two vector representations.
+  svm:
+    type:
+      name: SVM
+      architecture: SVM (! for downstream task !)
+  logistic-regression:
+    type:
+      name: Logistic Regression
+      architecture: Logistic Regression (! for downstream task !)
+  nn:
+    type:
+      name: n/a
+      architecture: FNN (! for downstream task !)
+tasks:
+  cbow-task:
+    training-objective: Given the context change node, predict the target node (no tokens used)
+    training-granularity: n/a
+    working-objective: Obtain embeddings for nodes
+    working-granularity: n/a
+    application: Node embedding
+    supervision: Unsupervised / Self-supervised
+  skipgram-task:
+    training-objective: Given the target change node, predict the context nodes (no tokens used)
+    training-granularity: n/a
+    working-objective: Obtain embeddings for nodes
+    working-granularity: n/a
+    application: Node embedding
+    supervision: Unsupervised / Self-supervised
+  semantic-model-task:
+    training-objective: Minimise loss function
+    training-granularity: n/a
+    working-objective: Obtain embeddings for nodes
+    working-granularity: n/a
+    application: Node embedding
+    supervision: Unsupervised / Self-supervised
+  defect-prediction:
+    training-objective: Given a node, classify it as defect introducing or not  (! downstream task !)
+    training-granularity: Node Classification
+    working-objective: Given a node, classify it as defect introducing or not (! downstream task !)
+    working-granularity: Node Classification
+    application: Node classification
+    supervision: Supervised
+combinations:
+  - graph: code-change-genealogy
+    model: cbow + nn/svm/logistic-regression(?)
+    task: cbow-task + defect-prediction(?)
+    comments: |-
+      The structural-only variant was tested with all downstream models,
+      but it is unclear whether cbow or skipgram was used
+  - graph: code-change-genealogy
+    model: c-skipgram + nn/svm/logistic-regression
+    task: skipgram-task + defect-prediction(?)
+    comments: |-
+      The structural-only variant was tested with all downstream models,
+      but it is unclear whether cbow or skipgram was used
+  - graph: code-change-genealogy
+    model: semantic-model + nn/svm/logistic-regression
+    task: semantic-model-task + defect-prediction
+    comments: Tested with all downstream models
+comments: # list

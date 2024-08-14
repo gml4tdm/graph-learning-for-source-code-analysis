@@ -1,0 +1,37 @@
+paper-id: 261
+pdf-id: 74
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: serialised using depth first traversal; sequence of node types and tokens, encoded using word2vec
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - bidirectional LSTM
+      - global max pooling
+      - mlp
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: n/a
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: n/a
+    application: Vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

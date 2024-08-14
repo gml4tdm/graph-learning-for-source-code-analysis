@@ -1,0 +1,67 @@
+paper-id: 164
+pdf-id: 215
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: method
+    vertex-type:
+      - name: AST Node
+        details: Tokens are split into subtokens
+    edge-type:
+      - name: Child Edge
+        details: Regular AST Edge
+      - name: Next Token Edge
+        details: NCS
+      - name: Subtoken Edge
+        details: n/a
+      - name: Last Lexical Use Edge
+        details: Connect identifiers to their most recent use
+    vertex-features: Not specified how initial node features are computed
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  keyword-extractor:
+    type:
+      name: n/a
+      architecture: |-
+        1) GGNN (edge-type dependent f for messages)
+        2) Weighted sum of node embeddings. 
+            r_g = \sum_{v \in V} \sigma(W_i[h_v, X_v]) \cdot (W_j h_v)
+            (X_v: initial node features, h_v: node representation from GGNN)
+        3) Output per node: y_v = \sigma(W_e h_v + b_e)
+  decoder:
+    type:
+      name: n/a
+      architecture: |-
+        Bidirectional LSTM network which uses the copy mechanism from transformers.
+tasks:
+  keyword-extraction:
+    training-objective: |-
+      Identify overlapping tokens between method name and method body
+      (classify each node as "overlapping" or "not overlapping")
+    training-granularity: Node Classification
+    working-objective: |-
+      Identify overlapping tokens between method name and method body
+      (classify each node as "overlapping" or "not overlapping")
+    working-granularity: Node Classification
+    application: Keyword Extraction (for user in other classifier)
+    supervision: Supervised
+  method-name-generation:
+    training-objective: Generate a name for the given method
+    training-granularity: Neural Code Translation
+    working-objective: Generate a name for the given method
+    working-granularity: Neural Code Translation
+    application: Method Name Generation
+    supervision: Supervised (Self-supervised)
+combinations:
+  - graph: ast
+    model: keyword-extractor + decoder
+    task: keyword-extraction + method-name-generation
+    comments: Use the keywords extracted to aid the method name generation.
+comments: # list
+  - The r_g in the keyword extractor is never used; I believe that is in line with the source paper they got the method from.

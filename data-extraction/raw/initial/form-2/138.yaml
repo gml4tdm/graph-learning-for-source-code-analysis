@@ -1,0 +1,64 @@
+paper-id: 138
+pdf-id: 181
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      For terminal nodes, content (names) and type 
+      are both split up.
+      
+      For non-terminal nodes, the mode typs is used as a feature (no splitting)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Cross block paths are extracted, 
+      where a cross block path is a path from one 
+      terminal node to another terminal node,
+      where the top node of the path defines a block
+      structure (e.g. if block), and both nodes 
+      are nested under said top node,
+      OR
+      the left and right paths belong to two
+      different parallel block structures 
+      (e.g. two consecutive blocks nested in a block).
+      Certain amount of paths is sampled.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two inputs
+          i) Terminal nodes 
+            Embedding Layer (?)
+              For terminal nodes, content and type of the node are encoded using BiLSTM (separately)
+          ii) Path 
+            The path is encoded using BiLSTM.
+        2) The six outputs (two x name vector, 2x type vector, vectors of left and right path) are concatenated
+        3) FC layer w/ tanh activation
+        4) Attention weighted sum of path vectors 
+        5) Softmax
+tasks:
+  defect-prediction:
+    training-objective: Classify sample as buggy or not buggy
+    training-granularity: Graph Classification
+    working-objective: Classify sample as buggy or not buggy
+    working-granularity: Graph Classification
+    application: Defect prediction
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: defect-prediction
+    comments:
+comments: # list

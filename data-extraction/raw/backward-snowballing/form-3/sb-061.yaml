@@ -1,0 +1,36 @@
+paper-id: sb-061
+pdf-id: sb-087
+graphs:
+  ast:
+    name: AST (binarized)
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: tokens word2vec
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - tree-based LSTM (sums over child nodes)
+      - siamese
+tasks:
+  code-clone-detection:
+    training-objective: Given two code samples, determine if they are clones
+    training-granularity: graph classification (but two graphs)
+    working-objective: Given two code samples, determine if they are clones
+    working-granularity: graph classification (but two graphs)
+    application: Code clone detection
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-clone-detection
+    comments:
+comments: # list

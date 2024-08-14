@@ -1,0 +1,62 @@
+paper-id: 216
+pdf-id: 286
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: smart contract
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      AST is normalised (normalise identifiers), serialized (depth first order), and encoded using word2vec
+  cfg:
+    name: CFG
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: smart contract
+    vertex-type:
+      - name: Basic Block  (statement)
+        details: consecutive operations without jump
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: Encode statements using word2vec
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) AST passed through TextCNN
+        2) CFG passed through GCN
+        3) Pooling after GCN is done but not explicitly specified
+        4) AST and GCN embeddings are concatenated 
+        5) Presumable MLP
+tasks:
+  vulnerability-detection:
+    training-objective: Given a sample, classify it as vulnerable or not vulnerable
+    training-granularity: Graph Classification (but w/ multiple graphs)
+    working-objective: Given a sample, classify it as vulnerable or not vulnerable
+    working-granularity: Graph Classification (but w/ multiple graphs)
+    application: Vulnerability Detection in Smart Contracts
+    supervision: Supervised
+combinations:
+  - graph:
+    model:
+    task:
+    comments:
+comments: # list

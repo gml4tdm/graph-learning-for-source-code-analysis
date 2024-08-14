@@ -1,0 +1,40 @@
+paper-id: sb-124
+pdf-id: sb-175
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast/sub-tokens
+    edge-type: ast/control flow/ncs/sibling/data flow
+    vertex-features: node type (nonterminal), token (terminal); encoding not specified
+    edge-features: edge type (presumably); encoding not specified
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: |-
+      the source code (raw) is used as feature, encoded using CodeBERT 
+      
+      summary thus far is used as feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - GAT (w/ edge embedding)
+      - modified transformer decoder; attention with  text and graph embeddings is computed separately, results are concatenated
+      - copy mechanism
+tasks:
+  code-summarization:
+    training-objective: Given a code snippet, generate its summary
+    training-granularity: n/a
+    working-objective: Given a code snippet, generate its summary
+    working-granularity: n/a
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

@@ -1,0 +1,74 @@
+paper-id: 161
+pdf-id: 211
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      All paths from the root to a terminal node are extracted, where
+        1) the root has a value (content), 2) the leaf has a value (content), 3) the other nodes only have types.
+      
+        Types are one-hot encoded.
+      
+      Previously generated tokens are also given as input.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Encoder/decoder architecture. 
+        
+        Encoder:
+          1) Root value and leaf value are embedded through an embedding layer.
+          2) Positional information is added to path embeddings according to 
+              PE(pos, 2i) = sin(pos/10000^(2i/d)) and PE(pos, 2i+1) = cos(pos/10000^(2i/d))
+          
+              There is PE_{intra}, where the position is the depth in the path,
+              and PE_{inter}, where the position is the path index (left to right).
+          3) Paths are aggregated using attention;
+              i) x' = x + PE_{intra}   (x: path embedding)
+              ii) a_i = softmax((x'^TW_{qi})(x'^TW_{ki})^T / \sqrt{d})(x'^TW_{vi})
+              iii) a = concat(a_1, \hdots, a_h)W_o    (multi-head)
+              iv) The actual aggregation is unspecified, but presumably it is weighted sum
+          4) Compute S = [RF, s_1 + LF_1 + PE_{inter,1}, hdots]
+                where RF is the embedding of the root value, s_i is the embedding 
+                of path i (from step 3), LF_i is the embedding of the leaf value.
+          5) Z = f(S), where f is the same attention mechanism as in step 3.
+        
+        Decoder:
+          1) Z passed through multi-head attention to generate K and V matrices 
+          2) Previously generated tokens put through multi-head attention to generate Q matrix.
+          3) Compute context vector c_t using Q, K, V matrices 
+          4) Linear Layer 
+          5) Softmax
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph to Sequence
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

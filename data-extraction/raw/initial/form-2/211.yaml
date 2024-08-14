@@ -1,0 +1,103 @@
+paper-id: 211
+pdf-id: 281
+graphs:
+  graph:
+    name: n/a
+    description: |-
+      Graph representing program elements in a smart contract. 
+      It is not entirely clear what constitutes a program element.
+      It seems to be variables and function invocations, based on the 
+      proposed node features.
+    artefacts:
+      - name: Source code
+        details: smart contract
+    vertex-type:
+      - name: Core Node
+        details: Critical for vulnerability detection (e.g. money transfer, call.value)
+      - name: Normal Node
+        details: Nodes that are not marked as core
+      - name: Fallback Node
+        details: Simulates fallback function of a contract
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+      - name: Fallback Edge
+        details: n/a
+    vertex-features: |-
+      Depend on node type:
+        1) Function Invocation Nodes
+            i) Function Identifier
+            ii) Caller Address
+            iii) Node Type
+            iv) Flag indicating whether the function has limited access (e.g. must be owner)
+      
+        2) Variable/fallback nodes
+            i) Identifier
+            ii) Node Type
+      
+        Next, feedback and normal nodes are removed. 
+        Their features are "assigned" to the nearest core
+        node (to multiple in case of multiple closest core nodes).
+        The removed edges become self-loops on the core nodes. 
+      
+        As a result, only core vertices remain, and they have 
+        three sets of features:
+        1) Self-features (their original ones)
+        2) In-features: all features from normal nodes that
+            were pointing toward the core node
+        3) Out-features: all features from normal nodes that
+            were pointed away from the core node
+      
+        It is unclear how exactly the features are _encoded_
+    edge-features: Order (sequential order in the function), edge type
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Various hand-crafted/expert features are used (0/1 values indicating existence of certain patterns)
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two parallel inputs
+          i) Expert features 
+            - FNN
+            - Convolution 
+            - Max Pooling
+          ii) Graph structure
+            - Temporal Message Passing
+              Initial node embedding: h_i^0 = node features 
+              
+              Each time step, a message is propagated along one edge, in temporal order.
+              at time step k, we have
+        
+              m_k = W_k(h_{sk} || t_k) + b_k  (h_{sh}: state of start node; t_k: edge type)
+              h_{ek}' = \tanh(U m_k + Z h_{ek + b_1)
+              h_{ek}'' = softmax(R h_{ek}' + b_2)
+        
+            - Readout
+              s_i = h_i^T || h_i^0    (concat initial and final features)
+              g_i = softmax(W_{g2}(\tanh(b_{g1} + W_{g1}s_i)) + b_{g2})
+              o_i = softmax(W_{o2}(\tanh(b_{o1} + W_{o1}s_i)) + b_{o2})
+              G_r = FullyConnectedLayer(\sum_i o_i \odot g_i)
+            - Convolution
+            - Max Pooling
+        2) Concatenate Graph and Expert Features extracted in (i) and (ii)
+        3) FNN (x3)
+        4) Sigmoid
+tasks:
+  vulnerability-detection:
+    training-objective: Given a graph, classify it as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Given a graph, classify it as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection in Smart Contracts
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

@@ -1,0 +1,51 @@
+paper-id: 108
+pdf-id:
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features: |-
+      Node type is one-hot encoded 
+      Source code is encoded by summing word2vec vectors of all tokens in the fragment 
+      The two encodings are concatenated
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix (?)
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        GCN followed by SAGPool (T layers)
+        Sum Pooling
+        FNN Layer
+tasks:
+  vulnerability-detection:
+    training-objective: Classify code as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify code as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: code-property-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

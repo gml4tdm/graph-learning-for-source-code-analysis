@@ -1,0 +1,46 @@
+paper-id: 169
+pdf-id: 222
+graphs:
+  graph:
+    name: n/a
+    description: AST with data flow information
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: Data flow between leaf nodes
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: |-
+      Code tokens are one-hot encoded (unclear how  this works)
+models:
+  network:
+    type:
+      name: n/a
+      architecture: |-
+        GCN
+        add GCN w/ token input 
+        Transformer encoder
+        Transformer decoder
+tasks:
+  code-summarization:
+    training-objective: Given a piece of code, generate a summary
+    training-granularity: x-to-sequence
+    working-objective: Given a piece of code, generate a summary
+    working-granularity: x-to-sequence
+    application: code summarization
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: network
+    task: code-summarization
+    comments:
+comments: # list

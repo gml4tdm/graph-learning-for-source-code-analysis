@@ -1,0 +1,38 @@
+paper-id: sb-133
+pdf-id: sb-184
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: method
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: not clearly specified
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - encoder/decoder
+      - Modified version of tree-LSTM which also takes order of children into account ("multi-way Tree LSTM")
+      - attention weighted sum of node embeddings
+      - LSTM decoder
+tasks:
+  code-summarization:
+    training-objective: Given a function, generate its summary
+    training-granularity: n/a
+    working-objective: Given a function, generate its summary
+    working-granularity: n/a
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

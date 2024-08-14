@@ -1,0 +1,42 @@
+paper-id: 41
+pdf-id:
+graphs:
+  api-enhanced-ast:
+    name: API Enhanced AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: |-
+          A new AST node _type_ is added for every API called;
+          i.e. every function call node gains a new child node whose
+          type is equal to the API name
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: Node type is encoded using Word2Vec
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  tree-cnn:
+    type:
+      name: Tree-based convolution
+      architecture: Siamese Tree-based convolution network with MLP output layer
+tasks:
+  code-cloned-detection:
+    training-objective: Given two graphs, determine whether they are semantic clones
+    training-granularity: Pairwise graph classification (?)
+    working-objective: Given two graphs, determine whether they are semantic clones
+    working-granularity: Pairwise graph classification (?)
+    application: Semantic Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: api-enhanced-ast
+    model: tree-cnn
+    task: code-cloned-detection
+    comments:
+comments: # list

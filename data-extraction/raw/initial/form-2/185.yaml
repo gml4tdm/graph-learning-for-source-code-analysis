@@ -1,0 +1,100 @@
+paper-id: 185
+pdf-id: 242
+graphs:
+  sfg:
+    name: Semantic Flow Graph (SFG)
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: Changesets (for bug localisation)
+    vertex-type:
+      - name: Variable Node
+        details: One for every _occurrence_ of a variable in the source code.
+      - name: Control Instruction Node
+        details: For control structures such as if (if would have IfCondition, IfThen, IfElse, IfConverge)
+    edge-type:
+      - name: Data Flow Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Sequential Computation Flow Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: Mask matrix for attention
+    graph-features: n/a
+    other-features: |-
+      1) Comment Input Sequence
+          A (doc) comment associated with the source code, as tokens, beginning with the classification token [CLS]
+      2) Source Code Input Sequence
+          [C] Cleaned source code tokens [SEP]
+      3) Node List 
+          [N] List of nodes 
+      4) Type List 
+          [T] Type information of nodes -- out of list of 55 possible types 
+      5) Role List 
+        [R] Role information of nodes -- out of list of 43 possible roles [SEP]
+      
+      For bug localisation, the bug report is also given as feature
+models:
+  semantic-code-bert:
+    type:
+      name: n/a
+      architecture: |-
+        Transformer encoder w/ Graph-guided masked attention (as in GraphCodeBERT)
+  fault-localization-model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Bug report encoded using BERT -> q_feature 
+        2) Code sample encoded using SemanticCodeBERT (semantic-code-bert model) -> c_feature
+        3) Apply MLP:
+          q_model = MLP(q_feature)  (where MLP has batch normalisation)
+          c_model = MLP(c_feature)  (where MLP has batch normalisation)
+tasks:
+  masked-language-modelling:
+    training-objective: Given an input with masked source code tokens, predict the tokens in the masked spots
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: Model pre-training
+    supervision: Self-supervised / Unsupervised
+  node-alignment:
+    training-objective: Given an input with masked edges, predict the masked edges
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: Model pre-training
+    supervision: Self-supervised / Unsupervised
+  type-prediction:
+    training-objective: Given an input with masked node type information, predict the links between nodes and their types
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: Model pre-training
+    supervision: Self-supervised / Unsupervised
+  role-prediction:
+    training-objective: Given an input with masked node role information, predict the links between nodes and their roles
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: Model pre-training
+    supervision: Self-supervised / Unsupervised
+  fault-localisation:
+    training-objective: |-
+      Given an input bug report and changeset, compute feature vectors such that
+        1) For positive (report, changeset pairs) (i.e. changeset introduced the bug),
+            the cosine similarity between q_model and c_model is maximised 
+        2) For negative (report, changeset pairs) (i.e. changeset did not introduce the bug),
+            the cosine similarity between q_model and c_model is minimised
+    training-granularity: n/a
+    working-objective: Encode bug reports and changesets for similarity comparison
+    working-granularity: n/a
+    application: Fault Localisation
+    supervision: Supervised
+combinations:
+  - graph: sfg
+    model: semantic-code-bert + fault-localization-model
+    task: masked-language-modelling + node-alignment + type-prediction + role-prediction + fault-localisation
+    comments: The four pre-training tasks are used to pre-train the model, which is then used for fault localisation.
+comments: # list

@@ -1,0 +1,63 @@
+paper-id: 175
+pdf-id: 228
+graphs:
+  graph:
+    name: n/a
+    description: Mix of AST, CFG, DFG, NCS
+    artefacts:
+      - name: Source code
+        details: functions
+    vertex-type:
+      - name: AST Node
+        details: Certain node types are merged. Nodes representing the same variables are merged.
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+      - name: NCS Edge
+        details: n/a
+    vertex-features: |-
+      Source code in node tokenised and 
+      encoded using word2vec. 
+      Final vector is average of token embeddings.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Edge-Aware GCN
+            i) Every edge type b has, in every layer, a weight matrix W_b = a_b V
+                Where a is a learnable vector and V is a linear transformation.
+            ii) Message passing:
+                h_i^(l+1) = \sigma(\sum_b \sum_{j \in N_b(i)} \frac{1}{c_{i,b}} W_b^{\ell}h^{\ell}_{j} + W_0^{\ell}h^{\ell}_{i})
+            iii) Attention for each edge:
+                w^{k,\ell}_{i,j} = softmax_j \frac{h_i^{k,\ell} \cdot h_j{k,\ell}}{\sqrt{d_k}}
+            iv) Aggregation:
+                A_i^{\ell} = concat_{k = 1}^P (\sum_{j \in N(i)} w^{k,\ell}_{i,j} h_j^{k,\ell})W_h^{\ell} + h_i^{\ell - 1}
+                h_i^{\ell} = W_2^{\ell}\sigma(W_1^{\ell}A_i^{\ell}) + A_i^{\ell}
+                (Note: latter is FNN w/ residual connection)
+        2) Aggregate node embeddings into matrix 
+        3) Pass matrix through to parallel CNN layers, 1 with small kernel other with large (capture long range node dependencies);
+            pass result of each through batch normalisation, and add them together
+        4) FNN (2 layer) w/ softmax
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

@@ -1,0 +1,41 @@
+paper-id: sb-128
+pdf-id: sb-179
+graphs:
+  ast:
+    name: ast
+    description: n/
+    artefacts:
+      - name: source code
+        details: methods
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: type and value of nodes, encoded using BERT
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: source code tokens used as feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - encoder/decoder
+      - GCN w/ residual connections, where each GCN uses a higher power of the adjacency matrix (A, A^2, etc)
+      - weighted sum of GCN outputs
+      - node embedding matrix enriched with positional encoding, inputted into transformer encoder, get AST features
+      - code tokens into transformer encoder
+      - 1DConv over ast and code features; combine using attention; add to the original outputs from the GCN module
+      - transformer decoder; 1st attention blocks uses code features, the next one the summed features
+tasks:
+  code-summarization:
+    training-objective: Given a function, generate its summary
+    training-granularity: n/a
+    working-objective: Given a function, generate its summary
+    working-granularity: n/a
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

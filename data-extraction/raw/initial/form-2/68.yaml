@@ -1,0 +1,49 @@
+paper-id: 68
+pdf-id: 95
+graphs:
+  aast:
+    name: \alpha AST (Annotated AST)
+    description: AST representing a commit, i.e. a change from old to new code.
+    artefacts:
+      - name: Source code (commit)
+        details:
+    vertex-type:
+      - name: AST Node
+        details: |-
+          Nodes from both the AST of the old and the new code are present.
+          
+          Nodes are annotated with "unchanged", "added", or "deleted"
+    edge-type:
+      - name: AST Edge
+        details: Edges are annotated with "unchanged", "added", or "deleted"
+    vertex-features: |-
+      Node content embedded using word2vec.
+      Change action (unchanged/added/deleted) is one hot encoded 
+      
+      content and action embeddings are concatenated.
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  network:
+    type:
+      name: n/a
+      architecture: |-
+        GAT Layers 
+        Pool by computing average of all node representations 
+        MLP
+tasks:
+  fix-detection:
+    training-objective: Classify given commit as vulnerability fixing or non-fixing
+    training-granularity: Graph Classification
+    working-objective: Classify given commit as vulnerability fixing or non-fixing
+    working-granularity: Graph Classification
+    application: Identifying commit which fix vulnerabilities
+    supervision: Supervised
+combinations:
+  - graph: aast
+    model: network
+    task: fix-detection
+    comments:
+comments: # list

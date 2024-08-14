@@ -1,0 +1,45 @@
+paper-id: sb-130
+pdf-id: sb-181
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: method
+    vertex-type: |-
+      all identifiers (incl. node types) are split into subtokens.
+      For lexical nodes, both the type and token(s) are put in a sequence;
+      for syntax nodes only the type
+    edge-type: ast
+    vertex-features:
+    edge-features:
+    connectivity-features:
+    graph-features:
+    other-features: |-
+      code (w/ identifiers split into sub-tokens) is used as feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - Node features computed using CNN
+      - code tokens encoded using bidirectional LSTM (concat states)
+      - Tree-LSTM, followed by self-attention per node
+      - attention-weighted sums of code token embeddings and ast node embeddings
+      - pass previous output through FNN to compute p
+      - Merge c_t = tanh(p * c_{ast} + (1 - p) * c_{code})
+      - softmax(linear(c_t))
+tasks:
+  code-summarization:
+    training-objective: Given a function, generate its summary
+    training-granularity: n/a
+    working-objective: Given a function, generate its summary
+    working-granularity: n/a
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

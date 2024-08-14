@@ -1,0 +1,94 @@
+paper-id: sb-069
+pdf-id: sb-098
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: node embeddings are learned by appying continuous skip-gram to the AST structure
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+  dependency-tree:
+    name: dependency tree
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/def-use relations
+    vertex-features: node type
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+  dependency-graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/data flow (different types, e.g. lastUse)
+    vertex-features: node type
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  tbcnn:
+    name: TBCNN
+    architecture-attributes:
+      - TBCNN
+      - Two _separate_ input paths for clone detection
+  ggnn:
+    name: n/a
+    architecture-attributes:
+      - GGNN
+      - Two _separate_ input paths for clone detection
+tasks:
+  program-classification:
+    training-objective: Classify a program in one of multiple classes based on its behaviour
+    training-granularity: graph classification
+    working-objective: Classify a program in one of multiple classes based on its behaviour
+    working-granularity: graph classification
+    application: Program classification
+    supervision: supervised
+  code-clone-detection:
+    training-objective: Given two code samples (in different languages), determine if they are clones
+    training-granularity: graph classification (but two graphs)
+    working-objective: Given two code samples (in different languages), determine if they are clones
+    working-granularity: graph classification (but two graphs)
+    application: Program classification (not sure why the paper does not call it clone detection)
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: tbcnn
+    task: program-classification
+    comments:
+  - graph: ast
+    model: tbcnn
+    task: code-clone-detection
+    comments:
+  - graph: dependency-tree
+    model: tbcnn
+    task: program-classification
+    comments:
+  - graph: dependency-tree
+    model: tbcnn
+    task: code-clone-detection
+    comments:
+  - graph: dependency-graph
+    model: ggnn
+    task: program-classification
+    comments:
+  - graph: dependency-graph
+    model: ggnn
+    task: code-clone-detection
+    comments:
+comments: # list

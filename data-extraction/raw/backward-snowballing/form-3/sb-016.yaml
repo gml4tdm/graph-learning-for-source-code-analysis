@@ -1,0 +1,98 @@
+paper-id: sb-016
+pdf-id: sb-023
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      extract arbitrary paths (no specific end node types) from AST,
+      with filtering based on path length and width (i.e. max distance between sibling nodes used in the same path)
+models:
+  model-1:
+    name: n/a
+    architecture-attributes:
+      - Central model is a conditional random field P(y | x) = 1 / Z(x) \exp(w^T f(y, x)), where f is some scoring function
+      - w is learned using structured support vector machine on training set
+      - inference of unknown properties using MAP (Maximum a Posteriori)
+  model-2:
+    name: n/a
+    architecture-attributes:
+      - skipgram but different; not a fixed window size, but neighbours based on related nodes (e.g. a path for a node forms the context)
+tasks:
+  variable-name-prediction-1:
+    training-objective: Learn weight matrix using SVM
+    training-granularity: n/a
+    working-objective: Given a variable node with unknown name, predict the name of the variable
+    working-granularity: node prediction / classification
+    application: variable name prediction
+    supervision: model dependent
+  method-name-prediction-1:
+    training-objective: Learn weight matrix using SVM
+    training-granularity: n/a
+    working-objective: Given a method node with unknown name, predict the name of the method
+    working-granularity: node prediction / classification
+    application: variable name prediction
+    supervision: model dependent
+  full-type-prediction-1:
+    training-objective: Learn weight matrix using SVM
+    training-granularity: n/a
+    working-objective: Given an expression node with unknown type, predict the type of the expression
+    working-granularity: node prediction / classification
+    application: variable name prediction
+    supervision: model dependent
+  variable-name-prediction-2:
+    training-objective: skip gram learning
+    training-granularity: n/a
+    working-objective: For unknown nodes, find most similar known nodes to predict name
+    working-granularity: n/a
+    application: variable name prediction
+    supervision: model dependent
+  method-name-prediction-2:
+    training-objective: skip gram learning
+    training-granularity: n/a
+    working-objective: For unknown nodes, find most similar known nodes to predict name
+    working-granularity: n/a
+    application: variable name prediction
+    supervision: model dependent
+  full-type-prediction-2:
+    training-objective: skip gram learning
+    training-granularity: n/a
+    working-objective: For unknown nodes, find most similar known nodes to predict type
+    working-granularity: n/a
+    application: variable name prediction
+    supervision: model dependent
+combinations:
+  - graph: ast
+    model: model-1
+    task: variable-name-prediction-1
+    comments:
+  - graph: ast
+    model: model-1
+    task: method-name-prediction-1
+    comments:
+  - graph: ast
+    model: model-1
+    task: full-type-prediction-1
+    comments:
+  - graph: ast
+    model: model-2
+    task: variable-name-prediction-2
+    comments:
+  - graph: ast
+    model: model-2
+    task: method-name-prediction-2
+    comments:
+  - graph: ast
+    model: model-2
+    task: full-type-prediction-2
+    comments:
+comments: # list

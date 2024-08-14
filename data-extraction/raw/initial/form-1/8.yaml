@@ -1,0 +1,147 @@
+paper-id: 8
+pdf-id: 15
+graphs:
+  seqgraph: &seqgraph
+    name: SeqGraph
+    description: Graph containing syntactic and control flow information
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type:
+      - name: AST node with code abstraction
+        details: |-
+          AST nodes, but e.g. literals are replaces with a LITERAL marker.
+          The nodes corresponding to the buggy line (directly connected by NextToken edges),
+          are enclosed by START_BUG and END_BUG markers.
+    vertex-features: |-
+      Word2Vec is used to encode the tokens.
+      Then, those tokens are further encoded using a BiLSTM encoder.
+    edge-type:
+      - name: NextToken
+        details: |-
+          Connects two tokens that are next to each other in the document.
+    edge-features: n/a
+    connectivity-features:
+    graph-features: n/a
+    other-features: n/a
+  fag:
+    <<: *seqgraph
+    name: Flow-augmented graph
+    edge-type:
+      - name: True
+        details: |-
+          Denotes that one jumps from one node to another if the condition of which the 
+          first node is a part, is true.
+      - name: False
+        details: |-
+          Denotes that one jumps from one node to another if the condition of which the 
+          first node is a part, is false.
+      - name: UseBy
+        details: |-
+          Connects last assignment of a variable to all its subsequent uses
+      - name: DefineIn
+        details: |- 
+          Connects the declaration of a variable to places where it is assigned to.
+      - name: NextToken
+        details: |-
+          Connects two tokens that are next to each other in the document.
+      - name: CallBy
+        details: Connects a caller to the function it is calling
+models:
+  model:
+    type:
+      name: n/a
+      architecture:
+        Encoder/decoder architecture using GNN for the encoder and RNN for the decoder.
+      
+        Encoder architecture; 
+          2 GCN layers [Kipf]
+      
+        Decoder architecture; 
+          not clearly described
+          Uses copy (using pointer network) and coverage mechanism for decoding
+      
+        Finally, beam searched is used to select top-k alternatives
+tasks:
+  fixing:
+    training-objective: Construct the correct fix for the bug
+    training-granularity: Graph Embedding (encoder), sequence reconstruction (decoder)
+    working-objective: Construct the correct fix for the bug
+    working-granularity: Graph Embedding (encoder), sequence reconstruction (decoder)
+    application: Code fix generation
+    supervision: Supervised
+training:
+  training:
+    train-test-split:
+      train: 0.8
+      test: 0.1
+      validation: 0.1
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: encoder dropout
+        value: 0.2
+      - name: learning rate
+        value: 0.001
+      - name: optimizer
+        value: adam
+      - name: batch size
+        value: 4
+      - name: epochs
+        value: 5
+      - name: embedding size
+        value: 300
+      - name: decoder dropout
+        value: 0.3
+    hyper-parameter-selection: grid search
+    search-tuned-hyper-parameters:
+      - number of gcn layers
+      - dropout
+      - learning rate
+    evaluation-details: |-
+      Evaluated with beam size 5.
+      Use top-1 to compute accuracy
+    evaluation-methods:
+      - name: accuracy
+        type: metric
+        details: n/a
+      - name: BLEU-1
+        type: metric
+        details: n/a
+      - name: BLEU-2
+        type: metric
+        details: n/a
+      - name: BLEU-3
+        type: metric
+        details: n/a
+      - name: BLEU-4
+        type: metric
+        details: n/a
+datasets:
+  dataset:
+    name: n/a
+    description: |-
+      Dataset of bug fixes where this is only one 
+      AST node different between the buggy and fixed versions.
+      Commits were identified using the keywords "bug", "fix",
+      and "resolve".
+    source: # list
+      - Open source JavaScript projects on GitHub
+    labelling: Automated based on file difference
+    size: 119975
+    is-pre-existing: no
+combinations:
+  - graph: seqgraph
+    model: model
+    task: fixing
+    training: training
+    dataset: dataset
+    comments:
+  - graph: fag
+    model: model
+    task: fixing
+    training: training
+    dataset: dataset
+    comments:
+comments: # list

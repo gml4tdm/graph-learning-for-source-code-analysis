@@ -1,0 +1,45 @@
+paper-id: sb-078
+pdf-id: sb-109
+graphs:
+  tri-network:
+    name: Tri-Network
+    description: n/a
+    artefacts:
+      - name: version history information
+        details: n/a
+      - name: source code
+        details: project
+    vertex-type: developer/module
+    edge-type: contribution (developer -> module)/dependency (module -> module) -- both co-evolution and call, but a single edge type/collaboration (developer <-> developer) -- two devs modified the same module
+    vertex-features: |-
+      node level network metrics 
+      
+      various software metrics per node (e.g. cyclomatic complexity, number of LOC, etc)
+    edge-features: |-
+      contribution edge is weighted by normalised number of commits 
+      
+      dependency is weighted by sum of 1) normalised \# of co-change commits, and 2) normalised number of calls 
+      
+      collaboration is weighted by normalised number of jointly changed modules
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  bayes-net:
+    name: Bayesian Network
+    architecture-attributes:
+      - bayesian-network
+tasks:
+  fault-proneness-prediction:
+    training-objective: Predict module nodes as fault prone or not
+    training-granularity: Node classification
+    working-objective: Predict module nodes as fault prone or not
+    working-granularity: Node classification
+    application: Fault proneness prediction
+    supervision: supervised
+combinations:
+  - graph: tri-relation
+    model: bayes-net
+    task: fault-proneness-prediction
+    comments:
+comments: # list

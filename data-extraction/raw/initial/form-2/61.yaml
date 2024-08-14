@@ -1,0 +1,79 @@
+paper-id: 61
+pdf-id: 88
+graphs:
+  ast: &ast
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: User-defined names are normalised (e.g. METHOD1, VAR3)
+    edge-type:
+      - name: AST Edge
+        details: directed
+    vertex-features: |-
+      Node type is encoded on an ordinal scale,
+      where a type has a higher number if it occurs 
+      more frequently.
+      Rarely occurring type are assigned the number 0.
+      
+      Lexical content of nodes is encoded by taking 
+      the average of the word2vec values of the tokens in the node.
+    edge-features: n/a
+    connectivity-features: |-
+      Stacked adjacency tensor.
+      
+      For every graph, the adjacency matrix is determined.
+      The four matrices are then combined into a third order tensor.
+    graph-features: n/a
+    other-features: n/a
+  cfg:
+    name: Control Flow Graph
+    edge-type:
+      - name: Control Flow Edge
+        details: Edge from statement to every statement that may be executed directly after it.
+    <<: *ast
+  dfg:
+    name: Data Flow Graph
+    edge-type:
+      - name: Data Flow Edge
+        details: |-
+          Edge from assignment to every use of that variable. 
+          
+          Note; due to the use of if-statements, some uses may have 
+          multiple _incoming_ edges
+    <<: *ast
+  ncs:
+    name: Natural Code Sequence
+    edge-type:
+      - name: Code Sequence Edge
+        details: Edge from one AST leaf node to the next
+    <<: *ast
+models:
+  circle-ggnn:
+    type:
+      name: n/a
+      architecture: |-
+        CircleGGNN layers 
+        Input output of GGNN layer concatenated with initial features into Conv1D (w/ ReLU) + MaxPooling layer
+        MLP 
+        
+        CircleGGNN is a version of GGNN adapted for tensor inputs, 
+        where messages are not only propagated in an intra-graph manner,
+        but also in an inter-graph manner.
+tasks:
+  vulnerability-detection:
+    training-objective: Classify samples as vulnerable/not vulnerable
+    training-granularity: Graph Classification (multiple graphs per sample)
+    working-objective: Classify samples as vulnerable/not vulnerable
+    working-granularity: Graph Classification (multiple graphs per sample)
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ast + cfg + dfg + ncs
+    model: circle-ggnn
+    task: vulnerability-detection
+    comments:
+comments: # list

@@ -1,0 +1,59 @@
+paper-id: 208
+pdf-id: 278
+graphs:
+  propagation-chain:
+    name: Propagation Chain
+    description: |-
+      Denotes relationships between different variables.
+      
+      The graph described below is further trimmed based on 
+      certain "key information". The information nor the process 
+      is described in detail.
+    artefacts:
+      - name: Source code
+        details: Smart contracts
+    vertex-type:
+      - name: Variable at token
+        details: Each node represents the occurrence of variable, identified with its index in the sequence of program tokens
+    edge-type:
+      - name: Value Comes From
+        details: n/a
+      - name: Value Computed From
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: Not specified (Mask Matrix)
+    graph-features: n/a
+    other-features: |-
+      The token sequence of the source code (CT)
+      The positions of the tokens in the source code 
+      The sequence of variables in the source code (V)
+      The positions of the variables.
+      CT and V are concatenated to obtain I_1; the position sets are concatenated to obtain I_2.
+      
+      For every variable
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Join Layer: X_0 = [I_1, I_2]
+        2) Masked Multi-head attention
+        3) Normalisation Layer
+        4) Transformer Layers, where each multi-head attention head uses the 0/-\infty mask matrix 
+        5) Normalisation Layer
+        6) Linear Layer
+tasks:
+  vulnerability-detection:
+    training-objective: Given a graph, classify it as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Given a graph, classify it as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection in Smart Contracts
+    supervision: Supervised
+combinations:
+  - graph: propagation-chain
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

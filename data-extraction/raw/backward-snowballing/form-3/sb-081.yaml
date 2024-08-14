@@ -1,0 +1,42 @@
+paper-id: sb-081
+pdf-id: sb-114
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: snippets
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Paths between terminal nodes are extracted from the AST.
+      For the terminal nodes, tokens are features. 
+      The path itself (sequence of types, interlaced with up/down directions) are also features (i.e. a full path is a single feature)
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding layers for tokens and paths
+      - concat start token, path, and end token embeddings
+      - fnn
+      - attention-weighted sum of path vectors
+      - (if necessary, softmax for prediction)
+tasks:
+  method-name-prediction:
+    training-objective: Given a method, predict its name (from a corpus of possible method names)
+    training-granularity: n/a
+    working-objective: Given a method, predict its name (from a corpus of possible method names)
+    working-granularity: n/a
+    application: Method name prediction
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: method-name-prediction
+    comments: The method is supposed to be more general, with name prediction being an evaluation application
+comments: # list

@@ -1,0 +1,54 @@
+paper-id: sb-098
+pdf-id: sb-136
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: method
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: node type
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      pre-order depth first traversal to create a sequence of nodes.
+      From this sequence, n-grams are constructed. 
+      Binary encoding of the present n-grams is used as feature.
+models:
+  naive-bayes:
+    name: Naive Bayes
+    architecture-attributes:
+      - Naive Bayes
+  rf:
+    name: Random Forest
+    architecture-attributes:
+      - Random Forest
+  dt:
+    name: Decision Tree
+    architecture-attributes:
+      - Decision Tree
+tasks:
+  defect-prediction:
+    training-objective: Classify sample as defective or not
+    training-granularity: n/a
+    working-objective: Classify sample as defective or not
+    working-granularity: n/a
+    application: Defect Prediction
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: naive-bayes
+    task: defect-prediction
+    comments:
+  - graph: ast
+    model: rf
+    task: defect-prediction
+    comments:
+  - graph: ast
+    model: dt
+    task: defect-prediction
+    comments:
+comments: # list

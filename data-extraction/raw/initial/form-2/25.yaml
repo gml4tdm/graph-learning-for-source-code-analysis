@@ -1,0 +1,56 @@
+paper-id: 25
+pdf-id: 38
+graphs:
+  ast:
+    name: n/a
+    description: Interconnected ASTs with data flow and control flow edges
+    artefacts:
+      - name: source code
+        details: Source code taken from multiple source files.
+    vertex-type:
+      - name: AST Node
+        details: |-
+          First, file containing unit tests are parsed. 
+          Test _bodies_ are isolated and used to construct the initial graph.
+          The graph is expanded by including the AST bodies of all (possibly non-test)
+          methods called in the unit test.
+    edge-type:
+      - name: AST edge
+        details: n/a
+      - name: Data flow edge
+        details: No details given
+      - name: Control flow edge
+        details: No details given
+    vertex-features: Not specified
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture:
+        Gated Graph Convolutional Layer 
+        Aggregation layer based on node type. 
+          Let T denote all node types and let h_t denote the mean embedding of all nodes of type t \in T.
+          Then, the layer output is given by 
+            o = sum_{t \in T} attention(h_t)
+        Encoder Layer
+      
+        Simple decoder is used to decode the method name.
+tasks:
+  name-prediction:
+    training-objective: Predict the name of a unit test, given the graph representation.
+    training-granularity: n/a
+    working-objective: Predict the name of a unit test, given the graph representation.
+    working-granularity: n/a
+    application: Name generation for automatically generated unit tests.
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: name-prediction
+    comments:
+comments: # list
+  - Badly written paper

@@ -1,0 +1,42 @@
+paper-id: sb-052
+pdf-id: sb-074
+graphs:
+  graph:
+    name: n/a
+    description: Based on graphs in recommendation systems
+    artefacts:
+      - name: source code
+        details: multiple files/project
+    vertex-type: method declarations/APIs/structural (classes, packages, non-method stuff)
+    edge-type: method <-> API calls/project structure  (e.g. belongs to)
+    vertex-features: |-
+      method/class/package name split up into words
+      
+      unique ID per node
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding layer
+      - GRU on node features (per node); attention-weighted sum of hidden states
+      - GCN-based mechanism (similar to `6.yaml`); Compute aggregated embedding of neighbours, add to own embedding, apply ReLU
+      - readout by concatenating all hidden states in successive GCN layers per node and applying FNN
+      - Similarity through dot product
+tasks:
+  api-recommendation:
+    training-objective: Maximise similarity of seen method <-> API examples; minimise similarity of unseen combinations
+    training-granularity: link prediction
+    working-objective: Find similar method and API nodes for API recommendation
+    working-granularity: link prediction
+    application: API recommendation
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model
+    task: api-recommendation
+    comments:
+comments: # list

@@ -1,0 +1,51 @@
+paper-id: 176
+pdf-id: 230
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: Node types are used as features (encoded using embedding layer)
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: Pre-order traversal sequence of node types
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two parallel inputs:
+          i) Sequence AST Encoder -- Takes pre-order sequence as input
+            - Embedding Layer 
+            - Self Attention 
+            - Bidirectional LSTM
+            - Concatenate final hidden states of the two directions of 
+                LSTM to compute h_{SAST}
+          ii) Graph Encoder
+            - GCN
+            - Pooling unclear, but some vector h_{GAST} is computed 
+        2) Concatenate h_{SAST} and h_{GAST}
+        3) Fully connected layer w/ Softmax
+tasks:
+  program-classification:
+    training-objective: Given a sample (program), classify it into one of multiple categories
+    training-granularity: Graph Multi-class Classification
+    working-objective: Given a sample (program), classify it into one of multiple categories
+    working-granularity: Graph Multi-class Classification
+    application: Program Classification (cross language)
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: program-classification
+    comments:
+comments: # list

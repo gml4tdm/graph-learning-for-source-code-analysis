@@ -1,0 +1,45 @@
+paper-id: 182
+pdf-id: 237
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features:
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Various matrices are derived from the AST:
+        1) Shortest path length; M_{ij} denotes the shortest path length from node i to node j (assuming undirected nodes)
+        2) Ancestor distance; D_{ij} denotes the signed distance between "familial" nodes i and node j in the ast
+        3) Sibling Distance; D_{ij} denotes the signed distance between sibling nodes i and node j in the ast
+        4) Personalised PageRank scores 
+      All matrices are "encoded" by applying sinusoidal encoding to them. 
+      
+      Every token in the input is associated with an AST node (for the positional encoding).
+      AST node type is added to the token.
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - modified transformer (encoder/decoder) architecture w/ pointer network
+      - shortest path length, ancestor distance, sibling distance, personalised pagerank score matrices are used for positional encoding
+tasks:
+  code-summarization:
+    training-objective: Given a code snippet, generate a summary of the code.
+    training-granularity: x-to-sequence
+    working-objective: Given a code snippet, generate a summary of the code.
+    working-granularity: x-to-sequence
+    application: Code summarization.
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

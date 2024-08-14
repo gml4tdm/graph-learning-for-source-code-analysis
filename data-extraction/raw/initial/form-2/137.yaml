@@ -1,0 +1,73 @@
+paper-id: 137
+pdf-id: 180
+graphs:
+  ast-program: &ast
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: Whole program
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      For terminal nodes:
+        Node content (name, e.g. getMaxInt) and node type are both
+        split up based on camel casing, resulting in two matrices.
+      
+      For internal nodes, the mode typs is used as a feature (no splitting)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Short path (t, p, n): path p from terminal node t to internal node n with >= 2 children.
+      Path pair (t_s, p_s, t_e, p_e): Two short paths with same internal node 
+      Span of a path pair: Let c_k denote the k-th child of the shared internal node of the two
+                            short paths. Suppose p_s leads through c_i and p_e leads through c_j.
+                            Then the span of the path pair is defined as j - i
+      Length of a pair path: |p_s| + |p_e| + 1
+      Number of shor paths is reduced by limiting length and span.
+  ast-method:
+    <<: *ast
+    artefacts:
+      - name: Source code
+        details: Method
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two separate inputs:
+          i) Tokens (Terminal Nodes)
+            Trainable Embedding Layer
+            Encoded token t according to: CONCAT(BiLSTM(embedded type of t), BiLSTM(embedded name of t))
+          ii) Paths
+            Trainable Embedding Layer 
+            Each Path separately encoded using BiLSTM
+        2) Concat vectors
+          c_i = \tanh(W * concat(embed(t_s), embed(p_s), embed(t_e), embed(p_e)) + b)
+        3) Path-vectors are summed using attention:
+          a_i = \frac{\exp(c_i^T a)}{\sum_j \exp(c_j^T a)}
+          C = \sum_i a_i c_i
+        4) Softmax
+tasks:
+  defect-prediction:
+    training-objective: Classify sample as defect or not defect
+    training-granularity: Graph Classification
+    working-objective: Classify sample as defect or not defect
+    working-granularity: Graph Classification
+    application: Defect Prediction
+    supervision: Supervised
+combinations:
+  - graph: ast-program
+    model: model
+    task: defect-prediction
+    comments:
+  - graph: ast-method
+    model: model
+    task: defect-prediction
+    comments:
+comments: # list

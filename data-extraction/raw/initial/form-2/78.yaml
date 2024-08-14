@@ -1,0 +1,62 @@
+paper-id: 78
+pdf-id:
+graphs:
+  co-occurrence-graph:
+    name: Co-occurrence Graph
+    description:
+    artefacts:
+      - name: Source code
+        details: |-
+          Source code is first sliced based data (parameters)
+          passed to "dangerous" functions.
+          Names are standardised.
+    vertex-type:
+      - name: Token in snippet
+        details: Every unique token gets a single node
+    edge-type:
+      - name: Edge
+        details: |-
+          Every token is connected to every other token that 
+          occurs within 2 tokens of itself in the 
+          original source code.
+    vertex-features: |-
+      Tokens are embedded using a word embedding (not further specified)
+    edge-features: n/a
+    connectivity-features: |-
+      Pointwise mutual information between different tokens is computed
+      to compute up with a weighted adjacency matrix.
+    graph-features: n/a
+    other-features: |-
+      Tokens are embedded using a word embedding (not further specified),
+      in sequence as input for the GRU model
+models:
+  model:
+    type:
+      name: n/a
+      architecture:
+        Network has two inputs;
+        1) token input is passed to bidirectional GRU layer,
+            followed by an attention layer.
+        2) The graph is passed to a GGNN, followed by a readout layer.
+            The readout is performed as follows;
+            x_v = \sigma(attention(h_v) \cdot \tanh(f(h_v))
+            h_G = \sum_{v \in V} x_v \cdot Maxpool(x_v)
+        
+            Here, f is a nonlinear transformation.
+      
+        Outputs of input models are concatenated,
+        then passed to a dense layer, then passed to softmax.
+tasks:
+  vulnerability-detection:
+    training-objective: Classify graph as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify graph as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: co-occurrence-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

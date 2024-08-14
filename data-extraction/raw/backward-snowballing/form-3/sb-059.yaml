@@ -1,0 +1,36 @@
+paper-id: sb-059
+pdf-id: sb-085
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: code (token) payload according to a weighted sum of the one-hot encoding of its characters
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - tree based CNN (triangular filter), with weights computed according to continuous binary tree idea
+      - max pooling
+tasks:
+  code-clone-detection:
+    training-objective: Given two code samples, determine if they are clones
+    training-granularity: graph classification (but two graphs)
+    working-objective: Given two code samples, determine if they are clones
+    working-granularity: graph classification (but two graphs)
+    application: Code clone detection
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-clone-classification
+    comments:
+comments: # list

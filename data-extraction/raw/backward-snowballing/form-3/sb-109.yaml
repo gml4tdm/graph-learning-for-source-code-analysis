@@ -1,0 +1,43 @@
+paper-id: sb-109
+pdf-id: sb-149
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: n/a
+    artefacts:
+      - name: source code
+        details: function
+    vertex-type: ast
+    edge-type: ast/control flow/control dependence/data dependence
+    vertex-features: |-
+      1) node type one hot 
+      2) operator type one hot 
+      3) used API functions, binary encoding 
+      4) float and integer literals are included as their 32 bit representation 
+      5) type of variables are included, one-hot encoded
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - gat
+      - SAGPool
+      - MLP
+      - softmax
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not
+    training-granularity: graph classification
+    working-objective: Classify sample as vulnerable or not
+    working-granularity: graph classification
+    application: vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: code-property-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

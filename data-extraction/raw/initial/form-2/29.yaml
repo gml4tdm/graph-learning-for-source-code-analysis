@@ -1,0 +1,111 @@
+paper-id: 29
+pdf-id: 42
+graphs:
+  graph:
+    name: n/a
+    description: |- 
+      Combination of a graph showing module/class/function/method/field/variable relations
+      and an abstract syntax tree.
+      
+      Note that although vertices represent different things, in practice, there is only 1 vertex type.
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Module
+        details: n/a
+      - name: Class
+        details: n/a
+      - name: Function
+        details: n/a
+      - name: Method
+        details: n/a
+      - name: Class Field
+        details: n/a
+      - name: Module Variable
+        details: n/a
+      - name: AST Node
+        details: n/a
+      - name: AST Type
+        details: |-
+          Every AST Node has a type node pointing to it.
+          For instance, every function definition has an incoming edge from the "FunctionDef" node.
+    edge-type:
+      - name: Define
+        details: n/a
+      - name: Use
+        details: n/a
+      - name: Type use
+        details: n/a
+      - name: Import
+        details: n/a
+      - name: Call
+        details: n/a
+      - name: Import
+        details: n/a
+      - name: AST Edge
+        details: n/a
+      - name: AST Type Edge
+        details: |-
+          Every AST Node has a type node pointing to it.
+          For instance, every function definition has an incoming edge from the "FunctionDef" node.
+    vertex-features: Not specified
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Source code is tokenized. A FastText model is trained on the tokens.
+      The tokens are encoded using FastText.
+      
+      For every token, prefix and suffix information is collected.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Two models are used.
+        
+        1) GNN model
+          RGCN -- Relational GCN
+          Used to learn graph embeddings for individual tokens.
+        
+          Trained using node name prediction, variable use prediction, and next call prediction.
+        
+        2) CNN model w/ 2 dense layers 
+          Takes as input, for every token, the prefix info, suffix info, fasttext embedding, graph embedding
+          BILUO output scheme
+tasks:
+  type-prediction:
+    training-objective: Named Entity Recognition
+    training-granularity: BILUO
+    working-objective: Named Entity Recognition
+    working-granularity: BILUO
+    application: Predict types of variable in code
+    supervision: supervised
+  node-name-prediction:
+    training-objective: Predict names of  nodes
+    training-granularity: Node Prediction
+    working-objective: n/a
+    working-granularity: n/a
+    application: Node Embedding
+    supervision: Self-supervised / unsupervised
+  variable-use-prediction:
+    training-objective: Predict variables used by a function
+    training-granularity: Not specified
+    working-objective: n/a
+    working-granularity: n/a
+    application: Node Embedding
+    supervision: Self-supervised / unsupervised
+  next-call-prediction:
+    training-objective: Given a function, predict the next function called
+    training-granularity: Not specified
+    working-objective: n/a
+    working-granularity: n/a
+    application: Node Embedding
+    supervision: Self-supervised / unsupervised
+combinations:
+  - graph: graph
+    model: model
+    task: type-prediction + node-name-prediction + variable-use-prediction + next-call-prediction
+    comments:
+comments: # list

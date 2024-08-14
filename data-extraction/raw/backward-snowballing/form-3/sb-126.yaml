@@ -1,0 +1,38 @@
+paper-id: sb-126
+pdf-id: sb-177
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/sibling
+    vertex-features: type (nonterminal), code tokens (terminal)
+    edge-features: n/a
+    connectivity-features: presumably adjacency matrix
+    graph-features: n/a
+    other-features:
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding layer
+      - GCN
+      - graph linearised using pre-order traversal of ast edges
+      - transformer encoder and decoder layers (w/ graph embedding as input)
+tasks:
+  code-summarization:
+    training-objective: Given a code snippet, generate its summary
+    training-granularity: n/a
+    working-objective: Given a code snippet, generate its summary
+    working-granularity: n/a
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

@@ -1,0 +1,57 @@
+paper-id: 42
+pdf-id: 60
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Traverse AST in BFS order.
+      For every node, output the pair (parent payload, node payload).
+      
+      The resulting text is then tokenized (four different ways; see paper for details).
+      
+      For BOW models, the tokens are used to compute a BOW representation 
+      (4 different ways; see paper for details).
+models:
+  bow:
+    type:
+      name: Naive Bayes
+      architecture: Naive Bayes
+  embedding:
+    type:
+      name: n/a
+      architecture:
+        Embedding Layer (takes in matrix of tokenized words)
+        Flattening Layer
+        Softmax
+tasks:
+  code-correctness:
+    training-objective: Classify sample as correct or incorrect
+    training-granularity: Classification (not graph)
+    working-objective: Classify sample as correct or incorrect
+    working-granularity: Classification (not graph)
+    application: Code correctness prediction
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: bow
+    task: code-correctness
+    comments:
+  - graph: ast
+    model: embedding
+    task: code-correctness
+    comments:
+comments: # list

@@ -1,0 +1,42 @@
+paper-id: sb-040
+pdf-id: sb-061
+graphs:
+  customised-ast:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: file
+    vertex-type: ast (merge certain types, prune some stuff)
+    edge-type: ast
+    vertex-features: node type encoded using word2vec
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: |-
+      bug report encoded using word2vec 
+      raw source code encoded using word2vec
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - cnn over bug report text
+      - cnn over raw source code text
+      - TBCNN over ast
+      - max pooling over all cnn results
+      - concatenation
+      - MLP
+tasks:
+  bug-localisation:
+    training-objective: Predict whether a bug is present in a given file or not
+    training-granularity: graph classification (but not quite)
+    working-objective: Predict whether a bug is present in a given file or not
+    working-granularity: graph classification (but not quite)
+    application: Bug localisation
+    supervision: Supervised
+combinations:
+  - graph: customised-ast
+    model: model
+    task: bug-localisation
+    comments:
+comments: # list

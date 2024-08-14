@@ -1,0 +1,50 @@
+paper-id: sb-064
+pdf-id: sb-091
+graphs:
+  ast:
+    name: ast
+    description: split into statement trees; subtrees containing a statement as root
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: word2vec for node type (non-leaf) or lexical payload (leaf)
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: |-
+      see description; split into statement trees; subtrees containing a statement as root 
+      statement trees are ordered in depth first fashion (from the perspective of the full ast)
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - bottom-up computation of nodes in statement trees; h' = \sigma(h + \sum_c h_c + b)
+      - element-wise max pooling over all nodes in statement tree -> sequence of statement tree vectors
+      - Bidirectional GRU over statement tree vectors
+tasks:
+  code-classification:
+    training-objective: Classify program into categories based on functionality
+    training-granularity: graph classification
+    working-objective: Classify program into categories based on functionality
+    working-granularity: graph classification
+    application: Source code classification
+    supervision: supervised
+  code-clone-detection:
+    training-objective: Given two code samples, determine if they are clones
+    training-granularity: graph classification (but two graphs)
+    working-objective: Given two code samples, determine if they are clones
+    working-granularity: graph classification (but two graphs)
+    application: Code clone detection
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-clone-detection
+    comments: The method is general purpose; the paper presents two example applications
+  - graph: ast
+    model: model
+    task: code-classification
+    comments: The method is general purpose; the paper presents two example applications
+comments: # list

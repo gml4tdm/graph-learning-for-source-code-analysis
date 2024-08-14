@@ -1,0 +1,247 @@
+paper-id: 12
+pdf-id: 20
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: one-hot encoding of AST node type
+    edge-features: n/a
+    connectivity-features:
+    graph-features: n/a
+    other-features: n/a
+models:
+  gcn-graph:
+    type:
+      name: n/a
+      architecture:
+        GCN Layer
+        GCN Layer
+        GCN Layer
+        GCN Layer
+        Mean pooling of all node embeddings
+        FNN Layer
+        FNN Layer 
+        FNN Layer (size 2, softmax)
+  gat-graph:
+    type:
+      name: n/a
+      architecture:
+        GAT Layer w/ ReLU
+        GAT Layer w/ ReLU
+        GAT Layer w/ ReLU
+        GAT Layer w/ ReLU
+        Mean pooling of all node embeddings
+        FNN Layer
+        FNN Layer
+        FNN Layer (size 2, softmax)
+  gcn-node:
+    type:
+      name: n/a
+      architecture:
+        GCN Layer
+        GCN Layer
+        GCN Layer
+        GCN Layer
+  gat-node:
+    type:
+      name: n/a
+      architecture:
+        GAT Layer w/ ReLU
+        GAT Layer w/ ReLU
+        GAT Layer w/ ReLU
+        GAT Layer w/ ReLU (size 1)
+tasks:
+  non-termination-graph:
+    training-objective: Classify code sample as terminating or non-terminating
+    training-granularity: Graph Classification
+    working-objective: Classify code sample as terminating or non-terminating
+    working-granularity: Graph Classification
+    application: Detection of non-terminating code
+    supervision: supervised
+  non-termination-node:
+    training-objective: Identify node causing non-termination
+    training-granularity: Node Classification
+    working-objective: Identify node causing non-termination
+    working-granularity: Node Classification
+    application: Identification of cause of non-termination
+    supervision: supervised
+training:
+  training-graph:
+    train-test-split:
+      train: 0.8
+      test: 0.2
+      validation: 0.0
+    cross-validation:
+      used: yes
+      details: not specified
+    hyper-parameters:
+      - name: loss
+        value: cross-entropy
+      - name: optimizer
+        value: adam
+      - name: learning-rate
+        value: 0.0001
+      - name: weight regularization
+        value: is used (exact settings not specified)
+    hyper-parameter-selection: tuning
+    search-tuned-hyper-parameters:
+      - amount of GNN layers
+    evaluation-details: |-
+      Used cross validation (unclear how many folds).
+      Used early stopping to find "minimum validation loss"; exact settings not given.
+      Each training session was repeated 10 times.
+    evaluation-methods:
+      - name: AUPR
+        type: metric
+        details: Area under precision/recall curve
+      - name: AUC
+        type: metric
+        details: Area under ROC curve
+      - name: mAP
+        type: matrix
+        details: Mean average precision
+  training-node:
+    train-test-split:
+      train: 0.72
+      test: 0.28
+      validation: 0.0
+    cross-validation:
+      used: yes
+      details: n/a
+    hyper-parameters:
+      - name: loss
+        value: focal
+      - name: optimizer
+        value: adam
+      - name: learning rate
+        value: 0.001
+    hyper-parameter-selection: tuning
+    search-tuned-hyper-parameters:
+      - amount of GNN layers
+    evaluation-details: |-
+      Used cross validation (unclear how many folds).
+      Used early stopping to find "minimum validation loss"; exact settings not given.
+      Each training session was repeated 10 times.
+    evaluation-methods:
+      - name: Jaccard Coefficient (Intersection over Union)
+        type: metric
+        details: n/a
+      - name: Dice Coefficient
+        type: metric
+        details: n/a
+      - name: Node-wise accuracy
+        type: metrix
+        details: n/a
+datasets:
+  ds-sv-comp:
+    name: DS-SV-COMP
+    description: |-
+      C programs from the SV-COMP 2022 competition. 
+      Contains both terminating and non-terminating programs.
+      Only used for testing
+    source:
+      - Dataset from SV-COMP 2022 competition
+    labelling: Yes; not specified
+    size: 249
+    is-pre-existing: yes
+  ds-term-comp:
+    name: DS-TERM-COMP
+    description: |-
+      C programs from the Termination Competition. 
+      Contains terminating and non-terminating programs.
+      Only used for testing.
+    source:
+      - Dataset from Termination Competition
+    labelling: Yes; not specified
+    size: 150
+    is-pre-existing: yes
+  ds-1:
+    name: DS1
+    description: |-
+      Synthetically generated programs based on DS-TERM-COMP and DS-SV-COMP dataset.
+      Contains both terminating and non-terminating C programs.
+    source:
+      - synthetically generated from DS-TERM-COMP and DS-SV-COMP
+    labelling: Yes; automatically based on fuzzing
+    size: 950
+    is-pre-existing: no
+  ds-2:
+    name: DS2
+    description: |-
+      Contains both terminating and non-terminating Python programs.
+    source:
+      - synthetically generated
+    labelling: Yes; automatically based on fuzzing
+    size: 950
+    is-pre-existing: no
+  ds-seg-py1:
+    name: DS-Seg-Py1
+    description: |-
+      Synthetically generated Python programs containing nested loops,
+      at least one of which is non-terminating.
+    source:
+      - synthetically generated
+    labelling: Yes; automatically based on fuzzing
+    size: 230
+    is-pre-existing: no
+  ds-seg-c:
+    name: DS-Seg-C
+    description: |-
+      Synthetically generated C programs containing nested loops,
+      at least one of which is non-terminating.
+    source:
+      - synthetically generated
+    labelling: Yes; automatically based on fuzzing
+    size: 230
+    is-pre-existing: no
+combinations:
+  # Graph Classification
+  - graph: ast
+    model: gcn-graph
+    task: non-termination-graph
+    training: training-graph
+    dataset: ds-1 + ds-2 + ds-sv-comp + ds-term-comp
+    comments: Papers does not clearly specify how the models were trained (all data combined, or separated);
+  - graph: ast
+    model: gat-graph
+    task: non-termination-graph
+    training: training-graph
+    dataset: ds-1 + ds-2 + ds-sv-comp + ds-term-comp
+    comments: Papers does not clearly specify how the models were trained (all data combined, or separated);
+  # Node classification
+  - graph: ast
+    model: gcn-node
+    task: non-termination-node
+    training: training-node
+    dataset: ds-seg-py1
+    comments: n/a
+  - graph: ast
+    model: gcn-node
+    task: non-termination-node
+    training: training-node
+    dataset: ds-seg-c
+    comments: n/a
+  - graph: ast
+    model: gat-node
+    task: non-termination-node
+    training: training-node
+    dataset: ds-seg-py1
+    comments: n/a
+  - graph: ast
+    model: gat-node
+    task: non-termination-node
+    training: training-node
+    dataset: ds-seg-c
+    comments: n/a
+comments: # list
+  - Labelling for DS1 and DS2 is not guaranteed to be accurate due to automation
+  - Unclear if datasets were merged for training, or disjoint. Assuming first.

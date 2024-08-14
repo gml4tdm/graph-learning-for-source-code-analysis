@@ -1,0 +1,37 @@
+paper-id: sb-123
+pdf-id: sb-174
+graphs:
+  data-flow-graph:
+    name: Data Flow Graph
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: variable
+    edge-type: data flow
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: mask matrix (1 for connected nodes, $-\infty$ otherwise)
+    graph-features: n/a
+    other-features: code tokens are used as input
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - transformer encoder/decoder architecture
+      - stack of normal encoder layers, followed by a stack or graph augmented encoder layers (MQK^T)
+      - transformer decoder w/ variant of beam search
+tasks:
+  comment-generation:
+    training-objective: Given a code snippet, generate a comment for it
+    training-granularity: n/a
+    working-objective: Given a code snippet, generate a comment for it
+    working-granularity: n/a
+    application: Comment Generation
+    supervision: supervised
+combinations:
+  - graph: data-flow-graph
+    model: model
+    task: comment-generation
+    comments:
+comments: # list

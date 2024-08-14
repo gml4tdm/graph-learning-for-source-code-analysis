@@ -1,0 +1,64 @@
+paper-id: 10
+pdf-id: 18
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: In this setting, the source code is obtained from decompiled byte code.
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      Generic and specific node type 
+      (e.g. a variable of specific type "Variable" has generic type "Expression")
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  auto-encoder:
+    type:
+      name: n/a
+      architecture: |-
+        Graph Convolutional Auto-Encoder w/ dot product decoder,
+        for learning graph embeddings.
+  agent:
+    type:
+      name: n/a
+      architecture: |-
+        Reinforcement learning agent which takes in a graph embedding
+        (from auto-encoder),
+        and outputs the next program transformation.
+        
+        Maskable PPO, using MLP as policy holder.
+tasks:
+  embedding:
+    training-objective: Minimise reconstruction error
+    training-granularity: Graph embedding
+    working-objective: Graph Embedding
+    working-granularity: Graph Embedding
+    application: Graph Embedding
+    supervision: Self supervised/unsupervised
+  program-improvement:
+    training-objective: |-
+      Apply program transformations optimising some pre-specified metric.
+      
+      Agent reward is the (signed) delta between the input program and the output program.
+    training-granularity: n/a
+    working-objective: Apply program transformations optimising some pre-specified metric.
+    working-granularity: n/a
+    application: |-
+      Improve programs (initially obtained from decompilation)
+      by applying program transformations.
+    supervision: Supervised (Reinforcement Learning)
+combinations:
+  - graph: ast
+    model: auto-encoder + agent
+    task: embedding + program-improvement
+    comments: mapping from tasks to models -- embedding -> auto-encoder, agent -> program-improvement
+comments: # list

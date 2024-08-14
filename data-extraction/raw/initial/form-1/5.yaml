@@ -1,0 +1,93 @@
+paper-id: 5
+pdf-id: 10
+graphs:
+  ast:
+    name: AST
+    description: AST
+    artefacts:
+      - name: Source code (method)
+        details: adjustable
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: One-hot encoding of node type
+    edge-features: n/a
+    connectivity-features: Edge Index List (Adjacency List)
+    graph-features: n/a
+    other-features: n/a
+models:
+  gvae:
+    type:
+      name: GVAE
+      architecture:
+        GCN Layer [Kipf] w/ ReLU (size 100)
+        GCN Layer [Kipf] w/ ReLU (size 20)
+        Split into two separate GCN Layers [Kipf] (size 10)
+          - First layer computes means
+          - Second layer computes log of the standard deviations
+        
+        Combine results to obtained final output, through re-parametrization;
+        draw e ~ N(0, 1) and compute mu + sigma * e for various e;
+        resulting in matrix output.
+
+        Decoding is done by computing the dot product ZZ^T
+tasks:
+  embedding:
+    training-objective: Minimise reconstruction error (reconstruction using dot-product)
+    training-granularity: Graph Embedding
+    working-objective: Graph Embedding
+    working-granularity: Graph Embedding
+    application: Graph Embedding
+    supervision: unsupervised (self-supervised)
+training:
+  training:
+    train-test-split: n/a
+    cross-validation: n/a
+    hyper-parameters:
+      - name: loss
+        value: \mathbb{E}_{q(Z \mid X, A)} \left(\log p(A \mid Z) - D_{KL}(q(Z \mid X, A) \mid\mid p(Z))\right)
+      - name: latent space size
+        value: 10
+      - name: optimizer
+        value: adam
+      - name: learning rate
+        value: 0.001
+      - name: batch size
+        value: 10
+      - name: epochs
+        value: 30
+    hyper-parameter-selection: not specified
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: evaluated on downstream task
+    evaluation-methods:
+      - name: code clone detection
+        type: downstream task
+        details: |-
+          compared latent vectors using centroid distance, variance distance, and size distance to detect code clones.
+datasets:
+  projects:
+    name: n/a
+    description: Dataset of open source java projects
+    source: # list
+      - ANTLR
+      - Apache Ant
+      - ArgoUML
+      - CAROL
+      - DNSjava
+      - Hibernate
+      - JDK
+      - JHotDraw
+    labelling: not specified
+    size: unclear
+    is-pre-existing: yes
+combinations:
+  - graph: ast
+    model: gvae
+    task: embedding
+    training: training
+    dataset: projects
+    comments:
+comments: # list

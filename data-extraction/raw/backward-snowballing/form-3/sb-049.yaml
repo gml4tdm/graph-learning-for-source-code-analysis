@@ -1,0 +1,39 @@
+paper-id: sb-049
+pdf-id: sb-071
+graphs:
+  labelled-pushdown-system:
+    name: Labelled pushdown system
+    description: |-
+      Inter-procedural control flow of a program modelled as a pushdown system,
+      where each rule has a label, which are concatenated as the machine makes 
+      its transitions.
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: state
+    edge-type: transition
+    vertex-features: n/a
+    edge-features: labels (for instruction category, error code,struct type, functions)
+    connectivity-features: Not specified
+    graph-features: |-
+      Perform random walks over the graph, and collect the sequence of labels
+    other-features: n/a
+models:
+  cbow:
+    name:
+    architecture-attributes:
+      - word2vec model applied on the label sequences
+tasks:
+  cbow:
+    training-objective: Predict a label, given its context
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: Embedding learning
+    supervision: unsupervised (self-supervised)
+combinations:
+  - graph: labelled-pushdown-system
+    model: cbow
+    task: cbow
+    comments: generic embedding learning system. The paper applies it in particular for error handling specification mining
+comments: # list

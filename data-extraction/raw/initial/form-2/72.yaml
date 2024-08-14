@@ -1,0 +1,76 @@
+paper-id: 72
+pdf-id: 101
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features: |-
+      Node type is encoded as a scalar 
+      Tokens in a node are embedded using word2vec; vectors per token are averaged 
+      node type and payload embedding are concatenated
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix (?)
+    graph-features: n/a
+    other-features: n/a
+models:
+  network:
+    type:
+      name: n/a
+      architecture: |-
+        During training, takes as input two code samples;
+          1) labelled sample s from source domain 
+          2) unlabelled sample t from target domain
+        
+        s and t are both processed through the following layers:
+        
+        GGNN network 
+        Combine node embeddings 
+          i) concatenating initial features with learned embeddings
+          ii) multiplying each obtained combined feature vector with a learnable matrix W 
+          iii) Summing the resulting vectors
+        MLP
+        
+        Next, outputs s' and t' are processed somewhat separately;
+        
+        o_1 = MLP(s')
+        o_2 = MLP(s', t')
+        
+        During training, a loss combining o_1 and o_2 is minimised;
+        During the working phase, only the output o_1 is used.
+tasks:
+  cross-domain-vulnerability-detection:
+    training-objective: |-
+      Two training objectives minimised through a joint loss;
+      First of all, code samples must be classified as vulnerable or non-vulnerable (o_1);
+      Second, the output o_2 is scored according to MMD -- Maximum Mean Discrepancy;
+    training-granularity: Graph Classification
+    working-objective: Classify code samples as vulnerable or non-vulnerable (o_1)
+    working-granularity: Graph Classification
+    application: Vulnerability Detection in new projects/domains, adapted from existing datasets (few shot learning)
+    supervision: Supervised (and a bit unsupervised I guess)
+combinations:
+  - graph: code-property-graph
+    model: network
+    task: cross-domain-vulnerability-detection
+    comments: |-
+      There are some small details which are unclear.
+      Specifically, it is unclear whether the graph embedding part and the 
+      subsequent MLP are part of the same network or not.
+      I am assuming they are, since no separate loss of training 
+      setup is mentioned for the graph embedding part.
+comments: # list

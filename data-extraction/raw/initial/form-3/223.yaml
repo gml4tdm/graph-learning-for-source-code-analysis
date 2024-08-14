@@ -1,0 +1,38 @@
+paper-id: 223
+pdf-id: 298
+graphs:
+  graph:
+    name: ast + pdg (pruned)
+    description: mix of ast and pdg (pruned)
+    artefacts:
+      - name: source code
+        details: javascript
+    vertex-type: ast
+    edge-type: ast/control dependence/data dependence
+    vertex-features: node type word2vec
+    edge-features: edge type one-hot
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - ggnn (edge type aware)
+      - gat
+      - mean pooling readout
+      - energy function is used to balance local and global information, and in particular, avoid over-smoothing 
+tasks:
+  malicious-js-detection:
+    training-objective: classify graph as malicious or benign
+    training-granularity: graph classification
+    working-objective: classify graph as malicious or benign
+    working-granularity: graph classification
+    application: malicious javascript detection
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model
+    task: malicious-js-detection
+    comments:
+comments: # list

@@ -1,0 +1,45 @@
+paper-id: 32
+pdf-id: 36
+graphs:
+  token-graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: Source code
+        details:
+    vertex-type:
+      - name: Tokens
+        details: Source code is tokenized. Every token has a node
+    edge-type:
+      - name: Edge
+        details: |-
+          There exists an edge between successive tokens.
+          
+          TODO: This is probably not right but I do not understand 
+          what the authors mean by "co-occurrence"
+    vertex-features: Tokens are embedding using BERT
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  gcn:
+    type:
+      name: n/a
+      architecture: |-
+        GCN layers 
+        Unspecified aggregation function
+tasks:
+  vulnerability-detection:
+    training-objective: Classify code as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify code as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability detection
+    supervision: Supervised
+combinations:
+  - graph: token-graph
+    model: gcn
+    task: vulnerability-detection
+    comments:
+comments: # list

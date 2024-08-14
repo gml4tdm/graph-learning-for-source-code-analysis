@@ -1,0 +1,56 @@
+paper-id: 96
+pdf-id: 132
+graphs:
+  ccg:
+    name: Code Composite Graph (CCG)
+    description: Mix of AST, CFG, and DFG
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+    vertex-features: |-
+      Node token encoded using word2vec
+      Node type encoded using label encoding 
+      Both encodings are concatenated
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  bgnn:
+    type:
+      name: n/a
+      architecture: |-
+        Edges are considered in both directions.
+        
+        GGNN
+        
+        Final node embeddings are passed through:
+        Conv
+        ReLU 
+        MaxPool
+        MLP
+        Sigmoid
+tasks:
+  vulnerability-detection:
+    training-objective: Classify graph as vulnerable / not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify graph as vulnerable / not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ccg
+    model: bgnn
+    task: vulnerability-detection
+    comments:
+comments: # list

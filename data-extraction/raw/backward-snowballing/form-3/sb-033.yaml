@@ -1,0 +1,49 @@
+paper-id: sb-033
+pdf-id: sb-047
+graphs:
+  multilayer-class-network:
+    name: Multilayer Class Network
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: class
+    edge-type: class/interface relationships
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+  multilayer-package-network:
+    name: Multilayer Package Network
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: package
+    edge-type: class/interface relationships (based on the coupling between the classes in the packages)
+    vertex-features: n/a
+    edge-features: Weights based on the amount of coupling (i.e. amount of involved classes)
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - page-rank like algorithm, applied to every sub-graph obtained by considering the different edge types
+      - final page-rank score obtained as weighted sum of page rank scores over all edge types
+tasks:
+  ranking:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: Rank nodes in the graph
+    working-granularity: Node Ranking
+    application: Identify most important nodes (Starting nodes) for program understanding
+    supervision: unsupervised
+combinations:
+  - graph: multilayer-class-network + multilayer-package-network
+    model: model
+    task: ranking
+    comments:
+comments: # list

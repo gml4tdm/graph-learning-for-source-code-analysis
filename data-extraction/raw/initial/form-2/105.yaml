@@ -1,0 +1,88 @@
+paper-id: 105
+pdf-id: 142
+graphs:
+  xfg:
+    name: n/a
+    description: |-
+      Obtained from PDG through slicing based on system API calls 
+      and statements containing arithmetic operations
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Data Dependence Edge
+        details: n/a
+      - name: Control Dependence Edge
+        details: n/a
+    vertex-features: |-
+      Names are normalised
+      Statements encoded using doc2vec (DM-PV)
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  gcn:
+    type:
+      name: n/a
+      architecture: |-
+        GCN Layer 
+        Top-k pooling layer 
+        p_1 = MeanPool || maxPool
+        GCN 
+        Top-k pooling layer
+        p_2 = MeanPool || maxPool
+        p_1 + p_2 
+        MLP
+        Softmax
+  gat:
+    type:
+      name: n/a
+      architecture: |-
+        GAT Layer 
+        Top-k pooling layer 
+        p_1 = MeanPool || maxPool
+        GAT 
+        Top-k pooling layer
+        p_2 = MeanPool || maxPool
+        p_1 + p_2 
+        MLP
+        Softmax
+  k-gnn:
+    type:
+      name: n/a
+      architecture: |-
+        k-GNN Layer 
+        Top-k pooling layer 
+        p_1 = MeanPool || maxPool
+        k-GNN 
+        Top-k pooling layer
+        p_2 = MeanPool || maxPool
+        p_1 + p_2 
+        MLP
+        Softmax
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample (slice) as vulnerable or non-vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample (slice) as vulnerable or non-vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: xfg
+    model: gcn
+    task: vulnerability-detection
+    comments: Experiment was repeated with multiple datasets containing different types of vulnerabilities
+  - graph: xfg
+    model: gat
+    task: vulnerability-detection
+    comments: Experiment was repeated with multiple datasets containing different types of vulnerabilities
+  - graph: xfg
+    model: k-gnn
+    task: vulnerability-detection
+    comments: Experiment was repeated with multiple datasets containing different types of vulnerabilities
+comments: # list

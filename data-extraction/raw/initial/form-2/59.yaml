@@ -1,0 +1,59 @@
+paper-id: 59
+pdf-id: 85
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features: |-
+      Node type one-hot encoded
+      Statement fragments/tokens encoded using word2vec 
+      one-hot and word2vec embeddings are concatenated
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  network:
+    type:
+      name: n/a
+      architecture:
+        Federated Learning Setup; 
+        1) clients receive initial weights from server
+        2) clients use own data to update weights; send updated weights to server 
+        3) server aggregates weights from all clients and updates weights; sends to clients
+        4) goto 2
+        
+        Client network architecture;
+          Jump-structured GAT
+          Let x_{JG} = sum of the concatenated node features from every GAT layer 
+          out = MaxPool(Conv1D(x_{JG}))
+          FNN Layer
+tasks:
+  vulnerability-detection:
+    training-objective: Given a graph, classify it as vulnerable or non-vulnerable
+    training-granularity: Graph Classification
+    working-objective: Given a graph, classify it as vulnerable or non-vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection without disclosing private dataset to other parties
+    supervision: Supervised
+combinations:
+  - graph: code-property-graph
+    model: network
+    task: vulnerability-detection
+    comments:
+comments: # list

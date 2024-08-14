@@ -1,0 +1,84 @@
+paper-id: 191
+pdf-id: 254
+graphs:
+  pdg:
+    name: PDG
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: Method
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Control Dependency Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: Has as attribute the variable involved in the dependency
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Special traversal algorithm is used to sequence the graph.
+      The process is reversible (i.e. retains some form of the structural information);
+      the content of every node is then placed in its place in the sequence. 
+      
+      The method name is tokenised; the sequence is used as a feature 
+      
+      Tokens in the method body are used as a feature
+      
+      Code summary/query is tokenised and used as a feature
+models:
+  multi-modal-model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Code Token Input (note: tokens are considered as being unordered)
+          i) Embedding Layer 
+          ii) MLP per token 
+          iii) Max pooling over all MLP outputs 
+        2) Method Name Encoder
+          i) Embedding Layer
+          ii) Bidirectional LSTM
+          iii) Maxpooling over pairwise concatenated hidden states of the two LSTM directions
+        3) Graph Encoder
+          i) Embedding Layer (embed items in PDG sequence)
+          ii) Bidirectional LSTM 
+          iii) Maxpooling over pairwise concatenated hidden states of the two LSTM directions
+        4) Attention based fusion of outputs of (1,2,3) (weighted sum)
+        5) Summary/query encoder
+          i) Embedding Layer
+          ii) Bidirectional LSTM
+          iii) Maxpooling over pairwise concatenated hidden states of the two LSTM directions
+  graph-enhanced-code-bert:
+    type:
+      name: n/a
+      architecture: |-
+        CodeBERT with as input [CLS] <summary/query tokens> [SEP] <pdg sequence tokens>
+        output is binary softmax
+tasks:
+  code-search:
+    training-objective: Maximise similarity between related (code, summary) pairs; minimise similarity between unrelated paris
+    training-granularity: n/a
+    working-objective: Output embeddings for [cosine] similarity based code search
+    working-granularity: n/a
+    application: Code Search
+    supervision: Supervised
+  code-search-binary:
+    training-objective: Classify (code, summary) pairs as either related or unrelated
+    training-granularity: n/a
+    working-objective: Classify (code, query) pairs as related or unrelated
+    working-granularity: n/a
+    application: Code Search
+    supervision: Supervised
+combinations:
+  - graph: pdg
+    model: multi-modal-model
+    task: code-search
+    comments:
+  - graph: pdg
+    model: graph-enhanced-code-bert
+    task: code-search-binary
+    comments:
+comments: # list

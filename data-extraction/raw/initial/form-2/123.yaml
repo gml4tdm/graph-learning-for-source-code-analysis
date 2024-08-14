@@ -1,0 +1,57 @@
+paper-id: 123
+pdf-id: 165
+graphs:
+  cfg:
+    name: Control Flow Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: Statements in nodes are tokenized
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: n/a
+        Tokens are encoded using trainable embedding layer 
+        For each node, the token sequence is passed through Bidirectional LSTM; node embedding is average of hidden states.
+      
+        Nodes are sequenced in a breadth-first traversal order of the CFG. 
+        The network used is a variant of LSTM, but with some specific modification. 
+        Specifically, the hidden state of a node depends on the hidden state 
+        of its predecessors. 
+        Edges in the sequence can be forward (towards the end) or backward,
+        towards the beginning.
+        In the first sweep, the forward direction is processed. 
+        Next the backward direction.
+      
+        Nodes with API calls are marked.
+        Nodes are passed through attention mechanism, where 
+        marked nodes get higher weights.
+        Weights are used to sum node embeddings.
+      
+        FNN w/ sigmoid
+tasks:
+  control-flow-bug-detection:
+    training-objective: Classify sample as buggy or not buggy
+    training-granularity: Graph Classification
+    working-objective: Classify sample as buggy or not buggy
+    working-granularity: Graph Classification
+    application: Detect control-flow related bugs
+    supervision: Supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: control-flow-bug-detection
+    comments:
+comments: # list

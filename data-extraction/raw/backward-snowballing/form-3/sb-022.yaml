@@ -1,0 +1,43 @@
+paper-id: sb-022
+pdf-id: sb-030
+graphs:
+  ast:
+    name: (partial) AST
+    description:  Partial AST, further generated during code generation
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: type and value, encoded (not specified, presumably embedding layer) and concatenated
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: |-
+      depth first traversal of AST nodes; sequence of type (internal) or type/value combinations (leaf).
+      
+      Compute path from root node to node being predicted (i.e. node whose child will be predicted).
+      Use the path as sequence input
+models:
+  model:
+    name:
+    architecture-attributes:
+      - encoder/decoder architecture
+      - Transformer-XL encoder
+      - root path into bidirectional LSTM (final two hidden states concatenated)
+      - transformer output and path embedding concatenated
+      - two separate FNN w/ tanh and softmax as output (one for node type, one for node value)
+tasks:
+  code-generation:
+    training-objective: Given an incomplete AST, predict the next node (type and  value, separately)
+    training-granularity: n/a
+    working-objective: Given an incomplete AST, predict the next node (type and  value, separately)
+    working-granularity: n/a
+    application: Code generation
+    supervision: supervised (self-supervised)
+combinations:
+  - graph: ast
+    model: model
+    task: code-generation
+    comments:
+comments: # list

@@ -1,0 +1,62 @@
+paper-id: 63
+pdf-id: 90
+graphs:
+  pdg:
+    name: Program Dependency Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: Statement or Control Predicate
+        details: n/a
+    edge-type:
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features: |-
+      Node features are trained using a modified node2vec,
+      which learns embeddings for the individual tokens in 
+      each node.
+      
+      Later, these embeddings per node are combined to come 
+      up with node embeddings.
+    edge-features: |-
+      Separate from the vertex features, another set of 
+      node features (not based on node payload) is 
+      computed using node2vec.
+      
+      Edge features are computed by subtracting the 
+      start node embedding from the end node embedding,
+      for every edge.
+    connectivity-features: Not Specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  network:
+    type:
+      name: n/a
+      architecture: |-
+        BiGGNN (Bidirectional Graph Gated Neural Network)
+        FNN Layer 
+        Softmax
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or non-vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample as vulnerable or non-vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: pdf
+    model: network
+    task: vulnerability-detection
+    comments: |-
+      Not entirely clear if they also did multi-class classification,
+      since softmax was used. The text only suggests single-class.
+      
+      Not entirely clear how graph classification was done 
+      without a pooling layer.
+comments: # list

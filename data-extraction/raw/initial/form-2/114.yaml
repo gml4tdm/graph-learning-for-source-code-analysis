@@ -1,0 +1,56 @@
+paper-id: 114
+pdf-id: 153
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      AST is linearised using depth first traversal
+      to obtain sequence of tokens.
+      
+      Tokens are encoded using word2vec
+      
+      Sequence used as input for following network: 
+      LSTM
+      Global Max Pooling
+      FNN Layer w/ tanh
+      FNN Layer w/ linear 
+      FNN Layer w/ sigmoid
+      
+      after training, the last two layers are removed 
+      in order to obtain function level representations.
+      
+      The network is trained on the vulnerability 
+      detection task. After training, it is used for embedding.
+models:
+  rf:
+    type:
+      name: Random Forest
+      architecture: Random Forest
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable/not vulnerable
+    training-granularity: Classification (not graph)
+    working-objective: Classify sample as vulnerable/not vulnerable
+    working-granularity: Classification (not graph)
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: rf
+    task: vulnerability-detection
+    comments:
+comments: # list

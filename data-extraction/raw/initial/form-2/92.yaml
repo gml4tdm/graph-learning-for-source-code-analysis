@@ -1,0 +1,89 @@
+paper-id: 92
+pdf-id: 127
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code (path/commit)
+        details: Patch is split up into pre- and post- change function. An AST is made for both.
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Paths from start to end nodes are constructed,
+      where the path must always pass through the root of 
+      the changed (added/deleted) subtree.
+      
+      Two types of paths:
+      1) within change; start and end are both leaf nodes in the 
+          changed subtree
+      2) within context: start is a leaf node in the changed subtree,
+          end is a leaf node in the unchanged remainder of the tree.
+      
+      Both path types are randomly sampled in a 1:1 ratio.
+  dependency-parse-graph:
+    name: Dependency Parse Graph
+    description: n/a
+    artefacts:
+      - name: Commit Message
+        details: n/a
+    vertex-type:
+      - name: Token
+        details: n/a
+    edge-type:
+      - name: Dependency Edge
+        details: Denotes the types of dependencies between tokens (words) (e.g. adjective modifies)
+      - name: Neigh Edge
+        details: Connects the last token in a sentence to the first token in the next sentence
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Model with two input paths: 
+        1) Paths (AST based features)
+          i) Node types are encoded using a learnable embedding 
+              layer, then passed through a bidirectional LSTM.
+          ii) The tokens of the start and end nodes are computed through 
+              through tokenization, embedded through a learnable embedding
+              layer, and summed up.
+          iii) Path and token features are concatenated 
+          iv) FNN
+          v) Normalisation
+        
+        2) Dependency Parse Graph 
+          i) Tokens embedded using learnable embedding layer
+          ii) GGNN
+          iii) FNN
+          iv) Maxpool
+        
+        Streams combined through concatenation
+        FNN
+        Sigmoid
+tasks:
+  vul-fix-detection:
+    training-objective: Classify patch as fixing or not vulnerability fixing
+    training-granularity: Graph Classification
+    working-objective: Classify patch as fixing or not vulnerability fixing
+    working-granularity: Graph Classification
+    application: Identify "silent" patches fixing vulnerabilities
+    supervision: Supervised
+combinations:
+  - graph: ast + dependency-parse-graph
+    model: model
+    task: vul-fix-detection
+    comments:
+comments: # list

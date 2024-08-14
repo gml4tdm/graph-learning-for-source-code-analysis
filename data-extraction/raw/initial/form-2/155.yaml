@@ -1,0 +1,79 @@
+paper-id: 155
+pdf-id: 204
+graphs:
+  graph:
+    name: n/a
+    description: AST with additional edges
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: Child
+        details: Regular AST Edge
+      - name: Subtoken
+        details: From a token (AST leaf node) to its subtokens (after splitting)
+      - name: Next Token
+        details: NCS
+      - name: Last Lexical Use
+        details: Connect occurrence of variable name to its most recent previous occurrence
+    vertex-features:
+    edge-features:
+    connectivity-features:
+    graph-features:
+    other-features: |-
+      During training, ground truth token is given as input x'_j;
+      during testing, previous token x'_j is given as input.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        encoder/decoder setup where steps 1-9 form the encoder,
+        and the remainder the decoder.
+        
+        1) GGNN (w/ edge-type specific function to compute messages)
+        2) Pooling according to 
+            r_g = \sum_{v \in V} \sigma(W_i[h_v, h^0_v]) \cdot W_j h_v
+            (h_v: embedding after GGNN, h^0_v: initial node embedding)
+        3) g_v = FNN[1 layer, sigmoid]([h_v, r_g])
+        4) f_v = g_v \cdot h_v 
+        5) L_0 = W_I[F, X] + b_I (F: aggregated f_v, X: initial node embedding)
+        6) L_1 = PReLU(Conv1D(L_0))
+        7) L_f = PReLU(Conv1D(L_1))
+        8) r_c = AveragePool(L_f)
+        9) r = W_e[r_g, r_c] + b_e
+        10) s_j = LSTM(s_{j - 1}, x'_j)
+        11) e_{v,j} = V_a \tanh(W_a[s_j, f_v] + b_a)
+        12) a_{v,j} = softmax(e_{v,j})
+        13) c_j = \sum_{v \in V} a_{v,j} f_v
+        14) P_{vocab} = softmax(Linear(Linear([s_j, c_j]))
+        15) P_{atten}(w) = \sum_{v \in V: w_v = w} a_{v,j} 
+        16) P^j_{gen} = \sigmoid(W_s s_j + W_c c_j + W_x x'_j + b_{gen})
+        17) P_{salience} = softmax(Conv1D(L_f \cdot s_j)) (element-wise product)
+        18) P_{copy} = P_{atten}(w) + P_{salience}(w)
+        19) P(w) = P^j_{gen}P_{vocab(w) + (1 - P^j_{gen})P_{copy}(w)
+        
+        (Intuitively, P^j_{gen} is the probability of copying an (unknown)
+        word from the input
+tasks:
+  method-naming:
+    training-objective: |-
+      Given a code snippet, generate a method name.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph to Sequence
+    working-objective: |-
+      Given a code snippet, generate a method name.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph to Sequence
+    application: Code summarization (Method Name Generation)
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: method-naming
+    comments: |-
+      It is unclear how the graph encoder output "r" is used in the decoder
+comments: # list

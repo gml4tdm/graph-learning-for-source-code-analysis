@@ -1,0 +1,47 @@
+paper-id: sb-121
+pdf-id: sb-172
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code method
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features:
+    edge-features:
+    connectivity-features:
+    graph-features:
+    other-features: |-
+      code is split into a sequence of tokens per statement. (identifiers into sub tokens)
+      
+      The AST is linearised per statement (node type or tokens) (subtree per statement);
+      tokens are split into subtokens
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - encoder/decoder
+      - two identical input paths for code and ast sequence input
+      - learnable embedding layer
+      - bidirectional LSTM _over individual statements_
+      - attention mechanism
+      - bidirectional LSTM over all statements
+      - encoder output is concatenation of 1) hidden state, and 2) current "statement/sentence" embedding
+      - Average final embeddings for code and ast
+      - decoder with LSTM, attention mechanism, and softmax output
+tasks:
+  code-summarization:
+    training-objective: Given a method, generate a summary
+    training-granularity: n/a
+    working-objective: Given a method, generate a summary
+    working-granularity: n/a
+    application: Code summarization
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments: unclear how/when previously generated token is fed back (which the paper suggests), but it is not important for the data analysis
+comments: # list

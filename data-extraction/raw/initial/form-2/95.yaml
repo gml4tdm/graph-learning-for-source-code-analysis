@@ -1,0 +1,66 @@
+paper-id: 95
+pdf-id: 131
+graphs:
+  graph:
+    name: n/a
+    description: PDG enhanced with call information
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details: Slicing (based on sys API calls and pointer variables) is performed to reduce the amount of nodes
+    edge-type:
+      - name: Data flow (dependence) Edge
+        details: n/a
+      - name: Control flow (dependence) Edge
+        details: n/a
+      - name: Call Edge
+        details: n/a
+      - name: Return Edge
+        details: n/a
+    vertex-features: Statements in nodes encoded using doc2vec
+    edge-features: Back-edges are added.
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  fs-gnn:
+    type:
+      name: FS-GNN (Flow Sensitive GNN)
+      architecture: |-
+        Model with edge-type specific features.
+        
+        embeddings for edge type r:
+        
+        h^{\ell}_r = \sum_{b = 1}^B a^{\ell}_{br}v^{\ell}_b
+        
+        Here, $a^{\ell}_{br}$ are edge-type specific learnable weights,
+        and $v^{\ell}_b$ are learnable basis vectors 
+        
+        Node embeddings updated according to:
+        
+        h^{\ell + 1}_v = f\left(\sum_{(u, r) \in N(v)} W^{\ell}_{\lambda(r)}\phi(h^{\ell}_u, h^{\ell}_r)\right)
+        
+        Here, $u$ denotes a neighbour node, and $r$ denotes the edge type.
+        $W^{\ell}_{\lambda(r)}$ is an edge type specific learnable weight matrix.
+        $\phi$ is a composition operator (e.g. addition, subtraction, multiplication, etc.)
+        
+        During training, at this point, GraphSMOTE is used to generate graphs
+        which have a more balanced distribution of vulnerable and non-vulnerable nodes.
+        
+        softmax for predictions.
+tasks:
+  vulnerability-detection:
+    training-objective: Classify each node (statement) as vulnerable or not vulnerable
+    training-granularity: Node Classification
+    working-objective: Classify each node (statement) as vulnerable or not vulnerable
+    working-granularity: Node Classification
+    application: (Memory related) vulnerability detection
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: fs-gnn
+    task: vulnerability-detection
+    comments:
+comments: # list

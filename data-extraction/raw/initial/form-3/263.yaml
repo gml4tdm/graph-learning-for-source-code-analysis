@@ -1,0 +1,40 @@
+paper-id: 263
+pdf-id: 122
+graphs:
+  pdg:
+    name: PDG
+    description: n/a
+    artefacts:
+      - name: source code
+        details: function
+    vertex-type: statement (w/ names normalised)
+    edge-type: control dependence/data dependence
+    vertex-features: statement, encoded using sent2vec
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      for every node, compute degree centrality, katz centrality, and closeness centrality.
+      Create an RGB image, where each color dimension is a centrality multiplied by the node vector 
+      (e.g. red = degree centrality * node vector).
+
+      An image (RGB) is obtained by concatenating all node representations.
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - CNN w/ max pooling and fully connected layer
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: n/a
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: n/a
+    application: Vulnerability detection
+    supervision: n/a
+combinations:
+  - graph:
+    model:
+    task:
+    comments:
+comments: # list

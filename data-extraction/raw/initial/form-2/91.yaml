@@ -1,0 +1,56 @@
+paper-id: 91
+pdf-id: 126
+graphs:
+  ddg:
+    name: Data Dependency Graph
+    description: A cross method data dependency graph.
+    artefacts:
+      - name: Source code
+        details: |-
+          Methods
+          
+          Specifically, for every method (core method),
+          which is either vulnerable or not vulnerable,
+          a set of method _called by that method_
+          (directly or indirectly) are also
+          collected in order to come up with the graph.
+    vertex-type:
+      - name: Unclear
+        details: n/a
+    edge-type:
+      - name: Data Dependency Edge
+        details: |-
+          Data dependency edge as in PDG.
+          
+          The graph is cross method, meaning calling relationships 
+          are used to determine cross-method data dependencies.
+    vertex-features: Source code is normalised, and encoded using word2vec
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  r-gcn-att:
+    type:
+      name: n/a
+      architecture: |-
+        Every node embedding is passed through a convolutional layer 
+        R-GCN (Relation GCN) layers 
+        Attention Layer 
+        R-GCN
+        Softmax for normalising attention weights 
+        Weighted sum using attention weights
+tasks:
+  vulnerability-detection:
+    training-objective: Classify method as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify method as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ddg
+    model: r-gcn-att
+    task: vulnerability-detection
+    comments:
+comments: # list

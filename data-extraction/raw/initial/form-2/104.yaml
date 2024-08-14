@@ -1,0 +1,54 @@
+paper-id: 104
+pdf-id: 141
+graphs:
+  not-ast:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+    vertex-features: |-
+      Variable names are normalised.
+      Node payload embedded using word2vec
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Discrete Fourier Transform applied to features 
+        GIN (Graph Isomorphism Network)
+        Self-Attention 
+        Attention-weighted sum pooling of node embeddings
+        FNN
+        Dropout
+        FNN 
+        Softmax
+tasks:
+  vulnerability-detection:
+    training-objective: Classify samples as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify samples as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: not-ast
+    model: model
+    task: vulnerability-detection
+    comments: |-
+      Graph description unclear. There may be other edge types in addition to the ones listed.
+comments: # list

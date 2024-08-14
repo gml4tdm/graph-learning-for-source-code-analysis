@@ -1,0 +1,164 @@
+paper-id: 47
+pdf-id: 67
+graphs:
+  user-file-interaction-graph:
+    name: User-file interaction graph
+    description: Models interactions between users and files in open source systems.
+    artefacts:
+      - name: Source Code
+        details: n/a
+      - name: Contributor Data
+        details: n/a
+    vertex-type:
+      - name: Source Code File
+        details: n/a
+      - name: User
+        details: n/a
+    edge-type:
+      - name: Contributed to
+        details: n/a
+    vertex-features: |-
+      Vertex features are initialised with user embeddings for users,
+      and the structure-enhanced file representations for source files.
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      The source code of files is partitioned into N_C code segments,
+      which are encoded using CodeBERT.
+      
+      A number N_Q of historical users are sampled and encoded.
+      
+      For every file, the code segments (C) and users (U) are used 
+      to compute (and learn) attention weights h, which are used 
+      to compute the _file attention representation_ h = a^T C
+  user-repository-interaction-graph:
+    name: User-project interaction graph
+    description: |-
+      Models interactions between users and projects in open source systems.
+      
+      Note that multiple such graphs may exists based on multiple 
+      interaction types ("behaviours").
+    artefacts:
+      - name: Repository
+        details: n/a
+      - name: Contributor Data
+        details: n/a
+    vertex-type:
+      - name: Repository
+        details: n/a
+      - name: User
+        details: n/a
+    edge-type:
+      - name: Contributed to
+        details: n/a
+    vertex-features: |-
+      Vertex features are initialised with user embeddings for users,
+      and the structure-enhanced repository representations for projects.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+  repository-graph:
+    name: n/a
+    description: Graph representation of repositories
+    artefacts:
+      - name: Repository
+        details: Source files, directories, repository information
+    vertex-type:
+      - name: Source File
+        details: n/a
+      - name: Directory
+        details: n/a
+      - name: Repository
+        details: Used as "root" node
+    edge-type:
+      - name: n/a (Parent)
+        details: |-
+          Each node (e.g. file) is connected to its parent. 
+          Top-level nodes are connected to the repository nodes.
+    vertex-features: |-
+      Files use the file attention representation based on the 
+      user-file interaction graph.
+
+      For directories, their names are split up into words,
+      which are encoded using TF-IDF.
+
+      Repository features are obtained by combining
+      project owners, creation timestamps, and top 5 
+      programming languages.
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  structural-features:
+    type:
+      name: n/a
+      architecture: |-
+        Uses vertex features from Graph representation of repositories        
+
+        A 3 layer GAT is used to learn _structure-enhanced node representations_
+  user-files:
+    type:
+      name: n/a
+      architecture: |-
+        Uses vertex features from user-file graphs 
+
+        LightGCN is used to compute higher order embeddings.
+
+        For each node, the embeddings for each layer (including initial embeddings)
+          are averaged to obtain the final embeddings.
+  user-projects:
+    type:
+      name: n/a
+      architecture: |-
+        Uses vertex features from user-projects graphs 
+        
+        LightGCN is used to compute higher order embeddings.
+
+        For each node, the embeddings for each layer (including initial embeddings)
+        are averaged to obtain the final embeddings.
+  prediction-file:
+    type:
+      name: n/a
+      architecture: |-
+        1) Aggregate the user embeddings from all user/project graphs over all behaviours for every user i; call this z_i*
+        2) Aggregate the repository embeddings from all repository graphs over all behaviours for every project i; call this r_i*
+        3) Compute u_i = MLP(u_i^* \mid\mid z*), where u_i^* is the final user embedding from the user/file graph.
+        4) Compute v_j = MLP(v_j^* \mid\mid r_{\phi(j)}*), 
+            where v_j^* is the final file embedding from the user/file graph,
+            and r_{\phi(j)}* the aggregated embedding (step 2) from the project file v_j belongs to.
+        5) Compute user/file affinity score s_F(i, j) = u_i^Tv_j
+  prediction-project:
+    type:
+      name: n/a
+      architecture: |-
+        1) Compute user/project affinity score s_P(i, j, t) = z_{i,t}^Tr_{j,t}
+        
+        (See prediction-file for variable meaning)
+tasks:
+  recommendation:
+    training-objective: |-
+      Compute affinity scores between users and files/repositories,
+      while minimising the BPR loss, as well as a contrastive loss
+    training-granularity: Node embedding / score optimisation
+    working-objective: Compute affinity scores between users and files/repositories
+    working-granularity: Node embedding / score optimisation
+    application: |-
+      Three applications:
+      1) Recommend files for a developer to work on (in the same project)
+      2) Recommend other projects for a developer to work on (cross project recommendation)
+      3) Recommend files for new developers to work on (cold start recommendation )
+    supervision: Supervised (somewhat)
+combinations:
+  - graph: user-file-interaction-graph + user-repositories-interaction-graph + repository-graph
+    model: structural-features + user-files + user-projects + prediction
+    task: recommendation
+    comments: |-
+      The tricky thing here is that there are many components which are all combined into 
+      a single object when training; all trainable components seem to be combined into 
+      a single network. Additionally, the model is optimised for all tasks at once,
+      with the loss function having both contrastive and affinity scoring 
+      components.
+comments: # list

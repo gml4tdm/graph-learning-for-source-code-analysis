@@ -1,0 +1,106 @@
+paper-id: 24
+pdf-id: 37
+graphs:
+  cag-word2vec: &cag-base
+    name: CAG (Code Aggregate Graph)
+    description: Combination of AST, CFG, PDG (Program Dependence Graph), DT (Dominator Tree), and PDT (Post-dominator Tree)
+    artefacts:
+      - name: Source code
+        details: Seemingly method level
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge (Tree labels; true, false, empty)
+        details: Edge from one statement ot other statements that may directly follow it
+      - name: Dominator Edge
+        details: Edge from a node to every node that it dominates
+      - name: Post-dominator Edge
+        details: Edge from a node to every node that is post-dominates
+      - name: Data Dependence Edge
+        details: Edge from variable declaration to all its uses
+    vertex-features: |-
+      Code statement and node type are encoded using Word2Vec (CBOW)
+      
+      This is concatenated with a one-hot encoding of the node type.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+  cag-fasttext:
+    <<: *cag-base
+    vertex-features: |-
+      Code statement and node type are encoded using FastText 
+
+      This is concatenated with a one-hot encoding of the node type.
+  cag-glove:
+    <<: *cag-base
+    vertex-features: |-
+      Code statement and node type are encoded using GloVe
+
+      This is concatenated with a one-hot encoding of the node type.
+models:
+  gcn:
+    type:
+      name: n/a
+      architecture:
+        GCN architecture, followed by global attention pooling, followed by MLP
+  ggnn:
+    type:
+      name: n/a
+      architecture:
+        GGNN architecture, followed by global attention pooling, followed by MLP
+  gin:
+    type:
+      name: n/a
+      architecture:
+        GIN (graph isomorphism) architecture, followed by global attention pooling, followed by MLP
+tasks:
+  vulnerability-detection:
+    training-objective: Classify methods as vulnerable/not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify methods as vulnerable/not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: cag-word2vec
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: cag-word2vec
+    model: ggnn
+    task: vulnerability-detection
+    comments:
+  - graph: cag-word2vec
+    model: gin
+    task: vulnerability-detection
+    comments:
+  - graph: cag-fasttext
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: cag-fasttext
+    model: ggnn
+    task: vulnerability-detection
+    comments:
+  - graph: cag-fasttext
+    model: gin
+    task: vulnerability-detection
+    comments:
+  - graph: cag-glove
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: cag-glove
+    model: ggnn
+    task: vulnerability-detection
+    comments:
+  - graph: cag-glove
+    model: gin
+    task: vulnerability-detection
+    comments:
+comments:
+  - Unclear which model combination were exactly explored; I would assume all, but that might be incorrect.

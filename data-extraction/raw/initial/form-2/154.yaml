@@ -1,0 +1,99 @@
+paper-id: 154
+pdf-id: 203
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: |-
+      Code tokens (in sequence) are also used as separate input.
+      
+      Comment generated thus far (in tokens) is also given as input.
+models:
+  g-trans:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two parallel encoders:
+          i) Graph Encoder
+            - Embedding Layer
+            - GGNN 
+          ii) Token Encoder (Regular Transformer Encoder)
+            - Embedding Layer 
+            - Self multi-head attention w/ residual connections and normalisation
+            - FNN (2x layers w/ Relu) w/ residual connections and normalisation
+        2) Decoder
+          i) Embedding Layer (for comment)
+          ii) Multi-head self-attention
+          iii) Multi-head attention with K and V derived from graph
+          iv) Multi-head attention with K and V derived from tokens 
+          v) FNN
+          vi) Copy mechanism (Ahmad et al. 2020) 
+              (copy distribution generated using last decoder output
+              and output of token encoder. Last decoder output used to obtain final distribution)
+  g-trans-modified:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two parallel encoders:
+          i) Graph Encoder
+            - Embedding Layer
+            - GGNN 
+          ii) Token Encoder (Regular Transformer Encoder)
+            - Embedding Layer 
+            - Self multi-head attention w/ residual connections and normalisation
+            - FNN (2x layers w/ Relu) w/ residual connections and normalisation
+        2) Decoder
+          i) Embedding Layer (for comment)
+          ii) Multi-head self-attention
+          iii) Multi-head attention with K and V derived from tokens 
+          iv) Multi-head attention with K and V derived from graph
+          v) FNN
+          vi) Copy mechanism (Ahmad et al. 2020) 
+              (copy distribution generated using last decoder output 
+                and output of graph node encoder. Last decoder output used to obtain final distribution)
+tasks:
+  comment-generation:
+    training-objective: |-
+      Given a code snippet, generate a comment.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph + Sequence to Sequence
+    working-objective: |-
+      Given a code snippet, generate a comment.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph + Sequence to Sequence
+    application: Code summarization (Comment Generation)
+    supervision: Supervised
+  method-name-generation:
+    training-objective: |-
+      Given a code snippet, generate a method name.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph + Sequence to Sequence
+    working-objective: |-
+      Given a code snippet, generate a method name.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph + Sequence to Sequence
+    application: Code summarization (Method Name Generation)
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: g-trans
+    task: comment-generation
+    comments:
+  - graph: ast
+    model: g-trans-modified
+    task: method-name-generation
+    comments:
+comments: # list

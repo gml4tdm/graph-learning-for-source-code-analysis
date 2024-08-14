@@ -1,0 +1,59 @@
+paper-id: sb-038
+pdf-id: sb-057
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: Node content (Nonterminal, with payload for leave nodes)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      depth-first traversal of AST, while inserting brackets (<, >) to denote subtrees
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - probably embedding layer
+      - LSTM with stack; hidden states are pushed and popped to a stack based on brackets (<, >)
+tasks:
+  code-completion:
+    training-objective: Complete the given code
+    training-granularity: graph to sequence
+    working-objective: Complete the given code
+    working-granularity: graph to sequence
+    application: code completion
+    supervision: supervised
+  program-classification:
+    training-objective: classify a program into one of the given classes
+    training-granularity: graph classification
+    working-objective: classify a program into one of the given classes
+    working-granularity: graph classification
+    application: program classification
+    supervision: supervised
+  code-summarization:
+    training-objective: generate a summary for the given code
+    training-granularity: graph to sequence
+    working-objective: generate a summary for the given code
+    working-granularity: graph to sequence
+    application: code summarization
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-completion
+    comments: the framework (stack based LSTM) is meant to be general; the tasks are merely example evaluation tasks.
+  - graph: ast
+    model: model
+    task: program-classification
+    comments: the framework (stack based LSTM) is meant to be general; the tasks are merely example evaluation tasks.
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments: the framework (stack based LSTM) is meant to be general; the tasks are merely example evaluation tasks.
+comments: # list

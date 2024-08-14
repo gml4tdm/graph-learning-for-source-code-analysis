@@ -1,0 +1,72 @@
+paper-id: 180
+pdf-id: 234
+graphs:
+  ast:
+    name: n/a
+    description: AST augmented with information from markdown
+    artefacts:
+      - name: Source code
+        details: snippets from Jupyter notebooks
+      - name: Markdown Text
+        details: Natural language from Markdown from the Jupyter notebooks
+    vertex-type:
+      - name: AST Node
+        details: n/a
+      - name: Virtual / classification token ([CLS])
+        details: Always at the start of the token sequence
+      - name: Markdown token node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Classification ([CLS]) Edge
+        details: Every node is connected to the [CLS] node
+      - name: Markdown Edge
+        details: |-
+          For a given snippet, each AST node in its AST is connected 
+          to a node for every token the most recent markdown block 
+          (occurring within 3 blocks)
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: |-
+      The entire graph is sequenced using depth-first traversal,
+      beginning with [CLS]
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Transformer based encoder 
+          i) Masked multi-head attention w/ residual connections and normalisation
+          ii) FNN w/ residual connections and normalisation
+          iii) Dimensionality reduction 
+        2) Output for [CLS] token is passed through FNN layer w/ softmax
+tasks:
+  code-classification:
+    training-objective: Given a code sample, classify it into one of the classes.
+    training-granularity: Graph Classification
+    working-objective: Given a code sample, classify it into one of the classes.
+    working-granularity: Graph Classification
+    application: |-
+      Program Classification 
+      
+      Specifically, classify a program according to its purpose in the data science pipeline;
+      import, wrangle, explore, model, evaluate
+    supervision: Supervised
+  reconstruction:
+    training-objective: |-
+      Given the output p of the model (from the softmax), 
+      reconstruct the output for [CLS] using a learnable matrix R as R * p
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: Pre-training
+    supervision: Unsupervised (self-supervised)
+combinations:
+  - graph: ast
+    model: model
+    task: code-classification + reconstruction
+    comments: The reconstruction task is meant to fine-tune the model
+comments: # list

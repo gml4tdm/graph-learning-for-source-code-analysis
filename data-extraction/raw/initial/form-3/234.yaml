@@ -1,0 +1,85 @@
+paper-id: 234
+pdf-id: 327
+graphs:
+  graph:
+    name: n/a
+    description: ast with data flow
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/data flow/ncs
+    vertex-features: not specified
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model-encoder:
+    name: n/a
+    architecture-attributes:
+      - parallel network; graph pipeline and raw code pipeline
+      - raw code into pre-trained code model (encoder only)
+      - graph into graph attention layers
+      - output of graph unit injected into encoder layers
+      - only weights in graph part are fine-tuned
+  model-encoder-decoder:
+    name: n/a
+    architecture-attributes:
+      - parallel network; graph pipeline and raw code pipeline
+      - raw code into pre-trained code model (encoder/decoder)
+      - graph into graph attention layers
+      - output of graph unit incorporated into encoder, decoder, and cross-attention layers
+      - only weights in graph part are fine-tuned
+tasks:
+  code-summarization:
+    training-objective: for a given piece of code, generate a summary
+    training-granularity: (graph + code) to sequence
+    working-objective: for a given piece of code, generate a summary
+    working-granularity: (graph + code) to sequence
+    application: Code summarization
+    supervision: supervised
+  code-generation:
+    training-objective: not specified
+    training-granularity: code to sequence
+    working-objective: not specified
+    working-granularity: code to sequence
+    application: Code generation
+    supervision: supervised
+  code-translation:
+    training-objective: translate code from one language to another
+    training-granularity: code to sequence
+    working-objective: translate code from one language to another
+    working-granularity: code to sequence
+    application: Code translation
+    supervision: supervised
+  code-refinement:
+    training-objective: fix buggy code
+    training-granularity: code to sequence
+    working-objective: fix buggy code
+    working-granularity: code to sequence
+    application: Code refinement
+    supervision: supervised
+  clone-detection:
+    training-objective: given two code samples, determine whether they are semantic clones
+    training-granularity: n/a
+    working-objective: given two code samples, determine whether they are semantic clones
+    working-granularity: n/a
+    application: Clone detection
+    supervision: supervised
+  defect-detection:
+    training-objective: given a piece of code, determine whether it contains a defect
+    training-granularity: graph classification
+    working-objective: given a piece of code, determine whether it contains a defect
+    working-granularity: graph classification
+    application: Defect detection
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model-encoder + model-encoder-decoder
+    task: code-summarization + code-generation + code-translation + code-refinement + clone-detection + defect-detection
+    comments: |-
+      The framework is meant to be a general fine-tuning strategy; 
+      the tasks are merely example tasks.
+      It is not clearly specified which model/task combinations were experimented with
+comments: # list

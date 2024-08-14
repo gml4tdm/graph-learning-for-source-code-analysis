@@ -1,0 +1,51 @@
+paper-id: 156
+pdf-id:
+graphs:
+  graph:
+    name: n/a
+    description: Simplified AST
+    artefacts:
+      - name: Source Code
+        details: Pairs of files; One old file and a revised version
+    vertex-type:
+      - name: AST Node
+        details: Some statement (internal) nodes are removed
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      Word embedding is used to encode nodes. 
+      
+      Unclear what exactly (node type, token payload) is encoded.
+      The images in the paper suggests that the node type is encoded
+      for internal nodes, and the payload for lexical nodes.
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) GCN (w/ LeakyReLU) (outputs h_v)
+        2) Attention 
+          b_v = \sum_{u \in V} h_v^T h_u
+          a_v = softmax(b_v)
+        3) Attention weighted sum: r = \sum_{v \in V} a_v h_v
+        4) Subtract difference of old and revised files: r = r_O - r_R 
+        5) Softmax(Wr + b)
+tasks:
+  automated-code-review:
+    training-objective: Given old and revised code, classify "the change" as "reject" or "accept"
+    training-granularity: Graph Classification, but not quite
+    working-objective: Given old and revised code, classify "the change" as "reject" or "accept"
+    working-granularity: Graph Classification, but not quite
+    application: Automated Code Review
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: automated-code-review
+    comments:
+comments: # list

@@ -1,0 +1,95 @@
+paper-id: 17
+pdf-id: 28
+graphs:
+  graph:
+    name: n/a
+    description: Control flow graph with data flow and AST subtrees
+    artefacts:
+      - name: Source code
+        details:
+    vertex-type:
+      - name: AST node
+        details: n/a
+      - name: Basic Block node
+        details: |-
+          Not entirely clear whether this is a node type on its own.
+          
+          Every basic block is represented using an AST.
+    edge-type:
+      - name: Call flow edge
+        details: n/a
+      - name: Exception flow edge
+        details: n/a
+      - name: Data flow edge
+        details: Links variable definitions to their uses
+      - name: Exception Flow Edge
+        details: n/a
+      - name: Sequential Execution Edge
+        details: n/a
+      - name: Conditional True Flow Edge
+        details: n/a
+      - name: Conditional False Flow Edge
+        details: n/a
+    vertex-features: Not specified
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  mfgnn:
+    type:
+      name: Multi-Flow Graph Neural Network (MFGNN)
+      architecture: |-
+        Tree-based CNN (TBCNN), adjusted to assign higher weights to deeper nodes, is used to learn local features. 
+        
+        Contextual features are used using a layer based on GAT, called Attention-based GNN for DAGs (AGN4D),
+        which can handle directed graphs and multiple edge types. Initial inputs are the local features.
+        
+        Local and contextual features are fused using max-pooling.
+tasks:
+  program-classification:
+    training-objective: Given the representation of a program, classify it into one of the classes.
+    training-granularity: Graph Classification
+    working-objective: Given the representation of a program, classify it into one of the classes.
+    working-granularity: Graph Classification
+    application: Program Classification
+    supervision: Supervised
+  within-project-defect-prediction:
+    training-objective: Classify source code as defective/not defective
+    training-granularity: Graph Classification
+    working-objective: Classify source code as defective/not defective
+    working-granularity: Graph Classification
+    application: Source code defect detection (in the same project)
+    supervision: Supervised
+  cross-project-defect-prediction:
+    training-objective: Classify source code as defective/not defective
+    training-granularity: Graph Classification
+    working-objective: Classify source code as defective/not defective
+    working-granularity: Graph Classification
+    application: Source code defect detection (in a different project)
+    supervision: Supervised
+  functional-code-clone-detection:
+    training-objective: Given two programs, determine if they implement the same functionality
+    training-granularity: Graph Classification (?)
+    working-objective: Given two programs, determine if they implement the same functionality
+    working-granularity: Graph Classification (?)
+    application: Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: mfgnn
+    task: program-classification
+    comments:
+  - graph: graph
+    model: mfgnn
+    task: within-project-defect-prediction
+    comments:
+  - graph: graph
+    model: mfgnn
+    task: cross-project-defect-prediction
+    comments:
+  - graph: graph
+    model: mfgnn
+    task: functional-code-clone-detection
+    comments:
+comments: # list

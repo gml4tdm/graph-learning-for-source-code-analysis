@@ -1,0 +1,124 @@
+paper-id: 179
+pdf-id: 233
+graphs:
+  ast: &ast
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: directed
+    vertex-features: |-
+      Node type and Node payload tokens are encoded using word2vec
+    edge-features: n/a
+    connectivity-features: |-
+      Stacked adjacency tensor.
+
+      For every graph, the adjacency matrix is determined.
+      The four matrices are then combined into a third order tensor.
+      
+      Self connections are added to all graphs
+    graph-features: n/a
+    other-features: n/a
+  cfg:
+    name: Control Flow Graph
+    edge-type:
+      - name: Control Flow Edge
+        details: Edges representing control flow between basic blocks
+    <<: *ast
+  dfg:
+    name: Data Flow Graph
+    edge-type:
+      - name: Data Flow Edge
+        details: |-
+          Edges represent subsequent modification or access of the same variables
+    <<: *ast
+  ncs:
+    name: Natural Code Sequence
+    edge-type:
+      - name: Code Sequence Edge
+        details: Edge from one AST leaf node to the next
+    <<: *ast
+models:
+  var-misuse-model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Graph Tensor Convolution Neural Network (GTCN)
+          H^{t + 1} = \sigma(fold(Circ(A) \cdot Matvec(H^t) \times_{3}) W^t)
+        
+          effectively achieves inter-graph communication through the Circ(.) operation.
+          (correlations between graphs)
+        
+        2) For each node, 
+            its initial embedding, GTCN embedding, and node embeddings of candidates
+            are passed through a linear layer w/ softmax.
+  code-prediction-model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Graph Tensor Convolution Neural Network (GTCN)
+          H^{t + 1} = \sigma(fold(Circ(A) \cdot Matvec(H^t) \times_{3}) W^t)
+
+          effectively achieves inter-graph communication through the Circ(.) operation.
+          (correlations between graphs)
+
+        2) For each node, 
+            Based on node embeddings, either predict a token from the (pretrained)
+            global embedding, or a local token from the input graph.
+  vulnerability-detection-model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Graph Tensor Convolution Neural Network (GTCN)
+          H^{t + 1} = \sigma(fold(Circ(A) \cdot Matvec(H^t) \times_{3}) W^t)
+
+          effectively achieves inter-graph communication through the Circ(.) operation.
+          (correlations between graphs)
+
+        2) MLP
+tasks:
+  variable-misuse-detection:
+    training-objective: |-
+      Given a slot (node for which variable must be predicted), select the 
+      correct candidate out of all type-correct options (other nodes in the graph)
+    training-granularity: Node Classification (?)
+    working-objective: |-
+      Given a slot (node for which variable must be predicted), select the 
+      correct candidate out of all type-correct options (other nodes in the graph)
+    working-granularity: Node Classification (?)
+    application: Variable Misuse Detection
+    supervision: Supervised
+  code-prediction:
+    training-objective: Predict the next token(s)
+    training-granularity: n/a
+    working-objective: Predict the next token(s)
+    working-granularity: n/a
+    application: Source code prediction
+    supervision: Supervised
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: Graph Classification (multiple graphs per sample)
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: Graph Classification (multiple graphs per sample)
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ast + cfg + dfg + ncs
+    model: var-misuse-model
+    task: variable-misuse-detection
+    comments:
+  - graph: ast + cfg + dfg + ncs
+    model: code-prediction-model
+    task: code-prediction
+    comments:
+  - graph: ast + cfg + dfg + ncs
+    model: vulnerability-detection-model
+    task: vulnerability-detection
+    comments:
+comments: # list

@@ -1,0 +1,47 @@
+paper-id: 28
+pdf-id: 41
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  recursive-vae:
+    type:
+      name: n/a
+      architecture:
+        One variational auto-encoder for every type of AST node.
+      
+        Embeddings are computed recursively; first leave nodes, then their parents.
+      
+        Leaf nodes have no payload, so the model only learns the structure.
+      
+        Both the encoder and decoder are single layer FNN models,
+        with tanh and sigmoidal activation respectively.
+tasks:
+  vae-training:
+    training-objective: Minimise reconstruction loss
+    training-granularity: Graph representation learning
+    working-objective: Graph encoding
+    working-granularity: Graph encoding
+    application: Graph encoding
+    supervision: self-supervised
+combinations:
+  - graph: ast
+    model: recursive-vae
+    task: vae-training
+    comments:
+comments: # list

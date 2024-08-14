@@ -1,0 +1,63 @@
+paper-id: 210
+pdf-id: 280
+graphs:
+  line-graph:
+    name: Line Graph
+    description: n/a
+    artefacts:
+      - name: Source Code
+        details: Smart Contracts
+    vertex-type:
+      - name: Line
+        details: n/a
+    edge-type:
+      - name: Function Edge
+        details: Connect first and last lines of function declaration
+      - name: Control Edge
+        details: end to end connections between control blocks (if/for/while)
+      - name: Sequential Edge
+        details: Connect lines in top to bottom order
+      - name: Variable Edge
+        details: Connect nodes containing the same variables
+      - name: Modifier Edge
+        details: connect definitions of modifiers to their corresponding uses
+      - name: Reentrancy Edge
+        details: Connect nodes contain "call.value" to all other nodes belonging to the same function
+    vertex-features: Text content of every line is used as feature (after preprocessing; normalisation of identifiers etc)
+    edge-features: n/a
+    connectivity-features: Not explicitly specified, but seems to be 6 adjacency matrices
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Modified Transformer Encoder Architecture
+          If the original transformer is expressed as 
+        
+            e_{ij} = \frac{(x_iW_Q)(x_jW_K)^T)}{\sqrt{d}}
+            a_{ij} = softmax_j(e_{ij})
+            z_i = \sum_{j = 1}^n a_{ij}(x_jW^v)
+        
+          Then it is now modified to become 
+        
+            g_p = EmbeddingLayer(edge type p)W_p + c_p 
+            b_{ij} = \sum_{k = 1}^6 k_p * g_p (k_p: indicator whether there is an edge of type p between i and j)
+            e_{ij} = \frac{(x_iW_Q)(x_jW_K)^T)}{\sqrt{d}} + b_{ij}
+            a_{ij} = softmax_j(e_{ij})
+            z_i = (\sum_{j = 1}^n a_{ij}(x_jW^v)) \odot (x_iW_R)
+tasks:
+  vulnerability-detection:
+    training-objective: Given a sample, classify it as vulnerable or not vulnerable
+    training-granularity: Classification
+    working-objective: Given a sample, classify it as vulnerable or not vulnerable
+    working-granularity: Classification
+    application: Vulnerability Detection in Smart Contracts
+    supervision: Supervised
+combinations:
+  - graph: line-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

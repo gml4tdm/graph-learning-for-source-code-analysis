@@ -1,0 +1,205 @@
+paper-id: 16
+pdf-id: 27
+graphs:
+  sc-ast:
+    name: Statement-centered AST
+    description:
+    artefacts:
+      - name: Source code
+        details:
+    vertex-type:
+      - name: AST Node
+        details: n/a
+      - name: Statement Node
+        details: |-
+          Statement node (one of the following must be met):
+          1) Node is expression statement, declaration statement, or branching statement (break, continue, return)
+            --> This definition makes sure a statement contains no statement in its subtree (because if/for/while excluded)
+          2) A node represents an expression in a program and its parent node is a decision or loop statement.
+    edge-type:
+      - name: AST Edge (directed, augmented)
+        details: |-
+          Use normal AST edges (directed), _but_ when a statement 
+          node is detected, reverse the direction of all edges in 
+          the subtree(s) of the statement node, so that they point
+          to the statement node.
+    vertex-features: Not specified
+    edge-features: Edge type (up or down); encoding not specified
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  pcan:
+    type:
+      name: Path context augmented network
+      architecture: |-
+        GGNN Layer
+        Key-Value Self-attention layer
+          Given statements m and k, we have 
+            \alpha_{m,k} = \frac{\exp(\Psi(e_m, e_k))}{\sum_{l = 1}^N \exp(\Psi(e_m, e_l))}
+            \Psi(e_m, e_k) = \langle W_{Query}e_m, W_{key} e_k \rangle
+          
+          Embeddings e_m updated to s_m according to:
+        
+            s_m = \sum_{k=1}^N \alpha_{m,k} W_{value} e_k
+        Aggregation layer (average of all statement vectors)
+        
+        Although the method is proposed as a general method, it is evaluated 
+        on code clone detection, with the following addition to the network:
+        
+        1) Two code clones are separately passed through the network (the _same_ network),
+        2) the resulting two embeddings are subtracted and the L2 norm is computed.
+        3) The L2 norm is passed through a sigmoid function
+tasks:
+  clone-detection:
+    training-objective: For two given graphs, determine if they are clones or not.
+    training-granularity: Graph Classification
+    working-objective: For two given graphs, determine if they are clones or not.
+    working-granularity: Graph Classification
+    application: Code clone detection
+    supervision: supervised
+  code-classification:
+    training-objective: For a given graph, determine the class of the graph.
+    training-granularity: Graph Classification
+    working-objective: For a given graph, determine the class of the graph.
+    working-granularity: Graph Classification
+    application: Code classification
+    supervision: supervised
+  method-naming:
+    training-objective: For a given graph, determine the method name.
+    training-granularity: Graph-based Generation
+    working-objective: For a given graph, determine the method name.
+    working-granularity: Graph-based Generation
+    application: Method name detection
+    supervision: supervised
+training:
+  training-setup-oj-clone: &clone-base
+    train-test-split:
+      train: 0.6
+      test: 0.2
+      validation: 0.2
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters: []
+    hyper-parameter-selection: n/a
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: n/a
+    evaluation-methods:
+      - name: precision
+        type: metric
+        details: n/a
+      - name: recall
+        type: metric
+        details: n/a
+      - name: f1-score
+        type: metric
+        details: n/a
+  training-setup-bbc:
+    <<: *clone-base
+    train-test-split:
+      train: 0.8
+      test: 0.1
+      validation: 0.1
+  training-setup-oj-class:
+    <<: *clone-base
+    hyper-parameters:
+      - name: loss
+        value: cross-entropy
+    evaluation-details: Logits obtained by Wr + b (r is embedding); apparently no softmax used?
+  training-method-naming:
+    train-test-split:
+      train: Not specified
+      test: Not specified
+      validation: Not specified
+
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters: []
+    hyper-parameter-selection: n/a
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: encoder/decoder setup. Unclear what decoder is used
+    evaluation-methods:
+      - name: precision
+        type: metric
+        details: n/a
+      - name: recall
+        type: metric
+        details: n/a
+      - name: f1-score
+        type: metric
+        details: n/a
+datasets:
+  oj-clone:
+    name: n/a
+    description: |-
+      Based on OJClone, containing programs from 104 different classes.
+      
+      Programs are said to be clones if they belong to 
+      the same class.
+      
+      Downsampled to only use the first 15 classes,
+      which results in 28,000,000 clone pairs,
+      of which 50000 are randomly sampled.
+    source: # list
+      - Online judge systems
+    labelling: Yes; not specified
+    size: 50000
+    is-pre-existing: yes
+  oj-clone-full:
+    name: OJClone
+    description: Dataset containing 52000 progams from 104 classes
+    source:
+      - Online judge systems
+    labelling: Yes; not specified
+    size: 52000
+    is-pre-existing: yes
+  bcb:
+    name: BigCloneBench
+    description: |-
+      Dataset of java methods containing true 
+      and false clone pairs.
+      
+      Downsampled to 9134 code fragments,
+      randomly sampled pairs from the total
+      amount of paired fragments.
+    source:
+      - BigCloneBench (Java systems)
+    labelling: Yes; not specified
+    size: 125000 (approximately)
+    is-pre-existing: yes
+  java-small:
+    name: Java-small
+    description: dataset of Java methods
+    source:
+      - Not specified
+    labelling: n/a
+    size: 500000
+    is-pre-existing: yes
+combinations:
+  - graph: sc-ast
+    model: pcan
+    task: clone-detection
+    training: training-setup-oj-clone
+    dataset: oj-clone
+    comments:
+  - graph: sc-ast
+    model: pcan
+    task: clone-detection
+    training: training-setup-bbc
+    dataset: bcb
+    comments:
+  - graph: sc-ast
+    model: pcan
+    task: code-classification
+    training: training-setup-oj-class
+    dataset: oj-clone-full
+    comments:
+  - graph: sc-ast
+    model: pcan
+    task: method-naming
+    training: training-method-naming
+    dataset: java-small
+    comments: Unclear how they used precision/recall/f1-score to evaluate this
+comments: # list

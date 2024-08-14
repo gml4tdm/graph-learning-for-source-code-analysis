@@ -1,0 +1,78 @@
+paper-id: sb-090
+pdf-id: sb-122
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details:  n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features:
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Paths between two terminals (incl. directions) are used as features
+      For the terminal nodes, tokens are features. 
+      The path itself (sequence of types, interlaced with up/down directions) are also features (i.e. a full path is a single feature)
+  cfg:
+    name: cfg
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: statement
+    edge-type: control flow
+    vertex-features:
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Paths from the method start to either a return statement
+      or earlier visited path (loop structure) are used as features
+      
+      Exact details not specified, but based on code2vec we would have that the path (sequence of types) is the feature
+  pdg:
+    name: pdg
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: statement
+    edge-type: control dependence/data dependence
+    vertex-features:
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Paths of homogeneous edge type (either all control or all data dependence) (incl. directions)
+      are used as features.
+      
+      Exact details not specified, but based on code2vec we would have that the path (sequence of types, incl. directions) is the feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - separate pipeline for every path (ast, cfg, pdg) type
+      - embedding layers for tokens and paths
+      - concat start token, path, and end token embeddings
+      - fnn
+      - attention-weighted sum of path vectors
+      - concatenate the three aggregated path vectors
+      - (if necessary, softmax for prediction)
+tasks:
+  method-name-prediction:
+    training-objective: Given a method, predict its name (from a corpus of possible method names)
+    training-granularity: n/a
+    working-objective: Given a method, predict its name (from a corpus of possible method names)
+    working-granularity: n/a
+    application: Method name prediction
+    supervision: Supervised
+combinations:
+  - graph: ast + cfg + pdg
+    model: model
+    task: method-name-prediction
+    comments:
+comments: # list

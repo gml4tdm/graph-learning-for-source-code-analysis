@@ -1,0 +1,77 @@
+paper-id: 21
+pdf-id: 34
+graphs:
+  fa-ast:
+    name: FA-AST (Flow-Augmented AST)
+    description:
+    artefacts:
+      - name: Source code (file)
+        details:
+    vertex-type:
+      - name: AST Node
+        details: Purely syntactic nodes (e.g. "{") removed
+    edge-type:
+      - name: AST child
+        details: n/a
+      - name: AST parent
+        details: n/a
+      - name: FA Next Token
+        details: Connects one terminal leaf node to next terminal leaf node
+      - name: FA Next Sibling
+        details: Connects each node to its next sibling
+      - name: FA Next Use
+        details: Connects a node representing a variable to the next use of said variable
+      - name: FA If Flow
+        details: Connects condition of if statement with code block that is executed if the condition is true
+      - name: FA Else Flow
+        details: Connects condition of if statement with code block that is executed if the condition is false
+      - name: FA While Flow
+        details: |-
+          Connects condition of while statement with code block that is executed while the condition is true.
+          
+          The block also has a FA Next Use back to the condition
+      - name: FA For Flow
+        details: |-
+          Connects condition of for statement with code block that is executed while the condition is true.
+          
+          The block also has a FA Next Use back to the condition
+      - name: FA Next Statement Flow
+        details: Edge to the directly following statement
+    vertex-features: na / Not specified (unclear how embeddings are initialised)
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  tap-gnn-gcn:
+    type:
+      name: TEP-GNN
+      architecture: |-
+        3-layer GCN w/ ReLU
+        global max pooling
+        linear layer
+  tap-gnn-ggnn:
+    type:
+      name: TEP-GNN
+      architecture: |-
+        3-layer GGNNN w/ ReLU
+        global max pooling
+        linear layer
+tasks:
+  runtime-prediction:
+    training-objective: Given a graph representing a file of unit test, predict the runtime
+    training-granularity: Graph Regression
+    working-objective: Given a graph representing a file of unit test, predict the runtime
+    working-granularity: Graph Regression
+    application: Unit Test Runtime Prediction
+    supervision: Supervised
+combinations:
+  - graph: fa-ast
+    model: tap-gnn-gcn
+    task: runtime-prediction
+    comments:
+  - graph: fa-ast
+    model: tap-gnn-ggnn
+    task: runtime-prediction
+    comments: Only used as a baseline to evaluate the benefits of GCN
+comments: # list

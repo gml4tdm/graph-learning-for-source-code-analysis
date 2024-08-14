@@ -1,0 +1,115 @@
+paper-id: 241
+pdf-id: 336
+graphs:
+  class-diagram:
+    name: class dependency network
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: classes
+    edge-type: dependencies
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  cluster-1:
+    name: Label Propagation
+    architecture-attributes:
+      - graph clustering algorithm
+  cluster-2:
+    name: Louvain Algorithm
+    architecture-attributes:
+      - graph clustering algorithm
+  cluster-3:
+    name: Leiden Algorithm
+    architecture-attributes:
+      - graph clustering algorithm
+  cluster-4:
+    name: Speaker-Listener Label Propagation
+    architecture-attributes:
+      - graph clustering algorithm
+  cluster-5:
+    name: Leading Eigenvector Algorithm
+    architecture-attributes:
+      - graph clustering algorithm
+  cluster-6:
+    name: Girvan-Newman algorithm
+    architecture-attributes:
+      - graph clustering algorithm
+  cluster-7:
+    name: Markov clustering
+    architecture-attributes:
+      - graph clustering algorithm
+  cluster-8:
+    name: Rber pots algoritmh
+    architecture-attributes:
+      - graph clustering algorithm
+  cluster-9:
+    name: Rb pots algoritmh
+    architecture-attributes:
+      - graph clustering algorithm
+  cluster-10:
+    name: Walktrap
+    architecture-attributes:
+      - graph clustering algorithm
+  cluster-11:
+    name: Chinesewhispers
+    architecture-attributes:
+      - graph clustering algorithm
+tasks:
+  microservice-identification:
+    training-objective: n/a
+    training-granularity:  n/a
+    working-objective: Cluster graph into candidate microservices
+    working-granularity: Graph Clustering
+    application: Microservice decomposition
+    supervision: unsupervised
+combinations:
+  - graph: class-diagram
+    model: cluster-1
+    task: microservice-identification
+    comments:
+  - graph: class-diagram
+    model: cluster-2
+    task: microservice-identification
+    comments:
+  - graph: class-diagram
+    model: cluster-3
+    task: microservice-identification
+    comments:
+  - graph: class-diagram
+    model: cluster-4
+    task: microservice-identification
+    comments:
+  - graph: class-diagram
+    model: cluster-5
+    task: microservice-identification
+    comments:
+  - graph: class-diagram
+    model: cluster-6
+    task: microservice-identification
+    comments:
+  - graph: class-diagram
+    model: cluster-7
+    task: microservice-identification
+    comments:
+  - graph: class-diagram
+    model: cluster-8
+    task: microservice-identification
+    comments:
+  - graph: class-diagram
+    model: cluster-9
+    task: microservice-identification
+    comments:
+  - graph: class-diagram
+    model: cluster-10
+    task: microservice-identification
+    comments:
+  - graph: class-diagram
+    model: cluster-11
+    task: microservice-identification
+    comments:
+comments: # list

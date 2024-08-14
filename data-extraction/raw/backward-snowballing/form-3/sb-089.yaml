@@ -1,0 +1,37 @@
+paper-id: sb-089
+pdf-id: sb-121
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: node type and tokens are used as features
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: certain sub-trees are extracted from the AST based on node type. Note that these are used as "labels"; the full AST is used as input.
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding matrices for node type and tokens; fused through linear layer
+      - tree based CNN, but with attention-weighted summing for pooling
+      - Predict probabilities of sub-trees
+tasks:
+  embedding:
+    training-objective: For each sub-tree type, predict its probability of occurring in the full AST
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: embedding learning
+    supervision: self-supervised
+combinations:
+  - graph: ast
+    model: model
+    task: embedding
+    comments:
+comments: # list

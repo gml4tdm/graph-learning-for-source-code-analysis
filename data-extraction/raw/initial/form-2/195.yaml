@@ -1,0 +1,63 @@
+paper-id: 195
+pdf-id: 260
+graphs:
+  flow-enriched-ast:
+    name: Flow-Enriched AST
+    description: AST with control and data flow
+    artefacts:
+      - name: Source code
+        details:
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: undirected
+      - name: Control Flow Edge
+        details: undirected
+      - name: Data Flow Edge -- LastRead
+        details: undirected
+      - name: Data Flow Edge -- LastWrite
+        details: undirected
+      - name: Data Flow Edge -- ComputeFrom
+        details: undirected
+    vertex-features: One-hot encoded node type
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        (note: separate GCN module for every language)
+        
+        1) Node feature passed through linear layer 
+        2) Blocks of GCN followed by LSTM (LSTM used to learn from historic node representations?)
+            Final LSTM output is used for final node representation 
+        3) Compute H_a: concatenation of all node feature matrices after each GCN iteration 
+            (required for unsupervised learning)
+        4) set2set graph pooling layer on output of last GCN/LSTM round 
+        5) Representations for pair of input snippets is concatenated, passed through FNN w/ sigmoid
+tasks:
+  code-clone-detection:
+    training-objective: Given two code snippets, determine whether they are semantic clones
+    training-granularity: Graph Classification (?)
+    working-objective: Given two code snippets, determine whether they are semantic clones
+    working-granularity: Graph Classification (?)
+    application: Cross Language Code Clone Detection
+    supervision: Supervised
+  embedding:
+    training-objective: maximise mutual information (MI) between H_a and all H_a^i (local AST substructures)
+    training-granularity: Graph Embedding Learning
+    working-objective: n/a
+    working-granularity: n/a
+    application: Representation (pre-)learning
+    supervision: Unsupervised
+combinations:
+  - graph: flow-enriched-ast
+    model: model
+    task: code-clone-detection + embedding
+    comments: As far as I understand, the embedding task is used to improve performance in an unsupervised manner
+comments: # list

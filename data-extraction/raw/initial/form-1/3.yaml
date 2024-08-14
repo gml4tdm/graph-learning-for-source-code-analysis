@@ -1,0 +1,132 @@
+paper-id: 3
+pdf-id: 6
+graphs:
+  syntactic-dependency-parse:
+    name: n/a
+    description: Based on syntactic dependency parsing from NLP
+    artefacts:
+      - name: Source code (methods)
+        details: n/a
+    vertex-type:
+      - name: AST leaf nodes
+        details: |-
+          During evaluation, tokens in the leaf nodes were lowered,
+          non-identifier tokens were removed, and rare tokens were 
+          also removed, thus reducing the number of nodes present 
+          in the final graph.
+    edge-type:
+      - name: n/a
+        details: |-
+          For every (source, target) pair (v1, v2) of AST nodes, 
+          find the least common ancestor of v1 and v2 in the AST.
+          The edge label is given by 
+          1) taking every node in the path from v1 to the ancestor,
+            and adding an "up" arrow after every node type name
+          2) Taking every node in the path from the ancestor to v2,
+            and adding an "down" arrow after every node type name
+          3) Concatenating all nodes in the path (as described above)
+            using "-" symbols.
+          
+          If the path is longer than some threshold, it is ignored.
+          Otherwise, the edge is present in the final graph.
+    vertex-features: Not specified, nor specified how vertex features are initialised
+    edge-features: Not specified
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: GCN
+      architecture: |- 
+        Spatial GCN layer (size 128) with edge-wise gating.
+        
+        GCN output is defined as:
+        
+        h_{w_t}^\ell = f\left(\sum_{w_c \in C_{w_t} g^\ell_{e_{w_c,w_t}} \times \left(W^\ell_{e_{w_c,w_t}} h^\ell_{w_c} + b^\ell_{e_{w_c,w_t}}\right)\right)
+        
+        Where g is the edge-wise gating (assigning weight to edges), defined as 
+        
+        g^\ell_{e_{w_c,w_t}} = \sigma\left(W^\ell_{e_{w_c,w_t}} h^\ell_{w_c} + b^\ell_{e_{w_c,w_t}}\right)
+tasks:
+  embedding:
+    training-objective: Given the context tokens (neighbour tokens), predict the target token.
+    training-granularity: Node Embedding
+    working-objective: Given a token, compute an embedding
+    working-granularity: Node Embedding
+    application: Task-agnostic code embedding (e.g. average of sum token embeddings to compute embedding for snippet)
+    supervision: unsupervised (self-supervised)
+training:
+  training:
+    train-test-split: n/a
+    cross-validation: n/a
+    hyper-parameters:
+      - name: epochs
+        value: 1
+      - name: loss
+        value: |-
+          \sum_{w_t \in V} \log P(w_t \mid C_{w_t}) 
+            
+          where
+         
+          P(w_t \mid C_{w_t}) = \frac{\exp(v_{w_t}^T h_{w_t}}{\sum_{w_t' \in V} \exp(v_{w_t'}^T h_{w_t'})}
+            
+          where v is the target embedding (and h the hidden representation)
+      - name: max edge path length
+        value: 8
+      - name: max number of nodes in graph
+        value: 100
+      - name: max number of edges in graph
+        value: 800
+      - name: window (maximum distance between current token and neighbour tokens)
+        value: 5
+      - name: batch size
+        value: 64
+      - name: dropout
+        value: 0
+      - name: neg (number of negative samples used when updating the weights of the model)
+        value: 5
+    hyper-parameter-selection: epochs based on literature
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: Evaluate on six downstream tasks.
+    evaluation-methods:
+      - name: code comment generation
+        type: downstream task
+        details: Using a neural network, evaluated using 10-fold cross validation.
+      - name: code authorship identification
+        type: downstream task
+        details: Using a neural network, evaluated using 10-fold cross validation.
+      - name: code clone detection
+        type: downstream task
+        details: Using a neural network, evaluated using 10-fold cross validation.
+      - name: source code classification
+        type: downstream task
+        details: Using a neural network, evaluated using 10-fold cross validation.
+      - name: logging statement prediction
+        type: downstream task
+        details: Using a neural network, evaluated using 10-fold cross validation.
+      - name: software defect prediction
+        type: downstream task
+        details: Using logistic regression, evaluated using 10-fold cross validation.
+datasets:
+  java-small:
+    name: Java-small
+    description: |-
+      Dataset of Java method snippets.
+      
+      Initially contained 665115 samples,
+      but ones with too large graphs were removed.
+    source:
+      - Open source Github projects
+    labelling: n/a
+    size: 637108
+    is-pre-existing: Yes
+combinations:
+  - graph: syntactic-dependency-parse
+    model: model
+    task: embedding
+    training: training
+    dataset: java-small
+    comments:
+comments: # list
+  - Loss function is unclear; what are the target embeddings? Also, why does it depend on all nodes (V) and now C_{w_t}?

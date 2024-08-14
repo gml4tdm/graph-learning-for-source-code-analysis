@@ -1,0 +1,40 @@
+paper-id: sb-028
+pdf-id: sb-038
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: type and value (EMPTY value for internal nodes)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      AST linearised using depth first traversal.
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - LSTM over sequence input
+      - Context vector computed by multiplying hidden state matrix with attention vector
+      - Create a similar vector, but attention is computed based on a nodes parent (i.e. pass node parent though FNN instead of node itself)
+      - Concat; FNN w/ tanh and FNN w/ softmax
+      - Pointer-mixture network for output
+tasks:
+  code-completion:
+    training-objective: Given a code sample, predict node type and value of the next AST node (two identical but fully separate networks)
+    training-granularity: n/a
+    working-objective: Given a code sample, predict node type and value of the next AST node (two identical but fully separate networks)
+    working-granularity: n/a
+    application: Code completion
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-completion
+    comments:
+comments: # list

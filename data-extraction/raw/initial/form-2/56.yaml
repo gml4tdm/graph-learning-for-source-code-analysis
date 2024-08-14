@@ -1,0 +1,77 @@
+paper-id: 56
+pdf-id: 79
+graphs:
+  ipg:
+    name: Inter-procedural Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Control Dependence Edge
+        details:  From PDG
+      - name: Data Dependence Edge
+        details: From PDG
+      - name: Data Flow Edge
+        details: n/a
+      - name: Function Call Edge
+        details: n/a
+    vertex-features: |-
+      Nodes represent statements, which consists of tokens.
+      Nodes are embedding by summing the embeddings of the tokens, 
+      where tokens are embedded using a learnable embedding.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: |-
+      Sample subgraphs using vulnerability-specific program slicing;
+      Identify start and end of possible vulnerability, and select 
+      the graph of all paths between the two.
+      
+      Extract six subgraphs for: 
+        1) buffer overflow
+        2) memory leak
+        3) null pointer dereference
+        4) integer overflow
+        5) use after free 
+        6) double free
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture:
+        Ensemble of multiple models.
+        
+        Six submodels, each of which takes in a number of subgraphs of _one_ of the specific types;
+          1) Trainable Embedding Layer
+          2) GGNN (SUM + GRU) layers 
+          3) FNN layer for each node embedding
+          4) Max pooling to obtain graph embedding 
+          5) self-attention based weighted sum aggregation 
+          6) FNN layer w/ sigmoid activation 
+        
+        GNN model, which takes as input the inter-procedural graph;
+          1) Trainable Embedding Layer
+          2) GGNN (SUM + GRU) layers
+          3) FNN layer for each node embedding
+          4) Max pooling to obtain graph embedding
+          5) FNN layer w/ sigmoid activation 
+      
+        All models are combined through summing and normalising.
+tasks:
+  vul-detection:
+    training-objective: For a given piece of code, output which vulnerabilities it contains
+    training-granularity: Graph Classification
+    working-objective: For a given piece of code, output which vulnerabilities it contains
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ipg
+    model: model
+    task: vul-detection
+    comments:
+comments: # list

@@ -1,0 +1,46 @@
+paper-id:
+pdf-id:
+graphs:
+  graph:
+    name: n/a
+    description: Complete old and new files are used in order to parse the changed method in full.
+    artefacts:
+      - name: source code
+        details: diff
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: |-
+      Node types (internal nodes)
+      
+      Leaf nodes are split into sub-tokens
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      For both old and new code, paths between changed tokens are extracted from the 
+      ASTs obtained from the old/new files.
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - encoder/decoder
+      - embedding layers
+      - embed paths using Bidirectional LSTM
+      - leafs encoded by summing embeddings of sub-tokens
+      - Decoder uses Luong attention mechanism applied to the set of paths, and outputs using softmax
+tasks:
+  commit-message-generation:
+    training-objective: Given the paths for a change, generate a commit message
+    training-granularity: x to sequence
+    working-objective: Given the paths for a change, generate a commit message
+    working-granularity: x to sequence
+    application: Commit message generation
+    supervision: supervised (self-supervised)
+combinations:
+  - graph: graph
+    model: model
+    task: commit-message-generation
+    comments:
+comments: # list

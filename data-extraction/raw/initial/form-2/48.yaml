@@ -1,0 +1,79 @@
+paper-id: 48
+pdf-id: 68
+graphs:
+  dev-network:
+    name: n/a
+    description: |-
+      Network connecting developers, issues, source files, and tags assigned to issues.
+    artefacts:
+      - name: Issues
+        details: n/a
+      - name: User Data
+        details: n/a
+      - name: Source Code
+        details: Files
+    vertex-type:
+      - name: Developer
+        details: n/a
+      - name: Issue
+        details: n/a
+      - name: Source File
+        details: n/a
+      - name: Issue Tag
+        details: n/a
+    edge-type:
+      - name: Labelled
+        details: Connects issues with their labels
+      - name: Review
+        details: Linked Developers with Issues they were involved in
+      - name: Commit
+        details: Link developers to source files they committed
+      - name: Similar
+        details: Link issues to possibly related source files, based on cosine similarity (len(issue & code) / len(code))
+    vertex-features: |-
+      Nodes are embedded of numerical vectors with equal dimensions for all node types.
+      
+      For issues, they are encoded using Word2Vec, by taking the average of all words in the issue description.
+      
+      Developers are encoded by taking the average of the embeddings of all the issues created by the developer.
+      
+      Embeddings for other nodes are not discussed.
+    edge-features: |-
+      Various meta paths are used
+    connectivity-features: Adjacency matrix
+    graph-features: |-
+      Link and node masking are applied.
+    other-features: n/a
+models:
+  gat:
+    type:
+      name: n/a
+      architecture: |-
+        Let E denote initial node embeddings.
+        
+        Every node embedding is passed through several GAT layers,
+        where there is a GAT stack for every meta path.
+        
+        For every issue or developer node, there will be a number 
+        of embeddings equal to the number of metapaths.
+        Embeddings are fused using an attention mechanism.
+        
+        Developer/issue embedding pairs are concatenated 
+        and passed through a MLP to predict issue/developer suitability.
+tasks:
+  training:
+    training-objective: |-
+      Dual training objective:
+      1) minimise contrastive loss 
+      2) predict correct (developer, issue) pairs
+    training-granularity: Node (Pair) Classification
+    working-objective: Predict suitable developer for an issue
+    working-granularity:  Node (Pair) Classification
+    application: Developer recommendation for issues
+    supervision: Supervised, Self supervised
+combinations:
+  - graph: dev-network
+    model: gat
+    task: training
+    comments:
+comments: # list

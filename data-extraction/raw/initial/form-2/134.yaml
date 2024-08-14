@@ -1,0 +1,57 @@
+paper-id: 134
+pdf-id: 177
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: |-
+          The information in a node is divided into three "perspectives":
+          Perspective 0: node type    (e.g. "MethodDeclaration")  
+          Perspective 1: Node value   (e.g. Method name)
+          Perspective 2: Additional Information (e.g. Method visibility)
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      Literals are generalised. 
+      Names are split up based on camel case naming,
+      regardless of perspective.
+      
+      An unsupervised training procedure is used to encode node types.
+      The training is essentially equivalent to word2vec training 
+      (with negative sampling), but the neighbourhood of tokens is 
+      determine using certain structural patterns in the AST.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      First, node features are computed. 
+      Then, all node embeddings are put into a linear sequence to obtain a matrix.
+models:
+  network:
+    type:
+      name: n/a
+      architecture: |-
+        Conv (2d)
+        Max pooling 
+        FNN
+        Sigmoid
+tasks:
+  bug-detection:
+    training-objective: Classify sample as buggy or clean
+    training-granularity: \"Graph\" Classification
+    working-objective: Classify sample as buggy or clean
+    working-granularity: \"Graph\" Classification
+    application: Software Defect Prediction
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: network
+    task: bug-detection
+    comments:
+comments: # list

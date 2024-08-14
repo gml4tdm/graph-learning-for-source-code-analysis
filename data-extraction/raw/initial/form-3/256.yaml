@@ -1,0 +1,35 @@
+paper-id: 256
+pdf-id: 103
+graphs:
+  e-pdg:
+    name: ePDG
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: source code is first compiled to LLVM IR
+    vertex-type: instruction (slicing performed based on vulnerability-correlated instruction types)
+    edge-type: control flow/dependence and data flow/dependence
+    vertex-features: operation type, basic function, is instruction part of if-clause (all one-hot)/classical graph metrics
+    edge-features: edge type / data flow edges have the data type(s) of the dependency as attributes
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - based on structure2vec (fairly generic message passing scheme) w/ classification layer
+tasks:
+  vulnerability-detection:
+    training-objective: classify each node as vulnerable or not vulnerable
+    training-granularity: node classification
+    working-objective: classify each node as vulnerable or not vulnerable
+    working-granularity: node classification
+    application: vulnerability detection (line level) and classification (by having a separate model for every vulnerability type)
+    supervision: supervised
+combinations:
+  - graph: e-pdg
+    model: model
+    task: vulnerability-detection
+    comments: I feel the paper is not consistent; to me, the model seems to compute a global (graph-level) vector, but the classification seems to be node-wise.
+comments: # list

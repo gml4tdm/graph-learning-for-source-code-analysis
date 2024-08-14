@@ -1,0 +1,52 @@
+paper-id: sb-060
+pdf-id: sb-086
+graphs:
+  ast:
+    name: n/a
+    description: |-
+      collection of connected ASTs,
+      collected based on method call chains
+    artefacts:
+      - name: source code
+        details: file (?)
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: word2vec for node content
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: average pooling over node features
+    other-features: average pooling over the graph embedding of all ASTs
+  cfg:
+    name: n/a
+    description: |-
+      collection of connected CFGs,
+      collected based on method call chains
+    artefacts:
+      - name: source code
+        details: file (?)
+    vertex-type: statement/entry/exit
+    edge-type: control flow
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: graph2vec
+    other-features: apply graph2vec on the graph of connected cfg
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - mlp
+tasks:
+  code-clone-detection:
+    training-objective: Given two code samples, determine if they are clones
+    training-granularity: graph classification (but two graphs)
+    working-objective: Given two code samples, determine if they are clones
+    working-granularity: graph classification (but two graphs)
+    application: Code clone detection
+    supervision: supervised
+combinations:
+  - graph: ast + cfg
+    model: model
+    task: code-clone-detection
+    comments:
+comments: # list

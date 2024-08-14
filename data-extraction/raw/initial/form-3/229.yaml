@@ -1,0 +1,37 @@
+paper-id: 229
+pdf-id: 315
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: javascript
+    vertex-type: ast node
+    edge-type: ast edge
+    vertex-features: unclear (not specified)
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name:
+    architecture-attributes:
+      - gcn
+      - self attention (unclear how exactly)
+      - graph pooling (not clearly specified) (is also final readout)
+tasks:
+  malicious-js-detection:
+    training-objective: classify graph as malicious or benign
+    training-granularity: graph classification
+    working-objective: classify graph as malicious or benign
+    working-granularity: graph classification
+    application: malicious javascript detection
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: malicious-js-detection
+    comments:
+comments: # list

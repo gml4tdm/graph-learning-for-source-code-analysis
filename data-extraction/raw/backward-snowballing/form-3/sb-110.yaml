@@ -1,0 +1,45 @@
+paper-id: sb-110
+pdf-id: sb-151
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: n/a
+    artefacts:
+      - name: source code
+        details:
+    vertex-type: ast
+    edge-type: ast/control flow/control dependence/data dependence
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: |-
+      Features are represented as a 3D tensor, where the first two dimensions 
+      represent nodes, and the third dimension represents features describing
+      the relation between the two nodes.
+      
+      These features include data type/modifier information,
+      operators between the two nodes, the parent child relationship between the two nodes (i.e. is_parent(i, e), with a one-hot entry for the node type of the child),
+      control flow node information.
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - MLP and flatten to reduce dimensionality and map tensor to a matrix of feature vectors per node
+      - Soft attention (implemented using 1D convolutions)
+      - MLP
+      - softmax
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: graph classification
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: graph classification
+    application: vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: code-property-graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

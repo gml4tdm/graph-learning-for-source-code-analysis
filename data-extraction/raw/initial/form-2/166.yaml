@@ -1,0 +1,45 @@
+paper-id: 166
+pdf-id: 218
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: Not specified
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Embedding Layer for AST Nodes (unclear what exactly is encoded)
+        2) ConvGNN (H = g_v^{k - 1} + \sum_{u \in N(v)} g_u^{k - 1}; g_v^k = FNN(H))
+        3) Transformer-XL (to find important tokens in the graph)
+        4) Output of Transformer-XL is fed into linear layer, then softmax.
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+    training-granularity: Graph to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+    working-granularity: Graph to Sequence
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

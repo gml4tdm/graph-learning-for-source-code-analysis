@@ -1,0 +1,85 @@
+paper-id: sb-102
+pdf-id: sb-140
+graphs:
+  member-dependency-graph:
+    name: Member Dependency Graph
+    description: n/a
+    artefacts:
+      - name: source code
+        details: system
+    vertex-type: data item (eg shared variables) / function
+    edge-type: call / return / data flow
+    vertex-features: code level metrics
+    edge-features: number of data items transferred in an edge
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+  component-dependency-graph:
+    name: Component Dependency Graph
+    description: constructed from the member dependency graph; there exists an edge between two components if there exists an edge between two members from each component
+    artefacts:
+      - name: source code
+        details: system
+    vertex-type: component
+    edge-type: dependency
+    vertex-features: |-
+      metrics describing the "graph structure" in a component (e.g. average internal data flow)
+      
+      some code level metrics 
+      
+      some network metrics
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  bayesian-network:
+    name: Bayesian Network
+    architecture-attributes:
+      - Bayesian Network
+  naive-bayes:
+    name: Naive Bayes
+    architecture-attributes:
+      - Naive Bayes
+  neural-network:
+    name: Neural Network
+    architecture-attributes:
+      - Exact architecture unknown
+  random-forest:
+    name: Random Forest
+    architecture-attributes:
+      - Random Forest
+  svm:
+    name: SVM
+    architecture-attributes:
+      - SVM
+tasks:
+  defect-prediction:
+    training-objective: Classify components as defective or non-defective
+    training-granularity: node classification
+    working-objective: Classify components as defective or non-defective
+    working-granularity: node classification
+    application: defect prediction
+    supervision: supervised
+combinations:
+  - graph: member-dependency-graph + component-dependency-graph
+    model: bayesian-network
+    task: defect-prediction
+    comments:
+  - graph: member-dependency-graph + component-dependency-graph
+    model: naive-bayes
+    task: defect-prediction
+    comments:
+  - graph: member-dependency-graph + component-dependency-graph
+    model: neural-network
+    task: defect-prediction
+    comments:
+  - graph: member-dependency-graph + component-dependency-graph
+    model: random-forest
+    task: defect-prediction
+    comments:
+  - graph: member-dependency-graph + component-dependency-graph
+    model: svm
+    task: defect-prediction
+    comments:
+comments: # list

@@ -1,0 +1,70 @@
+paper-id: 120
+pdf-id: 162
+graphs:
+  graph:
+    name: n/a
+    description: |-
+      Graph representing a commit.
+      Based on the "hunks" (added and removed lines)
+      from a commit.
+      
+      Both hunks are parsed into ASTs,
+      called the old and new AST.
+    artefacts:
+      - name: Source code
+        details: commit
+    vertex-type:
+      - name: Code Node
+        details: |-
+          Either an AST node, 
+          or a result of the fact that
+          Snake and camel case names are split up; the tokens are added as child nodes of the original AST node
+      - name: Edit Node
+        details: |-
+          Several different types:
+          V_ADD: For nodes not present in the old AST, but which are present in the new AST
+          V_DEL: Connect a node which is present in the old AST, but not in the new AST
+          V_MOVE: Connect two nodes present in both ASTs, but the subtree has moved in the new AST
+          V_UPDATE: Connect two nodes present in both ASTs, but the content of the node was updated in the new AST.
+          V_MATCH: Connect two nodes present in both AST, with matching location and content
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Edit Edge
+        details: Each edit node is connect to two AST nodes using edit edges
+      - name: Token Node
+        details: The leaf nodes in the AST (containing the tokens) are connected in token (NCS) order
+    vertex-features:
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Encoder/Decoder setup.
+        
+        Encoder uses Trainable embedding layer, followed by GCN layers w/ residual connections and normalisation
+        
+        Decoder uses the decoder of a Transformer model, which takes as input the 
+        already generated output, and the next output of the encoder. The output of the transformer is,
+        combined with the output of the encoder, fed into multiple layers, including an attention mechanism,
+        in order to generate the next token.
+        
+        For details, see full paper.
+tasks:
+  commit-message-generation:
+    training-objective: Given a commit, (re-)construct its commit message (the first sentence)
+    training-granularity: n/a
+    working-objective: Given a commit, generate a commit message (the first sentence)
+    working-granularity: n/a
+    application: Commit Message Generation
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: commit-message-generation
+    comments:
+comments: # list

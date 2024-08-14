@@ -1,0 +1,78 @@
+paper-id: 66
+pdf-id: 93
+graphs:
+  lfast:
+    name: LFAST (Loop-Flow Abstract Syntax Tree)
+    description: n/a
+    artefacts:
+      - name: Source Code
+        details: function
+    vertex-type:
+      - name: AST Node
+        details: |-
+          Only a small selection of AST nodes from the original AST 
+          is kept; only the "loop oriented" ones, which are either
+          part of a loop or within a k-hop neighbourhood of a node 
+          which is part of a loop.
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+    vertex-features: |-
+      Node features are based on three basic features:
+        1) Node payload (1 token) encoded using word2vec
+        2) Node type is encoded using Label Encoding
+        3) positional encoding: position of i-th token in code is encoded as a vector
+          [sin(w_0 * i), cos(w_0 * i), sin(w_1 * i), cos(w_1 * i), ...]
+      
+        Final node feature vector is given by CONCAT(type, payload + position)
+    edge-features: |-
+      Edge type: syntax, control, or data. Encoded using Label Encoding
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  lcvd-gcn:
+    type:
+      name: LCVD (GCN)
+      architecture: |-
+        1) Node Embedding Module; repetitions of following:
+          i) Self-attention sublayer
+            Compute self-attention as in GAT, but with multi-head attention
+          ii) Add and normalise self attention output with self attention input (skip/residual connection)
+          iii) Graph Convolutional Sublayer
+        2) Pooling Module
+          Let h denote the embedded graph; let x denote the original node features; Let * denote elementwise multiplication
+          i) Compute g_1 = MLP(
+              LeakyReLU(MaxPool(Concat(h, x))) * LeakyReLU(MaxPool(x))
+            )
+          ii) Compute g_2 = MLP(
+              LeakyReLU(AvgxPool(Concat(h, x))) * LeakyReLU(AvgPool(x))
+            )
+          iii) Output g = g_1 * g_2
+        3) sigmoid(MLP(ReLU(g)))
+  lcvd-ggnn:
+    type:
+      name: LCVD (GGNN)
+      architecture: Same as LCVD-GCN, but with GGNN instead of GCN
+tasks:
+  vulnerability-detection:
+    training-objective: Classify function as vulnerable or non-vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify function as vulnerable or non-vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: lfast
+    model: lcvd-gcn
+    task: vulnerability-detection
+    comments:
+  - graph: lfast
+    model: lcvd-ggnn
+    task: vulnerability-detection
+    comments:
+comments: # list

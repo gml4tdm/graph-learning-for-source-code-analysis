@@ -1,0 +1,42 @@
+paper-id: 55
+pdf-id: 78
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: methods
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: Continuous Binary Tree
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: |-
+      Obtained by taking the continuous binary tree 
+      representation of the AST (root), and passing
+      it to a VAE.
+    other-features: n/a
+models:
+  log-reg:
+    type:
+      name: Logistic Regression
+      architecture: n/a
+tasks:
+  smell-detection:
+    training-objective: Classify code (graph) as smell/not smell
+    training-granularity: Graph Classification
+    working-objective: Classify code (graph) as smell/not smell
+    working-granularity: Graph Classification
+    application: Smell Detection
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: log-reg
+    task: smell-detection
+    comments:
+comments: # list

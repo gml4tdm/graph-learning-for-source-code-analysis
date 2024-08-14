@@ -1,0 +1,76 @@
+paper-id: sb-094
+pdf-id: sb-132
+graphs:
+  ast:
+    name: ast
+    description: pruned using Louvian community detection algorithm (only "defect related communities" of nodes are kept)
+    artefacts:
+      - name: source code
+        details: module
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: node type, exact encoding is unclear. Combined with the topic vector (see "other features"), which is identical for all nodes.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      For each defective module, LDA is used to extract a topic based on subtokens 
+      in method names, variable names, class names etc., taking the top-k words.
+      The topic is encoded using word2vec.
+      I think the topic vectors are then averaged
+models:
+  gcn:
+    name: n/a
+    architecture-attributes:
+      - GCN
+      - max pooling
+  gin:
+    name: n/a
+    architecture-attributes:
+      - GIN
+      - max pooling
+  sgc:
+    name: n/a
+    architecture-attributes:
+      - SGC
+      - max pooling
+  gat:
+    name: n/a
+    architecture-attributes:
+      - GAT
+      - max pooling
+  graph-sage:
+    name: n/a
+    architecture-attributes:
+      - GraphSAGE
+      - max pooling
+tasks:
+  defect-prediction:
+    training-objective: Classify sample as defective or not
+    training-granularity: graph classification
+    working-objective: Classify sample as defective or not
+    working-granularity: graph classification
+    application: Defect prediction
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: gcn
+    task: defect-prediction
+    comments:
+  - graph: ast
+    model: gin
+    task: defect-prediction
+    comments:
+  - graph: ast
+    model: sgc
+    task: defect-prediction
+    comments:
+  - graph: ast
+    model: gat
+    task: defect-prediction
+    comments:
+  - graph: ast
+    model: graph-sage
+    task: defect-prediction
+    comments:
+comments: # list

@@ -1,0 +1,41 @@
+paper-id: sb-093
+pdf-id: sb-128
+graphs:
+  class-dependency-network:
+    name: Class Dependency Network
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: class
+    edge-type: class or interface dependencies and relationships
+    vertex-features: |-
+      nodes are embedded using node2vec.
+      
+      nodes are also annotated with various static code metrics (e.g. # methods)
+      
+      Nodes are also annotated with various network metrics.
+    edge-features: n/a
+    connectivity-features: not explicitly specified, but seems to be adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - gcn
+      - softmax per node
+tasks:
+  defect-prediction:
+    training-objective: Predict nodes in the network as defective or not defective
+    training-granularity: node classification
+    working-objective: Predict nodes in the network as defective or not defective
+    working-granularity: node classification
+    application: Defect prediction
+    supervision: supervised
+combinations:
+  - graph: class-dependency-network
+    model: model
+    task: defect-prediction
+    comments:
+comments: # list

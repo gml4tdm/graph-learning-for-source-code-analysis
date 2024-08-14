@@ -1,0 +1,43 @@
+paper-id: 133
+pdf-id: 176
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: one-hot encoding of node type
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  network:
+    type:
+      name: n/a
+      architecture: |-
+        Repeated modules of: GCNN, MinCutPool, Dropout
+        Average Pool
+        FNN
+        FNN w/ Sigmoid
+tasks:
+  bug-detection:
+    training-objective: Classify code sample as buggy or not buggy
+    training-granularity: Graph Classification
+    working-objective: Classify code sample as buggy or not buggy
+    working-granularity: Graph Classification
+    application: Bug Detection
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: network
+    task: bug-detection
+    comments:
+comments: # list

@@ -1,0 +1,82 @@
+paper-id: 113
+pdf-id: 152
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Child Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+      - name: Next Token Edge
+        details: n/a
+      - name: Computed From Edge
+        details: n/a
+      - name: Last Use Edge
+        details: n/a
+      - name: Guarded By Negation Edge
+        details: n/a
+      - name: Guarded By Edge
+        details: e.g. Edge to surrounding if statement
+      - name: Jump Edge
+        details: e.g. from if to else
+    vertex-features: |-
+      Normalise names.
+      Node type and tokens encoded using word2vec
+      (return) type of variables, functions, constants encoded using word2vec
+      type and type/payload embeddings concatenated.
+    edge-features:
+    connectivity-features: Adjacency matrices (one for each edge type; 9 in total)
+    graph-features:
+    other-features:
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Initial embeddings through FNN
+        2) _within_ graph message aggregation as in GGNN
+        3) _between_ graph message aggregation based on GGNN principles. Specifically
+            1) each node receives incoming message which are the sum of all incoming 
+                messages in _all_ graphs.
+            2) Layer-wise highway gating
+              T(h_v^t) = \sigma(h_v^t W_T^t + b_T^t)
+              h'_v^{t + 1} = T(h_v^t) \cdot h_v^{t+1} + (1 - T(h_v^t)) \cdot h_v^t (w/ \cdot elementwise)
+        4) Readout
+          Concatenate the graph embedding from every aggregation iteration (including initial features)
+          Where the graph embedding for a single aggregation is the sum over all graphs over 
+          the some unspecified pooling operation over all nodes in the graph
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+  vulnerability-classification:
+    training-objective: Predict the type of a vulnerability
+    training-granularity: Graph Classification
+    working-objective: Predict the type of a vulnerability
+    working-granularity: Graph Classification
+    application: Vulnerability Classification (to reduce checking for developers to specific types)
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: vulnerability-detection
+    comments:
+  - graph: graph
+    model: model
+    task: vulnerability-classification
+    comments:
+comments: # list

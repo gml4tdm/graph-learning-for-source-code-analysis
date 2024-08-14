@@ -1,0 +1,65 @@
+paper-id: sb-083
+pdf-id: sb-116
+graphs:
+  contextual-flow-graph:
+    name: Contextual Flow Graph
+    description: n/a
+    artefacts:
+      - name: source code
+        details: compiled to LLVM IR, which is used for graph construction
+    vertex-type: variables or label identifiers
+    edge-type: data flow/data dependence/control flow
+    vertex-features: values are replaced with their type, identifiers with a special marker
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Statement pairs <= N hops away are extracted from a set of graphs
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - skip gram model
+tasks:
+  embedding:
+    training-objective: skip-gram training
+    training-granularity:  n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: embedding
+    supervision: self-supervised
+  algorithm-classification:
+    training-objective: Given an embedding, classify the program into a set of categories
+    training-granularity: classification
+    working-objective: Given an embedding, classify the program into a set of categories
+    working-granularity: classification
+    application: Algorithm classification
+    supervision: supervised
+  compute-device-mapping:
+    training-objective: Given an embedding, predict whether the program will run faster on CPU or GPU
+    training-granularity: classification
+    working-objective: Given an embedding, predict whether the program will run faster on CPU or GPU
+    working-granularity: classification
+    application: Compute device mapping
+    supervision: supervised
+  thread-coarsening-factor-prediction:
+    training-objective: Given an embedding, predict the thread coarsening factor
+    training-granularity: regression
+    working-objective: Given an embedding, predict the thread coarsening factor
+    working-granularity: regression
+    application: Thread coarsening factor prediction
+    supervision: supervised
+combinations:
+  - graph: contextual-flow-graph
+    model: model
+    task: embedding + algorithm-classification
+    comments: The method is supposed to be general, with the other tasks being example evaluations
+  - graph: contextual-flow-graph
+    model: model
+    task: embedding + compute-device-mapping
+    comments: The method is supposed to be general, with the other tasks being example evaluations
+  - graph: contextual-flow-graph
+    model: model
+    task: embedding + thread-coarsening-factor-prediction
+    comments: The method is supposed to be general, with the other tasks being example evaluations
+comments: # list

@@ -1,0 +1,89 @@
+paper-id: 165
+pdf-id: 217
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features: Node content is used as feature
+    edge-features: Edge type is used as feature
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      For a given code sample c, the most similar _known_
+      (code, summary) sample (c', s') is used as features,
+      where c' is also represented using a graph.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Encoder/Decoder Architecture
+        
+        Encoder:
+          It is unclear how the node and edge features are computed,
+          but the text seems to imply a learnable embedding layer.
+          
+          1) Embedding Layer for Tokens in Node 
+          2) Embedding Layer for Edge types 
+          3) BiLSTM over tokens to obtain node features (feature = concatenation of the last hidden states of the two LSTMs)
+          4) Compute A = \exp(ReLU(H_cW^C)ReLU(H_{c'}W^Q)^T) (H_c, H_{c'}: initial graph representations
+          5) H'_c = z A H_{c'} (z: similarity)
+          6) comp = H_c + H'_c
+          7) Encode s' using BiLSTM; encoding is the sequence of hidden states of the LSTM, multiplied by z 
+          8) Compute B_{v,u} = (ReLU(h_v^TW^Q)(ReLU(h_u^TW^K) + ReLU(e_{v,u}^TW^R))^T) / \sqrt{d}
+              Where h_v, h_u are node states from comp, for all pairs (v, u) (regardless of connectivity)
+              If v and u are not connected, e_{v,u} = 0
+          9) Combine all B_{v,u} to obtain "dynamic graph adjacency matrix" B
+          10) Row normalise according to B' = softmax(B)
+          11) n rounds of Hybrid GNN over the dynamic (B) and static (original) graphs:
+              i) Initial Node States from comp
+              ii) Static Message Passing:
+                h_v^k = \sum_{u \in N(v)} h_u^{k - 1}
+              iii) Dynamic Message Passing:
+                h'_v^k = \sum_{u} B'_{v,u}(W^V h'_u^{k - 1} + W^Fe_{v,u})
+              iv) f_v^k = GRU(f_v^{k - 1}, Fuse(h_v^k, h'_v^k))
+                  Where Fuse(a, b) = z \cdot a + (1 - z) \cdot b
+                  Where z = \sigma(W_Z[a, b, a \cdot b, a - b] + b_z)
+          12) Max pooling over f_v^n
+        
+          General idea behind B: Use structure aware global attention to
+          dynamically construct a graph which captures global relations 
+          better than the regular graph.
+          
+        Decoder:
+          - Input is [f_{v_1}^n, f_{v_2}^n, ..., f_{v_m}^n, <embedding of summary s'>]
+          - Initial hidden state: Graph representation concatenated with the last
+              weighted (according to z) hidden state of the BiLSTM encoder for s'
+          - Attention-based LSTM decoder 
+          - Beam Search
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+    training-granularity: Graph to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+    working-granularity: Graph to Sequence
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: code-property-graph
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

@@ -1,0 +1,49 @@
+paper-id: 121
+pdf-id: 163
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow EDge
+        details: n/a
+    vertex-features: |-
+      Node type (nonterminal, terminal, or value (contains actual token)) is used as feature
+      Type of syntactic node is used as feature 
+      
+      Unclear what exact features are used, and how they are encoded.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        GraphSAGE
+        GraphSAGE
+tasks:
+  bug-localisation:
+    training-objective: Classify node as buggy or not buggy
+    training-granularity: Node Classification
+    working-objective: Classify node as buggy or not buggy
+    working-granularity: Node Classification
+    application: Bug Localisation
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: bug-localisation
+    comments:
+comments: # list

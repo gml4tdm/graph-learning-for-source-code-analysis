@@ -1,0 +1,43 @@
+paper-id: sb-027
+pdf-id: sb-037
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: type (based on image)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      In all instances, identifiers are split into sub-tokens 
+      
+      source code is used as feature.
+      
+      AST is linearised (using brackets to make process reversible; structure based traversal)
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - Source code encoded using GRU
+      - AST sequence encoded using GRU
+      - AST and code vectors fused using attention; sum the attention-weighted sum of hidden states
+      - Decoder, using beam search (exact decoder architecture not specified)
+tasks:
+  comment-generation:
+    training-objective: Given a code sample, generate a comment
+    training-granularity: x to sequence
+    working-objective: Given a code sample, generate a comment
+    working-granularity: x to sequence
+    application: Comment Generation
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: comment-generation
+    comments:
+comments: # list

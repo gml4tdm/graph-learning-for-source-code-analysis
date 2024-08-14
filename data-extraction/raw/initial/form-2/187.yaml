@@ -1,0 +1,100 @@
+paper-id: 187
+pdf-id: 248
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source Code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: BERT for embedding nodes
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Sequence input is given. Per task this is:
+        1) Comment and code for comment classification
+        2) code and author for author attribution 
+        3) 2x code for duplicate function detection
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Sequence Encoder 
+          i) Bidirectional Transformer 
+          ii) Attention mechanism, weighted sum of token embeddings 
+        2) AST Encoder 
+          i) Tree-LSTM
+          ii) Attention mechanism, weighted usm of node embeddings 
+          iii) For duplicate function detection, there are two AST embeddings, 
+                which are combined through concatenation in an FNN layer
+        3) Concatenate vectors
+        4) Task-specific output layer
+          i) Comment Classification: Fnn w/ softmax 
+          ii) Author Attribution: MLP w/ Softmax 
+          iii) Function Clone Detection: Linear Layer (similarity score)
+tasks:
+  comment-classification:
+    training-objective: Given a pair of code and comment, determine whether the comment is reliable (for the given code)
+    training-granularity: Graph Classification but not quite
+    working-objective: Given a pair of code and comment, determine whether the comment is reliable (for the given code)
+    working-granularity: Graph Classification but not quite
+    application: Model pre-training
+    supervision: Supervised
+  author-attribution:
+    training-objective: Given a pair of code and author, determine whether the author wrote the code
+    training-granularity: Graph Classification but not quite
+    working-objective: Given a pair of code and author, determine whether the author wrote the code
+    working-granularity: Graph Classification but not quite
+    application: Model pre-training
+    supervision: Supervised
+  duplicate-function-detection:
+    training-objective: Given two functions, determine whether they are duplicates
+    training-granularity: Graph Classification (but w/ multiple graphs)
+    working-objective: Given two functions, determine whether they are duplicates
+    working-granularity: Graph Classification (but w/ multiple graphs)
+    application: Model pre-training
+    supervision: Supervised
+  library-classification:
+    training-objective: Given a code snippets, determine whether it uses OpenCV or Spring
+    training-granularity: Graph Classification
+    working-objective: Given a code snippets, determine whether it uses OpenCV or Spring
+    working-granularity: Graph Classification
+    application: Library Classification
+    supervision: Supervised
+  algorithm-classification:
+    training-objective: Classify code snippet into one of multiple categories
+    training-granularity: Graph Classification
+    working-objective: Classify code snippet into one of multiple categories
+    working-granularity: Graph Classification
+    application: Algorithm Classification
+    supervision: Supervised
+  bug-detection:
+    training-objective: Given a code snippet, determine whether it is contains a bug
+    training-granularity: Graph Classification
+    working-objective: Given a code snippet, determine whether it is contains a bug
+    working-granularity: Graph Classification
+    application: Bug Detection
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: mode
+    task: comment-classification + author-attribution + duplicate-function-detection + library-classification
+    comments: Pre-trained on the first three tasks, fine-tuned/evaluated on the last one
+  - graph: ast
+    model: mode
+    task: comment-classification + author-attribution + duplicate-function-detection + algorithm-classification
+    comments: Pre-trained on the first three tasks, fine-tuned/evaluated on the last one
+  - graph: ast
+    model: mode
+    task: comment-classification + author-attribution + duplicate-function-detection + bug-detection
+    comments: Pre-trained on the first three tasks, fine-tuned/evaluated on the last one
+comments:
+  - The method is supposed to be general, with fine-tuning on specific tasks

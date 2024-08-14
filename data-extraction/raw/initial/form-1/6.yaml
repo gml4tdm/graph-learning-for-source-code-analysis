@@ -1,0 +1,207 @@
+paper-id: 6
+pdf-id: 11
+graphs:
+  code-property-graph:
+    name: Code Property Graph
+    description: AST augmented with control and data flow information.
+    artefacts:
+      - name: Source code (arbitrary snippets)
+        details: n/a
+    vertex-type:
+      - name: AST node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: Points from one statement node to every other statement node which can immediately follow it.
+      - name: Data Flow Edge
+        details: Declaration node points to all statement nodes using the declared variable.
+    vertex-features: |-
+      1) Collect node types and tokens (snippets from leaf nodes) by traversing the network
+      2) Train Word2Vec on the corpus of node types and tokens, and project all to d-dimensional space
+      3) Concatenate the embeddings for the node type and lexical tokens. For nodes without lexical tokens, use the zero vector.
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  iterative-updater:
+    type:
+      name: CPGNN (CPG-based Neural Network)
+      architecture:
+        Based on GNN/GCN. 
+        
+        Iterative scheme, starting with the embeddings e^0 as described
+        for the node features. Then, updated according to the following rules;
+      
+        e^{\ell + 1}_n = \text{LeakyReLU}\left((e_n^\ell \mid\mid e_{N_n}^{\ell})W_g^{\ell}\right)
+      
+        N_n = \{ m \mid (m, n) \in E \}
+      
+        e_{N_n}^{\ell} = \sum_{m \in N_n} \alpha(m, n) e_m^{\ell}
+      
+        \alpha(m, n) = \frac{1}{\sqrt{|N_m| \times |N_n|}}
+      
+        After set amount of iterations, for every node, concatenate the 
+        embeddings for every iterations into a single vector.
+      
+        To compute a representation for a full graph, use mean-pooling on the embeddings
+        for all nodes in the graph.
+      
+        Note that \mid\mid represents concatenation
+tasks:
+  code-clone-detection:
+    training-objective: Code clone detection; predict "distance" between snippets w/ threshold
+    training-granularity: Graph Classification
+    working-objective: Code clone detection; predict "distance" between snippets w/ threshold
+    working-granularity: Graph Classification
+    application: Source Code Functional Similarity Detection
+    supervision: Supervised
+  source-code-classification:
+    training-objective: Source code classification into different types
+    training-granularity: Graph Classification
+    working-objective: Source code classification into different types
+    working-granularity: Graph Classification
+    application: Source Code Functional Similarity Detection
+    supervision: Supervised
+training:
+  code-clone-detection-settings:
+    train-test-split:
+      train: 0.8
+      test: 0.1
+      validation: 0.1
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: loss
+        value: binary cross entropy
+      - name: optimizer
+        value: adam
+      - name: learning rate
+        value: 0.1
+      - name: epochs
+        value: 30
+      - name: dropout
+        value: 0.1
+      - name: weight initialisation
+        value: Xavier
+    hyper-parameter-selection: grid search
+    search-tuned-hyper-parameters: not specified
+    evaluation-details: |-
+      Evaluated by extending the network with an FNN layer computing
+      the distance between two embeddings. Sigmoidal activation.
+      (input is thus _two_ snippets)
+    evaluation-methods:
+      - name: precision
+        type: metric
+        details: n/a
+      - name: recall
+        type: metric
+        details: n/a
+      - name: f1-score
+        type: metric
+        details: n/a
+      - name: auc
+        type: metric
+        details: area under curve
+  source-code-classification-settings:
+    train-test-split:
+      train: 0.8
+      test: 0.1
+      validation: 0.1
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: loss
+        value: cross-entropy
+      - name: optimizer
+        value: adam
+      - name: learning rate
+        value: 0.1
+      - name: epochs
+        value: 250
+      - name: dropout
+        value: 0.1
+      - name: weight initialisation
+        value: Xavier
+    hyper-parameter-selection: grid search
+    search-tuned-hyper-parameters: not specified
+    evaluation-details: |-
+      Evaluated by extending the network with an FNN layer for 
+      classification. Softmax activation.
+    evaluation-methods:
+      - name: macro precision
+        type: metric
+        details: n/a
+      - name: macro recall
+        type: metric
+        details: n/a
+      - name: macro f1-score
+        type: metric
+        details: n/a
+      - name: accuracy
+        type: metric
+        details: n/a
+datasets:
+  oj-clone-classification:
+    name: OJ-Clone
+    description: |-
+      Based on OJ-Clone, a dataset of 52000 C programs belonging to 104
+      different programming tasks.
+    source:
+      - OJ-Clone dataset (collected from pedagogical online judge system)
+    labelling: Yes; not specified
+    size: 52000
+    is-pre-existing: yes
+  oj-clone-clone:
+    name: n/a
+    description: |-
+      Based on OJ-Clone, a dataset of 52000 C programs belonging to 104 
+      different programming tasks.
+      
+      Used only first 15000 programming tasks.
+      
+      Programs solving the same task are considered clones.
+      
+      Forming pairs of programs results in the final dataset.
+    source:
+      - Based on OJ-Clone dataset (collected from pedagogical online judge system)
+    labelling: Yes; not specified
+    size: 319800
+    is-pre-existing: yes
+  bcb:
+    name: BigCloneBench
+    description: |-
+      Based on BigCloneBench, a dataset of clone and non-clone pairs. 
+      
+      Down-sampled to result at a dataset of 71677 clone pairs.
+    source: # list
+      - BigCloneBench dataset (collected from Java projects)
+    labelling: Yes; not specified
+    size: 71677
+    is-pre-existing: yes
+combinations:
+  - graph: code-property-graph
+    model: iterative-updater
+    task: source-code-classification
+    training: source-code-classification-settings
+    dataset: oj-clone-classification
+    comments:
+  - graph: code-property-graph
+    model: iterative-updater
+    task: code-clone-detection
+    training: code-clone-detection-settings
+    dataset: oj-clone-clone
+    comments:
+  - graph: code-property-graph
+    model: iterative-updater
+    task: code-clone-detection
+    training: code-clone-detection-settings
+    dataset: bcb
+    comments:
+comments:
+  - On a personal note, I think this approach does prevent the over-squashing problem
+  - Not 100% clear whether the code clone network uses two parallel inputs

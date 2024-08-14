@@ -1,0 +1,55 @@
+paper-id: sb-100
+pdf-id: sb-138
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: file
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      AST is linearised (both types and tokens) using pre-order traversal,
+      where only certain node types are included in the sequence.
+  software-network:
+    name: Software network
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: file (in project)
+    edge-type: dependency or association
+    vertex-features: vertices encoded using node2vec
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - AST sequence as input
+      - embedding layer
+      - CNN
+      - max pooling layer
+      - fnn layer
+      - for each file, the result of embedding the ast is concatenated to its corresponding node2vec embedding
+tasks:
+  defect-prediction:
+    training-objective: Classify file as defective or not
+    training-granularity: n/a
+    working-objective: Classify file as defective or not
+    working-granularity: n/a
+    application: Defect prediction
+    supervision: n/a
+combinations:
+  - graph: ast + software-network
+    model: model
+    task: defect-prediction
+    comments:
+comments: # list

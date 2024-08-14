@@ -1,0 +1,84 @@
+paper-id: 85
+pdf-id: 117
+graphs:
+  pdg:
+    name: PDG
+    description: |-
+      Check "other-features" for details;
+      The paper does not really use graphs, but things derived 
+      from full graphs.
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details:
+    edge-type:
+      - name: Data Dependence Edge
+        details: n/a
+      - name: Control Dependence Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      So-called value-flow paths are extracted from the PDG.
+      
+      A guarded value-flow path consists of a sequence of program
+      statements representing a def-use chain between variables, with the
+      guard on each edge between two statements to indicate control-flow
+      transfer conditions.
+      
+      Paths are put into a network which maps them to vectors.
+      A path is fed twice into the network, with different dropout masks.
+      A contrastive loss is used.
+      
+      The network first encoded the statements based on AST subtrees.
+      Each node in the AST subtree corresponding to the statement
+      is initialised using Code2Vec.
+      
+      Next, each nodes embedding is updated according to its
+      own embedding and those of its children, using an
+      attention-weighted sum.
+      The attention weights for node $i$ and its children $C_i$ are computed according to 
+      
+        a_{ij} = \frac{\exp(\sigma(e_{ij}))}{\sum_{k \in C_i \cup i} \exp(\sigma(e_{ik}))}
+        e_{ij} = a^T_s[W^a v_{n_i} \mid\mid W^a v_{n_j}] \cdot \sigma((W^av_{n_1})^T(W^a v_{n_j}))
+        Where a_s and W are a learnable matrix and learnable vector.
+      
+      Finally, all nodes are aggregated according to:
+      
+      v_{sm} = \frac{1}{N}\sum_{i = 1}^N v'_{n_i} \mid\mid \max_{j = 1}^N v'_{n_j}
+      
+      Next, all statement embeddings are passed through a bidirectional GRU layer.
+      
+      The hidden states of the GRU layer are summed using an attention-weighted sum.
+      
+      The trained model is used to encode value-flow paths for later use.
+      
+      Deep learning model is used to select top-k paths. 
+      Infeasible value flow paths (cannot occur based on if guards) are filtered out.
+models:
+  detection-model:
+    type:
+      name: n/a
+      architecture: |-
+        Multi-head Attention
+        Add + Normalisation 
+        FNN 
+        Add + Normalisation
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable/not vulnerable
+    training-granularity: Binary Classification (not of graphs)
+    working-objective: Classify sample as vulnerable/not vulnerable
+    working-granularity: Binary Classification (not of graphs)
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: pdg
+    model: detection-model
+    task: vulnerability-detection
+    comments:
+comments: # list

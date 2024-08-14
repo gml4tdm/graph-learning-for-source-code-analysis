@@ -1,0 +1,74 @@
+paper-id: 71
+pdf-id:
+graphs:
+  ucpg:
+    name: Unified Code Property Graph (UCPG)
+    description: Combination of code property graph, control flow, and NCS
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+      - name: Function Call Edge
+        details: n/a
+      - name: NCS Edge
+        details: Natural code sequence edge
+    vertex-features: |-
+      Node content encoded using doc2vec
+    edge-features: Unidirectional edges are converted to bidirectional edges/backedges are added.
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  network:
+    type:
+      name: n/a
+      architecture: |-
+        GCN
+        Some pooling with average and max pooling, also attention based summing, also incoming skip connections from all pooling(?) layers
+        FNN layer 
+        softmax
+tasks:
+  vul-detection:
+    training-objective: Classify code sample as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify code sample as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ucpg
+    model: network
+    task: vul-detection
+    comments: |-
+      Very unclear what the exact network architecture is.
+      
+      The authors talk about "Convolutional pooling modules"; not sure what they mean.
+      
+      The authors first describe attention-weighted summing as pooling, but 
+      then go on to explain pooling with skip connections from _every pooling layer_.
+      However, they describe a matrix (node embedding matrix) output from every layer,
+      while their described pooling mechanism outputs a vector.
+      
+      Based on their reference to [17], this may just be described incorrectly;
+      they first do max and average pooling based on skip connections 
+      from the _graph convolutional layers_, and then perform the 
+      attention-weighted summing after that.
+      
+      However, this still leaves ambiguity and possible room for error; 
+      every such pooling layer performs average and max pooling on the 
+      node embedding matrix itself, leading to a graph embedding 
+      corresponding to every GCN (or pooling?) module; it is not clear
+      how these are combined, and how they relate to the aforementioned 
+      attention-weighted summing.
+comments: # list

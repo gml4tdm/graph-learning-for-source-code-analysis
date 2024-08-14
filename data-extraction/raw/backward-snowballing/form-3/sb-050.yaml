@@ -1,0 +1,57 @@
+paper-id: sb-050
+pdf-id: sb-072
+graphs:
+  extended-api-usage-graph:
+    name: Extended API Usage Graph
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: objects/values/method invocations/constructor calls/field access/conditional checks/inheritance
+    edge-type: call/control flow/sequential execution/synchronization/throw/handle/param
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: |-
+      The authors make use of a set of discriminative subgraphs; subgraphs indicative of a label.
+      Each graph has a binary vector, where each entry indicates whether some specific discriminative subgraph occurs in the graph.
+    other-features: n/a
+models:
+  svm:
+    name: SVM
+    architecture-attributes:
+      - svm
+      - rbf kernel
+      - w/ novelty detector to detect unknown patterns
+  knn:
+    name: KNN
+    architecture-attributes:
+      - knn
+      - w/ novelty detector to detect unknown patterns
+  naive-bayes:
+    name: Naive Bayes
+    architecture-attributes:
+      - naive bayes
+      - w/ novelty detector to detect unknown patterns
+tasks:
+  api-misuse-detection:
+    training-objective: Detect misuse of APIs (e.g. read after close on a file, file not closed)
+    training-granularity: graph classification
+    working-objective: Detect misuse of APIs (e.g. read after close on a file, file not closed)
+    working-granularity: graph classification
+    application: API misuse detection
+    supervision: supervised
+combinations:
+  - graph: extended-api-usage-graph
+    model: svm
+    task: api-misuse-detection
+    comments:
+  - graph: extended-api-usage-graph
+    model: knn
+    task: api-misuse-detection
+    comments:
+  - graph: extended-api-usage-graph
+    model: naive-bayes
+    task: api-misuse-detection
+    comments:
+comments: # list

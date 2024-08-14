@@ -1,0 +1,59 @@
+paper-id: 37
+pdf-id: 50
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+      - name: Source code comments
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: Not specified (unclear how node embeddings are initialised)
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Text inputs (source code, comments) are inputted into a pre-trained BERT model
+        2) AST is inputted into a tree-LSTM 
+        3) Results are inputted into three parallel attention layers 
+        4) Each attention layer is fed into a task-specific output layer
+tasks:
+  author-attribution:
+    training-objective: Given a code snippet, predict its author (from a known list)
+    training-granularity: Graph + Source code (Text) Classification
+    working-objective: Given a code snippet, predict its author (from a known list)
+    working-granularity: Graph + Source code (Text) Classification
+    application: Author Attribution
+    supervision: Supervised
+  comment-classification:
+    training-objective: Determine whether code comment is reliable
+    training-granularity: Graph + Source code (Text) Classification
+    working-objective: Determine whether code comment is reliable
+    working-granularity: Graph + Source code (Text) Classification
+    application: Comment Classification
+    supervision: Supervised
+  duplicate-function-detection:
+    training-objective: Given two code snippets, predict if they are functional duplicates
+    training-granularity: Graph Classification (?)
+    working-objective: Given two code snippets, predict if they are functional duplicates
+    working-granularity: Graph Classification (?)
+    application: Duplicate Function Detection
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: author-attribution + comment-classification + duplicate-function-detection
+    comments: A single model is trained on all three tasks, so that the shared part may benefit from joint knowledge.
+comments: # list

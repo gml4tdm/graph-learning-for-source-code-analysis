@@ -1,0 +1,58 @@
+paper-id: 76
+pdf-id: 106
+graphs: Arbitrary Graphs (?)
+models:
+  code-transformer:
+    type:
+      name: n/a
+      architecture: |- 
+        Transformer (encoder/decoder) setup with BART like-architecture
+        (6 encoder layers, 6 decoder layers, 2 heads/layers)
+  vgae:
+    type:
+      name: n/a
+      architecture: |-
+        Variational Graph Autoencoder
+        
+        Encoder: GCN 
+        
+        For decoding, latent representation is split into two,
+        and passed to two different decoders:
+        
+        1) Node decoder: 
+            GCN (Graph Deconvolutional Network)
+            Reconstruct node embedding matrix 
+        
+        2) Edge decoder
+          Further split latent representation, and use two 
+          dot product decoders. 
+          First one reconstructs the upper-diagonal part of the 
+          adjacency matrix, the second one the sub-diagonal part.
+          This is necessary because due to their symmetric structure,
+          regular dot product decoders can only construct undirected 
+          adjacency matrices.
+          Note: graphs are assumed not to have self-loops.
+tasks:
+  code-construction:
+    training-objective: Given a graph, construct its code
+    training-granularity: n/a
+    working-objective: Given a graph, construct its code
+    working-granularity: n/a
+    application: Construct source code from a given code graph
+    supervision: Self-supervised
+  variational-autoencoder:
+    training-objective: Given a graph, reconstruct it, minimising the reconstruction loss
+    training-granularity: Latent Space Graph Embedding
+    working-objective: Given a latent space representation, construct the corresponding graph
+    working-granularity: n/a
+    application: |-
+      Using SMOTE to interpolate between latent space representations of graphs,
+      and generating new synthetic code graph samples, whose "source code" can 
+      even be reconstructed through the code-transformer
+    supervision: Self-supervised
+combinations:
+  - graph: n/a
+    model: code-transformer + vgae
+    task: code-construction + variational-autoencoder
+    comments: Essentially works on arbitrary code graphs
+comments: # list

@@ -1,0 +1,35 @@
+paper-id: 215
+pdf-id: 285
+graphs:
+  graph:
+    name: n/a
+    description: mix of AST, CFG, PDG
+    artefacts:
+      - name: Source code
+        details: smart contract
+    vertex-type: AST Node (slicing applied)
+    edge-type: ast/control flow/data dependence/control dependence
+    vertex-features: tokens encoded using fasttext
+    edge-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:        # list
+      - hierarchical GGNN w/ top-k pooling for subgraph mining and obtaining subgraph embedding per subgraph (H-SAGPool)
+      - global (pre-sagpool) readout w/ softmax-weighted node sum (global attention pooling)
+tasks:
+  vulnerability-detection:
+    training-objective: classify graph as vulnerable or not vulnerable
+    training-granularity: graph classification
+    working-objective: classify graph as vulnerable or not vulnerable
+    working-granularity: graph classification
+    application: vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

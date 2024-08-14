@@ -1,0 +1,102 @@
+paper-id: 184
+pdf-id:
+graphs:
+  sigma-0: &sigma-0
+    name: $\sigma$-0 graph
+    description: Mostly based on PDG, but with more variety in node types
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Entry Node
+        details: Entrypoint of control flow into the graph
+      - name: Exit Node
+        details: Exit point of control flow from the graph
+      - name: Data Node
+        details: Represent data, e.g. constants, variables, literals
+      - name: Action Node
+        details: Represent actions, e.g. function calls, operators, etc.
+      - name: Control Node
+        details: Represent control points, e.g branches, looping
+    edge-type:
+      - name: Control Edge
+        details: n/a
+      - name: Data Edge
+        details: n/a
+    vertex-features: |-
+      Entry Node: "ENTRY"
+      Exit Node: "EXIT" 
+      Variable Node: name of the variable type 
+      Control Node: Name of control structure (e.g. "IF")
+      Action node: not specified 
+      
+      Features encoded using fast text, and average of tokens is used
+    edge-features: |-
+      Regular Control edge: Not specified 
+      Exception control edge (catch): type of exception
+      data edge: receiver, parameter, definition, condition, qualifier 
+      
+      Features encoded using fast text, and average of tokens is used
+    connectivity-features: |-
+      Method not specified 
+      
+      reverse edges are added
+    graph-features: n/a
+    other-features: n/a
+  sigma-1:
+    name: $\sigma$-1 graph
+    description: Mostly based on $\sigma$-0 graph, but with additional information
+    edge-type:
+      - name: Control Edge
+        details:
+      - name: Data Edge
+        details: n/a
+      - name: Variable Usage Edges
+        details: Multiple types, but unclear. At least FirstUse and LastUse
+      - name: Node Aliasing
+        details: Not explained
+      - name: Control Dependence Edge
+        details: n/a
+    vertex-features: |-
+      Same as $\sigma$-0, but Node types (according to AST) are also used as features
+    <<: *sigma-0
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        RGCN
+        RGCN
+tasks:
+  embedding:
+    training-objective: |-
+      Minimise loss function with multiple aspects;
+      1) Nodes in the same metapath  random walk should have similar embeddings
+      2) nodes of equal type should be more similar than nodes of different types 
+      3) motif signals
+      4) Similar nodes should have similar embeddings
+    training-granularity: Graph Embedding
+    working-objective: n/a
+    working-granularity: n/a
+    application: Embedding (pre-)training
+    supervision: Unknown
+combinations:
+  - graph: sigma-0
+    model: model
+    task: embedding
+    comments: |-
+      The models are pre-trained using the embedding tasks, 
+      and can later be fine-tuned for downstream tasks.
+      
+      The paper does this using the examples of method name prediction,
+      and link prediction (of removed links)
+  - graph: sigma-0
+    model: model
+    task: embedding
+    comments: |-
+      The models are pre-trained using the embedding tasks, 
+      and can later be fine-tuned for downstream tasks.
+      
+      The paper does this using the examples of method name prediction,
+      and link prediction (of removed links)
+comments: # list

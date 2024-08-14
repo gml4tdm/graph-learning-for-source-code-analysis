@@ -1,0 +1,203 @@
+paper-id: 230
+pdf-id: 9
+graphs:
+  distribution-based-weighting: &base-graph
+    name: Weighted Directed Class Coupling Network (WDCCN)
+    description: |-
+      Graph representing different types of coupling between classes,
+      with different weights depending on the type of coupling.
+    artefacts:
+      - name: Source code (project)
+        details: n/a
+    vertex-type:
+      - name: Class
+        details: n/a
+    edge-type:
+      - name: LVA
+        details: Local Variable; For edge (u, v), class u contains a local variable of type v in a method.
+      - name: GVA
+        details: Global Variable; For edge (u, v), class u contains a field of type v.
+      - name: INH
+        details: Inheritance;  For edge (u, v), class u inherits from class v.
+      - name: IMP
+        details: Implementation; For edge (u, v), class u implements interface v.
+      - name: PAR
+        details: Parameter; For edge (u, v), class u contains method with a parameter of type v.
+      - name: RET
+        details: Return; For edge (u, v), class u contains method with a return type of type v.
+      - name: INS
+        details: Instantiates; For edge (u, v), class u instantiates class v.
+      - name: ACC
+        details: Access; For edge (u, v), class u accesses a field of class v
+      - name: MEC
+        details: Method Call; For edge (u, v), class u calls a method of class v.
+    vertex-features: n/a
+    edge-features: |-
+      Edge features based on distribution with which coupling occurs in a project.
+      
+      Let N denote the intra-package coupling of some type, and M the inter-package coupling.
+      Then, the weight is defined as:
+      
+      10 if N > 0 and M = 0
+      1 if N = M = 0
+      round(0.5 + 10 * N / (N + M)) otherwise
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+  ordinal-scale-based-weighting:
+    <<: *base-graph
+    edge-features: |-
+      Edge weights based on existing ordinal rankings in literature,
+      re-mapped to correspond to the proposed edge types.
+        
+      Weights:
+      LVA: 1
+      GVA: 5.5
+      INH: 9
+      IMP: 10
+      PAR: 1
+      RET: 1
+      INS: ignored 
+      ACC: ignored 
+      MEC: 1
+  empirical-weighting:
+    <<: *base-graph
+    edge-features: |-
+      Weights fine-tuned based on performance in architecture reconstruction.
+        
+      Weights:
+      LVA: 1
+      GVA: 3
+      INH: 3
+      IMP: 4
+      PAR: 3
+      RET: 3
+      INS: 2 
+      ACC: 2 
+      MEC: 2
+models:
+  classrank:
+    type:
+      name: ClassRank
+      architecture: |-
+        Page-rank like algorithm, which uses the equation:
+        
+        \text{PR(u)} = \frac{(1 - d)\text{wDeg}(u)\text{Deg}(u)}{\text{wDegSum \times }
+        \text{PR(u)} = \frac{(1 - d)\text{wDeg}(u)\text{Deg}(u)}{\text{wDegSum \times DegSum} + d\sum_{v \in N(u)} \frac{\text{PR}(v)w(v, u)}{\text{wOutDeg(v)}}
+      
+        Here:
+          PR(x): Page rank value of node x 
+          wDeg(x): Weighted degree (in + out degree) of node x 
+          Deg(x): Unweighted degree (in + out degree) of node x
+          wDegSum: Sum of weighted degrees of all node
+          DegSum: Sum of unweighted degrees of all node
+          N(x): Neighbors of node x
+          w(x, y): Weight of edge(s) between nodes x and y
+          wOutDeg(x): Out degree of node x
+tasks:
+  ranking:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: Rank classes according to their importance
+    working-granularity: Node Ranking
+    application: Documentation Effort Prioritisation
+    supervision: Unsupervised
+training:
+  experiment:
+    train-test-split: n/a
+    cross-validation: n/a
+    hyper-parameters:
+      - name: d
+        value: 0.85
+      - name: cbo (CBO threshold for filtering rules)
+        value: 0
+      - name: nom (NOM threshold for filtering rules)
+        value: 0
+      - name: loc (LOC threshold for filtering rules)
+        value: 2
+    hyper-parameter-selection: Based on literature (d)
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: Evaluate with different top-k% ranked items
+    evaluation-methods:
+      - name: precision
+        type: metric
+        details: n/a
+      - name: recall
+        type: metric
+        details: n/a
+      - name: f1-score
+        type: metric
+        details: n/a
+      - name: RSS (ranking score sum)
+        type: metric
+        details: Sum of all top-k ranked items
+datasets:
+  group-1:
+    name: n/a
+    description: |-
+      Projects used by McBurney et al. 
+      
+      Contains classes labelled as either important or unimportant.
+    source: # list
+      - NanoXML
+      - jExcelAPI
+      - JGraphT
+    labelling: not specified
+    size: 931
+    is-pre-existing: yes
+  group-2:
+    name: n/a
+    description: |-
+      Projects used by Liu et al. 
+      
+      Contains classes labelled as either important or unimportant.
+    source: # list
+      - Apache Ant
+      - Argo UML
+      - jEdit
+      - jHotDraw
+      - jMeter
+      - wro4j
+    labelling: Labels derived from existing design documentation (``labelled by developers'')
+    size: 4199
+    is-pre-existing: yes
+combinations:
+  - graph: distribution-based-weighting
+    model: classrank
+    task: ranking
+    training: experiment
+    dataset: group-1
+    comments:
+  - graph: distribution-based-weighting
+    model: classrank
+    task: ranking
+    training: experiment
+    dataset: group-2
+    comments:
+  - graph: ordinal-scale-based-weighting
+    model: classrank
+    task: ranking
+    training: experiment
+    dataset: group-1
+    comments:
+  - graph: ordinal-scale-based-weighting
+    model: classrank
+    task: ranking
+    training: experiment
+    dataset: group-2
+    comments:
+  - graph: empirical-weighting
+    model: classrank
+    task: ranking
+    training: experiment
+    dataset: group-1
+    comments:
+  - graph: empirical-weighting
+    model: classrank
+    task: ranking
+    training: experiment
+    dataset: group-2
+    comments:
+comments: # list
+  - The page rank algorithm is also combined with simple filtering rules based on the CBO, NOM, and LOC metrics.
+  - Using the rule-based filtering, exceptions are always filtered out.

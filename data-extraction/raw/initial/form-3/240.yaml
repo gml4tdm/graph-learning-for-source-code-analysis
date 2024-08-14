@@ -1,0 +1,103 @@
+paper-id: 240
+pdf-id: 335
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+  cfg:
+    name: cfg
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: statement/basic block
+    edge-type: control flow
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  svm-1:
+    name: SVM
+    architecture-attributes:
+      - svm
+      - subtree kernel (tree kernel)
+  svm-2:
+    name: svm
+    architecture-attributes:
+      - svm
+      - subset tree kernel (tree kernel)
+  svm-3:
+    name: svm
+    architecture-attributes:
+      - svm
+      - shortest path kernel (graph kernel)
+  svm-4:
+    name: svm
+    architecture-attributes:
+      - svm
+      - random walk kernel (graph kernel)
+  svm-5:
+    name: svm
+    architecture-attributes:
+      - svm
+      - subgraph matching kernel (graph kernel)
+  svm-6:
+    name: svm
+    architecture-attributes:
+      - svm
+      - graphlet kernel (graph kernel)
+  svm-7:
+    name: svm
+    architecture-attributes:
+      - svm
+      - Weisfeiler-Lehman kernel (graph kernel)
+tasks:
+  algorithm-classification:
+    training-objective: Given a program (graph), classify it into one of multiple categories
+    training-granularity: graph classification
+    working-objective: Given a program (graph), classify it into one of multiple categories
+    working-granularity: graph classification
+    application: Algorithm Identification
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: svm-1
+    task: algorithm-classification
+    comments:
+  - graph: ast
+    model: svm-2
+    task: algorithm-classification
+    comments:
+  - graph: cfg
+    model: svm-3
+    task: algorithm-classification
+    comments:
+  - graph: cfg
+    model: svm-4
+    task: algorithm-classification
+    comments:
+  - graph: cfg
+    model: svm-5
+    task: algorithm-classification
+    comments:
+  - graph: cfg
+    model: svm-6
+    task: algorithm-classification
+    comments:
+  - graph: cfg
+    model: svm-7
+    task: algorithm-classification
+    comments:
+comments: # list

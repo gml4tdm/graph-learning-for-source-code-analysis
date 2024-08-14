@@ -1,0 +1,70 @@
+paper-id: 148
+pdf-id: 197
+graphs:
+  graph:
+    name: n/a
+    description: AST with data flow information
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+    vertex-features: |-
+      Nodes are one-hot encoded.
+      
+      Unclear what specifically is encoded.
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: |-
+      Source code is tokenizes line-by-line, with CamelCase and under_scores split up. Tokens are one-hot encoded.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        encoder/decoder setup.
+        
+        0) All token- and node embeddings are multiplied by a matrix; unclear if part of the network
+        1) AST Encoder (N: Node embedding Matrix, A: binary adjacency Matrix)
+          i) Three parallel inputs:
+            - [G] Global Self Attention; Q = NW_Q, K = NW_K, V = NW_V
+            - [S} Structure Induced Self-Attention; Softmax(\frac{A \cdot QK^T}{\sqrt{d}})V   (Q, K, V not clearly defined)
+            - [L] Local Self Attention: Softmax(\frac{M \cdot QK^T}{\sqrt{d}})V   
+              (Q, K, V not clearly defined)
+              (M: window matrix; constrain computation to node pairs in window distance)
+          ii) Mean pooling is applied G, S, and L to obtain G', S', L'
+          iii) s_G, s_S, s_L = sum([G', S', L'] \cdot [G', S', L']^T) (LHS: scalar values)
+          iv) a = \sigma(s_G * W_g), b = \sigma(s_S * W_s), c = \sigma(s_L * W_l) (W_{g,s,l}: trainable scalars)
+          v) out = ReLU(FNN(a*G + b*S + c*L))
+        2) Hierarchical Sequence Encoder (recall: input is a sequence of sub-sequences of tokens)
+          i) Each token is passed through a self-attention layer
+          ii) Every subsequence is passed through LSTM; where the final hidden state per subsequence is used to represent that sequence (I think)
+          iii) Self-attention 
+          iv) LSTM (2D matrix output)
+        3) Encoder outputs are concatenated 
+        4) Bidirectional Decoder (generate both in left and right direction)
+          i) embeddings thus far are combined with positional embedding, and passed through embedding layers (one left direction input, one right direction)
+          ii) Both embeddings are passed through multi-head self-attention 
+          iii) For each embedding, compute FNN_softmax(FNN_relu(...))
+tasks:
+  code-summarization:
+    training-objective: Given a code snippet, generate a summary (note; sequence generated thus far _not_ given as input; entire sequence generated "at once")
+    training-granularity: Graph + Sequence to Sequence
+    working-objective: Given a code snippet, generate a summary (note; sequence generated thus far _not_ given as input; entire sequence generated "at once")
+    working-granularity: Graph + Sequence to Sequence
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: code-summarization
+    comments:
+comments:
+  -  Some details in explanation might be unclear; check paper if necessary

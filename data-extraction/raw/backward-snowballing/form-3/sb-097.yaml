@@ -1,0 +1,87 @@
+paper-id: sb-097
+pdf-id: sb-135
+graphs:
+  class-network:
+    name: Class network
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: class
+    edge-type: class dependencies (calling relations)
+    vertex-features: |-
+      1) Internal node features (e.g. number of methods in class)
+      2) External node features (e.g. out degree, centrality; classical non-global network metrics)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  lda:
+    name: Linear Discriminant Analysis
+    architecture-attributes:
+      - Linear Discriminant Analysis
+  knn:
+    name: K-Nearest Neighbors
+    architecture-attributes:
+      - K-Nearest Neighbors
+  dt:
+    name: Decision Tree
+    architecture-attributes:
+      - Decision Tree
+  lr:
+    name: Logistic Regression
+    architecture-attributes:
+      - Logistic Regression
+  rf:
+    name: Random Forest
+    architecture-attributes:
+      - Random Forest
+  svm:
+    name: Support Vector Machine
+    architecture-attributes:
+      - Support Vector Machine
+  adaboost:
+    name: n/a
+    architecture-attributes:
+      - Adaboost
+      - base estimator -- CART classification tree
+      - parameter algorithm -- SAMME.R
+tasks:
+  defect-prediction:
+    training-objective: Classify node as defective or not
+    training-granularity: node classification
+    working-objective: Classify node as defective or not
+    working-granularity: node classification
+    application: Defect prediction
+    supervision: supervised
+combinations:
+  - graph: class-network
+    model: lda
+    task: defect-prediction
+    comments:
+  - graph: class-network
+    model: knn
+    task: defect-prediction
+    comments:
+  - graph: class-network
+    model: dt
+    task: defect-prediction
+    comments:
+  - graph: class-network
+    model: lr
+    task: defect-prediction
+    comments:
+  - graph: class-network
+    model: rf
+    task: defect-prediction
+    comments:
+  - graph: class-network
+    model: svm
+    task: defect-prediction
+    comments:
+  - graph: class-network
+    model: adaboost
+    task: defect-prediction
+    comments:
+comments: # list

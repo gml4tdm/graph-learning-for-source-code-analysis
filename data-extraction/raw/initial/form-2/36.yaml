@@ -1,0 +1,125 @@
+paper-id: 36
+pdf-id: 49
+graphs:
+  graph-1:
+    name: n/a
+    description: modified control flow graph
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type:
+      - name: Token
+        details: CFG is created based on statements, then every statement is split into tokens
+    edge-type:
+      - name: Control Flow
+        details: CFG is created based on statements, then every statement is split into tokens
+      - name: Next Token (statement)
+        details: Connect consecutive tokens in a statement
+    vertex-features: token
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+  graph-2:
+    name: n/a
+    description: modified control flow graph, where multiple control flow graphs of calling/callee functions are combined
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type:
+      - name: statement
+        details: n/a
+    edge-type:
+      - name: Control Flow
+        details: CFG is created based on statements
+    vertex-features: tokens (in the statement)
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  ginn:
+    type:
+      name: Graph Internal Neural Network (GINN)
+      architecture: |-
+        GINN has three basic operations:
+        1) Partitioning:
+            Partition the graph into disjoint intervals,
+            and perform message passing _but only between nodes in the same interval_
+        
+            Nodes which are on their own in an interval are not updated 
+        2) Heightening:
+            Generate a next graph where each node represents an interval in the previous graph.
+        
+            The embedding for each node is computed by aggregating node embeddings 
+            from the intervals in the old graph.
+        3) Lowering:
+            Generate a lower-order graph from the heightened graph. (inverse operation)
+        
+            Embeddings are computed based on the embeddings of the nodes in the 
+            higher order graph.
+        
+        GINN performs partitioning + heightening until the graph only contains 
+        a single interval in which partitioning is performed. Then, lowering + partitioning
+        is performed until the original graph is recovered.
+  variable-misuse-detection-model:
+    type:
+      name: n/a
+      architecture: |-
+        Learnable Embedding Layer 
+        GINN
+        Softmax (2 vectors as output)
+  method-naming-model:
+    type:
+      name: n/a
+      architecture: |-
+        Encoder:
+          Learnable Embedding Layer 
+          GINN
+        Decoder:
+          RNN w/ attention
+  null-pointer-dereference-detection-model:
+    type:
+      name: n/a
+      architecture: |-
+        Learnable Embedding Layer 
+        RNN to learn node embeddings 
+        GINN
+        node aggregation (exact method unclear) 
+        FNN
+tasks:
+  variable-misuse-detection:
+    training-objective: Given a program, determine 1) which variable usage is incorrect, and 2) which (existing) variable should be used
+    training-granularity: pointer-like network for pointing to node
+    working-objective: Given a program, determine 1) which variable usage is incorrect, and 2) which (existing) variable should be used
+    working-granularity: pointer-like network for pointing to node
+    application: Variable misuse prediction
+    supervision: supervised
+  method-naming:
+    training-objective: Given a method, generate a name
+    training-granularity: graph to sequence
+    working-objective: Given a method, generate a name
+    working-granularity: graph to sequence
+    application: Method naming
+    supervision: supervised
+  null-pointer-dereference-detection:
+    training-objective: determine if the given code sample (graph) has a null pointer dereference bug or not
+    training-granularity: graph classification
+    working-objective: determine if the given code sample (graph) has a null pointer dereference bug or not
+    working-granularity: graph classification
+    application: null pointer dereference detection
+    supervision: supervised
+combinations:
+  - graph: graph-1
+    model: ginn + variable-misuse-detection-model
+    task: variable-misuse-detection
+    comments:
+  - graph: graph-1
+    model: ginn + method-naming-model
+    task: method-naming
+    comments:
+  - graph: graph-2
+    model: ginn + null-pointer-dereference-detection-model
+    task: null-pointer-dereference-detection
+    comments:
+comments: # list

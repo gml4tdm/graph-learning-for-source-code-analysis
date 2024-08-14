@@ -1,0 +1,58 @@
+paper-id: sb-042
+pdf-id: sb-063
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: file
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: code tokens embedded using GloVe
+    edge-features: n/a
+    connectivity-features: not specified, but presumably adjacency matrix
+    graph-features: n/a
+    other-features: |-
+      bug report is used as feature 
+      
+      source code text is used as a feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding layer followed by bidirectional LSTM for bug report [shared]
+      - gcn for graph [project specific]
+      - cnn w/ pooling (not specified what method) for source code text [shared]
+      - graph and text features are concatenated
+      - relevance score through euclidean distance between bug embedding and source code embedding
+tasks:
+  adversarial-training:
+    training-objective: |-
+      !acts on the CNN output! 
+      
+      discriminate what project the given source code (embedding) comes from.
+      
+      Specifically, maximise the loss w.r.t. to the weights of an MLP attached to the CNN 
+      output, minimise loss w.r.t. the CNN weights.
+      
+      Intuition: the CNN should remove project-specific information,
+      while the MLP should retain that information.
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: Pretraining
+    supervision: supervised
+  bug-localisation:
+    training-objective: Given a bug report and source file, determine if the bug occurs in the given file
+    training-granularity: graph classification (but not quite)
+    working-objective: Given a bug report, determine if the bug occurs in the given file
+    working-granularity: graph classification (but not quite)
+    application: Bug localisation
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: adversarial-training + bug-localisation
+    comments:
+comments: # list

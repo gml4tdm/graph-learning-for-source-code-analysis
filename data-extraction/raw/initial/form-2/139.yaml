@@ -1,0 +1,68 @@
+paper-id: 139
+pdf-id: 182
+graphs:
+  program-feedback-graph:
+    name: Program Feedback Graph
+    description:
+    artefacts:
+      - name: Compiler Feedback
+        details: Line number i_err and error message m_err
+      - name: Source Code
+        details: n/a
+    vertex-type:
+      - name: Token
+        details: |-
+          Token in the compiler error message. Specifically, the tokens 
+          found between quotation marks. (e.g. object "a" of type "x" has no attribute "y")
+      - name: Token
+        details: |-
+          Token from code. Specifically, variable names and occurrences of tokens
+          extracted from the error message.
+    edge-type:
+      - name: Token Edge
+        details: Undirected edge between identical tokens
+    vertex-features: Lines in the source code are tokenized
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Compiler message is tokenized 
+      Compiler line number is used as feature
+models:
+  network:
+    type:
+      name: n/a
+      architecture: |-
+        1) Based on the code, it seems all tokens are embedded using the same embedding layer (not entirely clear)
+        2) Each code line is embedded using LSTM^1_code; compiler message encoded using LSTM^1_msg 
+        3) To the output of LSTM_code for every token, the line number offset i_err - i is concatenated 
+            At this point, the token embeddings are denoted h_{x_{ij}} (j-th token in the i-th line of code),
+            and h_{m_{\ell}}
+        4) Message propagation using GAT
+        5) Apply Another round of LSTM through LSTM^2_code and LSTM^2_msg;
+            Each line is embedded as the concatenation of 
+              i) The final hidden state of LSTM^2_code (outputted for the last token in the line)
+              ii) The final hidden state of LSTM^2_msg (outputted for the last token in the compiler message)
+        6) s_1, s_2, \hdots, s_L = LSTM^3_{code}(r_1, r_2, \hdots, r_L)
+        7) p(line k is wrong | s_1, s_2, \hdots, s_L) = softmax(MLP(s_1, s_2, \hdots, s_L))
+        8) Repair is given by s_k fed to a pointer-generator decoder
+tasks:
+  program-repair:
+    training-objective: |-
+      Given a program, compiler error message, and compiler error line number
+        1) Determine the actual wrong line of code 
+        2) output the correct line of code
+    training-granularity: n/a
+    working-objective: |-
+      Given a program, compiler error message, and compiler error line number
+        1) Determine the actual wrong line of code 
+        2) output the correct line of code
+    working-granularity: n/a
+    application: Automated program repair
+    supervision: supervised
+combinations:
+  - graph: program-feedback-graph
+    model: network
+    task: program-repair
+    comments: The authors call the approach self-supervised because the dataset is synthetically generated
+comments: # list

@@ -1,0 +1,87 @@
+paper-id: sb-085
+pdf-id: sb-118
+graphs:
+  graph-1:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/data flow/ncs/function call/control flow
+    vertex-features: not specified
+    edge-features: edge type
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+  graph-2:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: data flow/ncs/function call/control flow
+    vertex-features: not specified
+    edge-features: edge type
+    connectivity-features: not specified
+    graph-features: |-
+      The regular AST is taken, and all connections are "moved down" to the leaf nodes;
+      non-leaf nodes are removed.
+    other-features: n/a
+models:
+  model-1:
+    name: n/a
+    architecture-attributes:
+      - RNN
+      - GGNN (Edge type specific)
+      - RNN
+      - these layers are not quite specific; the general idea is interleaving layers
+      - pointer network
+  model-2:
+    name: n/a
+    architecture-attributes:
+      - Transformer
+      - GGNN (Edge type specific)
+      - Transformer
+      - these layers are not quite specific; the general idea is interleaving layers
+      - pointer network
+  model-3:
+    name: n/a
+    architecture-attributes:
+      - Transformer w/ attention based on connectivity (edge type specific; biases is added in attention computation based on linear layer)
+      - pointer network
+tasks:
+  var-misuse:
+    training-objective: Given a graph, generate 2 pointers, one to the variable occurrence with the wrong name, and 1 to _a_ occurrence of the correct variable name
+    training-granularity: n/a
+    working-objective: Given a graph, generate 2 pointers, one to the variable occurrence with the wrong name, and 1 to _a_ occurrence of the correct variable name
+    working-granularity: n/a
+    application: Variable misuse correction/detection
+    supervision: Supervised
+combinations:
+  - graph: graph-1
+    model: model-1
+    task: var-misuse
+    comments:
+  - graph: graph-1
+    model: model-2
+    task: var-misuse
+    comments:
+  - graph: graph-1
+    model: model-3
+    task: var-misuse
+    comments:
+  - graph: graph-2
+    model: model-1
+    task: var-misuse
+    comments:
+  - graph: graph-2
+    model: model-2
+    task: var-misuse
+    comments:
+  - graph: graph-2
+    model: model-3
+    task: var-misuse
+    comments:
+comments: # list

@@ -1,0 +1,43 @@
+paper-id: sb-021
+pdf-id: sb-165
+graphs:
+  cfg:
+    name: CFG
+    description: n/a
+    artefacts:
+      - name: source code
+        details: file
+    vertex-type: statement
+    edge-type: control flow
+    vertex-features: tokens in statement
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: |-
+      Bug report is also used as feature 
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - probably uses embedding layers
+      - bug report processed using CNN
+      - CNN over tokens in each node to compute node embeddings
+      - Deep walk (skip gram for graphs based on random walk) over graph
+      - all paths in CFG are traversed using LSTM, followed by mean pooling layer
+      - pool all paths
+      - concatenate with bug report
+      - output
+tasks:
+  bug-localisation:
+    training-objective: Correctly identify matching (report, file containing bug) pairs
+    training-granularity: Graph Classification (but not quite)
+    working-objective: Identify the file in which a given bug occurs
+    working-granularity: Graph Classification (but not quite)
+    application: Bug Localisation
+    supervision: Supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: bug-localisation
+    comments:
+comments: # list

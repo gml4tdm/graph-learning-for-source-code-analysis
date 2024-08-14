@@ -1,0 +1,83 @@
+paper-id: 153
+pdf-id:
+graphs:
+  graph:
+    name: n/a
+    description: AST with additional edges
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Next Subtree Edge
+        details: Connects node on the same level
+      - name: Data Flow Edge
+        details: n/a
+      - name: Control Edge
+        details: n/a
+    vertex-features: Not specified
+    edge-features: Edge type
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Source code is used as input
+      
+      Code summary generated thus far is used as input.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Source code encoder -- Based on Transformer
+          i) Multi-head self-attention with relative positional encoding w/ residual connection and normalisation 
+            Multi-head attention details:
+              Q = XW_q, K = XW_k, V = XW_v
+              R_{t - j} = [..., sin((t - j)/1000^{2i/d_k})cos((t - j)/1000^{2i/d_k}), ...]^T
+              A^{rel}_{t,j} = Q_t^TK_j + Q_t^TR_{t - j} + u^TK_j + v^TR_{t - j}
+              attention(Q, K, V) = softmax(A^{rel})V_j
+          
+              t: index of target token
+              j: index of context token 
+              u, v: learnable parameters 
+              R: relative positional encoding 
+          
+              A_n = A^{rel} / sqrt(d_k) + A_{n - 1}
+              head_n = softmax(A_n)V_n
+              concat(head_1, head_2, ..., head_n)W_o
+          ii) FNN w/ residual connection and normalisation
+        2) Graph Encoder 
+          i) Heterogeneous GAT (HGAT) w/ (pre-activation) residual connections.
+              Note that the residual connection effectively passes through a linear layer.
+              The attention scores also have residual connections 
+        3) Feature fusion
+          i) H' = MultiHeadAttention(H_{text}, K_M, V_M)  (where K_M, V_M come from the graph encoder)
+          ii) l = \sigma(W*H' + U*H)      (gate)
+          iii) F = H + l*H'
+        4) Decoder
+          i) code summary thus far is inputted into masked multi-head self-attention w/ residual connections and normalisation
+          ii) multi-head attention w/ residual connections and normalisation
+              K and Q are obtained from feature fusion
+          iii) FNN w/ residual connections and normalisation
+
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph + Sequence to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph + Sequence to Sequence
+    application: Code summarization (Generating comments for Python code)
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: code-summarization
+    comments: Missing details about 1) features for graph, and 2) output of the network
+comments: # list

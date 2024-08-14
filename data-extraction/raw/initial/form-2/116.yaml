@@ -1,0 +1,55 @@
+paper-id: 116
+pdf-id: 155
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      AST Nodes are sequenced using 
+      depth first traversal.
+      
+      Fed into the following network:
+      Embedding Layer 
+      LSTM
+      LSTM 
+      FNN w/ ReLU 
+      FNN w/ Linear
+      
+      Goal is to predict the "essential complexity",
+      a proxy task of predicting a metric associated 
+      with vulnerabilities. 
+      
+      The outputs of the last LSTM layer are used as 
+      graph representations.
+models:
+  model:
+    type:
+      name: Random Forest
+      architecture: Random Forest
+tasks:
+  vulnerability-detection:
+    training-objective: Classify samples as vulnerable or not vulnerable
+    training-granularity: Classification (not graph); Graph Regression
+    working-objective: Classify samples as vulnerable or not vulnerable
+    working-granularity: Classification (not graph); Graph Regression
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

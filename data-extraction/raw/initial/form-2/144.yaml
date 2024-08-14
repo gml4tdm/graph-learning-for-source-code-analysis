@@ -1,0 +1,134 @@
+paper-id: 144
+pdf-id: 192
+graphs:
+  graph:
+    name: n/a
+    description: AST with various additional edges
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Syntax Node
+        details: internal node/corresponds to nonterminal
+      - name: Syntax Token
+        details: leaf node/contains program tokens
+    edge-type:
+      - name: Child Edge
+        details: AST Edge (undirected)
+      - name: Next Token Edge
+        details: NCS (undirected)
+      - name: Last Read Edge
+        details: |-
+          For syntax tokens corresponding to variables,
+          we connect those tokens to all possible places 
+          the variable could have been read last. 
+          (undirected)
+      - name: Last Write Edge
+        details: |-
+          For syntax tokens corresponding to variables,
+          we connect those tokens to all possible places 
+          the variable could have been written to last.
+          (undirected)
+      - name: Computed From
+        details: |-
+          In an assignment v = expr, connect v to all
+          variables used in the expression
+          (undirected)
+      - name: Last Lexical Use
+        details: |-
+          Connect occurrences of same variable in different 
+          data flow, e.g. if (...) { ... v ... } else { ... v ... }
+          (undirected)
+      - name: Returns To
+        details: |-
+          Connect return token to the method declaration (undirected)
+      - name: Formal Arg Name
+        details: |-
+          Connect actual arguments the formal arguments;
+          e.g. given bar(x) and bar(Integer y), connect x to y
+          (undirected)
+      - name: Guarded By
+        details: |-
+          Connect every variable token guarded by a conditional (if) 
+          to the guard expression 
+          (undirected)
+      - name: Guarded By Negation
+        details: |-
+          Connect every variable token guarded by the negation of a 
+          conditional (else) to the guard expression 
+          (undirected)
+    vertex-features: |-
+      Syntax nodes use the node type name as a text feature.
+      Syntax tokens use the program content as a text feature.
+      
+      Text payload is split into subtokens, each of which is 
+      embedded (unclear how); average of embedding is computed.
+      
+      All types are embedded using a trainable embedding layer.
+      Each variable has a type, which is encoded as the 
+      element-wise maximum of that type, and all its super-types
+      (including implementation relations).
+    edge-features: |-
+      In case of the var-misuse task, some adjustments are made to the graph:
+      1) The node corresponding to the slot is removed, and replaced with a context node
+      2) All LastUse, LastWrite, LastLexicalUse, and GuardedBy edges to the context node are removed 
+      3) For every possible candidate variable, a new node is added, connected by the 
+          LastUse, LastWrite, and LastLexicalUse edges of the old node
+    connectivity-features: adjacency list
+    graph-features: n/a
+    other-features: n/a
+models:
+  ggnn-var-naming:
+    type:
+      name: n/a
+      architecture: |-
+        Embedding Layer for types 
+        concat with text embedding (unclear if done in preprocessing or in network)
+        Linear layer (to obtain node embeddings)
+        GGNN
+        average representation for all <SLOT> tokens
+        GRU
+  ggnn-var-misuse:
+    type:
+      name: n/a
+      architecture: |-
+        Embedding Layer for types 
+        concat with text embedding (unclear if done in preprocessing or in network)
+        Linear layer (to obtain node embeddings)
+        GGNN
+        For every candidate variable, concatenate its node representation with 
+          that of the context node, pass it through a linea linear,
+          and use argmax to select the best candidate.
+tasks:
+  var-naming:
+    training-objective: |-
+      Given a graph, where for one variable all nodes are replaced with a special [SLOT],
+      output a suggested name for the variable
+    training-granularity: Graph To Sequence
+    working-objective: |-
+      Given a graph, where for one variable all nodes are replaced with a special [SLOT],
+      output a suggested name for the variable
+    working-granularity: Graph To Sequence
+    application: Variable Name Prediction
+    supervision: (Self-)Supervised
+  var-misuse:
+    training-objective: |-
+      Given a graph, where one variable usage is replaced,
+      output the correct variable to be used in that place
+    training-granularity: Node classification, but not quite
+    working-objective: |-
+      Given a graph, where one variable usage is replaced,
+      output the correct variable to be used in that place
+    working-granularity: Node classification, but not quite
+    application: Variable Misuse Repair
+    supervision: (Self-)Supervised
+combinations:
+  - graph: graph
+    model: ggnn-var-naming
+    task: var-naming
+    comments:
+  - graph: graph
+    model: ggnn-var-misuse
+    task: var-misuse
+    comments:
+comments: # list

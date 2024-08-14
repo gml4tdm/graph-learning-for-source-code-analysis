@@ -1,0 +1,75 @@
+paper-id: 34
+pdf-id: 47
+graphs:
+  augmented-ast:
+    name: n/a
+    description: Combination of AST, PDF, and CFG
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type:
+      - name: AST Nodes
+        details: |-
+          Some degree of abstraction is applied to the node labels. 
+          Specifically, concrete identifiers are replaced by abstract ones.
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: Edge from statement to every possible next statement
+      - name: Data Dependence Edge
+        details: Assignment points to all variables usages
+      - name: Control Dependence Edge
+        details: Edge from one statement which is affected by another (e.g. increment in loop body)
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: |-
+      A graph is represented using a bag of subgraphs feature.
+      
+      Roughly, every subgraph of size i is assigned a label. 
+      The feature vector is generated using some control parameter h;
+      the final feature vector consists of a "vector" of all sets of subgraphs 
+      of size 1, 2, ..., h.
+      
+      (Note: slightly inaccurate for simplicity))
+    other-features: n/a
+models:
+  svm:
+    type:
+      name: SVM
+      architecture: |-
+        SVM with a kernel function based on Generalised Jaccard Similarity:
+        
+        K(G_1, G_2) = \frac{1}{h + 1}\sum_{i = 0}^h GJac(B^i_{G_1}, B^i_{G_2})
+        
+        Here, B^{i}_{G} is the set of subgraphs of size i in G.
+tasks:
+  binary-recommendation:
+    training-objective: Given a code representation, predict whether the fixed verification tool is appropriate for the given code
+    training-granularity: Graph Classification
+    working-objective: Given a code representation, predict whether the fixed verification tool is appropriate for the given code
+    working-granularity: Graph Classification
+    application: verification tool recommendation (For a fixed tool)
+    supervision: Supervised
+  ranked-recommendation:
+    training-objective: Pairwise ranking; determine which tool is more suitable for the given code
+    training-granularity: Pairwise ranking of graphs (Binary Graph Classification)
+    working-objective: Pairwise ranking; determine which tool is more suitable for the given code
+    working-granularity: Pairwise ranking of graphs (Binary Graph Classification)
+    application: |-
+      verification tool recommendation ranking. 
+      
+      One classifier for every pair of tools; must say whether 
+      the first tool is better than the second one for the given code.
+    supervision: Supervised
+combinations:
+  - graph: augmented-ast
+    model: svm
+    task: binary-recommendation
+    comments:
+  - graph: augmented-ast
+    model: svm
+    task: ranked-recommendation
+    comments:
+comments: # list

@@ -1,0 +1,75 @@
+paper-id: 127
+pdf-id: 170
+graphs:
+  cfg:
+    name: CFG
+    description: |-
+      To avoid confusion, remember that the artefacts in the 
+      "artefacts" section are not related _beforehand_, but their
+      relatedness must be predicted
+    artefacts:
+      - name: Bug report
+        details: n/a
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details: Every function in a source file has its own PDG
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: |-
+      Statements in nodes are encoded using CodeBERT.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Source code text is also used as input.
+      
+      Bug report text is cleaned up (e.g. formatting removal)
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Three parallel inputs:
+          i) Bug Report Text 
+            Encoded using the Transformer encoder (Viswani et al.),
+            and taking the output of the [CLS] token by the 
+            final layer as the final embedding.
+          ii) Source Code Text 
+            Encoded by fine-tuning the CodeBERT model,
+            and taking the output of the [CLS] token by the 
+            final layer as the final embedding.
+          iii) CFH
+            First, statements are encoded further by one 
+            layer of the (encoder) Transformer architecture as defined by 
+            Visawni et al., followed by Max pooling. 
+        
+            The CFG is then encoded by 6 layers of the encoder 
+            of the Transformer architecture, with one adjustment;
+            attention is made structure aware by computing it as 
+        
+            att = softmax(\frac{QK^T}{\sqrt{d_k}} + M)V
+        
+            Where $M_{ij} = 0$ is there is an edge between nodes $i$ and $j$,
+            and $\infty$ otherwise.
+        2) concatenation 
+        3) FNN
+        4) BatchNormalisation
+        5) FNN
+        6) FNN
+tasks:
+  bug-localisation:
+    training-objective: Predict whether the bug in the given report is correlated with the given source file
+    training-granularity: n/a
+    working-objective: Predict whether the bug in the given report is correlated with the given source file
+    working-granularity: n/a
+    application: Bug localisation
+    supervision: supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: bug-localisation
+    comments:
+comments: # list

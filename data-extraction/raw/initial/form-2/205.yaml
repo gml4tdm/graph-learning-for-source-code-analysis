@@ -1,0 +1,71 @@
+paper-id: 205
+pdf-id: 275
+graphs:
+  fa-ast:
+    name: FA-AST (Flow-augmented AST)
+    description: AST with additional edges (all edges undirected)
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Child Edge
+        details: n/a
+      - name: AST Parent Edge
+        details: n/a
+      - name: Next Sibling Edge
+        details: n/a
+      - name: Next Token Edge
+        details: n/a
+      - name: Next Use Edge
+        details: Connect variable to its next use
+      - name: If Edge
+        details: Connect if statement to its condition, ThenStatement, and ElseStatement
+      - name: While Edge
+        details: Connect while statement to its condition and body
+      - name: For Edge
+        details: Connect for statement to its control, and body
+      - name: Sequential Execution Edge
+        details: Sequential execution between statements _in a code block_
+    vertex-features: Unclear what exactly is used. Seems to be at least the actual token payload for leaf nodes.
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  gnn:
+    type:
+      name: n/a
+      architecture: |-
+        Embedding Layer
+        GGNN (no  edge type specific stuff)
+        Readout using: h_G = MLP(\sum_(i \in V) \sigma(MLP_{gate}(h_i^T)) \odot MLP(h_i^T))))
+        Cosine similarity of the two input programs
+  gmn:
+    type:
+      name: n/a
+      architecture: |-
+        Embedding Layer 
+        Graph Matching Network 
+        Readout using: h_G = MLP(\sum_(i \in V) \sigma(MLP_{gate}(h_i^T)) \odot MLP(h_i^T))))
+        Cosine similarity of the two input programs
+tasks:
+  clone-detection:
+    training-objective: Given two code samples, determine whether they are semantic clones
+    training-granularity: Graph Classification (?)
+    working-objective: Given two code samples, determine whether they are semantic clones
+    working-granularity: Graph Classification (?)
+    application: Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: fa-ast
+    model: gnn
+    task: clone-detection
+    comments:
+  - graph: fa-ast
+    model: gmn
+    task: clone-detection
+    comments:
+comments: # list

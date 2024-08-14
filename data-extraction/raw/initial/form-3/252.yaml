@@ -1,0 +1,35 @@
+paper-id: 252
+pdf-id: 353
+graphs:
+  class-graph:
+    name: Weighted Directed Class Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: project
+    vertex-type: class
+    edge-type: inheritance coupling/method coupling/data coupling
+    vertex-features: n/a
+    edge-features: edges are weighted (e.g number of method called)
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  clustering:
+    name: n/a
+    architecture-attributes:
+      - edge weight sensitive [custom] clustering algorithm
+tasks:
+  architecture-recovery:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: cluster classes into modules (clusters)
+    working-granularity: graph (node) clustering
+    application: high-level software architecture reconstruction
+    supervision: unsupervised
+combinations:
+  - graph: class-graph
+    model: clustering
+    task: architecture-recovery
+    comments:
+comments: # list

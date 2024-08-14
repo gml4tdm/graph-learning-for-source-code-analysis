@@ -1,0 +1,49 @@
+paper-id: sb-111
+pdf-id: sb-154
+graphs:
+  ast:
+    name: ast (binarized)
+    description: n/a
+    artefacts:
+      - name: source code
+        details: function
+    vertex-type: ast/null nodes (inserted to make a full binary tree out of the ast)
+    edge-type: ast
+    vertex-features: |-
+      every node is represented as a 3-entry vector,
+      where the first entry is the ordinal encoding of the node types,
+      and the other two entries carry additional information about the node.
+      
+      null nodes are encoded as (0, 0, 0)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Note is put into sequence using breadth first traversal
+models:
+  mlp:
+    name: n/a
+    architecture-attributes:
+      - MLP
+  cnn:
+    name: n/a
+    architecture-attributes:
+      - CNN
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample as vulnerable or not
+    training-granularity: n/a
+    working-objective: Classify sample as vulnerable or not
+    working-granularity: n/a
+    application: Vulnerability Detection
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: mlp
+    task: vulnerability-detection
+    comments:
+  - graph: ast
+    model: cnn
+    task: vulnerability-detection
+    comments:
+comments: # list

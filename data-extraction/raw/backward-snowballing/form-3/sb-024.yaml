@@ -1,0 +1,37 @@
+paper-id: sb-024
+pdf-id: sb-034
+graphs:
+  cfg:
+    name: CFG
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type: basic block
+    edge-type: control flow
+    vertex-features: basic block encoded using doc2vec
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - GCN
+      - max pooling
+      - FNN
+tasks:
+  vulnerability-detection:
+    training-objective: Classify graph as vulnerable or non-vulnerable
+    training-granularity: Graph classification
+    working-objective: Classify graph as vulnerable or non-vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

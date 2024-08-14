@@ -1,0 +1,58 @@
+paper-id: 50
+pdf-id: 71
+graphs:
+  dependency-graph:
+    name: Dependency Graph
+    description:
+    artefacts:
+      - name: Source code
+        details: project
+    vertex-type:
+      - name: Module
+        details: n/a
+    edge-type:
+      - name: Dependency
+        details: n/a
+    vertex-features: |-
+      For every pair of nodes, compute the following features:
+        1) topological features (common neighbours, Salton, Sorensen, Adamic-Adar, Katz, SimRank, Russel-Rao, Resource Allocation)
+        2) content-based features:
+            i) For every class in a module, compute the BoW representation of
+                field attributes, method names, names of invoked methods, parameter names, comments, and JavaDoc documentation
+            ii) Recursively take the union of class-based BoW representations to obtain the module-level BoW representation
+            iii) Compute similarity between the two module-level BoW representations using cosine similarity
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  svm-with-automaton:
+    type:
+      name: n/a
+      architecture: |-
+        SVM for link prediction.
+        
+        False positives were penalised using a learning automaton;
+        if a false positive is predicted for multiple successive 
+        versions of a project, the automaton lowers the 
+        confidence outputted by the classifier.
+tasks:
+  architectural-smell-prediction:
+    training-objective: |-
+      Given two pairs of (the same!) nodes from versions n and n+1, 
+      where there is no dependency between between the nodes in version n, 
+      determine based on the features in version n whether there will be a 
+      dependency between the nodes in version n+1
+    training-granularity: Link Prediction
+    working-objective: |- 
+      Given a pair of nodes from version n,
+      predict whether there will be a dependency between the nodes in version n+1
+    working-granularity: Link Prediction
+    application: Predicting the emergence of architectural smells
+    supervision: Supervised
+combinations:
+  - graph: dependency-graph
+    model: svm-with-automaton
+    task: training-objective
+    comments:
+comments: # list

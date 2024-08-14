@@ -1,0 +1,85 @@
+paper-id: 188
+pdf-id:
+graphs:
+  program-graph:
+    name: n/a
+    description: AST with various additional edges
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Syntax Node
+        details: internal node/corresponds to nonterminal
+      - name: Syntax Token
+        details: leaf node/contains program tokens
+    edge-type:
+      - name: Child Edge
+        details: AST Edge
+      - name: Subtoken Edge
+        details: Sub token
+      - name: Next Token Edge
+        details: NCS
+      - name: Last Read Edge
+        details: |-
+          For syntax tokens corresponding to variables,
+          we connect those tokens to all possible places 
+          the variable could have been read last.
+      - name: Last Write Edge
+        details: |-
+          For syntax tokens corresponding to variables,
+          we connect those tokens to all possible places 
+          the variable could have been written to last.
+      - name: Computed From
+        details: |-
+          In an assignment v = expr, connect v to all
+          variables used in the expression
+    vertex-features: Unclear how tokens are embedded
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+  summary-graph:
+    name: Dependency Parse Graph
+    description: n/a
+    artefacts:
+      - name: Summary of code (training), query for search (testing)
+        details: n/a
+    vertex-type:
+      - name: Token
+        details: n/a
+    edge-type:
+      - name: Dependency Edge
+        details: One of 49 different types
+      - name: Next Token Edge
+        details: NCS
+      - name: Subtoken Edge
+        details: Sub token
+    vertex-features: Unclear how tokens are embedded
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: n/a
+          i) Bidirectional GGNN
+          ii) Global max pooling -> h^g
+          iii) Multi-head self attention where Q = K = V = embedding matrices for tokens over GGNN output 
+          iv) Mean max pooling over attention output -> h^c
+          v) r = concat(h^g, h^c)
+tasks:
+  code-search:
+    training-objective: Maximise similarity between matching (summary, code) pairs, minimise similarity between unrelated pairs
+    training-granularity: n/a
+    working-objective: Output vectors for code and query for similarity based  code search
+    working-granularity: n/a
+    application: Code Search
+    supervision: supervised
+combinations:
+  - graph: program-graph + summary-graph
+    model: model
+    task: code-search
+    comments: Program and Summary graphs are encoded by two models with different parameters (i.e. no shared weights), but the same architecture
+comments: # list

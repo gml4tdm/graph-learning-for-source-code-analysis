@@ -1,0 +1,69 @@
+paper-id: 177
+pdf-id:
+graphs:
+  fda:
+    name: FDA
+    description: Mixture of AST, FCG, and DFG
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Data Flow Edge - LastUse
+        details: n/a
+      - name: Data Flow Edge - Compute
+        details: n/a
+      - name: Data Flow Edge - Formal
+        details: n/a
+      - name: Data Flow Edge - Return
+        details: n/a
+      - name: Data Flow Edge - Operand
+        details: n/a
+      - name: Function Call Edge
+        details: n/a
+    vertex-features: Unclear what node features are used
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) GGANN - Combination of GGNN and GAT
+          - Every edge has a hidden state 
+          i) Edge hidden state update
+            h'_{ij}^{t + 1} = MLP(h'_{ij}^t, h_i^t, h_j^t)
+          ii) Propagation Matrix Computation (computed matrix for specific connection)
+            B^{t + 1} = MLP(h'_{ij}^{t})
+          iii) Attention
+            a_{ij} = softmax(Attention(h_i^t, h_j^t))
+          iv) Aggregation
+            m_i^{t + 1} = \sum_{j \in N_i} a_{ij} B^{t + 1} h_j^t
+          v) GRU
+            h_i^{t + 1} = GRU(h_i^t, m_i^{t + 1})
+        2) Pooling according to
+          h_G is initialised 
+          h_G = \sum_{i \in V} f(h_i^T, h_G) \odot g(h_i^T)
+          Here, f is a neural network serving as a soft attention mechanism (compute similarity score),
+          and g is a neural network 
+        3) output; y = softmax(h_G)
+tasks:
+  program-classification:
+    training-objective: Given a sample (program), classify it into one of multiple categories
+    training-granularity: Graph Multi-class Classification
+    working-objective: Given a sample (program), classify it into one of multiple categories
+    working-granularity: Graph Multi-class Classification
+    application: Program Classification (student programs)
+    supervision: Supervised
+combinations:
+  - graph: fda
+    model: model
+    task: program-classification
+    comments:
+comments: # list

@@ -1,0 +1,53 @@
+paper-id: 189
+pdf-id: 252
+graphs:
+  graph:
+    name: Code Semantic Representation Graph (CSRG)
+    description: AST with data flow information
+    artefacts:
+      - name: Source code with docstring
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: Directed edges are added between leaf nodes "to determine branch statements in the AST" (NOT NCS)
+      - name: Data Flow Edge
+        details: n/a
+    vertex-features: Node representations computed using DeepWalk
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Code and summary/query are tokenised and put into a sequence,
+      and tokenised using FastText
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Code Sequence Encoder
+          i) Bidirectional LSTM
+        2) Graph Encoder
+          i) GAT
+          ii) Average Pooling 
+        3) Summary/Query Sequence and Code Sequence are passed through a 
+            self- and cross-attention block (h_doc, h_tok)
+        4) Self-attention to obtain two output vectors:
+            [a_tok * h_tok, a_graph * h_graph]
+            [a_lstm * h_lstm, a_doc * h_doc]
+tasks:
+  code-search:
+    training-objective: Minimise similarity of unrelated (code, summary) pairs, maximise similarity of related pairs
+    training-granularity: n/a
+    working-objective: Embed code and query for similarity based code search
+    working-granularity: n/a
+    application: Code Search
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: code-search
+    comments:
+comments: # list

@@ -1,0 +1,42 @@
+paper-id: sb-008
+pdf-id: sb-011
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast
+    vertex-features: Not specified
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      code tokens are used as feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - Reinforcement learning with actor-critic network
+      - Code tokens fed into LSTM
+      - AST into tree-based LSTM
+      - Attention-weighted sum of node and token embeddings
+      - Concatenate results of sums
+      - FNN w/ tanh and softmax for output of _actor_ (action; next token)
+      - MLP over actor output for critic (single value output)
+tasks:
+  code-summarization:
+    training-objective: Given a code sample, generate a summary
+    training-granularity: graph to sequence
+    working-objective: Given a code sample, generate a summary
+    working-granularity: graph to sequence
+    application: Code summarization
+    supervision: Supervised (reinforcement learning)
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

@@ -1,0 +1,218 @@
+paper-id: 14
+pdf-id: 22
+graphs:
+  rep-hg:
+    name: Rep-HG
+    description: |-
+      Heterogeneous graph structure connecting repositories,
+      users, and topics (tags) on Github.
+    artefacts:
+      - name: Source code (repository)
+        details: n/a
+      - name: Metadata (repository)
+        details: Non-source code artefacts in a repository (e.g. README file)
+      - name: User Profile Data
+        details: Bio information. E.g. name, description, contact information
+      - name: Topic
+        details: Topic on Github
+    vertex-type:
+      - name: Repository
+        details: Comprises two types of artefacts
+      - name: User
+        details: n/a
+      - name: Topic
+        details: n/a
+    edge-type:
+      - name: R1; repository-belongto-user
+        details: n/a
+      - name: R2; repository-contain-topic
+        details: n/a
+      - name: R3; repository-forkby-user
+        details: n/a
+      - name: R4; repository-starby-user
+        details: n/a
+    vertex-features:
+      For repository nodes, all metadata and source code is combined 
+      into a single feature vector using BERT.
+    
+      For users, the user profile data as well as the _metadata_ of 
+      repositories belonging to the user are combined into a single
+      feature vector using BERT.
+    
+      The topic is encoded as a single feature vector using BERT.
+    
+      Using the above features as-is will be referred to as the 
+      regular HG-graph, or node view.
+    
+      Three meta-paths are also used. There are
+      i) Repo --forkby--> User --forky^-1--> Repo
+      i) Repo --starby--> User --starby^-1--> Repo
+      i) Repo --contain--> Topic --contain^-1--> Repo
+    
+      Each meta path is used separately in combination with 
+      random walk with restart in order to sample a subgraph 
+      defined by the meta-path.
+    edge-features:
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  embedder:
+    type:
+      name: n/a
+      architecture: |-
+        For parts 1, 2 below, possibly heterogeneous embeddings are transformed 
+        to a common space according to 
+        
+        x_i = X_i W_{T_i}
+        
+        Here, X_i are the features of node i, T_i the type of node i, 
+        W_{T_i} the weight matrix for type T_i, and x_i the new node features.
+        
+        The main decoder consists of multiple parallel pipelines: 
+          1) A 2-layer GCN (size 200) (w/ ReLU) encoder for the HG-Rep graph, which optimises a loss L_{orig,node}
+          2) A 2-layer GCN (size 200) (w/ ReLU) encoder for the HG-Rep graph, which is trained in an adversarial setting,
+              which optimises a loss L_{adv,node}.
+        
+              The adversarial step is a PGD attack (adversarial perturbation attack),
+              which finds a perturbation \delta of the node embeddings such that
+              L_{adv,node}(x + \delta \mid \theta) is maximised (where x is the input graph/original embeddings).
+          3) A 2-layer GCN (size 200) (w/ ReLU) encoder for the meta-path subgraphs, which optimises a loss L_{orig,mp}
+          4) A 2-layer GCN (size 200) (w/ ReLU) encoder for the meta-path subgraphs, which is trained in an adversarial setting,
+              which optimises a loss L_{adv,mp}.
+        
+          The weights between pipelines (1, 2) and (3, 4) are shared. Unclear if it is all the same GNN. This is most likely the case
+        
+          The losses are then aggregated according to:
+        
+          L_{adv} = \sum_{i \in V} \left|\lambda_{adv}L_{adv,node} + (1 - \lambda_{adv})L_{adv,mp}\right|
+          
+          L_{orig} = \sum_{i \in V} \left|\lambda_{orig}L_{orig,node} + (1 - \lambda_{orig})L_{orig,mp}\right|
+          
+          where \lambda_{adv} and \lambda_{orig} are hyperparameters.
+        
+          These two losses are then finally aggregated according to:
+        
+          L_{dual} = \alpha L_{adv} + (1 - \alpha) L_{orig}
+      
+          where \alpha is a hyperparameter.
+        
+          
+          For downstream tasks, knowledge distillation is used.
+          The goal is to combine the unsupervised knowledge from the encoder
+          with the supervised knowledge from the downstream task.
+        
+          First, a student model with architecture identical to the 
+          encoder ("teacher model") is initialised with the learnt 
+          parameters of the teach model.
+        
+          Then, the student model is trained to minimise the following loss:
+        
+          L = \beta L_{task} + (1 - \beta) L_{kd}
+        
+          Where
+            \beta is a hyperparameter
+            L_{kd} = \sum_{v_o,v_i\in V} L_h(\phi^T(z_o, z_i), \phi^S(z_o, z_i))
+            \phi^T(z_o, z_i) = \frac{1}{u}||z_o - z_i||^2 , with u a normalisation constant and z_o and z_i the embeddings of the teacher model
+            \phi^S(z_o, z_i) = \frac{1}{u}||z_o - z_i||^2, with u a normalisation constant and z_o and z_i the embeddings of the student model
+            L_h(a, b) = \begin{cases}
+              \frac{1}{2}(a - b)^2 & |a - b| \le 1 \\
+              |a - b| - 1/2 & |a - b| > 1
+            \end{cases} (Huber loss)
+tasks:
+  embedding:
+    training-objective: Minimise the contrastive loss function (project similar samples close together; dissimilar samples further apart)
+    training-granularity: Graph Embedding
+    working-objective: n/a
+    working-granularity: n/a
+    application: Repository Embedding
+    supervision: unsupervised
+training:
+  embedding-computation:
+    train-test-split: n/a
+    cross-validation: n/a
+    hyper-parameters:
+      - name: optimizer
+        value: adam
+      - name: learning rate
+        value: 0.001
+      - name: weight decay
+        value: 0.000001
+      - name: Node view temperature t_{nd}
+        value: 0.6
+      - name: Meta path view temperature t_{mp}
+        value: 0.6
+      - name: \lambda_{adv}
+        value: 0.5
+      - name: \lambda_{orig}
+        value: 0.5
+      - name: \alpha
+        value: 0.7
+      - name: \beta
+        value: 0.7
+      - name: epochs
+        value: 500
+      - name: early stopping patience
+        value: 50
+      - name: number of contrastive pairs K in node view
+        value: 10
+      - name: batch size
+        value: 2000
+      - name: L_{adv,node}^i (loss for node i)
+        value: |-
+          -log \frac{\sum_{j \in V_i^l \exp\left(sim(\tilde{z_i}, \tilde{z_j})/t_{nd}\right)}}{\sum_{j \in V_i^s \exp\left(sim(\tilde{z_i}, \tilde{z_j})/t_{nd}\right)}} 
+          
+          V_i^l; K most similar nodes. 
+          V_i^s; K least similar nodes. 
+          sim; cosine similarity
+      - name: L_{adv,mp}^i (loss for meta path i)
+        value: |-
+          -log \frac{\exp(sim(h_i^{p_l}, h_j^{p_m})/t_{mp})}{\sum_{k=1}^{2n} \Theta[i \ne k]\exp(sim(h_i^{p_l}, h_k^{p_m})/t_{mp})}
+          
+          Here, h_i^{p_l}; node i in the meta path p_l
+          \Theta: indicator function
+    hyper-parameter-selection: experimenting
+    search-tuned-hyper-parameters:
+      - Number of contrastive pairs K
+      - \alpha
+      - \beta
+    evaluation-details: Evaluated on two downstream tasks (malicious repository detection and repository link prediction)
+    evaluation-methods:
+      - name: Accuracy
+        type: metric
+        details: n/a
+      - name: f1-score
+        type: metric
+        details: n/a
+      - name: Malicious Repository Detection
+        type: downstream task
+        details: n/a
+      - name: Repository Link Prediction
+        type: downstream task
+        details: |-
+          Done by removing a certain percentage of edges (20%, 80%) from the graph
+          before embedding training; only R3 and R4 edges.
+datasets:
+  embedding-dataset:
+    name: n/a
+    description: |-
+      Dataset of github repositories, users, and topics,
+      with repositories labelled as malware/not malware.
+      
+      Dataset contains 3341 malicious repositories,
+      6682 benign repositories.
+    source: # list
+      - GitHub
+    labelling: |-
+      Done by having experts examine the output of running VirusTotal on repositories.
+    size: Single graph with 110865 nodes and 899600 edges
+    is-pre-existing: no
+combinations:
+  - graph: rep-hg
+    model: embedder
+    task: embedding
+    training: embedding-computation
+    dataset: embedding-dataset
+    comments:
+comments: # list
+  - A lot of details in the paper are up to interpretation

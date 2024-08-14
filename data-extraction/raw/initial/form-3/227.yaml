@@ -1,0 +1,45 @@
+paper-id: 227
+pdf-id: 313
+graphs:
+  cpg:
+    name: CPG
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast
+    edge-type: ast/control flow/control dependence/data dependence
+    vertex-features: node content doc2vec or tf/idf (two different approaches were experimented with)
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  gcn:
+    name: n/a
+    architecture-attributes:
+      - gcn w/ batch norm
+      - global sum pooling
+  gat:
+    name: n/a
+    architecture-attributes:
+      - gat w/ batch norm
+      - global sum pooling
+tasks:
+  vulnerability-detection:
+    training-objective: classify graph as vulnerable or not vulnerable
+    training-granularity: graph classification
+    working-objective: classify graph as vulnerable or not vulnerable
+    working-granularity: graph classification
+    application: vulnerability detection (in android OS source code files)
+    supervision: supervised
+combinations:
+  - graph: cpg
+    model: gcn
+    task: vulnerability-detection
+    comments:
+  - graph: cpg
+    model: gat
+    task: vulnerability-detection
+    comments:
+comments: # list

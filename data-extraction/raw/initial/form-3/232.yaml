@@ -1,0 +1,39 @@
+paper-id: 232
+pdf-id: 324
+graphs:
+  graph:
+    name: n/a
+    description: tokens (unique) w/ co-occurrence sliding window
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: unique code tokens
+    edge-type: co-occurrence in sliding window
+    vertex-features: token CodeBERT / GraphCodeBERT (two different methods proposed)
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - gcn w/ residual connections
+      - ggnn (not edge type aware)
+      - soft (mlp-based) self-attention per node
+      - weighted (linear combination) of sum pooling and max pooling
+      - self-attention to graph representation
+tasks:
+  vulnerability-detection:
+    training-objective: classify graph as vulnerable or not vulnerable
+    training-granularity: graph classification
+    working-objective: classify graph as vulnerable or not vulnerable
+    working-granularity: graph classification
+    application: vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

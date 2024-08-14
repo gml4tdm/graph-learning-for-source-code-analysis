@@ -1,0 +1,73 @@
+paper-id: 193
+pdf-id: 258
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Next Token Edge
+        details: NCS
+      - name: Last Lexical Use Edge
+        details: n/a
+    vertex-features: Unclear how nodes are encoded
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+  query-graph:
+    name: Parse Tree
+    description: n/a
+    artefacts:
+      - name: Summary of the source code (training) or query (working)
+        details: n/a
+    vertex-type:
+      - name: Token
+        details: n/a
+      - name: Constituency Symbol
+        details: e.g. "VB" (verb)
+    edge-type:
+      - name: Constituency Edge
+        details: n/a
+      - name: Word Ordering Edge
+        details: Undirected
+    vertex-features: Unclear how nodes are encoded
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) RGCN module for graph encoding
+        2) Cross-attention similarity; Compute score for "matching" w/ code for every query token:
+            e_{i,G} = \frac{1}{N}\sum_{j = 1}^N cosine-similarity(q_i, c_j)c_j
+            (q: query node embedding, c: code node embedding)
+        3) Compute q_i' = [(q_i - e_{i,G}) \odot (e_{i,G} - q_i); q_i \odot e_{i,G}]
+        4) Do the same to compute c_i' for the code node embeddings 
+        5) Compute H_q = MaxPool(FC({q_i' | 1 <= i <= M}))
+        6) Compute H_e = MaxPool(FC({c_i' | 1 <= i <= N}))
+        7) Compute cosine similarity between H_q and H_e
+tasks:
+  code-search:
+    training-objective: Maximise similarity of related (summary, code) pairs; minimise similarity of unrelated (summary, code) pairs
+    training-granularity: Graph Regression (?)
+    working-objective: Output similarity scores of (query, code) pairs
+    working-granularity: Graph Regression (?)
+    application: Code Search
+    supervision: Supervised
+combinations:
+  - graph: ast + query-graph
+    model: model
+    task: code-search
+    comments:
+comments: # list

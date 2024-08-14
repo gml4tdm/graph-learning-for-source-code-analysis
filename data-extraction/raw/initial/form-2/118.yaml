@@ -1,0 +1,150 @@
+paper-id: 118
+pdf-id: 160
+graphs:
+  graph:
+    name: n/a
+    description: |-
+      For each method in a commit, a PDG of both the old 
+      and new version of that method is constructed.
+      
+      The PDGs are sliced based on the nodes changed in 
+      the commit.
+      
+      All graphs are represented as a sequence 
+      L = (s, p_1, \hdots, p_x, n_1, \hdots, n_y, t_1, \hdots, t_z)
+      
+      s is the sliced graph, p_i are control flow paths, n_i are statements,
+      and t_i are tokens.
+      
+      (Note: many of the edge types/relations boil down to: control and dependence edges)
+    artefacts:
+      - name: Source Code
+        details: Diff
+    vertex-type:
+      - name: Code Change Slice Node
+        details: Represents the sliced graph
+      - name: Path
+        details: |-
+          Represents a control flow path in the sliced graph,
+          from the "root" node (method entry) to an exit point (i.e. return, throw, etc)
+      - name: Statement
+        details: Statement in the source code
+      - name: Token
+        details: Token in the source code
+    edge-type:
+      - name: R1 - Control Flow Path
+        details: Edge between code change slide node and path node
+      - name: R2 - Control Flow Path (2)
+        details: Edge between control flow path and nodes contained in said path
+      - name: R3 - Changed node relation
+        details: Denote a relation (data or dependency) between two changed nodes.
+      - name: R4 - Data Dependency
+        details: |-
+          Denote data dependency between two nodes which are members of 
+          N_{change} \cup N_{ctrl}, 
+          where the first set is the set of changed nodes,
+          and the second is the set of nodes with a control dependency on 
+          some node in the set of changed nodes
+      - name: R5 - Data Dependency
+        details: |-
+          Denote data dependency between two nodes from N_{data},
+          Where N_{data} is the set of nodes with a data dependency on 
+          some node in the set of changed nodes
+      - name: R6 - Control Dependency
+        details: |-
+          Denote control dependency between two nodes which are members of 
+          N_{change} \cup N_{data}, 
+          where the first set is the set of changed nodes,
+          and the second is the set of nodes with a data dependency on 
+          some node in the set of changed nodes
+      - name: R7 - Control Dependency
+        details: |-
+          Denote control dependency between two nodes from N_{ctrl},
+          Where N_{ctrl} is the set of nodes with a control dependency on 
+          some node in the set of changed nodes
+      - name: R8 - Token Edge
+        details: Edge between statement and the nodes of tokens it contains
+    vertex-features: |-
+      Token nodes are encoded using a word embedding.
+      
+      Other node types are encoded as zeros.
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        i) First, we introduce the positional encoding PE of the input sequence L,
+            which represents a graph B.
+        
+            The positional encoding is defined for statement and token nodes, 
+            and is defined as follows:
+          
+            PE = [PE^1; PE^2; ...; PE^{|L|]
+          
+            where PE^i the positional encoding of the i-th statement or token node,
+            defined as 
+        
+            PE^i = concat_{v \in N(i)} r_{i,v}
+        
+            Where r_{i,v} is a trainable parameter dependent on the relation
+            between i and v (different parameters for R3, R4/R5, R6/R7, R8)
+        
+        ii) We introduce the transformer layer leveraged by the model:
+            
+            G^n = Normalise(GSA(B, H^{n-1}) + H^{n-1})
+            H^n = Normalise(FNN(G^n) + G^n)
+      
+            Where GSA is a multihead graph self-attention mechanism defined as:
+        
+            A^{n - 1} = [A_1^{n - 1}; A_2^{n - 1}; ...; A_{|L|}^{n - 1}]
+            A_i^{n - 1} = \concat_{v \in N(i)} h_v^{n - 1}}
+            Q_i = H^{n - 1}W_i^Q 
+            K_i = A^{n - 1}W_i^K
+            V_i = A^{n - 1}W_i^V
+            head_i = softmax(\frac{Q_i(K_i + PE)^T}{\sqrt{d_k}} + M)V_i
+            GSA(B, H^{n - 1}) = [head_1, head_2, ..., head_{a}]W_n^O 
+        
+            Note that A_i^{n - 1} is also an output of the transformer 
+            layer, and is used in the next layer.
+        
+            M is a masking matrix, with m_{ij} = 0 if there is an edge between
+            nodes i and j, and $m_{ij} = -\infty$ otherwise.
+        
+        iii) Actual model:
+            H^0 = Initial Features + PE
+        
+            Then, encoder-decoder architecture with multiple transformer layers
+            as outlined above.
+
+tasks:
+  node-reconstruction:
+    training-objective: Given the context, predict the embedding of a masked node
+    training-granularity: Node Regression/Node Embedding
+    working-objective: n/a
+    working-granularity: n/a
+    application: Pretraining, for later fine-tuning on downstream tasks
+    supervision: Self-supervised
+  edge-reconstruction:
+    training-objective: Predict masked links (compute product of sigmoid of node embeddings)
+    training-granularity: Link prediction
+    working-objective: n/a
+    working-granularity: n/a
+    application: Pretraining, for later fine-tuning on downstream tasks
+    supervision: Self-supervised
+  code-change-translation:
+    training-objective: Given the sequence L_o of an old snippet, construct the sequence L_n of the new snippet
+    training-granularity: Code change translation
+    working-objective: n/a
+    working-granularity: n/a
+    application: Pretraining, for later fine-tuning on downstream tasks
+    supervision: (Self)-supervised
+combinations:
+  - graph: graph
+    model: model
+    task: node-reconstruction + edge-reconstruction + code-change-translation
+    comments: Overall goal -- learning representations for code changes; similar to what BERT is for natural language
+comments: # list

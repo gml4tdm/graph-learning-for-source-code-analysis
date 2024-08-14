@@ -1,0 +1,85 @@
+paper-id: 159
+pdf-id: 209
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: |-
+          Every node has three attributes:
+          x: Depth 
+          y: left-to-right sequential position of its parent in the layer
+          z: left-to-right sequential position among its siblings (-1 for lexical nodeS)
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      (x, y, z), and the code token itself (type or token)
+    edge-features: |-
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Tokenised code is used as a feature, where each token is enhanced with positional information
+      
+      The comment generated thus far (in token form) is also used as an input.
+      Each token is enhanced with positional information describing its location in the sequence.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Transformer based architecture 
+        
+        1) All inputs (nodes, tokens, summary thus far) are embedded as a weighted sum of 
+            their position and semantic payload. 
+        
+        2) Source Code Encoder:
+            i) Multi-head self attention w/ residual connections and normalisation
+            ii) FNN w/ residual connections and normalisation
+        
+        3) Graph Encoder 
+            i) GraphSAGE w/ ReLU 
+            ii) Residual connections and normalisation
+        
+        4) Decoder (takes as input content generated thus far)
+            i) Masked Multi-head self attention w/ residual connections and normalisation
+            ii) Multi-head attention w/ residual connections and normalisation
+                Attention inputs K, V come from graph encoder 
+            iii) Multi-head attention w/ residual connections and normalisation
+                Attention inputs K, V come from source code encoder 
+            iv) FNN w/ residual connections and normalisation
+        
+        5) Multi-source Pointer-Generator Network
+            i) Decoder output e'_s transformed according to: p_v = softmax(Linear(e'_s))
+            ii) Multihead attention where Q = e'_s and K, V equal the output of the graph encoder
+                \delta_n = Att(Q, K, V)
+                a_c = softmax(mean(a_1, \hdots))
+                a_i = softmax(\frac{KW_i^Q(KW_i^K)^T}{\sqrt{d}})(VW_i^V)
+            iii) Multihead attention where Q = e'_s and K, V equal the output of the source code encoder (see above)
+            iv) Probability for token w according to
+                p_c(w) = \sum_{i: w_i = w} a_{c, i}
+                (similar for p_n(w))
+            v) p_s(w) = \lambda_v p_w(w) + \lambda_n p_n(w) + \lambda_c p_c(w)
+                where [\lambda_v, \lambda_n, \lambda_c] = softmax(Linear([e'_s, \delta_n, \delta_c]))
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph + sequence to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph + sequence to Sequence
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: code-summarization
+    comments:
+comments: # list

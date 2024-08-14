@@ -1,0 +1,348 @@
+paper-id: 9
+pdf-id: 16
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type:
+      - name: AST node
+        details: n/a
+    edge-type:
+      - name: AST edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  tree-transformer:
+    type:
+      name: Tree-Transformer
+      architecture: |-
+        Idea: Compute embeddings, then propagate information up, then down, then pooling.
+        
+        Trainable Embedding Layer (for embedding nodes)
+        Bottom-up Propagation Unit:
+          - For a leave node, output is unchanged 
+          - For a non-leave node i, the output depends on the node embedding e_i, 
+              and the embeddings of the children nodes (as computed by  the recursive propagation unit)
+              H_{c,i} = (h_{i,1}, h_{i,2}, ..., h_{i,n}).
+            i) H_{c,i}' = MultiHead_f(H_{c,i}, H_{c,i}, H_{c,i})    (fraternal self-attention multi-head w/ TUPE position encoding; model sibling dependencies; 4 attention heads)
+            ii) H_{c,i}' = LayerNorm(H_{c,i}' + H_{c,i})            (normalization)
+            iii) A = MultiHead_p(e_i, H_{c,i}', H_{c,i}')           (parental multi-head attention; model parent-child dependencies; 4 attention heads)
+            iv) A' = LayerNorm(A + e_i)                             (normalization)
+            v)  h_{i} = LayerNorm(FNN(A') + A')                     (feed-forward network)
+        Top-down Propagation Unit:
+          - For the root node, f_i = h_i (output of the bottom-up propagation unit)
+          - For every root with top-down representation f_i, 
+              f_i is used to compute the top-down representations F_{c,i} of i's children.
+            i) F_{c,i}' = LayerNorm(1 \cdot f_i + H_{c,i})
+            ii) F_{c,i} = LayerNorm(FNN(F_{c,i}') + F_{c,i}')
+        "Global attention pooling function" (actual name from literature) to compute tree representation:
+          h = sum_{i \in V} softmax(W f_i) \odot f_i
+        
+          Where W is a learnable vector and \odot is element-wise multiplication.
+tasks:
+  program-classification:
+    training-objective: Classify graph into program type
+    training-granularity: Graph Classification
+    working-objective: Classify graph into program type
+    working-granularity: Graph Classification
+    application: Program Classification
+    supervision: Supervised
+  wrong-operator:
+    training-objective: Identify incorrect binary operator node and predict correct one
+    training-granularity: Node Classification/Prediction
+    working-objective: Identify incorrect binary operator node and predict correct one
+    working-granularity: Node Classification/Prediction
+    application: Wrong Operator Localisation and Repair
+    supervision: Supervised
+  type-inference:
+    training-objective: Assign Label (type) to Tree Nodes
+    training-granularity: Node Classification
+    working-objective: Assign Label (type) to Tree Nodes
+    working-granularity: Node Classification
+    application: Type Inference
+    supervision: Supervised
+training:
+  program-classification-poj:
+    train-test-split:
+      train: 0.7
+      test: 0.1
+      validation: 0.2
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: Node Embedding Dimension
+        value: 128
+      - name: optimiser
+        value: adam
+      - name: learning rate
+        value: 0.002
+      - name: optimiser warm up steps
+        value: 2000
+    hyper-parameter-selection: not specified
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: n/a
+    evaluation-methods:
+      - name: accuracy
+        type: metric
+        details: n/a
+  program-classification-java-250:
+    train-test-split:
+      train: 0.6
+      test: 0.2
+      validation: 0.2
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: Node Embedding Dimension
+        value: 256
+      - name: optimiser
+        value: adam
+      - name: learning rate
+        value: 0.002
+      - name: optimiser warm up steps
+        value: 2000
+    hyper-parameter-selection: not specified
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: n/a
+    evaluation-methods:
+      - name: accuracy
+        type: metric
+        details: n/a
+  program-classification-python-800:
+    train-test-split:
+      train: 0.6
+      test: 0.2
+      validation: 0.2
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: Node Embedding Dimension
+        value: 256
+      - name: optimiser
+        value: adam
+      - name: learning rate
+        value: 0.002
+      - name: optimiser warm up steps
+        value: 2000
+    hyper-parameter-selection: not specified
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: n/a
+    evaluation-methods:
+      - name: accuracy
+        type: metric
+        details: n/a
+  program-classification-cpp-1000:
+    train-test-split:
+      train: 0.6
+      test: 0.2
+      validation: 0.2
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: Node Embedding Dimension
+        value: 256
+      - name: optimiser
+        value: adam
+      - name: learning rate
+        value: 0.002
+      - name: optimiser warm up steps
+        value: 2000
+    hyper-parameter-selection: not specified
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: n/a
+    evaluation-methods:
+      - name: accuracy
+        type: metric
+        details: n/a
+  program-classification-cpp-1400:
+    train-test-split:
+      train: 0.6
+      test: 0.2
+      validation: 0.2
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: Node Embedding Dimension
+        value: 256
+      - name: optimiser
+        value: adam
+      - name: learning rate
+        value: 0.002
+      - name: optimiser warm up steps
+        value: 2000
+    hyper-parameter-selection: not specified
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: n/a
+    evaluation-methods:
+      - name: accuracy
+        type: metric
+        details: n/a
+  wrong-operator:
+    train-test-split:
+      train: 0.60
+      test: 0.33
+      validation: 0.07
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: Node Embedding Dimension
+        value: 256
+      - name: optimiser
+        value: adam
+      - name: learning rate
+        value: 0.002
+      - name: optimiser warm up steps
+        value: 2000
+    hyper-parameter-selection: not specified
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: n/a
+    evaluation-methods:
+      - name: accuracy
+        type: metric
+        details: n/a
+  type-inference:
+    train-test-split:
+      train: 0.9208
+      test: 0.04220
+      validation: 0.03698
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: Node Embedding Dimension
+        value: 256
+      - name: optimiser
+        value: adam
+      - name: learning rate
+        value: 0.002
+      - name: optimiser warm up steps
+        value: 2000
+    hyper-parameter-selection: not specified
+    search-tuned-hyper-parameters: n/a
+    evaluation-details: n/a
+    evaluation-methods:
+      - name: accuracy
+        type: metric
+        details: n/a
+datasets:
+  poj:
+    name: POJ
+    description: |-
+      Program classification dataset with 104 classes of programs.
+    source: # list
+      - Student programming platforms
+    labelling: not specified
+    size: 52000
+    is-pre-existing: yes
+  java-250:
+    name: Java250
+    description: |-
+      Program classification dataset with 250 classes of programs.
+    source: # list
+      - Part of CodeNet Dataset
+    labelling: not specified
+    size: 75000
+    is-pre-existing: yes
+  python-800:
+    name: Python800
+    description: |-
+      Program classification dataset with 800 classes of programs.
+    source: # list
+      - Part of CodeNet Dataset
+    labelling: not specified
+    size: 240000
+    is-pre-existing: yes
+  cpp-1000:
+    name: C++1000
+    description: |-
+      Program classification dataset with 1000 classes of programs.
+    source: # list
+      - Part of CodeNet Dataset
+    labelling: not specified
+    size: 500000
+    is-pre-existing: yes
+  cpp-1400:
+    name: C++1400
+    description: |-
+      Program classification dataset with 1400 classes of programs.
+    source: # list
+      - Part of CodeNet Dataset
+    labelling: not specified
+    size: 420000
+    is-pre-existing: yes
+  wrong-operator:
+    name: Wrong Operator
+    description: |-
+      Synthetic dataset based on the dataset released by CuBERT.
+      
+      Meant for wrong operator localisation and repair.
+    source: # list
+      - based on dataset released by CuBERT
+    labelling: not specified
+    size: 258727
+    is-pre-existing: no
+  type-inference:
+    name: ManyTypes4TypeScript
+    description: Type Inference dataset for Typescript, with some filtering on graph size applied.
+    source: # list
+      - Open Source Github Projects
+    labelling: not specified
+    size: 660450
+    is-pre-existing: yes
+combinations:
+  - graph: ast
+    model: tree-transformer
+    task: program-classification
+    training: program-classification-poj
+    dataset: poj
+    comments:
+  - graph: ast
+    model: tree-transformer
+    task: program-classification
+    training: program-classification-java-250
+    dataset: java-250
+    comments:
+  - graph: ast
+    model: tree-transformer
+    task: program-classification
+    training: program-classification-python-800
+    dataset: python-800
+    comments:
+  - graph: ast
+    model: tree-transformer
+    task: program-classification
+    training: program-classification-cpp-1000
+    dataset: cpp-1000
+    comments:
+  - graph: ast
+    model: tree-transformer
+    task: program-classification
+    training: program-classification-cpp-1400
+    dataset: cpp-1400
+    comments:
+  - graph: ast
+    model: tree-transformer
+    task: wrong-operator
+    training: wrong-operator
+    dataset: wrong-operator
+    comments:
+  - graph: ast
+    model: tree-transformer
+    task: type-inference
+    training: type-inference
+    dataset: type-inference
+    comments:
+comments: # list

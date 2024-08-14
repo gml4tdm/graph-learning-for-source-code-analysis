@@ -1,0 +1,148 @@
+paper-id: 171
+pdf-id: 224
+graphs:
+  dfg:
+    name: DFG
+    description: n/a
+    artefacts:
+      - name: Source Code
+        details: n/a
+    vertex-type:
+      - name: Temporary Operand
+        details: temporary "variables" that only exists in program execution
+      - name: Non-temporary Operand
+        details: Variable/constant that explicitly exists in code
+    edge-type:
+      - name: Operation Edge
+        details: Data flow for operators
+      - name: Function Edge
+        details: data flow for arguments and return  values
+    vertex-features: Operation/operand types are one-hot encoded
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+  cfg:
+    name: CFG
+    description: slightly altered compared to normal; different types of nodes
+    artefacts:
+      - name: Source Code
+        details: n/a
+    vertex-type:
+      - name: Operation in Source code
+        details: including standard operations, function calls, returns
+    edge-type:
+      - name: PosNext
+        details: |-
+          Conditional Jumps in loops or branches.
+      - name: NegNext
+        details: |-
+          Conditional Jumps in loops or branches.
+      - name: IterJump
+        details: Connect end of loop to begin
+      - name: CallNext
+        details: From function call operation to first operation in called function
+      - name: ReturnNext
+        details: From last operation in called function to operations right after function call
+      - name: Next
+        details: Denote most common execution order
+    vertex-features: Operation/operand types are one-hot encoded
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+  read-write-graph:
+    name: Read-write Graph (RWG)
+    description: n/a
+    artefacts:
+      - name: Source Code
+        details: n/a
+    vertex-type:
+      - name: Operand
+        details: n/a
+      - name: Operation
+        details: n/a
+    edge-type:
+      - name: Read
+        details: From operand to operations; operations required to compute the operand
+      - name: Write
+        details: From operations to operand; variables receiving the operation result
+    vertex-features: Operation/operand types are one-hot encoded
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+  combined-graph:
+    name: Combination of DFG, CFG and RWG
+    description: n/a
+    artefacts:
+      - name: Source Code
+        details: n/a
+    vertex-type:
+      - name: Temporary Operand
+        details: temporary "variables" that only exists in program execution
+      - name: Non-temporary Operand
+        details: Variable/constant that explicitly exists in code
+      - name: Operation in Source code
+        details: including standard operations, function calls, returns
+    edge-type:
+      - name: Operation Edge
+        details: Data flow for operators
+      - name: Function Edge
+        details: data flow for arguments and return  values
+      - name: PosNext
+        details: |-
+          Conditional Jumps in loops or branches.
+      - name: NegNext
+        details: |-
+          Conditional Jumps in loops or branches.
+      - name: IterJump
+        details: Connect end of loop to begin
+      - name: CallNext
+        details: From function call operation to first operation in called function
+      - name: ReturnNext
+        details: From last operation in called function to operations right after function call
+      - name: Next
+        details: Denote most common execution order
+      - name: Read
+        details: From operand to operations; operations required to compute the operand
+      - name: Write
+        details: From operations to operand; variables receiving the operation result
+    vertex-features: Operation/operand types are one-hot encoded
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) For each graph:
+          i) GGNN (edge-type specific message passing function)  
+          ii) Max pooling over node representations 
+        2) Concatenate the four graph representations
+        3) [downstream tasks] MLP (2 layers) w/ some activation (e.g. softmax, sigmoid)
+tasks:
+  algorithmic-problem-classification:
+    training-objective: Classify given program into a fixed set of types
+    training-granularity: Multi-class Classification (of multiple graphs)
+    working-objective: Classify given program into a fixed set of types
+    working-granularity: Multi-class Classification (of multiple graphs)
+    application: Algorithm Problem Classification (Code Classification)
+    supervision: Supervised
+  algorithmic-problem-classification-2:
+    training-objective: Outputs which algorithms are used in a program
+    training-granularity: Multi-label Classification (of multiple graphs)
+    working-objective: Outputs which algorithms are used in a program
+    working-granularity: Multi-label Classification (of multiple graphs)
+    application: Algorithm Problem Classification (Code Classification)
+    supervision: Supervised
+combinations:
+  - graph: dfg + cfg + read-write-graph + combined-graph
+    model: mode
+    task: algorithmic-problem-classification + algorithmic-problem-classification-2
+    comments: |-
+      The model is meant as a general setup, with program classification being 
+      used as an example downstream task.
+comments: # list

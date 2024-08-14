@@ -1,0 +1,69 @@
+paper-id: 60
+pdf-id: 86
+graphs:
+  control-flow-chart:
+    name: Control Flow Chart
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: Local block
+    vertex-type:
+      - name: Line
+        details: n/a
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix (?)
+    graph-features: n/a
+    other-features: |-
+      The code block (not the nodes; the entire block)
+      is tokenized using the pretrained BPE tokenizer from CodeBERT.
+      These tokens are passed to the pre-embedding
+      part of the network.
+models:
+  rgan:
+    type:
+      name: n/a
+      architecture:
+        One network with four parts. 
+        
+        Pre-embedding stage;
+          Code block is passed to embedding layer 
+          Bidirectional LSTM 
+          Self attention layer 
+        
+          This part of the network generates a 
+          vector representation of every line,
+          which are used as the node features in the GNN part.
+    
+        Control Flow Chart is passed to GNN;
+          GAT layers with skip connections 
+      
+        Pooling (Mean Biaffine Attention Pooling Module);
+          h_{mean} = \frac{1}{n} \sum_{i = 1}^n h_i 
+          h_{fi} = h_i^T \cdot W 
+          e_i = h_{fi}^T \cdot h_{mean} + h_i^T \cdot u 
+          a_i = softmax(e_i) = \frac{\exp(e_i)}{\sum_{j = 0}^n \exp(e_j)}
+          h_g = \sum_{i = 0}^n a_i \cdot h_{fi}
+      
+          Here, W is a learnable matrix, u is a learnable vector, and h_g is the pooled
+          (graph) representation.
+      
+        Classifier;
+          MLP
+tasks:
+  vulnerability-detection:
+    training-objective: Classify graph as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify graph as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: control-flow-chart
+    model: rgan
+    task: vulnerability-detection
+    comments:
+comments: # list

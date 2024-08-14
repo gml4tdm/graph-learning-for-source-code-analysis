@@ -1,0 +1,70 @@
+paper-id: 57
+pdf-id: 81
+graphs:
+  fcg:
+    name: Function Call Graph
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Function
+        details: n/a
+    edge-type:
+      - name: Call Edge
+        details: n/a
+    vertex-features: |-
+      Function Name, encoded using Word2Vec
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+  vpr:
+    name: Vulnerability Property Graph
+    description: Code property graph enhanced for vulnerability detection
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+      - name: Token Edge
+        details: Edge from one token (leaf node) to the next
+    vertex-features: |-
+      Features based on AST payload; identifiers, keywords, names, types etc. (yes, the paper says etcetera).
+      
+      Encoded using Word2Vec
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Several GAT layers 
+tasks:
+  vulnerability-scoring:
+    training-objective: Given a graph with a vulnerability, predict its severity (from 4 options)
+    training-granularity: Graph Classification
+    working-objective: Given a graph with a vulnerability, predict its severity (from 4 options)
+    working-granularity: Graph Classification
+    application: Vulnerability Severity Assessment
+    supervision: Supervised
+combinations:
+  - graph: fch + vpr
+    model: model
+    task: vulnerability-scoring
+    comments: |-
+      Two things are unclear:
+      1) Are the graphs merged? If so, how? If not, what is the purpose of having two?
+      2) The paper mentions random initialisation of node features. What is that about!?
+comments: # list

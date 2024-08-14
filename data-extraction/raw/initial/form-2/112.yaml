@@ -1,0 +1,78 @@
+paper-id: 112
+pdf-id: 151
+graphs:
+  graph:
+    name: n/a
+    description: |-
+      Graph structure for use in variable misuse prediction.
+      A graph structure is build for every single possible variable
+      which can be substituted in the spot of interest. 
+      A graph structure with the node at the point of interest removed is 
+      also built.
+    artefacts:
+      - name: Source code
+        details: Function (C#)
+    vertex-type:
+      - name: AST  Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: NCS Edge
+        details: n/a
+      - name: (Data Flow) Last Use
+        details: Connect variable use with all previous reads and definitions with (still) the same value
+      - name: (Data Flow) Last Write
+        details: Connect use of variable with all its definitions
+      - name: (Data Flow) Last Lexical Use
+        details: Represent the shortcut in reversed token chain between nearest entries of the specified variable
+      - name: (Data Flow) Computed From
+        details: n/a
+      - name: (Data Flow) Formal Args
+        details: Connect actual arguments and formal parameters of a method
+      - name: (Data Flow) Next Operand
+        details: Connect operands of a single operation and parameters of a method (in lexical order)
+    vertex-features:
+      Syntax tokens have their node type encoded using word2vec
+      Token tokens have their tokens and language type (variable/property/field) encoded using word2vec.
+    
+      For encoding, text (camel case, underscores) is split up, and the final vector is the average.
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Message passing, with a learnable message "creation" function per edge type.
+          (exact function is unclear)
+        Nodes also use LSTM to take into account previous states.
+        
+        For each candidate, its representation is concatenated 
+        with the representation of the empty graph.
+        
+        The result is passed through a linear layer to compute 
+        the probability of the candidate being the correct variable
+        to substitute.
+tasks:
+  var-misuse:
+    training-objective: |-
+      Given multiple graphs with some spot of interest, 
+      determine for each variable whether it should 
+      be substituted into the spot of interest (See also graph and model description)
+    training-granularity: Graph classification, but not quite
+    working-objective: |-
+      Given multiple graphs with some spot of interest, 
+      determine for each variable whether it should 
+      be substituted into the spot of interest (See also graph and model description)
+    working-granularity: Graph classification, but not quite
+    application: Variable Misuse Repair
+    supervision: (Self-)Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: var-misuse
+    comments:
+comments: # list

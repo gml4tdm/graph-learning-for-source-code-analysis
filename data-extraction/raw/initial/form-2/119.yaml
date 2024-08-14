@@ -1,0 +1,76 @@
+paper-id: 119
+pdf-id: 161
+graphs:
+  socio-technical-graph:
+    name: Augmented Socio-Technical Graph
+    description: Graph spanning and combining multiple repositories
+    artefacts:
+      - name: Source code
+        details: Repository (including pull requests)
+      - name: Source Code
+        details: File
+      - name: User Data
+        details: Comments
+      - name: Work Items
+        details: n/a
+    vertex-type:
+      - name: Pull Request
+        details: n/a
+      - name: Work Item
+        details: n/a
+      - name: Author
+        details: n/a
+      - name: Reviewer
+        details: n/a
+      - name: File
+        details: n/a
+      - name: Repository
+        details: n/a
+      - name: Token
+        details: Tokens occurring in e.g. pull requests
+    edge-type:
+      - name: creates
+        details: author creates a pull request
+      - name: reviews
+        details: created between reviewer and pull request
+      - name: contains
+        details: repository contains pull request
+      - name: changes
+        details: pull request changes file
+      - name: linked to
+        details: pull request linked to work item
+      - name: comments on
+        details: between pull request and reviewer
+      - name: parent of
+        details: between work item nodes
+      - name: Token Edge
+        details: |-
+          Edge between e.g. a pull request and a token,
+          or between two tokens based on pointwise mutual information.
+    vertex-features: Information is one-hot encoded (?)
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        R-GCN
+        R-GCN
+        dot product between nodes to compute link likeliness
+tasks:
+  recommendation:
+    training-objective: Recommend Reviewers for pull requests by predicting a link between a reviewer and a pull request
+    training-granularity: Link Prediction
+    working-objective: Recommend Reviewers for pull requests by predicting a link between a reviewer and a pull request
+    working-granularity: Link Prediction
+    application: Recommend Reviewers for pull requests
+    supervision: Supervised
+combinations:
+  - graph: socio-technical-graph
+    model: model
+    task: recommendation
+    comments:
+comments: # list

@@ -1,0 +1,52 @@
+paper-id: 197
+pdf-id: 262
+graphs:
+  graph:
+    name: n/a
+    description: Mix of AST, CFG, DF G
+    artefacts:
+      - name: Source code
+        details: file
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+      - name: Control Flow Edge
+        details: n/a
+      - name: Data Flow Edge
+        details: n/a
+    vertex-features: Not specified
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Input: pair of code graphs 
+        
+        1) GCN (each graph individually) 
+        2) Attention to compute weighted average of node embeddings for each graph
+        3) Both resulting features are both passed to 
+            i) Graph Matching Network
+            ii) Pairwise Node Comparison 
+        4) Results are added
+        5) FNN (output: similarity score)
+tasks:
+  clone-detection:
+    training-objective: Given two code samples, determine whether they are semantic clones
+    training-granularity: Graph Classification (?)
+    working-objective: Given two code samples, determine whether they are semantic clones
+    working-granularity: Graph Classification (?)
+    application: Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: clone-detection
+    comments:
+comments: # list

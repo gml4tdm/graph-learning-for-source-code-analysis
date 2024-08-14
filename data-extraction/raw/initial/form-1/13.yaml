@@ -1,0 +1,349 @@
+paper-id: 13
+pdf-id: 21
+graphs:
+  fast:
+    name: FAST (Flow of Abstract Syntax Tree)
+    description: Hybrid of control flow graph, call graph, and abstract syntax tree
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Basic Block
+        details: |-
+          Extracted from the AST. 
+          
+          Each block represents a control flow transfer.
+          Slightly more course-grained than the control flow graph,
+          because e.g. assignment statements do not have dedicated nodes.
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: Intra-procedural Edge
+        details: |-
+          Represents control flow between basic block.
+          
+          A Basis block points to every basic block that may follow it.
+      - name: Inter-procedural Edge
+        details: |-
+          Comes in two types: Call Edge and Return Edge.
+          
+          Call Edge: Edge from a basic block calling a function, to the 
+                      first block ("start block") of the called function.
+          
+          Return Edge: Edge from a basic block returning from a function, 
+                  to the basic block in that called the function.
+      - name: AST Edge
+        details: n/a
+      - name: Block/AST Edge
+        details: |-
+          Edge connecting a basic block to an AST node. 
+          Unclear whether this is actually considered as a different 
+          type of edge by the authors. 
+          Anyway, connects a basic block to the sub-tree of the AST 
+          "contained" in said block.
+    vertex-features: |-
+      AST nodes are embedded using Word2Vec
+      
+      Specifically, for non-leave nodes, the type is encoded (no payload);
+      Leave nodes have no type but have a payload (token) that is encoded.
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Per block, a log message is assumed to be given. 
+      Every word in the message is embedded using Word2Vec.
+      A final feature vector is obtained through averaging all these embeddings.
+models:
+  tell-sigmoid:
+    type:
+      name: TELL
+      architecture: |- 
+        Let CONCAT(n; s_1, s_2, ...) denote model from paper 6, without the max-pooling operation 
+        used to combine multiple node embeddings into a single graph embedding,
+        with the GCN/concat step applied n times, where each layer i has hidden size s_i.
+        
+        First, for every block, its AST is embedded into a graph by
+        combining the CONCAT(2; 64, 32) network with an average pooling operation over all nodes.
+        
+        Next, the CONCAT(3; 64, 32, 16) model is used without pooling to compute embeddings
+        for all basic blocks, where the initial embedding for each basic block
+        is the embedding for each AST.
+        
+        Then, for every block i with node embedding h_i^* and 
+        log message embedding q_i, the predicted log level is given by 
+        
+        y = sigmoid((h_^* W_t \mid\mid q_i W_p)W_f + b_f)
+        
+        Here, W_t and W_p are weights which transform their
+        "input" vectors to d-dimensional space. W_f transforms the 
+        concatenated 2d-dimensional vector to 5 dimensional space.
+        
+        Note: labels are encoded on an "ordinal" scale like
+        [1, 0, 0, 0, 0], [1, 1, 0, 0, 0], [1, 1, 1, 0, 0] etc
+  tell-softmax:
+    type:
+      name: TELL
+      architecture: |-
+        Let CONCAT(n; s_1, s_2, ...) denote model from paper 6, without the max-pooling operation 
+        used to combine multiple node embeddings into a single graph embedding,
+        with the GCN/concat step applied n times, where each layer i has hidden size s_i.
+
+        First, for every block, its AST is embedded into a graph by
+        combining the CONCAT(2; 64, 32) network with an average pooling operation over all nodes.
+
+        Next, the CONCAT(3; 64, 32, 16) model is used without pooling to compute embeddings
+        for all basic blocks, where the initial embedding for each basic block
+        is the embedding for each AST.
+
+        Then, for every block i with node embedding h_i^* and 
+        log message embedding q_i, the predicted log level is given by 
+
+        y = softmax((h_^* W_t \mid\mid q_i W_p)W_f + b_f)
+
+        Here, W_t and W_p are weights which transform their
+        "input" vectors to d-dimensional space. W_f transforms the 
+        concatenated 2d-dimensional vector to 5 dimensional space.
+
+        Note: labels are one-hot encoded
+tasks:
+  training-objective:
+    training-objective: For every code block, predict a log level (trace/debug/info/warn/error)
+    training-granularity: Node Classification (not quite, because of the additional information in the last step, but close enough)
+    working-objective: For every code block, predict a log level (trace/debug/info/warn/error)
+    working-granularity: Node Classification (not quite, because of the additional information in the last step, but close enough)
+    application: Log level prediction
+    supervision: supervised
+training:
+  training:
+    train-test-split:
+      train: 0.6
+      test: 0.2
+      validation: 0.2
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: loss
+        value: binary cross-entropy
+      - name: optimizer
+        value: adam
+      - name: epochs
+        value: 100
+      - name: batch size
+        value: 16
+      - name: dropout
+        value: 0.2
+      - name: learning rate
+        value: 0.1
+      - name: (initial) embedding size (d) (for AST _and_ tokens)
+        value: 64
+    hyper-parameter-selection: grid search
+    search-tuned-hyper-parameters:
+      - learning rate
+      - (initial) embedding size (d) (for AST _and_ tokens)
+      - number of GCN layers
+    evaluation-details: |-
+      For sigmoidal activation, the "highest" 1 in the output was 
+      used as the predicted log level.
+    evaluation-methods:
+      - name: auc
+        type: metric
+        details: area under curve
+      - name: AOD
+        type: metric
+        details: average ordinal distance score
+      - name: accuracy
+        type: metric
+        details: n/a
+datasets:
+  cassandra:
+    name: n/a
+    description: |-
+      Dataset of logged blocks from the Cassandra project.
+    source:
+      - Cassandra
+    labelling: Automatic by parsing code
+    size: 1317
+    is-pre-existing: no
+  elastic-search:
+    name: n/a
+    description: |-
+      Dataset of logged blocks from the ElasticSearch project.
+    source:
+      - ElasticSearch
+    labelling: Automatic by parsing code
+    size: 5363
+    is-pre-existing: no
+  flink:
+    name: n/a
+    description: |-
+      Dataset of logged blocks from the Flink project.
+    source:
+      - Flink
+    labelling: Automatic by parsing code
+    size: 2475
+    is-pre-existing: no
+  hbase:
+    name: n/a
+    description: |-
+      Dataset of logged blocks from the HBase project.
+    source:
+      - HBase
+    labelling: Automatic by parsing code
+    size: 5146
+    is-pre-existing: no
+  jmeter:
+    name: n/a
+    description: |-
+      Dataset of logged blocks from the JMeter project.
+    source:
+      - JMeter
+    labelling: Automatic by parsing code
+    size: 1762
+    is-pre-existing: no
+  kafka:
+    name: n/a
+    description: |-
+      Dataset of logged blocks from the Kafka project.
+    source:
+      - Kafka
+    labelling: Automatic by parsing code
+    size: 1426
+    is-pre-existing: no
+  karaf:
+    name: n/a
+    description: |-
+      Dataset of logged blocks from the Karaf project.
+    source:
+      - Karaf
+    labelling: Automatic by parsing code
+    size: 698
+    is-pre-existing: no
+  wicket:
+    name: n/a
+    description: |-
+      Dataset of logged blocks from the Wicket project.
+    source:
+      - Wicket
+    labelling: Automatic by parsing code
+    size: 408
+    is-pre-existing: no
+  zookeeper:
+    name: n/a
+    description: |-
+      Dataset of logged blocks from the ZooKeeper project.
+    source:
+      - ZooKeeper
+    labelling: Automatic by parsing code
+    size: 1496
+    is-pre-existing: no
+combinations:
+  - graph: fast
+    model: tell-sigmoid
+    task: training-objective
+    training: training
+    dataset: cassandra
+    comments:
+  - graph: fast
+    model: tell-sigmoid
+    task: training-objective
+    training: training
+    dataset: elastic-search
+    comments:
+  - graph: fast
+    model: tell-sigmoid
+    task: training-objective
+    training: training
+    dataset: flink
+    comments:
+  - graph: fast
+    model: tell-sigmoid
+    task: training-objective
+    training: training
+    dataset: hbase
+    comments:
+  - graph: fast
+    model: tell-sigmoid
+    task: training-objective
+    training: training
+    dataset: jmeter
+    comments:
+  - graph: fast
+    model: tell-sigmoid
+    task: training-objective
+    training: training
+    dataset: kafka
+    comments:
+  - graph: fast
+    model: tell-sigmoid
+    task: training-objective
+    training: training
+    dataset: karaf
+    comments:
+  - graph: fast
+    model: tell-sigmoid
+    task: training-objective
+    training: training
+    dataset: wicket
+    comments:
+  - graph: fast
+    model: tell-sigmoid
+    task: training-objective
+    training: training
+    dataset: zookeeper
+    comments:
+  - graph: fast
+    model: tell-softmax
+    task: training-objective
+    training: training
+    dataset: cassandra
+    comments:
+  - graph: fast
+    model: tell-softmax
+    task: training-objective
+    training: training
+    dataset: elastic-search
+    comments:
+  - graph: fast
+    model: tell-softmax
+    task: training-objective
+    training: training
+    dataset: flink
+    comments:
+  - graph: fast
+    model: tell-softmax
+    task: training-objective
+    training: training
+    dataset: hbase
+    comments:
+  - graph: fast
+    model: tell-softmax
+    task: training-objective
+    training: training
+    dataset: jmeter
+    comments:
+  - graph: fast
+    model: tell-softmax
+    task: training-objective
+    training: training
+    dataset: kafka
+    comments:
+  - graph: fast
+    model: tell-softmax
+    task: training-objective
+    training: training
+    dataset: karaf
+    comments:
+  - graph: fast
+    model: tell-softmax
+    task: training-objective
+    training: training
+    dataset: wicket
+    comments:
+  - graph: fast
+    model: tell-softmax
+    task: training-objective
+    training: training
+    dataset: zookeeper
+    comments:
+comments: # list

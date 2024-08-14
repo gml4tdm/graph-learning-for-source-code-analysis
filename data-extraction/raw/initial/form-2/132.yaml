@@ -1,0 +1,66 @@
+paper-id: 132
+pdf-id: 175
+graphs:
+  ast-within:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: File
+    vertex-type:
+      - name: AST Node
+        details: Only method calls (incl. class creation), declarations, and control flow nodes are kept.
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: Content of tokens is put into a sequence
+  class-dependency-network:
+    name: Class Dependency Network (CDN)
+    description: Serves as the "larger" context for the file.
+    artefacts:
+      - name: Source code
+        details: Files/project
+    vertex-type:
+      - name: Class
+        details: n/a
+    edge-type:
+      - name: Dependency
+        details:
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: Graph encoded using node2vec
+    other-features: n/a
+models:
+  ast-encoder:
+    type:
+      name: n/a
+      architecture: |-
+        Encoder for the token sequence obtained from the AST 
+        Convolutional Layer 
+        Max pooling 
+        fully connected Layer
+tasks:
+  dataset-selection:
+    training-objective: Not specified in the paper how the encoders are trained
+    training-granularity: n/a
+    working-objective: |-
+      Projects (target project and source projects) are encoded, 
+      similarity between source files in the target and source projects
+      are computed, best source project is selected based on combining 
+      the top-k most similar files from the source project.
+    working-granularity: n/a
+    application: |-
+      Given a target project one wants to predict faults in (using cross project bug prediction),
+      find the most suitable source dataset to train a classifier on.
+    supervision: Not able to determine
+combinations:
+  - graph: ast + class-dependency-network
+    model: ast-encoder
+    task: dataset-selection
+    comments:
+comments: # list

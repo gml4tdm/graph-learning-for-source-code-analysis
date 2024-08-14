@@ -1,0 +1,65 @@
+paper-id: 206
+pdf-id: 276
+graphs:
+  graph:
+    name: n/a
+    description: CFG where each "node" has its own AST subtree
+    artefacts:
+      - name: Source Code
+        details: Smart contract
+    vertex-type:
+      - name: Statement (CFG)
+        details: |-
+          Each such node has an AST tree as "value".
+          
+          Each statement has as type, based on the type 
+          of the root of its AST subtree.
+          For some types (e.g. Assignment), more analysis is 
+          performed to refine  the type (e.g. "Memory Assignment")
+      - name: AST Node
+        details: Only occurs as the child of a CFG Node
+      - name: Virtual Function Node
+        details: All CFG node in the graph has an edge to this node
+      - name: Virtual Loop Node
+        details: All CFG nodes in a loop point to a Virtual Loop Node
+    edge-type:
+      - name: Control Flow Edge
+        details: Edge between CFG Nodes
+      - name: Data Flow Edge
+        details: Edge between CFG Nodes
+      - name: AST Edge
+        details: Edge between AST Nodes
+    vertex-features: |-
+      InferCode is used to encode nodes in AST subtrees,
+      and to encode the statement type of each CFG node
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Child-Sum Tree-LSTM to learn AST subtree embeddings (use embedding of root node) -> h_i^{syn}
+        2) Multi-head attention (K heads) between types of adjacent nodes:
+            \phi(h_i^{type}, h_j^{type}) = \frac{1}{K} \sum_{k = 1}^ K a_{ij}^k
+            with a_ij = softmax(e_{ij}); a_ij = LeakyReLU(a^k[W h_i^{type}; W h_j^{type}))
+            with a a learnable parameter, and j ranging over all neighbours of i 
+        3) GCN inspired message passing:
+            h_i^{sem} = \sum_{j \in N(i)} \delta(\phi(h_i^{type}, h_j^{type})W h_j^{syn})
+        4) For each node, compute MLP(h_i^{syn} \mid\mid h_i^{sem})
+tasks:
+  vulnerability-detection:
+    training-objective: Classify each node as vulnerable or not vulnerable
+    training-granularity: Node Classification
+    working-objective: Classify each node as vulnerable or not vulnerable
+    working-granularity: Node Classification
+    application: Statement level vulnerability detection in smart contracts
+    supervision: Supervised
+combinations:
+  - graph:
+    model:
+    task:
+    comments:
+comments: # list

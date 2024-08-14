@@ -1,0 +1,37 @@
+paper-id: 257
+pdf-id: 184
+graphs:
+  cfg:
+    name: CFG
+    description: n/a
+    artefacts:
+      - name: source code
+        details: first compiled to bytecode
+    vertex-type: instruction
+    edge-type: control flow (incl. function calls)
+    vertex-features: things like instruction name and operands
+    edge-features: n/a
+    connectivity-features: not specified / n/a
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding layers
+      - Directed graph convolutional neural network ("circular" 1-hop window over graph; for each, sum its and its neighbours embeddings after passing them through linear layer)
+      - max pooling
+tasks:
+  defect-prediction:
+    training-objective: Classify graph (program) into; correct, runtime exceeded, wrong answer, runtime error
+    training-granularity: graph classification
+    working-objective: Classify graph (program) into; correct, runtime exceeded, wrong answer, runtime error
+    working-granularity: graph classification
+    application: Defect Prediction
+    supervision: supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: defect-prediction
+    comments:
+comments: # list

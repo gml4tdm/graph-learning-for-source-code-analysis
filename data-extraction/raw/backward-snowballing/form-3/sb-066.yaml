@@ -1,0 +1,41 @@
+paper-id: sb-066
+pdf-id: sb-093
+graphs:
+  pdg:
+    name: PDG
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: statement
+    edge-type: control dependence/data dependence
+    vertex-features: statements as sequences of tokens
+    edge-features: n/a
+    connectivity-features: adjacency matrix
+    graph-features: n/a
+    other-features: description of the code is used as feature
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - embedding layer for tokens
+      - statement embedded as attention-weighted sum
+      - mlp applied to columns of adjacency matrix
+      - for each statement, connect its corresponding row from transformed adjacency matrix
+      - Bidirectional LSTM over combined embeddings (lsat hidden state as code vector)
+      - description encoded using embedding layer, Bidirectional LSTM, and max pooling over hidden states
+      - cosine similarity between code and description vector
+tasks:
+  code-search:
+    training-objective: Maximise similarity of related (code, description pairs); minimise similarity of unrelated pairs
+    training-granularity: graph classification (kinda but not quite)
+    working-objective: Compute similarity of code and query
+    working-granularity: graph classification/regression (kinda but not quite)
+    application: code Search
+    supervision: supervised
+combinations:
+  - graph: pdg
+    model: model
+    task: code-search
+    comments:
+comments: # list

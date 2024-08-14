@@ -1,0 +1,65 @@
+paper-id: sb-074
+pdf-id: sb-106
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: version history information
+        details: n/a
+    vertex-type: developer
+    edge-type: two devs are connected if they made changes to the same file in the same release
+    vertex-features: |-
+      "classical" network metrics (connectivity, centrality, degree, betweenness, closeness)
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      For every file in a project, the average, maximum, and sum of the developer metrics 
+      of all developers who contributed to that file (overall, not per release; unweighted)
+      are computed. 
+      
+      Files have various other (more traditional) code changes metrics, such as 
+      code churn (# modified lines over history), # updates, # distinct developers
+models:
+  negative-binomial-regression:
+    name: Negative Binomial Regression
+    architecture-attributes:
+      - negative binomial regression
+  poisson-regression:
+    name: Poisson Regression
+    architecture-attributes:
+      - poisson regression
+  logistic-regression:
+    name: Logistic Regression
+    architecture-attributes:
+      - logistic regression
+tasks:
+  failure-prediction-regression:
+    training-objective: Given a file, predict the number of expected failures for that file
+    training-granularity: regression
+    working-objective: Given a file, predict the number of expected failures for that file
+    working-granularity: regression
+    application: Failure Prediction
+    supervision: supervised
+  failure-prediction-classification:
+    training-objective: Given a file, predict whether the file wil contain at least one failure
+    training-granularity: classification
+    working-objective: Given a file, predict whether the file wil contain at least one failure
+    working-granularity: classification
+    application: Failure Prediction
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: negative-binomial-regression
+    task: failure-prediction-regression
+    comments: The model is used to rank files for prioritisation of bug investigation (based on number of failures)
+  - graph: graph
+    model: poisson-regression
+    task: failure-prediction-regression
+    comments: The model is used to rank files for prioritisation of bug investigation (based on number of failures)
+  - graph: graph
+    model: logistic-regression
+    task: failure-prediction-classification
+    comments: The model is used to rank files for prioritisation of bug investigation (based on probability)
+comments: # list

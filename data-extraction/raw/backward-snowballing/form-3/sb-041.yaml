@@ -1,0 +1,44 @@
+paper-id: sb-041
+pdf-id: sb-062
+graphs:
+  knowledge-graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: class/property/method/parameter/variable
+    edge-type: inheritance/has (class has property, class has method, method has parameter, method has variable)/instance_of/return_type/call
+    vertex-features: see graph features
+    edge-features: see graph features
+    connectivity-features: n/a
+    graph-features: |-
+      knowledge graph is embedded using one of: TransE, TransH, TransR.
+      idea: every (source, edge, tail) triple should have encodings (h, r, t) such that h + r \approx t
+    other-features: |-
+      bug report used as feature, encoded using word2vec 
+      
+      code text used as feature, encoded using word2vec
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - rnn w/ max pooling for bug report
+      - cnn w/ max pooling for code text
+      - cross-attention for cnn and rnn output
+      - add two attention vectors with corresponding node embedding from knowledge graph
+      - fnn w/ output
+tasks:
+  bug-localisation:
+    training-objective: Predict if given bug occurs in the given file
+    training-granularity: graph classification (kinda not quite)
+    working-objective: Predict if given bug occurs in the given file
+    working-granularity: graph classification (kinda not quite)
+    application: bug localisation
+    supervision: supervised
+combinations:
+  - graph: knowledge-graph
+    model: model
+    task: bug-localisation
+    comments:
+comments: # list

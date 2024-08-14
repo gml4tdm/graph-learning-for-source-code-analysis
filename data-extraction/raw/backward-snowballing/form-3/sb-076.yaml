@@ -1,0 +1,35 @@
+paper-id: sb-076
+pdf-id: sb-169
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: source code
+        details: project
+    vertex-type: module
+    edge-type: data dependency/call dependency
+    vertex-features: node level network metrics
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: graph level network metrics
+    other-features: n/a
+models:
+  logistic-regression:
+    name: Logistic Regression
+    architecture-attributes:
+      - logistic regression
+tasks:
+  fault-proneness-prediction:
+    training-objective: Classify node as fault prone or not
+    training-granularity: node classification
+    working-objective:  Classify node as fault prone or not
+    working-granularity: node classification
+    application: Fault Proneness Prediction
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: logistic-regression
+    task: fault-proneness-prediction
+    comments:
+comments: # list

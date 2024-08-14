@@ -1,0 +1,60 @@
+paper-id: sb-106
+pdf-id: sb-146
+graphs:
+  cdfg:
+    name: Crucial Data Flow Graph
+    description: subgraph of the data flow graph, which only contains vulnerability-related nodes
+    artefacts:
+      - name: source code
+        details: smart contracts
+    vertex-type: variable
+    edge-type: data flow
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: mask matrix (?)
+    graph-features: n/a
+    other-features: |-
+      Input for the model is: [CLS] <Token Sequence> [SEP] <Variable Sequence>
+      where the token sequence is the sequence of source code tokens 
+      (and their corresponding positions), and the variable sequence is the sequence of variables
+      in the graph (and their corresponding positions).
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - transformer encoder, where the attention is computed using a 0/\infty mask matrix based on the input graph
+tasks:
+  masked-language-modelling:
+    training-objective: Masked language modelling
+    training-granularity: n/a
+    working-objective: n/a
+    working-granularity: n/a
+    application: model pre-training
+    supervision: self-supervised
+  edge-prediction:
+    training-objective: Given a graph with some edges masked, predict the missing edges between all unconnected variables (nodes)
+    training-granularity: link prediction
+    working-objective: n/a
+    working-granularity: n/a
+    application: model pre-training
+    supervision: self-supervised
+  node-alignment:
+    training-objective: Predict masked "edges" between variables and code tokens
+    training-granularity: Kind of like link prediction, but the code tokens were never explicitly part of the graph -- simply matching code tokens to their occurrence in the graph sequence part of the input
+    working-objective: n/a
+    working-granularity: n/a
+    application: model pre-training
+    supervision: self-supervised
+  vulnerability-detection:
+    training-objective: Given a graph, classify it  as a vulnerability or not
+    training-granularity: n/a
+    working-objective: Given a graph, classify it  as a vulnerability or not
+    working-granularity: n/a
+    application: vulnerability detection
+    supervision: supervised
+combinations:
+  - graph: cdfg
+    model: model
+    task: masked-language-modelling + edge-prediction + node-alignment + vulnerability-detection
+    comments:
+comments: # list

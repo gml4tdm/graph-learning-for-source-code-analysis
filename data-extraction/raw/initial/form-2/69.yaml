@@ -1,0 +1,71 @@
+paper-id: 69
+pdf-id: 97
+graphs:
+  ast: &ast
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: directed
+    vertex-features: |-
+      Node type and Node payload tokens are encoded using word2vec
+    edge-features: n/a
+    connectivity-features: |-
+      Stacked adjacency tensor.
+      
+      For every graph, the adjacency matrix is determined.
+      The four matrices are then combined into a third order tensor.
+    graph-features: n/a
+    other-features: n/a
+  cfg:
+    name: Control Flow Graph
+    edge-type:
+      - name: Control Flow Edge
+        details: Edges representing control flow between basic blocks
+    <<: *ast
+  dfg:
+    name: Data Flow Graph
+    edge-type:
+      - name: Data Flow Edge
+        details: |-
+          Edges represent subsequent modification or access of the same variables
+    <<: *ast
+  ncs:
+    name: Natural Code Sequence
+    edge-type:
+      - name: Code Sequence Edge
+        details: Edge from one AST leaf node to the next
+    <<: *ast
+models:
+  circle-ggnn:
+    type:
+      name: n/a
+      architecture: |-
+        Gated Graph Tensor Neural Network
+          Adaptation of GGNN to tensor setting. 
+          Tensors facilitate inter- and intra-graph information exchange.
+        MLP on concatenation of initial features and final output of GNN part 
+        MLP on final output of GNN part
+        Element-wise multiplication of MLP outputs
+        Averaging of element-wise multiplication outputs
+        Sigmoid
+tasks:
+  vulnerability-detection:
+    training-objective: Classify samples as vulnerable/not vulnerable
+    training-granularity: Graph Classification (multiple graphs per sample)
+    working-objective: Classify samples as vulnerable/not vulnerable
+    working-granularity: Graph Classification (multiple graphs per sample)
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: ast + cfg + dfg + ncs
+    model: circle-ggnn
+    task: vulnerability-detection
+    comments:
+comments: # list

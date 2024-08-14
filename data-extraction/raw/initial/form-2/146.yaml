@@ -1,0 +1,75 @@
+paper-id: 146
+pdf-id: 195
+graphs:
+  hsg:
+    name: Heterogeneous Syntax Graph
+    description: AST with explicitly heterogeneous edges
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: Some nodes (e.g. "Block") are removed to reduce tree size
+    edge-type:
+      - name: AST Child Edge
+        details: n/a
+      - name: AST Parent Edge
+        details: n/a
+      - name: AST Left Sibling Edge
+        details: n/a
+      - name: AST Right Sibling Edge
+        details: n/a
+      - name: Next Data Flow Node Edge
+        details: n/a
+      - name: Previous Data Flow Node Edge
+        details: n/a
+      - name: Previous Leaf Edge
+        details: n/a
+      - name: Next Leaf Edge
+        details: n/a
+    vertex-features: |-
+      Identifiers in nodes are split up
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      The goal of the model is to predict the next token in the summary.
+      As such, the summary generated thus far is also an input.
+models:
+  het-cos:
+    type:
+      name: n/a
+      architecture: |-
+        0) Embedding Layers for summary tokens and nodes 
+        1) Graph Encoder:
+          i) Heterogeneous GraphSAGE (see 145.yaml)
+          ii) Concatenate node embeddings 
+          iii) ReLU
+          iv) Residual Connection + Normalisation  (and then outputted is a node embedding matrix)
+        2) Summary Decoder
+          i) Masked multi-head self-attention w/ residual connection and layer normalisation 
+          ii) Multi-head attention (decoding over learned nodes) w/ residual connection and layer normalisation
+          iii) FNN w/ residual connection and layer normalisation
+        3) multi-head attention based copying mechanism 
+          i) for the m-th output token with decoder output e,
+              compute p_v = Softmax(Linear(e))
+          ii) Multi-head attention over e and graph encoder output to derive p_n
+          iii) Compute weighted sum of p_v and p_n
+tasks:
+  code-summarization:
+    training-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    training-granularity: Graph to Sequence
+    working-objective: |-
+      Given a code snippet, generate a summary.
+      Done token-by-token; previous tokens are also given as input
+    working-granularity: Graph to Sequence
+    application: Code summarization
+    supervision: Supervised
+combinations:
+  - graph: hsg
+    model: het-cos
+    task: code-summarization
+    comments:
+comments: # list

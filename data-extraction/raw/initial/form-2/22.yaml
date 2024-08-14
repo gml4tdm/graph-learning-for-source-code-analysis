@@ -1,0 +1,84 @@
+paper-id: 22
+pdf-id: 35
+graphs:
+  s-ast:
+    name: S-AST
+    description: AST with control flow information and subtokens
+    artefacts:
+      - name: source code
+        details: Method level
+    vertex-type:
+      - name: AST non-leave node
+        details: n/a
+      - name: AST leave node
+        details: n/a
+      - name: API Invocation node
+        details: e.g. "Method Invocation" node in the AST.
+      - name: Subtoken Node
+        details: |-
+          Every identifier in a node (e.g "getLarger") is split into subtokens ("get", "L", "arger").
+          First first one ("get") is kept as the parent node in place of the identifier; 
+          the other subtokens are kept as child nodes.
+    edge-type:
+      - name: AST edge
+        details: n/a
+      - name: Leaf Edge
+        details: Edge to the next leaf node (which may be of type "Subtoken" in case of a subtoken parent node)
+      - name: Data Flow Edge
+        details: Edge to next usage of a variable, starting from declaration
+      - name: Subtoken Edge
+        details: Edge between subtoken child and parent node
+    vertex-features: Not specified/unclear how initial embedding are intialised
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: |-
+      1) Leaf Edges and edges linking variables are removed 
+      2) Graph is partitioned into subtrees, where each subtree represents a statement
+      3) Subtrees are grouped (left-to-right) into subgraphs based on their size using a threshold lamda
+      4) Leaf Edges and variable linking edges are re-instated per subgraph
+    other-features: |-
+      The raw code of the method is converted to AST. The token types (or payloads for leaves)
+      are linearised through pre-order traversal. The API description is aded to this text.
+models:
+  gnn:
+    type:
+      name: n/a
+      architecture: |-
+        Two parallel models, trained separately.
+        
+        First model:
+          1) Partitioned graphs are passed to a GGNN (w/ GRU and a MLP for transforming neighbour embeddings; that's normal GGNN IIRC)
+          2) Each partitioned graph is passed to the GGNN, in order.
+          3) Each output of the GNN is fed, in sequence, through a unidirectional LSTM 
+          4) The entire graph is fed through the GGNN (call the output C)
+          5) The final output of the LSTM is fused with C through concatenation 
+        
+        Second Model:
+          1) The syntactic information w/ API description is passed through CodeBERT.
+        
+        Finally, the graph embedding and CodeBERT output are fused through concatenation.
+tasks:
+  code-summarization:
+    training-objective: Summarise the functionality of a method
+    training-granularity: Text generation based on graph embedding
+    working-objective: Summarise the functionality of a method
+    working-granularity: Text generation based on graph embedding
+    application: Code summarization
+    supervision: Supervised
+  clone-detection:
+    training-objective: Given two programs, determine whether they implement the same functionality
+    training-granularity: n/a
+    working-objective: Given two programs, determine whether they implement the same functionality
+    working-granularity: n/a
+    application: Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: s-ast
+    model: gnn
+    task: code-summarization
+    comments:
+  - graph: s-ast
+    model: gnn
+    task: clone-detection
+    comments:
+comments: # list

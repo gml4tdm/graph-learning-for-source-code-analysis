@@ -1,0 +1,61 @@
+paper-id: 84
+pdf-id: 116
+graphs:
+  graph:
+    name: n/a
+    description: Mix of AST and CFG
+    artefacts:
+      - name: Source code
+        details: Javascript
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: Ast Edge
+        details: Directed
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: |-
+      Node content is split up into "words", and embedded using word2vec
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      Taint analysis is applied to the program. 
+      Resulting sub-program text is split up into "words" and embedded using word2vec,
+      and put into a sequence of vectors
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Dual input model:
+        1) Graph Input
+          GCN
+          Graph embedding computed according to 
+            h_G = \frac{1}{|v|}\left(p\sum_{v \in V_s} h_v + q\sum_{v \in V \setminus V_s} h_v\right)
+            Where V_s is the subset of nodes detected to contain sensitive function call or output,
+            and p and q are weighs.
+        
+        2) Code Sequence Input
+          Bidirectional LSTM
+          Dropout Layer
+          Self-attention Layer
+          FNN Layer 
+          Normalisation Layer 
+        
+        Resulting embeddings are concatenated and passed through MLP
+tasks:
+  xss-detecting:
+    training-objective: Classify code sample as safe or not
+    training-granularity: Graph Classification
+    working-objective: Classify code sample as safe or not
+    working-granularity: Graph Classification
+    application: XSS Detection in JavaScript
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: xss-detecting
+    comments:
+comments: # list

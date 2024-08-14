@@ -1,0 +1,51 @@
+paper-id: 100
+pdf-id: 136
+graphs:
+  graph:
+    name: n/a
+    description: |-
+      Mixture of AST and CFG.
+      
+      Code slicing is performed based on function calls,
+      arithmetic expressions, pointer usage, and array usage.
+      Slicing was done based on control and data dependencies. 
+      
+      Every function may result into multiple code slices!
+    artefacts:
+      - name: Source code
+        details: Source code slice from function
+    vertex-type:
+      - name: Token
+        details: Each unique token has a vertex
+    edge-type:
+      - name: Co-occurrence edge
+        details: Edge between tokens if they co-occur in a sliding window of some given size
+    vertex-features: |-
+      Tokens encoded using word2vec
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features:  n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        GGNN
+        For each node, compute 
+        h_v = \sigma(MLP(h_v^t)) \sigmoid \tanh(MLP(h_v^t)) (first term serves as a soft attention mechanism)
+        h_g = \frac{1}{|V|} \sum_{v \in V} h_v + MaxPool(V)
+tasks:
+  vulnerability-detection:
+    training-objective: Classify sample (graph corresponding to slice) as vulnerable or not vulnerable
+    training-granularity: Graph Classification
+    working-objective: Classify sample (graph corresponding to slice) as vulnerable or not vulnerable
+    working-granularity: Graph Classification
+    application: Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: graph
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list

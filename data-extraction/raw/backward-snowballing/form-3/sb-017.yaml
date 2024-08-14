@@ -1,0 +1,51 @@
+paper-id: sb-017
+pdf-id: sb-025
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: javascript
+    vertex-type: ast (nonterminal nodes only)
+    edge-type: ast
+    vertex-features: continuous binary tree
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+  cfg:
+    name: CFG
+    description: n/a
+    artefacts:
+      - name: source code
+        details: javascript
+    vertex-type: basic block
+    edge-type: control flow
+    vertex-features: random vectors
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - cnn over ast (i.e. convolution operation over subtrees)
+      - dynamic pooling
+      - cnn over cfg subgraphs
+      - concatenation w/ softmax
+tasks:
+  malicious-js-detection:
+    training-objective: Classify sample as malicious or benign
+    training-granularity: graph classification (w/ 2 input graphs)
+    working-objective: Classify sample as malicious or benign
+    working-granularity: graph classification (w/ 2 input graphs)
+    application: Malicious javascript code detection
+    supervision: supervised
+combinations:
+  - graph: ast + cfg
+    model: model
+    task: malicious-js-detection
+    comments:
+comments: # list

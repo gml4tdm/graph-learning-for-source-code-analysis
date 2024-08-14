@@ -1,0 +1,45 @@
+paper-id: 248
+pdf-id: 347
+graphs:
+  fcg:
+    name: fcg
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type: function
+    edge-type: function call
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  mc-cluster:
+    name: n/a
+    architecture-attributes:
+      - Heuristic Monte-carlo (randomised order) clustering
+      - Actually has multiple implementations
+  greedy-cluster:
+    name: n/a
+    architecture-attributes:
+      - Heuristic greedy (e.g. highest degree first) clustering
+      - Actually has multiple implementations
+tasks:
+  migration:
+    training-objective: n/a
+    training-granularity: n/a
+    working-objective: cluster nodes together
+    working-granularity: graph (node) clustering
+    application: Cluster functional (structured programming) functions together into candidate class method for migration to an OOP language
+    supervision: unsupervised
+combinations:
+  - graph: fcg
+    model: mc-cluster
+    task: migration
+    comments:
+  - graph: gch
+    model: greedy-cluster
+    task: migration
+    comments:
+comments: # list

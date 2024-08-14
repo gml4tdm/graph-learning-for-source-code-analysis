@@ -1,0 +1,46 @@
+paper-id: 30
+pdf-id: 43
+graphs:
+  ast:
+    name: AST
+    description: |-
+      AST with some simplifications;
+      1) only function are kept
+      2) all functions are aggregated under a single root node
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: Encoded using Embedding Layer
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture:
+        Embedding Layer 
+        Alternating (child sum) Tree-LSTM network
+        FNN layer
+tasks:
+  performance-prediction:
+    training-objective: Given two graphs, determine which one corresponds to faster code
+    training-granularity: Graph Classification (?)
+    working-objective: Given two graphs, determine which one corresponds to faster code
+    working-granularity: Graph Classification (?)
+    application: Code Performance Prediction
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: performance-prediction
+    comments:
+comments: # list
+  - Not 100% clear to me whether the tree network is trained separately or jointly (i.e. in the name network)

@@ -1,0 +1,159 @@
+paper-id: 11
+pdf-id: 19
+graphs:
+  api-context-graph:
+    name: API Context Graph
+    description: Describes (Java STD) API usages and their context
+    artefacts:
+      - name: Source code (method)
+        details: n/a
+    vertex-type:
+      - name: API method call
+        details: n/a
+      - name: API field access
+        details: n/a
+      - name: Variable declaration
+        details: n/a
+      - name: Assignment
+        details: n/a
+      - name: Control Unit
+        details: n/a
+      - name: Hole
+        details: Hole to be filled in with an API recommendation. Should be _1_ node in the graph.
+    edge-type:
+      - name: S
+        details: |-
+          There is an edge (u, v) of type S in one of two cases:
+            1) v is the Hole node and u represents a statement directly preceding the hole.
+            2) u is the Hole node and v represents a statement directly following the hole.
+      - name: CD
+        details: |-
+          There is a direct data flow and a direct control flow from the source to the target node
+      - name: C
+        details: |-
+          There is a control flow from the source to the target node, but no data flow
+      - name: D
+        details: |-
+          There is a data flow from the source to the target node, but no control flow
+    vertex-features: |-
+      Node names are generated based upon a set or rules; 
+      
+      1) Declaration -> [Full Class Name].Declaration (String str -> java.lang.String.Declaration)
+      2) Declaration w/ constant assignment -> [Full Class Name].Constant 
+      3) Declaration w/ null assignment -> [Full Class Name].Null
+      4) Declaration w/ object creation -> [Full Class Name].new([parameter types])
+      5) API Method Call -> [Full Method Name]([parameter types])
+      6) API Field Access -> [Full Field Name]
+      7) Control unit -> [Name] (if -> if)
+      8) Nested API method call/field access (e.g. call inside call) -> list calls following above rules, inner to outer
+      9) cascading method calls/field access -> Keep cascading structure; only expand initial call
+      (note: cascading = chained)
+    edge-features: Edge labels are not used as features
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: |-
+      Names as described for vertex features are tokenized by;
+      1) removing trailing numbers
+      2) splitting on underscores, numbers, dollar signs, camelCasing
+      3) duplicate and meaningless (single letter) tokens are discarded
+      4) remaining tokens are encoded using GloVe
+models:
+  apirec-cst:
+    type:
+      name: APIRec-CST
+      architecture: |-
+        Starts with two parallel paths:
+          1) Takes as input the edges and graphs.
+            i) Embedding layer is used to encode node labels 
+            ii) Uses GGNNs (unclear how many)
+          2) Takes as input the bag of tokens 
+            i) Tokens embedding using trainable embedding layer
+            ii) Each token passes through multiple FNN layers (3 layers, all of size 300)
+            iii) All resulting embeddings are summed 
+        Two paths are joined with a concatenation layer
+        FNN layer with tanh activation
+        output of last FNN layer is passed to softmax function
+  apirec-so:
+    type:
+      name: APIRec-SO
+      architecture: |-
+        Takes as input the edges and graphs.
+        i) Embedding layer is used to encode node labels 
+        ii) Uses GGNNs (unclear how many)
+        iii) Softmax output
+tasks:
+  api-recommendation:
+    training-objective: Predict API
+    training-granularity: n/a
+    working-objective: Predict API
+    working-granularity: n/a
+    application: API recommendation
+    supervision: supervised
+training:
+  training:
+    train-test-split:
+      train: 0.9
+      test: 0.0
+      validation: 0.1
+    cross-validation:
+      used: no
+      details: n/a
+    hyper-parameters:
+      - name: hole size (max size of the hole in nodes; a control structure such as "if" and all its children count as a single node)
+        value: 5
+      - name: node label embedding sie
+        value: 300
+      - name: token embedding size
+        value: 300
+      - name: dropout
+        value: 0.75
+      - name: learning rate
+        value: 0.005
+      - name: batch size
+        value: 256
+    hyper-parameter-selection: trial experiments
+    search-tuned-hyper-parameters: not specified
+    evaluation-details: |-
+      model is trained until validation accuracy does not improve for 5 epochs.
+    evaluation-methods:
+      - name: accuracy
+        type: metric
+        details: n/a
+      - name: top-k accuracy
+        type: metric
+        details: k = 1, 5, 10
+      - name: mean reciprocal rank
+        type: metric
+        details: n/a
+      - name: task completion time
+        type: metric (user study)
+        details: Time it takes developers to complete a task with the given tool
+      - name: test completion rate
+        type: metric (user study)
+        details: Fraction of tasks developers were able to complete using the given tool.
+datasets:
+  dataset:
+    name: n/a
+    description: |-
+      Dataset of API context graphs and corresponding bag of tokens,
+      with holes in the graph and appropriate tokens removed.
+    source: # list
+      - All open source Java projects on GiHub with 1000 stars or more
+    labelling: Automatically by removing nodes from generated API context graphs, based on edge type.
+    size: 7109777
+    is-pre-existing: no
+combinations:
+  - graph: api-context-graph
+    model: apirec-cst
+    task: api-recommendation
+    training: training
+    dataset: dataset
+    comments:
+  - graph: api-context-graph
+    model: apirec-so
+    task: api-recommendation
+    training: training
+    dataset: dataset
+    comments:
+comments: # list
+  - Does _not_ use a test set!!!

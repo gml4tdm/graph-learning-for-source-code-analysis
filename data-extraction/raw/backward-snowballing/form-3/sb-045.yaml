@@ -1,0 +1,37 @@
+paper-id: sb-045
+pdf-id: sb-067
+graphs:
+  ast:
+    name: ast
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast (binarised)
+    edge-type: ast
+    vertex-features: node type and content, both using word2vec
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - siamese network
+      - tree-based LSTM, but with two feature vectors per node (everywhere where in normal tree-LSTM, a single input is given, a second term is added for the second input)
+      - cosine similarity
+tasks:
+  clone-detection:
+    training-objective: maximise similarity for related clone pairs, minimise similarity for unrelated pairs
+    training-granularity: graph regression (but two inputs)
+    working-objective: output similarity of two programs
+    working-granularity: graph regression (but two inputs)
+    application: code clone detection
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: clone-detection
+    comments:
+comments: # list

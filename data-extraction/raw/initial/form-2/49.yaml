@@ -1,0 +1,89 @@
+paper-id: 49
+pdf-id: 70
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: AST Node
+        details: n/a
+    edge-type:
+      - name: AST Edge
+        details: n/a
+    vertex-features: |-
+      for GGNN model:
+        Three separate mechanics:
+        1) Ordinal encoding of node type
+        2) Ordinal encoding of node type + Ordinal encoding of the tokens in the node 
+        3) Ordinal encoding of node type + average word2vec encoding of tokens in the node
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      For the LSTM model:
+        1) tokenisation,
+            abstraction of literaturs,
+            removal of uncommon identifiers, 
+            splitting snake and camel case into separate words
+        2) Converting into a stream of tokens
+  pdg:
+    name: PDG
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: PDG Node
+        details: Forward and backward slicing is performed to only keep relevant nodes
+    edge-type:
+      - name: Data Dependency Edge
+        details: n/a
+      - name: Control Dependency Edge
+        details: n/a
+    vertex-features: |-
+      for GGNN model:
+        Three separate mechanics:
+        1) Ordinal encoding of node type
+        2) Ordinal encoding of node type + encoded variant of some additional info (e.g. functions mentioned by node)
+        3) Ordinal encoding of node type + average word2vec encoding of tokens in the node
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: n/a
+    other-features: |-
+      For the LSTM model:
+        1) tokenisation,
+            abstraction of literaturs,
+            removal of uncommon identifiers, 
+            splitting snake and camel case into separate words
+            remove certain uninformative node types
+        2) Converting into a stream of tokens
+models:
+  lstm:
+    type:
+      name: LSTM
+      architecture: LSTM
+  ggnn:
+    type:
+      name: GGNN
+      architecture: GGNN
+tasks:
+  report-filtering:
+    training-objective: Classify code report as true/false positive
+    training-granularity: Graph Classification
+    working-objective: Classify code report as true/false positive
+    working-granularity: Graph Classification
+    application: Filter out false positives from static source analysis tools
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: lstm
+    task: report-filtering
+    comments:
+  - graph: pdg
+    model: ggnn
+    task: report-filtering
+    comments:
+comments: # list

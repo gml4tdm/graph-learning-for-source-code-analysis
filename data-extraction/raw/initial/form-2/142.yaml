@@ -1,0 +1,103 @@
+paper-id: 142
+pdf-id: 187
+graphs:
+  global-graph:
+    name: n/a
+    description: Graph describing and connecting multiple Python packages
+    artefacts:
+      - name: Source code
+        details: Packages
+    vertex-type:
+      - name: Function
+        details: n/a
+      - name: Class field
+        details: n/a
+      - name: Class
+        details: n/a
+      - name: Module
+        details: n/a
+      - name: Class Method
+        details: n/a
+      - name: Non-indexed Symbol
+        details: Not clearly explained
+    edge-type:
+      - name: Call
+        details: n/a
+      - name: Define/contain
+        details: n/a
+      - name: Type use
+        details: n/a
+      - name: Import
+        details: n/a
+      - name: Inherit
+        details: n/a
+    vertex-features: Not specified
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  rgcn:
+    type:
+      name: n/a
+      architecture: |-
+        Embedding Layer
+        RGCN
+        For every node pair, concatenate embeddings
+        FNN
+  gat:
+    type:
+      name: n/a
+      architecture: |-
+        Embedding Layer
+        GAT
+        For every node pair, concatenate embeddings 
+        FNN
+tasks:
+  sce-name-prediction:
+    training-objective: unclear how this works exactly
+    training-granularity: Link Prediction
+    working-objective: unclear how this works exactly
+    working-granularity: Link Prediction
+    application: Predict Names of Source Code Elements
+    supervision: supervised
+  variable-prediction:
+    training-objective: unclear how this works exactly
+    training-granularity: Link Prediction
+    working-objective: unclear how this works exactly
+    working-granularity: Link Prediction
+    application: Variable name prediction
+    supervision: supervised
+  next-function-prediction:
+    training-objective: unclear how this works exactly
+    training-granularity: Link Prediction
+    working-objective: unclear how this works exactly
+    working-granularity: Link Prediction
+    application: Predicting Next function to be called [after current function]
+    supervision: supervised
+combinations:
+  - graph: global-graph
+    model: rgcn
+    task: sce-name-prediction
+    comments:
+  - graph: global-graph
+    model: rgcn
+    task: variable-prediction
+    comments:
+  - graph: global-graph
+    model: rgcn
+    task: next-function-prediction
+    comments:
+  - graph: global-graph
+    model: gat
+    task: sce-name-prediction
+    comments:
+  - graph: global-graph
+    model: gat
+    task: variable-prediction
+    comments:
+  - graph: global-graph
+    model: gat
+    task: next-function-prediction
+    comments:
+comments: # list

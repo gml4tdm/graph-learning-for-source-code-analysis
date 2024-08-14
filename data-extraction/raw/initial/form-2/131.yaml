@@ -1,0 +1,71 @@
+paper-id: 131
+pdf-id: 174
+graphs:
+  cfg:
+    name: CFG
+    description: |-
+      To avoid confusion, remember that the artefacts in the 
+      "artefacts" section are not related _beforehand_, but their
+      relatedness must be predicted
+    artefacts:
+      - name: Source code
+        details: files
+      - name: Bug Report
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: |-
+      Punctuation in statements is removed, names are broken up,
+      tokens are encoded using word2vec, and put into a matrix.
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: n/a
+    other-features: |-
+      Bug reports are preprocessed (standard NLP steps),
+      and encoded as matrix of word vectors using word2vec
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) Two parallel inputs:
+          i) Bug Report
+              1D CNN
+              Max Pooling
+          ii) Control Flow Graph
+              - Statement Encoder: CNN1D + Maxpool
+              - Information Propagation:
+                  The following update rule is applied for T time steps.
+                  For the first time step, only the root node (entry point), is "active".
+                  After a time step, the children of all active nodes _also_ become active.
+        
+                  z'_v^t = average of hidden states of incoming nodes 
+                  x_v^t, z_v^t = \begin{cases}
+                    GRU(x_v^{t-1}, z'_v^{t}) & v is active \\ 
+                    x_v^{t - 1}, z_v^{t - 1} & otherwise 
+                  \end{cases}
+        
+              - Information Aggregation 
+                  u = \frac{1}{|V} \sum_{v \in V} GRU(x_v^T, x_v^0)
+                  (i.e. GRU applied to the initial node embedding after the statement encoder, 
+                  and the node embedding after T time steps)
+        2) Fuse using FNN
+        3) Prediction
+tasks:
+  bug-localisation:
+    training-objective: Given a (source file, bug report) pair, predict whether the bugs occurs in the given file
+    training-granularity: n/a
+    working-objective: Given a (source file, bug report) pair, predict whether the bugs occurs in the given file
+    working-granularity: n/a
+    application: Bug localisation
+    supervision: Supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: bug-localisation
+    comments:
+comments: # list

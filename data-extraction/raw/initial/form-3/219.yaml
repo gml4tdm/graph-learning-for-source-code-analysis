@@ -1,0 +1,37 @@
+paper-id: 219
+pdf-id: 293
+graphs:
+  ast:
+    name: AST
+    description: AST split into subtrees for statements (specific vulnerability related statement types)
+    artefacts:
+      - name: Source code
+        details: powershell
+    vertex-type: AST node
+    edge-type: ast
+    vertex-features: word2vec of node content 
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name:
+    architecture-attributes:        # list
+      - ast embeddings aggregated in bottom-up fashion using child-sum (W h_n + b_n + \sum_j h_j)
+      - max pool over subtree
+      - bidirectional gru over sequence of sub-tree (statement) embeddings
+tasks:
+  malicious-script-detection:
+    training-objective: classify sample as malicious or benign
+    training-granularity: graph classification
+    working-objective: classify sample as malicious or benign
+    working-granularity: graph classification
+    application: Malicious Powershell Script Detection (from obfuscated code)
+    supervision: Supervised
+combinations:
+  - graph: ast
+    model: model
+    task: malicious-script-detection
+    comments:
+comments: # list

@@ -1,0 +1,35 @@
+paper-id: 183
+pdf-id: 238
+graphs:
+  ast:
+    name: AST
+    description: n/a
+    artefacts:
+      - name: source code
+        details: n/a
+    vertex-type: ast (some node types are removed)
+    edge-type: ast
+    vertex-features: not content (embedded by model)
+    edge-features: n/a
+    connectivity-features: not specified
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - Graph2Seq w/ beam search (not greedy search)
+tasks:
+  program-repair:
+    training-objective: Given a buggy method, generate a fixed version
+    training-granularity: graph to sequence
+    working-objective: Given a buggy method, generate a fixed version
+    working-granularity: graph to sequence
+    application: Automated program repair
+    supervision: supervised
+combinations:
+  - graph: ast
+    model: model
+    task: program-repair
+    comments:
+comments: # list

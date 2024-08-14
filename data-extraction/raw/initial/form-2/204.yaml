@@ -1,0 +1,48 @@
+paper-id: 204
+pdf-id: 274
+graphs:
+  cfg:
+    name: CFG
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Basic Block
+        details: n/a
+    edge-type:
+      - name: Control Flow Edge
+        details: n/a
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/ a
+    graph-features: n/a
+    other-features: |-
+      The node centrality is computed for every node.
+      This centrality is "assigned" to every token in the node.
+      The centralitities of the same token in different blocks are summed.
+      These tokens are encoded using word2vec; 
+      The word vectors are multiplied with the summed node centrality.
+      This sequence is used as the model input.
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        GRU 
+        Resulting embeddings of the two code snippets are combined;
+        cosine similarity
+tasks:
+  clone-detection:
+    training-objective: Given two code samples, determine whether they are semantic clones
+    training-granularity: n/a
+    working-objective: Given two code samples, determine whether they are semantic clones
+    working-granularity: n/a
+    application: Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: cfg
+    model: model
+    task: clone-detection
+    comments:
+comments: # list

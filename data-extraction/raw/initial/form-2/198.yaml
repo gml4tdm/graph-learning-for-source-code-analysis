@@ -1,0 +1,58 @@
+paper-id: 198
+pdf-id: 266
+graphs:
+  pdg:
+    name: PDG
+    description: b/a
+    artefacts:
+      - name: Source code
+        details: n/a
+    vertex-type:
+      - name: Statement
+        details: n/a
+    edge-type:
+      - name: Data Dependence Edge
+        details: n/a
+      - name: Control Dependence Edge
+        details: n/a
+    vertex-features: One-hot encoding of statement type
+    edge-features: n/a
+    connectivity-features: Adjacency Matrix
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        1) For each Node (note: parts (ii-v) are ran twice; once for control edges, once for data edges):
+          i) Linear Layer 
+          ii) Graph-based attention Layer 1
+              - e_{ij} = \alpha(W h_i, W h_j)
+              - a_{ij} = softmax(e_{ij})
+              - h_i' = \concat_k^{heads} \sigma(\sum_{j \in N(u)} a_{ij}^k W^k h_j)
+          iii) Graph-based attention Layer 1
+              - e_{ij} = \alpha(W h_i, W h_j)
+              - a_{ij} = softmax(e_{ij})
+              - h_i'' = \sum_k^{heads} \sigma(\sum_{j \in N(u)} a_{ij}^k W^k h_j')
+          iv) h_i'' passed to LSTM; back to (ii) for some amount of rounds 
+          v) Concatenate LSTM output for every round 
+        2) Add control- and data dependence based representations; H = H_c + H_d 
+        3) G = \alpha(MLP(H)) \odot MLP(H)
+        4) Concatenate graph embeddings for the two input graphs to obtain F
+        5) F'  = \alpha(MLP(F))
+        6) Similarity = \alpha(MLP(F'))
+tasks:
+  clone-detection:
+    training-objective: Given two code samples, determine whether they are semantic clones
+    training-granularity: Graph Classification (?)
+    working-objective: Given two code samples, determine whether they are semantic clones
+    working-granularity: Graph Classification (?)
+    application: Code Clone Detection
+    supervision: Supervised
+combinations:
+  - graph: pdg
+    model: model
+    task: clone-detection
+    comments:
+comments: # list

@@ -1,0 +1,48 @@
+paper-id: 88
+pdf-id: 121
+graphs:
+  pdg:
+    name: PDG
+    description: n/a
+    artefacts:
+      - name: Source code
+        details: function
+    vertex-type:
+      - name: statement
+        details: n/a
+    edge-type:
+      - name: Control Dependence Edge
+        details: n/a
+      - name: Data Flow  Edge
+        details: n/a
+      - name: Self Loop
+        details: n/a
+    vertex-features: Statements are encoded using CodeBERT
+    edge-features: n/a
+    connectivity-features: Not specified
+    graph-features: The entire function is encoded using CodeBERT
+    other-features: n/a
+models:
+  model:
+    type:
+      name: n/a
+      architecture: |-
+        Graph input fed to GAT 
+        
+        GAT output multiplied by function embedding
+        
+        MLP
+tasks:
+  vulnerability-detection:
+    training-objective: Classify nodes as vulnerable/not vulnerable
+    training-granularity: Node Classification
+    working-objective: Classify nodes as vulnerable/not vulnerable
+    working-granularity: Node Classification
+    application: Statement-level Vulnerability Detection
+    supervision: Supervised
+combinations:
+  - graph: pdg
+    model: model
+    task: vulnerability-detection
+    comments:
+comments: # list
