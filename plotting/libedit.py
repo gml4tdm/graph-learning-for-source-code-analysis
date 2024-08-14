@@ -167,8 +167,3 @@ def predicate_replace(filename: str, searcher, replacer):
     data['refinements'].extend(rules)
     with open(filename, 'w') as file:
         json.dump(data, file, indent=2)
-
-
-data = load_raw('../data-synthesis/projects/domain_project_2.json')
-k = reverse_resolve_one(data, 'defects & vulnerabilities')
-c = count_encountered(data, k)

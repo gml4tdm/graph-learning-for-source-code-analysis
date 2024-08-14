@@ -1,0 +1,913 @@
+{
+  "raw": [
+    "source code",
+    "source code (functions)",
+    "source code",
+    "summary of the source code (training) or query (working)",
+    "source code (snippets from jupyter notebooks)",
+    "markdown text (natural language from markdown from the jupyter notebooks)",
+    "source code (method)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "users (from github)",
+    "repositories (from github)",
+    "source code (source code taken from multiple source files.)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (methods)",
+    "source code (methods)",
+    "source code (methods)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (method)",
+    "source code (method)",
+    "source code (multiple methods)",
+    "source code (multiple methods)",
+    "source code",
+    "source code (functions)",
+    "source code (files)",
+    "bug report",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (smart contract)",
+    "source code (function)",
+    "source code",
+    "source code (path/commit) (patch is split up into pre- and post- change function. an ast is made for both.)",
+    "commit message",
+    "source code (also function focussed, but not exclusively)",
+    "source code",
+    "design pattern specifications",
+    "source code (methods)",
+    "source code",
+    "source code",
+    "source code (commit)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (function)",
+    "source code (function)",
+    "source code (function)",
+    "source code (function)",
+    "source code",
+    "source code",
+    "source code (constructed based on commits, but also uses full source code.)",
+    "source code",
+    "source code",
+    "source code (method)",
+    "source code",
+    "source code (arbitrary snippets)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (seemingly method level)",
+    "source code (seemingly method level)",
+    "source code (seemingly method level)",
+    "source code (php files)",
+    "source code (methods)",
+    "source code",
+    "source code",
+    "source code",
+    "source code (comments removed, user defined names are normalised.\nprogram slicing based on sensitive apis, arrays,\nintegers, and pointers is performed.)",
+    "source code",
+    "source code (smart contract)",
+    "source code",
+    "source code (function)",
+    "bug report",
+    "source code",
+    "source code",
+    "source code (pairs of files; one old file and a revised version)",
+    "source code",
+    "source code",
+    "source code",
+    "source code (in this setting, the source code is obtained from decompiled byte code.)",
+    "source code (function)",
+    "source code (file)",
+    "source code (file)",
+    "source code (files/project)",
+    "source code method",
+    "source code",
+    "source code",
+    "source code (source code slice from function)",
+    "source code (function)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "contributor data",
+    "repository",
+    "contributor data",
+    "repository (source files, directories, repository information)",
+    "code clone source code (for a given pair of code clones, where one has been modified,\nthree artefacts are used:\n1) original code of the changed clone \n2) modified code of the changed clone\n3) code of the other clone)",
+    "source code (smart contracts)",
+    "source code (file)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (changesets (for bug localisation))",
+    "source code (smart contract)",
+    "source code (smart contract)",
+    "source code (javascript)",
+    "source code (source code is first sliced based data (parameters)\npassed to \"dangerous\" functions.\nnames are standardised.)",
+    "source code (methods)",
+    "source code (function (c#))",
+    "source code (method level)",
+    "source code",
+    "source code",
+    "source code",
+    "source code (function)",
+    "bug report",
+    "source code",
+    "source code",
+    "compiler feedback (line number i_err and error message m_err)",
+    "source code",
+    "source code (project)",
+    "source code changes",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (file)",
+    "source code (files/project)",
+    "source code",
+    "source code comments",
+    "arbitrary graphs (?)",
+    "source code",
+    "source code (local block)",
+    "source code",
+    "source code (smart contracts)",
+    "source code (file)",
+    "source code",
+    "source code",
+    "source code (repository)",
+    "metadata (repository) (non-source code artefacts in a repository (e.g. readme file))",
+    "user profile data (bio information. e.g. name, description, contact information)",
+    "topic (topic on github)",
+    "source code",
+    "source code",
+    "source code (file)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (function)",
+    "source code (method)",
+    "source code (patch)",
+    "source code",
+    "summary of the source code (training) or query (working)",
+    "source code",
+    "source code (repository (including pull requests))",
+    "source code (file)",
+    "user data (comments)",
+    "work items",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (project)",
+    "source code (project)",
+    "source code (project)",
+    "source code",
+    "source code",
+    "bug report",
+    "source code",
+    "source code (function)",
+    "source code (function)",
+    "source code",
+    "source code (smart contract)",
+    "source code (multiple files)",
+    "source code (smart contracts)",
+    "source code",
+    "source code",
+    "source code",
+    "summary of code (training), query for search (testing)",
+    "source code",
+    "source code",
+    "source code (method)",
+    "source code",
+    "source code (smart contract)",
+    "source code (function)",
+    "source code",
+    "issues",
+    "user data",
+    "source code (files)",
+    "source code (method) (adjustable)",
+    "source code",
+    "source code",
+    "source code (function)",
+    "source code (function)",
+    "source code (local block)",
+    "source code",
+    "source code (source code of smart contracts)",
+    "source code (commit)",
+    "source code",
+    "source code",
+    "source code (function)",
+    "source code (source code of smart contracts)",
+    "source code",
+    "source code",
+    "source code (method)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (dangerous function calls are identified and program slicing is performed based on their parameters.)",
+    "source code (methods\n\nspecifically, for every method (core method),\nwhich is either vulnerable or not vulnerable,\na set of method _called by that method_\n(directly or indirectly) are also\ncollected in order to come up with the graph.)",
+    "source code (packages)",
+    "source code (function)",
+    "source code",
+    "source code",
+    "source code (whole program)",
+    "source code (method)",
+    "source code",
+    "source code",
+    "source code",
+    "source code (method)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (diff)",
+    "source code with docstring",
+    "source code (project)",
+    "source code (smart contracts)",
+    "source code (function/method) (first compiled to llvm ir)",
+    "source code",
+    "source code",
+    "source code (commit)",
+    "source code (php)",
+    "source code (smart contracts)",
+    "source code (javascript)",
+    "source code (method)",
+    "source code",
+    "source code (diff)",
+    "source code",
+    "source code (project)",
+    "source code (first compiled to ir)",
+    "source code (powershell)",
+    "source code",
+    "source code (function -- python)",
+    "source code (javascript)",
+    "source code (project)",
+    "source code (commit)",
+    "source code (first compiled to bytecode)",
+    "source code (first compiled to ir)",
+    "source code (smart contract)",
+    "source code",
+    "source code",
+    "source code",
+    "source code (incomplete snippet (while live editing))",
+    "source code",
+    "source code",
+    "source code (function)",
+    "source code (source code is first compiled to llvm ir)",
+    "source code (method)",
+    "source code",
+    "source code",
+    "source code (project)",
+    "source code (project)",
+    "source code (javascript)",
+    "source code (pairs of source code for training)",
+    "source code",
+    "source code",
+    "source code",
+    "source code (file)",
+    "source code (file)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "n/a (generated by model)",
+    "version history information",
+    "source code",
+    "source code (file (?))",
+    "source code (file (?))",
+    "source code (function)",
+    "source code",
+    "source code",
+    "source code",
+    "source code (function)",
+    "source code (project)",
+    "source code (project)",
+    "source code (javascript)",
+    "source code (javascript)",
+    "source code (some amount of edits must already have been applied)",
+    "source code (diff)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "version history information",
+    "source code (project)",
+    "source code",
+    "source code method",
+    "source code (module)",
+    "github data (projects, user data, topics (\"abilities\"))",
+    "stackoverflow data (questions, answers, users, tags (\"abilities\"))",
+    "source code",
+    "source code",
+    "source code (project)",
+    "source code (file)",
+    "source code",
+    "source code (module)",
+    "source code",
+    "source code (snippets)",
+    "n/a (generated by model)",
+    "source code",
+    "source code (diff)",
+    "source code (diff)",
+    "source code (file)",
+    "source code",
+    "source code (file)",
+    "source code",
+    "source code (method)",
+    "source code",
+    "source code",
+    "source code",
+    "source code (commit / diff + full files (old / new versions))",
+    "source code (file)",
+    "source code (file (i think))",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (smart contracts)",
+    "source code (project)",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code",
+    "source code (method)",
+    "source code (method (s) (possibly multiple at once))",
+    "source code (system)",
+    "source code (system)",
+    "source code",
+    "source code (project)",
+    "source code (compiled to llvm ir, which is used for graph construction)",
+    "source code (file)",
+    "source code (project)",
+    "source code",
+    "source code (program)",
+    "source code (program)",
+    "source code",
+    "source code",
+    "source code (method)",
+    "source code (method)",
+    "source code",
+    "source code",
+    "source code (function)",
+    "version history information",
+    "source code (project)",
+    "source code (project)",
+    "version history information",
+    "source code (class)",
+    "source code (repository)",
+    "repository",
+    "source code",
+    "source code (multiple files/project)",
+    "source code",
+    "source code",
+    "source code (function)",
+    "source code",
+    "source code (method)",
+    "source code (method)",
+    "source code",
+    "source code (methods)",
+    "source code",
+    "source code (method)",
+    "n/a (generated by model)",
+    "source code (project)",
+    "source code",
+    "source code (project)",
+    "source code (pairs of source code for training (diff))",
+    "github repositories",
+    "github user data",
+    "source code"
+  ],
+  "refinements": [
+    {
+      "action": "refine",
+      "old": "source code (function -- python)",
+      "new": "source code (function)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (function (c#))",
+      "new": "source code (function)"
+    },
+    {
+      "action": "refine",
+      "old": "arbitrary graphs (?)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "repositories (from github)",
+      "new": "repository"
+    },
+    {
+      "action": "refine",
+      "old": "repository (source files, directories, repository information)",
+      "new": "repository"
+    },
+    {
+      "action": "refine",
+      "old": "source code (arbitrary snippets)",
+      "new": "source code (snippets)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (comments removed, user defined names are normalised.\nprogram slicing based on sensitive apis, arrays,\nintegers, and pointers is performed.)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (dangerous function calls are identified and program slicing is performed based on their parameters.)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (file (?))",
+      "new": "source code (file)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (file (i think))",
+      "new": "source code (file)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (files/project)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (files)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (multiple files)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (packages)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "metadata (repository) (non-source code artefacts in a repository (e.g. readme file))",
+      "new": "repository"
+    },
+    {
+      "action": "refine",
+      "old": "source code (first compiled to bytecode)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (first compiled to ir)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (function)",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (function/method) (first compiled to llvm ir)",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (functions)",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (in this setting, the source code is obtained from decompiled byte code.)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (incomplete snippet (while live editing))",
+      "new": "source code (snippet)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (javascript)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (local block)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (method (s) (possibly multiple at once))",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (method level)",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (method)",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (method) (adjustable)",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (methods\n\nspecifically, for every method (core method),\nwhich is either vulnerable or not vulnerable,\na set of method _called by that method_\n(directly or indirectly) are also\ncollected in order to come up with the graph.)",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (methods)",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (multiple methods)",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (repository)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (php files)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (php)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (powershell)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (program)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (project)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (seemingly method level)",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (module)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (snippets from jupyter notebooks)",
+      "new": "source code (snippets)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (some amount of edits must already have been applied)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (snippet)",
+      "new": "source code (snippets)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (source code is first compiled to llvm ir)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (source code is first sliced based data (parameters)\npassed to \"dangerous\" functions.\nnames are standardised.)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (source code slice from function)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (whole program)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (system)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "source code method",
+      "new": "source code (function/method)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (source code taken from multiple source files.)",
+      "new": "source code (multiple files/project)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (smart contract)",
+      "new": "source code (smart contracts)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (smart contracts)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (commit)",
+      "new": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (changesets (for bug localisation))",
+      "new": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (also function focussed, but not exclusively)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code (path/commit) (patch is split up into pre- and post- change function. an ast is made for both.)",
+      "new": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (patch)",
+      "new": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (source code of smart contracts)",
+      "new": "source code (smart contracts)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (smart contracts)",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code with docstring",
+      "new": "source code"
+    },
+    {
+      "action": "refine",
+      "old": "source code changes",
+      "new": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (diff)",
+      "new": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "refine",
+      "old": "github repositories",
+      "new": "repository"
+    },
+    {
+      "action": "refine",
+      "old": "user data (comments)",
+      "new": "user data (e.g. github)"
+    },
+    {
+      "action": "refine",
+      "old": "user data",
+      "new": "user data (e.g. github)"
+    },
+    {
+      "action": "refine",
+      "old": "user profile data (bio information. e.g. name, description, contact information)",
+      "new": "user data (e.g. github)"
+    },
+    {
+      "action": "refine",
+      "old": "users (from github)",
+      "new": "user data (e.g. github)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (compiled to llvm ir, which is used for graph construction)",
+      "new": "source code"
+    },
+    {
+      "action": "split",
+      "old": "source code (commit / diff + full files (old / new versions))",
+      "new_1": "source code",
+      "new_2": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "split",
+      "old": "source code (constructed based on commits, but also uses full source code.)",
+      "new_1": "source code",
+      "new_2": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "refine",
+      "old": "github user data",
+      "new": "user data (e.g. github)"
+    },
+    {
+      "action": "refine",
+      "old": "n/a (generated by model)",
+      "new": "n/a"
+    },
+    {
+      "action": "refine",
+      "old": "summary of the source code (training) or query (working)",
+      "new": "summary of the source code (training)/query for search (working)"
+    },
+    {
+      "action": "refine",
+      "old": "summary of code (training), query for search (testing)",
+      "new": "summary of the source code (training)/query for search (working)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (repository (including pull requests))",
+      "new": "repository"
+    },
+    {
+      "action": "refine",
+      "old": "markdown text (natural language from markdown from the jupyter notebooks)",
+      "new": "markdown text (Jupyter Notebook)"
+    },
+    {
+      "action": "refine",
+      "old": "source code comments",
+      "new": "comment"
+    },
+    {
+      "action": "refine",
+      "old": "source code (snippets)",
+      "new": "source code"
+    },
+    {
+      "action": "split",
+      "old": "code clone source code (for a given pair of code clones, where one has been modified,\nthree artefacts are used:\n1) original code of the changed clone \n2) modified code of the changed clone\n3) code of the other clone)",
+      "new_1": "source code",
+      "new_2": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "split",
+      "old": "stackoverflow data (questions, answers, users, tags (\"abilities\"))",
+      "new_1": "questions/answers",
+      "new_2": "split[users, tags]"
+    },
+    {
+      "action": "split",
+      "old": "split[users, tags]",
+      "new_1": "user data (e.g. github)",
+      "new_2": "tags/topics"
+    },
+    {
+      "action": "split",
+      "old": "github data (projects, user data, topics (\"abilities\"))",
+      "new_1": "repository",
+      "new_2": "split[user, topics]"
+    },
+    {
+      "action": "split",
+      "old": "split[user, topics]",
+      "new_1": "user data (e.g. github)",
+      "new_2": "tags/topics"
+    },
+    {
+      "action": "refine",
+      "old": "topic (topic on github)",
+      "new": "tags/topics"
+    },
+    {
+      "action": "refine",
+      "old": "compiler feedback (line number i_err and error message m_err)",
+      "new": "compiler error information"
+    },
+    {
+      "action": "refine",
+      "old": "contributor data",
+      "new": "user data (e.g. github)"
+    },
+    {
+      "action": "refine",
+      "old": "bug report",
+      "new": "bug reports/issuses/work items"
+    },
+    {
+      "action": "refine",
+      "old": "issues",
+      "new": "bug reports/issuses/work items"
+    },
+    {
+      "action": "refine",
+      "old": "work items",
+      "new": "bug reports/issuses/work items"
+    },
+    {
+      "action": "split",
+      "old": "version history information",
+      "new_1": "user data (e.g. github)",
+      "new_2": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (pairs of source code for training (diff))",
+      "new": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (pairs of source code for training)",
+      "new": "source code pair (different languages)"
+    },
+    {
+      "action": "split",
+      "old": "source code (pairs of files; one old file and a revised version)",
+      "new_1": "source code (file)",
+      "new_2": "source code (commit/diff/changeset)"
+    },
+    {
+      "action": "refine",
+      "old": "n/a",
+      "new": "self-generated ast"
+    },
+    {
+      "action": "refine",
+      "old": "summary of the source code (training)/query for search (working)",
+      "new": "source code summary"
+    },
+    {
+      "action": "refine",
+      "old": "source code (class)",
+      "new": "source code (file)"
+    },
+    {
+      "action": "refine",
+      "old": "source code (function/method)",
+      "new": "source code (function/snippet)"
+    },
+    {
+      "action": "refine",
+      "old": "source code",
+      "new": "source code (function/snippet)"
+    }
+  ],
+  "locked": {}
+}

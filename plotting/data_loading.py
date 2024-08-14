@@ -22,13 +22,14 @@ import yaml
 
 import libedit
 
-SNOWBALLING_FILE = '../resolver/snowballing.json5'
-SCOPUS_FILE = '../resolver/initial-merged.csv'
-CROSSREF_DIRECTORY = '../resolver/cache'
+SNOWBALLING_FILE = '../data-extraction/auxiliary/snowballing.json'
+SCOPUS_FILE = '../data-extraction/auxiliary/scopus.csv'
+CROSSREF_DIRECTORY = '../data-extraction/auxiliary/crossref_data'
 DATA_DIRECTORIES = [
-    '../data-extraction',
-    '../data-extraction-2',
-    '../data-extraction-sb',
+    '../data-extraction/initial/form-1',
+    '../data-extraction/initial/form-2',
+    '../data-extraction/initial/form-3',
+    '../data-extraction/backward-snowballing/form-3',
 ]
 
 _scopus_data: dict[str, dict[str, str]] | None = None
@@ -84,14 +85,14 @@ def get_all_paper_ids() -> list[str]:
 class DataLoader(abc.ABC):
 
     _file_mapping = {
-        'domains': '../data-synthesis/projects/domain_project_2.json',
-        'artefacts': '../data-synthesis/projects/artefacts_project.json',
-        'models': '../data-synthesis/projects/model_project.json',
-        'graphs': '../data-synthesis/projects/graph_project.json',
-        'features': '../data-synthesis/projects/feature_project.json',
-        'models-cluster-type': '../data-synthesis/projects/model_cluster_granularity.json',
-        'models-graph-granularity': '../data-synthesis/projects/model_class_reg_granularity.json',
-        'models-rank': '../data-synthesis/projects/model_rank_project.json',
+        'domains': '../data-extraction/raw/refinement-steps/domains.json',
+        'artefacts': '../data-extraction/raw/refinement-steps/artefacts.json',
+        'models': '../data-extraction/raw/refinement-steps/models.json',
+        'graphs': '../data-extraction/raw/refinement-steps/graphs.json',
+        'features': '../data-extraction/raw/refinement-steps/features.json',
+        'models-cluster-type': '../data-extraction/raw/refinement-steps/clustering_models_granularity.json',
+        'models-graph-granularity': '../data-extraction/raw/refinement-steps/classification_models_granularity.json',
+        'models-rank': '../data-extraction/raw/refinement-steps/main_versus_auxiliary_models.json',
     }
 
     _cached_files = {}
