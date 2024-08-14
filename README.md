@@ -150,10 +150,12 @@ papers into the final tags as found in `data.json`.
 
 The tool can also be used to conveniently browse all the currently 
 assigned tags, and view the amount of entries with each tag assigned
-(**note: there is currently a bug in the tool which causes the exact
-counts in the tool to be incorrect. They are currently only suitable as 
-an estimate of the order of magnitude**). Furthermore, the tool can be 
-used to view the steps in which the raw data was refined to the final
+(**note: the numbers in the annotator do _not_ match up with 
+those in the paper because the paper shows number of studies,
+while the annotator shows number of times a tag is assigned.
+Hence, if a paper uses e.g. GCN multiple times, it is counted
+once in the paper but multiple times in the annotator**).
+Furthermore, the tool can be used to view the steps in which the raw data was refined to the final
 tags.
 
 The tool can be ran by installing the 
