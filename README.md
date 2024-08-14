@@ -6,9 +6,8 @@
   - [Directory Structure](#repository-directory-structure)
   - [File Descriptions](#overview-of-files)
 - [Runnable Scripts & Tools](#scripts--tools)
-  - [Clustering](#clustering)
+  - [Clustering](#clustering-)
   - [Annotator Tool](#annotator-tool)
-  - [libedit.py](#libedit-)
   - [plotting](#plotting)
 - [Data Description](#data-format)
   - [Raw Data](#raw-data)
@@ -95,7 +94,7 @@ A description of a selection of all files:
   - `./study-selection/clustering.py`
         <br/> The script used to perform the clustering of papers 
         based on title and abstract. See the 
-        [Relevant Part of the Scripts & Tools Section](#clustering) 
+        [Relevant Part of the Scripts & Tools Section](#clustering-) 
         for more details.
   - `./study-selection/final-papers.bib`
         <br/> bib file containing reference data for all papers in the 
@@ -108,10 +107,6 @@ A description of a selection of all files:
   - `./study-selection/backward-snowballing`
         <br/> Same as `./study-selection/initial/` but for snowballing.
 - `plotting/`
-  - `libedit.py`
-    <br/> Script for dealing with the refinement data. 
-    See the [Entry in the Tool Section](#libedit-) and 
-    the [Entry in the Data Section](#refinement) for more details.
   - `plotting.py` & `plot.sh`
     <br/>Used for generating the plots presented in the paper,
     as well as other additional plots.
@@ -119,7 +114,35 @@ A description of a selection of all files:
 
 ## Scripts & Tools
 
-### Clustering
+### Clustering 
+`clustering.py` is a utility script which can be used to reproduce the 
+clustering as described in the paper. 
+
+The dependencies of the script are listed in the file itself 
+in the `pyproject.toml` format, following the  guidelines
+for self-contained metadata in scripts. 
+The dependencies can be installed using a package manager 
+supporting such metadata in script, or by manually installing 
+via pip by running 
+
+```shell 
+pip install sentence-transformers pandas umap-learn hdbscan
+```
+
+The script was tested using Python 3.11.
+
+The script requires a CSV file as input, which must at least 
+contain two columns `Title` and `Abstract`. 
+Note that the Scopus `Export CSV` option is able to output such a CSV 
+for all studies found using a search query.
+
+The script can be ran using 
+
+```shell 
+python clustering.py -f path/to/csv/file
+```
+
+Optionally, a numerical seed can be specified using the `-s` flag.
 
 ### Annotator Tool
 The annotator tool was used to refine the raw data extracted from the 
@@ -129,7 +152,9 @@ The tool can also be used to conveniently browse all the currently
 assigned tags, and view the amount of entries with each tag assigned
 (**note: there is currently a bug in the tool which causes the exact
 counts in the tool to be incorrect. They are currently only suitable as 
-an estimate of the order of magnitude**).
+an estimate of the order of magnitude**). Furthermore, the tool can be 
+used to view the steps in which the raw data was refined to the final
+tags.
 
 The tool can be ran by installing the 
 [Rust programming language](https://www.rust-lang.org/) and running
@@ -139,16 +164,120 @@ In the tool, navigate to one of the files in the
 `data-extraction/raw/refinement-steps/` directory and open 
 it to view the tags.
 
-### Libedit 
-`libedit.py` is a small library to handle the refinement files at a more 
-fine-grained level.
-
 ### Plotting
+`plotting.py` contains code to generate all plots from the papers, and 
+also more additional plots. Its dependencies can be installed 
+using the following command:
+
+```shell 
+pip install matplotlib seaborn upsetplot alive_progress
+```
+
+The script has two types of arguments. 
+The first one is a positional parameter indicating what to plot,
+which must be one of the following:
+`domains`, `artefacts`, `graphs`, `features`, `models`
+
+Furthermore, several thresholds are used to determine what
+to plot. Specifically, for `graphs`, `features`, and `models`,
+techniques occurring in few studies are not plotted. 
+The thresholds can be set using the command line. Run
+
+```shell 
+python plotting.py -h 
+```
+
+to see the complete list of available options.
+
+`plot.sh` is a convenience scripts which generates the plots with the same 
+settings as done in the paper. It only takes the aforementioned
+positional argument as parameter. Alternatively, `all` can be passed 
+as parameter to the script to generate all plots.
 
 ## Data Format
 
 ### Raw Data
+The raw data extracted from the papers is collected into yaml files 
+in the `data-extraction/raw/{backward-snowballing,initial}` directories.
+The yaml files roughly follow the structure of the data extraction
+form as presented in the paper.
+
+There were three different iterations of the data extraction form.
+What follows is a brief description:
+
+1. The first data version of the form also collected information about
+    hyperparameters, datasets used, and evaluation metrics.
+2. The second version of the form contains the fields as described in 
+    the paper, but instead of a list of `architecture attributes`,
+    it contains a paragraph of text describing the machine learning model
+3. The form as found in the paper, where `architecture attributes` is a 
+    list of properties of a machine learning model.
 
 ### Refinement
+The raw data was later processed into large overarching categories.
+The exact process is documented in the files in the 
+`data-extraction/raw/refinements-steps` directory.
+
+Every file has the following basic format:
+
+```json 
+{
+  "raw": [],
+  "refinements": []
+}
+```
+
+Here, `raw` is a list of (a subset of) the raw data extracted from 
+the papers. `refinements` is a list of refinement steps. 
+There are three different types of refinement steps:
+
+#### refine
+The `refine` step is a 1-to-1 modification of a tag. An example would be 
+the generalisation of the feature `node depth in ast` to 
+`node positional information in ast`. 
+
+A `refine` step is documented in the following format:
+
+```json 
+{
+  "action": "refine",
+  "old": "old tag",
+  "new": "new tag"
+}
+```
+
+#### split 
+The `split` operation is used to split a single tag into 2 different 
+tags. It is documented in the following format:
+
+```json 
+{
+  "action": "split",
+  "old": "old tag",
+  "new_1": "new tag 1",
+  "new_2": "new tag 2"
+}
+```
+
+#### n-ary split 
+The `n-ary-split` operation is used to split a single tag into an arbitrary 
+number of new tags. It is documented in the following format:
+
+```json 
+{
+  "action": "n-ary-split",
+  "old": "old tag",
+  "new": [
+    "list",
+    "of",
+    "new",
+    "tags"
+  ]
+}
+```
+
+The `refinements` list in the refinements file is a list of such 
+refinement actions, which are supposed to be applied sequentially 
+to the items in the `raw` list in order to obtain the final list of tags.
 
 ### data.json
