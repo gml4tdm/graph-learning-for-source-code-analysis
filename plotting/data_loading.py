@@ -22,8 +22,8 @@ import yaml
 
 import libedit
 
-SNOWBALLING_FILE = '../data-extraction/auxiliary/snowballing.json'
-SCOPUS_FILE = '../data-extraction/auxiliary/scopus.csv'
+SNOWBALLING_FILE = '../data-extraction/raw/auxiliary/snowballing.json'
+SCOPUS_FILE = '../data-extraction/raw/auxiliary/scopus.csv'
 CROSSREF_DIRECTORY = '../data-extraction/auxiliary/crossref_data'
 DATA_DIRECTORIES = [
     '../data-extraction/initial/form-1',

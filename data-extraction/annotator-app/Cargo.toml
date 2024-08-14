@@ -1,0 +1,24 @@
+[package]
+name = "annotator-app"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["backend-crossterm"]
+backend-crossterm = []
+backend-termion = []
+backend-termwiz = []
+backend-test = []
+
+[dependencies]
+anyhow = "1.0.86"
+cfg-if = "1.0.0"
+
+arboard = "3.4.0"
+
+ratatui = { version = "0.27.0", features = ["unstable-widget-ref"] }
+
+serde = {version = "1.0.204", features = ["derive"]}
+serde_json = "1.0.120"
+
+topological-sort = "0.2.2"
