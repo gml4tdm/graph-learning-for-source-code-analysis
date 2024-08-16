@@ -217,7 +217,18 @@ class DataLoader(abc.ABC):
 
     @functools.cached_property
     def domains(self) -> list[str]:
-        return self._resolve_property('domains')
+        return list(set(self._resolve_property('domains')))
+
+    @functools.cached_property
+    def detailed_domains(self) -> list[str]:
+        domains = self.domains
+        if 'misc' in domains:
+            domains = [x for x in domains if x != 'misc']
+            rules = self._resolve_rules('domains')
+            resolved_key = self._resolve_key('domains')
+            for m in libedit.immediate_history(resolved_key, 'misc', rules['refinements']):
+                domains.append(f'misc ({m})')
+        return list(set(domains))
 
     @functools.cached_property
     def artefacts(self) -> list[str]:

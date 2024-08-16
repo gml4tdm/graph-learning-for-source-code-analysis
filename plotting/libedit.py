@@ -55,6 +55,45 @@ def resolve_items(items, refinements):
                    check_rule_applicability=False)
 
 
+def resolve_one_with_history(item, refinements):
+    current = [item]
+    history = [current.copy()]
+    for rule in refinements:
+        match rule['action']:
+            case 'refine':
+                current, count = _transform(current, rule['old'], rule['new'], do_raise=False)
+            case 'split':
+                current, count = _transform(current, rule['old'], rule['new_1'], rule['new_2'], do_raise=False)
+            case 'n-ary-split':
+                current, count = _transform(current, rule['old'], *rule['new'], do_raise=False)
+            case _ as x:
+                raise NotImplementedError(x)
+        history.append(current.copy())
+    return history
+
+
+def immediate_history(base_key, target_key, refinements):
+    current = [base_key]
+    result = []
+    for rule in refinements:
+        match rule['action']:
+            case 'refine':
+                current, count = _transform(current, rule['old'], rule['new'], do_raise=False)
+                if count > 0 and rule['new'] == target_key:
+                    result.append(rule['old'])
+            case 'split':
+                current, count = _transform(current, rule['old'], rule['new_1'], rule['new_2'], do_raise=False)
+                if count > 0 and (rule['new_1'] == target_key or rule['new_2'] == target_key):
+                    result.append(rule['old'])
+            case 'n-ary-split':
+                current, count = _transform(current, rule['old'], *rule['new'], do_raise=False)
+                if count > 0 and target_key in rule['new']:
+                    result.append(rule['old'])
+            case _ as x:
+                raise NotImplementedError(x)
+    return result
+
+
 def resolve_while(current, refinements, predicate):
     result = []
     for rule in refinements:

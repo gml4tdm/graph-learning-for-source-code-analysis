@@ -1,5 +1,8 @@
 # A Systematic Mapping Study on Graph Machine Learning for Static Source Code Analysis
 
+**TL;DR: all data can be found in `./data-extraction/data.json`, 
+and the description of its schema can be found [here](#datajson).**
+
 ## Content
 
 - [Repository Files](#directory-structure-)
@@ -283,3 +286,129 @@ refinement actions, which are supposed to be applied sequentially
 to the items in the `raw` list in order to obtain the final list of tags.
 
 ### data.json
+This file contains all extracted data from all the 
+papers after applying the refining steps. 
+It also contains the bibliographical data for 
+all the included papers. 
+
+The top-level entry in the file is an object 
+mapping the IDs used for the different papers to 
+the data for said paper. 
+A typical entry for a single paper 
+has the following format:
+
+```json 
+{
+  "bibtex": {
+    "type": "",
+    "info": {}
+  },
+  "domains": ["list of strings"],
+  "artefacts": ["list of strings"],
+  "graphs": {
+    "graph-id": {
+      "vertices": [
+        {
+          "value": "vertex type",
+          "details": "Special details regarding the vertex type",
+          "modifiers": "Modifiers (sub-typing)"
+        }
+      ],
+      "edges": [
+        {
+          "value": "edgex type",
+          "details": "Special details regarding the edge type",
+          "modifiers": "Modifiers (sub-typing)"
+        }
+      ],
+      "name": "name of the graph (may be `none`)"
+    }
+  },
+  "features": {
+    "graph-id": ["list of strings"]
+  },
+  "models": {
+    "model-id": {
+      "tags": ["list of strings"],
+      "classification-regression-granularity": "",
+      "clustering granularity": "",
+      "usage-details": ""
+    }
+  }
+}
+```
+
+#### `bibtex`
+Contains the bibliographical information for the paper, 
+as returned from the [Crossref](https://www.crossref.org/) API.
+The `type` entry denotes the type (`article`, `inproceedings` etc.)
+The `info` field contains all information which is 
+contained in the bibtex entry returned from the API.
+
+#### `domains`
+A list of domains the paper belongs to. For studies belonging to
+the `misc` domain, the specific sub-domain is inserted in brackets,
+e.g. `"misc (code smell detection)"`
+
+#### `artefacts`
+List of all the artefacts used in the study.
+
+#### `graphs`
+Collection of graphs used in the study. The top-level entry maps
+identifiers (assigned during the extraction process) to the 
+information for every graph. For every graph, we have information 
+regarding its vertices, edges, and optionally its name. 
+
+The name of the graph is assigned by the researchers during the 
+extraction process and is mostly a mnemonic usable for 
+quick grouping. The most informative information 
+comes in the form of the vertices and edges.
+
+For every vertex and edge (type) we record three types of data:
+value, details, and modifies. The `value` is the base tag assigned 
+to the vertex or edge type. The `details`  tag gives more information
+for cases where this might be necessary for understanding.
+Finally, `modifiers` details how a vertex or edge may differ 
+from other types with the same `value` (e.g. `modifiers` can be seen 
+as a sub-type specifier)
+
+#### `features`
+Collection of features used in the study. The top-level entry maps 
+identifiers (corresponding to graph identifiers) to the 
+features used per graph. Non-graph features are associated with all 
+graphs. Features are given as a list of assigned tags.
+
+Different types of features can be identified through their 
+prefixed. For instance, node features are prefixed with 
+`node feature:` and non-graph features with `other:`.
+
+#### `models`
+Collection of models used in the study. The top-level entry maps 
+identifiers (assigned during the extraction process) to the 
+information for every model. 
+
+For every model, we have a number of different attributes.
+The `tags` attribute contains tags describing the model itself.
+Examples include its type (e.g. RNN or GNN), 
+the type of task it is used for (e.g. classification/regression),
+and the techniques used (e.g. Graph Attention Network).
+
+The `classification-regression-granularity` field is `null` for 
+all models that do not perform classification or regression.
+For classification or regression models, it contains the level
+of granularity at which the model propagates,
+which is commonly either `graph` (graph classification)
+or `node` (node classification).
+
+`clustering-granularity` is only non-`null` for clustering 
+models. For such models, it denotes at which level of granularity 
+the model operates. Usually this is `node` to denote models 
+which cluster nodes in a single graph together into groups.
+The label `graph` denotes models which cluster multiple graphs 
+together into clusters of graphs.
+
+`usage-details` denotes how the model is used. 
+It mainly contains two bits of information: 
+1) Does the model take the graph features or some other features as input.
+2) Does the model perform the main classification task, or it is an 
+    auxiliary model which is used for e.g. embedding.
