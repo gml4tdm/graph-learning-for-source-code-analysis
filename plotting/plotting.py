@@ -788,6 +788,7 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
                 assert len(type_info) == 1
                 attrs = model.get_attributes('misc: model')
                 has_adaboost = 'meta: adaboost' in attrs
+                uses_kernel = bool(model.get_attributes('misc: kernel'))
                 if has_adaboost:
                     attrs.remove('meta: adaboost')
                 for key in attrs:
@@ -797,6 +798,11 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
                         key = key.replace('ranking:', 'other:')
                     if has_adaboost:
                         unique.add(f'{key} (with adaboost)')
+                    elif key.endswith('svm'):
+                        if uses_kernel:
+                            unique.add(f'{key}: graph kernel')
+                        else:
+                            unique.add(f'{key}: regular kernel')
                     else:
                         unique.add(key)
                     if model.cluster is not None:
@@ -819,8 +825,17 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
         current[parts[-1]] = value
     with adjusted_font_scale(1):
         with plot_utils.figure('models/classic-models.png', a4=True, height_size_hint=0.53) as (fig, ax):
-            sb = plot_utils.Sunburst(radius=1, x_to_y_axis_ratio=1 / 0.53, y_stretch=1.1)
-            sb.plot(models_as_tree, ax)
+            align = {
+                'supervised': {
+                    'random forest': {
+                        'horizontal': 'right',
+                        'vertical': 'top',
+                        'raise-by': 0
+                    }
+                }
+            }
+            sb = plot_utils.Sunburst(radius=1, x_to_y_axis_ratio=1 / 0.53, y_stretch=0.85)
+            sb.plot(models_as_tree, ax, alignment_override=align)
 
 
 @utils.easy_log('Plotting Pooling By Type')
