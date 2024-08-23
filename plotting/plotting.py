@@ -625,6 +625,16 @@ def plot_models_by_type_per_domain(args, data: list[data_loading.DataLoader]):
 @utils.easy_log('Plotting models by type as upset plot')
 def plot_models_by_type_as_upset(args, data: list[data_loading.DataLoader]):
     models = [m.get_attributes('base-type') for study in data for m in study.models]
+    for m in models:
+        if 'ensemble' in m:
+            m.remove('ensemble')
+        word2vec = False
+        for x in ['cbow', 'skipgram']:
+            if x in m:
+                word2vec = True
+                m.remove(x)
+        if word2vec:
+            m.append('cbow/skipgram')
     df = upsetplot.from_memberships(models)
     with plot_utils.figure('models/models-by-type-as-upset.png',
                            nrows=2,
