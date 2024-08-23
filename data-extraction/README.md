@@ -7,6 +7,12 @@ Specifically, we applied the following further simplifications:
 
 ### Model Tags 
 
+``` 
+base-type: ensemble -> <removed>
+base-type: cbow -> base-type: cbow/skipgram
+base-type: skipgram -> base-type: cbow/skipgram
+```
+
 ```
 gnn-functionality: gnn: custom edge-type aware message passing scheme --> gnn-functionality: gnn: custom GNN layer
 gnn-functionality: gnn: custom message passing scheme --> gnn-functionality: gnn: custom GNN layer
