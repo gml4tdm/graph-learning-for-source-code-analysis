@@ -1,0 +1,23 @@
+Title,Full Reference
+weka: a machine learning workbench,"Holmes G., Donkin A., Witten I.H., Weka: A machine learning workbench, Proceedings of ANZIIS'94-Australian New Zealnd Intelligent Information Systems Conference, pp. 357-361, (1994)"
+svf: interprocedural static value-flow analysis in llvm,"Sui Y., Xue J., SVF: Interprocedural static value-flow analysis in LLVM, Proc. 25th Int. Conf. Compiler Construction, pp. 265-266, (2016)"
+compilers: principles,"Aho A.V., Sethi R., Ullman J.D., Compilers: Principles, Techniques, and Tools, Addison-Wesley series in computer science, (1986)"
+joern–the bug hunter's workbench,"Yamaguchi F., Schmidt N., Effendi D.B., Joern–the bug hunter's workbench, (2014)"
+clang: a language front-end and tooling infrastructure,Clang: A Language Front-end and Tooling Infrastructure
+z3: an efficient smt solver,"De Moura L., Bjorner N., Z3: An Efficient SMT Solver, Proceedings of the Theory and Practice of Software, 14th International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS?08/ETAPS?08, pp. 337-340, (2008)"
+a tool box for compiler construction,"Grosch J., Emmelmann H., A tool box for compiler construction, Proc. 3rd Int. Workshop Compiler Compil. (CC), pp. 106-116, (1991)"
+the weka workbench,"Eibe F., Hall M.A., Witten I.H., The WEKA Workbench, (2016)"
+{tvm}: an automated end-to-end optimizing compiler for deep learning,"Chen T., Moreau T., Jiang Z., Zheng L., Yan E., Shen H., Cowan M., Wang L., Hu Y., Ceze L., Et al., {tvm}: An automated end-to-end optimizing compiler for deep learning, 13th {USENIX} Symposium on Operating Systems Design and Implementation ({OSDI} 18), pp. 578-594, (2018)"
+compilers,""
+the llvm compiler infrastructure,"The LLVM Compiler Infrastructure, (2020)"
+introduction to compiler design.,"Mogensen T.A., Introduction to Compiler Design., (2017)"
+the rose sourceto-source compiler infrastructure,"Quinlan D., Liao C., The rose sourceto-source compiler infrastructure, Cetus Users and Compiler Infrastructure Workshop, (2011)"
+advanced compiler design implementation,"Muchnick S., Et al., Advanced compiler design implementation, (1997)"
+compiler fuzzing through deep learning,"Cummins C., Petoumenos P., Murray A., Leather H., Compiler fuzzing through deep learning, Proceedings of the 27th ACM SIGSOFT International Symposium on Software Testing and Analysis, pp. 95-105, (2018)"
+milepost gcc: machine learning enabled self-tuning compiler,"Fursin G., Kashnikov Y., Memon A.W., Chamski Z., Temam O., Namolaru M., Yom-Tov E., Mendelson B., Zaks A., Courtois E., Et al., Milepost GCC: Machine learning enabled self-tuning compiler, International Journal of Parallel Programming, 39, 3, pp. 296-327, (2011)"
+the llvm compiler infrastructure project,The LLVM Compiler Infrastructure Project
+llvm: a collection of modular and reusable compiler and toolchain technologies,LLVM: A Collection of Modular and Reusable Compiler and Toolchain Technologies
+petabricks: a language and compiler for algorithmic choice,"Ansel J., Chan C., Lok Wong Y., Olszewski M., Zhao Q., Edelman A., Amarasinghe S., Petabricks: A language and compiler for algorithmic choice, ACM Sigplan Notices, 44, 6, pp. 38-49, (2009)"
+machine learning in compiler optimization,"Wang Z., Oaazboyle M., Machine learning in compiler optimization, Proceedings of the IEEE, 106, 11, pp. 1879-1901, (2018)"
+a survey on compiler autotuning using machine learning,"Ashouri A.H., Killian W., Cavazos J., Palermo G., Silvano C., A survey on compiler autotuning using machine learning, ACM Computing Surveys (CSUR), 51, 5, pp. 1-42, (2018)"
+a retargetable c compiler: design and implementation,"Fraser C. W., Hanson D. R., A retargetable C compiler: design and implementation, (1995)"

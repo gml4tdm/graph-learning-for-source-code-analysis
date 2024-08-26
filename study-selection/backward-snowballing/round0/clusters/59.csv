@@ -1,0 +1,11 @@
+Title,Full Reference
+php vulnerability test suite generator,"PHP Vulnerability Test Suite Generator, (2015)"
+wasmati: an efficient static vulnerability scanner for webassembly,"Brito T., Lopes P., Santos N., Santos J.F., Wasmati: an efficient static vulnerability scanner for WebAssembly, Comput. Secur., 118, (2022)"
+saferphp: finding semantic vulnerabilities in php applications,"Son S., Shmatikov V., SAFERPHP: Finding semantic vulnerabilities in PHP applications, Proceedings of the ACM SIGPLAN 6th Workshop on Programming Languages and Analysis for Security, pp. 1-13"
+rips-a static source code analyser for vulnerabilities in php scripts,"Dahse J., Schwenk J., Rips-a static source code analyser for vulnerabilities in php scripts, Seminar Work (Seminer Çalismasi), (2010)"
+a new framework of security vulnerabilities detection in php web application,"Zhao J., Gong R., A new framework of security vulnerabilities detection in PHP web application, 2015 9th International Conference on Innovative Mobile and Internet Services in Ubiquitous Computing, pp. 271-276, (2015)"
+pixy: a static analysis tool for detecting web application vulnerabilities,"Jovanovic N., Kruegel C., Kirda E., Pixy: A static analysis tool for detecting web application vulnerabilities, 2006 IEEE Symposium on Security and Privacy (S P’06), (2006)"
+its4: a static vulnerability scanner for c and c++ code,"Viega J., Bloch J.T., Kohno Y., McGraw G., ITS4: A static vulnerability scanner for C and C++ code, Proceedings 16th Annual Computer Security Applications Conference (ACSAC?00, pp. 257-267, (2000)"
+php vulnerability test suite,"Stivalet B.C., PHP Vulnerability Test Suite, (2015)"
+phpsafe: a security analysis tool for oop web application plugins,"Nunes P.J.C., Fonseca J., Vieira M., phpSAFE: A security analysis tool for OOP web application plugins, Proceedings of the 2015 45th Annual IEEE/IFIP International Conference on Dependable Systems and Networks, pp. 299-306"
+efficient and flexible discovery of php application vulnerabilities,"Backes M., Rieck K., Skoruppa M., Stock B., Yamaguchi F., Efficient and flexible discovery of PHP application vulnerabilities, IEEE European Symposium on Security and Privacy, pp. 334-349, (2017)"
