@@ -963,10 +963,10 @@
       "general graph learning framework for code"
     ],
     "artefacts": [
-      "source code (multiple files/project)",
+      "tags/topics",
       "user data (e.g. github)",
-      "repository",
-      "tags/topics"
+      "source code (multiple files/project)",
+      "repository"
     ],
     "graphs": {
       "rep-hg": {
@@ -7926,10 +7926,10 @@
       "misc (developer recommendation)"
     ],
     "artefacts": [
+      "source code (file)",
       "bug reports/issuses/work items",
       "user data (e.g. github)",
-      "repository",
-      "source code (file)"
+      "repository"
     ],
     "graphs": {
       "socio-technical-graph": {
@@ -8540,8 +8540,8 @@
       "defects & vulnerabilities"
     ],
     "artefacts": [
-      "source code (multiple files/project)",
-      "source code (file)"
+      "source code (file)",
+      "source code (multiple files/project)"
     ],
     "graphs": {
       "ast-within": {
@@ -8751,8 +8751,8 @@
       "defects & vulnerabilities"
     ],
     "artefacts": [
-      "source code (multiple files/project)",
-      "bug reports/issuses/work items"
+      "bug reports/issuses/work items",
+      "source code (multiple files/project)"
     ],
     "graphs": {
       "cfg": {
@@ -8819,8 +8819,8 @@
       "defects & vulnerabilities"
     ],
     "artefacts": [
-      "source code (multiple files/project)",
-      "source code (file)"
+      "source code (file)",
+      "source code (multiple files/project)"
     ],
     "graphs": {
       "ast-within": {
@@ -9304,8 +9304,8 @@
       "defects & vulnerabilities"
     ],
     "artefacts": [
-      "source code (function/snippet)",
-      "compiler error information"
+      "compiler error information",
+      "source code (function/snippet)"
     ],
     "graphs": {
       "program-feedback-graph": {
@@ -10638,8 +10638,8 @@
       "misc (automated code review (accept/reject))"
     ],
     "artefacts": [
-      "source code (commit/diff/changeset)",
-      "source code (file)"
+      "source code (file)",
+      "source code (commit/diff/changeset)"
     ],
     "graphs": {
       "graph": {
@@ -11400,9 +11400,9 @@
           "base-type: gnn",
           "mode: encoder-decoder",
           "base-type: transformer",
-          "gnn-functionality: gnn: direct sum of node embeddings (incl. self) passed through fnn",
           "misc: transformer: transformer encoder [transformer-xl]",
-          "misc: misc: node embeddings into transformer"
+          "misc: misc: node embeddings into transformer",
+          "gnn-functionality: gnn: convgnn (direct sum of node embeddings (incl. self) passed through fnn)"
         ],
         "classification-regression-granularity": null,
         "clustering-granularity": null,
@@ -12469,8 +12469,8 @@
       "program semantics"
     ],
     "artefacts": [
-      "markdown text (Jupyter Notebook)",
-      "source code (function/snippet)"
+      "source code (function/snippet)",
+      "markdown text (Jupyter Notebook)"
     ],
     "graphs": {
       "ast": {
@@ -17869,6 +17869,283 @@
       }
     }
   },
+  "269": {
+    "bibtex": {
+      "type": "article",
+      "info": {
+        "title": "Fast Library Recommendation in Software Dependency Graphs with Symmetric Partially Absorbing Random Walks",
+        "volume": "14",
+        "ISSN": "1999-5903",
+        "url": "http://dx.doi.org/10.3390/fi14050124",
+        "DOI": "10.3390/fi14050124",
+        "number": "5",
+        "journal": "Future Internet",
+        "publisher": "MDPI AG",
+        "author": "Krasanakis, Emmanouil and Symeonidis, Andreas",
+        "year": "2022",
+        "month": "apr",
+        "pages": "124"
+      }
+    },
+    "domains": [
+      "misc (library recommendation)"
+    ],
+    "artefacts": [
+      "dependency files"
+    ],
+    "graphs": {
+      "graph": {
+        "vertices": [
+          {
+            "value": "library",
+            "details": [],
+            "modifiers": []
+          }
+        ],
+        "edges": [
+          {
+            "value": "library dependency",
+            "details": [],
+            "modifiers": []
+          }
+        ],
+        "name": "none"
+      }
+    },
+    "features": {
+      "graph": [
+        "connectivity: adjacency matrix"
+      ]
+    },
+    "models": {
+      "model": {
+        "tags": [
+          "base-type: other",
+          "mode: ranking",
+          "misc: model: ranking: graph filter with symmetric absorbing random walks"
+        ],
+        "classification-regression-granularity": null,
+        "clustering-granularity": null,
+        "usage-details": "main/graph-connectivity"
+      }
+    }
+  },
+  "270": {
+    "bibtex": {
+      "type": "article",
+      "info": {
+        "title": "Leveraging structural properties of source code graphs for just-in-time bug prediction",
+        "volume": "29",
+        "ISSN": "1573-7535",
+        "url": "http://dx.doi.org/10.1007/s10515-022-00326-0",
+        "DOI": "10.1007/s10515-022-00326-0",
+        "number": "1",
+        "journal": "Automated Software Engineering",
+        "publisher": "Springer Science and Business Media LLC",
+        "author": "Nadim, Md and Mondal, Debajyoti and Roy, Chanchal K.",
+        "year": "2022",
+        "month": "mar"
+      }
+    },
+    "domains": [
+      "defects & vulnerabilities"
+    ],
+    "artefacts": [
+      "source code (commit/diff/changeset)"
+    ],
+    "graphs": {
+      "graph": {
+        "vertices": [
+          {
+            "value": "ast node type",
+            "details": [
+              "node per node type"
+            ],
+            "modifiers": [
+              "srcML"
+            ]
+          }
+        ],
+        "edges": [
+          {
+            "value": "ast",
+            "details": [],
+            "modifiers": [
+              "srcML"
+            ]
+          }
+        ],
+        "name": "none"
+      }
+    },
+    "features": {
+      "graph": [
+        "graph feature vector: graph level network metrics"
+      ],
+      "n/a": [
+        "other: software metrics"
+      ]
+    },
+    "models": {
+      "rf": {
+        "tags": [
+          "mode: classification-regression",
+          "base-type: classic",
+          "misc: model: supervised: random forest"
+        ],
+        "classification-regression-granularity": null,
+        "clustering-granularity": null,
+        "usage-details": null
+      },
+      "knn": {
+        "tags": [
+          "mode: classification-regression",
+          "base-type: classic",
+          "misc: model: supervised: knn"
+        ],
+        "classification-regression-granularity": null,
+        "clustering-granularity": null,
+        "usage-details": null
+      },
+      "lr": {
+        "tags": [
+          "mode: classification-regression",
+          "base-type: classic",
+          "misc: model: supervised: logistic regression"
+        ],
+        "classification-regression-granularity": null,
+        "clustering-granularity": null,
+        "usage-details": null
+      }
+    }
+  },
+  "271": {
+    "bibtex": {
+      "type": "inbook",
+      "info": {
+        "title": "Code Summarization Through Learning Linearized AST Paths with\u00a0Transformer",
+        "ISBN": "9783031207389",
+        "ISSN": "2367-4520",
+        "url": "http://dx.doi.org/10.1007/978-3-031-20738-9_7",
+        "DOI": "10.1007/978-3-031-20738-9_7",
+        "booktitle": "Advances in Natural Computation, Fuzzy Systems and Knowledge Discovery",
+        "publisher": "Springer International Publishing",
+        "author": "Tian, Zhenzhou and Zhang, Cuiping and Tian, Binhui",
+        "year": "2023",
+        "pages": "53\u201360"
+      }
+    },
+    "domains": [
+      "code summarisation"
+    ],
+    "artefacts": [
+      "source code (function/snippet)"
+    ],
+    "graphs": {
+      "ast": {
+        "vertices": [
+          {
+            "value": "ast",
+            "details": [],
+            "modifiers": []
+          }
+        ],
+        "edges": [
+          {
+            "value": "ast",
+            "details": [],
+            "modifiers": []
+          }
+        ],
+        "name": "ast"
+      }
+    },
+    "features": {
+      "ast": [
+        "sequence: linearised ast",
+        "node feature (terminal): node code tokens (n/a)",
+        "node feature (internal): node type (n/a)"
+      ]
+    },
+    "models": {
+      "model": {
+        "tags": [
+          "mode: encoder-decoder",
+          "base-type: transformer"
+        ],
+        "classification-regression-granularity": null,
+        "clustering-granularity": null,
+        "usage-details": "main/graph-as-sequence"
+      }
+    }
+  },
+  "272": {
+    "bibtex": {
+      "type": "inproceedings",
+      "info": {
+        "series": "ICPC \u201920",
+        "title": "Improved Code Summarization via a Graph Neural Network",
+        "url": "http://dx.doi.org/10.1145/3387904.3389268",
+        "DOI": "10.1145/3387904.3389268",
+        "booktitle": "Proceedings of the 28th International Conference on Program Comprehension",
+        "publisher": "ACM",
+        "author": "LeClair, Alexander and Haque, Sakib and Wu, Lingfei and McMillan, Collin",
+        "year": "2020",
+        "month": "jul",
+        "pages": "184\u2013195",
+        "collection": "ICPC \u201920"
+      }
+    },
+    "domains": [
+      "code summarisation"
+    ],
+    "artefacts": [
+      "source code (function/snippet)"
+    ],
+    "graphs": {
+      "ast": {
+        "vertices": [
+          {
+            "value": "ast",
+            "details": [],
+            "modifiers": []
+          }
+        ],
+        "edges": [
+          {
+            "value": "ast",
+            "details": [],
+            "modifiers": []
+          }
+        ],
+        "name": "ast"
+      }
+    },
+    "features": {
+      "ast": [
+        "graph: graph (uses node features)",
+        "unclear"
+      ],
+      "n/a": [
+        "other: source code tokens (embedding layer)"
+      ]
+    },
+    "models": {
+      "model": {
+        "tags": [
+          "base-type: rnn",
+          "base-type: gnn",
+          "mode: encoder-decoder",
+          "misc: attention: attention",
+          "misc: rnn: gru",
+          "gnn-functionality: gnn: convgnn (direct sum of node embeddings (incl. self) passed through fnn)"
+        ],
+        "classification-regression-granularity": null,
+        "clustering-granularity": null,
+        "usage-details": "main/graph"
+      }
+    }
+  },
   "sb-001": {
     "bibtex": {
       "type": "inproceedings",
@@ -19303,8 +19580,8 @@
       }
     },
     "domains": [
-      "misc (variable usage prediction)",
-      "program element name prediction"
+      "program element name prediction",
+      "misc (variable usage prediction)"
     ],
     "artefacts": [
       "source code (function/snippet)"
@@ -21941,8 +22218,8 @@
       "defects & vulnerabilities"
     ],
     "artefacts": [
-      "source code (commit/diff/changeset)",
-      "user data (e.g. github)"
+      "user data (e.g. github)",
+      "source code (commit/diff/changeset)"
     ],
     "graphs": {
       "graph": {
@@ -22024,8 +22301,8 @@
     ],
     "artefacts": [
       "source code (multiple files/project)",
-      "source code (commit/diff/changeset)",
-      "user data (e.g. github)"
+      "user data (e.g. github)",
+      "source code (commit/diff/changeset)"
     ],
     "graphs": {
       "socio-technical-network": {
@@ -22216,8 +22493,8 @@
     ],
     "artefacts": [
       "source code (multiple files/project)",
-      "source code (commit/diff/changeset)",
-      "user data (e.g. github)"
+      "user data (e.g. github)",
+      "source code (commit/diff/changeset)"
     ],
     "graphs": {
       "tri-network": {
@@ -23517,8 +23794,8 @@
       "defects & vulnerabilities"
     ],
     "artefacts": [
-      "source code (multiple files/project)",
-      "source code (file)"
+      "source code (file)",
+      "source code (multiple files/project)"
     ],
     "graphs": {
       "ast": {
@@ -24377,8 +24654,8 @@
       "defects & vulnerabilities"
     ],
     "artefacts": [
-      "self-generated ast",
-      "source code (function/snippet)"
+      "source code (function/snippet)",
+      "self-generated ast"
     ],
     "graphs": {
       "graph": {
