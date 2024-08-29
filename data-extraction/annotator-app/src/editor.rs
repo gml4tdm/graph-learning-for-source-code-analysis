@@ -6,7 +6,7 @@ use ratatui::layout::{Alignment, Constraint, Direction, Layout, Rect};
 use ratatui::prelude::{Line, Stylize};
 use ratatui::style::{Color, Style};
 use ratatui::symbols::border;
-use ratatui::text::Span;
+use ratatui::text::{Span, Text};
 use ratatui::widgets::{Block, Clear, Paragraph, Row, StatefulWidget, StatefulWidgetRef, Table, TableState, Widget};
 use ratatui::widgets::block::{Position, Title};
 use crate::counter::Counter;
@@ -332,12 +332,16 @@ fn draw_table(area: Rect,
                     //(false, false) => Style::new().fg(Color::White).bg(Color::LightBlue),
                     //(true, false) => Style::new().fg(Color::White).bg(Color::Blue),
                 };
+                // The larger height mostly just renders incorrectly,
+                // but it is convenient for the re-tagging
+                let key = Text::raw(format!("{key}"));
+                let h = key.height().min(area.height as usize);
                 Row::new(vec![
-                    Span::raw(format!("{}.", index + 1)),
-                    Span::raw(key),
-                    Span::raw(format!("{value}")),
-                    Span::raw(lock)
-                ]).style(row_style)
+                    Text::raw(format!("{}.", index + 1)),
+                    key,
+                    Text::raw(format!("{value}")),
+                    Text::raw(lock)
+                ]).style(row_style).height(h as u16)
             }),
         [
             Constraint::Length(5),
