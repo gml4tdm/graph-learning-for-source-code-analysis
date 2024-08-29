@@ -8,7 +8,7 @@ GRAPH_ARGS='--min-vertex-count 5 --min-edge-count 5 --min-edge-upset 5 --min-edg
 if [ "$1" = "domains" ];  then
   python3 plotting.py domains $DOMAIN_ARGS
 elif [ "$1" = "artefacts" ]; then
-  python3 plotting artefacts $ARTEFACT_ARGS
+  python3 plotting.py artefacts $ARTEFACT_ARGS
 elif [ "$1" = "graphs" ]; then
   python3 plotting.py graphs $GRAPH_ARGS
 elif [ "$1" = "features" ]; then

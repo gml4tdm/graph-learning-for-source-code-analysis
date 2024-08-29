@@ -172,6 +172,7 @@ def plot_artefacts_as_upset_chart(args, data: list[data_loading.DataLoader]):
         # heterogeneous -- source code + something else
         'design pattern specifications',
         'repository',
+        'dependency files',
         # non-source code
         'tags/topics',
         'user data (e.g. github)',
