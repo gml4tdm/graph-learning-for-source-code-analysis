@@ -411,7 +411,11 @@
     "source code (pairs of source code for training (diff))",
     "github repositories",
     "github user data",
-    "source code"
+    "source code",
+    "dependency files",
+    "source code (commit)",
+    "source code (method)",
+    "source code (method)"
   ],
   "refinements": [
     {
