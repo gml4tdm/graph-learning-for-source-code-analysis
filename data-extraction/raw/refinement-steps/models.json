@@ -1923,7 +1923,7 @@
     {
       "action": "refine",
       "old": "{\n  \"paper-id\": 269,\n  \"pdf-id\": 69,\n  \"graphs\": {\n    \"graph\": {\n      \"name\": \"n/a\",\n      \"description\": \"n/a\",\n      \"artefacts\": [\n        {\n          \"name\": \"Dependency Files\",\n          \"details\": \"n/a\"\n        }\n      ],\n      \"vertex-type\": \"library\",\n      \"edge-type\": \"dependency\",\n      \"vertex-features\": \"n/a\",\n      \"edge-features\": \"n/a\",\n      \"connectivity-features\": \"adjacency matrix / general connectivity\",\n      \"graph-features\": \"n/a\",\n      \"other-features\": \"n/a\"\n    }\n  },\n  \"models\": {\n    \"model\": {\n      \"name\": \"n/a\",\n      \"architecture-attributes\": [\n        \"graph filtering with symmetric absorbing random walks\"\n      ]\n    }\n  },\n  \"tasks\": {\n    \"task\": {\n      \"training-objective\": \"Solving stability equation (not entirely sure on the details)\",\n      \"training-granularity\": \"n/a\",\n      \"working-objective\": \"Not entirely sure\",\n      \"working-granularity\": \"n/a\",\n      \"application\": \"Library recommendation\",\n      \"supervision\": \"self-supervised\"\n    }\n  },\n  \"combinations\": [\n    {\n      \"graph\": \"graph\",\n      \"model\": \"model\",\n      \"task\": \"task\",\n      \"comments\": null\n    }\n  ],\n  \"comments\": null\n}",
-      "new": "model$base-type$other@model$mode$ranking@model$misc$graph filter with symmetric absorbing random walks"
+      "new": "model$base-type$classic@model$mode$ranking@model$misc$graph filter with symmetric absorbing random walks"
     },
     {
       "action": "refine",
@@ -5633,9 +5633,9 @@
     },
     {
       "action": "n-ary-split",
-      "old": "model$base-type$other@model$mode$ranking@model$misc$graph filter with symmetric absorbing random walks",
+      "old": "model$base-type$classic@model$mode$ranking@model$misc$graph filter with symmetric absorbing random walks",
       "new": [
-        "model$base-type$other",
+        "model$base-type$classic",
         "model$mode$ranking",
         "model$misc$graph filter with symmetric absorbing random walks"
       ]

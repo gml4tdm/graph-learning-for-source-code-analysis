@@ -5,7 +5,11 @@ were slightly further simplified for presentation in the paper.
 Specifically, we applied the following further simplifications:
 
 
-### Model Tags 
+### Model Tags
+
+``` 
+misc: model: ranking: graph filter with absorbing random walks -> misc: model: ranking: graph filter
+```
 
 ``` 
 base-type: ensemble -> <removed>

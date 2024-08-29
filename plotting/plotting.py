@@ -807,6 +807,8 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
                         key = key.replace('misc:', 'other:')
                     if key.startswith('ranking:'):
                         key = key.replace('ranking:', 'other:')
+                    if key == 'other: graph filter with symmetric absorbing random walks':
+                        key = 'other: graph filter'
                     if has_adaboost:
                         unique.add(f'{key} (with adaboost)')
                     elif key.endswith('svm'):
