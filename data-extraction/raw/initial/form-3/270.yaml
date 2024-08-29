@@ -1,0 +1,51 @@
+paper-id: 270
+pdf-id: 188
+graphs:
+  graph:
+    name: n/a
+    description: Separate graphlets based on old/new and different snippets in commits. Take union. May not be a connected graph
+    artefacts:
+      - name: source code
+        details: commit
+    vertex-type: unique node per node type (srcML)
+    edge-type: node has child node of type
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: n/a
+    graph-features: graph-level network metrics
+    other-features: software engineering metrics about diff
+models:
+  rf:
+    name: random forest
+    architecture-attributes:
+      - random forest
+  knn:
+    name: knn
+    architecture-attributes:
+      - k-nearest neighbors
+  lr:
+    name: logistic regression
+    architecture-attributes:
+      - logistic regression
+tasks:
+  bug-detection:
+    training-objective: classify commit as buggy or not buggy
+    training-granularity: n/a
+    working-objective: classify commit as buggy or not buggy
+    working-granularity: n/a
+    application: buggy commit detection
+    supervision: supervised
+combinations:
+  - graph: graph
+    model: rf
+    task: bug-detection
+    comments:
+  - graph: graph
+    model: knn
+    task: bug-detection
+    comments:
+  - graph: graph
+    model: lr
+    task: bug-detection
+    comments:
+comments: # list

@@ -1,0 +1,35 @@
+paper-id: 269
+pdf-id: 69
+graphs:
+  graph:
+    name: n/a
+    description: n/a
+    artefacts:
+      - name: Dependency Files
+        details: n/a
+    vertex-type: library
+    edge-type: dependency
+    vertex-features: n/a
+    edge-features: n/a
+    connectivity-features: adjacency matrix / general connectivity
+    graph-features: n/a
+    other-features: n/a
+models:
+  model:
+    name: n/a
+    architecture-attributes:
+      - graph filtering with symmetric absorbing random walks
+tasks:
+  task:
+    training-objective: Solving stability equation (not entirely sure on the details)
+    training-granularity: n/a
+    working-objective: Not entirely sure
+    working-granularity: n/a
+    application: Library recommendation
+    supervision: self-supervised
+combinations:
+  - graph: graph
+    model: model
+    task: task
+    comments:
+comments: # list
