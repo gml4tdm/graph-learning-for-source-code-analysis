@@ -821,9 +821,9 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
                     if model.cluster is not None:
                         prefix, _ = key.rsplit(': ', 1)
                         if key in classic:
-                            translation_map[key] = f'{prefix}: {model.cluster} (generic algorithm)'
+                            translation_map[key] = f'{prefix}: {model.cluster} clustering (generic algorithm)'
                         else:
-                            translation_map[key] = f'{prefix}: {model.cluster}'
+                            translation_map[key] = f'{prefix}: {model.cluster} clustering (graph-specific algorithm)'
         for x in unique:
             models[x] += 1
     for key, value in translation_map.items():
