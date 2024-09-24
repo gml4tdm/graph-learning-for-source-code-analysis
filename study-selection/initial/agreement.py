@@ -24,6 +24,8 @@ def agreement_round_1():
     author_a = []
     author_b = []
     for row in df.rows(named=True):
+        if not row[AUTHOR_B_COLUMN]:
+            continue    # Paper not double-checked
         author_a.append(row[AUTHOR_A_COLUMN].lower() == 'include')
         author_b.append(row[AUTHOR_B_COLUMN].lower() == 'include')
     print('Agreement:', accuracy_score(author_a, author_b))
@@ -63,7 +65,7 @@ def main():
     agreement_round_0()
     print('=' * 72)
     print('Round 1')
-    #agreement_round_1()
+    agreement_round_1()
     print('=' * 72)
     print('Round 2')
     agreement_round_2()
