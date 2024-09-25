@@ -5,6 +5,11 @@ were slightly further simplified for presentation in the paper.
 Specifically, we applied the following further simplifications:
 
 
+### Domain Tags 
+``` 
+general graph learning framework for code -> general purpose frameworks
+```
+
 ### Model Tags
 
 ``` 
@@ -15,6 +20,7 @@ misc: model: ranking: graph filter with absorbing random walks -> misc: model: r
 base-type: ensemble -> <removed>
 base-type: cbow -> base-type: cbow/skipgram
 base-type: skipgram -> base-type: cbow/skipgram
+base-type: classic -> base-type: traditional
 ```
 
 ```

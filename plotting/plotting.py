@@ -63,6 +63,8 @@ def plot_domains_as_pie(args, data: list[data_loading.DataLoader], ax=None):
     hist = collections.defaultdict(int)
     for x in data:
         for domain in x.domains:
+            if domain == 'general graph learning framework for code':
+                domain = 'general purpose frameworks'
             hist[domain] += 1
     labels = sorted(hist, key=lambda x: hist[x], reverse=True)
     values = [hist[label] for label in labels]
@@ -86,6 +88,8 @@ def plot_domains_as_stack_chart(args, data: list[data_loading.DataLoader], ax=No
     count_per_domain_per_year = collections.defaultdict(lambda: collections.defaultdict(int))
     for z in data:
         for domain in z.domains:
+            if domain == 'general graph learning framework for code':
+                domain = 'general purpose frameworks'
             count_per_domain_per_year[domain][z.year] += 1
     if ax is None:
         with plot_utils.figure('domains/domains-as-stack.png', tight=False) as (fig, ax):
@@ -627,6 +631,9 @@ def plot_models_by_type_per_domain(args, data: list[data_loading.DataLoader]):
 def plot_models_by_type_as_upset(args, data: list[data_loading.DataLoader]):
     models = [m.get_attributes('base-type') for study in data for m in study.models]
     for m in models:
+        if 'classic' in m:
+            m.remove('classic')
+            m.append('traditional')
         if 'ensemble' in m:
             m.remove('ensemble')
         word2vec = False
