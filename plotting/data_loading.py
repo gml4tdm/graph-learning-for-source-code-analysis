@@ -205,7 +205,7 @@ class DataLoader(abc.ABC):
                                     lambda x: x[0] == '{')
         if raw == [resolved_key]:
             return None
-        assert len(raw) == 1
+        assert len(raw) == 1, (resolved_key, raw)
         items = raw[0].split('@')
         result = {}
         for entry in items:

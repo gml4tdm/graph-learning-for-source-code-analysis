@@ -68,6 +68,8 @@ def plot_domains_as_pie(args, data: list[data_loading.DataLoader], ax=None):
     hist = collections.defaultdict(int)
     for x in data:
         for domain in x.domains:
+            if domain == 'general graph learning framework for code':
+                domain = 'general purpose frameworks'
             hist[domain] += 1
     labels = sorted(hist, key=lambda x: hist[x], reverse=True)
     values = [hist[label] for label in labels]
@@ -91,6 +93,8 @@ def plot_domains_as_stack_chart(args, data: list[data_loading.DataLoader], ax=No
     count_per_domain_per_year = collections.defaultdict(lambda: collections.defaultdict(int))
     for z in data:
         for domain in z.domains:
+            if domain == 'general graph learning framework for code':
+                domain = 'general purpose frameworks'
             count_per_domain_per_year[domain][z.year] += 1
     if ax is None:
         with plot_utils.figure('domains/domains-as-stack.png', tight=False) as (fig, ax):
@@ -176,6 +180,7 @@ def plot_artefacts_as_upset_chart(args, data: list[data_loading.DataLoader]):
         # heterogeneous -- source code + something else
         'design pattern specifications',
         'repository',
+        'dependency files',
         # non-source code
         'tags/topics',
         'user data (e.g. github)',
@@ -670,6 +675,9 @@ def plot_models_by_type_per_domain(args, data: list[data_loading.DataLoader]):
 def plot_models_by_type_as_upset(args, data: list[data_loading.DataLoader]):
     models = [m.get_attributes('base-type') for study in data for m in study.models]
     for m in models:
+        if 'classic' in m:
+            m.remove('classic')
+            m.append('traditional')
         if 'ensemble' in m:
             m.remove('ensemble')
         word2vec = False
@@ -895,6 +903,8 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
                         key = key.replace('misc:', 'other:')
                     if key.startswith('ranking:'):
                         key = key.replace('ranking:', 'other:')
+                    if key == 'other: graph filter with symmetric absorbing random walks':
+                        key = 'other: graph filter'
                     if has_adaboost:
                         unique.add(f'{key} (with adaboost)')
                     elif key.endswith('svm'):
@@ -907,9 +917,9 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
                     if model.cluster is not None:
                         prefix, _ = key.rsplit(': ', 1)
                         if key in classic:
-                            translation_map[key] = f'{prefix}: {model.cluster} (generic algorithm)'
+                            translation_map[key] = f'{prefix}: {model.cluster} clustering (generic algorithm)'
                         else:
-                            translation_map[key] = f'{prefix}: {model.cluster}'
+                            translation_map[key] = f'{prefix}: {model.cluster} clustering (graph-specific algorithm)'
         for x in unique:
             models[x] += 1
     for key, value in translation_map.items():
