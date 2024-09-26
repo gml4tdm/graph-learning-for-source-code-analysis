@@ -14,6 +14,76 @@ import pandas
 import upsetplot
 
 
+class NiceFigure:
+
+    @staticmethod
+    def points_to_inches(points):
+        return points[0] / 72.27, points[1] / 72.27
+
+    @staticmethod
+    def mm_to_inches(mm):
+        return mm[0] / 25.4, mm[1] / 25.4
+
+    @staticmethod
+    def a4_as_inches():
+        return 8.3, 11.7
+
+    def __init__(self,
+                 filename: str, *,
+                 nrows=1,
+                 ncols=1,
+                 tight: bool | int | float = True,
+                 page_size: tuple[float, float] = None,
+                 width_to_height_scale_ratio: float = 1,
+                 return_grid_spec: bool = False,
+                 share_x=False,
+                 share_y=False):
+        self.filename = filename
+        self.nrows = nrows
+        self.ncols = ncols
+        self.tight = tight
+        self.page_size = page_size if page_size is not None else self.a4_as_inches()
+        self.width_to_height_scale_ratio = width_to_height_scale_ratio
+        self.return_grid_spec = return_grid_spec
+        self.share_x = share_x
+        self.share_y = share_y
+        self._fig = None
+
+    def __enter__(self):
+        if not self.return_grid_spec:
+            fig, axes = pyplot.subplots(self.nrows, self.ncols, sharex=self.share_x, sharey=self.share_y)
+        else:
+            fig = pyplot.figure()
+            axes = gridspec.GridSpec(ncols=self.ncols, nrows=self.nrows, figure=fig)
+        if self.width_to_height_scale_ratio < 1:
+            # width_scale / height_scale < 1
+            # <-> width_scale < height_scale
+            # -> width scaled down
+            fig.set_size_inches(self.page_size[0] * self.width_to_height_scale_ratio, self.page_size[1])
+        else:
+            fig.set_size_inches(self.page_size[0], self.page_size[1] * 1/self.width_to_height_scale_ratio)
+        self._fig = fig
+        return fig, axes
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        if exc_type is None:
+            if self.tight:
+                if not isinstance(self.tight, bool):
+                    self._fig.tight_layout(pad=self.tight)
+                else:
+                    self._fig.tight_layout()
+            os.makedirs('figures', exist_ok=True)
+            path, _ = os.path.split(self.filename)
+            if path:
+                os.makedirs(os.path.join('figures', path), exist_ok=True)
+            full_path = os.path.join('figures', self.filename)
+            self._fig.savefig(full_path, dpi=100)
+            if self.filename.endswith('.png'):
+                self._fig.savefig(full_path.replace('.png', '.pdf'))
+                # subprocess.run(f'inkscape -o {} {}')
+            pyplot.close(self._fig)
+
+
 @contextlib.contextmanager
 def figure(filename: str,
            nrows=1,
