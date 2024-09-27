@@ -9,6 +9,7 @@ import argparse
 import collections
 import contextlib
 import os
+import re
 import warnings
 
 import alive_progress
@@ -48,6 +49,61 @@ DOUBLE_COLUMN_SIZE = plot_utils.NiceFigure.mm_to_inches((210, 280))
 SINGLE_COLUMN_SIZE = plot_utils.NiceFigure.mm_to_inches((210 / 2, 280))
 
 
+def capitalize(x: str) -> str:
+    known_abbreviations = {
+        'gnn': 'GNN',
+        'gcn': 'GCN',
+        'gat': 'GAT',
+        'ggnn': 'GGNN',
+        'rgcn': 'R-GCN',
+        'github': 'GitHub',
+        'jupyter': 'Jupyter',
+        'ast': 'AST',
+        'ncs': 'NCS',
+        'cbow': 'CBOW',
+        'cbow/skipgram': 'CBOW/Skipgram',
+        'mlp': 'MLP',
+        'cnn': 'CNN',
+        'rnn': 'RNN',
+        'knn': 'KNN',
+        'svm': 'SVM',
+        'pagerank': 'PageRank',
+        'graphsage': 'GraphSAGE',
+        'gin': 'GIN',
+        'tree-lstm': 'Tree-LSTM',
+        'tree adjusted cnn': 'Tree-adjusted CNN',
+        'tbcnn': 'TBCNN',
+        'sortpooling': 'SortPooling',
+        'set2set': 'Set2Set',
+        'mincutpool': 'MinCutPool',
+        'dmonpool': 'DMoNPool'
+    }
+    x = x.lower()
+    words, splits = _split_map(x)
+    words = [known_abbreviations.get(y, y) for y in words]
+    if words[0].islower():
+        words[0] = words[0].capitalize()
+    return _join_map(words, splits)
+
+
+def _split_map(x: str):
+    chars = [' ', '(', ')', '/', '\n']
+    pattern = '|'.join(re.escape(c) for c in chars)
+    atoms = re.split(pattern, x)
+    joiners = [c for c in x if c in chars]
+    return atoms, joiners
+
+
+def _join_map(x, y):
+    parts = []
+    assert len(x) == len(y) + 1
+    for a, b in zip(x, y):
+        parts.append(a)
+        parts.append(b)
+    parts.append(x[-1])
+    return ''.join(parts)
+
+
 ####################################################################################################
 ####################################################################################################
 # Domains
@@ -70,7 +126,7 @@ def plot_domains_as_pie(args, data: list[data_loading.DataLoader], ax=None):
         for domain in x.domains:
             if domain == 'general graph learning framework for code':
                 domain = 'general purpose frameworks'
-            hist[domain] += 1
+            hist[capitalize(domain)] += 1
     labels = sorted(hist, key=lambda x: hist[x], reverse=True)
     values = [hist[label] for label in labels]
     total = sum(values)
@@ -95,7 +151,7 @@ def plot_domains_as_stack_chart(args, data: list[data_loading.DataLoader], ax=No
         for domain in z.domains:
             if domain == 'general graph learning framework for code':
                 domain = 'general purpose frameworks'
-            count_per_domain_per_year[domain][z.year] += 1
+            count_per_domain_per_year[capitalize(domain)][z.year] += 1
     if ax is None:
         with plot_utils.figure('domains/domains-as-stack.png', tight=False) as (fig, ax):
             return plot_utils.stack_chart_from_dict(count_per_domain_per_year, ax)
@@ -106,8 +162,8 @@ def plot_domains_as_stack_chart(args, data: list[data_loading.DataLoader], ax=No
 @utils.easy_log('Plotting Domains Joint')
 def plot_domains_joint(args, data: list[data_loading.DataLoader]):
     if args.paper_only:
-        with adjusted_font_scale(1.5):
-            with plot_utils.NiceFigure(filename='figure_1.pdf',
+        with adjusted_font_scale(1):
+            with plot_utils.NiceFigure(filename='figure_1.png',
                                        nrows=1,
                                        ncols=3,
                                        tight=True,
@@ -194,6 +250,7 @@ def plot_artefacts_as_upset_chart(args, data: list[data_loading.DataLoader]):
         'questions/answers',
         'source code summary'
     ]
+    order = [capitalize(x) for x in order]
     translate = {
         'bug reports/issuses/work items': 'bug reports/issues/work items'
     }
@@ -206,14 +263,14 @@ def plot_artefacts_as_upset_chart(args, data: list[data_loading.DataLoader]):
             continue
         artefact_items.append(
             #sorted([translate.get(x, x) for x in art], key=order.index)
-            [translate.get(x, x) for x in art]
+            [capitalize(translate.get(x, x)) for x in art]
         )
     #artefact_items.sort(key=lambda row: min(order.index(y) for y in row))
     #df = upsetplot.from_memberships(artefact_items)
     #print(df.head())
     df = plot_utils.from_memberships(artefact_items, categories=order)
     if args.paper_only:
-        with plot_utils.NiceFigure('figure_2.pdf',
+        with plot_utils.NiceFigure('figure_2.png',
                                    nrows=2,
                                    ncols=3,
                                    page_size=DOUBLE_COLUMN_SIZE,
@@ -294,12 +351,13 @@ def plot_features_joint(args, data: list[data_loading.DataLoader]):
         for study in data:
             attrs = _deduplicate_keys(study.features, *key_set)
             attrs = map(_remove_brackets, attrs)
+            attrs = map(capitalize, attrs)
             total += collections.Counter(attrs)
         total = {k: v for k, v in total.items() if v >= args.min_feature_count}
         histograms.append(total)
     if args.paper_only:
         with adjusted_font_scale(1):
-            with plot_utils.NiceFigure('figure_5.pdf',
+            with plot_utils.NiceFigure('figure_5.png',
                                        width_to_height_scale_ratio=3,
                                        page_size=DOUBLE_COLUMN_SIZE) as (fig, axes):
                 ax = axes
@@ -673,7 +731,7 @@ def plot_models_by_type_per_domain(args, data: list[data_loading.DataLoader]):
 
 @utils.easy_log('Plotting models by type as upset plot')
 def plot_models_by_type_as_upset(args, data: list[data_loading.DataLoader]):
-    models = [m.get_attributes('base-type') for study in data for m in study.models]
+    models = [list(m.get_attributes('base-type')) for study in data for m in study.models]
     for m in models:
         if 'classic' in m:
             m.remove('classic')
@@ -687,9 +745,10 @@ def plot_models_by_type_as_upset(args, data: list[data_loading.DataLoader]):
                 m.remove(x)
         if word2vec:
             m.append('cbow/skipgram')
+    models = [[capitalize(x) for x in m] for m in models]
     df = upsetplot.from_memberships(models)
     if args.paper_only:
-        with plot_utils.NiceFigure('figure_6.pdf',
+        with plot_utils.NiceFigure('figure_6.png',
                                    nrows=2,
                                    ncols=2,
                                    tight=3,
@@ -842,9 +901,9 @@ def plot_gnn_and_tree_models_jointly(args, data: list[data_loading.DataLoader]):
             gnn[gnn_adjustments.get(attr, attr)] += 1
         for attr in _deduplicate_keys(study.models, 'gnn-functionality: tree'):
             tree[tree_adjustments.get(attr, attr)] += 1
-    gnn = {k: v for k, v in gnn.items() if v >= args.min_gnn_count}
-    tree = {k: v for k, v in tree.items() if v >= args.min_tree_count}
-    with plot_utils.NiceFigure('figure_8.pdf',
+    gnn = {capitalize(k): v for k, v in gnn.items() if v >= args.min_gnn_count}
+    tree = {capitalize(k): v for k, v in tree.items() if v >= args.min_tree_count}
+    with plot_utils.NiceFigure('figure_8.png',
                                nrows=2,
                                ncols=1,
                                width_to_height_scale_ratio=2,
@@ -873,7 +932,7 @@ def plot_the_remaining_stuff(args, data: list[data_loading.DataLoader]):
             #     hist[attr] += 1
             unique |= set(attrs)
         for attr in unique:
-            hist[attr] += 1
+            hist[capitalize(attr)] += 1
     with plot_utils.figure('models/the-remaining-stuff-as-barh.png') as (fig, ax):
         plot_utils.barh_chart_from_dict(hist, ax)
 
@@ -893,7 +952,7 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
             type_info = model.get_attributes('base-type')
             if 'clustering' in type_info or 'classic' in type_info:
                 assert len(type_info) == 1
-                attrs = model.get_attributes('misc: model')
+                attrs = list(model.get_attributes('misc: model'))
                 has_adaboost = 'meta: adaboost' in attrs
                 uses_kernel = bool(model.get_attributes('misc: kernel'))
                 if has_adaboost:
@@ -930,16 +989,16 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
         parts = key.split(': ')
         current = models_as_tree
         for part in parts[:-1]:
-            current = current.setdefault(part, {})
-        current[parts[-1]] = value
+            current = current.setdefault(capitalize(part), {})
+        current[capitalize(parts[-1])] = value
     if args.paper_only:
         with adjusted_font_scale(1):
-            with plot_utils.NiceFigure('figure_7.pdf',
+            with plot_utils.NiceFigure('figure_7.png',
                                        page_size=DOUBLE_COLUMN_SIZE,
                                        width_to_height_scale_ratio=1/0.53) as (fig, ax):
                 align = {
-                    'supervised': {
-                        'random forest': {
+                    capitalize('supervised'): {
+                        capitalize('random forest'): {
                             'horizontal': 'right',
                             'vertical': 'top',
                             'raise-by': 0
@@ -952,8 +1011,8 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
         with adjusted_font_scale(1):
             with plot_utils.figure('models/classic-models.png', a4=True, height_size_hint=0.53) as (fig, ax):
                 align = {
-                    'supervised': {
-                        'random forest': {
+                    capitalize('supervised'): {
+                        capitalize('random forest'): {
                             'horizontal': 'right',
                             'vertical': 'top',
                             'raise-by': 0
@@ -1008,7 +1067,9 @@ def plot_pooling_as_starburst(args, data: list[data_loading.DataLoader]):
         if not pooling_categories[key]:
             continue
         *path, last = pooling_categories[key]
+        last = capitalize(last)
         for p in path:
+            p = capitalize(p)
             p = p.replace(' ', '\n')
             current = current.setdefault(p, {})
         if last not in current:
@@ -1016,41 +1077,41 @@ def plot_pooling_as_starburst(args, data: list[data_loading.DataLoader]):
         current[last] += value
     if args.paper_only:
         with adjusted_font_scale(1):
-            with plot_utils.NiceFigure('figure_9.pdf',
+            with plot_utils.NiceFigure('figure_9.png',
                                        page_size=DOUBLE_COLUMN_SIZE,
                                        width_to_height_scale_ratio=1/0.6) as (fig, ax):
                 sb = plot_utils.Sunburst(radius=1,
                                          x_to_y_axis_ratio=1 / 0.6,
                                          y_stretch=1.2)
                 alignment = {
-                    'misc': {
-                        'combined sum and max pooling': {'horizontal': 'right', 'vertical': 'center'},
+                    capitalize('misc'): {
+                        capitalize('combined sum and max pooling'): {'horizontal': 'right', 'vertical': 'center'},
                         # The stack
-                        'mean bi-affine attention pooling': {'horizontal': 'right',
+                        capitalize('mean bi-affine attention pooling'): {'horizontal': 'right',
                                                              'vertical': 'bottom',
                                                              'raise-by': 0.1},
-                        'set2set': {'horizontal': 'right',
+                        capitalize('set2set'): {'horizontal': 'right',
                                     'vertical': 'bottom',
                                     'raise-by': 0.25},
-                        'conv w. max pooling over node feature matrix': {'horizontal': 'left',
+                        capitalize('conv w. max pooling over node feature matrix'): {'horizontal': 'left',
                                                                          'vertical': 'bottom',
                                                                          'raise-by': 0.2},
-                        'bidirectional lstm': {'horizontal': 'left',
+                        capitalize('bidirectional lstm'): {'horizontal': 'left',
                                                'vertical': 'bottom',
                                                'raise-by': 0.05},
                     },
-                    'summing': {
-                        'weighted sum': {'horizontal': 'right', 'vertical': 'bottom'},
+                    capitalize('summing'): {
+                        capitalize('weighted sum'): {'horizontal': 'right', 'vertical': 'bottom'},
                     },
-                    'node\nsampling': {
-                        'SAGPool': {'horizontal': 'left', 'vertical': 'top'},
-                        'unspecified': {'horizontal': 'left', 'vertical': 'top'},
+                    capitalize('node\nsampling').replace(' ', '\n'): {
+                        capitalize('SAGPool'): {'horizontal': 'left', 'vertical': 'top'},
+                        capitalize('unspecified'): {'horizontal': 'left', 'vertical': 'top'},
                     },
-                    'graph\ncoarsening': {
-                        'DMonPool': {'horizontal': 'left', 'vertical': 'top'},
-                        'edge pooling': {'horizontal': 'left', 'vertical': 'bottom'},
+                    capitalize('graph\ncoarsening').replace(' ', '\n'): {
+                        capitalize('DMonPool'): {'horizontal': 'left', 'vertical': 'top'},
+                        capitalize('edge pooling'): {'horizontal': 'left', 'vertical': 'bottom'},
                     },
-                    'unspecified': {'horizontal': 'left', 'vertical': 'center', 'raise-by': 0.1}
+                    capitalize('unspecified'): {'horizontal': 'left', 'vertical': 'center', 'raise-by': 0.1}
                 }
                 sb.plot(pooling, ax, alignment_override=alignment)
     else:
@@ -1060,34 +1121,34 @@ def plot_pooling_as_starburst(args, data: list[data_loading.DataLoader]):
                                          x_to_y_axis_ratio=1 / 0.6,
                                          y_stretch=1.2)
                 alignment = {
-                    'misc': {
-                        'combined sum and max pooling': {'horizontal': 'right', 'vertical': 'center'},
+                    capitalize('misc'): {
+                        capitalize('combined sum and max pooling'): {'horizontal': 'right', 'vertical': 'center'},
                         # The stack
-                        'mean bi-affine attention pooling': {'horizontal': 'right',
-                                                             'vertical': 'bottom',
-                                                             'raise-by': 0.1},
-                        'set2set': {'horizontal': 'right',
-                                    'vertical': 'bottom',
-                                    'raise-by': 0.25},
-                        'conv w. max pooling over node feature matrix': {'horizontal': 'left',
+                        capitalize('mean bi-affine attention pooling'): {'horizontal': 'right',
                                                                          'vertical': 'bottom',
-                                                                         'raise-by': 0.2},
-                        'bidirectional lstm': {'horizontal': 'left',
-                                               'vertical': 'bottom',
-                                               'raise-by': 0.05},
+                                                                         'raise-by': 0.1},
+                        capitalize('set2set'): {'horizontal': 'right',
+                                                'vertical': 'bottom',
+                                                'raise-by': 0.25},
+                        capitalize('conv w. max pooling over node feature matrix'): {'horizontal': 'left',
+                                                                                     'vertical': 'bottom',
+                                                                                     'raise-by': 0.2},
+                        capitalize('bidirectional lstm'): {'horizontal': 'left',
+                                                           'vertical': 'bottom',
+                                                           'raise-by': 0.05},
                     },
-                    'summing': {
-                        'weighted sum': {'horizontal': 'right', 'vertical': 'bottom'},
+                    capitalize('summing'): {
+                        capitalize('weighted sum'): {'horizontal': 'right', 'vertical': 'bottom'},
                     },
-                    'node\nsampling': {
-                        'SAGPool': {'horizontal': 'left', 'vertical': 'top'},
-                        'unspecified': {'horizontal': 'left', 'vertical': 'top'},
+                    capitalize('node\nsampling').replace(' ', '\n'): {
+                        capitalize('SAGPool'): {'horizontal': 'left', 'vertical': 'top'},
+                        capitalize('unspecified'): {'horizontal': 'left', 'vertical': 'top'},
                     },
-                    'graph\ncoarsening': {
-                        'DMonPool': {'horizontal': 'left', 'vertical': 'top'},
-                        'edge pooling': {'horizontal': 'left', 'vertical': 'bottom'},
+                    capitalize('graph\ncoarsening').replace(' ', '\n'): {
+                        capitalize('DMonPool'): {'horizontal': 'left', 'vertical': 'top'},
+                        capitalize('edge pooling'): {'horizontal': 'left', 'vertical': 'bottom'},
                     },
-                    'unspecified': {'horizontal': 'left', 'vertical': 'center', 'raise-by': 0.1}
+                    capitalize('unspecified'): {'horizontal': 'left', 'vertical': 'center', 'raise-by': 0.1}
                 }
                 sb.plot(pooling, ax, alignment_override=alignment)
 
@@ -1152,10 +1213,10 @@ def plot_graph_vertices_and_edges_joint(args, data: list[data_loading.DataLoader
                 vertices[vertex.value] += 1
             for edge in graph.parse().edges:
                 edges[edge.value] += 1
-    vertices = {k: v for k, v in vertices.items() if v >= args.min_vertex_count}
-    edges = {k: v for k, v in edges.items() if v >= args.min_edge_count}
+    vertices = {capitalize(k): v for k, v in vertices.items() if v >= args.min_vertex_count}
+    edges = {capitalize(k): v for k, v in edges.items() if v >= args.min_edge_count}
     with adjusted_font_scale(1):
-        with plot_utils.NiceFigure('figure_3.pdf',
+        with plot_utils.NiceFigure('figure_3.png',
                                    nrows=1,
                                    ncols=2,
                                    tight=True,
@@ -1173,11 +1234,11 @@ def plot_graph_edges_as_upset(args, data: list[data_loading.DataLoader]):
     hist = collections.defaultdict(int)
     for col in edges:
         hist[tuple(col)] += 1
-    edges = [e for e in edges if hist[tuple(e)] >= args.min_edge_upset]
+    edges = [[capitalize(x) for x in e] for e in edges if hist[tuple(e)] >= args.min_edge_upset]
     df = upsetplot.from_memberships(edges)
     if args.paper_only:
         with adjusted_font_scale(1.5):
-            with plot_utils.NiceFigure('figure_4.pdf',
+            with plot_utils.NiceFigure('figure_4.png',
                                        nrows=2,
                                        ncols=2,
                                        tight=3,

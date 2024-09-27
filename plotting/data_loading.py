@@ -402,26 +402,26 @@ class _AttributeMixin:
                 for x in current
                 if x.startswith(start + ':')
             ]
-        return current
+        return tuple(current)
 
     __get_attributes = get_attributes
 
     @functools.cache
     def get_next_attribute_level(self, prefix=None):
         attributes = self.__get_attributes(prefix)
-        return [
+        return tuple([
             attr.split(':')[0].strip()
             for attr in attributes
-        ]
+        ])
 
     @functools.cache
     def get_attributes_complement(self, *prefixes: str, prefix=None):
         candidates = self.__get_attributes(prefix)
-        return [
+        return tuple([
             x
             for x in candidates
             if not any(x.startswith(p.removeprefix(prefix + ':').strip()) for p in prefixes)
-        ]
+        ])
 
 
 ##############################################################################
