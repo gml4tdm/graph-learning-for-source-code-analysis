@@ -48,6 +48,8 @@ pyplot.rcParams["font.family"] = "Hack"
 DOUBLE_COLUMN_SIZE = plot_utils.NiceFigure.mm_to_inches((210, 280))
 SINGLE_COLUMN_SIZE = plot_utils.NiceFigure.mm_to_inches((210 / 2, 280))
 
+FIGURE_OFFSET = 2
+
 
 def capitalize(x: str) -> str:
     known_abbreviations = {
@@ -163,7 +165,7 @@ def plot_domains_as_stack_chart(args, data: list[data_loading.DataLoader], ax=No
 def plot_domains_joint(args, data: list[data_loading.DataLoader]):
     if args.paper_only:
         with adjusted_font_scale(1):
-            with plot_utils.NiceFigure(filename='figure_1.png',
+            with plot_utils.NiceFigure(filename=f'figure_{FIGURE_OFFSET + 1}.png',
                                        nrows=1,
                                        ncols=3,
                                        tight=True,
@@ -270,7 +272,7 @@ def plot_artefacts_as_upset_chart(args, data: list[data_loading.DataLoader]):
     #print(df.head())
     df = plot_utils.from_memberships(artefact_items, categories=order)
     if args.paper_only:
-        with plot_utils.NiceFigure('figure_2.png',
+        with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 2}.png',
                                    nrows=2,
                                    ncols=3,
                                    page_size=DOUBLE_COLUMN_SIZE,
@@ -357,19 +359,21 @@ def plot_features_joint(args, data: list[data_loading.DataLoader]):
         histograms.append(total)
     if args.paper_only:
         with adjusted_font_scale(1):
-            with plot_utils.NiceFigure('figure_5.png',
+            with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 5}.png',
                                        width_to_height_scale_ratio=3,
                                        page_size=DOUBLE_COLUMN_SIZE) as (fig, axes):
                 ax = axes
                 offset = 0
                 labels = []
-                for (title, color), histogram in zip(plot_data, histograms):
+                symbols = ['///', 'xxx', '|||']
+                for (title, color), histogram, symbol in zip(plot_data, histograms, symbols):
                     y_values = [y + offset for y in range(len(histogram))]
                     categories = list(histogram)
                     handles = ax.barh(y_values,
                                       [histogram[c] for c in categories],
                                       color=color,
-                                      label=title)
+                                      label=title,
+                                      hatch=symbol)
                     ax.bar_label(handles, padding=3)
                     offset += len(histogram)
                     labels.extend(categories)
@@ -748,7 +752,7 @@ def plot_models_by_type_as_upset(args, data: list[data_loading.DataLoader]):
     models = [[capitalize(x) for x in m] for m in models]
     df = upsetplot.from_memberships(models)
     if args.paper_only:
-        with plot_utils.NiceFigure('figure_6.png',
+        with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 6}.png',
                                    nrows=2,
                                    ncols=2,
                                    tight=3,
@@ -903,7 +907,7 @@ def plot_gnn_and_tree_models_jointly(args, data: list[data_loading.DataLoader]):
             tree[tree_adjustments.get(attr, attr)] += 1
     gnn = {capitalize(k): v for k, v in gnn.items() if v >= args.min_gnn_count}
     tree = {capitalize(k): v for k, v in tree.items() if v >= args.min_tree_count}
-    with plot_utils.NiceFigure('figure_8.png',
+    with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 8}.png',
                                nrows=2,
                                ncols=1,
                                width_to_height_scale_ratio=2,
@@ -993,7 +997,7 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
         current[capitalize(parts[-1])] = value
     if args.paper_only:
         with adjusted_font_scale(1):
-            with plot_utils.NiceFigure('figure_7.png',
+            with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 7}.png',
                                        page_size=DOUBLE_COLUMN_SIZE,
                                        width_to_height_scale_ratio=1/0.53) as (fig, ax):
                 align = {
@@ -1077,7 +1081,7 @@ def plot_pooling_as_starburst(args, data: list[data_loading.DataLoader]):
         current[last] += value
     if args.paper_only:
         with adjusted_font_scale(1):
-            with plot_utils.NiceFigure('figure_9.png',
+            with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 9}.png',
                                        page_size=DOUBLE_COLUMN_SIZE,
                                        width_to_height_scale_ratio=1/0.6) as (fig, ax):
                 sb = plot_utils.Sunburst(radius=1,
@@ -1216,7 +1220,7 @@ def plot_graph_vertices_and_edges_joint(args, data: list[data_loading.DataLoader
     vertices = {capitalize(k): v for k, v in vertices.items() if v >= args.min_vertex_count}
     edges = {capitalize(k): v for k, v in edges.items() if v >= args.min_edge_count}
     with adjusted_font_scale(1):
-        with plot_utils.NiceFigure('figure_3.png',
+        with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 3}.png',
                                    nrows=1,
                                    ncols=2,
                                    tight=True,
@@ -1238,7 +1242,7 @@ def plot_graph_edges_as_upset(args, data: list[data_loading.DataLoader]):
     df = upsetplot.from_memberships(edges)
     if args.paper_only:
         with adjusted_font_scale(1.5):
-            with plot_utils.NiceFigure('figure_4.png',
+            with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 4}.png',
                                        nrows=2,
                                        ncols=2,
                                        tight=3,
