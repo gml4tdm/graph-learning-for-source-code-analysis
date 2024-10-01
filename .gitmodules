@@ -1,0 +1,3 @@
+[submodule "plotting/UpSetPlot"]
+	path = plotting/UpSetPlot
+	url = git@github.com:gml4tdm/UpSetPlot.git
