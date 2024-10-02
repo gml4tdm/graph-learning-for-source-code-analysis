@@ -3,6 +3,7 @@ import contextlib
 import math
 import os
 import os.path
+import string
 import textwrap
 
 import matplotlib.patches
@@ -18,11 +19,15 @@ class NiceFigure:
 
     @staticmethod
     def points_to_inches(points):
-        return points[0] / 72.27, points[1] / 72.27
+        return points / 72.27
+
+    @staticmethod
+    def points_to_mm(points):
+        return points * 0.352778
 
     @staticmethod
     def mm_to_inches(mm):
-        return mm[0] / 25.4, mm[1] / 25.4
+        return mm / 25.4
 
     @staticmethod
     def a4_as_inches():
@@ -34,34 +39,42 @@ class NiceFigure:
                  ncols=1,
                  tight: bool | int | float = True,
                  page_size: tuple[float, float] = None,
-                 width_to_height_scale_ratio: float = 1,
+                 width_to_height_ratio: float = 1,
                  return_grid_spec: bool = False,
                  share_x=False,
-                 share_y=False):
+                 share_y=False,
+                 render_axes=False):
         self.filename = filename
         self.nrows = nrows
         self.ncols = ncols
         self.tight = tight
         self.page_size = page_size if page_size is not None else self.a4_as_inches()
-        self.width_to_height_scale_ratio = width_to_height_scale_ratio
+        self.width_to_height_ratio = width_to_height_ratio
         self.return_grid_spec = return_grid_spec
         self.share_x = share_x
         self.share_y = share_y
+        self.render_axes = render_axes
         self._fig = None
+        self._axes = None
 
     def __enter__(self):
         if not self.return_grid_spec:
             fig, axes = pyplot.subplots(self.nrows, self.ncols, sharex=self.share_x, sharey=self.share_y)
+            self._axes = axes
         else:
             fig = pyplot.figure()
             axes = gridspec.GridSpec(ncols=self.ncols, nrows=self.nrows, figure=fig)
-        if self.width_to_height_scale_ratio < 1:
-            # width_scale / height_scale < 1
-            # <-> width_scale < height_scale
-            # -> width scaled down
-            fig.set_size_inches(self.page_size[0] * self.width_to_height_scale_ratio, self.page_size[1])
+        if self.width_to_height_ratio > 1:
+            # width / height = r --> height = width / r
+            width = self.page_size[0]
+            height = width / self.width_to_height_ratio
+        elif self.width_to_height_ratio == 1:
+            width = height = min(*self.page_size)
         else:
-            fig.set_size_inches(self.page_size[0], self.page_size[1] * 1/self.width_to_height_scale_ratio)
+            # Always use width based scaling
+            width = self.page_size[0]
+            height = width / self.width_to_height_ratio
+        fig.set_size_inches(width, height)
         self._fig = fig
         return fig, axes
 
@@ -81,6 +94,20 @@ class NiceFigure:
             if self.filename.endswith('.png'):
                 self._fig.savefig(full_path.replace('.png', '.pdf'))
                 # subprocess.run(f'inkscape -o {} {}')
+            if self.render_axes:
+                if self._axes is None:
+                    raise ValueError('Cannot render axes')
+                for letter, ax in zip(string.ascii_lowercase, self._axes):
+                    #extent = ax.get_window_extent().transformed(self._fig.dpi_scale_trans.inverted())
+                    window = ax.get_tightbbox()
+                    extent = window.transformed(self._fig.dpi_scale_trans.inverted())
+                    scale = 1.05
+                    extent = extent.expanded(scale, scale)
+                    path, ext = os.path.splitext(full_path)
+                    fn = f'{path}{letter}{ext}'
+                    self._fig.savefig(fn, bbox_inches=extent)
+                    if fn.endswith('.png'):
+                        self._fig.savefig(fn.replace('.png', '.pdf'), bbox_inches=extent)
             pyplot.close(self._fig)
 
 
@@ -124,11 +151,16 @@ def figure(filename: str,
     pyplot.close(fig)
 
 
-def upset_plot(data, fig, axes, *, min_size=0, use_native_order=False):
+def upset_plot(data,
+               fig,
+               axes, *,
+               min_size=0,
+               use_native_order=False,
+               font_size=None):
     for axes_ in axes:
         for ax in axes_:
             ax.set_axis_off()
-    upsetplot.plot(
+    result = upsetplot.plot(
         data,
         fig=fig,
         #sum_over='count',
@@ -136,8 +168,23 @@ def upset_plot(data, fig, axes, *, min_size=0, use_native_order=False):
         show_counts=True,
         min_subset_size=min_size,
         #sort_by='cardinality' if not use_native_order else 'input',
-        sort_categories_by='cardinality' if not use_native_order else 'input'
+        sort_categories_by='cardinality' if not use_native_order else 'input',
+        element_size=None
     )
+    # for t in result['matrix'].get_yticklabels():
+    #     t.set_fontsize(font_size)
+    if font_size is not None:
+        for ax in result.values():
+            for x in ax.get_children():
+                if isinstance(x, matplotlib.pyplot.Text):
+                    x.set_fontsize(font_size)
+                else:
+                    pass
+            for x in ax.get_yticklabels():
+                x.set_fontsize(font_size)
+            for x in ax.get_xticklabels():
+                x.set_fontsize(font_size)
+    # print(result['matrix'].get_yticklabels()[0].get_fontsize())
 
 
 def from_memberships(data, categories):
@@ -212,12 +259,17 @@ def bar_chart_from_nested_dict(data: dict[str, dict[str, int]], ax):
 def barh_chart_from_dict(data: dict[str, int],
                          ax, *,
                          title: str | None = None,
-                         color='b'):
+                         color='b',
+                         width=None):
     categories = sorted(data)
     included_categories = [cat for cat in categories if data[cat]]
     included = [data[cat] for cat in categories if data[cat]]
     y = range(len(included))
-    rectangles = ax.barh(y, included, color=color)
+    if width is None:
+        rectangles = ax.barh(y, included, color=color)
+        width = rectangles.patches[0].get_height()
+    else:
+        rectangles = ax.barh(y, included, color=color, height=width)
     ax.bar_label(rectangles, padding=3)
     ax.set_ylabel(title)
     #ax.set_xlabel('Something Else')
@@ -225,6 +277,7 @@ def barh_chart_from_dict(data: dict[str, int],
     ax.set_xticks(
         [tick for tick in ax.get_xticks() if abs(int(tick) - tick) < 0.1]
     )
+    return width
 
 
 def categorical_bubble_plot(data: dict[tuple[str, str], int], ax, *, r_max=1):

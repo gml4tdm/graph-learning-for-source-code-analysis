@@ -11,10 +11,15 @@ import contextlib
 import os
 import re
 import warnings
+import sys
 
 import alive_progress
 import matplotlib.pyplot as pyplot
+
+sys.path.insert(0, os.path.abspath('./UpSetPlot'))
 import upsetplot
+if upsetplot.__file__ != os.path.abspath('./UpSetPlot/upsetplot/__init__.py'):
+    raise ValueError('Not using local upsetplot. Is the submodule initialised?')
 
 import data_loading
 import utils
@@ -30,23 +35,54 @@ def adjusted_font_scale(scale):
     _set_seaborn_theme(FONT_SCALE)
 
 
-def _set_seaborn_theme(font_scale):
+@contextlib.contextmanager
+def adjusted_font_size(font_size):
+    _set_seaborn_theme(1.0, font_size=font_size)
+    yield
+    _set_seaborn_theme(1.0)
+
+
+def _set_seaborn_theme(font_scale, *, font_size=10):
+    if font_scale != 1 and PAPER_ONLY:
+        warnings.warn('Font scale is ignored in paper_only mode')
+        font_scale = 1
+        rc_extra = {
+            "font.size": font_size,
+            "axes.titlesize": font_size,
+            "axes.labelsize": font_size,
+            'xtick.labelsize': font_size,
+            'ytick.labelsize': font_size,
+        }
+    else:
+        rc_extra = {}
     seaborn.set_theme(
         context='paper',
         rc={
-            'patch.force_edgecolor': False  # No edge color to keep stack chart readable
+            'patch.force_edgecolor': False,  # No edge color to keep stack chart readable
+            **rc_extra
         },
         font_scale=font_scale
     )
 
 
+PAPER_ONLY = False
 FONT_SCALE = 1.5
 _set_seaborn_theme(FONT_SCALE)
 pyplot.rcParams["font.family"] = "Hack"
 
 
-DOUBLE_COLUMN_SIZE = plot_utils.NiceFigure.mm_to_inches((210, 280))
-SINGLE_COLUMN_SIZE = plot_utils.NiceFigure.mm_to_inches((210 / 2, 280))
+# DOUBLE_COLUMN_SIZE = plot_utils.NiceFigure.mm_to_inches((210, 280))
+# SINGLE_COLUMN_SIZE = plot_utils.NiceFigure.mm_to_inches((210 / 2, 280))
+
+SINGLE_COLUMN_SIZE = (
+    plot_utils.NiceFigure.points_to_inches(255), plot_utils.NiceFigure.mm_to_inches(240),
+)
+DOUBLE_COLUMN_SIZE = (
+    plot_utils.NiceFigure.points_to_inches(539), plot_utils.NiceFigure.mm_to_inches(240),
+)
+THICK_COLUMN_SIZE = (
+    plot_utils.NiceFigure.points_to_inches(397), plot_utils.NiceFigure.mm_to_inches(240),
+)
 
 FIGURE_OFFSET = 2
 
@@ -170,7 +206,7 @@ def plot_domains_joint(args, data: list[data_loading.DataLoader]):
                                        ncols=3,
                                        tight=True,
                                        page_size=DOUBLE_COLUMN_SIZE,
-                                       width_to_height_scale_ratio=1 / 0.35,
+                                       width_to_height_ratio=1 / 0.4,
                                        return_grid_spec=True) as (fig, spec):
                 ax1 = fig.add_subplot(spec[0, 2])
                 ax2 = fig.add_subplot(spec[0, 0:2])
@@ -272,12 +308,14 @@ def plot_artefacts_as_upset_chart(args, data: list[data_loading.DataLoader]):
     #print(df.head())
     df = plot_utils.from_memberships(artefact_items, categories=order)
     if args.paper_only:
-        with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 2}.png',
-                                   nrows=2,
-                                   ncols=3,
-                                   page_size=DOUBLE_COLUMN_SIZE,
-                                   tight=3) as (fig, axes):
-            plot_utils.upset_plot(df, fig, axes, use_native_order=True)
+        with adjusted_font_size(10):
+            with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 2}.png',
+                                       nrows=2,
+                                       ncols=3,
+                                       page_size=DOUBLE_COLUMN_SIZE,
+                                       width_to_height_ratio=1.5,
+                                       tight=3) as (fig, axes):
+                plot_utils.upset_plot(df, fig, axes, use_native_order=True, font_size=8)
     else:
         with plot_utils.figure('artefacts/artefacts-as-upset.png',
                                nrows=2,
@@ -360,8 +398,8 @@ def plot_features_joint(args, data: list[data_loading.DataLoader]):
     if args.paper_only:
         with adjusted_font_scale(1):
             with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 5}.png',
-                                       width_to_height_scale_ratio=3,
-                                       page_size=DOUBLE_COLUMN_SIZE) as (fig, axes):
+                                       width_to_height_ratio=1.5,
+                                       page_size=THICK_COLUMN_SIZE) as (fig, axes):
                 ax = axes
                 offset = 0
                 labels = []
@@ -756,8 +794,8 @@ def plot_models_by_type_as_upset(args, data: list[data_loading.DataLoader]):
                                    nrows=2,
                                    ncols=2,
                                    tight=3,
-                                   page_size=SINGLE_COLUMN_SIZE,
-                                   width_to_height_scale_ratio=1) as (fig, axes):
+                                   page_size=DOUBLE_COLUMN_SIZE,
+                                   width_to_height_ratio=2) as (fig, axes):
             plot_utils.upset_plot(df, fig, axes)
     else:
         with plot_utils.figure('models/models-by-type-as-upset.png',
@@ -907,16 +945,24 @@ def plot_gnn_and_tree_models_jointly(args, data: list[data_loading.DataLoader]):
             tree[tree_adjustments.get(attr, attr)] += 1
     gnn = {capitalize(k): v for k, v in gnn.items() if v >= args.min_gnn_count}
     tree = {capitalize(k): v for k, v in tree.items() if v >= args.min_tree_count}
+    # with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 8}.png',
+    #                            nrows=1,
+    #                            ncols=2,
+    #                            width_to_height_ratio=2,
+    #                            page_size=DOUBLE_COLUMN_SIZE,
+    #                            tight=True,
+    #                            render_axes=True) as (fig, axes):
     with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 8}.png',
-                               nrows=2,
-                               ncols=1,
-                               width_to_height_scale_ratio=2,
+                               nrows=1,
+                               ncols=2,
+                               width_to_height_ratio=4,
                                page_size=DOUBLE_COLUMN_SIZE,
-                               tight=True) as (fig, axes):
-        axes[0].set_title('GNN Models')
-        plot_utils.barh_chart_from_dict(gnn, axes[0])
-        axes[1].set_title('Tree Models')
-        plot_utils.barh_chart_from_dict(tree, axes[1])
+                               tight=True,
+                               render_axes=True) as (fig, axes):
+        #axes[0].set_title('GNN Models')
+        width = plot_utils.barh_chart_from_dict(gnn, axes[0], width=0.5)
+        #axes[1].set_title('Tree Models')
+        plot_utils.barh_chart_from_dict(tree, axes[1], width=0.5)
 
 
 @utils.easy_log('Plotting the remaining stuff')
@@ -996,10 +1042,10 @@ def plot_classic_models(args, data: list[data_loading.DataLoader]):
             current = current.setdefault(capitalize(part), {})
         current[capitalize(parts[-1])] = value
     if args.paper_only:
-        with adjusted_font_scale(1):
+        with adjusted_font_size(7):
             with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 7}.png',
                                        page_size=DOUBLE_COLUMN_SIZE,
-                                       width_to_height_scale_ratio=1/0.53) as (fig, ax):
+                                       width_to_height_ratio=1/0.53) as (fig, ax):
                 align = {
                     capitalize('supervised'): {
                         capitalize('random forest'): {
@@ -1080,10 +1126,10 @@ def plot_pooling_as_starburst(args, data: list[data_loading.DataLoader]):
             current[last] = 0
         current[last] += value
     if args.paper_only:
-        with adjusted_font_scale(1):
+        with adjusted_font_size(7):
             with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 9}.png',
                                        page_size=DOUBLE_COLUMN_SIZE,
-                                       width_to_height_scale_ratio=1/0.6) as (fig, ax):
+                                       width_to_height_ratio=1/0.6) as (fig, ax):
                 sb = plot_utils.Sunburst(radius=1,
                                          x_to_y_axis_ratio=1 / 0.6,
                                          y_stretch=1.2)
@@ -1224,12 +1270,20 @@ def plot_graph_vertices_and_edges_joint(args, data: list[data_loading.DataLoader
                                    nrows=1,
                                    ncols=2,
                                    tight=True,
-                                   width_to_height_scale_ratio=4,
-                                   page_size=DOUBLE_COLUMN_SIZE) as (fig, axes):
-            axes[0].set_title('Nodes')
+                                   width_to_height_ratio=3,
+                                   page_size=DOUBLE_COLUMN_SIZE,
+                                   render_axes=True) as (fig, axes):
+            #axes[0].set_title('(a) Nodes', loc='bottom')
             plot_utils.barh_chart_from_dict(vertices, axes[0])
-            axes[1].set_title('Edges')
             plot_utils.barh_chart_from_dict(edges, axes[1])
+            #axes[1].set_title('(b) Edges', loc='bottom')
+        # with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 3}b.png',
+        #                            nrows=1,
+        #                            ncols=1,
+        #                            tight=True,
+        #                            width_to_height_ratio=1.75,
+        #                            page_size=SINGLE_COLUMN_SIZE) as (fig, ax):
+        #     plot_utils.barh_chart_from_dict(edges, ax)
 
 
 @utils.easy_log('Plotting Graph Edges as Upset Plot')
@@ -1241,14 +1295,14 @@ def plot_graph_edges_as_upset(args, data: list[data_loading.DataLoader]):
     edges = [[capitalize(x) for x in e] for e in edges if hist[tuple(e)] >= args.min_edge_upset]
     df = upsetplot.from_memberships(edges)
     if args.paper_only:
-        with adjusted_font_scale(1.5):
+        with adjusted_font_size(8):
             with plot_utils.NiceFigure(f'figure_{FIGURE_OFFSET + 4}.png',
                                        nrows=2,
                                        ncols=2,
                                        tight=3,
-                                       width_to_height_scale_ratio=1,
-                                       page_size=SINGLE_COLUMN_SIZE) as (fig, axes):
-                plot_utils.upset_plot(df, fig, axes, min_size=args.min_edge_upset)
+                                       width_to_height_ratio=1.75,
+                                       page_size=DOUBLE_COLUMN_SIZE) as (fig, axes):
+                plot_utils.upset_plot(df, fig, axes, min_size=args.min_edge_upset, font_size=8)
     else:
         with plot_utils.figure('graphs/graph-edges-as-upset.png',
                                nrows=2,
@@ -1344,4 +1398,7 @@ if __name__ == '__main__':
     models.add_argument('--min-tree-count', type=int, default=1)
     # Call main
     parsed_args = parser.parse_args()
+    if parsed_args.paper_only:
+        PAPER_ONLY = True
+        _set_seaborn_theme(FONT_SCALE)
     main(parsed_args)
