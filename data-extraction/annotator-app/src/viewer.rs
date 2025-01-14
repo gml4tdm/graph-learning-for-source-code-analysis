@@ -1,10 +1,12 @@
 use ratatui::buffer::Buffer;
 use ratatui::crossterm::event::{Event, KeyCode, KeyEventKind};
-use ratatui::layout::{Alignment, Constraint, Rect};
-use ratatui::prelude::{Color, Line, Span, StatefulWidget, Style, Stylize};
+use ratatui::layout::{Alignment, Constraint, Direction, Rect};
+use ratatui::prelude::{Color, Layout, Line, Span, StatefulWidget, Style, Stylize, Text};
 use ratatui::symbols::border;
-use ratatui::widgets::{Block, Row, StatefulWidgetRef, Table, TableState};
+use ratatui::widgets::{Block, Clear, Paragraph, Row, StatefulWidgetRef, Table, TableState, WidgetRef, Wrap};
 use ratatui::widgets::block::{Position, Title};
+use crate::widgets::text_input::{TextInput, TextInputEvent, TextInputState};
+use crate::widgets::util::popup::{floating_box, popup};
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -15,6 +17,12 @@ use ratatui::widgets::block::{Position, Title};
 pub enum Tree {
     Node{payload: String, children: Vec<Tree>},
     Leaf(String)
+}
+
+pub enum ViewerAction {
+    Busy,
+    Exit,
+    Rebuild(String, String)
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -28,6 +36,35 @@ enum TreeState {
 }
 
 impl TreeState {
+    fn from_existing(tree: Tree, old: Self) -> Self {
+        Self::from_existing_internal(Self::from(tree), old)
+    }
+    
+    fn from_existing_internal(new: Self, old: Self) -> Self {
+        //let new = Self::from(tree);
+        match (old, new) {
+            (TreeState::Node{expanded: expanded_old, children: children_old, text: text_old}, TreeState::Node{expanded, children, text}) => {
+                if text_old == text {
+                    TreeState::Node{
+                        expanded: expanded_old, 
+                        children: children_old.into_iter()
+                            .zip(children.into_iter())
+                            .map(|(old, new)| Self::from_existing_internal(new, old))
+                            .collect(),
+                        text
+                    }
+                } else {
+                    TreeState::Node{expanded: false, children, text}
+                }
+            }
+            (TreeState::Leaf(_), TreeState::Node{expanded, children, text}) => {
+                TreeState::Node{expanded, children, text}
+            },
+            (TreeState::Node{..}, TreeState::Leaf(s)) => TreeState::Leaf(s),
+            (TreeState::Leaf(_), TreeState::Leaf(s)) => TreeState::Leaf(s),
+        }
+    }
+    
     fn expanded_depth(&self) -> usize {
         match self {
             TreeState::Node{expanded, children, ..} => {
@@ -125,11 +162,17 @@ impl TreeState {
 impl From<Tree> for TreeState {
     fn from(value: Tree) -> Self {
         match value {
-            Tree::Node{payload, children} => TreeState::Node{
-                expanded: false,
-                children: children.into_iter().map(|c| c.into()).collect(),
-                text: payload
-            },
+            Tree::Node{payload, mut children} => {
+                children.sort_by_key(|c| match c {
+                    Tree::Node{payload, ..} => payload.clone(),
+                    Tree::Leaf(payload) => payload.clone()
+                });
+                TreeState::Node{
+                    expanded: false,
+                    children: children.into_iter().map(|c| c.into()).collect(),
+                    text: payload
+                }
+            }
             Tree::Leaf(payload) => TreeState::Leaf(payload)
         }
     }
@@ -142,7 +185,10 @@ impl From<Tree> for TreeState {
 
 pub struct TreeViewState {
     tree: TreeState,
-    table_state: TableState
+    table_state: TableState,
+    show_selected_in_window: bool,
+    scroll: Option<(String, u16)>,
+    editor: Option<TextInputState>
 }
 
 impl TreeViewState {
@@ -152,7 +198,23 @@ impl TreeViewState {
         table_state.select(Some(0));
         Self {
             tree: tree,
-            table_state
+            table_state,
+            show_selected_in_window: false,
+            scroll: None,
+            editor: None
+        }
+    }
+    
+    pub fn from_tree_and_state(tree: Tree, state: Self) -> Self {
+        let tree = TreeState::from_existing(tree, state.tree);
+        let mut table_state = TableState::default();
+        table_state.select(state.table_state.selected());
+        Self {
+            tree: tree,
+            table_state,
+            show_selected_in_window: false,
+            scroll: None,
+            editor: None
         }
     }
 }
@@ -171,7 +233,33 @@ impl TreeView {
         }
     }
     
-    pub fn handle_key_events(&self, state: &mut TreeViewState, event: Event) -> bool {
+    pub fn handle_key_events(&self, state: &mut TreeViewState, event: Event) -> ViewerAction {
+        if let Some(editor) = &mut state.editor {
+            match TextInput::new().handle_events(event, editor) {
+                TextInputEvent::Cancel => {
+                    let _ = state.editor.take();
+                }
+                TextInputEvent::Typed(s) => {
+                    let _ = state.editor.take();
+                    // so what now?
+                    // Enter transition: current -> s
+                    // Enter transition: s -> current.parent
+                    // Delete transition: current -> current.parent (if not exists)
+                    // We might as well assume that we have to redraw the tree.
+                    let linearised = state.tree.iter_traverse_expanded(|node| match node {
+                        TreeState::Node{text, .. } => text.clone(),
+                        TreeState::Leaf(text) => text.clone()
+                    });
+                    let selection_text = linearised.iter().enumerate()
+                        .find(|(i, (_, text))| state.table_state.selected() == Some(*i))
+                        .map(|(_, (_, text))| text.clone())
+                        .expect("No selection");
+                    return ViewerAction::Rebuild(selection_text, s);
+                }
+                _ => {}
+            }
+            return ViewerAction::Busy;
+        }
         match event {
             Event::Key(inner) if inner.kind == KeyEventKind::Press => {
                 match inner.code {
@@ -181,7 +269,7 @@ impl TreeView {
                         if sel > 0 {
                             state.table_state.select(Some(sel - 1));
                         }
-                        false 
+                        ViewerAction::Busy
                     }
                     KeyCode::Down => {
                         let sel = state.table_state.selected()
@@ -189,7 +277,7 @@ impl TreeView {
                         if sel < state.tree.count_expanded() - 1 {
                             state.table_state.select(Some(sel + 1));
                         }
-                        false 
+                        ViewerAction::Busy
                     }
                     KeyCode::Left => {
                         let sel = state.table_state.selected()
@@ -200,7 +288,7 @@ impl TreeView {
                                     *expanded = false;
                                 }
                             });
-                        false
+                        ViewerAction::Busy
                     }
                     KeyCode::Char('c') => {
                         let sel = state.table_state.selected()
@@ -211,7 +299,32 @@ impl TreeView {
                                     node.toggle_expand_recursive(false)
                                 }
                             });
-                        false
+                        ViewerAction::Busy
+                    }
+                    KeyCode::Char('w') => {
+                        state.show_selected_in_window = !state.show_selected_in_window;
+                        if !state.show_selected_in_window {
+                            let _ = state.scroll.take();
+                        }
+                        ViewerAction::Busy
+                    }
+                    KeyCode::Char('a') => {
+                        if let Some((_text, scroll)) = &mut state.scroll {
+                            if *scroll > 0 {
+                                *scroll -= 1;
+                            }
+                        }
+                        ViewerAction::Busy
+                    }
+                    KeyCode::Char('d') => {
+                        if let Some((_text, scroll)) = &mut state.scroll {
+                            *scroll += 1;
+                        }
+                        ViewerAction::Busy
+                    }
+                    KeyCode::Char('e') => {
+                        state.editor = Some(TextInputState::new());
+                        ViewerAction::Busy
                     }
                     KeyCode::Right => {
                         let sel = state.table_state.selected()
@@ -222,13 +335,13 @@ impl TreeView {
                                     *expanded = true;
                                 }
                             });
-                        false 
+                        ViewerAction::Busy
                     }
-                    KeyCode::Esc => true,
-                    _ => false
+                    KeyCode::Esc => ViewerAction::Exit,
+                    _ => ViewerAction::Busy
                 }
             }
-            _ => false
+            _ => ViewerAction::Busy
         }
     }
 }
@@ -256,6 +369,10 @@ impl StatefulWidgetRef for TreeView {
             },
             TreeState::Leaf(text) => text.clone()
         });
+        let selection_text = linearised.iter().enumerate()
+            .find(|(i, (_, text))| state.table_state.selected() == Some(*i))
+            .map(|(_, (_, text))| text.clone())
+            .expect("No selection");
         let table = Table::new(
             linearised.into_iter()
                 .enumerate()
@@ -286,6 +403,8 @@ impl StatefulWidgetRef for TreeView {
                     "<\u{2190}/\u{2192}>".blue().bold(),
                     " Collapse Tree ".into(),
                     "<c>".blue().bold(),
+                    " View Node in Window ".into(),
+                    "<w>".blue().bold(),
                     " Exit ".into(),
                     "<Esc> ".blue().bold(),
                 ]
@@ -297,6 +416,76 @@ impl StatefulWidgetRef for TreeView {
             .border_set(border::THICK);
         table = table.block(block);
         <Table as StatefulWidget>::render(table, area, buf, &mut state.table_state);
+
+        if state.show_selected_in_window {
+            let target_area = floating_box(
+                area,
+                [Constraint::Percentage(50), Constraint::Percentage(50), Constraint::Percentage(0)],
+                [Constraint::Percentage(10), Constraint::Percentage(80), Constraint::Percentage(10)],
+            );
+            let instructions = Title::from(
+                Line::from(
+                    vec![
+                        " Up/Down ".into(),
+                        "<a/d>".blue().bold(),
+                        " Exit ".into(),
+                        "<w> ".blue().bold(),
+                    ]
+                )
+            );
+            let block = Block::bordered()
+                .title(instructions.alignment(Alignment::Center).position(Position::Bottom))
+                .border_set(border::THICK);
+            Clear.render_ref(target_area, buf);
+            block.render_ref(target_area, buf);
+            let text_area = block.inner(target_area);
+            let text = Paragraph::new(
+                Text::from(
+                    Span::styled(
+                        selection_text.clone(),
+                        Style::default().fg(Color::White).bg(Color::Black),
+                    )
+                )
+            );
+            let scroll = if let Some((text, scroll)) = &state.scroll {
+                if text == &selection_text {
+                    *scroll
+                } else {
+                    0
+                }
+            } else {
+                0
+            };
+            state.scroll = Some((selection_text, scroll));
+            let text = text.wrap(Wrap { trim: true }).scroll((scroll, 0));
+            text.render_ref(text_area, buf);
+        }
+        
+        if let Some(editor) = &mut state.editor {
+            let editor_area = popup(
+                area,
+                Constraint::Percentage(30),
+                Constraint::Length(3)
+            );
+            let instructions = Title::from(
+                Line::from(
+                    vec![
+                        " Submit ".into(),
+                        "<Enter>".blue().bold(),
+                        " Exit ".into(),
+                        "<Esc> ".blue().bold(),
+                    ]
+                )
+            );
+            let block = Block::bordered()
+                .title(Title::from(" Tag Editor ".bold()).alignment(Alignment::Center))
+                .title(instructions.alignment(Alignment::Center).position(Position::Bottom))
+                .border_set(border::THICK);
+            let inner = block.inner(editor_area);
+            Clear.render_ref(editor_area, buf);
+            block.render_ref(editor_area, buf);
+            TextInput::new().render_ref(inner, buf, editor);
+        }
     }
 }
 

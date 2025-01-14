@@ -96,6 +96,35 @@ impl RefinementData {
         self.refinements.push(RefinementAction::NArySplit {old: old.clone(), new: new.clone()});
         refine_helper(counter, old.clone(), new.into_iter())
     }
+    
+    pub fn insert_refinement(&mut self, old_key: String, new_key: String) {
+        // First, check that there exists a unique "Refine" action for the old key 
+        let old_actions = self.refinements.iter()
+            .enumerate()
+            .filter(|(i, action)| match action {
+                RefinementAction::Refine { old, .. } => old == &old_key,
+                _ => false
+            })
+            .collect::<Vec<_>>();
+        if old_actions.len() > 1 {
+            panic!("Multiple Refine actions for {old_key}");
+        }
+        let (index, action) = old_actions.first().unwrap();
+        let old_parent = match action {
+            RefinementAction::Refine { old, new } => new.clone(),
+            _ => panic!("No Refine action for {old_key}")
+        };
+        let index= *index;
+        // Remove the old action
+        self.refinements.remove(index);
+        // Insert the new action
+        self.refinements.push( RefinementAction::Refine { 
+            old: old_key, 
+            new: new_key.clone() 
+        });
+        self.refinements.push(RefinementAction::Refine { old: new_key, new: old_parent });
+        // Note that this does not actually update the counter
+    }
 }
 
 fn refine_helper(counter: &mut Counter<String>, 

@@ -10,15 +10,16 @@ use ratatui::text::{Span, Text};
 use ratatui::widgets::{Block, Clear, Paragraph, Row, StatefulWidget, StatefulWidgetRef, Table, TableState, Widget};
 use ratatui::widgets::block::{Position, Title};
 use crate::counter::Counter;
-use crate::data::RefinementAction;
-use crate::viewer::{Tree, TreeView, TreeViewState};
+use crate::data::{RefinementAction, RefinementData};
+use crate::viewer::{Tree, TreeView, TreeViewState, ViewerAction};
 use crate::widgets::text_input::{TextInput, TextInputEvent, TextInputState};
 
 pub enum EditorEvent {
     Editing,
     Edit{old: usize, new: Vec<String>},
     Exit,
-    LockToggle
+    LockToggle,
+    RedrawTree(String, String)
 }
 
 pub enum AnnotationEvent {
@@ -35,6 +36,69 @@ pub fn index_to_string(counter: &Counter<String>, index: usize) -> String {
 }
 
 
+pub fn init_tree_view_state(counter: &mut Counter<String>, 
+                        actions: Vec<RefinementAction>,) -> Tree {
+    let mut children_by_tag = HashMap::new();
+    for action in actions {
+        let (old, new) = match action {
+            RefinementAction::Refine { old, new } => {
+                (old, HashSet::from([new]))
+            }
+            RefinementAction::Split { old, new_1, new_2 } => {
+                (old, HashSet::from([new_1, new_2]))
+            }
+            RefinementAction::NArySplit { old, new } => {
+                (old, new.into_iter().collect())
+            }
+        };
+        //children_by_tag.entry(old).or_insert_with(HashSet::new).extend(new);
+        for n in new {
+            children_by_tag.entry(n).or_insert_with(HashSet::new).insert(old.clone());
+        }
+    }
+    let mut sorter = topological_sort::TopologicalSort::<String>::new();
+    for (tag, children) in children_by_tag.iter() {
+        for child in children {
+            sorter.add_dependency(child, tag);
+        }
+    }
+    let mut nodes = HashMap::new();
+    loop {
+        let next = sorter.pop_all();
+        if next.is_empty() {
+            break;
+        }
+        for n in next {
+            let depends = children_by_tag.get(&n);
+            match depends {
+                None => {
+                    nodes.insert(n.clone(), Tree::Leaf(n));
+                }
+                Some(children) => {
+                    nodes.insert(
+                        n.clone(),
+                        Tree::Node {
+                            payload: n,
+                            children: children.iter().map(|c| nodes.get(c).unwrap().clone()).collect()
+                        }
+                    );
+                }
+            }
+        }
+    }
+    let root = Tree::Node{
+        payload: "$root".to_string(),
+        children: counter.iter()
+            .map(
+                |(k, _)| nodes.remove(k).unwrap_or_else(
+                    || Tree::Leaf(k.clone())    // never registered because never edited
+                )
+            ).collect()
+    };
+    root
+}
+
+
 pub fn handle_editor_events(event: Event,
                             counter: &mut Counter<String>,
                             actions: Vec<RefinementAction>,
@@ -44,8 +108,17 @@ pub fn handle_editor_events(event: Event,
                             jump_state: &mut Option<TextInputState>,
                             view_state: &mut Option<TreeViewState>) -> EditorEvent {
     if let Some(s) = view_state {
-        if TreeView::default().handle_key_events(s, event) {        // true for exit
-            let _ = view_state.take();
+        match TreeView::default().handle_key_events(s, event) {        // true for exit
+            ViewerAction::Exit => {
+                let _ = view_state.take();
+            }
+            ViewerAction::Rebuild(s, t) => {
+                // let old = view_state.take().unwrap();
+                // let new = init_tree_view_state(counter, actions);
+                // let _ = view_state.insert(TreeViewState::from_tree_and_state(new, old));
+                return EditorEvent::RedrawTree(s, t);
+            }
+            _ => {}
         }
         return EditorEvent::Editing;
     }
@@ -104,65 +177,8 @@ pub fn handle_editor_events(event: Event,
                 }
                 KeyCode::Char('v') => {
                     // build and insert the view state
-                    let mut children_by_tag = HashMap::new();
-                    for action in actions {
-                        let (old, new) = match action {
-                            RefinementAction::Refine { old, new } => {
-                                (old, HashSet::from([new]))
-                            }
-                            RefinementAction::Split { old, new_1, new_2 } => {
-                                (old, HashSet::from([new_1, new_2]))
-                            }
-                            RefinementAction::NArySplit { old, new } => {
-                                (old, new.into_iter().collect())
-                            }
-                        };
-                        //children_by_tag.entry(old).or_insert_with(HashSet::new).extend(new);
-                        for n in new {
-                            children_by_tag.entry(n).or_insert_with(HashSet::new).insert(old.clone());
-                        }
-                    }
-                    let mut sorter = topological_sort::TopologicalSort::<String>::new();
-                    for (tag, children) in children_by_tag.iter() {
-                        for child in children {
-                            sorter.add_dependency(child, tag);
-                        }
-                    }
-                    let mut nodes = HashMap::new();
-                    loop {
-                        let next = sorter.pop_all();
-                        if next.is_empty() {
-                            break;
-                        }
-                        for n in next {
-                            let depends = children_by_tag.get(&n);
-                            match depends {
-                                None => {
-                                    nodes.insert(n.clone(), Tree::Leaf(n));
-                                }
-                                Some(children) => {
-                                    nodes.insert(
-                                        n.clone(),
-                                        Tree::Node {
-                                            payload: n,
-                                            children: children.iter().map(|c| nodes.get(c).unwrap().clone()).collect()
-                                        }
-                                    );
-                                }
-                            }
-                        }
-                    }
-                    let root = Tree::Node{
-                        payload: "$root".to_string(),
-                        children: counter.iter()
-                            .map(
-                                |(k, _)| nodes.remove(k).unwrap_or_else(
-                                    || Tree::Leaf(k.clone())    // never registered because never edited
-                                )
-                            ).collect()
-                    };
-                    let state = TreeViewState::new(root);
-                    let _ = view_state.insert(state);
+                    let state = init_tree_view_state(counter, actions);
+                    let _ = view_state.insert(TreeViewState::new(state));
                     EditorEvent::Editing
                 }
                 KeyCode::Up => {

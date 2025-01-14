@@ -15,7 +15,7 @@ use ratatui::symbols::border;
 use crate::config::Config;
 use crate::counter::Counter;
 use crate::data::{RefinementAction, RefinementData};
-use crate::editor::{draw_editor, EditorEvent, handle_editor_events, index_to_string};
+use crate::editor::{draw_editor, EditorEvent, handle_editor_events, index_to_string, init_tree_view_state};
 use crate::viewer::TreeViewState;
 use crate::widgets::explorer::{FileDialogType, FileExplorer, FileExplorerEvent, FileExplorerState};
 use crate::widgets::text_input::TextInputState;
@@ -81,6 +81,13 @@ impl App {
                     match handle_editor_events(event::read()?, counter, data.refinements().to_vec(), 
                                                data.locked.as_mut().unwrap(), table_state, 
                                                annotation_state, goto_state, view_state) {
+                        EditorEvent::RedrawTree(old, new) => {
+                            data.insert_refinement(old, new);
+                            data.store_to_file(project_file).expect("Save failed");
+                            let old = view_state.take().unwrap();
+                            let new = init_tree_view_state(counter, data.refinements().to_vec());
+                            let _ = view_state.insert(TreeViewState::from_tree_and_state(new, old));
+                        }
                         EditorEvent::Exit => {
                             self.state = AppState::Welcome;
                         },
