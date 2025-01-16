@@ -1,0 +1,152 @@
+   Compiling annotator-app v0.1.0 (/var/home/jmaarleveld/Desktop/active-papers/graph-learning-for-source-code-analysis/data-extraction/annotator-app)
+warning: unused import: `RefinementAction`
+  --> src/app.rs:17:19
+   |
+17 | use crate::data::{RefinementAction, RefinementData};
+   |                   ^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `RefinementData`
+  --> src/editor.rs:13:37
+   |
+13 | use crate::data::{RefinementAction, RefinementData};
+   |                                     ^^^^^^^^^^^^^^
+
+warning: unused import: `Direction`
+ --> src/viewer.rs:3:46
+  |
+3 | use ratatui::layout::{Alignment, Constraint, Direction, Rect};
+  |                                              ^^^^^^^^^
+
+warning: unused import: `Layout`
+ --> src/viewer.rs:4:31
+  |
+4 | use ratatui::prelude::{Color, Layout, Line, Span, StatefulWidget, Style, Stylize, Text};
+  |                               ^^^^^^
+
+warning: unused variable: `actions`
+   --> src/app.rs:215:25
+    |
+215 |                     let actions = data.refinements().to_vec();
+    |                         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_actions`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: unused variable: `old`
+   --> src/data.rs:116:40
+    |
+116 |             RefinementAction::Refine { old, new } => new.clone(),
+    |                                        ^^^ help: try ignoring the field: `old: _`
+
+warning: unused variable: `i`
+   --> src/data.rs:105:23
+    |
+105 |             .filter(|(i, action)| match action {
+    |                       ^ help: if this is intentional, prefix it with an underscore: `_i`
+
+warning: unused variable: `expanded`
+  --> src/viewer.rs:46:111
+   |
+46 | ...en_old, text: text_old}, TreeState::Node{expanded, children, text}) => {
+   |                                             ^^^^^^^^ help: try ignoring the field: `expanded: _`
+
+warning: unused variable: `text`
+   --> src/viewer.rs:254:40
+    |
+254 |                         .find(|(i, (_, text))| state.table_state.selected() == Some(*i))
+    |                                        ^^^^ help: if this is intentional, prefix it with an underscore: `_text`
+
+warning: unused variable: `text`
+   --> src/viewer.rs:373:28
+    |
+373 |             .find(|(i, (_, text))| state.table_state.selected() == Some(*i))
+    |                            ^^^^ help: if this is intentional, prefix it with an underscore: `_text`
+
+warning: variant `SelectingNew` is never constructed
+  --> src/app.rs:29:5
+   |
+27 | pub enum AppState {
+   |          -------- variant in this enum
+28 |     Welcome,
+29 |     SelectingNew,
+   |     ^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: method `clear` is never used
+  --> src/widgets/text_input/state.rs:14:12
+   |
+6  | impl TextInputState {
+   | ------------------- method in this implementation
+...
+14 |     pub fn clear(&mut self) {
+   |            ^^^^^
+
+warning: method `expanded_depth` is never used
+  --> src/viewer.rs:68:8
+   |
+38 | impl TreeState {
+   | -------------- method in this implementation
+...
+68 |     fn expanded_depth(&self) -> usize {
+   |        ^^^^^^^^^^^^^^
+
+warning: `annotator-app` (bin "annotator-app") generated 13 warnings (run `cargo fix --bin "annotator-app"` to apply 4 suggestions)
+    Finished `release` profile [optimized] target(s) in 2.98s
+     Running `target/release/annotator-app`
+Removing action: Refine { old: "{\n  \"paper-id\": \"sb-004\",\n  \"pdf-id\": \"sb-006\",\n  \"graphs\": {\n    \"ast\": {\n      \"name\": \"AST\",\n      \"description\": \"n/a\",\n      \"artefacts\": [\n        {\n          \"name\": \"source code\",\n          \"details\": \"n/a\"\n        }\n      ],\n      \"vertex-type\": \"ast\",\n      \"edge-type\": \"ast\",\n      \"vertex-features\": \"token in AST nodes w/ sub-token splitting (embedding not specified)\",\n      \"edge-features\": \"n/a\",\n      \"connectivity-features\": \"not specified\",\n      \"graph-features\": \"n/a\",\n      \"other-features\": \"pre-order traversal. At every statement (composite) node, tree is split into sub-trees.\\n\\nCode is used as a feature\"\n    }\n  },\n  \"models\": {\n    \"model\": {\n      \"name\": \"n/a\",\n      \"architecture-attributes\": [\n        \"encoder/decoder architecture\",\n        \"transformer decoder w/ copy\",\n        \"recursive neural network for ast embedding (combine embeddings of parent and direct children until sub-tree is done; max pooling over nodes in subtree. Move to subtrees one level up)\",\n        \"code encoded using transformer encoder\"\n      ]\n    }\n  },\n  \"tasks\": {\n    \"code-summarization\": {\n      \"training-objective\": \"Given a code sample, generate a summary\",\n      \"training-granularity\": \"x to sequence\",\n      \"working-objective\": \"Given a summary, generate a code sample\",\n      \"working-granularity\": \"x to sequence\",\n      \"application\": \"Code summarization\",\n      \"supervision\": \"supervised\"\n    }\n  },\n  \"combinations\": [\n    {\n      \"graph\": \"ast\",\n      \"model\": \"model\",\n      \"task\": \"code-summarization\",\n      \"comments\": null\n    }\n  ],\n  \"comments\": null\n}", new: "code summarisation" }
+Pushing action: Refine {
+  "paper-id": "sb-004",
+  "pdf-id": "sb-006",
+  "graphs": {
+    "ast": {
+      "name": "AST",
+      "description": "n/a",
+      "artefacts": [
+        {
+          "name": "source code",
+          "details": "n/a"
+        }
+      ],
+      "vertex-type": "ast",
+      "edge-type": "ast",
+      "vertex-features": "token in AST nodes w/ sub-token splitting (embedding not specified)",
+      "edge-features": "n/a",
+      "connectivity-features": "not specified",
+      "graph-features": "n/a",
+      "other-features": "pre-order traversal. At every statement (composite) node, tree is split into sub-trees.\n\nCode is used as a feature"
+    }
+  },
+  "models": {
+    "model": {
+      "name": "n/a",
+      "architecture-attributes": [
+        "encoder/decoder architecture",
+        "transformer decoder w/ copy",
+        "recursive neural network for ast embedding (combine embeddings of parent and direct children until sub-tree is done; max pooling over nodes in subtree. Move to subtrees one level up)",
+        "code encoded using transformer encoder"
+      ]
+    }
+  },
+  "tasks": {
+    "code-summarization": {
+      "training-objective": "Given a code sample, generate a summary",
+      "training-granularity": "x to sequence",
+      "working-objective": "Given a summary, generate a code sample",
+      "working-granularity": "x to sequence",
+      "application": "Code summarization",
+      "supervision": "supervised"
+    }
+  },
+  "combinations": [
+    {
+      "graph": "ast",
+      "model": "model",
+      "task": "code-summarization",
+      "comments": null
+    }
+  ],
+  "comments": null
+} -> code summarisation
+Pushing action: Refine code summarisation -> code summarisation

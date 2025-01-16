@@ -14,6 +14,7 @@ pub struct RefinementData {
 
 
 #[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
+#[derive(PartialEq, Eq)]
 #[serde(tag = "action")]
 pub enum RefinementAction {
     #[serde(rename = "refine")]
@@ -109,20 +110,28 @@ impl RefinementData {
         if old_actions.len() > 1 {
             panic!("Multiple Refine actions for {old_key}");
         }
+        // Get the original parent 
         let (index, action) = old_actions.first().unwrap();
         let old_parent = match action {
             RefinementAction::Refine { old, new } => new.clone(),
             _ => panic!("No Refine action for {old_key}")
         };
+        // Remove the original refinement 
         let index= *index;
         // Remove the old action
+        //eprintln!("Removing action: {:?}", self.refinements[index]);
         self.refinements.remove(index);
-        // Insert the new action
-        self.refinements.push( RefinementAction::Refine { 
+        // Insert the new actions
+        //eprintln!("Pushing action: Refine {} -> {}", old_key, new_key);
+        self.refinements.insert(index, RefinementAction::Refine { 
             old: old_key, 
             new: new_key.clone() 
         });
-        self.refinements.push(RefinementAction::Refine { old: new_key, new: old_parent });
+        //eprintln!("Pushing action: Refine {} -> {}", new_key, old_parent);
+        let refinement = RefinementAction::Refine { old: new_key, new: old_parent };
+        if !self.refinements.contains(&refinement) {
+            self.refinements.insert(index + 1, refinement);
+        }
         // Note that this does not actually update the counter
     }
 }

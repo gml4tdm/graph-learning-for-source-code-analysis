@@ -43,14 +43,29 @@ impl TreeState {
     fn from_existing_internal(new: Self, old: Self) -> Self {
         //let new = Self::from(tree);
         match (old, new) {
-            (TreeState::Node{expanded: expanded_old, children: children_old, text: text_old}, TreeState::Node{expanded, children, text}) => {
+            (TreeState::Node{expanded: expanded_old, children: mut children_old, text: text_old}, TreeState::Node{expanded, children, text}) => {
                 if text_old == text {
-                    TreeState::Node{
-                        expanded: expanded_old, 
-                        children: children_old.into_iter()
-                            .zip(children.into_iter())
-                            .map(|(old, new)| Self::from_existing_internal(new, old))
-                            .collect(),
+                    let mut new_children = Vec::new();
+                    for child in children {
+                        let child_name = match &child {
+                            TreeState::Node{text, ..} => text.clone(),
+                            TreeState::Leaf(text) => text.clone()
+                        };
+                        let search_result = children_old.iter()
+                            .enumerate()
+                            .find(|(i, c)| match c {
+                                TreeState::Node{text, ..} => text == &child_name,
+                                TreeState::Leaf(text) => text == &child_name
+                            });
+                        if let Some((i, _)) = search_result {
+                            new_children.push(Self::from_existing_internal(child, children_old.remove(i)));
+                        } else {
+                            new_children.push(child);
+                        }
+                    }
+                    TreeState::Node {
+                        expanded: expanded_old,
+                        children: new_children,
                         text
                     }
                 } else {
@@ -440,11 +455,9 @@ impl StatefulWidgetRef for TreeView {
             block.render_ref(target_area, buf);
             let text_area = block.inner(target_area);
             let text = Paragraph::new(
-                Text::from(
-                    Span::styled(
-                        selection_text.clone(),
-                        Style::default().fg(Color::White).bg(Color::Black),
-                    )
+                Text::styled(
+                    selection_text.clone(),
+                    Style::default().fg(Color::White).bg(Color::Black),
                 )
             );
             let scroll = if let Some((text, scroll)) = &state.scroll {
@@ -457,7 +470,7 @@ impl StatefulWidgetRef for TreeView {
                 0
             };
             state.scroll = Some((selection_text, scroll));
-            let text = text.wrap(Wrap { trim: true }).scroll((scroll, 0));
+            let text = text.wrap(Wrap { trim: false }).scroll((scroll, 0));
             text.render_ref(text_area, buf);
         }
         
