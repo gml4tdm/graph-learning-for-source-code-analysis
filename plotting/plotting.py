@@ -8,8 +8,10 @@
 import argparse
 import collections
 import contextlib
+import math
 import os
 import re
+import statistics
 import warnings
 import sys
 
@@ -59,6 +61,8 @@ def _set_seaborn_theme(font_scale, *, font_size=10):
         context='paper',
         rc={
             'patch.force_edgecolor': False,  # No edge color to keep stack chart readable
+            'grid.color': 'grey',
+            'xtick.bottom': True,
             **rc_extra
         },
         font_scale=font_scale
@@ -75,7 +79,7 @@ pyplot.rcParams["font.family"] = "Hack"
 # SINGLE_COLUMN_SIZE = plot_utils.NiceFigure.mm_to_inches((210 / 2, 280))
 
 SINGLE_COLUMN_SIZE = (
-    plot_utils.NiceFigure.points_to_inches(255), plot_utils.NiceFigure.mm_to_inches(240),
+    plot_utils.NiceFigure.mm_to_inches(255), plot_utils.NiceFigure.mm_to_inches(240),
 )
 DOUBLE_COLUMN_SIZE = (
     plot_utils.NiceFigure.points_to_inches(539), plot_utils.NiceFigure.mm_to_inches(240),
@@ -154,6 +158,7 @@ def plot_domains(args, data: list[data_loading.DataLoader]):
         plot_domains_as_pie(args, data)
         plot_domains_as_stack_chart(args, data)
     plot_domains_joint(args, data)
+    plot_domains_as_pie_with_annotations(args, data)
 
 
 @utils.easy_log('Plotting Domain Pie Chart')
@@ -180,6 +185,266 @@ def plot_domains_as_pie(args, data: list[data_loading.DataLoader], ax=None):
                       pctdistance=1.15)
 
 
+def _split_outer(s: str) -> list[str]:
+    opened = 0
+    points = []
+    for index, char in enumerate(s):
+        if char == '{':
+            opened += 1
+        elif char == '}':
+            opened -= 1
+        #if opened == 0 and char == '/':
+        #    break
+        if opened == 0 and char == ',':
+            points.append(index)
+    # Split in all collected indices
+    result = []
+    offset = 0
+    for point in points:
+        result.append(s[offset:point])
+        offset = point + 1
+    result.append(s[offset:])
+    return result
+
+
+def _parse_annotation(data: list[data_loading.DataLoader], anno: str, *, __prefix=None):
+    if anno[0] == '{' and anno[-1] == '}':
+        groups = _split_outer(anno[1:-1])
+    else:
+        groups = [anno]
+    result = {}
+    for group in groups:
+        if '/' in group:
+            first, remainder = group.split('/', maxsplit=1)
+            first = first.replace('%', '/')
+            path = [first] if not __prefix else [*__prefix, first]
+            path = tuple(path)
+            print('Checking', path)
+            result[first] = {'$': sum(d.matches_domain_path(path) for d in data)}
+            result[first] |= _parse_annotation(data, remainder, __prefix=path)
+        else:
+            group = group.replace('%', '/')
+            path = [group] if not __prefix else [*__prefix, group]
+            path = tuple(path)
+            print('Checking', path)
+            result[group] = {'$': sum(d.matches_domain_path(path) for d in data)}
+    return result
+
+
+def _prepare_annotation(title, data):
+    lines = []
+    idx_title = title if title != 'general purpose frameworks' else 'general graph learning framework for code'
+    stack = [(title, data[idx_title], 0)]
+    while stack:
+        name, item, indent = stack.pop()
+        lines.append((indent, f'{name} ({item["$"]})'))
+        for key in sorted(item, reverse=True):
+            if key == '$':
+                continue
+            stack.append((key, item[key], indent + 1))
+    formatted_lines = [
+        '    '*indent + f'\u2022 {text.capitalize()}'
+        for indent, text in lines
+    ]
+    return '\n'.join(formatted_lines)
+
+
+@utils.easy_log('Plotting domain pie chart with annotations')
+def plot_domains_as_pie_with_annotations(args, data: list[data_loading.DataLoader]):
+    """Plot the domains as a pie chart."""
+    import warnings
+    warnings.warn(
+        'The annotations for the annotated domain pie chart are '
+        'hard-coded and need manual adjustment for new data.'
+    )
+    # Data definitions
+    misc_domains = [
+        'algorithm recommendation',
+        'automated code review (accept%reject)',
+        'change propagation prediction (determine if code clones must co-evolve)',
+        'code change embedding',
+        'code performance prediction',
+        'coding language migration',
+        'commit classification',
+        'commit untangling',
+        'common code edit visualisation',
+        'design pattern mining',
+        'developer ability mining',
+        'developer recommendation',
+        'documentation assistance',
+        'library recommendation',
+        'log level prediction',
+        'mapping of variables between programs',
+        'microservice decomposition',
+        'non-termination analysis of code',
+        'program understanding assistance',
+        'runtime configuration optimisation',
+        'smell prediction & detection',
+        'software modularisation',
+        'static analysis output filtering (filter out false positives)',
+        'code style improvement'
+    ]
+    annotation_groups = [
+        'code generation/{code completion/api recommendation,code edit suggestion,code generation from prompt}',
+        'code summarisation/{commit message generation,method name generation}',
+        'defects & vulnerabilities/{defect & vulnerability prediction%detection,defect localisation/bug localisation/bug introduction detection,defect proneness prediction,defect repair,patch correctness prediction,vulnerability fixing commit detection,vulnerability prevention (predict future vulnerabilities introduced by specific users),vulnerability severity prediction,vulnerable community detection,dataset selection for cross-project bug prediction}',
+        'general purpose methods/{SMOTE for code graphs,general finetunable graph embedding for code,general graph embedding pipeline for code,general graph learning for code research,general graph learning pipeline for code,general repository embedding pipeline}',
+        'malicious code detection/{malicious repository detection,malicious script detection}',
+        #f'misc/{{{",".join(misc_domains)}}}',
+        'misc',
+        'neural code search',
+        'program semantics/{type prediction,variable name prediction,program semantics (code clones and code classification)/{code clone detection,program classification}}',
+    ]
+    annotation_group_renames = {
+        'program semantics/program semantics (code clones and code classification)': None,    # Erase
+        'defects & vulnerabilities/dataset selection for cross-project bug prediction': 'dataset selection',
+        'defects & vulnerabilities/vulnerability prevention (predict future vulnerabilities introduced by specific users)': 'vulnerability prevention',
+        #'misc/automated code review (accept%reject)': 'automated code review',
+        #'misc/change propagation prediction (determine if code clones must co-evolve)': 'change propagation prediction',
+        #'misc/static analysis output filtering (filter out false positives)': 'static analysis output filtering',
+        'defects & vulnerabilities/defect & vulnerability prediction%detection': 'defect & vulnerability detection',
+        'defects & vulnerabilities/defect localisation/bug localisation/bug introduction detection': 'defect introduction detection',
+        'defects & vulnerabilities/defect localisation/bug localisation': None,
+    }
+    # Quick statistics for misc
+    misc_numbs = []
+    for subdomain in misc_domains:
+        subdomain = subdomain.replace('%', '/')
+        x = sum(d.matches_domain_path(('misc', subdomain)) for d in data)
+        misc_numbs.append(x)
+    print('Misc. Mean', statistics.mean(misc_numbs))
+    print('Misc. Median', statistics.median(misc_numbs))
+
+    for key in sorted(misc_domains):
+        x = sum(d.matches_domain_path(('misc', key)) for d in data)
+        print(f'{key.capitalize()} & {x} \\\\')
+
+    # Main pie chart data collection
+    hist = collections.defaultdict(int)
+    for x in data:
+        for domain in x.domains:
+            #if domain == 'general graph learning framework for code':
+            #    domain = 'general purpose frameworks'
+            hist[capitalize(domain)] += 1
+    labels = sorted(hist, key=lambda x: hist[x], reverse=True)
+    values = [hist[label] for label in labels]
+    total = sum(values)
+    # Annotation data collection
+    annotations = {}
+    for group in annotation_groups:
+        annotations |= _parse_annotation(data, group)
+
+    #print(annotations)
+
+    for key, value in annotation_group_renames.items():
+        prev = None
+        current = annotations
+        last = None
+        for part in key.split('/'):
+            part = part.replace('%', '/')
+            prev = current
+            current = current[part]
+            last = part
+        if value is None:
+            del prev[last]
+            prev |= current
+        else:
+            del prev[last]
+            prev[value] = current
+    # Plotting
+    if args.paper_only:
+        context = plot_utils.NiceFigure(
+            filename=f'figure_{FIGURE_OFFSET + 1}b.png',
+            nrows=1,
+            ncols=1,
+            tight=True,
+            page_size=DOUBLE_COLUMN_SIZE,
+            width_to_height_ratio=1 / 0.5,
+        )
+    else:
+        context = plot_utils.figure('domains/domains-as-pie-elaborate.png')
+    if args.paper_only:
+        # Works for fontsize = 6
+        # offsets = {
+        #     'misc': (0, 0.3),
+        #     'code summarisation': (0, -0.1),
+        #     'malicious code detection': (0, 0.0),
+        #     'neural code search': (0, -0.05),
+        #     'code generation': (0, -0.1),
+        #     'program semantics': (0, -0.15)
+        # }
+
+        # Font size = 7
+        offsets = {
+            # 'misc': (0, 0.45),
+            # 'code summarisation': (0, -0.35),
+            # 'general purpose frameworks': (0, -0.25),
+            'malicious code detection': (0, 0.1),
+            'neural code search': (0, -0.0),
+            'code generation': (0, -0.15),
+            'program semantics': (0, -0.35),
+            #'general purpose methods': (0, -0.1)
+            'misc': (0, -0.1)
+        }
+
+        styles = {
+            # 'misc': 'angle3,angleA=0,angleB={deg}', # 'angle3,armA=0,armB=0,fraction=0,angle={deg}',
+            'malicious code detection': 'angle3,angleA=45,angleB={deg}',
+        }
+    else:
+        offsets = {}
+        styles = {}
+    with context as (fig, ax):
+        import matplotlib.axes
+        assert isinstance(ax, matplotlib.axes.Axes)
+        ax.pie(
+            values,
+        )
+        cumulative = 0
+        for label, count in zip(labels, values):
+            angle = 2 * math.pi * (cumulative + count/2) / total
+            x = math.cos(angle)
+            y = math.sin(angle)
+            alignment = 'left' if x >= 0 else 'right'
+            connection_style = 'angle,angleA=0,angleB={deg}'
+            dx, dy = offsets.get(label.lower(), (0, 0))
+            ax.annotate(
+                _prepare_annotation(label.lower(), annotations),
+                xy=(x, y),
+                xytext=(1.15*(1 if x >= 0 else -1) + dx, 1.1*y + dy),
+                horizontalalignment=alignment,
+                arrowprops={
+                    'arrowstyle': '-',
+                    'connectionstyle': styles.get(label.lower(), connection_style).format(deg=math.degrees(angle)),
+                    'mutation_scale': 5,
+                    'ec': 'k',
+                    'fc': 'k',
+                    'lw': 1
+                },
+                bbox={
+                    'boxstyle': 'square,pad=0.3',
+                    'fc': 'w', 'ec': 'k', 'lw': 0.72
+                },
+                zorder=0,
+                va='center',
+                multialignment='left',
+                fontsize='x-large' if not args.paper_only else 7
+            )
+            # import matplotlib.patches
+            # patch = matplotlib.patches.FancyArrowPatch(
+            #     posA=(x, y),
+            #     posB=(1.2*(1 if x >= 0 else -1), 1.1*y),
+            #     arrowstyle='-',
+            #     connectionstyle=f'angle,angleA=0,angleB={math.degrees(angle)}',
+            #     fill=True,
+            #     fc='k',
+            #     ec='k',
+            # )
+            # ax.add_patch(patch)
+
+            cumulative += count
+
+
 @utils.easy_log('Plotting Domain Stack Chart')
 def plot_domains_as_stack_chart(args, data: list[data_loading.DataLoader], ax=None):
     """Plot the domains as a stack plot"""
@@ -190,39 +455,47 @@ def plot_domains_as_stack_chart(args, data: list[data_loading.DataLoader], ax=No
             if domain == 'general graph learning framework for code':
                 domain = 'general purpose frameworks'
             count_per_domain_per_year[capitalize(domain)][z.year] += 1
-    if ax is None:
-        with plot_utils.figure('domains/domains-as-stack.png', tight=False) as (fig, ax):
-            return plot_utils.stack_chart_from_dict(count_per_domain_per_year, ax)
+    if args.paper_only and ax is None:
+        raise NotImplementedError
     else:
-        return plot_utils.stack_chart_from_dict(count_per_domain_per_year, ax, draw_labels=False)
+        if True:
+            if ax is None:
+                with plot_utils.figure('domains/domains-as-stack.png', tight=False) as (fig, ax):
+                    return plot_utils.stack_chart_from_dict(count_per_domain_per_year, ax)
+            else:
+                return plot_utils.stack_chart_from_dict(count_per_domain_per_year, ax, draw_labels=False)
 
 
 @utils.easy_log('Plotting Domains Joint')
 def plot_domains_joint(args, data: list[data_loading.DataLoader]):
     if args.paper_only:
         with adjusted_font_scale(1):
-            with plot_utils.NiceFigure(filename=f'figure_{FIGURE_OFFSET + 1}.png',
+            nice_fig = plot_utils.NiceFigure(filename=f'figure_{FIGURE_OFFSET + 1}.png',
                                        nrows=1,
                                        ncols=3,
                                        tight=True,
                                        page_size=DOUBLE_COLUMN_SIZE,
                                        width_to_height_ratio=1 / 0.4,
-                                       return_grid_spec=True) as (fig, spec):
-                ax1 = fig.add_subplot(spec[0, 2])
-                ax2 = fig.add_subplot(spec[0, 0:2])
-                plot_domains_as_pie(args, data, ax=ax1)
-                handles = plot_domains_as_stack_chart(args, data, ax=ax2)
-                ax2.set_frame_on(False)
-                ax2.tick_params(labelright=True, right=False, left=False)
-                ax2.grid(visible=True,
-                         axis='y',
-                         which='both',
-                         color='black',
-                         linestyle='-',
-                         linewidth=0.5)
-                ax2.grid(visible=False, axis='x')
-                ax2.set_axisbelow('line')
-                ax2.legend(loc='upper left')
+                                       render_axes=False,
+                                       return_grid_spec=True)
+            if True:
+                with nice_fig as (fig, spec):
+                    ax1 = fig.add_subplot(spec[0, 2])
+                    ax2 = fig.add_subplot(spec[0, 0:2])
+                    plot_domains_as_pie(args, data, ax=ax1)
+                    handles = plot_domains_as_stack_chart(args, data, ax=ax2)
+                    ax2.set_frame_on(False)
+                    ax2.tick_params(labelright=True, right=False, left=False)
+                    ax2.grid(visible=True,
+                             axis='y',
+                             which='both',
+                             color='black',
+                             linestyle='-',
+                             linewidth=0.5)
+                    ax2.grid(visible=False, axis='x')
+                    ax2.set_axisbelow('line')
+                    ax2.legend(loc='upper left')
+                    nice_fig.render_ax(ax2, 'a')
     else:
         with adjusted_font_scale(1):
             with plot_utils.figure('domains/domains-joint.png',

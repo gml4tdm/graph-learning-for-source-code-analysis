@@ -72,6 +72,58 @@ def resolve_one_with_history(item, refinements):
     return history
 
 
+# def count_rules_ending_in(key, refinements, path):
+#     current = [(key, [key])]
+#     for rule in refinements:
+#         match rule['action']:
+#             case 'refine':
+#                 current = _transform_with_path(current, rule['old'], rule['new'])
+#             case 'split':
+#                 current = _transform_with_path(current, rule['old'], rule['new_1'], rule['new_2'])
+#             case 'n-ary-split':
+#                 current = _transform_with_path(current, rule['old'], *rule['new'])
+#             case _ as x:
+#                 raise NotImplementedError(x)
+#     x = next(iter(current))
+#     print(x)
+#     raise
+#     return sum(_ends_in(path, p) for p in current)
+
+
+def _transform_with_path(current, old, *new):
+    out = []
+    for (key, path) in current:
+        if key != old:
+            out.append((key, path))
+        else:
+            for n in new:
+                out.append((n, path + [n]))
+    return out
+
+
+
+def _ends_in(path, p):
+    for x, y in zip(path, reversed(p)):
+        if x != y:
+            return False
+    return True
+
+
+def count_paths_ending_in(key, refinements, path):
+    current = [(key, [key])]
+    for rule in refinements:
+        match rule['action']:
+            case 'refine':
+                current = _transform_with_path(current, rule['old'], rule['new'])
+            case 'split':
+                current = _transform_with_path(current, rule['old'], rule['new_1'], rule['new_2'])
+            case 'n-ary-split':
+                current = _transform_with_path(current, rule['old'], *rule['new'])
+            case _ as x:
+                raise NotImplementedError(x)
+    return sum(_ends_in(path, p[1]) for p in current)
+
+
 def immediate_history(base_key, target_key, refinements):
     current = [base_key]
     result = []

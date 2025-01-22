@@ -230,6 +230,17 @@ class DataLoader(abc.ABC):
                 domains.append(f'misc ({m})')
         return list(set(domains))
 
+    @functools.cache
+    def matches_domain_path(self, path: tuple[str]) -> bool:
+        resolved_key = self._resolve_key('domains')
+        rules = self._resolve_rules('domains')
+        count = libedit.count_paths_ending_in(
+            resolved_key,
+            rules['refinements'],
+            path
+        )
+        return bool(count)
+
     @functools.cached_property
     def artefacts(self) -> list[str]:
         rules = self._resolve_rules('artefacts')

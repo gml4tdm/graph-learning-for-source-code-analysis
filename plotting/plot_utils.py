@@ -38,7 +38,7 @@ class NiceFigure:
                  nrows=1,
                  ncols=1,
                  tight: bool | int | float = True,
-                 page_size: tuple[float, float] = None,
+                 page_size: tuple[float, float] | None = None,
                  width_to_height_ratio: float = 1,
                  return_grid_spec: bool = False,
                  share_x=False,
@@ -76,20 +76,44 @@ class NiceFigure:
             height = width / self.width_to_height_ratio
         fig.set_size_inches(width, height)
         self._fig = fig
+        self._layout_done = False
         return fig, axes
+
+    def _do_layout(self):
+        if self._layout_done:
+            return
+        self._layout_done = True
+        if self.tight:
+            if not isinstance(self.tight, bool):
+                self._fig.tight_layout(pad=self.tight)
+            else:
+                self._fig.tight_layout()
+
+    def _prepare_path(self):
+        os.makedirs('figures', exist_ok=True)
+        path, _ = os.path.split(self.filename)
+        if path:
+            os.makedirs(os.path.join('figures', path), exist_ok=True)
+        full_path = os.path.join('figures', self.filename)
+        return full_path
+
+    def render_ax(self, ax, suffix):
+        self._do_layout()
+        window = ax.get_tightbbox()
+        extent = window.transformed(self._fig.dpi_scale_trans.inverted())
+        scale = 1.05
+        extent = extent.expanded(scale, scale)
+        full_path = self._prepare_path()
+        path, ext = os.path.splitext(full_path)
+        fn = f'{path}{suffix}{ext}'
+        self._fig.savefig(fn, bbox_inches=extent)
+        if fn.endswith('.png'):
+            self._fig.savefig(fn.replace('.png', '.pdf'), bbox_inches=extent)
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if exc_type is None:
-            if self.tight:
-                if not isinstance(self.tight, bool):
-                    self._fig.tight_layout(pad=self.tight)
-                else:
-                    self._fig.tight_layout()
-            os.makedirs('figures', exist_ok=True)
-            path, _ = os.path.split(self.filename)
-            if path:
-                os.makedirs(os.path.join('figures', path), exist_ok=True)
-            full_path = os.path.join('figures', self.filename)
+            self._do_layout()
+            full_path = self._prepare_path()
             self._fig.savefig(full_path, dpi=100)
             if self.filename.endswith('.png'):
                 self._fig.savefig(full_path.replace('.png', '.pdf'))
@@ -98,16 +122,7 @@ class NiceFigure:
                 if self._axes is None:
                     raise ValueError('Cannot render axes')
                 for letter, ax in zip(string.ascii_lowercase, self._axes):
-                    #extent = ax.get_window_extent().transformed(self._fig.dpi_scale_trans.inverted())
-                    window = ax.get_tightbbox()
-                    extent = window.transformed(self._fig.dpi_scale_trans.inverted())
-                    scale = 1.05
-                    extent = extent.expanded(scale, scale)
-                    path, ext = os.path.splitext(full_path)
-                    fn = f'{path}{letter}{ext}'
-                    self._fig.savefig(fn, bbox_inches=extent)
-                    if fn.endswith('.png'):
-                        self._fig.savefig(fn.replace('.png', '.pdf'), bbox_inches=extent)
+                    self.render_ax(ax, letter)
             pyplot.close(self._fig)
 
 
@@ -226,6 +241,8 @@ def stack_chart_from_dict(data: dict[str, dict[int, int]], ax, *, draw_labels=Tr
     # Plot
     x = list(range(x_min, x_max + 1))
     handles = ax.stackplot(x, matrix, labels=categories)
+    ax.set_xticks(list(range(x_min, x_max + 1)))
+    ax.set_xticklabels([str(x) for x in range(x_min, x_max + 1)], rotation=45, ha='right')
     if draw_labels:
         ax.legend(loc='upper left')
     return handles
